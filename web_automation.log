@@ -1,0 +1,49 @@
+2025-02-02 11:50:51,218 - INFO - Starting daily web data pipeline
+2025-02-02 11:50:54,995 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Goose.py
+2025-02-02 11:50:54,995 - INFO - Output: 
+2025-02-02 11:50:55,561 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Goose.py
+2025-02-02 11:50:55,562 - INFO - Output: 
+2025-02-02 11:56:15,523 - INFO - Starting daily web data pipeline
+2025-02-02 11:56:19,079 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Goose.py
+2025-02-02 11:56:19,080 - INFO - Output: 
+2025-02-02 11:56:19,138 - ERROR - Error running /Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Data_Manipulation.py: Command '['/Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python', '/Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Data_Manipulation.py']' returned non-zero exit status 2.
+2025-02-02 11:56:19,138 - ERROR - Script output: 
+2025-02-02 11:56:19,186 - ERROR - Error running /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py: Command '['/Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python', '/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py']' returned non-zero exit status 2.
+2025-02-02 11:56:19,186 - ERROR - Script output: 
+2025-02-02 11:56:19,187 - INFO - Pipeline completed successfully
+2025-02-02 11:57:42,657 - INFO - Starting daily web data pipeline
+2025-02-02 11:57:45,823 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Goose.py
+2025-02-02 11:57:45,824 - INFO - Output: 
+2025-02-02 11:57:45,878 - ERROR - Error running /Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Data_Manipulation.py: Command '['/Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python', '/Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Data_Manipulation.py']' returned non-zero exit status 2.
+2025-02-02 11:57:45,878 - ERROR - Script output: 
+2025-02-02 11:57:45,878 - ERROR - Error details: /Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python: can't open file '/Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Data_Manipulation.py': [Errno 2] No such file or directory
+
+2025-02-02 11:57:45,925 - ERROR - Error running /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py: Command '['/Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python', '/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py']' returned non-zero exit status 2.
+2025-02-02 11:57:45,925 - ERROR - Script output: 
+2025-02-02 11:57:45,925 - ERROR - Error details: /Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python: can't open file '/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py': [Errno 2] No such file or directory
+
+2025-02-02 11:57:45,926 - INFO - Pipeline completed successfully
+2025-02-02 11:58:57,218 - INFO - Starting daily web data pipeline
+2025-02-02 11:59:00,493 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Goose.py
+2025-02-02 11:59:00,544 - ERROR - Error running /Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Data_Manipulation.py: Command '['/Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python', '/Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Data_Manipulation.py']' returned non-zero exit status 2.
+2025-02-02 11:59:00,545 - ERROR - Error details: /Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python: can't open file '/Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Data_Manipulation.py': [Errno 2] No such file or directory
+
+2025-02-02 11:59:00,597 - ERROR - Error running /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py: Command '['/Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python', '/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py']' returned non-zero exit status 2.
+2025-02-02 11:59:00,598 - ERROR - Error details: /Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python: can't open file '/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py': [Errno 2] No such file or directory
+
+2025-02-02 11:59:00,599 - INFO - Pipeline completed successfully
+2025-02-02 11:59:25,867 - INFO - Starting daily web data pipeline
+2025-02-02 11:59:28,841 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Goose.py
+2025-02-02 11:59:29,420 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Goose.py
+2025-02-02 11:59:29,471 - ERROR - Error running /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py: Command '['/Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python', '/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py']' returned non-zero exit status 2.
+2025-02-02 11:59:29,471 - ERROR - Error details: /Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python: can't open file '/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Web_Setup.py': [Errno 2] No such file or directory
+
+2025-02-02 11:59:29,472 - INFO - Pipeline completed successfully
+2025-02-02 11:59:41,047 - INFO - Starting daily web data pipeline
+2025-02-02 11:59:44,023 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Goose.py
+2025-02-02 11:59:44,587 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Goose.py
+2025-02-02 12:03:55,122 - INFO - Starting daily web data pipeline
+2025-02-02 12:03:58,289 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Goose.py
+2025-02-02 12:03:58,871 - INFO - Successfully ran /Users/connorkitchings/Desktop/Repositories/Concerts/Data_Manipulation/Goose.py
+2025-02-02 12:04:28,884 - ERROR - Error running /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Goose.py: Command '['/Users/connorkitchings/Desktop/Repositories/Virtual_Env/setlist_venv/bin/python', '/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Goose.py']' timed out after 30 seconds
+2025-02-02 12:04:28,885 - INFO - Pipeline completed successfully

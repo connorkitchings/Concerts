@@ -3,36 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Tables</title>
-    <!-- Add Bootstrap CSS for styling -->
+    <title>Song Predictions</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-
     <style>
-        /* Custom CSS to center table titles */
         .table-title {
             text-align: center;
             margin-top: 20px;
             font-weight: bold;
         }
-
-        /* Center the column headers */
         table th {
             text-align: center !important;
+        }
+        .last-updated {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+        .nav-pills {
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+        .sub-nav {
+            display: none;
+            margin-top: 1rem;
+        }
+        .content-section {
+            display: none;
+        }
+        .active-section {
+            display: block;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1 class="table-title">Rick's Notebook Song Predictions</h1>
-        <div>{{ ricks_notebook|safe }}</div>  <!-- Render ricks_notebook table -->
+        <!-- Main Navigation -->
+        <ul class="nav nav-pills mt-4" id="mainNav">
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-band="goose">Goose</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-band="wsp">Widespread Panic</a>
+            </li>
+        </ul>
 
-        <h1 class="table-title">CK Plus Song Predictions</h1>
-        <div>{{ ck_plus|safe }}</div>  <!-- Render ck_plus table -->
+        <!-- Sub Navigation -->
+        <ul class="nav nav-pills sub-nav" id="gooseNav">
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-content="ricks">Rick's Notebook</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-content="ckplus-goose">CK Plus</a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pills sub-nav" id="wspNav">
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-content="jojos">JoJo's Notebook</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-content="ckplus-wsp">CK Plus</a>
+            </li>
+        </ul>
+
+        <!-- Content Sections -->
+        <div id="ricksContent" class="content-section">
+            <h1 class="table-title">Rick's Notebook Song Predictions</h1>
+            <div>{{ ricks_notebook|safe }}</div>
+        </div>
+
+        <div id="ckplus-gooseContent" class="content-section">
+            <h1 class="table-title">CK Plus Predictions</h1>
+            <div>{{ ckplus_goose|safe }}</div>
+        </div>
+
+        <div id="jojosContent" class="content-section">
+            <h1 class="table-title">JoJo's Notebook Predictions</h1>
+            <div>{{ jojos_notebook|safe }}</div>
+        </div>
+
+        <div id="ckplus-wspContent" class="content-section">
+            <h1 class="table-title">CK Plus Predictions</h1>
+            <div>{{ ckplus_wsp|safe }}</div>
+        </div>
+
+        <div class="last-updated">Tables Last Updated: {{ last_updated }}</div>
     </div>
 
-    <!-- Add Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        document.querySelectorAll('#mainNav .nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('#mainNav .nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                document.querySelectorAll('.sub-nav').forEach(nav => nav.style.display = 'none');
+                
+                const band = this.dataset.band;
+                document.getElementById(band + 'Nav').style.display = 'flex';
+                document.getElementById(band + 'Nav').style.justifyContent = 'center';
+                
+                document.querySelectorAll('.content-section').forEach(section => section.style.display = 'none');
+            });
+        });
+
+        document.querySelectorAll('.sub-nav .nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.sub-nav .nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                document.querySelectorAll('.content-section').forEach(section => section.style.display = 'none');
+                
+                const content = this.dataset.content;
+                document.getElementById(content + 'Content').style.display = 'block';
+            });
+        });
+    </script>
 </body>
 </html>
