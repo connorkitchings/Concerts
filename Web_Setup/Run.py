@@ -10,6 +10,7 @@ class DataManager:
         self.base_dir = os.path.dirname(self.script_dir)
         self.data_dir_goose = os.path.join(self.base_dir, "Data", "Goose")
         self.data_dir_wsp = os.path.join(self.base_dir, "Data", "Widespread_Panic")
+        self.data_dir_phish = os.path.join(self.base_dir, "Data", "Phish")
         
     def _get_script_dir(self) -> str:
         try:
@@ -52,6 +53,23 @@ class DataManager:
             print(ckplus_wsp.head(1))  # Show a preview of the data for debugging
             
         showdata_wsp = pd.read_csv(os.path.join(self.data_dir_wsp, "showdata.csv")).reset_index(drop=True)
+        
+        # Phish DataFrames
+        treys_notebook = pd.read_csv(os.path.join(self.data_dir_phish, "treys_notebook.csv")).reset_index(drop=True).head(50)
+        treys_notebook['Rank'] = treys_notebook.index + 1
+        treys_notebook = treys_notebook[['Rank'] + [col for col in treys_notebook.columns if col != 'Rank']]
+        if needhelp:
+            print("Columns of treys_notebook:", treys_notebook.columns)
+            print(treys_notebook.head(1))  # Show a preview of the data for debugging
+        
+        ckplus_phish = pd.read_csv(os.path.join(self.data_dir_phish, "ck_plus.csv")).reset_index(drop=True).head(50)
+        ckplus_phish['Rank'] = ckplus_phish.index + 1
+        ckplus_phish = ckplus_phish[['Rank'] + [col for col in ckplus_phish.columns if col != 'Rank']]
+        if needhelp:
+            print("Columns of ckplus_phish:", ckplus_phish.columns)
+            print(ckplus_phish.head(1))  # Show a preview of the data for debugging
+            
+        showdata_phish = pd.read_csv(os.path.join(self.data_dir_phish, "showdata.csv")).reset_index(drop=True)
 
         # Set column names
         ricks_notebook.columns = [
@@ -66,11 +84,22 @@ class DataManager:
         ]
         
         jojos_notebook.columns = [
-            'Rank', 'Song', 'Times Played Last Year', 'Last Show Played',
+            'Rank', 'Song', 'Times Played Last 2 Years', 'Last Show Played',
             'Current Show Gap', 'Average Show Gap', 'Median Show Gap'
         ]
         
         ckplus_wsp.columns = [
+            'Rank', 'Song', 'Times Played', 'Last Show Played',
+            'Current Show Gap', 'Average Show Gap', 'Median Show Gap',
+            'Current Gap Minus Average', 'Current Gap Minus Median'
+        ]
+        
+        treys_notebook.columns = [
+            'Rank', 'Song', 'Times Played Last Year', 'Last Show Played',
+            'Current Show Gap', 'Average Show Gap', 'Median Show Gap'
+        ]
+        
+        ckplus_phish.columns = [
             'Rank', 'Song', 'Times Played', 'Last Show Played',
             'Current Show Gap', 'Average Show Gap', 'Median Show Gap',
             'Current Gap Minus Average', 'Current Gap Minus Median'
@@ -83,6 +112,9 @@ class DataManager:
             ,'jojos_notebook': jojos_notebook
             ,'ckplus_wsp': ckplus_wsp
             ,'show_data_wsp': showdata_wsp
+            ,'treys_notebook': treys_notebook
+            ,'ckplus_phish': ckplus_phish
+            ,'show_data_phish': showdata_phish
         }
 
 app = Flask(__name__)
@@ -115,6 +147,16 @@ def index() -> str:
             classes='table table-striped', 
             index=False,
             table_id='ckplus-wsp-table'
+        ),
+        'treys_notebook': dataframes['treys_notebook'].to_html(
+            classes='table table-striped', 
+            index=False,
+            table_id='treys-table'
+        ),
+        'ckplus_phish': dataframes['ckplus_phish'].to_html(
+            classes='table table-striped', 
+            index=False,
+            table_id='ckplus-phish-table'
         )
     }
     
@@ -124,6 +166,8 @@ def index() -> str:
                          ckplus_goose=tables['ckplus_goose'],
                          jojos_notebook=tables['jojos_notebook'],
                          ckplus_wsp=tables['ckplus_wsp'],
+                         treys_notebook=tables['treys_notebook'],
+                         ckplus_phish=tables['ckplus_phish'],
                          last_updated=last_updated)
     
 if __name__ == '__main__':

@@ -60,7 +60,7 @@ my_song_data['debut_date'] = pd.to_datetime(my_song_data['debut_date']).dt.strft
 my_song_data['ltp_date'] = pd.to_datetime(my_song_data['ltp_date']).dt.strftime('%m/%d/%y')
 
 my_song_data['ltp_date'] = pd.to_datetime(my_song_data['ltp_date'], format='%m/%d/%y', errors='coerce')
-three_years_ago = datetime.today() - timedelta(days=5*365)
+three_years_ago = datetime.today() - timedelta(days=3*365)
 ck_plus = (my_song_data[(my_song_data['times_played_total'] > 10)&(my_song_data['ltp_date'] > three_years_ago)].copy()
            .sort_values(by='gap_zscore', ascending=False).reset_index(drop=True).drop(columns=['debut_date', 'std_gap','gap_zscore'])
 )

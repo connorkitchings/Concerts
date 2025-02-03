@@ -1,6 +1,9 @@
+pip install numpy
+
 import requests
 import json
 import pandas as pd
+import numpy as np
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from bs4 import BeautifulSoup
@@ -73,7 +76,6 @@ except NameError:
     script_dir = os.getcwd()
 base_dir = os.path.dirname(script_dir)
 save_path = os.path.join(base_dir, "Data", "Goose")
-#save_path = "/Data/Goose/"
 songdata.to_csv(os.path.join(save_path, "songdata.csv"), index=False)
 venuedata.to_csv(os.path.join(save_path, "venuedata.csv"), index=False)
 showdata.to_csv(os.path.join(save_path, "showdata.csv"), index=False)

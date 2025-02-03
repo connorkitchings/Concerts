@@ -46,6 +46,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="#" data-band="wsp">Widespread Panic</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-band="phish">Phish</a>
+            </li>
         </ul>
 
         <!-- Sub Navigation -->
@@ -64,6 +67,15 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" data-content="ckplus-wsp">CK Plus</a>
+            </li>
+        </ul>
+
+        <ul class="nav nav-pills sub-nav" id="phishNav">
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-content="treys">Trey's Notebook</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-content="ckplus-phish">CK Plus</a>
             </li>
         </ul>
 
@@ -86,6 +98,16 @@
         <div id="ckplus-wspContent" class="content-section">
             <h1 class="table-title">CK Plus Predictions</h1>
             <div>{{ ckplus_wsp|safe }}</div>
+        </div>
+
+        <div id="treysContent" class="content-section">
+            <h1 class="table-title">Trey's Notebook Predictions</h1>
+            <div>{{ treys_notebook|safe }}</div>
+        </div>
+
+        <div id="ckplus-phishContent" class="content-section">
+            <h1 class="table-title">CK Plus Predictions</h1>
+            <div>{{ ckplus_phish|safe }}</div>
         </div>
 
         <div class="last-updated">Tables Last Updated: {{ last_updated }}</div>

@@ -1,0 +1,974 @@
+song_id,song,original_artist,debut_date,last_played,times_played,gap
+2301,(I Can't Get No) Satisfaction,The Rolling Stones,2022-02-25,2022-02-25,1,138
+2947,...And Flew Away,Trey Anastasio,2023-07-14,2023-07-14,1,79
+1,1999,Prince,1998-12-31,2022-08-13,4,103
+2908,20-20 Vision,Gene Autry,2019-12-28,2019-12-28,1,183
+2,46 Days,Phish,2003-01-02,2025-01-30,148,2
+1361,50 Ways to Leave Your Lover,Paul Simon,2011-08-08,2011-08-08,1,497
+2424,555,Phish,2013-10-31,2024-08-07,66,22
+3,5:15,The Who,1995-10-31,1995-10-31,1,1049
+4,99 Problems,Jay-Z,2004-06-18,2004-06-18,1,633
+945,A Apolitical Blues,Little Feat,2010-10-31,2010-10-31,1,526
+6,A Day in the Life,The Beatles,1995-06-10,2024-08-02,73,26
+2845,A Life Beyond The Dream,Ghosts of the Forest,2019-06-19,2025-02-01,34,0
+7,A Song I Heard the Ocean Sing,Phish,2004-06-17,2024-07-28,49,29
+2946,A Wave of Hope,Trey Anastasio,2021-08-07,2024-12-28,30,7
+8,AC/DC Bag,Phish,1986-04-01,2024-12-29,334,6
+2831,About to Run,Ghosts of the Forest,2019-06-12,2024-08-07,24,22
+9,Access Me,Phish,2004-06-26,2024-10-27,7,8
+10,Acoustic Army,Phish,1995-06-07,1995-12-08,27,1027
+11,After Midnight,J.J. Cale,1999-12-31,2019-12-08,7,184
+13,Ain't Love Funny,J.J. Cale,1997-06-20,1997-08-09,3,899
+14,Alaska,Trey Anastasio,2009-06-09,2024-02-21,43,44
+15,Albuquerque,Neil Young,1998-07-26,2023-10-13,17,51
+16,All Along the Watchtower,Bob Dylan,1994-04-21,1996-10-22,2,979
+17,All Blues,Miles Davis,1986-04-25,1989-02-06,3,1844
+855,All Down the Line,The Rolling Stones,2009-10-31,2009-10-31,1,588
+934,All That You Dream,Little Feat,2010-10-31,2010-10-31,1,526
+18,All Things Reconsidered,Phish,1991-09-25,1997-02-23,81,937
+19,All of These Dreams,Phish,2003-01-03,2023-04-17,15,87
+20,All the Pain Through the Years,Seth Yacovone,1998-11-29,1998-11-29,1,805
+21,Also Sprach Zarathustra,"Strauss, as interpreted by Deodato",1993-07-16,2025-02-01,265,0
+22,Alumni Blues,Phish,1985-03-16,2023-07-12,112,80
+24,Amazing Grace,Traditional,1993-02-03,1998-10-03,109,831
+26,Ambient Jam,Phish,1998-08-15,1998-08-15,1,833
+923,American Woman,The Guess Who,1989-03-01,1989-03-01,1,1835
+2426,Amidst the Peals of Laughter,Phish,2013-10-31,2013-10-31,1,411
+28,Amoreena,Elton John,1997-08-13,1997-08-13,1,896
+29,Anarchy,Phish,1985-03-04,1989-10-14,11,1757
+747,And So To Bed,Phish,2021-10-15,2021-10-15,1,153
+30,Andy's Chest,Lou Reed,1988-09-13,1988-09-13,1,1869
+31,Any Colour You Like,Pink Floyd,1998-11-02,1998-11-02,1,823
+32,Anything But Me,Phish,2003-01-04,2011-08-15,12,493
+33,Arc,Neil Young,1998-10-03,1998-10-03,1,831
+2266,Architect,Trey Anastasio,2013-07-06,2013-07-31,4,428
+34,Army of One,Phish,2003-07-12,2023-07-26,27,70
+721,Art Jam,Phish,1997-08-17,1997-08-17,1,893
+2634,Ass Handed,Phish,2016-07-15,2023-07-22,18,73
+35,Auld Lang Syne,Traditional,1989-12-30,2024-12-31,28,4
+917,Autumn Leaves,Jo Stafford,1989-08-12,1989-08-12,1,1782
+36,Avenu Malkenu,Traditional,1987-05-11,2022-04-21,83,134
+37,Axilla,Phish,1992-11-19,2024-08-18,113,15
+38,Axilla (Part II),Phish,1994-04-16,2024-12-28,58,7
+39,Baby Elephant Walk,Henry Mancini,1992-12-01,1998-08-16,2,832
+41,Baby Lemonade,Syd Barrett,1992-03-11,2021-12-31,2,140
+1176,Babylon Baby,Mike Gordon,2011-08-15,2013-08-02,3,427
+914,Babylon is Burning,Phish,1986-02-03,1986-02-03,1,2011
+42,Back Porch Boogie Blues,Max Creek,1985-09-27,1987-10-31,9,1954
+43,Back at the Chicken Shack,Jimmy Smith,1998-10-30,2000-09-24,8,692
+2918,Back in the Bubble,Mike Gordon,2023-08-04,2023-08-04,1,64
+44,Back in the U.S.S.R.,The Beatles,1994-10-31,2013-10-23,3,416
+45,Back on the Train,Trey Anastasio,1999-06-30,2025-01-30,160,2
+46,Backwards Down the Number Line,Trey Anastasio,2009-03-06,2025-01-29,141,3
+137,Band/Crew Football Theme Song,Phish,1991-04-16,1992-05-02,2,1414
+48,Bathtub Gin,Phish,1989-05-26,2025-02-01,310,0
+49,Beaumont Rag,Traditional,1994-10-12,1994-10-26,4,1132
+50,Beauty of My Dreams,The Del McCoury Band,1997-02-16,2024-08-06,55,23
+51,Beauty of a Broken Heart,Page Mcconnell,2009-03-07,2023-10-08,15,54
+52,Been Caught Stealing,Jane's Addiction,1998-08-01,2011-06-18,6,504
+53,Bell Boy,The Who,1995-10-31,1995-10-31,1,1049
+2860,Beneath a Sea of Stars Part 1,Ghosts of the Forest,2019-06-29,2025-01-31,19,1
+54,Bertha,Grateful Dead,1984-11-03,1985-03-16,3,2031
+55,Big Alligator,Chief Jim Billie,1999-12-30,1999-12-30,1,738
+56,Big Ball Jam,Phish,1992-11-19,1994-12-09,102,1102
+1360,Big Balls,AC/DC,2011-07-03,2011-07-03,1,500
+58,Big Black Furry Creature from Mars,Phish,1987-08-21,2024-08-09,133,21
+60,Big Leg Emma,The Mothers of Invention,1985-04-06,1988-08-04,7,1888
+61,Big Pimpin',Jay-Z,2004-06-18,2004-06-18,1,633
+62,Bike,Pink Floyd,1987-11-19,2018-11-02,42,226
+63,"Bill Bailey, Won't You Please Come Home?",Hughie Cannon,1993-07-28,2010-10-15,6,536
+898,Billie Jean,Michael Jackson,2010-06-25,2010-06-25,1,559
+64,Billy Breathes,Phish,1995-09-27,2024-08-04,65,24
+65,Birds of a Feather,Phish,1998-04-02,2024-08-07,135,22
+66,Birthday,The Beatles,1994-10-31,1994-10-31,1,1128
+67,Bitchin' Again,The Dude of Life (with Phish),1991-08-03,1991-08-03,1,1505
+68,Bittersweet Motel,Phish,1998-07-21,2021-08-28,19,160
+874,Black and Tan Fantasy,Duke Ellington,1990-09-28,1990-09-28,1,1628
+69,Black-Eyed Katy,Phish,1997-11-13,1997-12-30,7,869
+1729,Blackberry Blossom,Traditional,1994-11-19,1994-11-19,1,1117
+1729,Blackberry Blossom,Traditional,1994-11-19,1994-11-19,1,1117
+1729,Blackberry Blossom,Traditional,1994-11-19,1994-11-19,1,1117
+1729,Blackberry Blossom,Traditional,1994-11-19,1994-11-19,1,1117
+70,Blackbird,The Beatles,1994-10-31,1994-11-22,2,1115
+2570,Blaze On,Phish,2015-07-21,2025-01-30,87,2
+741,Bliss,Phish,2018-12-30,2021-09-05,2,154
+71,Blister in the Sun,Violent Femmes,1997-07-26,2012-07-07,3,464
+73,Blue Bayou,Roy Orbison,1992-07-16,1992-12-29,2,1335
+74,Blue Bossa,Joe Henderson,1988-07-12,1988-07-23,2,1895
+718,Blue Monk,Thelonius Monk,1987-02-21,1989-08-12,2,1782
+872,Blue Moon,Rodgers and Hart,2009-12-31,2009-12-31,1,570
+75,Blue Skies,Pork Tornado,2003-02-26,2003-02-26,1,669
+772,Blue Sky,The Allman Brothers Band,1989-08-12,1989-08-12,1,1782
+77,Bobby Jean,Bruce Springsteen,2009-06-14,2009-06-14,1,607
+78,Bohemian Rhapsody,Queen,1996-12-31,2022-12-31,2,94
+79,Bold As Love,Jimi Hendrix Experience,1988-07-07,2024-12-29,84,6
+80,Boogie On Reggae Woman,Stevie Wonder,1987-02-21,2024-08-17,91,16
+82,Born Under Punches (The Heat Goes On),Talking Heads,1996-10-31,1996-10-31,1,973
+83,Born to Run,Bruce Springsteen,1999-07-16,1999-07-16,1,789
+84,Bouncing Around the Room,Phish,1990-01-20,2024-12-31,490,4
+1707,Box of Rain,Grateful Dead,2024-10-25,2024-10-25,1,10
+85,Brain Damage,Pink Floyd,1998-11-02,1998-11-02,1,823
+2628,Breath and Burning,Phish,2016-06-26,2022-07-24,17,116
+86,Breathe,Pink Floyd,1995-10-25,1998-11-02,2,823
+88,Brian and Robert,Phish,1998-06-30,2024-07-26,53,31
+89,Bring It On Home,Sonny Boy Williamson,1985-05-03,1985-05-03,1,2022
+3024,Broken Heart Attack,Jerry Reed,2022-08-14,2022-08-14,1,102
+3083,Broken Into Pieces,Trey Anastasio,2023-08-01,2023-10-10,2,53
+90,Brother,Phish,1991-09-25,2021-10-15,60,153
+91,Brown Eyed Girl,Van Morrison,1995-11-16,1995-11-16,1,1042
+93,Buffalo Bill,Phish,1992-11-21,2023-10-10,22,53
+94,Bug,Amfibian,1999-06-30,2024-10-27,96,8
+95,Bundle of Joy,Phish,1987-05-11,1989-11-03,10,1749
+96,Buried Alive,Phish,1990-09-13,2024-08-11,167,19
+953,Burn That Bridge,Trey Anastasio,2010-12-31,2010-12-31,1,522
+97,Burning Down the House,Talking Heads,1998-08-12,1998-08-12,1,834
+99,Bye Bye Foot,Phish,1997-06-14,2021-10-23,6,147
+724,California Love,Tupac Shakur (Featuring Dr.Dre),1998-07-15,1998-07-15,1,854
+948,Call It Stormy Monday (But Tuesday Is Just As Bad),T-Bone Walker,1989-02-23,1989-02-23,1,1838
+100,Camel Walk,Phish,1984-11-03,2023-07-18,64,76
+2603,Can't Always Listen,Phish,2015-12-30,2019-08-30,2,194
+101,Can't You Hear Me Knocking,The Rolling Stones,1984-11-03,1985-05-03,3,2022
+102,Cannonball,The Breeders,1994-05-07,1994-05-07,1,1194
+103,Caravan,Duke Ellington,1990-01-20,1996-12-29,43,948
+700,Carefree,Sun Ra,1994-04-26,1994-04-26,1,1202
+104,Carini,Phish,1997-02-17,2025-01-29,146,3
+105,Carolina,Traditional,1990-01-20,2019-12-06,83,186
+106,Cars Trucks Buses,Phish,1995-09-27,2025-01-31,88,1
+846,Casino Boogie,The Rolling Stones,2009-10-31,2009-10-31,1,588
+2971,Casual Enlightenment,Phish,2021-08-08,2023-07-18,3,76
+107,Catapult,Phish,1992-04-17,2021-09-05,36,154
+2861,Cathy's Clown,The Everly Brothers,2019-07-02,2019-07-02,1,203
+108,Cavern,Phish,1990-03-28,2025-01-30,478,2
+109,Cecilia,Simon & Garfunkel,1997-06-25,1997-06-25,1,922
+110,Chalk Dust Torture,Phish,1991-02-01,2025-01-31,513,1
+111,Chalk Dust Torture Reprise,Phish,1994-12-10,2024-02-24,5,41
+112,Champagne Supernova,Oasis,1996-12-29,1996-12-29,1,948
+113,Character Zero,Phish,1996-06-06,2025-01-30,254,2
+114,Chariots of Fire,Vangelis,2003-08-03,2003-08-03,1,646
+115,Che Hun Ta Mo,Chief Jim Billie,1999-12-30,1999-12-30,1,738
+2706,Chocolate Rain,Tay Zonday,2017-07-28,2017-07-28,1,274
+117,Choo Choo Ch' Boogie,Louis Jordan,1993-03-02,1993-03-02,1,1311
+118,Cinnamon Girl,Neil Young,1989-03-01,2023-10-08,5,54
+119,Cities,Talking Heads,1984-12-01,2025-01-29,106,3
+2978,Clear Your Mind,Phish,2021-10-31,2023-07-22,4,73
+121,Clod,Phish,1986-10-15,1989-11-10,11,1746
+122,Clone,Leo Kotke/Mike Gordon,2003-02-26,2003-02-26,1,669
+123,Cocaine,J.J. Cale,1993-08-06,1993-08-06,1,1242
+2702,Coconut,Harry Nilsson,2017-07-21,2017-07-21,1,279
+125,Cold Rain and Snow,Traditional,1999-09-17,1999-09-17,1,770
+889,Cold Water,Tom Waits,2010-06-15,2010-06-15,1,566
+698,Cold as Ice,Foreigner,1992-03-07,1992-05-18,47,1401
+126,Colonel Forbin's Ascent,Phish,1988-03-12,2023-12-31,128,45
+719,Come On (Part One),Earl King,1987-04-29,1987-04-29,1,1978
+128,Come Together,The Beatles,1995-12-08,2011-09-04,2,488
+127,Come on Baby Let's Go Downtown,Crazy Horse,2000-09-23,2000-10-05,2,685
+129,Communication Breakdown,Led Zeppelin,1990-01-25,1990-10-20,7,1610
+130,Contact,Phish,1988-06-15,2024-07-26,173,31
+2800,Cool Amber and Mercury,Phish,2018-10-31,2023-10-10,8,53
+131,Cool It Down,The Velvet Underground,1998-10-31,2023-04-19,12,85
+92,Cool Jerk,The Capitols,2004-08-15,2004-08-15,1,620
+132,Corinna,Taj Mahal,1987-02-21,2023-10-14,31,50
+2264,Corona,Trey Anastasio,2017-07-15,2017-07-15,1,283
+133,Costume Contest,Phish,1988-10-29,1994-10-31,3,1128
+136,Cracklin' Rosie,Neil Diamond,1992-03-07,2023-07-29,51,68
+2608,Crazy Sometimes,Mike Gordon,2017-07-18,2023-10-11,9,52
+138,Crimes of the Mind,The Dude of Life (with Phish),1991-08-03,2016-10-28,8,295
+139,Crosseyed and Painless,Talking Heads,1996-10-31,2025-02-01,66,0
+140,Crossroads,Robert Johnson,1993-05-08,1998-11-28,9,806
+141,Crowd Control,Phish,2003-11-28,2022-08-02,22,110
+142,Cry Baby Cry,The Beatles,1994-10-31,2016-07-20,5,312
+143,Cryin',Aerosmith,1995-09-29,1995-09-29,1,1071
+144,Cut My Hair,The Who,1995-10-31,1995-10-31,1,1049
+145,Dahlia,The Dude of Life (with Phish),1990-09-13,1990-09-13,1,1638
+146,Daniel Saw the Stone,Traditional,1993-07-15,2017-08-01,23,271
+147,Dave's Energy Guide,Phish,1985-04-06,1995-06-28,20,1079
+148,David Bowie,Phish,1986-10-31,2024-12-28,473,7
+937,Day or Night,Little Feat,2010-10-31,2010-10-31,1,526
+150,Dazed and Confused,Led Zeppelin,1989-05-21,1989-05-21,1,1797
+151,Dear Mrs. Reagan,Phish,1985-11-14,1989-01-18,13,1851
+152,Dear Prudence,The Beatles,1994-10-31,2016-06-29,3,324
+2799,Death Don't Hurt Very Long,Phish,2018-10-31,2024-08-07,13,22
+915,Dec 1661,Zenzile,1986-02-03,1986-02-03,1,2011
+2524,Dem Bones,James Weldon Johnson,2014-12-31,2017-08-04,3,269
+153,Demand,Phish,1994-04-09,2016-07-20,16,312
+154,Destiny Unbound,Phish,1990-09-14,2024-08-04,55,24
+2423,Devotion To a Dream,Phish,2013-10-31,2016-10-15,20,303
+155,Diamond Girl,Seals and Crofts,1992-12-31,1992-12-31,1,1333
+157,Digital Delay Loop Jam,Phish,1994-04-08,1997-08-17,10,893
+158,Dinner and a Movie,Phish,1987-11-19,2024-08-10,150,20
+159,Dirt,New York!,1997-06-14,2024-10-25,76,10
+160,Discern,Trey Anastasio,2003-07-08,2003-08-02,4,647
+161,Divided Sky,Phish,1987-05-11,2024-12-30,438,5
+871,Dixie Cannonball,Gene Autry,2009-12-30,2009-12-30,1,571
+940,Dixie Chicken,Little Feat,2010-10-31,2010-10-31,1,526
+162,Doctor Jimmy,The Who,1995-10-31,1995-10-31,1,1049
+163,Dog Faced Boy,Phish,1994-04-14,2021-10-30,54,142
+164,Dog Log,Phish,1985-10-30,2024-09-01,24,11
+165,Dogs Stole Things,Phish,1997-06-13,2022-07-31,41,111
+166,Doin' My Time,Jimmie Skinner,1996-08-07,1999-07-01,2,799
+944,Don't Bogart That Joint,Fraternity of Man,2010-10-31,2016-12-31,2,288
+2981,Don't Doubt Me,Phish,2021-10-31,2023-09-02,5,58
+167,Don't Get Me Wrong,Phish,1990-10-06,1990-12-28,3,1585
+168,Don't Pass Me By,The Beatles,1994-10-31,1994-10-31,1,1128
+169,Don't Want You No More,Spencer Davis Group,1984-12-01,1985-04-06,2,2029
+170,Don't You Want To Go?,The Meditation Singers,1995-05-16,1995-09-28,5,1072
+171,Donna Lee,Charlie Parker,1988-10-29,1993-07-25,25,1250
+172,Dooley,The Dillards,1994-11-19,1994-11-20,2,1116
+172,Dooley,The Dillards,1994-11-19,1994-11-20,2,1116
+173,Down By the River,Neil Young,1998-10-03,1998-10-03,1,831
+174,Down with Disease,Phish,1993-12-31,2024-12-30,315,5
+894,Dr. Gabel,Phish,2010-06-22,2010-06-22,1,561
+2829,Drift While You're Sleeping,Ghosts of the Forest,2019-06-11,2024-08-03,29,25
+176,Drifting,Trey Anastasio,2003-02-26,2003-02-26,1,669
+2574,Drive-In Jam,Phish,2015-08-22,2015-08-22,1,341
+177,Driver,Phish,1998-10-17,2024-12-28,39,7
+178,Drowned,The Who,1995-10-31,2023-10-15,48,49
+787,Drums,Traditional,1984-11-03,2009-08-02,11,598
+181,Dust in the Wind,Kansas,2003-07-18,2003-07-18,1,658
+705,Earache My Eye,Cheech and Chong,1994-05-17,1994-05-17,1,1187
+1215,Easy To Slip,Little Feat,2013-08-30,2013-08-30,1,423
+183,Eclipse,Pink Floyd,1998-11-02,1998-11-02,1,823
+2976,Egg in a Hole,Phish,2021-10-31,2023-10-11,4,52
+184,El Paso,Marty Robbins,2000-10-06,2000-10-06,1,684
+185,Eliza,Phish,1990-09-15,1992-05-14,22,1405
+186,Emotional Rescue,The Rolling Stones,1997-11-21,2019-02-22,6,219
+744,End of Session,Phish,2017-07-25,2021-10-20,2,149
+2414,Energy,The Apples in Stereo,2013-07-05,2023-08-02,10,65
+187,Esther,Phish,1988-09-12,2024-07-27,135,30
+3078,Ether Edge,Trey Anastasio,2023-07-12,2024-08-29,9,14
+2907,Evening Song,Phish,2019-12-28,2023-07-28,5,69
+188,Everybody's Got Something to Hide Except Me and My Monkey,The Beatles,1994-10-31,2000-09-25,2,691
+189,Everyday I Have the Blues,Memphis Slim,2003-02-24,2003-02-24,1,671
+2713,Everything In Its Right Place,Radiohead,2017-08-04,2017-08-04,1,269
+2794,Everything is Hollow,Phish,2018-10-31,2023-10-15,4,49
+2656,Everything's Right,Trey Anastasio,2017-07-14,2025-01-30,62,2
+2944,Evolve,Trey Anastasio,2021-08-04,2025-01-29,21,3
+190,Eyes of the World,Grateful Dead,1984-11-03,1985-05-03,3,2022
+191,Faht,Phish,1992-11-22,1995-12-02,12,1031
+192,Family Picture,The Dude of Life (with Phish),1990-09-30,1991-11-08,2,1474
+193,Farmhouse,Phish,1997-11-16,2025-02-01,89,0
+194,Fast Enough for You,Phish,1992-11-19,2024-02-23,78,42
+933,Fat Man in the Bathtub,Little Feat,2010-10-31,2022-02-27,3,136
+947,Feats Don't Fail Me Now,Little Feat,2010-10-31,2010-10-31,1,526
+195,Fee,Phish,1987-08-09,2024-08-30,286,13
+196,Feel the Heat,"""Dirk Diggler,"" ""Reed Rothchild""",2003-12-31,2003-12-31,1,638
+197,Fikus,Phish,1998-07-02,2024-08-11,6,19
+198,Final Flight,Vida Blue,2003-02-26,2003-02-26,1,669
+199,Fire,Jimi Hendrix Experience,1984-12-01,2023-07-25,138,71
+201,Fire Up the Ganja,Phish,1985-03-04,1985-03-04,1,2033
+200,Fire on the Mountain,Grateful Dead,1983-12-02,1984-12-01,2,2038
+202,First Tube,Trey Anastasio,1999-09-09,2025-02-01,135,0
+2641,Five Years,David Bowie,2016-10-31,2021-10-28,2,144
+205,Fixin' to Die,Bukka White,1994-11-17,1994-11-30,2,1110
+206,Flat Fee,Phish,1987-08-09,1991-07-27,21,1506
+733,Flatbed Truck Jam,Phish,1996-08-16,1996-08-16,1,986
+207,Fluff's Travels,Phish,1989-12-30,1989-12-30,1,1730
+208,Fluffhead,Phish,1984-12-01,2024-12-30,282,5
+695,Fly Famous Mockingbird,Phish,1988-02-07,2023-12-31,129,45
+2078,Fly Like an Eagle,Steve Miller Band,2012-12-31,2012-12-31,1,446
+209,Foam,Phish,1988-10-29,2024-07-27,353,30
+739,Foggy Mountain Breakdown,Flatt and Scruggs,1994-11-16,1994-11-16,1,1121
+278,Fooled Around and Fell in Love,Elvin Bishop,2003-07-29,2003-07-29,1,650
+211,Foreplay/Long Time,Boston,1994-10-07,1999-07-12,17,792
+918,Four,Miles Davis,1989-08-12,1989-08-12,1,1782
+212,Four Strong Winds,Ian & Sylvia,1998-10-18,1998-10-18,1,828
+213,Frankenstein,The Edgar Winter Group,1989-11-11,2024-08-07,93,22
+214,Frankie Says,Phish,1998-04-02,2023-07-30,32,67
+215,Free,Phish,1995-05-16,2025-01-29,229,3
+216,Free Bird,Lynyrd Skynyrd,1987-03-06,2009-11-29,28,578
+896,Free Man in Paris,Joni Mitchell,2010-06-25,2010-06-25,1,559
+217,Freeworld,Phish,1987-03-06,1987-03-06,1,1983
+218,Friday,Phish,2003-01-04,2016-10-25,13,296
+2830,Friend,Ghosts of the Forest,2019-06-22,2019-06-22,1,210
+2631,Friends,Phish,2016-06-29,2016-07-10,2,317
+1374,Frost,Trey Anastasio,2013-07-17,2019-12-08,6,184
+219,Fuck Your Face,Phish,1987-04-29,2024-12-28,20,7
+2418,Fuego,Phish,2013-10-31,2025-01-31,90,1
+729,Funky (Breakdown),Ninja Custodian,1989-05-28,1989-05-28,1,1794
+220,Funky Bitch,Son Seals,1986-12-06,2025-01-30,233,2
+2378,Garden Party,Ricky Nelson,2012-12-31,2012-12-31,1,446
+204,Gaul Swerves and the Rest is Everything Else,Phish,1989-10-26,1989-10-26,1,1753
+2975,Get More Down,Phish,2021-10-31,2021-10-31,1,141
+221,Gettin' Jiggy Wit' It,Will Smith (a.k.a. The Fresh Prince),1998-11-20,1998-11-20,1,811
+222,Ghost,Phish,1997-06-13,2025-01-29,221,3
+2828,Ghosts of the Forest,Ghosts of the Forest,2019-12-04,2019-12-04,1,187
+223,Ginseng Sullivan,Norman Blake,1993-08-11,2024-08-07,80,22
+224,Girls Girls Girls,Jay-Z,2004-04-15,2004-04-15,1,637
+226,Glass Onion,The Beatles,1994-10-31,1994-10-31,1,1128
+227,Glide,Phish,1991-09-27,2021-08-31,116,158
+228,Glide II,Phish,1995-05-16,2018-12-30,2,222
+229,Gloria,Them,1995-05-16,1995-05-16,1,1096
+229,Gloria,Laura Branigan,2019-06-12,1995-05-16,1,1096
+2855,Gloria,Them,1995-05-16,2019-06-12,1,216
+2855,Gloria,Laura Branigan,2019-06-12,2019-06-12,1,216
+230,Glory Days,Bruce Springsteen,2009-06-14,2009-06-14,1,607
+231,Goin' Down Slow,"""St. Louis Jimmy"" Oden",1990-09-13,1990-10-03,3,1624
+232,Gold Soundz,Pavement,1999-07-21,1999-07-21,1,785
+867,Golden Age,TV on the Radio,2009-11-27,2025-02-01,81,0
+233,Golden Lady,Stevie Wonder,1994-10-20,2003-02-16,2,676
+234,Golgi Apparatus,Phish,1986-10-12,2024-12-31,479,4
+801,Gone,Trey Anastasio,2009-12-30,2010-12-31,2,522
+235,Good Times Bad Times,Led Zeppelin,1986-12-06,2024-07-26,229,31
+236,Got My Mojo Working,Muddy Waters,1997-02-25,1997-02-25,1,936
+237,Gotta Jibboo,Trey Anastasio,1999-09-10,2024-10-27,102,8
+922,Green Onions,Booker T. & the M.G.'s,1989-03-01,1989-03-01,1,1835
+238,Grind,Phish,1998-12-30,2024-12-31,31,4
+239,Guelah Papyrus,Phish,1991-02-01,2024-08-30,206,13
+240,Gumbo,Phish,1990-09-28,2025-01-30,121,2
+241,Guy Forget,Phish,2000-10-01,2024-08-03,4,25
+242,Guyute,Phish,1994-10-07,2024-07-23,134,33
+243,Gypsy Queen,Gabor Szabo,1996-08-07,1997-06-24,3,923
+245,Ha Ha Ha,Phish,1995-05-16,2021-08-27,33,161
+2832,Halfway Home,Ghosts of the Forest,2019-06-23,2019-06-23,1,209
+892,Halfway to the Moon,Phish,2010-06-19,2025-01-30,54,2
+246,Halley's Comet,Phish,1986-05-17,2025-01-30,154,2
+2648,Hang On to Yourself,Arnold Corns,2016-10-31,2016-10-31,1,292
+247,Happiness Is a Warm Gun,The Beatles,1994-10-31,2012-07-03,2,467
+850,Happy,The Rolling Stones,2009-10-31,2009-10-31,1,588
+248,Happy Birthday to You,Traditional,1983-12-02,2023-07-23,22,72
+249,Harpua,Phish,1987-05-11,2023-12-31,66,45
+250,Harry Hood,Phish,1985-10-30,2025-01-30,426,2
+251,Have Mercy,The Mighty Diamonds,1986-04-01,2020-02-22,17,177
+252,Head Held High,The Velvet Underground,1998-10-31,2012-07-04,2,466
+253,Heart and Soul,Larry Clinton Orchestra,1995-11-29,1995-11-29,1,1034
+929,Heartbreaker,Led Zeppelin,2010-10-30,2013-07-16,2,437
+1708,Heavy Rotation,Page McConnell,2015-07-22,2022-09-03,3,99
+254,Heavy Things,Amfibian,1999-09-11,2024-10-27,99,8
+255,Hello My Baby,Howard and Emerson,1995-09-27,2019-12-03,57,188
+256,Help Me,Sonny Boy Williamson,1993-04-10,1993-04-10,1,1283
+257,Help on the Way,Grateful Dead,1986-04-01,1986-04-01,1,2007
+258,Helpless,"Crosby, Stills, Nash, and Young",1998-10-17,1998-10-17,1,829
+259,Helpless Dancer,The Who,1995-10-31,1995-10-31,1,1049
+260,Helter Skelter,The Beatles,1994-10-31,1994-11-17,2,1120
+3004,Hey Stranger,Trey Anastasio,2022-12-29,2024-12-30,10,5
+261,High-Heel Sneakers,Tommy Tucker,1994-04-23,1994-04-23,1,1205
+262,Highway to Hell,AC/DC,1989-10-01,2009-08-16,77,590
+263,Hold Whatcha Got,Jimmy Martin and His Sunny Mountain Boys,2000-06-22,2000-06-22,1,722
+696,Hold Your Head Up,Argent,1987-08-21,2023-07-29,312,68
+264,Hold to a Dream,Tim O'Brien,1996-08-07,1996-08-07,1,991
+2640,Home,Phish,2016-10-14,2019-07-02,7,203
+265,Honey Pie,The Beatles,1994-10-31,1994-10-31,1,1128
+266,Honky Tonk Women,The Rolling Stones,1993-04-12,1994-06-30,2,1160
+268,Hoochie Coochie Man,Muddy Waters,1993-04-10,1997-08-08,2,900
+269,Horn,Phish,1990-05-24,2024-07-31,176,27
+270,Houses in Motion,Talking Heads,1996-10-31,1996-10-31,1,973
+271,How High the Moon,Hamilton and Lewis,1990-04-21,2009-08-13,5,593
+2536,How Many People Are You,Mike Gordon,2015-07-22,2021-08-29,10,159
+3147,Human Nature,Phish,2024-07-20,2024-08-11,2,19
+272,Hurricane,Bob Dylan,1985-11-14,1985-11-14,1,2014
+2638,I Always Wanted It This Way,Phish,2016-10-15,2024-12-28,21,7
+273,I Am Hydrogen,Phish,1985-04-06,2025-01-29,349,3
+2985,I Am in Miami,Phish,2021-10-31,2022-05-28,2,130
+274,I Am the Sea,The Who,1995-10-31,1995-10-31,1,1049
+900,I Am the Walrus,The Beatles,2010-06-29,2023-10-11,7,52
+709,I Been Around,Phish,2009-08-16,2022-07-14,9,123
+275,I Been to Georgia on a Fast Train,Billy Joe Shaver,1993-05-06,1993-05-06,1,1263
+2938,I Can't Turn You Loose,Otis Redding,1997-12-29,1999-09-29,2,761
+276,I Didn't Know,Phish,1987-11-18,2024-08-03,263,25
+277,I Don't Care,Phish,1997-06-16,1997-06-20,2,926
+279,I Found a Reason,The Velvet Underground,1998-10-31,2016-06-22,2,329
+280,I Get a Kick Out of You,Dinah Washington,1998-08-02,1998-11-09,2,818
+853,I Just Want To See His Face,The Rolling Stones,2009-10-31,2009-10-31,1,588
+710,I Kissed a Girl,Katy Perry,2009-08-16,2009-08-16,1,590
+281,I Know a Little,Lynyrd Skynyrd,1986-12-06,1988-08-03,5,1889
+2934,I Never Left Home,Trey Anastasio,2021-10-19,2021-10-19,1,150
+2935,I Never Needed You Like This Before,Trey Anastasio,2021-07-28,2024-08-11,14,19
+283,I Shall Be Released,The Band,1998-10-18,1998-10-18,1,828
+284,I Told You So,Jimmie Davis,1997-03-18,1997-03-18,1,931
+285,I Walk the Line,Johnny Cash,1992-11-19,1993-03-09,10,1306
+286,I Wan'na Be Like You,Louis Prima,1994-04-04,1994-06-10,9,1175
+135,I Want To Be a Cowboy's Sweetheart,Patsy Montana,1996-12-06,1996-12-06,1,950
+287,I Will,The Beatles,1994-10-31,1994-10-31,1,1128
+288,I Wish,Stevie Wonder,1985-04-06,1985-10-30,2,2016
+289,I'll Come Running,Brian Eno,1995-05-16,1995-05-16,1,1096
+290,"I'm Blue, I'm Lonesome",Bill Monroe,1994-11-16,2000-06-22,30,722
+291,I'm Gonna Be (500 Miles),The Proclaimers,1997-12-30,1997-12-30,1,869
+292,I'm One,The Who,1995-10-31,1995-10-31,1,1049
+293,I'm So Tired,The Beatles,1994-10-31,1995-11-18,2,1041
+294,I've Had Enough,The Who,1995-10-31,1995-10-31,1,1049
+295,I've Turned Bad,Phish,1989-05-09,1989-05-09,1,1804
+296,Icculus,Phish,1986-04-01,2024-12-31,30,4
+890,Idea,Phish,2010-06-15,2010-06-15,1,566
+1228,If 6 Was 9,Jimi Hendrix Experience,2021-10-28,2021-10-28,1,144
+297,If I Could,Phish,1994-04-04,2024-07-31,67,27
+298,If I Don't Be There By Morning,Eric Clapton,1989-05-09,1989-05-09,1,1804
+299,If I Only Had a Brain,Ray Bolger (as “The Scarecrow”),1989-03-12,1995-11-16,41,1042
+300,If You Need a Fool,The Del McCoury Band,1998-07-29,1999-07-18,3,787
+730,Immigrant Song,Led Zeppelin,1989-07-01,1995-11-14,2,1044
+2696,In The Good Old Summer Time,Phish,2017-07-14,2017-07-30,2,272
+302,In a Hole,Phish,1989-10-20,1989-12-16,8,1732
+706,In a Mellow Tone,Duke Ellington,1989-08-12,1989-08-12,1,1782
+897,In the Aeroplane Over the Sea,Neutral Milk Hotel,2010-06-26,2010-06-26,1,558
+303,In the Midnight Hour,Wilson Pickett,1983-12-02,1985-09-27,5,2019
+2786,Infinite,Phish,2018-07-21,2018-08-07,2,246
+888,Instant Karma!,John Lennon,2010-06-12,2011-08-10,3,495
+2508,Intro,Phish,2014-10-31,2014-10-31,1,368
+859,Invisible,Mike Gordon and Leo Kottke,2009-11-01,2009-11-01,1,587
+305,Iron Man,Black Sabbath,2003-12-31,2012-12-31,2,446
+306,Is It In My Head?,The Who,1995-10-31,1995-10-31,1,1049
+2507,Is This What You Wanted,Leonard Cohen,2014-10-31,2014-10-31,1,368
+2645,It Ain't Easy,Ron Davies,2016-10-31,2016-10-31,1,292
+308,It's All Right,Bruce Sunpie Barnes and the Louisiana Sunspots,1993-03-02,1993-03-02,1,1311
+307,It's Ice,Phish,1991-09-25,2024-08-07,249,22
+309,Izabella,Jimi Hendrix Experience,1997-06-13,2024-08-18,19,15
+311,Jam,Traditional,1984-11-03,2014-07-27,74,386
+312,Jennifer Dances,Phish,1999-12-05,2014-07-27,4,386
+313,Jessica,The Allman Brothers Band,1993-05-08,1993-05-08,1,1261
+314,Jesus Just Left Chicago,ZZ Top,1987-08-10,2019-12-03,81,188
+1744,John Hardy,Traditional,1994-11-19,1994-11-19,1,1117
+1744,John Hardy,Traditional,1994-11-19,1994-11-19,1,1117
+1744,John Hardy,Traditional,1994-11-19,1994-11-19,1,1117
+1744,John Hardy,Traditional,1994-11-19,1994-11-19,1,1117
+315,Johnny B. Goode,Chuck Berry,1995-06-17,1998-07-08,23,857
+316,Joy,Phish,2009-06-07,2024-07-21,56,34
+317,Julia,The Beatles,1994-10-31,1994-10-31,1,1128
+318,Julius,Phish,1994-04-04,2024-08-09,236,21
+319,Jump Monk,Charles Mingus,1988-03-12,1994-04-24,2,1204
+899,Jumpin' Jack Flash,The Rolling Stones,2010-06-27,2010-06-27,1,557
+320,Jungle Boogie,Kool and the Gang,2003-12-31,2022-12-31,2,94
+2787,Keeping It Real,Phish,2018-07-25,2018-09-02,2,239
+321,Keyboard Army,Phish,1995-09-27,2015-09-06,14,337
+323,Kill Devil Falls,Phish,2009-06-02,2025-01-29,116,3
+324,Killer Joe,Phish,1990-03-17,1990-03-17,1,1692
+902,Killing in the Name,Rage Against the Machine,2010-07-04,2010-07-04,1,552
+2974,Knuckle Bone Broth Avenue,Phish,2021-10-31,2024-08-04,3,24
+325,Kung,Phish,1989-10-31,2019-11-30,38,190
+326,L.A. Woman,The Doors,2003-12-30,2021-10-24,2,146
+327,La Grange,ZZ Top,1987-08-09,2012-07-08,82,463
+2646,Lady Stardust,David Bowie,2016-10-31,2016-10-31,1,292
+329,Lawn Boy,Phish,1989-11-30,2024-07-31,220,27
+330,Layla,Derek and the Dominoes,1998-11-29,1998-11-29,1,805
+925,Le Freak,Chic,1989-04-13,1989-04-13,1,1821
+2697,Leaves,Phish,2017-07-14,2024-07-24,16,32
+2416,Legalize It,Peter Tosh,2013-09-01,2013-09-01,1,421
+331,Lengthwise,Phish,1992-11-19,2024-12-30,32,5
+332,Leprechaun,Phish,1993-07-15,1993-07-31,3,1245
+854,Let It Loose,The Rolling Stones,2009-10-31,2012-06-30,3,469
+333,Let Me Lie,Trey Anastasio,2009-06-06,2016-10-15,10,303
+883,Let's Go,Phish,2016-07-01,1991-03-22,6,1554
+883,Let's Go,The Cars,1991-02-04,1991-03-22,6,1554
+2633,Let's Go,Phish,2016-07-01,2016-10-21,2,299
+2633,Let's Go,The Cars,1991-02-04,2016-10-21,2,299
+335,Letter to Jimmy Page,Phish,1985-04-06,2023-07-12,97,80
+3100,Life Saving Gun,Phish,2023-07-30,2024-12-31,10,4
+337,Life on Mars?,David Bowie,1995-10-13,2012-06-29,23,470
+338,Lifeboy,Phish,1993-02-03,2024-07-27,61,30
+339,Light,Trey Anastasio,2009-05-31,2025-01-29,125,3
+340,Light Up Or Leave Me Alone,Traffic,1986-12-06,2012-07-06,19,465
+341,Limb By Limb,Phish,1997-06-13,2024-10-27,157,8
+342,Listening Wind,Talking Heads,1996-10-31,1996-10-31,1,973
+893,Lit O Bit,Rita Clarke and the Naturals,2010-06-22,2010-06-22,1,561
+336,Little Red Rooster,Howlin' Wolf,1997-02-25,1997-02-25,1,936
+98,Little Tiny Butter Biscuits,"""Reverend"" Jeff Mosier",1994-11-18,1994-11-22,4,1115
+344,Lively Up Yourself,Bob Marley and The Wailers,1992-04-21,1992-04-21,1,1422
+345,Llama,Phish,1990-10-27,2024-12-31,321,4
+2932,Lonely Trip,Trey Anastasio,2021-08-11,2025-01-31,22,1
+346,Lonesome Cowboy Bill,The Velvet Underground,1995-05-16,2016-12-28,8,291
+347,Long Cool Woman in a Black Dress,The Hollies,1983-12-02,2003-12-01,3,643
+348,Long Long Long,The Beatles,1994-10-31,1994-10-31,1,1128
+887,Look Out Cleveland,The Band,2010-06-12,2010-06-12,1,568
+349,Loup Garou,Bruce Sunpie Barnes and the Louisiana Sunspots,1993-03-02,1993-03-02,1,1311
+2698,Love Is What We Are,Phish,2017-07-14,2017-07-14,1,284
+350,Love Me,Elvis Presley,1997-02-13,1998-11-18,9,813
+351,Love Me Like a Man,Bonnie Raitt,1997-03-18,1997-03-18,1,931
+353,Love You,Syd Barrett,1987-10-31,2016-07-16,93,315
+352,"Love, Reign O'er Me",The Who,1995-10-31,1995-10-31,1,1049
+354,Loving Cup,The Rolling Stones,1993-02-03,2024-08-31,151,12
+355,Low Rider,War,1985-09-27,2003-07-15,7,660
+920,Lucky Seven,Dave Holland,1989-08-12,1989-08-12,1,1782
+699,Lullaby of Birdland,Ella Fitzgerald,1992-03-28,1992-03-28,1,1439
+356,Lushington,Phish,1986-10-15,1987-09-02,8,1967
+357,Magilla,Phish,1990-09-13,2003-07-22,71,655
+358,Maiden Voyage,Herbie Hancock,1988-07-30,1988-07-30,1,1890
+359,Makisupa Policeman,Phish,1984-10-23,2023-07-11,108,81
+740,Mallory,Phish,1995-12-15,1995-12-15,1,1022
+361,Manteca,Dizzy Gillespie,1990-11-04,2020-02-22,15,177
+2709,Maple Leaf Rag,Scott Joplin,2017-08-01,2017-08-01,1,271
+2693,Marissa,Mike Gordon,2017-07-19,2017-07-19,1,280
+363,Martha My Dear,The Beatles,1994-10-31,1994-10-31,1,1128
+2506,Martian Monster,Phish,2014-10-31,2025-02-01,46,0
+2881,Maybe,Vida Blue,2019-11-29,2019-11-29,1,191
+364,Maze,Phish,1992-03-06,2025-01-31,342,1
+365,McGrupp and the Watchful Hosemasters,Phish,1985-04-06,2024-08-04,119,24
+366,Mean Mr. Mustard,The Beatles,1996-11-15,1996-11-15,1,963
+367,Meat,Phish,1998-07-02,2024-07-30,49,28
+369,Meatstick,Phish,1997-06-25,2024-08-17,73,16
+371,Mellow Mood,Bob Marley and The Wailers,2000-09-08,2018-09-02,10,239
+372,Melt the Guns,XTC,1985-09-27,1987-04-29,4,1978
+373,Memories,Van Alstyne and Kahn,1990-11-17,1994-07-06,42,1155
+938,Mercenary Territory,Little Feat,2010-10-31,2010-10-31,1,526
+2573,Mercury,Phish,2015-07-22,2024-10-27,40,8
+2957,Mercy,Trey Anastasio,2023-07-18,2025-02-01,6,0
+374,Merry Pranksters Jam,Phish,1997-08-14,1997-08-14,1,895
+375,Messin' with The Kid,Junior Wells,1997-08-08,1999-10-03,2,758
+879,Metal Bagel Death,Phish,1990-05-04,1990-05-04,1,1666
+376,Mexican Cousin,Phish,2003-01-02,2019-07-06,15,200
+377,Middle of the Road,Mike Gordon and Leo Kottke,2009-08-08,2009-08-14,2,592
+2027,Midnight Moonlight,Peter Rowan,1994-11-19,1994-11-19,1,1117
+2027,Midnight Moonlight,Peter Rowan,1994-11-19,1994-11-19,1,1117
+2027,Midnight Moonlight,Peter Rowan,1994-11-19,1994-11-19,1,1117
+2027,Midnight Moonlight,Peter Rowan,1994-11-19,1994-11-19,1,1117
+378,Midnight Rider,The Allman Brothers Band,1994-06-22,1994-06-22,1,1166
+379,Midnight on the Highway,Hot Rize,1996-11-23,1996-11-23,1,958
+381,Mike's Song,Phish,1985-03-16,2025-01-29,535,3
+382,Mind Left Body Jam,"Paul Kantner, Grace Slick, and David Freiberg",1992-04-18,2016-06-28,8,325
+383,Minute by Minute,Doobie Brothers,1990-09-13,1990-10-03,3,1624
+384,Mirror in the Bathroom,The English Beat,1998-11-27,1998-11-27,1,807
+2627,Miss You,Phish,2016-06-24,2024-07-31,20,27
+385,Misty Mountain Hop,Led Zeppelin,1999-07-20,1999-10-10,4,753
+885,Mo' Better Blues,Terence Blanchard,1990-09-22,1990-11-26,2,1592
+386,Moby Dick,Led Zeppelin,1993-02-19,2000-07-11,3,708
+387,Mock Song,Phish,2003-07-12,2018-10-19,3,236
+388,Money,Pink Floyd,1998-11-02,1998-11-02,1,823
+1358,Monkey Man,The Rolling Stones,2011-07-02,2011-07-02,1,501
+3075,Monsters,Trey Anastasio,2023-07-22,2024-12-29,7,6
+2643,Moonage Daydream,Arnold Corns,2016-10-31,2024-07-27,9,30
+389,Moonlight in Vermont,Blackburn and Suessdorf,1998-10-03,1998-10-03,1,831
+390,Moose the Mooche,Charlie Parker Septet,1991-07-12,1991-07-12,1,1518
+2639,More,Phish,2016-10-14,2025-02-01,48,0
+1303,Most Events Aren't Planned,Vida Blue,2017-08-06,2025-01-31,17,1
+391,Mother Nature's Son,The Beatles,1994-10-31,1994-10-31,1,1128
+392,Mound,Phish,1992-03-06,2023-09-02,117,58
+393,Mountains in the Mist,Trey Anastasio,1999-07-03,2024-12-28,43,7
+394,Mozambique,Trey Anastasio,1999-09-09,1999-09-26,5,763
+380,Mr. Completely,Trey Anastasio,2003-07-15,2024-07-31,15,27
+395,Mr. P.C.,John Coltrane,1988-07-30,1991-05-17,3,1522
+2970,Mull,Phish,2021-08-03,2025-01-29,14,3
+396,Mustang Sally,Mack Rice,1986-10-15,2009-06-14,9,607
+919,My Favorite Things,Mary Martin & Patricia Neway,1989-08-12,1989-08-12,1,1782
+397,"My Friend, My Friend",Phish,1992-03-06,2025-02-01,176,0
+398,My Generation,The Who,1995-10-31,1995-10-31,1,1049
+399,My Left Toe,Phish,1999-06-30,1999-07-25,4,782
+704,My Life As a Pez,Dave Abrahams,1993-03-28,1993-03-28,1,1292
+400,My Long Journey Home,Bill Monroe,1994-11-16,1995-11-29,15,1034
+401,My Mind's Got a Mind of its Own,Jimmie Dale Gilmore,1992-03-07,2022-05-28,45,130
+926,My Problem Right There,Phish,2010-10-10,2010-10-22,3,532
+402,My Soul,Clifton Chenier,1997-02-13,2024-08-07,92,22
+403,My Sweet One,Phish,1989-09-09,2025-01-29,253,3
+404,NICU,Phish,1992-03-06,2024-08-15,156,18
+405,NO2,Phish,1994-06-25,2021-10-28,9,144
+406,Nellie Kane,Hot Rize,1993-02-23,2024-08-06,74,23
+407,Never,Phish,1998-10-17,1998-10-17,1,829
+408,New Age,The Velvet Underground,1998-10-31,1998-10-31,1,824
+410,Night Moves,Bob Seger,1995-10-02,1995-10-02,1,1069
+928,Night Nurse,Gregory Isaacs,2010-10-26,2010-10-26,1,529
+776,Night and Day,Ella Fitzgerald,1989-08-12,1989-08-12,1,1782
+5,Ninety-Nine Years (and One Dark Day),Hot Rize,1996-08-07,1996-08-07,1,991
+411,No Dogs Allowed,Phish,1988-07-23,1990-04-21,6,1674
+412,No Good Trying,Syd Barrett,1990-12-07,1990-12-28,3,1585
+2572,No Men In No Man's Land,Phish,2015-07-21,2025-01-30,79,2
+1353,No Quarter,Led Zeppelin,2011-06-01,2023-10-14,19,50
+413,Not Fade Away,The Crickets,1986-04-01,1986-04-01,1,2007
+560,Nothin' But A Nothin',Baby Gramps,1993-08-25,1993-08-26,2,1227
+414,Nothing,Amfibian,2004-06-17,2024-10-26,9,9
+415,Nowhere Fast,Phish,1989-05-09,1989-05-09,1,1804
+2708,O Canada,Calixa Lavallee,2017-08-01,2017-08-01,1,271
+2711,O Holy Night,Adolphe Adam,2017-08-02,2017-08-02,1,270
+416,O Mio Babbino Caro,Puccini/Forzano,1994-05-27,1994-05-27,1,1179
+417,"Ob-La-Di, Ob-La-Da",The Beatles,1993-05-06,1994-10-31,2,1128
+3076,Oblivion,Trey Anastasio,2023-07-11,2025-01-31,17,1
+420,Ocelot,Phish,2009-05-31,2024-08-29,100,14
+935,Oh Atlanta,Little Feat,2010-10-31,2010-10-31,1,526
+421,Oh! Sweet Nuthin',The Velvet Underground,1998-10-31,2013-08-30,6,423
+936,Old Folks Boogie,Little Feat,2010-10-31,2010-10-31,1,526
+419,Olivia's Pool,Phish,1997-06-13,2023-04-18,10,86
+916,On Green Dolphin Street,Urbie Green,1989-08-12,1989-08-12,1,1782
+422,On My Knees,Son Seals,1999-07-17,1999-07-17,1,788
+423,On The Run,Pink Floyd,1998-11-02,1998-11-02,1,823
+424,On Your Way Down,Allen Toussaint,1988-06-24,2011-08-06,22,498
+1080,On the Road Again,Willie Nelson,2013-08-31,2017-08-06,2,267
+425,Once in a Lifetime,Talking Heads,1996-10-31,2015-09-06,2,337
+426,One Meatball,George Martin Lane,1997-02-25,1997-02-25,1,936
+521,Over the Rainbow,Judy Garland,1992-08-17,1998-08-09,7,836
+428,Oye Como Va,Tito Puente,1993-08-28,1993-08-28,1,1226
+429,P-Funk Medley,Parliament-Funkadelic,2003-12-30,2003-12-30,1,639
+723,Party Time,Phish,2009-08-15,2024-08-18,38,15
+2801,Passing Through,Phish,2018-10-31,2022-07-19,6,120
+430,Paul and Silas,Josh White,1990-09-13,2016-07-22,91,311
+431,Peaches en Regalia,Frank Zappa,1986-10-15,2024-08-16,88,17
+432,Pebbles and Marbles,Trey Anastasio,2003-01-03,2024-07-31,29,27
+2495,Petrichor,Trey Anastasio,2016-10-14,2022-08-13,13,103
+433,Phase Dance,Pat Metheny Group,1988-02-07,1988-02-26,4,1938
+434,Piano Duet,Phish,1993-07-28,1994-04-22,2,1206
+435,Pig in a Pen,The Stanley Brothers,1993-02-21,1994-11-16,2,1121
+436,Piggies,The Beatles,1985-11-14,1994-10-31,2,1128
+952,Pigtail,Phish,2010-12-28,2018-07-24,5,254
+3080,Pillow Jets,Trey Anastasio,2023-07-21,2024-12-31,10,4
+437,Piper,Phish,1997-06-14,2025-01-30,202,2
+1085,Plasma,Trey Anastasio,2014-10-17,2025-01-30,32,2
+2798,Play by Play,Phish,2018-10-31,2019-06-25,3,208
+1849,Playing in the Band,Grateful Dead,2016-10-18,2016-10-18,1,301
+438,Poor Heart,Phish,1988-08-04,2024-12-28,310,7
+440,Possum,Phish,1985-09-27,2025-01-31,568,1
+1577,Powderfinger,Neil Young,2017-07-26,2017-07-26,1,275
+441,Prep School Hippie,Phish,1985-09-27,1987-10-10,6,1960
+442,Prince Caspian,Phish,1995-06-08,2025-01-31,180,1
+443,Proud Mary,Creedence Clearwater Revival,1983-12-02,2003-03-01,2,667
+444,Psycho Killer,Talking Heads,1993-03-30,2012-07-06,4,465
+446,Punch Me in the Eye,Phish,1987-04-24,1987-04-24,1,1980
+447,Punch You in the Eye,Phish,1989-08-17,2024-08-02,164,26
+448,Purple Rain,Prince,1993-07-16,2012-07-04,32,466
+449,Pusherman,Curtis Mayfield,1991-11-01,1991-11-01,1,1478
+450,Quadrophenia,The Who,1995-10-31,1995-10-31,1,1049
+451,Quadrophonic Toppling,Phish,1999-12-31,2022-05-27,2,131
+452,Quinn the Eskimo (The Mighty Quinn),Bob Dylan,1985-04-06,2019-06-28,38,206
+453,Ramble On,Led Zeppelin,1998-08-01,2010-10-30,3,527
+454,Rapper's Delight,The Sugarhill Gang,2000-09-29,2000-09-29,1,689
+455,Reba,Phish,1989-10-01,2025-02-01,408,0
+2910,Rescue Squad,Phish,2019-12-31,2019-12-31,1,180
+456,Revival,The Allman Brothers Band,1985-10-30,1985-10-30,1,2016
+815,Revolution,Phish,1985-04-06,1985-10-17,3,2018
+457,Revolution 1,The Beatles,1994-10-31,1994-10-31,1,1128
+458,Revolution 9,The Beatles,1994-10-31,1994-10-31,1,1128
+600,Revolution's Over,The Dude of Life (with Phish),1990-09-13,1990-09-13,1,1638
+459,Rhinoceros,Smashing Pumpkins,1998-08-03,1998-08-03,1,840
+460,Rhombus Narration,Phish,1989-09-09,1991-11-15,12,1468
+1266,Rhymes,Al Green,2011-06-07,2011-06-07,1,512
+461,Ride Captain Ride,Blues Image,1987-03-23,2013-10-26,17,414
+462,Rift,Phish,1990-02-25,2024-12-29,311,6
+844,Rip This Joint,The Rolling Stones,2009-10-31,2009-10-31,1,588
+2659,Rise/Come Together,Trey Anastasio,2017-07-19,2022-07-29,19,113
+464,Roadhouse Blues,The Doors,1983-12-02,1983-12-02,1,2042
+463,Roadrunner,The Modern Lovers,2000-09-11,2000-09-11,1,701
+2651,Rock 'n' Roll Suicide,David Bowie,2016-10-31,2017-08-01,2,271
+469,Rock A William,Phish,1997-02-13,1997-08-10,5,898
+465,Rock Me Baby,B.B. King,2003-02-24,2003-02-24,1,671
+466,Rock and Roll,The Velvet Underground,1998-10-31,2024-08-03,93,25
+467,Rock and Roll All Nite,Kiss,1993-02-20,1993-02-20,1,1318
+468,Rock and Roll Part Two,Gary Glitter,1998-11-20,1998-11-20,1,811
+1362,Rocket Man,Elton John,2011-08-09,2011-08-09,1,496
+942,Rocket in My Pocket,Little Feat,2010-10-31,2011-06-04,2,514
+843,Rocks Off,The Rolling Stones,2009-10-31,2009-10-31,1,588
+470,Rocky Mountain Way,Joe Walsh,1991-02-16,1997-07-23,2,909
+471,Rocky Raccoon,The Beatles,1994-10-31,1994-10-31,1,1128
+472,Rocky Top,Osborne Brothers,1987-09-21,2019-12-28,205,183
+473,Roggae,Phish,1998-06-30,2025-01-30,110,2
+474,Roll Like a Cantaloupe,Phish,1986-10-15,1991-11-14,4,1469
+547,Roll in My Sweet Baby's Arms,Traditional,1994-11-18,1994-11-19,2,1117
+547,Roll in My Sweet Baby's Arms,Traditional,1994-11-18,1994-11-19,2,1117
+475,Roses Are Free,Ween,1997-12-11,2022-07-16,51,121
+476,Rotation Jam,Phish,1995-11-25,1997-08-10,4,898
+477,Round Room,Phish,2003-01-02,2024-12-28,7,7
+1102,Ruby Waves,Trey Anastasio,2019-06-18,2024-12-29,35,6
+478,Run Like an Antelope,Phish,1985-04-06,2025-01-29,482,3
+479,Runaway Jim,Phish,1990-03-28,2025-01-30,404,2
+480,Runnin' with the Devil,Van Halen,1998-08-06,1998-08-06,1,839
+810,Running Out of Time,Phish,2016-10-19,2016-10-24,2,297
+481,Sabotage,Beastie Boys,1998-08-08,2024-09-01,6,11
+482,Sad Lisa,Cat Stevens,1998-10-18,1998-10-18,1,828
+946,Sailin' Shoes,Little Feat,2010-10-31,2010-10-31,1,526
+483,Sample in a Jar,Phish,1993-02-04,2024-12-29,308,6
+484,Samson Variation,Ernie Stires,1997-06-21,1997-08-03,2,902
+2566,Samson and Delilah,Gary Davis,2016-10-18,2016-10-18,1,301
+485,Sand,Trey Anastasio,1999-09-11,2025-01-29,151,3
+486,Sanity,Phish,1986-10-15,2024-02-24,45,41
+487,Satin Doll,Duke Ellington,1988-06-20,1993-05-08,18,1261
+488,Savoy Truffle,The Beatles,1994-10-31,1994-10-31,1,1128
+282,Saw It Again,New York!,1997-06-14,2025-01-31,48,1
+2796,Say It To Me S.A.N.T.O.S.,Phish,2018-10-31,2025-01-31,45,1
+2415,Say Something,Phish,2013-07-27,2013-08-30,2,423
+2265,Scabbard,Trey Anastasio,2015-07-22,2015-08-22,2,341
+489,Scarlet Begonias,Grateful Dead,1983-12-02,1985-05-03,3,2022
+490,Scent of a Mule,Phish,1994-04-04,2024-08-02,138,26
+491,Scents and Subtle Sounds,Phish,2003-07-07,2024-08-17,45,16
+493,Sea and Sand,The Who,1995-10-31,2020-02-21,4,178
+494,Secret Language Instructions,Phish,1992-03-06,1993-03-16,10,1302
+495,Secret Smile,Trey Anastasio,2003-07-08,2016-12-29,9,290
+2712,See That My Grave Is Kept Clean,Blind Lemon Jefferson,2017-08-04,2017-08-04,1,269
+496,Seen and Not Seen,Talking Heads,1996-10-31,1996-10-31,1,973
+497,Self,The Dude of Life (with Phish),1990-09-13,1992-11-20,5,1356
+2909,Send in the Clowns,Glynis Johns,2019-12-31,2019-12-31,1,180
+2743,Set Your Soul Free,Trey Anastasio,2018-07-20,2025-01-29,45,3
+498,Setting Sail,Phish,1991-04-20,1994-07-15,4,1149
+499,Seven Below,Phish,2002-12-31,2024-12-30,50,5
+500,Sexual Healing,Marvin Gaye,1998-07-20,1998-11-14,4,815
+501,Sexy Sadie,The Beatles,1994-10-31,1994-10-31,1,1128
+2571,Shade,Phish,2015-07-21,2025-01-30,31,2
+502,Shafty,Phish,1998-04-05,2022-07-30,7,112
+503,Shaggy Dog,Sam Hopkins,1986-10-15,2021-10-30,17,142
+2701,Shake Your Coconuts,Junior Senior,2017-07-21,2020-02-20,2,179
+845,Shake Your Hips,Slim Harpo,2009-10-31,2009-10-31,1,588
+504,She Caught the Katy and Left Me a Mule to Ride,Taj Mahal,1986-12-06,2010-12-28,6,524
+505,She Thinks I Still Care,George Jones,2009-03-08,2009-03-08,1,617
+2939,She's So Cold,The Rolling Stones,1993-03-31,1993-03-31,1,1290
+506,Shine,Collective Soul,1995-12-31,1995-12-31,1,1016
+857,Shine a Light,The Rolling Stones,2009-10-31,2024-08-09,28,21
+2502,Shipwreck,Phish,2014-10-31,2020-02-20,2,179
+886,Show of Life,Trey Anastasio,2010-06-11,2023-08-31,33,60
+2837,Sightless Escape,Ghosts of the Forest,2019-09-01,2025-01-31,3,1
+2803,Sigma Oasis,Trey Anastasio,2019-12-08,2025-01-31,41,1
+507,Silent in the Morning,Phish,1992-03-07,2024-07-26,186,31
+508,Simple,Phish,1994-05-27,2024-12-28,204,7
+2428,Sing Monica,Phish,2013-10-31,2016-07-20,8,312
+509,Sixteen Candles,The Crests,1996-12-29,1996-12-29,1,948
+510,Skin It Back,Little Feat,1986-10-15,2018-10-21,14,234
+511,Skippy the Wondermouse,Phish,1984-12-01,1985-10-30,4,2016
+512,Slave to the Traffic Light,Phish,1984-12-01,2024-12-31,287,4
+513,Sleep,Phish,1998-10-17,2019-11-29,18,191
+860,Sleep Again,Trey Anastasio,2009-11-01,2016-07-16,6,315
+514,Sleeping Monkey,Phish,1992-03-06,2024-10-25,95,10
+515,Slipknot!,Grateful Dead,1986-04-01,1986-04-01,1,2007
+516,Smells Like Teen Spirit,Nirvana,1998-11-02,1998-11-02,1,823
+517,Smoke on the Water,Deep Purple,1999-07-18,1999-07-18,1,787
+518,Sneakin' Sally Through the Alley,Lee Dorsey,1985-03-08,2023-08-01,82,66
+2422,Snow,Phish,2013-10-31,2013-10-31,1,411
+1588,So Damn Lucky,Dave Matthews,2022-02-24,2022-02-24,1,139
+519,So Lonely,The Police,1998-11-14,1998-11-14,1,815
+520,Something,The Beatles,1998-10-29,1998-11-25,4,808
+2983,Something Living Here,Phish,2021-10-31,2022-07-27,2,114
+2642,Soul Love,David Bowie,2016-10-31,2016-10-31,1,292
+2744,Soul Planet,Trey Anastasio,2017-12-31,2024-08-04,25,24
+523,Soul Shakedown Party,Bob Marley and The Wailers,1997-02-17,2025-02-01,14,0
+858,Soul Survivor,The Rolling Stones,2009-10-31,2009-10-31,1,588
+1121,Space Oddity,David Bowie,2016-06-24,2022-07-19,7,120
+524,Spanish Flea,Herb Alpert and the Tijuana Brass,1984-12-01,1984-12-01,1,2038
+939,Spanish Moon,Little Feat,2010-10-31,2023-10-15,3,49
+525,Sparkle,Phish,1991-09-25,2023-09-01,333,59
+526,Sparks,The Who,1987-03-23,2016-12-30,14,289
+527,Speak to Me,Pink Floyd,1998-11-02,1998-11-02,1,823
+528,Spices,Trey Anastasio,2003-07-07,2003-07-10,2,663
+529,Split Open and Melt,Phish,1989-02-17,2024-12-31,346,4
+531,Spock's Brain,Phish,1995-05-16,2019-07-14,10,195
+532,Spooky,The Classics IV,1993-03-14,2010-10-31,3,526
+533,Spread It 'Round,Phish,2003-07-15,2003-08-02,2,647
+534,Squeeze Box,The Who,1983-12-02,1983-12-02,1,2042
+535,St. Stephen,Grateful Dead,1984-11-03,1984-11-03,1,2039
+536,St. Thomas,Sonny Rollins,1988-05-22,1988-05-22,1,1913
+930,Stairway to Heaven,Led Zeppelin,2010-10-30,2010-10-30,1,527
+537,Stand!,Sly and the Family Stone,1997-06-13,1997-06-13,1,930
+2647,Star,David Bowie,2016-10-31,2016-10-31,1,292
+2644,Starman,David Bowie,2016-10-31,2017-08-06,2,267
+538,Stash,Phish,1990-09-13,2025-02-01,450,0
+539,Stealing Time From the Faulty Plan,Phish,2009-06-02,2024-08-04,81,24
+1355,Steam,Phish,2011-06-04,2024-10-25,65,10
+540,Steep,Phish,1996-10-16,2021-08-28,33,160
+541,Stir It Up,Bob Marley and The Wailers,1987-08-21,1987-08-21,1,1970
+856,Stop Breaking Down,Robert Johnson,2009-10-31,2009-10-31,1,588
+1359,Storage Jam,Phish,2011-07-02,2011-07-02,1,501
+542,Strange Design,Phish,1995-05-16,2024-08-30,67,13
+1123,Strawberry Fields Forever,The Beatles,2017-07-22,2022-08-02,2,110
+2703,Strawberry Letter 23,Shuggie Otis,2017-07-22,2024-08-06,11,23
+2793,Stray Dog,Phish,2018-10-31,2019-09-01,4,192
+2650,Suffragette City,David Bowie,2016-10-31,2016-10-31,1,292
+543,Sugar Shack,Phish,2009-06-07,2024-08-29,33,14
+891,Summer of '89,Phish,2010-06-18,2010-10-12,4,537
+2704,Sunday Morning,The Velvet Underground,2017-07-23,2017-07-23,1,277
+2716,Sunshine of Your Feeling,Phish,2017-08-05,2017-08-05,1,268
+544,Suspicious Minds,Elvis Presley,1995-09-30,1996-12-06,13,950
+1126,Susskind Hotel,"Trey, Mike, and The Benevento/Russo Duo",2011-07-02,2012-07-04,3,466
+545,Suzy Greenberg,Phish,1987-02-13,2024-07-19,449,36
+546,Sweet Adeline,Artie Shaw,1990-03-28,2016-12-29,174,290
+849,Sweet Black Angel,The Rolling Stones,2009-10-31,2009-10-31,1,588
+548,Sweet Emotion,Aerosmith,1993-03-16,1996-11-27,3,956
+921,Sweet Georgia Brown,Ben Bernie,1988-07-07,1988-07-07,1,1899
+549,Sweet Jane,The Velvet Underground,1998-08-08,2020-02-22,5,177
+550,Sweet Virginia,The Rolling Stones,1999-09-26,2012-06-24,5,472
+551,Swept Away,Phish,1996-10-16,2021-08-28,33,160
+552,"Swing Low, Sweet Chariot",Traditional,1986-10-15,1994-11-16,13,1121
+954,Sympathy for the Devil,The Rolling Stones,1988-02-03,1988-02-03,1,1944
+553,T.V. Show,The Dude of Life (with Phish),1991-11-08,1991-11-08,1,1474
+554,T.V. Theme,Phish,1985-09-27,1985-10-17,2,2018
+1129,Take Me Out to the Ballgame,Edward Meeker,2014-10-27,2014-10-27,1,371
+555,Take Me to the River,Al Green,1995-11-21,1997-07-10,2,913
+556,Take the 'A' Train,Duke Ellington,1987-04-29,1994-04-13,118,1214
+2165,Takin' Care of Business,Bachman-Turner Overdrive,2013-10-20,2013-10-20,1,418
+557,Talk,Phish,1996-08-05,2023-10-13,15,51
+558,Taste,Phish,1995-06-07,2025-01-30,146,2
+559,Taste That Surrounds,Phish,1995-10-24,1995-12-29,14,1018
+562,Tela,Phish,1988-03-12,2023-12-31,92,45
+563,Tell Me Something Good,Rufus with Chaka Khan,1987-03-06,1987-03-06,1,1983
+564,Tennessee Waltz,Roy Acuff & The Smoky Mountain Boys,1993-05-06,1994-11-19,3,1117
+564,Tennessee Waltz,Roy Acuff & The Smoky Mountain Boys,1993-05-06,1994-11-19,3,1117
+565,Terrapin,Syd Barrett,1987-09-21,2019-12-04,66,187
+566,Terrapin Station,Grateful Dead,1998-08-09,1998-08-09,1,836
+931,Thank You,Led Zeppelin,2010-10-30,2010-10-30,1,527
+2977,Thanksgiving,Phish,2021-10-31,2021-10-31,1,141
+567,That's Alright Mama,Elvis Presley,1993-05-06,1993-05-06,1,1263
+2979,The 9th Cube,Phish,2021-10-31,2023-10-10,2,53
+568,The Asse Festival,Phish,1990-09-13,1991-04-27,24,1531
+569,The Ballad of Curtis Loew,Lynyrd Skynyrd,1987-04-29,2019-12-30,47,181
+2505,The Birds,Phish,2014-10-31,2018-07-22,5,255
+803,The Birdwatcher,Phish,2010-12-28,2015-09-06,4,337
+571,The Chase,Phish,1987-10-14,1990-06-07,7,1645
+572,The Chicken,James Brown,1988-03-11,1988-03-11,1,1936
+2504,The Chinese Water Torture,Phish,2014-10-31,2014-10-31,1,368
+573,The Connection,Phish,2009-06-19,2024-07-21,6,34
+574,The Continuing Story of Bungalow Bill,The Beatles,1994-10-31,1994-10-31,1,1128
+134,The Cover of 'Rolling Stone',Dr. Hook,2003-02-14,2003-02-14,1,678
+575,The Curtain,Phish,1988-02-24,2022-07-26,123,115
+576,The Curtain With,Phish,1987-08-09,2024-07-24,41,32
+156,The Dickie Scotland Song,Phish,2004-08-15,2004-08-15,1,620
+577,The Dirty Jobs,The Who,1995-10-31,1995-10-31,1,1049
+2499,The Dogs,Phish,2014-10-31,2024-08-04,17,24
+2797,The Final Hurrah,Phish,2018-10-31,2024-08-04,17,24
+203,The Fishin' Hole,Herbert Spencer and Earle Hagen,1989-03-01,1989-08-26,2,1775
+210,The Fog That Surrounds,Phish,1995-09-27,1995-10-17,8,1059
+2263,The Gambler,Kenny Rogers,2012-06-10,2012-06-10,1,480
+579,The Great Curve,Talking Heads,1996-10-31,1996-10-31,1,973
+580,The Great Gig in the Sky,Pink Floyd,1993-03-14,1998-11-02,12,823
+581,The Happy Whip and Dung Song,Phish,1999-07-24,1999-07-24,1,783
+2497,The Haunted House,Phish,2014-10-31,2014-10-31,1,368
+582,The Horse,Phish,1992-03-07,2024-07-26,171,31
+2984,The Howling,Phish,2021-10-31,2024-10-25,19,10
+583,The Inlaw Josie Wales,Trey Anastasio,1999-09-09,2000-10-06,16,684
+2980,The Inner Reaches of Outer,Phish,2021-10-31,2021-10-31,1,141
+584,The Landlady,Phish,1990-09-13,2022-08-14,214,102
+2541,The Last Step,Mike Gordon,2015-08-05,2015-08-05,1,351
+2419,The Line,Phish,2013-10-31,2018-10-21,35,234
+585,The Lion Sleeps Tonight,Traditional,2003-02-18,2003-02-18,1,675
+343,The Little Drummer Boy,"Katherine Davis, Henry Onorati & Harry Simeone",1986-12-06,2004-04-16,4,636
+586,The Lizards,Phish,1988-01-27,2024-07-27,328,30
+587,The Maker,Daniel Lanois,1994-10-15,2022-02-24,2,139
+588,The Man Who Stepped Into Yesterday,Phish,1987-05-11,2023-12-31,84,45
+590,The Mango Song,Phish,1989-03-30,2024-12-28,108,7
+591,The Moma Dance,Phish,1998-06-30,2025-01-31,203,1
+3099,The Night the Lights Went Out in Georgia,Vicki Lawrence,2023-07-16,2023-07-16,1,77
+1378,The Ocean,Led Zeppelin,2016-01-17,2016-01-17,1,330
+592,The Oh Kee Pa Ceremony,Phish,1989-08-12,2024-08-02,220,26
+593,The Old Home Place,The Dillards,1994-06-26,2024-08-07,48,22
+594,The Other One,Grateful Dead,1985-05-03,1985-05-03,1,2022
+427,The Overload,Talking Heads,1996-10-31,1996-10-31,1,973
+595,The Pendulum,Zenzile,1986-02-03,1986-04-01,2,2007
+596,The Practical Song,Phish,1988-09-12,1989-05-26,2,1796
+597,The Price of Love,Ninja Custodian,1989-03-30,1989-05-28,2,1794
+703,The Prison Joke,John Fox,1991-04-11,1993-03-24,2,1296
+598,The Punk Meets the Godfather,The Who,1995-10-31,1995-10-31,1,1049
+599,The Real Me,The Who,1995-10-31,1995-12-29,2,1018
+601,The Rock,The Who,1995-10-31,1995-10-31,1,1049
+895,The Rover,Led Zeppelin,2010-06-24,2010-06-24,1,560
+2912,The Silver Light,Trey Anastasio,2021-10-26,2021-10-26,1,145
+602,The Sloth,Phish,1987-08-09,2023-12-31,176,45
+603,The Squirming Coil,Phish,1990-01-20,2024-12-31,371,4
+604,The Star-Spangled Banner,Francis Scott Key,1996-10-17,2016-12-28,21,291
+561,The Tears of a Clown,Smokey Robinson & The Miracles,2004-08-11,2004-08-11,1,623
+605,The Thrill is Gone,Roy Hawkins,2003-02-24,2003-02-24,1,671
+2503,The Unsafe Bridge,Phish,2014-10-31,2014-10-31,1,368
+2982,The Unwinding,Phish,2021-10-31,2021-10-31,1,141
+2498,The Very Long Fuse,Phish,2014-10-31,2017-07-26,4,275
+606,The Vibration of Life,Phish,1992-11-23,1996-11-19,22,960
+1363,The Way It Goes,Gillian Welch,2011-09-04,2011-09-04,1,488
+607,The Wedge,Phish,1993-02-03,2025-01-30,131,2
+3077,The Well,Trey Anastasio,2023-07-16,2024-07-26,6,31
+1135,The Wind Cries Mary,Jimi Hendrix Experience,2017-07-30,2017-07-30,1,272
+608,Them Changes,Buddy Miles,1997-11-30,1997-11-30,1,881
+609,Theme From the Bottom,Phish,1995-05-16,2025-01-29,191,3
+409,"Theme from New York, New York",Liza Minnelli,1997-12-31,2022-12-31,2,94
+610,Theme from Star Trek,Alexander Courage,1996-08-04,1996-08-04,1,994
+2629,Things People Do,Phish,2016-06-28,2019-07-09,9,199
+2699,Thread,Phish,2017-07-16,2024-07-21,7,34
+611,Three Little Birds,Bob Marley and The Wailers,1995-06-17,1995-06-17,1,1087
+1357,Thunder Road,Bruce Springsteen,2011-06-19,2011-06-19,1,503
+612,Thunderhead,Trey Anastasio,2003-01-02,2022-09-03,7,99
+2632,Tide Turns,Phish,2016-06-29,2018-07-28,7,251
+2500,Timber,Phish,2014-10-31,2016-07-10,2,317
+613,Timber (Jerry the Mule),Josh White and Sam Gary,1987-04-29,2024-08-18,103,15
+614,Time,Pink Floyd,1998-11-02,1998-11-02,1,823
+615,Time Loves a Hero,Little Feat,1988-10-29,2011-07-03,8,500
+616,Time Turns Elastic,Trey Anastasio & Don Hart,2009-05-31,2021-12-31,18,140
+116,To France,Jeff Mosier,1994-11-17,1994-11-17,1,1120
+752,Tomorrow's Song,Phish,2009-11-27,2009-11-27,1,580
+913,Tonight,Zenzile,1986-02-03,1986-02-03,1,2011
+848,Torn and Frayed,The Rolling Stones,2009-10-31,2023-10-06,10,56
+618,Touch Me,The Doors,1991-07-11,1994-12-03,9,1107
+702,Tower Jam,Phish,2003-08-02,2003-08-02,1,647
+619,Train Round the Bend,The Velvet Underground,1998-10-31,1998-10-31,1,824
+620,Train Song,Phish,1996-07-21,2024-08-06,59,23
+2962,Trane To Conamarra,BÃ©la Fleck and the Flecktones,1997-07-09,1997-07-09,1,914
+621,Trench Town Rock,Bob Marley and The Wailers,1998-08-11,1998-08-11,1,835
+941,Tripe Face Boogie,Little Feat,2010-10-31,2010-10-31,1,526
+622,Tube,Phish,1990-09-13,2025-01-31,196,1
+624,Tubthumping,Chumbawamba,1998-11-21,1998-11-21,1,810
+960,Tuesday,Trey Anastasio,2017-07-18,2017-07-25,2,276
+625,Tuesday's Gone,Lynyrd Skynyrd,1999-07-13,1999-07-13,1,791
+847,Tumbling Dice,The Rolling Stones,2009-10-31,2009-10-31,1,588
+851,Turd on the Run,The Rolling Stones,2009-10-31,2009-10-31,1,588
+2792,Turtle in the Clouds,Phish,2018-10-31,2024-07-31,18,27
+626,Tush,ZZ Top,1986-12-06,1987-08-10,2,1971
+627,Tweezer,Phish,1990-03-28,2025-02-01,406,0
+628,Tweezer Reprise,Phish,1991-02-01,2025-02-01,319,0
+629,Twenty Years Later,Phish,2009-06-05,2025-01-30,45,2
+630,Twist,Phish,1997-06-14,2025-01-29,178,3
+631,Two Versions of Me,Phish,2003-07-12,2021-10-28,8,144
+632,Uncle Pen,Bill Monroe,1990-03-28,2017-08-05,211,268
+633,Uncloudy Day,The Staples Singers,1998-10-03,1998-10-03,1,831
+634,Undermind,Trey Anastasio,2009-03-08,2024-08-31,59,12
+635,Undun,The Guess Who,1989-03-30,1989-12-07,6,1736
+2575,United We Stand,Brotherhood of Man,2015-09-06,2015-09-06,1,337
+636,Us and Them,Pink Floyd,1998-11-02,1998-11-02,1,823
+638,Vacuum Solo,Phish,1992-03-30,1993-05-29,8,1260
+852,Ventilator Blues,The Rolling Stones,2009-10-31,2009-10-31,1,588
+2733,Victim,Mike Gordon,2019-12-04,2020-02-20,2,179
+639,Viola Lee Blues,Gus Cannon,1999-09-17,1999-09-17,1,770
+641,Vultures,Phish,1997-06-13,2024-07-30,48,28
+642,Wading in the Velvet Sea,Phish,1997-06-13,2024-10-27,107,8
+643,Wait,Phish,1991-10-31,1992-05-14,3,1405
+2420,Waiting All Night,Phish,2013-10-31,2021-10-24,33,146
+644,Waking Up,Phish,1997-06-14,1997-06-14,1,929
+2630,Waking Up Dead,Phish,2016-06-29,2018-07-25,8,253
+645,Walfredo,Phish,1997-02-13,2014-10-27,7,371
+646,Walk Away,The James Gang,1988-07-23,2023-07-23,91,72
+647,Walk This Way,Aerosmith,2000-09-29,2000-09-29,1,689
+648,Walls of the Cave,Phish,2002-12-31,2024-10-27,75,8
+649,Waste,Phish,1996-06-06,2024-12-29,102,6
+650,Water in the Sky,Phish,1997-06-13,2022-07-15,84,122
+651,Waves,Phish,2002-12-31,2024-08-10,55,20
+2710,Way Down in the Hole,Tom Waits,2017-08-02,2017-08-02,1,270
+2795,We Are Come to Outlive Our Brains,Phish,2018-10-31,2023-08-31,10,60
+2496,We Are the Champions,Queen,2014-10-29,2014-10-29,1,369
+652,We're Not Gonna Take It,The Who,1999-10-08,1999-10-08,1,755
+27,We're an American Band,Grand Funk Railroad,1996-11-16,2000-09-29,2,689
+653,Weekapaug Groove,Phish,1988-07-23,2025-01-29,509,3
+655,Weigh,Phish,1992-03-07,2024-08-10,46,20
+656,West L.A. Fadeaway,Grateful Dead,2000-10-06,2016-10-18,2,301
+927,What Things Seem,Phish,2010-10-11,2010-12-27,2,525
+3139,What's Going Through Your Mind,Trey Anastasio,2024-08-07,2025-02-01,6,0
+657,What's the Use?,Phish,1999-07-04,2024-12-31,68,4
+658,When Something is Wrong with My Baby,Sam and Dave,1993-04-24,1993-04-30,3,1268
+659,When the Cactus is in Bloom,Jimmie Rodgers,2009-06-09,2009-06-09,1,610
+660,When the Circus Comes,Los Lobos,1997-02-13,2024-07-20,75,35
+661,While My Guitar Gently Weeps,The Beatles,1994-10-31,2023-08-04,37,64
+662,Whipping Post,The Allman Brothers Band,1984-11-03,1999-07-25,49,782
+833,White Rabbit,Jefferson Airplane,1995-09-30,1995-09-30,1,1070
+2705,White Winter Hymnal,Fleet Foxes,2017-07-26,2017-07-26,1,275
+665,Who By Fire,Leonard Cohen,1994-04-23,1994-04-23,1,1205
+666,Who Do? We Do!,Phish,1987-04-24,1990-03-10,15,1695
+831,Who Knows,Band of Gypsys,1989-10-26,1993-08-09,2,1239
+668,Who Loves the Sun?,The Velvet Underground,1998-10-31,2019-02-21,2,220
+669,Whole Lotta Love,Led Zeppelin,1990-06-09,2010-10-30,5,527
+670,Why Don't We Do It in the Road?,The Beatles,1994-10-31,1997-02-23,4,937
+671,Why Don't You Love Me?,Hank Williams,1987-02-21,1987-03-23,2,1981
+672,Why You Been Gone So Long?,Jessi Colter,1993-05-06,1993-05-06,1,1263
+2844,Wider,Ghosts of the Forest,2019-07-09,2019-07-09,1,199
+673,Wild Child,Lou Reed,1984-11-03,1988-09-08,6,1873
+674,Wild Honey Pie,The Beatles,1994-10-31,1994-10-31,1,1128
+675,Wild Thing,The Wild Ones,1985-11-23,1985-11-23,1,2013
+676,Wildwood Weed,Jim Stafford,1996-12-06,1996-12-06,1,950
+677,Will It Go Round in Circles,Billy Preston,1999-09-10,1999-09-21,2,767
+678,Will the Circle Be Unbroken?,Traditional,1994-11-19,1998-10-03,2,831
+678,Will the Circle Be Unbroken?,Traditional,1994-11-19,1998-10-03,2,831
+943,Willin',Little Feat,2010-10-31,2020-02-22,2,177
+679,Wilson,Phish,1986-10-12,2024-08-10,297,20
+680,Wind Beneath My Wings,Bette Midler,1995-11-28,1995-11-28,1,1035
+681,Windora Bug,Trey Anastasio,2000-09-08,2000-09-15,2,698
+694,Windy City,Phish,2009-08-11,2009-08-11,1,594
+2417,Wingsuit,Phish,2013-10-31,2024-08-04,42,24
+1370,Winterqueen,Trey Anastasio,2013-10-31,2024-12-30,25,5
+682,Wipe Out,The Surfaris,1991-04-15,1998-11-29,4,805
+683,Wolfman's Brother,Phish,1994-04-04,2025-01-31,240,1
+2421,Wombat,Phish,2013-10-31,2022-08-10,22,105
+3164,Woodlands Jam,Phish,2024-08-16,2024-08-16,1,17
+684,Woodstock,Joni Mitchell,1999-07-26,1999-07-26,1,781
+685,Wormtown,Steve Miller Band,1997-07-02,1997-07-02,1,918
+686,Ya Mar,Cyril Ferguson,1987-02-21,2024-08-18,232,15
+2413,Yarmouth Road,Phish,2013-07-05,2022-07-24,32,116
+687,Yer Blues,The Beatles,1994-10-31,1994-10-31,1,1128
+688,Yerushalayim Shel Zahav,Naomi Shemer,1993-07-16,1994-12-31,12,1097
+689,You Ain't Goin' Nowhere,Bob Dylan,2003-07-30,2003-07-30,1,649
+617,You Better Believe It Baby,Joe Tex,1998-07-26,1998-08-02,2,841
+690,You Enjoy Myself,Phish,1986-02-03,2024-12-29,615,6
+691,You Gotta See Mama Every Night,Con Conrad and Billy Rose,1993-03-16,1993-03-16,1,1302
+2427,You Never Know,Phish,2013-10-31,2013-10-31,1,411
+2707,You Sexy Thing,Hot Chocolate,2017-07-28,2021-08-11,4,165
+692,You Shook Me All Night Long,AC/DC,1989-04-20,2000-09-29,2,689
+2501,Your Pet Cat,Phish,2014-10-31,2024-08-16,20,17
+2649,Ziggy Stardust,David Bowie,2016-10-31,2016-10-31,1,292
