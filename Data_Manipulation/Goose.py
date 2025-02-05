@@ -16,7 +16,7 @@ data_dir = os.path.join(base_dir, "Data", "Goose")
 songdata = pd.read_csv(os.path.join(data_dir, "songdata.csv"))
 venuedata = pd.read_csv(os.path.join(data_dir, "venuedata.csv"))
 showdata = pd.read_csv(os.path.join(data_dir, "showdata.csv"))
-ttransition_data = pd.read_csv(os.path.join(data_dir, "transition_data.csv"))
+ttransitiondata = pd.read_csv(os.path.join(data_dir, "transitionddata.csv"))
 setlistdata = pd.read_csv(os.path.join(data_dir, "setlistdata.csv"))
 
 last_show = showdata['show_number'].max() - 1
