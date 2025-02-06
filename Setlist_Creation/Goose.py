@@ -1,83 +1,165 @@
-pip install numpy
-
-import requests
-import json
-import pandas as pd
-import numpy as np
+from typing import Tuple, Optional
+from SetlistCollector import SetlistCollector
+from pathlib import Path
 from datetime import datetime
-from dateutil.relativedelta import relativedelta
+import requests
+import pandas as pd
 from bs4 import BeautifulSoup
 from io import StringIO
-import os
 
-today = datetime.today().strftime('%Y-%m-%d')
+#import os
 
-# Importing Song List from API
-songlist_url_api = "https://elgoose.net/api/v2/songs.json?order_by=name"
-songlistdata_json = requests.get(songlist_url_api).json()
-song_df = pd.DataFrame(songlistdata_json['data'])
-songdata_og = song_df.drop(columns=['slug','created_at','updated_at'])
+class GooseSetlistCollector(SetlistCollector):
+    """Scraper for Goose show data using phish.net API."""
 
-# Pulling Song Data from El Goose Website
-songlist_url = "https://elgoose.net/song/"
-response = requests.get(songlist_url)
-response.raise_for_status()  # Raise an exception for bad status codes
-html_content = response.text
-soup = BeautifulSoup(html_content, 'html.parser')
-tables = soup.find_all('table')
-if tables:
-    tables_str = str(tables)  # Convert tables to string
-    tables_io = StringIO(tables_str)  # Wrap in StringIO
-    tables = pd.read_html(tables_io)
-songdata_info = tables[1].copy()
+    def __init__(self, credentials_path: Optional[str] = None):
+        """
+        Initialize GooseSetlistCollector.
+        
+        Args:
+            credentials_path: Path to credentials file. If None, looks in default location.
+        """
+        super().__init__(band='Goose')
+        
+        # Set today's date
+        self.today = datetime.today().strftime('%Y-%m-%d')
+        
+    def _make_api_request(self, endpoint: str, version: str="v2") -> dict:
+        """
+        Make request to El Goose API.
+        
+        Args:
+            endpoint: API endpoint to query
+            
+        Returns:
+            JSON response data
+        """
+        url_templates = {
+            "v1": "https://elgoose.net/api/v1/{}.json?",
+            "v2": "https://elgoose.net/api/v2/{}.json?",
+        }
+        url = url_templates.get(version, "").format(endpoint)
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    
+    def load_song_data(self) -> pd.DataFrame:
+        """Load and process song data from API and website."""
+        # Get song list from API and Scraping
 
-# Combining Song List and Song Data into final data 
-songdata = songdata_og.merge(songdata_info, left_on="name", right_on="Song Name", how="inner")[['id','Song Name', 'isoriginal','Original Artist', 'Debut Date','Last Played',\
-                                                                                                'Times Played Live', 'Avg Show Gap']]
-songdata = songdata.rename(columns={'Song Name': 'song_name', 'Original Artist': 'original_artist', 'Debut Date': 'debut_date', 'Last Played': 'last_played', \
-                                    'Times Played Live': 'times_played_live', 'Avg Show Gap': 'avg_show_gap'})
+        songdata_api = pd.DataFrame(self._make_api_request('songs', 'v2')['data']).drop(columns=['slug','created_at','updated_at'])
+        #columns = ['id','name','isoriginal','original_artist']
+                
+        # Get additional song info from website
+        response = requests.get("https://elgoose.net/song/")
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+        tables = pd.read_html(StringIO(str(soup.find_all('table'))))
+        songdata_scrape = tables[1].sort_values(by='Song Name').reset_index(drop=True)
+        # columns = ['Song Name','Original Artist','Debut Date','Last Played,'Times Played Live,'Avg Show Gap']
+        
+        # Merge and clean up data
+        merged_data = songdata_api.merge(
+            songdata_scrape,
+            left_on="name",
+            right_on="Song Name",
+            how="inner"
+        )
+        
+        columns = ['id','Song Name', 'isoriginal','Original Artist', 'Debut Date','Last Played','Times Played Live', 'Avg Show Gap']
+        merged_data = merged_data[columns].copy()
 
-# Importing Show List from API
-showlist_url = "https://elgoose.net/api/v2/shows.json?order_by=showdate"
-showlistdata_json = requests.get(showlist_url).json()
-showlist_df = pd.DataFrame(showlistdata_json['data'])
-past_df = showlist_df[showlist_df['showdate'] < today]
-future_df = showlist_df[showlist_df['showdate'] >= today].sort_values('showdate').head(1)
-result = pd.concat([past_df, future_df])
-goose_showlist_df = result[(result['artist'] == 'Goose')].copy().reset_index(drop=True)
+        final_columns = {
+            'id': 'song_id',
+            'Song Name': 'song',
+            'isoriginal': 'is_original',
+            'Original Artist': 'original_artist',
+            'Debut Date': 'debut_date',
+            'Last Played': 'last_played',
+            'Times Played Live': 'times_played',
+            'Avg Show Gap': 'avg_show_gap'
+        }
 
-# Creating Venue Dataset
-venuedata = goose_showlist_df[['venue_id', 'venuename', 'location', 'city', 'state', 'country']].drop_duplicates().sort_values(by=['venue_id'], ascending=True).reset_index(drop=True)
+        return merged_data[list(final_columns.keys())].rename(columns=final_columns)
+    
+    def load_show_data(self) -> Tuple[pd.DataFrame, pd.DataFrame]:
+            """Load and process show and venue data."""
+            shows = pd.DataFrame(self._make_api_request('shows', 'v2')['data'])
+            
+            # Split into past and future shows
+            past_shows = shows[shows['showdate'] < self.today]
+            future_shows = shows[shows['showdate'] >= self.today].sort_values('showdate').head(1)
+            all_shows = pd.concat([past_shows, future_shows])
+            all_shows = all_shows[(all_shows['artist'] == 'Goose')].copy().reset_index(drop=True)
+            
+            # Create venue dataset
+            venue_data = (all_shows[['venue_id', 'venuename', 'city', 'state', 'country', 'location']]
+                        .drop_duplicates()
+                        .sort_values('venue_id')
+                        .reset_index(drop=True)
+                        .rename(columns={'venue':'venue_name'}))
+            
+            # Create tour dataset
+            tour_data = (all_shows[['tour_id', 'tourname']]
+                        .drop_duplicates()
+                        .sort_values('tour_id')
+                        .reset_index(drop=True))
+            
+            # Create show dataset
+            show_data = (all_shows[['show_id', 'showdate', 'venue_id', 'tour_id',  'showorder']]
+                        .sort_values('showdate')
+                        .reset_index(names='show_number')
+                        .rename(columns={'showdate':'show_date','showorder':'show_order'})
+                        .assign(show_number=lambda x: x['show_number'] + 1)
+                        )
+            show_data['tour_id'] = show_data['tour_id'].astype('Int64').astype(str)
+            
+            return show_data, venue_data, tour_data
+        
+    def load_setlist_data(self) -> Tuple[pd.DataFrame, pd.DataFrame]:
+        """Load and process setlist and transition data."""
+        setlist_df = pd.DataFrame(self._make_api_request('setlists', 'v1')['data'])
 
-# Creating Tour Dataset
-tourdata = goose_showlist_df[['tour_id', 'tourname']].drop_duplicates().sort_values(by=['tour_id'], ascending=True).reset_index(drop=True)
+        # Create transition data
+        transition_data = (setlist_df[['transition_id', 'transition']]
+                           .drop_duplicates()
+                           .sort_values(by=['transition_id']))
+        
+        setlist_data = setlist_df[setlist_df['artist'] == "Goose"].copy().reset_index(drop=True)
+        
+        # Create setlist dataset
+        setlist_columns = ['uniqueid', 'show_id', 'song_id','setnumber','position','tracktime',
+                            'transition_id','isreprise','isjam','footnote','isjamchart',
+                            'jamchart_notes','soundcheck','isverified','isrecommended']
 
-# Creating Show Dataset
-showdata = goose_showlist_df[['show_id', 'showdate', 'showtitle', 'venue_id', 'tour_id', 'showorder'\
-    ]].copy().sort_values(by=['showdate', 'showorder'], ascending=[True, True]).reset_index(names='show_number').assign(show_number= lambda x: x['show_number'] + 1).drop(columns=['showorder'])
-showdata['showtitle'] = showdata['showtitle'].replace('', None)
-
-# Pulling Setlist Data from API
-setlist_url = "https://elgoose.net/api/v1/setlists.json?order_by=showdate"
-setlistdata_json = requests.get(setlist_url).json()
-setlist_df = pd.DataFrame(setlistdata_json['data'])
-
-# Creating Transition Data
-transition_data  = setlist_df[['transition_id', 'transition']].drop_duplicates().sort_values(by=['transition_id'], ascending=True).reset_index(drop=True)
-
-# Creating Setlist Data
-setlistdata = setlist_df[setlist_df['artist'] == "Goose"].copy().reset_index(drop=True)[['uniqueid', 'show_id', 'song_id','setnumber','position','tracktime','transition_id','isreprise','isjam',\
-                                                                                         'footnote','isjamchart','jamchart_notes','soundcheck','isverified','isrecommended']]
-
-# Saving all datasets to CSV
-try:
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-except NameError:
-    script_dir = os.getcwd()
-base_dir = os.path.dirname(script_dir)
-save_path = os.path.join(base_dir, "Data", "Goose")
-songdata.to_csv(os.path.join(save_path, "songdata.csv"), index=False)
-venuedata.to_csv(os.path.join(save_path, "venuedata.csv"), index=False)
-showdata.to_csv(os.path.join(save_path, "showdata.csv"), index=False)
-transition_data.to_csv(os.path.join(save_path, "transition_data.csv"), index=False)
-setlistdata.to_csv(os.path.join(save_path, "setlistdata.csv"), index=False)
+        return setlist_data[setlist_columns], transition_data
+    
+    def create_and_save_data(self) -> None:
+        """Save Goose data to CSV files in the data directory."""
+        
+        print(f"Loading Song Data")
+        song_data = self.load_song_data()
+        print(f"Loading Show and Venue Data")
+        show_data, venue_data, tour_data = self.load_show_data()
+        print(f"Loading Setlist and Transition Data")
+        setlist_data, transition_data = self.load_setlist_data()
+    
+        try:
+            # Define files to save
+            data_pairs = {
+                'songdata.csv': song_data,
+                'showdata.csv': show_data,
+                'venuedata.csv': venue_data,
+                'tourdata.csv': tour_data,
+                'setlistdata.csv': setlist_data,
+                'transitiondata.csv': transition_data
+            }
+            
+            # Save each file
+            print("Saving data.")
+            for filename, data in data_pairs.items():
+                filepath = self.data_dir / filename
+                data.to_csv(filepath, index=False)
+        
+        except Exception as e:
+            print(f"Error saving Goose data: {e}")

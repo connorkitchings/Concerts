@@ -129,7 +129,7 @@ class PhishSetlistCollector(SetlistCollector):
         
         print(f"Loading Song Data")
         song_data = self.load_song_data()
-        print(f"Loading Song and Venue Data")
+        print(f"Loading Show and Venue Data")
         show_data, venue_data = self.load_show_data()
         print(f"Loading Setlist and Transition Data")
         setlist_data, transition_data = self.load_setlist_data()

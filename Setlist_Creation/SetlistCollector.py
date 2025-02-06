@@ -25,8 +25,7 @@ class SetlistCollector(ABC):
         
         self.band = band
         self.base_dir = base_dir or str(Path(__file__).parent.parent)
-        self.data_dir = Path(self.base_dir) / "Data" / band
-        self.data_dir.mkdir(parents=True, exist_ok=True)
+        self.data_dir = Path(self.base_dir) / "Data" / band / "From Web"
         
     @abstractmethod
     def load_song_data(self) -> pd.DataFrame:
@@ -76,6 +75,7 @@ class SetlistCollectorManager:
     
     def scrape_all(self) -> None:
         """Scrape data for all registered bands."""
+        overall_start_time = datetime.now()
         for band, scraper in self.scrapers.items():
             print(f"\nScraping data for {band}")
             start_time = datetime.now()
@@ -87,7 +87,12 @@ class SetlistCollectorManager:
                 end_time = datetime.now()
                 execution_time = (end_time - start_time).total_seconds()
                 minutes, seconds = divmod(execution_time, 60)  # Convert seconds into minutes and seconds
-                print(f"{band} Setlist Collection time: {int(minutes)} minutes and {seconds:.2f} seconds")
+                print(f"{band} Setlist Collection Time: {int(minutes)} minutes and {seconds:.2f} seconds")
 
             except Exception as e:
                 print(f"Error scraping data for {band}: {e}")
+                
+        overall_end_time = datetime.now()
+        overall_execution_time = (overall_end_time - overall_start_time).total_seconds()
+        minutes, seconds = divmod(overall_execution_time, 60)  # Convert seconds into minutes and seconds
+        print(f"Total Setlist Collection Time: {int(minutes)} minutes and {seconds:.2f} seconds")

@@ -1,24 +1,31 @@
+from typing import Tuple, Optional
+from SetlistCollector import SetlistCollector
+from pathlib import Path
+from datetime import datetime, date
+import requests
 import pandas as pd
 import numpy as np
-import requests
 import re
 from bs4 import BeautifulSoup
 from io import StringIO
-from datetime import date, datetime
-import os
 
-try:
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-except NameError:
-    script_dir = os.getcwd()
-base_dir = os.path.dirname(script_dir)
+class WSPSetlistCollector(SetlistCollector):
+    """Scraper for Widespread Panic show data. """
 
-class WSPDataScraper:
-    def __init__(self, start_year=1985, end_year=None):
-        self.start_year = start_year
-        self.end_year = end_year or date.today().year
-        self.base_url = 'http://everydaycompanion.com/'
-        self.data_dir = os.path.join(base_dir, "Data", "WSP")
+    def __init__(self):
+        """
+        Initialize WSPSetlistCollector.
+        
+        """
+        super().__init__(band='WSP')
+        # Set start year and end year
+        self.start_year = 1985
+        self.this_year = datetime.today().year
+        
+        # Set today's date
+        self.today = date.today()
+        
+        # Define comma songs and dictionary 
         self.comma_songs = ['Guns', 'And Money', 'Let Me Follow You Down', 'Let Me Hold Your Hand', 
                           "Please Don't Go", 'Rattle', 'And Roll', 'Narrow Mind', 'Woman Smarter']
         self.comma_songs_completer = {
@@ -29,8 +36,14 @@ class WSPDataScraper:
             'Man Smart': 'Man Smart, Woman Smarter'
         }
         
-    def load_show_dates(self):
-        tour_list = [x for x in range(self.start_year, self.end_year + 1) if x != 2004]
+        # Set url
+        self.base_url = 'http://everydaycompanion.com/'
+        
+        # Set up link_list
+        self.link_list = []
+        
+    def load_show_data(self):
+        tour_list = [x for x in range(self.start_year, self.this_year + 1) if x != 2004]
         tour_df_list = pd.DataFrame()
 
         for yr in tour_list:
@@ -148,10 +161,9 @@ class WSPDataScraper:
         combined_tour_data['date'] = pd.to_datetime(combined_tour_data['date'], format='%m-%d-%y', errors='coerce')
 
         # Get today's date
-        today = date.today()
 
         # Find the first future date (including today)
-        future_dates = combined_tour_data[combined_tour_data['date'].dt.date >= today].dropna(subset=['date'])
+        future_dates = combined_tour_data[combined_tour_data['date'].dt.date >= self.today].dropna(subset=['date'])
         first_future_date = future_dates['date'].min()
 
         # Keep all past shows and only the first future show
@@ -163,7 +175,7 @@ class WSPDataScraper:
 
         return combined_tour_data
 
-    def load_song_codes(self):
+    def load_song_data(self):
         songcode_url = f"{self.base_url}asp/songcode.asp"
         response = requests.get(songcode_url)
         response.raise_for_status()
@@ -266,58 +278,50 @@ class WSPDataScraper:
         songs_final = songs_final.reset_index(drop=True)
         return songs_final
 
-    def load_setlists(self, link_list, method='update'):
+    def load_setlist_data(self, link_list, method='update'):
         if method == 'all':
+            print("Loading all WSP Setlist Data")
             all_setlists = pd.DataFrame()
             for link in link_list:
                 link_setlist = self.get_setlist_from_link(link)
                 all_setlists = pd.concat([all_setlists, link_setlist]).reset_index(drop=True)
         
         elif method == 'update':
-            current_year = str(datetime.now().year)
-            previous_year = str(datetime.now().year - 1)
-            data_path = os.path.join(self.data_dir, "setlistdata.csv")
+            print("Updating Existing WSP Setlist Data")
             
-            all_setlists = pd.read_csv(data_path)
-            filtered_link_list = [link for link in link_list if current_year in link.split('/')[-1] or previous_year in link.split('/')[-1]]
+            all_setlists = pd.read_csv((self.data_dir / "setlistdata.csv"))
+            filtered_link_list = [link for link in link_list if str(self.this_year) in link.split('/')[-1] or str(self.this_year - 1)  in link.split('/')[-1]]
             
             for link in filtered_link_list:
                 link_setlist = self.get_setlist_from_link(link)
                 all_setlists = pd.concat([all_setlists, link_setlist]).drop_duplicates().reset_index(drop=True)
 
         return all_setlists
-
-    def save_data(self, show_list, song_data, setlist_data, data_dir):
-        """Save the scraped data to CSV files"""
-        self.data_dir = data_dir
-        os.makedirs(self.data_dir, exist_ok=True)
+    
+    def create_and_save_data(self) -> None:
+        """Save WSP data to CSV files in the data directory."""
         
-        show_list.to_csv(os.path.join(self.data_dir, "showdata.csv"), index=False)
-        song_data.to_csv(os.path.join(self.data_dir, "songdata.csv"), index=False)
-        setlist_data.to_csv(os.path.join(self.data_dir, "setlistdata.csv"), index=False)
-
-def main():
-    # Initialize scraper
-    scraper = WSPDataScraper()
+        print(f"Loading Song Data")
+        song_data = self.load_song_data()
+        print(f"Loading Show Data")
+        show_data = self.load_show_data()
+        self.link_list = show_data.link.unique()
+        setlist_data = self.load_setlist_data(self.link_list, method = 'update')
     
-    # Load data
-    show_list = scraper.load_show_dates()
-    print("Show List Loaded.")
-    
-    song_data = scraper.load_song_codes()
-    print("Song Data Loaded.")
-    
-    # Load setlists
-    start_time = datetime.now()
-    link_list = [s.lower() for s in show_list.link.unique()]
-    all_setlists = scraper.load_setlists(link_list, method='all')
-    execution_time = datetime.now() - start_time
-    minutes = int(execution_time.total_seconds() // 60)
-    seconds = int(execution_time.total_seconds() % 60)
-    print(f'Setlist Data Execution time: {minutes} minutes and {seconds} seconds')
-    # Save data
-    scraper.save_data(show_list, song_data, all_setlists, scraper.data_dir)
-    print("Data saved successfully.")
-
-if __name__ == "__main__":
-    main() 
+        try:
+            # Define files to save
+            data_pairs = {
+                'songdata.csv': song_data,
+                'showdata.csv': show_data,
+                'setlistdata.csv': setlist_data
+            }
+            
+            # Save each file
+            print("Saving data.")
+            for filename, data in data_pairs.items():
+                filepath = self.data_dir / filename
+                data.to_csv(filepath, index=False)
+        
+        except Exception as e:
+            print(f"Error saving Widespread Panic data: {e}")
+        
