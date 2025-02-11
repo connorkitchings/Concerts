@@ -4,14 +4,14 @@ from typing import Tuple, Dict, Optional
 import pandas as pd
 from pathlib import Path
 
-class GoosePredictionMaker(PredictionMaker):
-    """Predictor for Goose setlists."""
+class PhishPredictionMaker(PredictionMaker):
+    """Predictor for Phish setlists."""
 
     def __init__(self):
         """
-        Initialize GoosePredictionMaker.
+        Initialize PhishPredictionMaker.
         """
-        super().__init__(band='Goose')
+        super().__init__(band='Phish')
         # Remove duplicate declarations
         self.song_filename = "songdata.csv"
         self.venue_filename = "venuedata.csv"
@@ -43,6 +43,7 @@ class GoosePredictionMaker(PredictionMaker):
         self.songdata = data["songdata"]
         self.venuedata = data["venuedata"]
         self.showdata = data["showdata"]
+        self.showdata = self.showdata[self.showdata['exclude_from_stats'] != 1].copy().reset_index(drop=True)
         self.transitiondata = data["transitiondata"]  # Fixed typo
         self.setlistdata = data["setlistdata"]
         
@@ -55,15 +56,13 @@ class GoosePredictionMaker(PredictionMaker):
         if any(df is None for df in [self.setlistdata, self.showdata]):
             raise ValueError("Data must be loaded first using load_data()")
             
-        setlist_by_song = pd.merge(
-            self.setlistdata, 
-            self.showdata, 
-            on='show_id', 
-            how='left'
-        ).sort_values(['song_id','show_number']).reset_index(drop=True)
+        setlist_by_song = pd.merge(self.setlistdata,
+                                   self.showdata,
+                                   on='showid', 
+                                   how='left').sort_values(['songid','show_number']).reset_index(drop=True)
         
-        setlist_by_song['gap'] = setlist_by_song.groupby('song_id')['show_number'].diff()
-        setlist_by_song.loc[setlist_by_song.groupby('song_id').head(1).index, 'gap'] = None 
+        setlist_by_song['gap'] = setlist_by_song.groupby('songid')['show_number'].diff()
+        setlist_by_song.loc[setlist_by_song.groupby('songid').head(1).index, 'gap'] = None     
         
         self.setlist_by_song = setlist_by_song
         return setlist_by_song
@@ -72,26 +71,24 @@ class GoosePredictionMaker(PredictionMaker):
         """Create CK+ prediction dataset"""
         if self.setlist_by_song is None:
             raise ValueError("Must run get_setlist_by_song() first")
-            
-        my_song_data = (
-            self.setlist_by_song[self.setlist_by_song['isreprise'] == 0]
-            .merge(
-                self.songdata[['song_id', 'song', 'is_original']], 
-                on='song_id', 
-                how='left'
-            )
-            .drop(columns=['song_id'])
-            .groupby(['song', 'is_original'])
-            .agg({
-                'show_number': ['count', 'min', 'max'],
-                'gap': ['min', 'max', 'mean', 'median', 'std']
-            })
-            .reset_index()
-            .round(2)
-        )
+        
+        my_song_data = (self.setlist_by_song[self.setlist_by_song['isreprise'] == 0]
+                .merge(self.songdata[['song_id', 'song', 'original_artist']], 
+                       left_on='songid', 
+                       right_on='song_id', 
+                       how='left').drop(columns=['song_id'])
+                .groupby(['song', 'is_original'])
+                .agg({
+                    'show_number': ['count', 'min', 'max'],
+                    'gap': ['min', 'max', 'mean', 'median', 'std']
+                })
+                .reset_index()
+                .round(2)
+               )
 
         my_song_data.columns = ['_'.join(col).strip() for col in my_song_data.columns.values]
 
+        # Rename columns for easier access
         my_song_data = my_song_data.rename(columns={
             'song_': 'song', 
             'is_original_': 'is_original',
@@ -107,40 +104,39 @@ class GoosePredictionMaker(PredictionMaker):
 
         my_song_data['is_original'] = my_song_data['is_original'].astype(int)
         my_song_data['current_gap'] = self.last_show - my_song_data['last_played']
-
+        
         my_song_data = (
             my_song_data
             .merge(
-                self.showdata[['show_number', 'show_date']], 
+                self.showdata[['show_number', 'showdate']], 
                 left_on='debut', 
                 right_on='show_number', 
                 how='left'
             )
-            .rename(columns={'show_date': 'debut_date'})
+            .rename(columns={'showdate': 'debut_date'})
             .drop(columns=['show_number', 'debut'])
             .merge(
-                self.showdata[['show_number', 'show_date']], 
+                self.showdata[['show_number', 'showdate']], 
                 left_on='last_played', 
                 right_on='show_number', 
                 how='left'
             )
-            .rename(columns={'show_date': 'ltp_date'})
+            .rename(columns={'showdate': 'ltp_date'})
             .drop(columns=['show_number', 'last_played'])
-        )[['song', 'is_original', 'times_played_total', 'debut_date', 'ltp_date',
-           'current_gap', 'avg_gap', 'med_gap', 'std_gap']]
+        )[['song', 'is_original', 'times_played_total','debut_date','ltp_date','current_gap','avg_gap', 'med_gap', 'std_gap']]
         
         my_song_data['gap_zscore'] = (my_song_data['current_gap'] - my_song_data['avg_gap']) / my_song_data['std_gap']
+        
+        five_years_ago = pd.Timestamp(date.today() - timedelta(days=5*365))
+        my_song_data['ltp_date'] = pd.to_datetime(my_song_data['ltp_date'], format='%Y-%m-%d').dt.date
 
-        ck_plus = (
-            my_song_data[
-                (my_song_data['is_original'] == 1) & 
-                (my_song_data['times_played_total'] > 10)
-            ]
-            .copy()
-            .sort_values(by='gap_zscore', ascending=False)
-            .reset_index(drop=True)
-            .drop(columns=['is_original', 'debut_date', 'std_gap', 'gap_zscore'])
-        )
+        ck_plus = (my_song_data[(my_song_data['is_original'] == 1) & 
+                                (my_song_data['times_played_total'] > 10)
+                                &(my_song_data['ltp_date'] > five_years_ago)].copy()           
+           .sort_values(by='gap_zscore', ascending=False)
+           .reset_index(drop=True)
+           .drop(columns=['is_original','debut_date', 'std_gap','gap_zscore'])
+)
         
         ck_plus['current_minus_avg'] = ck_plus['current_gap'] - ck_plus['avg_gap']
         ck_plus['current_minus_med'] = ck_plus['current_gap'] - ck_plus['med_gap']
@@ -154,21 +150,22 @@ class GoosePredictionMaker(PredictionMaker):
             
         one_year_ago = (self.today - timedelta(days=366)).strftime('%Y-%m-%d')
         
-        ricks_notebook_data = (
+        treys_notebook_data = (
             self.setlist_by_song[
                 (self.setlist_by_song['isreprise'] == 0) & 
-                (self.setlist_by_song['show_date'] > one_year_ago)
+                (self.setlist_by_song['showdate'] > one_year_ago)
             ]
             .merge(
-                self.songdata[['song_id', 'song', 'is_original']], 
-                on='song_id', 
+                self.songdata[['song_id', 'song']], 
+                left_on='songid', 
+                right_on='song_id',  
                 how='left'
             )
             .drop(columns=['song_id'])
-        )[['song', 'is_original', 'show_number', 'show_date', 'gap']]
+        )[['song', 'is_original', 'show_number', 'showdate', 'gap']]
 
-        ricks_notebook = (
-            ricks_notebook_data
+        treys_notebook = (
+            treys_notebook_data
             .groupby(['song', 'is_original'])
             .agg({
                 'show_number': ['count', 'max'],
@@ -177,10 +174,9 @@ class GoosePredictionMaker(PredictionMaker):
             .reset_index()
             .round(2)
         )
+        treys_notebook.columns = ['_'.join(col).strip() for col in treys_notebook.columns.values]
 
-        ricks_notebook.columns = ['_'.join(col).strip() for col in ricks_notebook.columns.values]
-
-        ricks_notebook = ricks_notebook.rename(columns={
+        treys_notebook = treys_notebook.rename(columns={
             'song_': 'song', 
             'is_original_': 'is_original',
             'show_number_count': 'times_played_in_last_year', 
@@ -192,33 +188,33 @@ class GoosePredictionMaker(PredictionMaker):
             'gap_std': 'std_gap'
         })
 
-        ricks_notebook['is_original'] = ricks_notebook['is_original'].astype(int)
-        ricks_notebook['current_gap'] = self.last_show - ricks_notebook['last_played']
+        treys_notebook['is_original'] = treys_notebook['is_original'].astype(int)
+        treys_notebook['current_gap'] = self.last_show - treys_notebook['last_played']
 
-        ricks_notebook = (
-            ricks_notebook
+        treys_notebook = (
+            treys_notebook
             .merge(
-                self.showdata[['show_number', 'show_date']], 
+                self.showdata[['show_number', 'showdate']], 
                 left_on='last_played', 
                 right_on='show_number', 
                 how='left'
             )
-            .rename(columns={'show_date': 'ltp_date'})
+            .rename(columns={'showdate': 'ltp_date'})
             .drop(columns=['show_number', 'last_played'])
         )[['song', 'is_original', 'times_played_in_last_year', 'ltp_date',
            'current_gap', 'avg_gap', 'med_gap']]
 
-        ricks_notebook = (
-            ricks_notebook[
-                (ricks_notebook['is_original'] == 1) & 
-                (ricks_notebook['current_gap'] > 3)
+        treys_notebook = (
+            treys_notebook[
+                (treys_notebook['is_original'] == 1) & 
+                (treys_notebook['current_gap'] > 3)
             ]
             .sort_values(by='times_played_in_last_year', ascending=False)
             .reset_index(drop=True)
             .drop(columns=['is_original'])
         )
                         
-        return ricks_notebook
+        return treys_notebook
         
     def create_and_save_predictions(self):
         """Create and save prediction datasets"""
@@ -226,7 +222,7 @@ class GoosePredictionMaker(PredictionMaker):
         self.get_setlist_by_song()
         
         ck_plus = self.create_ckplus()
-        ricks_notebook = self.create_notebook()
+        treys_notebook = self.create_notebook()
         
         try:
             # Create predictions directory if it doesn't exist
@@ -235,7 +231,7 @@ class GoosePredictionMaker(PredictionMaker):
             # Define files to save
             data_pairs = {
                 'ck_plus.csv': ck_plus,
-                'ricks_notebook.csv': ricks_notebook
+                'treys_notebook.csv': treys_notebook
             }
             
             # Save each file

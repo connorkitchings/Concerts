@@ -1,6 +1,6 @@
 
 from PredictionMaker import PredictionMakerManager
-#from Phish import PhishSetlistCollector
+from Phish import PhishPredictionMaker
 from Goose import GoosePredictionMaker
 #from WSP import WSPSetlistCollector
 
@@ -10,7 +10,7 @@ def main():
     manager = PredictionMakerManager()
     
     #band_modules = ['Goose','Phish', 'WSP']  # Add more band module names as needed
-    band_modules = ['Goose']
+    band_modules = ['Phish']
     
     for module_name in band_modules:
         try:
