@@ -2,15 +2,22 @@ import pandas as pd
 from flask import Flask, render_template
 import os
 from typing import Dict
-from datetime import datetime
+from datetime import datetime, date
 
 class DataManager:
     def __init__(self):
         self.script_dir = self._get_script_dir()
         self.base_dir = os.path.dirname(self.script_dir)
-        self.data_dir_goose = os.path.join(self.base_dir, "Data", "Goose")
-        self.data_dir_wsp = os.path.join(self.base_dir, "Data", "Widespread_Panic")
-        self.data_dir_phish = os.path.join(self.base_dir, "Data", "Phish")
+        self.data_dir = os.path.join(self.base_dir, "Data",)
+        
+        self.goose_preds = os.path.join(self.data_dir, "Goose", "Predictions")
+        self.goose_data = os.path.join(self.data_dir, "Goose", "From Web")
+        
+        self.wsp_preds = os.path.join(self.data_dir, "WSP", "Predictions")
+        self.wsp_data = os.path.join(self.data_dir, "WSP", "From Web")
+        
+        self.phish_preds = os.path.join(self.data_dir, "Phish", "Predictions")
+        self.phish_data = os.path.join(self.data_dir, "Phish", "From Web")
         
     def _get_script_dir(self) -> str:
         try:
@@ -21,56 +28,79 @@ class DataManager:
     def load_data(self) -> Dict[str, pd.DataFrame]:
         needhelp = False
         # Goose DataFrames
-        ricks_notebook = pd.read_csv(os.path.join(self.data_dir_goose, "ricks_notebook.csv")).reset_index(drop=True).head(50)
+        ricks_notebook = pd.read_csv(os.path.join(self.goose_preds, "ricks_notebook.csv")).reset_index(drop=True).head(50)
         ricks_notebook['Rank'] = ricks_notebook.index + 1
         ricks_notebook = ricks_notebook[['Rank'] + [col for col in ricks_notebook.columns if col != 'Rank']]
+        print("Ricks Notebook Loaded")
         if needhelp:
             print("Columns of ricks_notebook:", ricks_notebook.columns)
             print(ricks_notebook.head(1))  # Show a preview of the data for debugging
         
-        ckplus_goose = pd.read_csv(os.path.join(self.data_dir_goose, "ckplus_goose.csv")).reset_index(drop=True).head(50)
+        ckplus_goose = pd.read_csv(os.path.join(self.goose_preds, "ck_plus.csv")).reset_index(drop=True).head(50)
         ckplus_goose['Rank'] = ckplus_goose.index + 1
         ckplus_goose = ckplus_goose[['Rank'] + [col for col in ckplus_goose.columns if col != 'Rank']]
+        print("CK Plus Goose Loaded")
         if needhelp:
             print("Columns of ckplus_goose:", ckplus_goose.columns)
             print(ckplus_goose.head(1))  # Show a preview of the data for debugging
             
-        showdata_goose = pd.read_csv(os.path.join(self.data_dir_goose, "showdata.csv")).reset_index(drop=True)
+        showdata_goose = pd.read_csv(os.path.join(self.goose_data, "showdata.csv")).reset_index(drop=True)
+        venuedata_goose = pd.read_csv(os.path.join(self.goose_data, "venuedata.csv")).reset_index(drop=True)
+        show_and_venue_goose = showdata_goose.merge(venuedata_goose, on='venue_id', how='inner')
+        nextshow_goose = show_and_venue_goose[['show_date', 'venuename', 'city', 'state', 'country']].iloc[-1].copy()
+        #print(nextshow_goose['date'])
         
+        #start here
+        #nextshow_goose['date'] = pd.to_datetime(nextshow_goose['show_date'])
+        #daysuntil_goose = (nextshow_goose['date'] - pd.Timestamp(date.today())).days
+        #if (nextshow_goose['days_until'] < 0).any():
+        #    nextshow_goose = None
+        #else:
+        #    nextshow_goose['days_until'] = daysuntil_goose
+        #print(nextshow_goose)
+
         # Widespread Panic DataFrames
-        jojos_notebook = pd.read_csv(os.path.join(self.data_dir_wsp, "jojos_notebook.csv")).reset_index(drop=True).head(50)
+        jojos_notebook = pd.read_csv(os.path.join(self.wsp_preds, "jojos_notebook.csv")).reset_index(drop=True).head(50)
         jojos_notebook['Rank'] = jojos_notebook.index + 1
         jojos_notebook = jojos_notebook[['Rank'] + [col for col in jojos_notebook.columns if col != 'Rank']]
+        print("JoJos Notebook Loaded")
         if needhelp:
             print("Columns of jojos_notebook:", jojos_notebook.columns)
             print(jojos_notebook.head(1))  # Show a preview of the data for debugging
         
-        ckplus_wsp = pd.read_csv(os.path.join(self.data_dir_wsp, "ckplus_wsp.csv")).reset_index(drop=True).head(50)
+        ckplus_wsp = pd.read_csv(os.path.join(self.wsp_preds, "ck_plus.csv")).reset_index(drop=True).head(50)
         ckplus_wsp['Rank'] = ckplus_wsp.index + 1
         ckplus_wsp = ckplus_wsp[['Rank'] + [col for col in ckplus_wsp.columns if col != 'Rank']]
+        print("CK Plus WSP Loaded")
         if needhelp:
             print("Columns of ckplus_wsp:", ckplus_wsp.columns)
             print(ckplus_wsp.head(1))  # Show a preview of the data for debugging
             
-        showdata_wsp = pd.read_csv(os.path.join(self.data_dir_wsp, "showdata.csv")).reset_index(drop=True)
-        
+        showdata_wsp = pd.read_csv(os.path.join(self.wsp_data, "showdata.csv")).reset_index(drop=True)
+        nextshow_wsp = showdata_wsp[['date', 'venue', 'city', 'state']].iloc[-1].copy()
+    
         # Phish DataFrames
-        treys_notebook = pd.read_csv(os.path.join(self.data_dir_phish, "treys_notebook.csv")).reset_index(drop=True).head(50)
+        treys_notebook = pd.read_csv(os.path.join(self.phish_preds, "treys_notebook.csv")).reset_index(drop=True).head(50)
         treys_notebook['Rank'] = treys_notebook.index + 1
         treys_notebook = treys_notebook[['Rank'] + [col for col in treys_notebook.columns if col != 'Rank']]
+        print("Treys Notebook Loaded")
         if needhelp:
             print("Columns of treys_notebook:", treys_notebook.columns)
             print(treys_notebook.head(1))  # Show a preview of the data for debugging
         
-        ckplus_phish = pd.read_csv(os.path.join(self.data_dir_phish, "ck_plus.csv")).reset_index(drop=True).head(50)
+        ckplus_phish = pd.read_csv(os.path.join(self.phish_preds, "ck_plus.csv")).reset_index(drop=True).head(50)
         ckplus_phish['Rank'] = ckplus_phish.index + 1
         ckplus_phish = ckplus_phish[['Rank'] + [col for col in ckplus_phish.columns if col != 'Rank']]
+        print("CK Plus WSP Loaded")
         if needhelp:
             print("Columns of ckplus_phish:", ckplus_phish.columns)
             print(ckplus_phish.head(1))  # Show a preview of the data for debugging
             
-        showdata_phish = pd.read_csv(os.path.join(self.data_dir_phish, "showdata.csv")).reset_index(drop=True)
-
+        showdata_phish = pd.read_csv(os.path.join(self.phish_data, "showdata.csv")).reset_index(drop=True)
+        venuedata_phish = pd.read_csv(os.path.join(self.phish_data, "venuedata.csv")).reset_index(drop=True)
+        show_and_venue_phish = showdata_phish.merge(venuedata_phish, on='venueid', how='inner').sort_values(by='showdate')
+        nextshow_phish = show_and_venue_phish[['showdate', 'venue', 'city', 'state', 'country']].iloc[-1].copy()
+        
         # Set column names
         ricks_notebook.columns = [
             'Rank', 'Song', 'Times Played Last Year', 'Last Show Played',

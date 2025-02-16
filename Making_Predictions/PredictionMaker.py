@@ -78,7 +78,7 @@ class PredictionMakerManager:
         """Predict setlists for all registered bands."""
         overall_start_time = datetime.now()
         for band, predictor in self.predictors.items():
-            print(f"\Predicting setlist for {band}")
+            print(f"Predicting setlist for {band}")
             start_time = datetime.now()
 
             try:

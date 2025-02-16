@@ -239,7 +239,6 @@ class GoosePredictionMaker(PredictionMaker):
             }
             
             # Save each file
-            print("Saving prediction data...")
             for filename, data in data_pairs.items():
                 filepath = predictions_dir / filename
                 data.to_csv(filepath, index=False)

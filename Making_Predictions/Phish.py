@@ -126,8 +126,8 @@ class PhishPredictionMaker(PredictionMaker):
         )[['song', 'is_original', 'times_played_total','debut_date','ltp_date','current_gap','avg_gap', 'med_gap', 'std_gap']]
         
         my_song_data['gap_zscore'] = (my_song_data['current_gap'] - my_song_data['avg_gap']) / my_song_data['std_gap']
-        
-        five_years_ago = pd.Timestamp(date.today() - timedelta(days=5*365))
+
+        five_years_ago = (date.today() - timedelta(days=5*365))
         my_song_data['ltp_date'] = pd.to_datetime(my_song_data['ltp_date'], format='%Y-%m-%d').dt.date
 
         ck_plus = (my_song_data[(my_song_data['is_original'] == 1) & 
@@ -144,7 +144,7 @@ class PhishPredictionMaker(PredictionMaker):
         return ck_plus
     
     def create_notebook(self) -> pd.DataFrame: 
-        """Create Rick's Notebook prediction dataset"""
+        """Create Trey's Notebook prediction dataset"""
         if self.setlist_by_song is None:
             raise ValueError("Must run get_setlist_by_song() first")
             
@@ -235,7 +235,6 @@ class PhishPredictionMaker(PredictionMaker):
             }
             
             # Save each file
-            print("Saving prediction data...")
             for filename, data in data_pairs.items():
                 filepath = predictions_dir / filename
                 data.to_csv(filepath, index=False)

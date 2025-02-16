@@ -37,7 +37,7 @@ class WSPSetlistCollector(SetlistCollector):
         }
         
         # Set url
-        self.base_url = 'http://everydaycompanion.com/'
+        self.base_url = 'http://www.everydaycompanion.com/'
         
         # Set up link_list
         self.link_list = []
@@ -294,7 +294,8 @@ class WSPSetlistCollector(SetlistCollector):
             
             for link in filtered_link_list:
                 link_setlist = self.get_setlist_from_link(link)
-                all_setlists = pd.concat([all_setlists, link_setlist]).drop_duplicates().reset_index(drop=True)
+                all_setlists = pd.concat([all_setlists, link_setlist])
+                all_setlists = all_setlists.drop_duplicates(subset=['link', 'song_name', 'set', 'song_index_show', 'song_index_set']).reset_index(drop=True)
 
         return all_setlists
     
