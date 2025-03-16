@@ -3,13 +3,15 @@ from SetlistCollector import SetlistCollectorManager
 from Phish import PhishSetlistCollector
 from Goose import GooseSetlistCollector
 from WSP import WSPSetlistCollector
+from UM import UMSetlistCollector
 
 def main():
     """Main function to run the band data scrapers."""
     
     manager = SetlistCollectorManager()
     
-    band_modules = ['Goose','Phish', 'WSP']  # Add more band module names as needed
+    band_modules = ['Goose','Phish', 'UM', 'WSP']  # Add more band module names as needed
+    band_modules = ['UM']  # Add more band module names as needed
     
     for module_name in band_modules:
         try:
