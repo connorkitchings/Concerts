@@ -64,6 +64,7 @@ class WSPPredictionMaker(PredictionMaker):
                            .sort_values(['song_name','show_index_overall'])
                            .reset_index(drop=True))
         
+        setlist_by_song = setlist_by_song[setlist_by_song['song_name']!='Jam'].copy().reset_index(drop=True)
         setlist_by_song['gap'] = setlist_by_song.groupby('song_name')['show_index_overall'].diff()
         setlist_by_song.loc[setlist_by_song.groupby('song_name').head(1).index, 'gap'] = None 
         
@@ -203,6 +204,7 @@ class WSPPredictionMaker(PredictionMaker):
                 filepath = predictions_dir / filename
                 data.to_csv(filepath, index=False)
                 print(f"Saved {filename}")
+            print()
                 
         except Exception as e:
             print(f"Error saving prediction data: {e}")

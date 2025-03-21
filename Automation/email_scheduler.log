@@ -1,0 +1,154 @@
+2025-03-20 19:08:15,578 - EmailScheduler - INFO - Scheduler initialized. Email script will run daily at 7:05 PM
+2025-03-20 19:08:15,578 - EmailScheduler - INFO - Scheduler is now running. Press Ctrl+C to stop.
+2025-03-20 19:08:59,475 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-20 19:09:55,151 - EmailScheduler - INFO - Scheduler initialized. All scripts will run daily at 7:10 PM
+2025-03-20 19:09:55,152 - EmailScheduler - INFO - Scheduler is now running. Press Ctrl+C to stop.
+2025-03-20 19:10:55,156 - EmailScheduler - INFO - Starting scheduled job to run all scripts
+2025-03-20 19:10:55,156 - EmailScheduler - INFO - Starting Predictions job at 2025-03-20 19:10:55.156794
+2025-03-20 19:10:55,156 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Making_Predictions/Make_Predictions.py
+2025-03-20 19:10:55,646 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-20 19:10:57,058 - EmailScheduler - INFO - Predictions script executed successfully through import
+2025-03-20 19:10:57,059 - EmailScheduler - INFO - Starting Setlists job at 2025-03-20 19:10:57.059116
+2025-03-20 19:10:57,059 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Get_Setlists.py
+2025-03-20 19:10:57,064 - EmailScheduler - ERROR - Error importing and running Setlists: cannot import name 'PhishSetlistCollector' from 'Phish' (/Users/connorkitchings/Desktop/Repositories/Concerts/Making_Predictions/Phish.py)
+2025-03-20 19:11:08,575 - EmailScheduler - INFO - Setlists script executed successfully as subprocess
+2025-03-20 19:11:08,576 - EmailScheduler - INFO - Output: 
+Scraping data for UM
+Loading Song Data
+Loading Show and Venue Data
+Loading Setlist and Transition Data
+Previous Last Show in Dataset: 2025-03-15
+Saving data.
+UM Setlist Collection Time: 0 minutes and 10.33 seconds
+Total Setlist Collection Time: 0 minutes and 10.33 seconds
+
+2025-03-20 19:11:08,576 - EmailScheduler - INFO - Starting Email job at 2025-03-20 19:11:08.576437
+2025-03-20 19:11:08,576 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py
+2025-03-20 19:11:09,835 - EmailScheduler - INFO - Email script executed successfully through import
+2025-03-20 19:11:09,835 - EmailScheduler - INFO - Completed running all scripts
+2025-03-20 19:12:35,838 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-20 19:14:17,857 - EmailScheduler - INFO - Scheduler initialized. All scripts will run daily at 7:15 PM
+2025-03-20 19:14:17,858 - EmailScheduler - INFO - Scheduler is now running. Press Ctrl+C to stop.
+2025-03-20 19:15:17,861 - EmailScheduler - INFO - Starting scheduled job to run all scripts
+2025-03-20 19:15:17,864 - EmailScheduler - INFO - Starting Setlists job at 2025-03-20 19:15:17.863998
+2025-03-20 19:15:17,864 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Get_Setlists.py
+2025-03-20 19:15:18,441 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-20 19:15:29,085 - EmailScheduler - INFO - Setlists script executed successfully through import
+2025-03-20 19:15:29,086 - EmailScheduler - INFO - Starting Predictions job at 2025-03-20 19:15:29.085992
+2025-03-20 19:15:29,086 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Make_Predictions.py
+2025-03-20 19:15:29,086 - EmailScheduler - ERROR - Error importing and running Predictions: [Errno 2] No such file or directory: '/Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Make_Predictions.py'
+2025-03-20 19:15:29,192 - EmailScheduler - ERROR - Error running Predictions as subprocess: /Users/connorkitchings/anaconda3/bin/python: can't open file '/Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Make_Predictions.py': [Errno 2] No such file or directory
+
+2025-03-20 19:15:29,192 - EmailScheduler - INFO - Starting Email job at 2025-03-20 19:15:29.192495
+2025-03-20 19:15:29,192 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Eamil.py
+2025-03-20 19:15:29,192 - EmailScheduler - ERROR - Error importing and running Email: [Errno 2] No such file or directory: '/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Eamil.py'
+2025-03-20 19:15:29,243 - EmailScheduler - ERROR - Error running Email as subprocess: /Users/connorkitchings/anaconda3/bin/python: can't open file '/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Eamil.py': [Errno 2] No such file or directory
+
+2025-03-20 19:15:29,244 - EmailScheduler - INFO - Starting Setlists job at 2025-03-20 19:15:29.244339
+2025-03-20 19:15:29,244 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Get_Setlists.py
+2025-03-20 19:15:38,328 - EmailScheduler - INFO - Setlists script executed successfully through import
+2025-03-20 19:15:38,329 - EmailScheduler - INFO - Completed running all scripts
+2025-03-20 19:21:04,403 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-20 19:21:06,373 - EmailScheduler - INFO - Scheduler initialized. All scripts will run daily at 7:22 PM
+2025-03-20 19:21:06,373 - EmailScheduler - INFO - Scheduler is now running. Press Ctrl+C to stop.
+2025-03-20 19:22:06,380 - EmailScheduler - INFO - Starting scheduled job to run all scripts
+2025-03-20 19:22:06,381 - EmailScheduler - INFO - Starting Predictions job at 2025-03-20 19:22:06.381865
+2025-03-20 19:22:06,382 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Make_Predictions.py
+2025-03-20 19:22:06,382 - EmailScheduler - ERROR - Error importing and running Predictions: [Errno 2] No such file or directory: '/Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Make_Predictions.py'
+2025-03-20 19:22:06,526 - EmailScheduler - ERROR - Error running Predictions as subprocess: /Users/connorkitchings/anaconda3/bin/python: can't open file '/Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Make_Predictions.py': [Errno 2] No such file or directory
+2025-03-20 19:22:06,526 - EmailScheduler - INFO - Starting Setlists job at 2025-03-20 19:22:06.526336
+2025-03-20 19:22:06,526 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Get_Setlists.py
+2025-03-20 19:22:06,973 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-20 19:22:50,468 - EmailScheduler - INFO - Setlists script executed successfully through import
+2025-03-20 19:22:50,470 - EmailScheduler - INFO - Starting Email job at 2025-03-20 19:22:50.470899
+2025-03-20 19:22:50,471 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py
+2025-03-20 19:22:51,614 - EmailScheduler - INFO - Email script executed successfully through import
+2025-03-20 19:22:51,614 - EmailScheduler - INFO - Completed running all scripts
+2025-03-20 19:23:04,742 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-20 19:26:27,579 - EmailScheduler - INFO - Scheduler initialized. All scripts will run daily at 7:27 PM
+2025-03-20 19:26:27,579 - EmailScheduler - INFO - Scheduler is now running. Press Ctrl+C to stop.
+2025-03-20 19:27:27,583 - EmailScheduler - INFO - Starting scheduled job to run all scripts
+2025-03-20 19:27:27,584 - EmailScheduler - INFO - Starting Predictions job at 2025-03-20 19:27:27.584169
+2025-03-20 19:27:27,584 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Making_Predictions/Make_Predictions.py
+2025-03-20 19:27:28,124 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-20 19:27:29,762 - EmailScheduler - INFO - Predictions script executed successfully through import
+2025-03-20 19:27:29,763 - EmailScheduler - INFO - Starting Setlists job at 2025-03-20 19:27:29.763104
+2025-03-20 19:27:29,763 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Get_Setlists.py
+2025-03-20 19:27:29,765 - EmailScheduler - ERROR - Error importing and running Setlists: cannot import name 'PhishSetlistCollector' from 'Phish' (/Users/connorkitchings/Desktop/Repositories/Concerts/Making_Predictions/Phish.py)
+2025-03-20 19:27:40,116 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-20 19:29:48,548 - EmailScheduler - INFO - Scheduler initialized. All scripts will run daily at 7:30 PM
+2025-03-20 19:29:48,549 - EmailScheduler - INFO - Scheduler is now running. Press Ctrl+C to stop.
+2025-03-20 19:30:48,551 - EmailScheduler - INFO - Starting scheduled job to run all scripts
+2025-03-20 19:30:48,553 - EmailScheduler - INFO - Starting Setlists job at 2025-03-20 19:30:48.553085
+2025-03-20 19:30:48,553 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Get_Setlists.py
+2025-03-20 19:30:48,979 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-20 19:31:42,438 - EmailScheduler - INFO - Setlists script executed successfully through import
+2025-03-20 19:31:42,439 - EmailScheduler - INFO - Starting Predictions job at 2025-03-20 19:31:42.439593
+2025-03-20 19:31:42,439 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Making_Predictions/Make_Predictions.py
+2025-03-20 19:31:42,441 - EmailScheduler - ERROR - Error importing and running Predictions: cannot import name 'PhishPredictionMaker' from 'Phish' (/Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Phish.py)
+2025-03-20 19:31:44,129 - EmailScheduler - INFO - Predictions script executed successfully as subprocess
+2025-03-20 19:31:44,130 - EmailScheduler - INFO - Output: Registering predictor for Goose...
+Registering predictor for Phish...
+Registering predictor for WSP...
+
+🔮 Making predictions for all bands...
+
+Predicting setlist for Goose
+Saved ck_plus.csv
+Saved ricks_notebook.csv
+Goose Setlist Prediction Time: 0 minutes and 0.11 seconds
+Predicting setlist for Phish
+Saved ck_plus.csv
+Saved treys_notebook.csv
+Phish Setlist Prediction Time: 0 minutes and 0.32 seconds
+Predicting setlist for WSP
+Saved ck_plus.csv
+Saved jojos_notebook.csv
+WSP Setlist Prediction Time: 0 minutes and 0.50 seconds
+Total Setlist Prediction Time: 0 minutes and 0.94 seconds
+✅ Predictions completed.
+2025-03-20 19:31:44,130 - EmailScheduler - INFO - Starting Email job at 2025-03-20 19:31:44.130410
+2025-03-20 19:31:44,130 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py
+2025-03-20 19:31:45,208 - EmailScheduler - INFO - Email script executed successfully through import
+2025-03-20 19:31:45,209 - EmailScheduler - INFO - Completed running all scripts
+2025-03-20 19:34:29,233 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-20 19:37:30,732 - EmailScheduler - INFO - Scheduler initialized. All scripts will run daily at 7:45 PM
+2025-03-20 19:37:30,733 - EmailScheduler - INFO - Scheduler is now running. Press Ctrl+C to stop.
+2025-03-20 19:41:43,010 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-20 19:42:04,035 - EmailScheduler - INFO - Scheduler initialized. All scripts will run daily at 7:45 PM
+2025-03-20 19:42:04,035 - EmailScheduler - INFO - Scheduler is now running. Press Ctrl+C to stop.
+2025-03-20 19:45:04,044 - EmailScheduler - INFO - Starting scheduled job to run all scripts
+2025-03-20 19:45:04,046 - EmailScheduler - INFO - Starting Setlists job at 2025-03-20 19:45:04.046656
+2025-03-20 19:45:04,046 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Get_Setlists.py
+2025-03-20 19:45:04,550 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-20 19:45:43,569 - EmailScheduler - INFO - Setlists script executed successfully through import
+2025-03-20 19:45:43,570 - EmailScheduler - INFO - Starting Predictions job at 2025-03-20 19:45:43.570607
+2025-03-20 19:45:43,570 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Making_Predictions/Make_Predictions.py
+2025-03-20 19:45:43,573 - EmailScheduler - ERROR - Error importing and running Predictions: cannot import name 'PhishPredictionMaker' from 'Phish' (/Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Phish.py)
+2025-03-20 19:45:45,314 - EmailScheduler - INFO - Predictions script executed successfully as subprocess
+2025-03-20 19:45:45,315 - EmailScheduler - INFO - Output: Registering predictor for Goose...
+Registering predictor for Phish...
+Registering predictor for WSP...
+
+🔮 Making predictions for all bands...
+
+Predicting setlist for Goose
+Saved ck_plus.csv
+Saved ricks_notebook.csv
+Goose Setlist Prediction Time: 0 minutes and 0.13 seconds
+Predicting setlist for Phish
+Saved ck_plus.csv
+Saved treys_notebook.csv
+Phish Setlist Prediction Time: 0 minutes and 0.30 seconds
+Predicting setlist for WSP
+Saved ck_plus.csv
+Saved jojos_notebook.csv
+
+WSP Setlist Prediction Time: 0 minutes and 0.53 seconds
+Total Setlist Prediction Time: 0 minutes and 0.96 seconds
+✅ Predictions completed.
+2025-03-20 19:45:45,315 - EmailScheduler - INFO - Starting Email job at 2025-03-20 19:45:45.315491
+2025-03-20 19:45:45,315 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py
+2025-03-20 19:45:49,278 - EmailScheduler - INFO - Email script executed successfully through import
+2025-03-20 19:45:49,278 - EmailScheduler - INFO - Completed running all scripts
+2025-03-20 20:34:20,199 - EmailScheduler - INFO - Scheduler stopped by user

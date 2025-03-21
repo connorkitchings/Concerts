@@ -20,6 +20,7 @@ def main():
 
             # Validate and register scraper
             if predictor_class:
+                print(f"Registering predictor for {module_name}...")
                 manager.register_predictor(predictor_class)
             else:
                 print(f"Invalid or missing class {class_name} in module {module_name}")
@@ -27,7 +28,9 @@ def main():
         except ImportError as e:
             print(f"Could not import {module_name} predictor: {e}")
 
+    print("\n🔮 Making predictions for all bands...\n")
     manager.predict_all()
+    print("✅ Predictions completed.")
 
 if __name__ == "__main__":
     main()

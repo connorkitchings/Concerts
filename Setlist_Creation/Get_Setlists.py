@@ -11,7 +11,7 @@ def main():
     manager = SetlistCollectorManager()
     
     band_modules = ['Goose','Phish', 'UM', 'WSP']  # Add more band module names as needed
-    band_modules = ['UM']  # Add more band module names as needed
+    #band_modules = ['UM'] 
     
     for module_name in band_modules:
         try:
