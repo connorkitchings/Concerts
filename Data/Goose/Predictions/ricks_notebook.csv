@@ -1,44 +1,52 @@
 song,times_played_in_last_year,ltp_date,current_gap,avg_gap,med_gap
-The Empress Of Organos,22,2025-02-07,6,3.32,4.0
-Yeti,19,2025-02-10,4,4.05,4.0
-Silver Rising,18,2025-02-08,5,4.28,4.0
-Slow Ready,15,2025-02-10,4,5.07,5.0
-Red Bird,15,2025-02-07,6,4.87,5.0
-Same Old Shenanigans,13,2025-02-08,5,6.31,6.0
-Borne,13,2025-02-08,5,5.92,5.0
-Into the Myst,13,2025-02-08,5,6.0,6.0
-Turned Clouds,13,2025-02-08,5,6.15,6.0
-Turbulence & The Night Rays,13,2025-02-06,7,6.0,6.0
-California Magic,12,2025-02-07,6,6.5,6.0
-Dr. Darkness,12,2025-02-06,7,6.17,5.0
-Jive Lee,10,2024-11-07,18,6.7,5.5
-SALT,10,2025-02-06,7,7.89,6.0
-Wysteria Lane,10,2025-02-10,4,7.9,7.0
-Earthling or Alien?,10,2025-02-10,4,7.6,6.5
-The Whales,9,2025-02-06,7,8.44,7.0
-Indian River,9,2024-10-30,23,7.33,6.0
-Draconian Meter Maid,9,2025-02-06,7,5.38,5.5
-Elizabeth,8,2025-02-10,4,10.0,8.5
-Lead the Way,6,2024-11-09,16,11.67,11.0
-Your Ocean,6,2025-02-10,4,14.5,14.0
-Butterflies,5,2024-11-01,21,12.4,12.0
-My Mind Has Been Consumed By Media,5,2024-11-10,15,8.25,8.0
-Elmeg The Wise,5,2024-11-07,18,27.4,15.0
-Travelers,5,2024-11-07,18,20.4,15.0
-The Old Man's Boat,4,2024-11-08,17,16.5,15.5
-Jeff Engborg,4,2025-02-07,6,23.0,15.0
-It Burns Within,3,2024-06-26,54,33.67,15.0
-Loose Ends,3,2024-11-12,14,31.33,34.0
-The Labyrinth,3,2024-12-31,8,29.33,20.0
-Doobie Song,2,2024-09-04,47,16.0,16.0
-Lily's Tiger,1,2024-09-15,39,233.0,233.0
-Dim Lights,1,2024-11-10,15,,
-Honeybee,1,2024-06-10,66,19.0,19.0
-How it Ends,1,2024-04-10,75,,
-The King,1,2024-12-13,11,,
-Interlude I,1,2024-04-08,77,279.0,279.0
-Interlude III,1,2024-04-08,77,,
-Arise,1,2024-09-27,31,126.0,126.0
-Not Alone,1,2024-11-07,18,90.0,90.0
-Moonrise,1,2024-11-10,15,188.0,188.0
-(satellite),1,2024-09-13,41,361.0,361.0
+The Empress Of Organos,22,2025-02-07,7,3.32,4.0
+Arcadia,21,2025-02-11,4,3.62,3.0
+Yeti,19,2025-02-10,5,4.05,4.0
+Silver Rising,18,2025-02-08,6,4.28,4.0
+Rockdale,16,2025-02-11,4,5.0,5.0
+Red Bird,15,2025-02-07,7,4.87,5.0
+Slow Ready,15,2025-02-10,5,5.07,5.0
+Borne,13,2025-02-08,6,5.92,5.0
+Turned Clouds,13,2025-02-08,6,6.15,6.0
+Turbulence & The Night Rays,13,2025-02-06,8,6.0,6.0
+Into the Myst,13,2025-02-08,6,6.0,6.0
+Same Old Shenanigans,13,2025-02-08,6,6.31,6.0
+Seekers on the Ridge pt I,12,2025-02-11,4,6.5,6.5
+Dr. Darkness,12,2025-02-06,8,6.17,5.0
+California Magic,12,2025-02-07,7,6.5,6.0
+Butter Rum,12,2025-02-11,4,6.42,5.0
+Seekers on the Ridge pt II,12,2025-02-11,4,6.5,6.5
+Jive Lee,10,2024-11-07,19,6.7,5.5
+Earthling or Alien?,10,2025-02-10,5,7.6,6.5
+Wysteria Lane,10,2025-02-10,5,7.9,7.0
+SALT,10,2025-02-06,8,7.89,6.0
+The Whales,9,2025-02-06,8,8.44,7.0
+Indian River,9,2024-10-30,24,7.33,6.0
+Draconian Meter Maid,9,2025-02-06,8,5.38,5.5
+Bob Don,9,2025-02-11,4,9.11,9.0
+Elizabeth,8,2025-02-10,5,10.0,8.5
+Factory Fiction,7,2025-02-11,4,13.14,15.0
+Rosewood Heart,6,2025-02-11,4,14.0,13.0
+Lead the Way,6,2024-11-09,17,11.67,11.0
+Your Ocean,6,2025-02-10,5,14.5,14.0
+Butterflies,5,2024-11-01,22,12.4,12.0
+Travelers,5,2024-11-07,19,20.4,15.0
+My Mind Has Been Consumed By Media,5,2024-11-10,16,8.25,8.0
+Elmeg The Wise,5,2024-11-07,19,27.4,15.0
+The Old Man's Boat,4,2024-11-08,18,16.5,15.5
+Jeff Engborg,4,2025-02-07,7,23.0,15.0
+Loose Ends,3,2024-11-12,15,31.33,34.0
+It Burns Within,3,2024-06-26,55,33.67,15.0
+The Labyrinth,3,2024-12-31,9,29.33,20.0
+Doobie Song,2,2024-09-04,48,16.0,16.0
+Not Alone,1,2024-11-07,19,90.0,90.0
+Arise,1,2024-09-27,32,126.0,126.0
+Dim Lights,1,2024-11-10,16,,
+Honeybee,1,2024-06-10,67,19.0,19.0
+The King,1,2024-12-13,12,,
+How it Ends,1,2024-04-10,76,,
+Interlude I,1,2024-04-08,78,279.0,279.0
+Interlude III,1,2024-04-08,78,,
+Lily's Tiger,1,2024-09-15,40,233.0,233.0
+Moonrise,1,2024-11-10,16,188.0,188.0
+(satellite),1,2024-09-13,42,361.0,361.0

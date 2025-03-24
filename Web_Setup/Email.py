@@ -286,7 +286,7 @@ def main():
     recipient_emails = ["connorkitchings@yahoo.com", "Alex.strickland6317@gmail.com", "rtgould@gmail.com"]
     
     # Set subject
-    subject = "Widespread Panic Predictions for St. Augustine Amphitheater 3/21/2025"
+    subject = f"Widespread Panic Predictions for St. Augustine Amphitheater date"
     
     # Send the email
     for email in recipient_emails:

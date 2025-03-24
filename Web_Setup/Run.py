@@ -13,8 +13,8 @@ class DataManager:
         self.goose_preds = os.path.join(self.data_dir, "Goose", "Predictions")
         self.goose_data = os.path.join(self.data_dir, "Goose", "From Web")
         
-        self.wsp_preds = os.path.join(self.data_dir, "WSP", "Predictions")
         self.wsp_data = os.path.join(self.data_dir, "WSP", "From Web")
+        self.wsp_preds = os.path.join(self.data_dir, "WSP", "Predictions")
         
         self.phish_preds = os.path.join(self.data_dir, "Phish", "Predictions")
         self.phish_data = os.path.join(self.data_dir, "Phish", "From Web")

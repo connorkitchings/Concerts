@@ -152,3 +152,191 @@ Total Setlist Prediction Time: 0 minutes and 0.96 seconds
 2025-03-20 19:45:49,278 - EmailScheduler - INFO - Email script executed successfully through import
 2025-03-20 19:45:49,278 - EmailScheduler - INFO - Completed running all scripts
 2025-03-20 20:34:20,199 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-20 20:37:51,739 - EmailScheduler - INFO - Scheduler initialized. All scripts will run daily at 7:45 PM
+2025-03-20 20:37:51,740 - EmailScheduler - INFO - Scheduler is now running. Press Ctrl+C to stop.
+2025-03-20 20:37:51,748 - EmailScheduler - INFO - Waiting until next check.
+2025-03-20 20:38:09,401 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-20 20:41:48,126 - EmailScheduler - INFO - Scheduler initialized. Scripts will run once an hour between 3:45 PM and 4:45 PM.
+2025-03-20 20:41:48,132 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 06:09:56,036 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 08:47:51,713 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-21 08:48:00,972 - EmailScheduler - INFO - Scheduler initialized. Scripts will run once an hour between 3:45 PM and 4:45 PM.
+2025-03-21 08:48:00,981 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 09:18:01,028 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 09:21:37,326 - EmailScheduler - INFO - Scheduler stopped by user
+2025-03-21 09:21:55,322 - EmailScheduler - INFO - Scheduler initialized. Scripts will run once an hour between 3:45 PM and 4:45 PM.
+2025-03-21 09:21:55,327 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 10:21:55,388 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 11:21:55,450 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 12:21:55,504 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 13:21:55,472 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 14:21:55,610 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 15:21:55,649 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 16:21:55,716 - EmailScheduler - INFO - Time within range. Running the job.
+2025-03-21 16:21:55,717 - EmailScheduler - INFO - Starting scheduled job to run all scripts
+2025-03-21 16:21:55,723 - EmailScheduler - INFO - Starting Setlists job at 2025-03-21 16:21:55.717994
+2025-03-21 16:21:55,723 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Get_Setlists.py
+2025-03-21 16:21:56,523 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-03-21 16:22:39,389 - EmailScheduler - INFO - Setlists script executed successfully through import
+2025-03-21 16:22:39,393 - EmailScheduler - INFO - Starting Predictions job at 2025-03-21 16:22:39.393940
+2025-03-21 16:22:39,394 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Making_Predictions/Make_Predictions.py
+2025-03-21 16:22:39,399 - EmailScheduler - ERROR - Error importing and running Predictions: cannot import name 'PhishPredictionMaker' from 'Phish' (/Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Phish.py)
+2025-03-21 16:22:41,201 - EmailScheduler - INFO - Predictions script executed successfully as subprocess
+2025-03-21 16:22:41,201 - EmailScheduler - INFO - Output: Registering predictor for Goose...
+Registering predictor for Phish...
+Registering predictor for WSP...
+
+🔮 Making predictions for all bands...
+
+Predicting setlist for Goose
+Saved ck_plus.csv
+Saved ricks_notebook.csv
+Goose Setlist Prediction Time: 0 minutes and 0.15 seconds
+Predicting setlist for Phish
+Saved ck_plus.csv
+Saved treys_notebook.csv
+Phish Setlist Prediction Time: 0 minutes and 0.29 seconds
+Predicting setlist for WSP
+Saved ck_plus.csv
+Saved jojos_notebook.csv
+
+WSP Setlist Prediction Time: 0 minutes and 0.52 seconds
+Total Setlist Prediction Time: 0 minutes and 0.96 seconds
+✅ Predictions completed.
+2025-03-21 16:22:41,202 - EmailScheduler - INFO - Starting Email job at 2025-03-21 16:22:41.202018
+2025-03-21 16:22:41,202 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py
+2025-03-21 16:22:41,269 - EmailScheduler - ERROR - Error importing and running Email: name 'today_date' is not defined
+2025-03-21 16:22:41,819 - EmailScheduler - ERROR - Error running Email as subprocess: Traceback (most recent call last):
+  File "/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py", line 302, in <module>
+    main()
+  File "/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py", line 289, in main
+    subject = f"Widespread Panic Predictions for St. Augustine Amphitheater {today_date}"
+NameError: name 'today_date' is not defined
+2025-03-21 16:22:41,819 - EmailScheduler - INFO - Completed running all scripts
+2025-03-21 17:22:41,840 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 18:22:41,949 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 19:22:42,076 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 20:22:42,084 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 21:22:42,110 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 22:22:42,213 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-21 23:22:42,343 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 00:22:42,387 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 01:22:42,388 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 02:22:42,505 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 03:22:42,561 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 04:22:42,566 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 05:22:42,703 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 06:22:42,732 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 07:22:42,822 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 08:22:42,874 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 09:22:42,945 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 10:22:43,019 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 11:22:43,051 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 12:22:43,155 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 13:22:43,208 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 14:22:43,291 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 15:22:43,304 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 16:22:43,391 - EmailScheduler - INFO - Time within range. Running the job.
+2025-03-22 16:22:43,392 - EmailScheduler - INFO - Starting scheduled job to run all scripts
+2025-03-22 16:22:43,398 - EmailScheduler - INFO - Starting Setlists job at 2025-03-22 16:22:43.393197
+2025-03-22 16:22:43,398 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Get_Setlists.py
+2025-03-22 16:23:22,494 - EmailScheduler - INFO - Setlists script executed successfully through import
+2025-03-22 16:23:22,496 - EmailScheduler - INFO - Starting Predictions job at 2025-03-22 16:23:22.496410
+2025-03-22 16:23:22,496 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Making_Predictions/Make_Predictions.py
+2025-03-22 16:23:22,498 - EmailScheduler - ERROR - Error importing and running Predictions: cannot import name 'PhishPredictionMaker' from 'Phish' (/Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Phish.py)
+2025-03-22 16:23:24,643 - EmailScheduler - INFO - Predictions script executed successfully as subprocess
+2025-03-22 16:23:24,644 - EmailScheduler - INFO - Output: Registering predictor for Goose...
+Registering predictor for Phish...
+Registering predictor for WSP...
+
+🔮 Making predictions for all bands...
+
+Predicting setlist for Goose
+Saved ck_plus.csv
+Saved ricks_notebook.csv
+Goose Setlist Prediction Time: 0 minutes and 0.12 seconds
+Predicting setlist for Phish
+Saved ck_plus.csv
+Saved treys_notebook.csv
+Phish Setlist Prediction Time: 0 minutes and 0.29 seconds
+Predicting setlist for WSP
+Saved ck_plus.csv
+Saved jojos_notebook.csv
+
+WSP Setlist Prediction Time: 0 minutes and 0.51 seconds
+Total Setlist Prediction Time: 0 minutes and 0.92 seconds
+✅ Predictions completed.
+2025-03-22 16:23:24,644 - EmailScheduler - INFO - Starting Email job at 2025-03-22 16:23:24.644673
+2025-03-22 16:23:24,644 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py
+2025-03-22 16:23:24,649 - EmailScheduler - ERROR - Error importing and running Email: name 'today_date' is not defined
+2025-03-22 16:23:25,229 - EmailScheduler - ERROR - Error running Email as subprocess: Traceback (most recent call last):
+  File "/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py", line 302, in <module>
+    main()
+  File "/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py", line 289, in main
+    subject = f"Widespread Panic Predictions for St. Augustine Amphitheater {today_date}"
+NameError: name 'today_date' is not defined
+2025-03-22 16:23:25,229 - EmailScheduler - INFO - Completed running all scripts
+2025-03-22 17:23:25,272 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 18:23:25,361 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 19:23:25,435 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 20:23:25,522 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 21:23:25,602 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 22:23:25,625 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-22 23:23:25,610 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 00:23:25,762 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 01:23:25,816 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 02:23:25,906 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 03:23:25,944 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 04:23:26,019 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 05:23:26,094 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 06:23:26,160 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 07:23:26,145 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 08:23:26,251 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 09:23:26,380 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 10:23:26,421 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 11:23:26,504 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 12:23:26,549 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 13:23:26,624 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 14:23:26,707 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 15:23:26,741 - EmailScheduler - INFO - Outside the specified time range. Skipping execution.
+2025-03-23 16:23:26,775 - EmailScheduler - INFO - Time within range. Running the job.
+2025-03-23 16:23:26,776 - EmailScheduler - INFO - Starting scheduled job to run all scripts
+2025-03-23 16:23:26,776 - EmailScheduler - INFO - Starting Setlists job at 2025-03-23 16:23:26.776837
+2025-03-23 16:23:26,777 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Get_Setlists.py
+2025-03-23 16:24:11,429 - EmailScheduler - INFO - Setlists script executed successfully through import
+2025-03-23 16:24:11,431 - EmailScheduler - INFO - Starting Predictions job at 2025-03-23 16:24:11.431872
+2025-03-23 16:24:11,431 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Making_Predictions/Make_Predictions.py
+2025-03-23 16:24:11,433 - EmailScheduler - ERROR - Error importing and running Predictions: cannot import name 'PhishPredictionMaker' from 'Phish' (/Users/connorkitchings/Desktop/Repositories/Concerts/Setlist_Creation/Phish.py)
+2025-03-23 16:24:13,461 - EmailScheduler - INFO - Predictions script executed successfully as subprocess
+2025-03-23 16:24:13,462 - EmailScheduler - INFO - Output: Registering predictor for Goose...
+Registering predictor for Phish...
+Registering predictor for WSP...
+
+🔮 Making predictions for all bands...
+
+Predicting setlist for Goose
+Saved ck_plus.csv
+Saved ricks_notebook.csv
+Goose Setlist Prediction Time: 0 minutes and 0.11 seconds
+Predicting setlist for Phish
+Saved ck_plus.csv
+Saved treys_notebook.csv
+Phish Setlist Prediction Time: 0 minutes and 0.28 seconds
+Predicting setlist for WSP
+Saved ck_plus.csv
+Saved jojos_notebook.csv
+
+WSP Setlist Prediction Time: 0 minutes and 0.49 seconds
+Total Setlist Prediction Time: 0 minutes and 0.89 seconds
+✅ Predictions completed.
+2025-03-23 16:24:13,462 - EmailScheduler - INFO - Starting Email job at 2025-03-23 16:24:13.462625
+2025-03-23 16:24:13,462 - EmailScheduler - INFO - Running script: /Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py
+2025-03-23 16:24:13,467 - EmailScheduler - ERROR - Error importing and running Email: name 'today_date' is not defined
+2025-03-23 16:24:14,037 - EmailScheduler - ERROR - Error running Email as subprocess: Traceback (most recent call last):
+  File "/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py", line 302, in <module>
+    main()
+  File "/Users/connorkitchings/Desktop/Repositories/Concerts/Web_Setup/Email.py", line 289, in main
+    subject = f"Widespread Panic Predictions for St. Augustine Amphitheater {today_date}"
+NameError: name 'today_date' is not defined
+2025-03-23 16:24:14,039 - EmailScheduler - INFO - Completed running all scripts
+2025-03-23 16:36:03,144 - EmailScheduler - INFO - Scheduler stopped by user
