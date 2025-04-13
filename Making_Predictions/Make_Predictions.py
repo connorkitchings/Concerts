@@ -3,14 +3,15 @@ from PredictionMaker import PredictionMakerManager
 from Phish import PhishPredictionMaker
 from Goose import GoosePredictionMaker
 from WSP import WSPPredictionMaker
+from UM import UMPredictionMaker
 
 def main():
     """Main function to run the band data scrapers."""
     
     manager = PredictionMakerManager()
     
-    band_modules = ['Goose','Phish', 'WSP']  # Add more band module names as needed
-    #band_modules = ['Phish']
+    #band_modules = ['Goose','Phish', 'WSP', 'UM']  # Add more band module names as needed
+    band_modules = ['UM']
     
     for module_name in band_modules:
         try:

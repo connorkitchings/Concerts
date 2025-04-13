@@ -20,8 +20,8 @@ class PredictionMaker(ABC):
         band: Name of the band (must be in ['Goose','Phish','WSP'])
         base_dir: Base directory for data storage. Defaults to script directory's parent
         """
-        if band not in ['Goose', 'Phish', 'WSP']:
-            raise ValueError(f"Band must be one of: Goose, Phish, WSP. Got: {band}")
+        if band not in ['Goose', 'Phish', 'WSP', 'UM']:
+            raise ValueError(f"Band must be one of: Goose, Phish, UM, WSP. Got: {band}")
         
         self.band = band
         self.base_dir = base_dir or str(Path(__file__).parent.parent)

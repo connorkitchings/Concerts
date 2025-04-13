@@ -52,23 +52,40 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 4948,1613690543,507,e,26,,1,0,0,Vince Guaraldi.,0,,,1.0,
 4949,1613690543,411,e,27,,1,0,0,Wiltonian Jive.,0,,,1.0,
 4950,1613690543,507,e,28,,6,0,0,Vince Guaraldi.,0,,,1.0,
+63688,1616038744,447,1,1,,1,0,0,John Scofield.,0,,,0.0,0.0
+63689,1616038744,539,1,2,,1,0,0,,0,,,0.0,0.0
+63690,1616038744,656,1,3,,1,0,0,Phish. First known Goose version.,0,,,0.0,0.0
+63691,1616038744,410,1,4,,1,0,0,,0,,,0.0,0.0
+63692,1616038744,484,1,5,,1,0,0,,0,,,0.0,0.0
+63693,1616038744,572,1,6,,1,0,0,,0,,,0.0,0.0
+63694,1616038744,972,1,7,,1,0,0,Grant Green. First known version.,0,,,0.0,0.0
+63695,1616038744,403,1,8,,1,0,0,,0,,,0.0,0.0
+63696,1616038744,400,1,9,,1,0,0,,0,,,0.0,0.0
+63697,1616038744,588,1,10,,4,0,0,Van Morrison.,0,,,0.0,0.0
+63698,1616038744,512,2,11,,1,0,0,,0,,,0.0,0.0
+63699,1616038744,495,2,12,,1,0,0,Stevie Wonder.,0,,,0.0,0.0
+63700,1616038744,446,2,13,,1,0,0,Bob Marley.,0,,,0.0,0.0
+63701,1616038744,440,2,14,,1,0,0,Michael Jackson.,0,,,0.0,0.0
+63702,1616038744,411,2,15,,1,0,0,Wiltonian Jive.,0,,,0.0,0.0
+63703,1616038744,402,2,16,,1,0,0,First known version.,0,,,0.0,0.0
+63704,1616038744,557,2,17,,6,0,0,,0,,,0.0,0.0
 31583,1601959537,572,1,1,,1,0,0,,0,,,0.0,
-7638,1616038160,802,1,1,,1,0,0,,0,,,0.0,
-7639,1616038160,564,1,2,,1,0,0,Wes Montgomery. First known version.,0,,,0.0,
-7640,1616038160,439,1,3,,1,0,0,The Wood Brothers. First known version.,0,,,0.0,
-7641,1616038160,539,1,4,,1,0,0,Earl Hines.,0,,,0.0,
-7642,1616038160,575,1,5,,1,0,0,The Wood Brothers. First known version.,0,,,0.0,
-7643,1616038160,402,1,6,,1,0,0,First known version.,0,,,0.0,
-7644,1616038160,531,1,7,,1,0,0,Grateful Dead. First known version.,0,,,0.0,
-7645,1616038160,500,1,8,,1,0,0,,0,,,0.0,
-7646,1616038160,406,1,9,,1,0,0,,0,,,0.0,
-7647,1616038160,486,1,10,,4,0,0,Passenger. First known version.,0,,,0.0,
-7648,1616038160,512,2,11,,1,0,0,,0,,,0.0,
-7649,1616038160,557,2,12,,1,0,0,,0,,,0.0,
-7650,1616038160,583,2,13,,1,0,0,Arcade Fire. First known version.,0,,,0.0,
-7651,1616038160,412,2,14,,1,0,0,First known version.,0,,,0.0,
-7652,1616038160,411,2,15,,1,0,0,Wiltonian Jive.,0,,,0.0,
-7653,1616038160,592,2,16,,6,0,0,John Phillips.,0,,,0.0,
+7638,1616038160,802,1,1,,1,0,0,,0,,,0.0,0.0
+7639,1616038160,564,1,2,,1,0,0,Wes Montgomery. First known version.,0,,,0.0,0.0
+7640,1616038160,439,1,3,,1,0,0,The Wood Brothers. First known version.,0,,,0.0,0.0
+7641,1616038160,539,1,4,,1,0,0,Earl Hines.,0,,,0.0,0.0
+7642,1616038160,575,1,5,,1,0,0,The Wood Brothers. First known version.,0,,,0.0,0.0
+7643,1616038160,402,1,6,,1,0,0,,0,,,0.0,0.0
+7644,1616038160,531,1,7,,1,0,0,Grateful Dead. First known version.,0,,,0.0,0.0
+7645,1616038160,500,1,8,,1,0,0,,0,,,0.0,0.0
+7646,1616038160,406,1,9,,1,0,0,,0,,,0.0,0.0
+7647,1616038160,486,1,10,,4,0,0,Passenger. First known version.,0,,,0.0,0.0
+7648,1616038160,512,2,11,,1,0,0,,0,,,0.0,0.0
+7649,1616038160,557,2,12,,1,0,0,,0,,,0.0,0.0
+7650,1616038160,583,2,13,,1,0,0,Arcade Fire. First known version.,0,,,0.0,0.0
+7651,1616038160,412,2,14,,1,0,0,First known version.,0,,,0.0,0.0
+7652,1616038160,411,2,15,,1,0,0,Wiltonian Jive.,0,,,0.0,0.0
+7653,1616038160,592,2,16,,6,0,0,John Phillips.,0,,,0.0,0.0
 7612,1616037808,400,1,1,,1,0,0,,0,,,1.0,
 7613,1616037808,402,1,2,,1,0,0,,0,,,1.0,
 7614,1616037808,403,1,3,,1,0,0,,0,,,1.0,
@@ -104,6 +121,10 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 7577,1616037305,444,1,3,,1,0,0,Herbie Hancock.,0,,,1.0,
 7578,1616037305,411,1,4,,1,0,0,,0,,,1.0,
 7579,1616037305,403,1,5,,6,0,0,,0,,,1.0,
+63535,1616037254,411,1,1,,1,0,0,Wiltonian Jive. With Rob Summerville on saxophone.,0,,,0.0,0.0
+63562,1743526614,528,1,1,,1,0,0,Grateful Dead.,0,,,0.0,0.0
+63640,1743792240,421,1,1,,1,0,0,,0,,,0.0,0.0
+63641,1743792240,478,1,2,,1,0,0,,0,,,0.0,0.0
 35939,1698084503,411,1,1,,1,0,0,,0,,,0.0,
 35940,1698084503,400,1,2,,1,0,0,,0,,,0.0,
 35941,1698084503,435,1,3,,1,0,0,,0,,,0.0,
@@ -136,7 +157,36 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 25114,1616036749,541,1,8,,1,0,0,,0,,,0.0,0.0
 25115,1616036749,528,1,9,,1,0,0,Grateful Dead.,0,,,0.0,0.0
 25116,1616036749,421,1,10,,6,0,0,,0,,,0.0,0.0
-17841,1616036658,555,1,1,,1,0,0,Chick Corea.,0,,,0.0,
+63563,1614304693,564,1,1,,1,0,0,Wes Montgomery.,0,,,0.0,0.0
+63564,1614304693,446,1,2,,1,0,0,Bob Marley,0,,,0.0,0.0
+63565,1614304693,403,1,3,,1,0,0,,0,,,0.0,0.0
+63566,1614304693,580,1,4,,1,0,0,The Band.,0,,,0.0,0.0
+63567,1614304693,411,1,5,,1,0,0,,0,,,0.0,0.0
+63568,1614304693,517,1,6,,4,0,0,Grateful Dead.,0,,,0.0,0.0
+63569,1614304693,441,2,7,,1,0,0,Stevie Wonder.,0,,,0.0,0.0
+63570,1614304693,533,2,8,,1,0,0,Fatboy Slim. First known version.,0,,,0.0,0.0
+63571,1614304693,440,2,9,,1,0,0,Michael Jackson.,0,,,0.0,0.0
+63572,1614304693,455,2,10,,1,0,0,Talking Heads.,0,,,0.0,0.0
+63573,1614304693,421,2,11,,6,0,0,,0,,,0.0,0.0
+17841,1616036658,512,1,1,,1,0,0,,0,,,0.0,0.0
+63594,1616036658,592,1,2,,1,0,0,John Phillips.,0,,,0.0,0.0
+63595,1616036658,413,1,3,,1,0,0,,0,,,0.0,0.0
+63596,1616036658,435,1,4,,1,0,0,,0,,,0.0,0.0
+63597,1616036658,555,1,5,,1,0,0,Chick Corea.,0,,,0.0,0.0
+63598,1616036658,420,1,6,,4,0,0,,0,,,0.0,0.0
+63599,1616036658,581,2,7,,1,0,0,Bill Withers.,0,,,0.0,0.0
+63600,1616036658,528,2,8,,1,0,0,Grateful Dead. With Joe Davis.,0,,,0.0,0.0
+63601,1616036658,541,2,9,,6,0,0,,0,,,0.0,0.0
+63602,1616036639,444,1,1,,1,0,0,Herbie Hancock.,0,,,0.0,0.0
+63621,1616036639,478,1,2,,1,0,0,,0,,,0.0,0.0
+63603,1616036639,400,1,3,,1,0,0,,0,,,0.0,0.0
+63604,1616036639,527,1,4,,1,0,0,The Wood Brothers.,0,,,0.0,0.0
+63605,1616036639,421,1,5,,1,0,0,,0,,,0.0,0.0
+63606,1616036639,439,1,6,,1,0,0,The Wood Brothers.,0,,,0.0,0.0
+63607,1616036639,455,1,7,,1,0,0,Talking Heads.,0,,,0.0,0.0
+63608,1616036639,578,1,8,,1,0,0,Bobby Blue Bland.,0,,,0.0,0.0
+63609,1616036639,403,1,9,,1,0,0,,0,,,0.0,0.0
+63610,1616036639,433,1,10,,6,0,0,Deodato.,0,,,0.0,0.0
 51162,1686327822,421,1,1,,1,0,0,,0,,,1.0,0.0
 51440,1686327822,410,1,2,,1,0,0,,0,,,1.0,0.0
 51441,1686327822,566,1,3,,1,0,0,Grateful Dead.,0,,,1.0,0.0
@@ -207,6 +257,15 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 11343,1648264582,495,1,16,7:19,1,0,0,Stevie Wonder.,0,,,1.0,0.0
 11344,1648264582,634,1,17,5:33,1,0,0,Phish. First known version.,0,,,1.0,0.0
 11345,1648264582,578,1,18,7:39,6,0,0,Bobby Blue Bland.,0,,,1.0,0.0
+63653,1616034399,403,1,1,,1,0,0,,0,,,0.0,0.0
+63654,1616034399,406,1,2,,1,0,0,,0,,,0.0,0.0
+63655,1616034399,410,1,3,,1,0,0,,0,,,0.0,0.0
+63656,1616034399,512,1,4,,1,0,0,,0,,,0.0,0.0
+63657,1616034399,590,1,5,,1,0,0,,0,,,0.0,0.0
+63658,1616034399,448,1,6,,1,0,0,First known version.,0,,,0.0,0.0
+63659,1616034399,421,1,7,,1,0,0,,0,,,0.0,0.0
+63660,1616034399,531,1,8,,6,0,0,Grateful Dead.,0,,,0.0,0.0
+63682,1743794784,1,1,1,,1,0,0,With Aaron on percussion.,0,,,0.0,0.0
 7424,1614304915,444,1,1,,1,0,0,Herbie Hancock.,0,,,1.0,
 7425,1614304915,553,1,2,,1,0,0,Bob Marley & The Wailers.,0,,,1.0,
 7426,1614304915,534,1,3,,1,0,0,Foster The People. First known version.,0,,,1.0,
@@ -228,6 +287,15 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 7442,1614304915,635,1,19,,2,0,0,Gloria Gaynor. First known version.,0,,,1.0,
 7443,1614304915,630,1,20,,5,0,0,Grateful Dead. First known version.,0,,,1.0,
 7464,1614304915,578,e,21,,6,0,0,Bobby Blue Bland.,0,,,1.0,
+63767,1616032614,406,1,1,,1,0,0,,0,,,0.0,0.0
+63768,1616032614,413,1,2,,1,0,0,,0,,,0.0,0.0
+63769,1616032614,517,1,3,,1,0,0,Grateful Dead.,0,,,0.0,0.0
+63770,1616032614,410,1,4,,2,0,0,With Jive I tease.,0,,,0.0,0.0
+63771,1616032614,411,1,5,,1,0,0,,0,,,0.0,0.0
+63772,1616032614,421,1,6,,1,0,0,,0,,,0.0,0.0
+63773,1616032614,455,1,7,,1,0,0,Talking Heads.,0,,,0.0,0.0
+63774,1616032614,403,1,8,,1,0,0,,0,,,0.0,0.0
+63775,1616032614,478,1,9,,6,0,0,,0,,,0.0,0.0
 7402,1615962713,413,1,1,,1,0,0,,0,,,0.0,
 7403,1615962713,406,1,2,,1,0,0,,0,,,0.0,
 7404,1615962713,512,1,3,,1,0,0,,0,,,0.0,
@@ -270,6 +338,13 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 7325,1615961762,420,1,6,,1,0,0,,0,,,1.0,
 7326,1615961762,403,1,7,,1,0,0,,0,,,1.0,
 7327,1615961762,400,1,8,,6,0,0,,0,,,1.0,
+63805,1615961746,406,1,1,,1,0,0,,0,,,0.0,0.0
+63806,1615961746,512,1,2,,1,0,0,,0,,,0.0,0.0
+63807,1615961746,410,1,3,,1,0,0,With Sanskrit verse.,0,,,0.0,0.0
+63808,1615961746,411,1,4,,1,0,0,,0,,,0.0,0.0
+63809,1615961746,455,1,5,,1,0,0,Talking Heads.,0,,,0.0,0.0
+63810,1615961746,403,1,6,,1,0,0,,0,,,0.0,0.0
+63811,1615961746,421,1,7,,6,0,0,,0,,,0.0,0.0
 24739,1615961722,512,1,1,,1,0,0,,0,,,0.0,
 24740,1615961722,411,1,2,,1,0,0,,0,,,0.0,
 24741,1615961722,412,1,3,,2,0,0,,0,,,0.0,
@@ -279,11 +354,27 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 24745,1615961722,421,1,7,,1,0,0,,0,,,0.0,
 24746,1615961722,497,1,8,,1,0,0,The Allman Brothers. With Joe Marcinek on guitar.,0,,,0.0,
 24747,1615961722,528,1,9,,6,0,0,Grateful Dead. With Joe Marcinek on guitar and Steve Molitz on keys.,0,,,0.0,
-7528,1615961468,478,1,1,,1,0,0,Flopener.,0,,,1.0,
-7529,1615961468,420,1,2,,1,0,0,,0,,,1.0,
-7530,1615961468,403,1,3,,1,0,0,,0,,,1.0,
-7531,1615961468,580,1,4,,1,0,0,The Band. With Hayley Jane on vocals.,0,,,1.0,
-7532,1615961468,400,1,5,,6,0,0,,0,,,1.0,
+63813,1615961628,421,1,1,,1,0,0,,0,,,0.0,0.0
+63814,1615961628,403,1,2,,1,0,0,,0,,,0.0,0.0
+63815,1615961628,512,1,3,,1,0,0,,0,,,0.0,0.0
+63816,1615961628,460,1,4,,1,0,0,,0,,,0.0,0.0
+63817,1615961628,411,1,5,,1,0,0,,0,,,0.0,0.0
+63818,1615961628,410,1,6,,1,0,0,,0,,,0.0,0.0
+63819,1615961628,592,1,7,,1,0,0,,0,,,0.0,0.0
+63820,1615961628,478,1,8,,4,0,0,,0,,,0.0,0.0
+7528,1615961468,406,1,1,,1,0,0,,0,,,1.0,0.0
+63836,1615961468,512,1,2,,1,0,0,,0,,,1.0,0.0
+63829,1615961468,410,1,3,,1,0,0,,0,,,1.0,0.0
+63823,1615961468,478,1,4,,1,0,0,,0,,,1.0,0.0
+7529,1615961468,420,1,5,,1,0,0,,0,,,1.0,0.0
+7530,1615961468,403,1,6,,1,0,0,,0,,,1.0,0.0
+7531,1615961468,580,1,7,,1,0,0,The Band. With Hayley Jane on vocals.,0,,,1.0,0.0
+7532,1615961468,400,1,8,,6,0,0,,0,,,1.0,0.0
+63851,1743798013,485,1,1,,1,0,0,Otis Redding. With Hayley Jane and Justin Hancock.,0,,,0.0,0.0
+63852,1616029967,421,1,1,,1,0,0,,0,,,0.0,0.0
+63853,1616029967,405,1,2,,1,0,0,First known version.,0,,,0.0,0.0
+63854,1616029967,545,1,3,,1,0,0,Otis Day & The Knights.,0,,,0.0,0.0
+63855,1616029967,403,1,4,,1,0,0,,0,,,0.0,0.0
 24764,1679182964,564,1,1,,1,0,0,Wes Montgomery.,0,,,0.0,
 24765,1679182964,512,1,2,,1,0,0,,0,,,0.0,
 24766,1679182964,410,1,3,,1,0,0,,0,,,0.0,
@@ -368,25 +459,25 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 7137,1615875210,497,2,11,,1,0,0,The Allman Brothers Band.,0,,,0.0,
 7138,1615875210,412,2,12,,1,0,0,,0,,,0.0,
 7139,1615875210,530,2,13,,6,0,0,Frank Zappa.,0,,,0.0,
-7263,1615960115,592,1,1,,1,0,0,John Phillips.,0,,,0.0,
-7264,1615960115,406,1,2,,2,0,0,,0,,,0.0,
-7265,1615960115,410,1,3,,1,0,0,,0,,,0.0,
-7266,1615960115,414,1,4,,1,0,0,,0,,,0.0,
-7267,1615960115,553,1,5,,1,0,0,Bob Marley & The Wailers.,0,,,0.0,
-7268,1615960115,400,1,6,,1,0,0,,0,,,0.0,
-7269,1615960115,411,1,7,,2,0,0,,0,,,0.0,
-7270,1615960115,420,1,8,,1,0,0,,0,,,0.0,
-7271,1615960115,478,1,9,,4,0,0,,0,,,0.0,
-7272,1615960115,439,2,10,,1,0,0,The Wood Brothers.,0,,,0.0,
-7273,1615960115,405,2,11,,1,0,0,First known version.,0,,,0.0,
-7274,1615960115,531,2,12,,1,0,0,Grateful Dead.,0,,,0.0,
-7275,1615960115,512,2,13,,1,0,0,,0,,,0.0,
-7276,1615960115,435,2,14,,1,0,0,,0,,,0.0,
-7277,1615960115,485,2,15,,1,0,0,Otis Redding.,0,,,0.0,
-7278,1615960115,403,2,16,,1,0,0,,0,,,0.0,
-7279,1615960115,545,2,17,,2,0,0,Otis Day & The Knights.,0,,,0.0,
-7280,1615960115,427,2,18,,1,0,0,Wilson Pickett.,0,,,0.0,
-7281,1615960115,421,2,19,,6,0,0,,0,,,0.0,
+7263,1615960115,592,1,1,,1,0,0,John Phillips.,0,,,0.0,0.0
+7264,1615960115,406,1,2,,2,0,0,,0,,,0.0,0.0
+7265,1615960115,410,1,3,,1,0,0,,0,,,0.0,0.0
+7266,1615960115,414,1,4,,1,0,0,,0,,,0.0,0.0
+7267,1615960115,553,1,5,,1,0,0,Bob Marley & The Wailers.,0,,,0.0,0.0
+7268,1615960115,400,1,6,,1,0,0,,0,,,0.0,0.0
+7269,1615960115,411,1,7,,2,0,0,,0,,,0.0,0.0
+7270,1615960115,420,1,8,,1,0,0,,0,,,0.0,0.0
+7271,1615960115,478,1,9,,4,0,0,,0,,,0.0,0.0
+7272,1615960115,439,2,10,,1,0,0,The Wood Brothers.,0,,,0.0,0.0
+7273,1615960115,405,2,11,,1,0,0,,0,,,0.0,0.0
+7274,1615960115,531,2,12,,1,0,0,Grateful Dead.,0,,,0.0,0.0
+7275,1615960115,512,2,13,,1,0,0,,0,,,0.0,0.0
+7276,1615960115,435,2,14,,1,0,0,,0,,,0.0,0.0
+7277,1615960115,485,2,15,,1,0,0,Otis Redding.,0,,,0.0,0.0
+7278,1615960115,403,2,16,,1,0,0,,0,,,0.0,0.0
+7279,1615960115,545,2,17,,2,0,0,Otis Day & The Knights.,0,,,0.0,0.0
+7280,1615960115,427,2,18,,1,0,0,Wilson Pickett.,0,,,0.0,0.0
+7281,1615960115,421,2,19,,6,0,0,,0,,,0.0,0.0
 7216,1615959437,580,1,1,,1,0,0,The Band.,0,,,0.0,
 7217,1615959437,406,1,2,,1,0,0,,0,,,0.0,
 7218,1615959437,410,1,3,,1,0,0,,0,,,0.0,
@@ -416,13 +507,13 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 7153,1615875482,557,1,14,,2,0,0,,0,,,0.0,
 7154,1615875482,457,1,15,,4,0,0,Kenny Loggins.,0,,,0.0,
 7155,1615875482,469,2,16,,6,0,0,Rupert Holmes.,0,,,0.0,
-16719,1615958881,411,1,1,,2,0,0,,0,,,0.0,
-16720,1615958881,413,1,2,,1,0,0,,0,,,0.0,
-16721,1615958881,410,1,3,,1,0,0,,0,,,0.0,
-16722,1615958881,631,1,4,,1,0,0,,0,,,0.0,
-16723,1615958881,412,1,5,,1,0,0,,0,,,0.0,
-16724,1615958881,403,1,6,,1,0,0,,0,,,0.0,
-16725,1615958881,478,1,7,,1,0,0,,0,,,0.0,
+16719,1615958881,411,1,1,,2,0,0,,0,,,0.0,0.0
+16720,1615958881,413,1,2,,1,0,0,,0,,,0.0,0.0
+16721,1615958881,410,1,3,,1,0,0,,0,,,0.0,0.0
+16722,1615958881,631,1,4,,1,0,0,,0,,,0.0,0.0
+16723,1615958881,412,1,5,,1,0,0,,0,,,0.0,0.0
+16724,1615958881,403,1,6,,1,0,0,,0,,,0.0,0.0
+16725,1615958881,478,1,7,,6,0,0,,0,,,0.0,0.0
 7211,1615958603,406,1,1,,1,0,0,,0,,,1.0,
 7212,1615958603,512,1,2,,1,0,0,,0,,,1.0,
 7213,1615958603,403,1,3,,1,0,0,,0,,,1.0,
@@ -437,6 +528,15 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 7190,1615956261,517,1,7,,1,0,0,Grateful Dead.,0,,,1.0,
 7191,1615956261,403,1,8,,2,0,0,Unfinished.,0,,,1.0,
 7192,1615956261,556,1,9,,6,0,0,Little Feat.,0,,,1.0,
+63644,1615956067,512,1,1,,1,0,0,,0,,,0.0,0.0
+63645,1615956067,413,1,2,,1,0,0,,0,,,0.0,0.0
+63646,1615956067,406,1,3,,1,0,0,,0,,,0.0,0.0
+63647,1615956067,403,1,4,,1,0,0,,0,,,0.0,0.0
+63648,1615956067,482,1,5,,1,0,0,Creedence Clearwater Revival.,0,,,0.0,0.0
+63649,1615956067,420,1,6,,1,0,0,,0,,,0.0,0.0
+63650,1615956067,478,1,7,,1,0,0,,0,,,0.0,0.0
+63651,1615956067,411,1,8,,1,0,0,With Tim Palmieri on guitar.,0,,,0.0,0.0
+63652,1615956067,578,1,9,,6,0,0,Bobby Blue Bland.,0,,,0.0,0.0
 7178,1615954994,411,1,1,,1,0,0,,0,,,0.0,
 7179,1615954994,410,1,2,,1,0,0,,0,,,0.0,
 7180,1615954994,403,1,3,,1,0,0,,0,,,0.0,
@@ -514,6 +614,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 41885,1615949521,506,1,5,,1,0,0,David Bowie. With Mikey Spice on percussion.,0,,,1.0,
 41886,1615949521,455,1,6,,1,0,0,Talking Heads. With Jeff Lloyd on guitar.,0,,,1.0,
 41887,1615949521,403,1,7,,6,0,0,With Jeff Lloyd on guitar and Jamar Woods on keys.,0,,,1.0,
+63681,1615949336,410,1,1,,1,0,0,,0,,,0.0,0.0
 17189,1615871919,450,1,1,,1,0,0,The Waitresses. First known version.,0,,,1.0,
 20190,1615871919,730,1,2,,1,0,0,Elton John. First known version.,0,,,1.0,
 28076,1615871919,436,1,3,,1,0,0,Billy Ray Cyrus. FTP.,0,,,1.0,
@@ -774,7 +875,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 6292,1615349454,525,2,14,10:11,1,0,0,Blind Melon. First known version.,0,,,1.0,0.0
 6293,1615349454,473,2,15,12:47,1,0,0,,0,,,1.0,0.0
 6294,1615349454,403,2,16,8:12,5,0,0,,0,,,1.0,0.0
-6295,1615349454,533,e,17,4:23,3,0,0,Fatboy Slim. First known version.,0,,,1.0,0.0
+6295,1615349454,533,e,17,4:23,3,0,0,Fatboy Slim.,0,,,1.0,0.0
 6296,1615349454,560,e,18,5:33,3,0,0,Clarence Carter.,0,,,1.0,0.0
 6297,1615349454,533,e,19,1:41,6,0,0,Fatboy Slim.,0,,,1.0,0.0
 6719,1615617709,508,1,1,,1,0,0,Traditional.,0,,,1.0,
@@ -799,6 +900,11 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 6175,1615340285,421,1,8,,1,0,0,,0,,,0.0,
 6176,1615340285,469,1,9,,1,0,0,Rupert Holmes.,0,,,0.0,
 6177,1615340285,414,1,10,,6,0,0,,0,,,0.0,
+63683,1615617110,413,1,1,,1,0,0,,0,,,0.0,0.0
+63684,1615617110,403,1,2,,1,0,0,,0,,,0.0,0.0
+63685,1615617110,420,1,3,,1,0,0,,0,,,0.0,0.0
+63686,1615617110,534,1,4,,1,0,0,Foster The People.,0,,,0.0,0.0
+63687,1615617110,410,1,5,,1,0,0,,0,,,0.0,0.0
 6536,1615432626,496,1,1,,2,0,0,Kenny Loggins. FTP.,0,,Atlas,1.0,
 6537,1615432626,478,1,2,,1,0,0,,0,,Atlas,1.0,
 6538,1615432626,520,1,3,,1,0,0,Kenny Loggins. FTP.,0,,Atlas,1.0,
@@ -867,6 +973,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 6673,1615611809,420,1,6,,2,0,0,,0,,,0.0,
 6674,1615611809,534,1,7,,1,0,0,Foster The People.,0,,,0.0,
 6675,1615611809,421,1,8,,6,0,0,,0,,,0.0,
+63561,1615611162,408,1,1,,1,0,0,,0,,,0.0,0.0
 6520,1615431281,421,1,1,10:38,1,0,0,,0,,,0.0,0.0
 6521,1615431281,415,1,2,6:33,1,0,0,,0,,,0.0,0.0
 6522,1615431281,405,1,3,15:07,1,0,0,,0,,,0.0,0.0
@@ -885,7 +992,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 6318,1615350239,582,1,2,,1,0,0,The Band.,0,,,1.0,0.0
 6319,1615350239,512,1,3,,1,0,0,,0,,,1.0,0.0
 6320,1615350239,404,1,4,,1,0,0,,0,,,1.0,0.0
-6321,1615350239,415,1,5,,1,0,0,With Andy Boxer (from ShwizZ) and Rory Dolan (from lespecial) on percussion.,0,,,1.0,0.0
+6321,1615350239,415,1,5,,1,0,0,With Andy Boxer and Rory Dolan on percussion.,0,,,1.0,0.0
 6322,1615350239,515,1,6,,1,0,0,Paul Simon.,0,,,1.0,0.0
 6323,1615350239,478,1,7,,1,0,0,,0,,,1.0,0.0
 6324,1615350239,570,1,8,,1,0,0,Bruce Hornsby.,0,,,1.0,0.0
@@ -1184,6 +1291,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 5898,1614318387,414,1,10,,1,0,0,,0,,"Butter Rum, White Lights",0.0,
 5899,1614318387,415,1,11,,2,0,0,,0,,"Butter Rum, White Lights",0.0,
 5900,1614318387,578,1,12,,6,0,0,Bobby Blue Bland.,0,,"Butter Rum, White Lights",0.0,
+5874,1614317602,588,1,1,4:29,1,0,0,Van Morrison.,0,,,1.0,0.0
 5875,1614317602,463,1,2,6:26,1,0,0,,0,,,1.0,0.0
 5876,1614317602,502,1,3,11:29,1,0,0,,0,,,1.0,0.0
 5877,1614317602,504,1,4,7:11,1,0,0,Carl Douglas.,0,,,1.0,0.0
@@ -1199,7 +1307,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 5887,1614317602,534,2,14,7:16,3,0,0,Foster The People.,0,,,1.0,0.0
 32334,1614317602,416,2,15,0:52,1,0,0,,0,,,1.0,0.0
 5888,1614317602,461,2,16,7:12,6,0,0,FTP.,0,,,1.0,0.0
-5874,1614317602,588,1,1,4:29,1,0,0,Van Morrison.,0,,,1.0,0.0
 24663,1679079917,403,1,1,5:30,1,0,0,,0,,,0.0,0.0
 24664,1679079917,435,1,2,5:56,1,0,0,,0,,,0.0,0.0
 24665,1679079917,415,1,3,5:55,6,0,0,,0,,,0.0,0.0
@@ -1338,7 +1445,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 48871,1715020691,418,2,8,,1,0,0,,0,,,0.0,0.0
 48872,1715020691,517,2,9,,1,0,0,Grateful Dead.,0,,,0.0,0.0
 48873,1715020691,419,2,10,,1,0,0,The Trammps.,0,,,0.0,0.0
-48874,1715020691,656,2,11,,1,0,0,Phish. First known Goose version.,0,,,0.0,0.0
+48874,1715020691,656,2,11,,1,0,0,Phish.,0,,,0.0,0.0
 48875,1715020691,463,2,12,,1,0,0,,0,,,0.0,0.0
 48876,1715020691,411,2,13,,1,0,0,,0,,,0.0,0.0
 48877,1715020691,508,2,14,,5,0,0,Traditional.,0,,,0.0,0.0
@@ -1579,6 +1686,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 5350,1614299084,416,1,5,,1,0,0,,0,,,0.0,
 5351,1614299084,534,1,6,,1,0,0,Foster The People.,0,,,0.0,
 5352,1614299084,578,1,7,,6,0,0,Bobby Blue Bland.,0,,,0.0,
+5345,1614298417,528,e,15,7:02,6,0,0,Grateful Dead.,0,,,1.0,0.0
 5331,1614298417,404,1,1,9:25,1,0,0,,0,,,1.0,0.0
 5332,1614298417,408,1,2,16:40,1,0,0,,0,,,1.0,0.0
 5333,1614298417,508,1,3,7:54,1,0,0,Traditional.,0,,,1.0,0.0
@@ -1593,7 +1701,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 5342,1614298417,469,2,12,7:10,1,0,0,Rupert Holmes.,0,,,1.0,0.0
 5343,1614298417,403,2,13,10:28,2,0,0,,0,,,1.0,0.0
 5344,1614298417,502,2,14,8:54,5,0,0,With Lion's Gate Portal and Funky Funky Funky quotes.,0,,,1.0,0.0
-5345,1614298417,528,e,15,7:02,6,0,0,Grateful Dead.,0,,,1.0,0.0
 5313,1614297985,416,1,1,11:59,2,0,0,,0,,,0.0,0.0
 5314,1614297985,463,1,2,6:10,1,0,0,,0,,,0.0,0.0
 5315,1614297985,462,1,3,20:29,1,0,0,,0,,,0.0,0.0
@@ -1767,7 +1874,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 3856,1613527259,422,2,9,10:20,1,0,0,,0,,"Christmas Card From a Hooker in Minneapolis, A Western Sun, Doc Brown",1.0,0.0
 3857,1613527259,478,2,10,9:24,1,0,0,,0,,"Christmas Card From a Hooker in Minneapolis, A Western Sun, Doc Brown",1.0,0.0
 3858,1613527259,515,2,11,7:42,1,0,0,Paul Simon.,0,,"Christmas Card From a Hooker in Minneapolis, A Western Sun, Doc Brown",1.0,0.0
-3859,1613527259,448,2,12,6:17,1,0,0,Tom Waits. FTP.,0,,"Christmas Card From a Hooker in Minneapolis, A Western Sun, Doc Brown",1.0,0.0
+3859,1613527259,448,2,12,6:17,1,0,0,Tom Waits.,0,,"Christmas Card From a Hooker in Minneapolis, A Western Sun, Doc Brown",1.0,0.0
 3860,1613527259,403,2,13,10:54,5,0,0,,0,,"Christmas Card From a Hooker in Minneapolis, A Western Sun, Doc Brown",1.0,0.0
 3861,1613527259,416,e,14,8:38,2,0,0,Unfinished.,0,,"Christmas Card From a Hooker in Minneapolis, A Western Sun, Doc Brown",1.0,0.0
 3862,1613527259,545,e,15,6:03,6,0,0,Otis Day & The Knights.,0,,"Christmas Card From a Hooker in Minneapolis, A Western Sun, Doc Brown",1.0,0.0
@@ -1891,19 +1998,20 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 3666,1613441845,444,2,14,4:58,2,0,0,Herbie Hancock.,0,,"Weird Fishes, Cantaloupe Island, Tried & Tempted, A Western Sun, Moving Out, Turned Clouds",1.0,
 3667,1613441845,418,2,15,3:01,5,0,0,,0,,"Weird Fishes, Cantaloupe Island, Tried & Tempted, A Western Sun, Moving Out, Turned Clouds",1.0,
 3668,1613441845,419,e,16,10:58,6,0,0,With Hot Tea teases and Stage Plot/Fire vocal jam.,0,,"Weird Fishes, Cantaloupe Island, Tried & Tempted, A Western Sun, Moving Out, Turned Clouds",1.0,
-3640,1613439915,512,1,1,11:56,1,0,0,,0,,"Inside Out, Jive II",1.0,
-3641,1613439915,499,1,2,11:08,3,0,0,Spoon.,0,,"Inside Out, Jive II",1.0,
-3642,1613439915,420,1,3,14:14,3,0,0,,0,,"Inside Out, Jive II",1.0,
-3643,1613439915,545,1,4,8:30,1,0,0,Otis Day & The Knights.,0,,"Inside Out, Jive II",1.0,
-3644,1613439915,413,1,5,10:09,1,0,0,,0,,"Inside Out, Jive II",1.0,
-3645,1613439915,408,1,6,14:03,4,0,0,,0,,"Inside Out, Jive II",1.0,
-3646,1613439915,416,2,7,8:30,3,0,0,Unfinished.,0,,"Inside Out, Jive II",1.0,
-3647,1613439915,534,2,8,5:54,1,0,0,Foster The People.,0,,"Inside Out, Jive II",1.0,
-3648,1613439915,422,2,9,11:42,1,0,0,,0,,"Inside Out, Jive II",1.0,
-3649,1613439915,462,2,10,21:19,3,0,0,,0,,"Inside Out, Jive II",1.0,
-3650,1613439915,481,2,11,18:17,5,0,0,Run DMC. With &quot;Stage Plot&quot; and &quot;Goo&quot; jams.,1,"Great segue out of Drive leads to one of the most unexpected jams of 2019. Jam starts with almost a ""Stage Plot"" and ""Goo"" vocal jam, followed by Rick hitting the same beautiful groove found in the 9/6/2019 Wysteria, and ending in magnificent fashion. ","Inside Out, Jive II",1.0,
-3651,1613439915,463,e,12,6:12,2,0,0,,0,,"Inside Out, Jive II",1.0,
-3652,1613439915,491,e,13,11:50,6,0,0,The Merrymen.,0,,"Inside Out, Jive II",1.0,
+3640,1613439915,512,1,1,11:56,1,0,0,,0,,...,1.0,0.0
+3641,1613439915,499,1,2,11:08,3,0,0,Spoon.,0,,...,1.0,0.0
+3642,1613439915,420,1,3,14:14,3,0,0,,0,,...,1.0,0.0
+3643,1613439915,545,1,4,8:30,1,0,0,Otis Day & The Knights.,0,,...,1.0,0.0
+3644,1613439915,413,1,5,10:09,1,0,0,,0,,...,1.0,0.0
+3645,1613439915,408,1,6,14:03,4,0,0,,0,,...,1.0,0.0
+63795,1613439915,747,2,7,,1,0,0,For Peter.,0,,...,1.0,0.0
+3646,1613439915,416,2,8,8:30,3,0,0,Unfinished.,0,,...,1.0,0.0
+3647,1613439915,534,2,9,5:54,1,0,0,Foster The People.,0,,...,1.0,0.0
+3648,1613439915,422,2,10,11:42,1,0,0,,0,,...,1.0,0.0
+3649,1613439915,462,2,11,21:19,3,0,0,,0,,...,1.0,0.0
+3650,1613439915,481,2,12,18:17,5,0,0,Run DMC. With &quot;Stage Plot&quot; and &quot;Goo&quot; jams.,1,"Great segue out of Drive leads to one of the most unexpected jams of 2019. Jam starts with almost a ""Stage Plot"" and ""Goo"" vocal jam, followed by Rick hitting the same beautiful groove found in the 9/6/2019 Wysteria, and ending in magnificent fashion. ",...,1.0,0.0
+3651,1613439915,463,e,13,6:12,2,0,0,,0,,...,1.0,0.0
+3652,1613439915,491,e,14,11:50,6,0,0,The Merrymen.,0,,...,1.0,0.0
 3627,1613439018,478,1,1,11:10,1,0,0,Flopener.,0,,"Jam, All I Need, Indian River",1.0,
 3628,1613439018,459,1,2,7:30,1,0,0,,0,,"Jam, All I Need, Indian River",1.0,
 3629,1613439018,482,1,3,7:41,1,0,0,Creedence Clearwater Revival.,0,,"Jam, All I Need, Indian River",1.0,
@@ -2049,12 +2157,11 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 1383,1597168237,490,1,6,,4,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
 1384,1597168237,402,2,7,,2,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
 1385,1597168237,478,2,8,,2,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
-1386,1597168237,463,2,9,,2,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
-1387,1597168237,429,2,10,,2,0,0,FTP. Debuted as &quot;Bob O. John.&quot;,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
-1388,1597168237,463,2,11,,1,0,0,With vocal ending.,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
-1389,1597168237,422,2,12,,1,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
-1390,1597168237,418,2,13,,5,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
-1391,1597168237,545,e,14,,1,0,0,Otis Day & The Knights.,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
+1387,1597168237,429,2,9,,2,0,0,FTP. Debuted as &quot;Bob O. John.&quot;,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
+1388,1597168237,463,2,10,,1,0,0,With vocal ending.,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
+1389,1597168237,422,2,11,,1,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
+1390,1597168237,418,2,12,,5,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
+1391,1597168237,545,e,13,,1,0,0,Otis Day & The Knights.,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
 3102,1613152694,416,1,1,8:54,1,0,0,,0,,,1.0,0.0
 3103,1613152694,404,1,2,11:48,1,0,0,,0,,,1.0,0.0
 3104,1613152694,435,1,3,7:02,1,0,0,,0,,,1.0,0.0
@@ -2996,6 +3103,11 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 9949,1643341083,590,2,13,9:04,1,0,0,,0,,,1.0,0.0
 9950,1643341083,610,2,14,5:29,5,0,0,,0,,,1.0,0.0
 9951,1643341083,604,e,15,11:20,6,0,0,,0,,,1.0,0.0
+9962,1643341465,524,2,11,6:54,2,0,0,The Moody Blues.,0,,,1.0,
+9963,1643341465,586,2,12,11:26,5,0,0,,0,,,1.0,
+9964,1643341465,719,e,13,7:23,1,0,0,Steppenwolf.,0,,,1.0,
+9965,1643341465,502,e,14,5:47,2,0,0,Unfinished.,0,,,1.0,
+9966,1643341465,719,e,15,1:05,6,0,0,Steppenwolf.,0,,,1.0,
 9952,1643341465,605,1,1,14:41,1,0,0,,0,,,1.0,
 9953,1643341465,463,1,2,15:12,1,0,0,Fast version.,1,Shorter version but brimming with passion throughout. Gorgeous cool down mid-jam that rises patiently and blissfully. True glory hose finish before returning to song ending.,,1.0,
 9954,1643341465,414,1,3,19:06,2,0,0,"Slow, melodic version.",1,"Swirling, chaotic, yet in control. Slight cool down before swirl picks back up amid organ-driven finish.",,1.0,
@@ -3006,11 +3118,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 9959,1643341465,710,2,8,12:26,2,0,0,,0,,,1.0,
 9960,1643341465,420,2,9,15:32,2,0,0,,0,,,1.0,
 9961,1643341465,418,2,10,11:03,1,0,0,Vibey Tumble.,1,"Vibey ""Tumble"" gets a jam for the first time, gradually picking up speed until a high-speed peak closes it out.",,1.0,
-9962,1643341465,524,2,11,6:54,2,0,0,The Moody Blues.,0,,,1.0,
-9963,1643341465,586,2,12,11:26,5,0,0,,0,,,1.0,
-9964,1643341465,719,e,13,7:23,1,0,0,Steppenwolf.,0,,,1.0,
-9965,1643341465,502,e,14,5:47,2,0,0,Unfinished.,0,,,1.0,
-9966,1643341465,719,e,15,1:05,6,0,0,Steppenwolf.,0,,,1.0,
 9982,1643341486,438,1,1,23:20,2,0,0,,1,"Show opener for a fan favorite show, jam starts in earnest at the 10:30 mark and stays within a pretty standard rocking tempo throughout. Ripping final peak and cool final minute cooldown into ""Travelers.""",,1.0,0.0
 9983,1643341486,574,1,2,10:15,2,0,0,,0,,,1.0,0.0
 9984,1643341486,425,1,3,7:37,1,0,0,,0,,,1.0,0.0
@@ -3373,7 +3480,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 10837,1647974144,685,2,6,10:12,1,0,0,David Gray.,0,,,1.0,
 10838,1647974144,403,2,7,15:53,1,0,0,,0,,,1.0,
 10839,1647974144,477,2,8,14:32,1,0,0,Fat Freddy's Drop.,0,,,1.0,
-10840,1647974144,572,2,9,17:33,2,0,0,,0,,,1.0,
+10840,1647974144,572,2,9,17:33,2,0,0,,1,"Typically beautiful ""Sea"" jam fragments into intense, evil noises, making you grab your blanket for dear life as Peter cackles among looping marimba arpeggiators, Rick effects, and other general madness. Would be right at home as a ""Dr. D"" intro but resolves instead into a fantastic ""Factory Fiction"" set closer.",,1.0,
 10841,1647974144,473,2,10,22:37,5,0,0,,0,,,1.0,
 10842,1647974144,438,e,11,20:46,6,0,0,,0,,,1.0,
 11800,1649637376,478,1,1,9:39,1,0,0,Flopener.,0,,,1.0,
@@ -4127,11 +4234,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 24402,1670439739,733,2,11,8:58,1,0,0,,0,,...,1.0,
 24403,1670439739,408,2,12,16:04,5,0,0,,0,,...,1.0,
 24404,1670439739,427,e,13,4:39,6,0,0,Wilson Pickett. With Jimmy Fallon on vocals.,0,,...,1.0,
-24418,1670439778,463,1,1,11:07,3,0,0,Fast version.,1,"Great opener begins a fantastic segment of music in the ensuing ""Hollywood Nights"" and ""Bob Don"" before finishing ""Echo.""",...,1.0,
-24419,1670439778,488,1,2,12:51,2,0,0,Bob Seger & The Silver Bullet Band.,0,,...,1.0,
-24420,1670439778,429,1,3,10:41,3,0,0,With.,0,,...,1.0,
-24421,1670439778,463,1,4,2:07,1,0,0,,0,,...,1.0,
-24422,1670439778,609,1,5,6:58,2,0,0,,0,,...,1.0,
 24423,1670439778,610,1,6,5:28,1,0,0,,0,,...,1.0,
 24424,1670439778,817,1,7,6:56,1,0,0,,0,,...,1.0,
 24425,1670439778,541,1,8,14:54,4,0,0,,0,,...,1.0,
@@ -4141,6 +4243,11 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 24429,1670439778,403,2,12,19:40,1,0,0,With Writing a Novel teases.,1,"Extended Trevor solo kicks off jam & finds a beautiful theme that is quickly picked up/repeated by Rick/Peter in gorgeous interplay. After Pete solo & return to Trevor’s theme, Ben goes 2X time as band soars through multiple peaks & explosive finish.",...,1.0,
 24430,1670439778,432,2,13,9:21,5,0,0,,0,,...,1.0,
 24431,1670439778,738,e,14,16:55,6,0,0,,0,,...,1.0,
+24418,1670439778,463,1,1,11:07,3,0,0,Fast version.,1,"Great opener begins a fantastic segment of music in the ensuing ""Hollywood Nights"" and ""Bob Don"" before finishing ""Echo.""",...,1.0,
+24419,1670439778,488,1,2,12:51,2,0,0,Bob Seger & The Silver Bullet Band.,0,,...,1.0,
+24420,1670439778,429,1,3,10:41,3,0,0,With.,0,,...,1.0,
+24421,1670439778,463,1,4,2:07,1,0,0,,0,,...,1.0,
+24422,1670439778,609,1,5,6:58,2,0,0,,0,,...,1.0,
 24451,1670439789,404,1,1,15:49,1,0,0,,1,"Did this kick off the show of 2023, or does it just make you think it does? No matter, the energy, propulsiveness, and endless riffing from Rick leads to a well-earned peak, which spills over at 13:28 to a late-night percussive jam. No let-up on Night 5!",,1.0,
 24452,1670439789,410,1,2,16:21,1,0,0,80s synth version. With Welcome to Delta jam.,0,,,1.0,
 24453,1670439789,490,1,3,7:33,1,0,0,With Coach on rainstick.,0,,,1.0,
@@ -4450,6 +4557,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 28631,1678977645,438,2,9,18:27,3,0,0,Unfinished.,0,,Jam > Fish in the Sea (this soundcheck is incomplete),1.0,0.0
 28641,1678977645,739,2,10,12:24,5,0,0,Nina Simone.,0,,Jam > Fish in the Sea (this soundcheck is incomplete),1.0,0.0
 28662,1678977645,478,e,11,10:15,6,0,0,,0,,Jam > Fish in the Sea (this soundcheck is incomplete),1.0,0.0
+28663,1678977663,735,1,1,8:35,1,0,0,,0,,,1.0,
 28665,1678977663,822,1,2,5:34,1,0,0,,0,,,1.0,
 28668,1678977663,400,1,3,11:25,1,0,0,,0,,,1.0,
 28672,1678977663,525,1,4,4:04,1,0,0,Blind Melon. With David Shaw on vocals.,0,,,1.0,
@@ -4460,7 +4568,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 28720,1678977663,477,2,9,12:53,1,0,0,"Fat Freddy's Drop. With Josh Schwartz on baritone saxophone, Greg Sanderson on tenor saxophone, and Chris Brouwers on trumpet.",0,,,1.0,
 28730,1678977663,736,2,10,9:22,1,0,0,,0,,,1.0,
 28741,1678977663,604,2,11,16:34,6,0,0,,0,,,1.0,
-28663,1678977663,735,1,1,8:35,1,0,0,,0,,,1.0,
 29335,1684521220,646,1,1,9:05,1,0,0,,0,,"Jam, Jam, Atlas",1.0,
 29336,1684521220,735,1,2,7:35,1,0,0,,0,,"Jam, Jam, Atlas",1.0,
 29337,1684521220,463,1,3,15:59,1,0,0,Fast version.,0,,"Jam, Jam, Atlas",1.0,
@@ -5048,6 +5155,14 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 42042,1689710643,421,e,13,4:41,2,0,0,,0,,,1.0,0.0
 42056,1689710643,422,e,14,6:03,2,0,0,Jam only.,0,,,1.0,0.0
 42071,1689710643,408,e,15,17:13,6,0,0,,0,,,1.0,0.0
+42072,1689710651,723,1,1,12:54,3,0,0,,0,,,1.0,
+42074,1689710651,461,1,2,6:56,1,0,0,,0,,,1.0,
+42077,1689710651,888,1,3,3:31,1,0,0,Post Malone. FTP.,0,,,1.0,
+42078,1689710651,887,1,4,8:18,2,0,0,Nena. FTP.,0,,,1.0,
+42087,1689710651,723,1,5,3:41,1,0,0,,0,,,1.0,
+42093,1689710651,889,1,6,1:51,2,0,0,Vampire Weekend. FTP.,0,,,1.0,
+42100,1689710651,738,1,7,17:51,1,0,0,Unfinished. With Animal tease from Rick.,1,"Rare mid-first-set ""Drip"" returns to arena status with a high-octane Type II peak. Great stuff, fades unfinished.",,1.0,
+42122,1689710651,536,1,8,13:00,3,0,0,,0,,,1.0,
 42131,1689710651,890,1,9,6:18,4,0,0,John Kellette. FTP.,0,,,1.0,
 42150,1689710651,891,2,10,12:23,3,0,0,ELO. FTP.,0,,,1.0,
 42161,1689710651,764,2,11,11:29,1,0,0,,0,,,1.0,
@@ -5059,14 +5174,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 42248,1689710651,892,2,17,5:21,3,0,0,Kool & The Gang. FTP. With Jeff on guitar and Animal teases from Peter.,0,,,1.0,
 42300,1689710651,604,2,18,4:54,5,0,0,With Jeff on guitar.,0,,,1.0,
 42319,1689710651,403,e,19,13:58,6,0,0,With Jungle Boogie tease from Peter.,1,"A fitting conclusion to the tenth Goosemas that also was Spuds' final song - though we didn't know at the time. Nothing out of the ordinary but a special, fiery ""Arcadia"" that takes some extra spins around the ending as the band took a moment to relish their Hampton accomplishment.",,1.0,
-42072,1689710651,723,1,1,12:54,3,0,0,,0,,,1.0,
-42074,1689710651,461,1,2,6:56,1,0,0,,0,,,1.0,
-42077,1689710651,888,1,3,3:31,1,0,0,Post Malone. FTP.,0,,,1.0,
-42078,1689710651,887,1,4,8:18,2,0,0,Nena. FTP.,0,,,1.0,
-42087,1689710651,723,1,5,3:41,1,0,0,,0,,,1.0,
-42093,1689710651,889,1,6,1:51,2,0,0,Vampire Weekend. FTP.,0,,,1.0,
-42100,1689710651,738,1,7,17:51,1,0,0,Unfinished. With Animal tease from Rick.,1,"Rare mid-first-set ""Drip"" returns to arena status with a high-octane Type II peak. Great stuff, fades unfinished.",,1.0,
-42122,1689710651,536,1,8,13:00,3,0,0,,0,,,1.0,
 46660,1710264780,478,1,1,9:08,1,0,0,Flopener.,0,,...,1.0,0.0
 46662,1710264780,714,1,2,13:10,1,0,0,,0,,...,1.0,0.0
 46669,1710264780,462,1,3,30:55,1,0,0,Unfinished.,1,"Cotter's first big jam and the band does not hold back one iota. First developing a ripping dual-guitar jam for several minutes - very active Trevor - before Cotter seamlessly transitions into the ""second jam."" Patiently builds into a bliss motif reminiscent of the ending of ""SOS,"" peaking massively and concluding just short of the 31-minute mark.",...,1.0,1.0
@@ -6036,7 +6143,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 61124,1721059705,809,2,14,16:25,5,0,0,Unfinished.,1,"Silky smooth late-2024 transition hardly needs any time within ""Thatch"" proper before the improv unfurls like a flower into a gorgeous bliss jam. Coasts along effortlessly before dissolving unfinished for the first time ever into an encore break-spanning synth drone.",,1.0,0.0
 61153,1721059705,473,e,15,15:13,6,0,0,,0,,,1.0,0.0
 61496,1731950152,714,1,1,11:09,1,0,0,,0,,,1.0,0.0
-61498,1731950152,972,1,2,6:48,1,0,0,Grant Green. FTP.,0,,,1.0,0.0
+61498,1731950152,972,1,2,6:48,1,0,0,Grant Green.,0,,,1.0,0.0
 61501,1731950152,425,1,3,9:43,2,0,0,,0,,,1.0,0.0
 61505,1731950152,712,1,4,6:03,1,0,0,,0,,,1.0,0.0
 61510,1731950152,424,1,5,7:46,2,0,0,Father John Misty.,0,,,1.0,0.0
