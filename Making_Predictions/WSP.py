@@ -128,18 +128,18 @@ class WSPPredictionMaker(PredictionMaker):
         return ck_plus
     
     def create_notebook(self) -> pd.DataFrame: 
-        """Create JoJo's Notebook prediction dataset"""
+        """Create Notebook prediction dataset"""
         if self.setlist_by_song is None:
             raise ValueError("Must run get_setlist_by_song() first")
             
         one_year_ago = date.today() - timedelta(days=2*366)
         self.setlist_by_song['date'] = pd.to_datetime(self.setlist_by_song['date'], format='%m/%d/%y').dt.date
 
-        jojos_notebook_data = (self.setlist_by_song[self.setlist_by_song['date'] > one_year_ago]
+        notebook_data = (self.setlist_by_song[self.setlist_by_song['date'] > one_year_ago]
                                ).reset_index(drop=True)[['song_name', 'show_index_overall', 'date','gap']]
 
-        jojos_notebook = (
-            jojos_notebook_data
+        notebook = (
+            notebook_data
             .groupby(['song_name'])
             .agg({
                 'show_index_overall': ['count', 'max'],
@@ -148,9 +148,9 @@ class WSPPredictionMaker(PredictionMaker):
             .reset_index()
             .round(2)
         )
-        jojos_notebook.columns = ['_'.join(col).strip() for col in jojos_notebook.columns.values]
+        notebook.columns = ['_'.join(col).strip() for col in notebook.columns.values]
 
-        jojos_notebook = jojos_notebook.rename(columns={
+        notebook = notebook.rename(columns={
             'song_name_': 'song', 
             'show_index_overall_count': 'times_played_in_last_year', 
             'show_index_overall_max': 'last_played', 
@@ -161,10 +161,10 @@ class WSPPredictionMaker(PredictionMaker):
             'gap_std': 'std_gap'
         })
         
-        jojos_notebook['current_gap'] = self.last_show - jojos_notebook['last_played']
+        notebook['current_gap'] = self.last_show - notebook['last_played']
 
-        jojos_notebook = (
-            jojos_notebook.merge(
+        notebook = (
+            notebook.merge(
                 self.showdata[['show_index_overall', 'date']], left_on='last_played', 
                 right_on='show_index_overall', 
                 how='left'
@@ -173,13 +173,13 @@ class WSPPredictionMaker(PredictionMaker):
             .drop(columns=['show_index_overall', 'last_played'])
             )[['song', 'times_played_in_last_year', 'ltp_date','current_gap', 'avg_gap', 'med_gap']]
 
-        jojos_notebook = (
-            jojos_notebook[(jojos_notebook['current_gap'] > 3)]
+        notebook = (
+            notebook[(notebook['current_gap'] > 3)]
             .sort_values(by='times_played_in_last_year', ascending=False)
             .reset_index(drop=True)
         )
                         
-        return jojos_notebook
+        return notebook
     
     def create_and_save_predictions(self):
         """Create and save prediction datasets"""
@@ -187,7 +187,7 @@ class WSPPredictionMaker(PredictionMaker):
         self.get_setlist_by_song()
         
         ck_plus = self.create_ckplus()
-        jojos_notebook = self.create_notebook()
+        notebook = self.create_notebook()
         
         try:
             # Create predictions directory if it doesn't exist
@@ -196,15 +196,13 @@ class WSPPredictionMaker(PredictionMaker):
             # Define files to save
             data_pairs = {
                 'ck_plus.csv': ck_plus,
-                'jojos_notebook.csv': jojos_notebook
+                'notebook.csv': notebook
             }
             
             # Save each file
             for filename, data in data_pairs.items():
                 filepath = predictions_dir / filename
                 data.to_csv(filepath, index=False)
-                print(f"Saved {filename}")
-            print()
                 
         except Exception as e:
             print(f"Error saving prediction data: {e}")

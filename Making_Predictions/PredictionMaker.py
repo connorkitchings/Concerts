@@ -97,4 +97,5 @@ class PredictionMakerManager:
         overall_end_time = datetime.now()
         overall_execution_time = (overall_end_time - overall_start_time).total_seconds()
         minutes, seconds = divmod(overall_execution_time, 60)  # Convert seconds into minutes and seconds
+        print()
         print(f"Total Setlist Prediction Time: {int(minutes)} minutes and {seconds:.2f} seconds")

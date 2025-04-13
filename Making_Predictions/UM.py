@@ -163,7 +163,7 @@ class UMPredictionMaker(PredictionMaker):
         return ck_plus
     
     def create_notebook(self) -> pd.DataFrame: 
-        """Create Joel's Notebook prediction dataset (frequently played songs in recent period)"""
+        """Create Notebook prediction dataset (frequently played songs in recent period)"""
         if self.setlist_by_song is None:
             raise ValueError("Must run get_setlist_by_song() first")
             
@@ -172,7 +172,7 @@ class UMPredictionMaker(PredictionMaker):
         recent_shows = self.setlist_by_song[self.setlist_by_song['Date Played'] > pd.Timestamp(two_years_ago)].copy()
 
         # Calculate statistics for songs played in recent period
-        joels_notebook = (
+        notebook = (
             recent_shows
             .groupby(['Song Name'])
             .agg({
@@ -184,10 +184,10 @@ class UMPredictionMaker(PredictionMaker):
         )
         
         # Flatten multi-level column names
-        joels_notebook.columns = ['_'.join(col).strip() for col in joels_notebook.columns.values]
+        notebook.columns = ['_'.join(col).strip() for col in notebook.columns.values]
 
         # Rename columns
-        joels_notebook = joels_notebook.rename(columns={
+        notebook = notebook.rename(columns={
             'Song Name_': 'song', 
             'show_index_count': 'times_played_in_last_2_years', 
             'show_index_max': 'last_played', 
@@ -199,7 +199,7 @@ class UMPredictionMaker(PredictionMaker):
         })
         
         # Calculate current gap
-        joels_notebook['current_gap'] = self.last_show - joels_notebook['last_played']
+        notebook['current_gap'] = self.last_show - notebook['last_played']
 
         # Get last played date
         last_played_dates = (recent_shows
@@ -210,7 +210,7 @@ class UMPredictionMaker(PredictionMaker):
                             .rename(columns={'Date Played': 'ltp_date'}))
         
         # Merge with date information
-        joels_notebook = joels_notebook.merge(
+        notebook = notebook.merge(
             last_played_dates, 
             left_on='song', 
             right_on='Song Name', 
@@ -218,19 +218,19 @@ class UMPredictionMaker(PredictionMaker):
         ).drop(columns=['Song Name'])
         
         # Keep only relevant columns
-        joels_notebook = joels_notebook[['song', 'times_played_in_last_2_years', 'ltp_date', 'current_gap', 'avg_gap', 'med_gap']]
+        notebook = notebook[['song', 'times_played_in_last_2_years', 'ltp_date', 'current_gap', 'avg_gap', 'med_gap']]
 
         # Filter for songs with a gap > 3 shows
-        joels_notebook = (
-            joels_notebook[(joels_notebook['current_gap'] > 3)]
+        notebook = (
+            notebook[(notebook['current_gap'] > 3)]
             .sort_values(by='times_played_in_last_2_years', ascending=False)
             .reset_index(drop=True)
         )
         
         # Format date for better readability
-        joels_notebook['ltp_date'] = joels_notebook['ltp_date'].dt.strftime('%Y-%m-%d')
+        notebook['ltp_date'] = notebook['ltp_date'].dt.strftime('%Y-%m-%d')
                         
-        return joels_notebook
+        return notebook
     
     def create_and_save_predictions(self):
         """Create and save prediction datasets"""
@@ -238,7 +238,7 @@ class UMPredictionMaker(PredictionMaker):
         self.get_setlist_by_song()
         
         ck_plus = self.create_ckplus()
-        joels_notebook = self.create_notebook()
+        notebook = self.create_notebook()
         
         try:
             # Create predictions directory if it doesn't exist
@@ -248,17 +248,13 @@ class UMPredictionMaker(PredictionMaker):
             # Define files to save
             data_pairs = {
                 'ck_plus.csv': ck_plus,
-                'joels_notebook.csv': joels_notebook
+                'notebook.csv': notebook
             }
             
             # Save each file
             for filename, data in data_pairs.items():
                 filepath = predictions_dir / filename
-                print(filepath)
                 data.to_csv(filepath, index=False)
-                print(f"Saved {filename}")
-            
-            print("\nPrediction files successfully created for Umphrey's McGee")
             
         except Exception as e:
             print(f"Error saving prediction data: {e}")

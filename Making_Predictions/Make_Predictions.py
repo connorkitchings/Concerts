@@ -10,8 +10,8 @@ def main():
     
     manager = PredictionMakerManager()
     
-    #band_modules = ['Goose','Phish', 'WSP', 'UM']  # Add more band module names as needed
-    band_modules = ['UM']
+    band_modules = ['Goose','Phish', 'WSP', 'UM']  # Add more band module names as needed
+    #band_modules = ['UM']
     
     for module_name in band_modules:
         try:

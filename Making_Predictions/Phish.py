@@ -150,7 +150,7 @@ class PhishPredictionMaker(PredictionMaker):
             
         one_year_ago = (self.today - timedelta(days=366)).strftime('%Y-%m-%d')
         
-        treys_notebook_data = (
+        notebook_data = (
             self.setlist_by_song[
                 (self.setlist_by_song['isreprise'] == 0) & 
                 (self.setlist_by_song['showdate'] > one_year_ago)
@@ -164,8 +164,8 @@ class PhishPredictionMaker(PredictionMaker):
             .drop(columns=['song_id'])
         )[['song', 'is_original', 'show_number', 'showdate', 'gap']]
 
-        treys_notebook = (
-            treys_notebook_data
+        notebook = (
+            notebook_data
             .groupby(['song', 'is_original'])
             .agg({
                 'show_number': ['count', 'max'],
@@ -174,9 +174,9 @@ class PhishPredictionMaker(PredictionMaker):
             .reset_index()
             .round(2)
         )
-        treys_notebook.columns = ['_'.join(col).strip() for col in treys_notebook.columns.values]
+        notebook.columns = ['_'.join(col).strip() for col in notebook.columns.values]
 
-        treys_notebook = treys_notebook.rename(columns={
+        notebook = notebook.rename(columns={
             'song_': 'song', 
             'is_original_': 'is_original',
             'show_number_count': 'times_played_in_last_year', 
@@ -188,11 +188,11 @@ class PhishPredictionMaker(PredictionMaker):
             'gap_std': 'std_gap'
         })
 
-        treys_notebook['is_original'] = treys_notebook['is_original'].astype(int)
-        treys_notebook['current_gap'] = self.last_show - treys_notebook['last_played']
+        notebook['is_original'] = notebook['is_original'].astype(int)
+        notebook['current_gap'] = self.last_show - notebook['last_played']
 
-        treys_notebook = (
-            treys_notebook
+        notebook = (
+            notebook
             .merge(
                 self.showdata[['show_number', 'showdate']], 
                 left_on='last_played', 
@@ -204,17 +204,17 @@ class PhishPredictionMaker(PredictionMaker):
         )[['song', 'is_original', 'times_played_in_last_year', 'ltp_date',
            'current_gap', 'avg_gap', 'med_gap']]
 
-        treys_notebook = (
-            treys_notebook[
-                (treys_notebook['is_original'] == 1) & 
-                (treys_notebook['current_gap'] > 3)
+        notebook = (
+            notebook[
+                (notebook['is_original'] == 1) & 
+                (notebook['current_gap'] > 3)
             ]
             .sort_values(by='times_played_in_last_year', ascending=False)
             .reset_index(drop=True)
             .drop(columns=['is_original'])
         )
                         
-        return treys_notebook
+        return notebook
         
     def create_and_save_predictions(self):
         """Create and save prediction datasets"""
@@ -222,7 +222,7 @@ class PhishPredictionMaker(PredictionMaker):
         self.get_setlist_by_song()
         
         ck_plus = self.create_ckplus()
-        treys_notebook = self.create_notebook()
+        notebook = self.create_notebook()
         
         try:
             # Create predictions directory if it doesn't exist
@@ -231,14 +231,13 @@ class PhishPredictionMaker(PredictionMaker):
             # Define files to save
             data_pairs = {
                 'ck_plus.csv': ck_plus,
-                'treys_notebook.csv': treys_notebook
+                'notebook.csv': notebook
             }
             
             # Save each file
             for filename, data in data_pairs.items():
                 filepath = predictions_dir / filename
                 data.to_csv(filepath, index=False)
-                print(f"Saved {filename}")
                 
         except Exception as e:
             print(f"Error saving prediction data: {e}")
