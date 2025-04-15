@@ -1,4 +1,5 @@
 import streamlit as st
+<<<<<<< HEAD
 import pandas as pd
 from pathlib import Path
 from streamlit_option_menu import option_menu
@@ -23,10 +24,25 @@ st.markdown("<h1 style='text-align: center;'>Jam Band Nerd</h1>", unsafe_allow_h
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.image("https://hevria.com/wp-content/uploads/2015/07/GD-rainbow2-1024x770.jpg")
+=======
+from PIL import Image
+
+band_names = {"Goose": "Goose", "Phish": "Phish", "UM":"Umphrey's McGee", "WSP":"Widespread Panic"}
+band_notebooks = {"Goose": "Rick's", "Phish": "Trey's", "UM":"Joel's", "WSP":"JoJo's"}
+
+# --- CONFIGS ---
+st.set_page_config(
+	page_title="Jam Band Nerd Demo",
+	page_icon="emoji"
+
+st.title("Jam Band Nerd")
+st.image("https://hevria.com/wp-content/uploads/2015/07/GD-rainbow2-1024x770.jpg")
+>>>>>>> e057bb117672e3ed0cbd24e14ce495773f5611f4
 
 # --- LOAD DATA ---
 @st.cache_data
 def load_data(band):
+<<<<<<< HEAD
     """Load the notebook and CK+ data for a specific band"""
     try:
         data_notebook = pd.read_csv(Path(base_dir) / "Data" / band / "Predictions" / "notebook.csv")
@@ -110,3 +126,60 @@ st.markdown(f"<h2 style='text-align: center;'>About Jam Band Nerd</h2>", unsafe_
 #st.markdown("### About Jam Band Nerd")
 st.markdown(f"<h3 style='text-align: center;'>This application provides predictions for songs to be played at certain jam bands' next performances</h3>", unsafe_allow_html=True)
 st.markdown(f"<h3 style='text-align: center;'>If you wish to contact administrators, please email jambandnerd@gmail.com</h3>", unsafe_allow_html=True)
+=======
+	data_notebook = pd.read_csv(notebook_{band)}
+	data_notebook = pd.read_csv(notebook_{band)}
+	return 
+for band in bands:
+	ckplus_{band}, notebook_{band} = load_data(band)
+
+# ---- NAVIGATION MENU ---
+selected = option_menu(
+	menu_title = None,
+	options = bands,
+	#icons = [], https://icons.getboostrap.com/
+	orientation="horizontal",
+)
+
+# --- TABS AND TABLES ---
+if selected == "WSP":
+	st.header("Widespread Panic")
+	tab_1, tab_2 = st.tabs(2)
+	with tab_1:
+		st.header("CK+")
+		st.dataframe(notebbook_{WSP})
+	with tab_2:
+		st.header("{band_notebooks}")
+		st.dataframe(ckplus_{band})
+if selected == "UM":
+	st.header("Umphrey's McGee")
+	tab_1, tab_2 = st.tabs(2)
+	with tab_1:
+		st.header("CK+")
+		st.dataframe(notebbook_{UM})
+	with tab_2:
+		st.header("{band_notebooks}")
+		st.dataframe(ckplus_{band})
+if selected == "Phish":
+	st.header("Phish")
+	tab_1, tab_2 = st.tabs(2)
+	with tab_1:
+		st.header("CK+")
+		st.dataframe(notebbook_{PHISH})
+	with tab_2:
+		st.header("{band_notebooks}")
+		st.dataframe(ckplus_{band})
+if selected == "Goose":
+	st.header("Goose")
+	tab_1, tab_2 = st.tabs(2)
+	with tab_1:
+		st.header("CK+")
+		st.dataframe(notebbook_{GOOSE})
+	with tab_2:
+		st.header("{band_notebooks}")
+		st.dataframe(ckplus_{band})
+
+
+		
+ 
+>>>>>>> e057bb117672e3ed0cbd24e14ce495773f5611f4
