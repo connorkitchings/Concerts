@@ -102,7 +102,7 @@ class UMPredictionMaker(PredictionMaker):
 
         # Rename columns for easier access
         my_song_data = my_song_data.rename(columns={
-            'Song Name_': 'song_name', 
+            'Song Name_': 'song', # Changed from 'song_name' to 'song' to match other implementations
             'show_index_count': 'times_played_total', 
             'show_index_min': 'debut', 
             'show_index_max': 'last_played', 
@@ -133,9 +133,9 @@ class UMPredictionMaker(PredictionMaker):
         
         # Merge date information
         my_song_data = (my_song_data
-                       .merge(debut_dates, left_on='song_name', right_on='Song Name', how='left')
+                       .merge(debut_dates, left_on='song', right_on='Song Name', how='left')
                        .drop(columns=['Song Name'])
-                       .merge(last_played_dates, left_on='song_name', right_on='Song Name', how='left')
+                       .merge(last_played_dates, left_on='song', right_on='Song Name', how='left')
                        .drop(columns=['Song Name', 'debut', 'last_played']))
         
         # Calculate gap z-score
@@ -149,7 +149,8 @@ class UMPredictionMaker(PredictionMaker):
                                 (my_song_data['ltp_date'] > pd.Timestamp(five_years_ago))].copy()           
                    .sort_values(by='gap_zscore', ascending=False)
                    .reset_index(drop=True)
-                   .drop(columns=['std_gap', 'gap_zscore'])
+                   # Modified to drop columns not in other implementations
+                   .drop(columns=['min_gap', 'max_gap', 'std_gap', 'gap_zscore', 'debut_date'])
                    )
         
         # Calculate how much current gap exceeds average and median
@@ -157,8 +158,12 @@ class UMPredictionMaker(PredictionMaker):
         ck_plus['current_minus_med'] = ck_plus['current_gap'] - ck_plus['med_gap']
         
         # Format dates for better readability
-        ck_plus['debut_date'] = ck_plus['debut_date'].dt.strftime('%Y-%m-%d')
         ck_plus['ltp_date'] = ck_plus['ltp_date'].dt.strftime('%Y-%m-%d')
+        
+        # Ensure columns match other implementations
+        ck_plus = ck_plus[['song', 'times_played_total', 'ltp_date', 
+                          'current_gap', 'avg_gap', 'med_gap', 
+                          'current_minus_avg', 'current_minus_med']]
         
         return ck_plus
     
@@ -167,9 +172,9 @@ class UMPredictionMaker(PredictionMaker):
         if self.setlist_by_song is None:
             raise ValueError("Must run get_setlist_by_song() first")
             
-        # Filter for shows in the last 2 years
-        two_years_ago = date.today() - timedelta(days=2*366)
-        recent_shows = self.setlist_by_song[self.setlist_by_song['Date Played'] > pd.Timestamp(two_years_ago)].copy()
+        # Filter for shows in the last year (changed from 2 years to match other implementations)
+        one_year_ago = date.today() - timedelta(days=366)
+        recent_shows = self.setlist_by_song[self.setlist_by_song['Date Played'] > pd.Timestamp(one_year_ago)].copy()
 
         # Calculate statistics for songs played in recent period
         notebook = (
@@ -189,7 +194,7 @@ class UMPredictionMaker(PredictionMaker):
         # Rename columns
         notebook = notebook.rename(columns={
             'Song Name_': 'song', 
-            'show_index_count': 'times_played_in_last_2_years', 
+            'show_index_count': 'times_played_in_last_year', # Changed from times_played_in_last_2_years
             'show_index_max': 'last_played', 
             'gap_min': 'min_gap', 
             'gap_max': 'max_gap', 
@@ -217,13 +222,13 @@ class UMPredictionMaker(PredictionMaker):
             how='left'
         ).drop(columns=['Song Name'])
         
-        # Keep only relevant columns
-        notebook = notebook[['song', 'times_played_in_last_2_years', 'ltp_date', 'current_gap', 'avg_gap', 'med_gap']]
+        # Keep only relevant columns to match other implementations
+        notebook = notebook[['song', 'times_played_in_last_year', 'ltp_date', 'current_gap', 'avg_gap', 'med_gap']]
 
         # Filter for songs with a gap > 3 shows
         notebook = (
             notebook[(notebook['current_gap'] > 3)]
-            .sort_values(by='times_played_in_last_2_years', ascending=False)
+            .sort_values(by='times_played_in_last_year', ascending=False)
             .reset_index(drop=True)
         )
         
