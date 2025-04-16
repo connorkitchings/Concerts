@@ -26,12 +26,10 @@ with col2:
 # --- LOAD DATA ---
 @st.cache_data
 def load_data(band):
-    
-    notebook_url = f"{base_url}Data/{band}/Predictions/notebook.csv"
-    ckplus_url = f"{base_url}Data/{band}/Predictions/ck_plus.csv"
-        
     """Load the notebook and CK+ data for a specific band"""
     try:
+        notebook_url = f"{base_url}Data/{band}/Predictions/notebook.csv"
+        ckplus_url = f"{base_url}Data/{band}/Predictions/ck_plus.csv"
         data_notebook = pd.read_csv(notebook_url)
         data_notebook.columns = ["Song", "Times Played in Last Year", "Last Time Played", "Current Gap", "Average Gap", "Median Gap"]
         data_ckplus = pd.read_csv(ckplus_url)
