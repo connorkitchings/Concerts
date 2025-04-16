@@ -107,6 +107,9 @@ if selected in bands:
 
 # Add a footer with additional information
 st.markdown("---")
-st.markdown("### About Jam Band Nerd")
-st.write("This application provides insights and analysis for various jam bands' performances.")
-st.write("If you wish to contact administrators, please email jambandnerd@gmail.com.")
+st.markdown(f"<h2 style='text-align: center;'>About Jam Band Nerd</h2>", unsafe_allow_html=True)
+st.markdown(f"<h2 style='text-align: center;'>This application provides insights and analysis for various jam bands' performances.</h2>", unsafe_allow_html=True)
+st.markdown(f"<h2 style='text-align: center;'>If you wish to contact administrators, please email jambandnerd@gmail.com.</h2>", unsafe_allow_html=True)
+#st.markdown("### About Jam Band Nerd")
+#st.write("This application provides insights and analysis for various jam bands' performances.")
+#st.write("If you wish to contact administrators, please email jambandnerd@gmail.com.")
