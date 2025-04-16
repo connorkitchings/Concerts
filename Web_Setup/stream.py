@@ -5,7 +5,7 @@ from streamlit_option_menu import option_menu
 from PIL import Image
 
 # Define base directory and bands
-base_dir = "/Users/connorkitchings/Desktop/Repositories/Concerts/"  # Replace with your actual base directory
+base_url = "https://raw.githubusercontent.com/connorkitchings/Concerts/main/"
 bands = ["Goose", "Phish", "UM", "WSP"]
 band_names = {"Goose": "Goose", "Phish": "Phish", "UM": "Umphrey's McGee", "WSP": "Widespread Panic"}
 band_notebooks = {"Goose": "Rick's", "Phish": "Trey's", "UM": "Joel's", "WSP": "JoJo's"}
@@ -26,11 +26,15 @@ with col2:
 # --- LOAD DATA ---
 @st.cache_data
 def load_data(band):
+    
+    notebook_url = f"{base_url}Data/{band}/Predictions/notebook.csv"
+    ckplus_url = f"{base_url}Data/{band}/Predictions/ck_plus.csv"
+        
     """Load the notebook and CK+ data for a specific band"""
     try:
-        data_notebook = pd.read_csv(Path(base_dir) / "Data" / band / "Predictions" / "notebook.csv")
+        data_notebook = pd.read_csv(notebook_url)
         data_notebook.columns = ["Song", "Times Played in Last Year", "Last Time Played", "Current Gap", "Average Gap", "Median Gap"]
-        data_ckplus = pd.read_csv(Path(base_dir) / "Data" / band / "Predictions" / "ck_plus.csv")
+        data_ckplus = pd.read_csv(ckplus_url)
         return data_notebook.head(50), data_ckplus.head(50)
     except FileNotFoundError:
         st.error(f"Data files for {band} not found. Please check your file paths.")
