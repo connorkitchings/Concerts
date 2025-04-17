@@ -1686,7 +1686,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 5350,1614299084,416,1,5,,1,0,0,,0,,,0.0,
 5351,1614299084,534,1,6,,1,0,0,Foster The People.,0,,,0.0,
 5352,1614299084,578,1,7,,6,0,0,Bobby Blue Bland.,0,,,0.0,
-5345,1614298417,528,e,15,7:02,6,0,0,Grateful Dead.,0,,,1.0,0.0
 5331,1614298417,404,1,1,9:25,1,0,0,,0,,,1.0,0.0
 5332,1614298417,408,1,2,16:40,1,0,0,,0,,,1.0,0.0
 5333,1614298417,508,1,3,7:54,1,0,0,Traditional.,0,,,1.0,0.0
@@ -1701,6 +1700,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 5342,1614298417,469,2,12,7:10,1,0,0,Rupert Holmes.,0,,,1.0,0.0
 5343,1614298417,403,2,13,10:28,2,0,0,,0,,,1.0,0.0
 5344,1614298417,502,2,14,8:54,5,0,0,With Lion's Gate Portal and Funky Funky Funky quotes.,0,,,1.0,0.0
+5345,1614298417,528,e,15,7:02,6,0,0,Grateful Dead.,0,,,1.0,0.0
 5313,1614297985,416,1,1,11:59,2,0,0,,0,,,0.0,0.0
 5314,1614297985,463,1,2,6:10,1,0,0,,0,,,0.0,0.0
 5315,1614297985,462,1,3,20:29,1,0,0,,0,,,0.0,0.0
@@ -2135,11 +2135,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 3137,1613158668,414,1,7,15:00,2,0,0,"Slow, melodic version.",0,,"Liza Jane, The W.S. Walcott Medicine Show",1.0,
 3138,1613158668,464,1,8,8:36,1,0,0,Eddy Grant.,0,,"Liza Jane, The W.S. Walcott Medicine Show",1.0,
 3139,1613158668,578,1,9,8:38,6,0,0,Bobby Blue Bland.,0,,"Liza Jane, The W.S. Walcott Medicine Show",1.0,
-3117,1613158190,478,1,1,11:18,1,0,0,Flopener.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
-3118,1613158190,469,1,2,6:34,1,0,0,Rupert Holmes.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
-3119,1613158190,418,1,3,13:42,1,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
-3120,1613158190,405,1,4,11:00,2,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
-3121,1613158190,463,1,5,5:00,1,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 3122,1613158190,455,1,6,9:59,1,0,0,Talking Heads.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 3123,1613158190,403,1,7,15:30,1,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 3124,1613158190,512,1,8,6:57,2,0,0,Unfinished.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
@@ -2149,6 +2144,11 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 3128,1613158190,411,1,12,9:40,2,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 3129,1613158190,502,1,13,12:28,5,0,0,With Chank teases from Peter.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 3130,1613158190,592,e,14,6:22,6,0,0,John Phillips.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
+3117,1613158190,478,1,1,11:18,1,0,0,Flopener.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
+3118,1613158190,469,1,2,6:34,1,0,0,Rupert Holmes.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
+3119,1613158190,418,1,3,13:42,1,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
+3120,1613158190,405,1,4,11:00,2,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
+3121,1613158190,463,1,5,5:00,1,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 586,1597168237,462,1,1,,2,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
 1379,1597168237,564,1,2,,1,0,0,Wes Montgomery.,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
 1380,1597168237,406,1,3,,1,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
@@ -2252,14 +2252,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 1295,1602829578,420,1,3,15:28,2,0,0,,0,,,1.0,
 1296,1602829578,403,1,4,8:42,2,0,0,,0,,,1.0,
 1297,1602829578,533,1,5,5:34,6,0,0,Fatboy Slim.,0,,,1.0,
-1275,1602828850,512,1,1,,1,0,0,,0,,,1.0,
-1276,1602828850,519,1,2,,1,0,0,Billy Joel.,0,,,1.0,
-1277,1602828850,462,1,3,,1,0,0,,0,,,1.0,
-1278,1602828850,582,1,4,,1,0,0,The Band.,0,,,1.0,
-1279,1602828850,478,1,5,,1,0,0,,0,,,1.0,
-1280,1602828850,441,1,6,,2,0,0,Stevie Wonder.,0,,,1.0,
-1281,1602828850,433,1,7,,1,0,0,Deodato.,0,,,1.0,
-1282,1602828850,400,1,8,,6,0,0,Rick asked Coach what he wanted to hear.,0,,,1.0,
 1259,1602828440,415,1,1,,1,0,0,,0,,,1.0,
 1260,1602828440,408,1,2,,1,0,0,,0,,,1.0,
 1261,1602828440,482,1,3,,1,0,0,Creedence Clearwater Revival.,0,,,1.0,
@@ -2269,6 +2261,14 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 1265,1602828440,411,1,7,,1,0,0,,0,,,1.0,
 1266,1602828440,410,1,8,,1,0,0,,0,,,1.0,
 1267,1602828440,578,1,9,,6,0,0,Bobby Blue Bland.,0,,,1.0,
+1275,1602828850,512,1,1,,1,0,0,,0,,,1.0,
+1276,1602828850,519,1,2,,1,0,0,Billy Joel.,0,,,1.0,
+1277,1602828850,462,1,3,,1,0,0,,0,,,1.0,
+1278,1602828850,582,1,4,,1,0,0,The Band.,0,,,1.0,
+1279,1602828850,478,1,5,,1,0,0,,0,,,1.0,
+1280,1602828850,441,1,6,,2,0,0,Stevie Wonder.,0,,,1.0,
+1281,1602828850,433,1,7,,1,0,0,Deodato.,0,,,1.0,
+1282,1602828850,400,1,8,,6,0,0,Rick asked Coach what he wanted to hear.,0,,,1.0,
 1252,1602828053,406,1,1,,1,0,0,,0,,,1.0,
 1253,1602828053,465,1,2,,2,0,0,,0,,,1.0,
 1254,1602828053,439,1,3,,1,0,0,The Wood Brothers. With Brandon Niederauer on guitar.,0,,,1.0,
@@ -3034,8 +3034,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 9798,1643256285,639,2,10,11:08,1,0,0,,0,,,1.0,
 9799,1643256285,517,2,11,15:13,5,0,0,Grateful Dead.,0,,,1.0,
 9800,1643256285,403,e,12,11:46,6,0,0,,0,,,1.0,
-9801,1643256302,462,1,1,19:07,2,0,0,Unfinished.,0,,,1.0,
-9802,1643256302,418,1,2,8:51,1,0,0,Vibey Tumble.,0,,,1.0,
 9803,1643256302,424,1,3,7:36,1,0,0,Father John Misty.,0,,,1.0,
 9804,1643256302,541,1,4,14:06,1,0,0,,0,,,1.0,
 9805,1643256302,432,1,5,9:40,2,0,0,,0,,,1.0,
@@ -3047,6 +3045,8 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 9811,1643256302,412,2,11,9:19,2,0,0,,0,,,1.0,
 9812,1643256302,478,2,12,9:43,5,0,0,,0,,,1.0,
 9813,1643256302,718,e,13,4:37,6,0,0,The Guess Who.,0,,,1.0,
+9801,1643256302,462,1,1,19:07,2,0,0,Unfinished.,0,,,1.0,
+9802,1643256302,418,1,2,8:51,1,0,0,Vibey Tumble.,0,,,1.0,
 9896,1643257560,468,1,1,8:42,1,0,0,The Who.,0,,,1.0,
 9897,1643257560,429,1,2,6:31,1,0,0,,0,,,1.0,
 9898,1643257560,400,1,3,11:12,1,0,0,,0,,,1.0,
@@ -3103,11 +3103,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 9949,1643341083,590,2,13,9:04,1,0,0,,0,,,1.0,0.0
 9950,1643341083,610,2,14,5:29,5,0,0,,0,,,1.0,0.0
 9951,1643341083,604,e,15,11:20,6,0,0,,0,,,1.0,0.0
-9962,1643341465,524,2,11,6:54,2,0,0,The Moody Blues.,0,,,1.0,
-9963,1643341465,586,2,12,11:26,5,0,0,,0,,,1.0,
-9964,1643341465,719,e,13,7:23,1,0,0,Steppenwolf.,0,,,1.0,
-9965,1643341465,502,e,14,5:47,2,0,0,Unfinished.,0,,,1.0,
-9966,1643341465,719,e,15,1:05,6,0,0,Steppenwolf.,0,,,1.0,
 9952,1643341465,605,1,1,14:41,1,0,0,,0,,,1.0,
 9953,1643341465,463,1,2,15:12,1,0,0,Fast version.,1,Shorter version but brimming with passion throughout. Gorgeous cool down mid-jam that rises patiently and blissfully. True glory hose finish before returning to song ending.,,1.0,
 9954,1643341465,414,1,3,19:06,2,0,0,"Slow, melodic version.",1,"Swirling, chaotic, yet in control. Slight cool down before swirl picks back up amid organ-driven finish.",,1.0,
@@ -3118,6 +3113,11 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 9959,1643341465,710,2,8,12:26,2,0,0,,0,,,1.0,
 9960,1643341465,420,2,9,15:32,2,0,0,,0,,,1.0,
 9961,1643341465,418,2,10,11:03,1,0,0,Vibey Tumble.,1,"Vibey ""Tumble"" gets a jam for the first time, gradually picking up speed until a high-speed peak closes it out.",,1.0,
+9962,1643341465,524,2,11,6:54,2,0,0,The Moody Blues.,0,,,1.0,
+9963,1643341465,586,2,12,11:26,5,0,0,,0,,,1.0,
+9964,1643341465,719,e,13,7:23,1,0,0,Steppenwolf.,0,,,1.0,
+9965,1643341465,502,e,14,5:47,2,0,0,Unfinished.,0,,,1.0,
+9966,1643341465,719,e,15,1:05,6,0,0,Steppenwolf.,0,,,1.0,
 9982,1643341486,438,1,1,23:20,2,0,0,,1,"Show opener for a fan favorite show, jam starts in earnest at the 10:30 mark and stays within a pretty standard rocking tempo throughout. Ripping final peak and cool final minute cooldown into ""Travelers.""",,1.0,0.0
 9983,1643341486,574,1,2,10:15,2,0,0,,0,,,1.0,0.0
 9984,1643341486,425,1,3,7:37,1,0,0,,0,,,1.0,0.0
@@ -3666,9 +3666,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 12315,1658553386,408,3,13,14:59,1,0,0,"Album arrangement. With D. James Goodwin on guitar, Stuart Bogie on saxophone, and Dave Nelson on trombone.",0,,,1.0,
 12316,1658553386,438,3,14,10:26,5,0,0,"Album arrangement. With D. James Goodwin on guitar, Stuart Bogie on saxophone, and Dave Nelson on trombone.",0,,,1.0,
 12317,1658553386,764,e,15,6:11,6,0,0,,0,,,1.0,
-21200,1667314241,740,1,1,4:16,1,0,0,,0,,,1.0,0.0
-21201,1667314241,422,1,2,,1,0,0,,0,,,1.0,0.0
-21202,1667314241,725,1,3,,6,0,0,,0,,,1.0,0.0
 12485,1658553400,727,1,1,6:03,1,0,0,Indie-Groove version.,0,,,1.0,0.0
 12486,1658553400,731,1,2,2:55,1,0,0,FTP as Goose.,0,,,1.0,0.0
 12487,1658553400,583,1,3,6:36,1,0,0,Arcade Fire.,0,,,1.0,0.0
@@ -3688,6 +3685,9 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 12500,1658553400,762,3,17,2:17,1,0,0,With Trey Anastasio on guitar.,0,,,1.0,0.0
 12501,1658553400,604,3,18,18:14,5,0,0,With Trey Anastasio on guitar.,1,"Rick and Trey once again shine with their immediate guitar chemistry, harmonizing lick after lick and closing out the historic sit-in set with a boom.",,1.0,0.0
 12502,1658553400,573,e,19,7:16,6,0,0,"The Beatles. With Trey Anastasio on guitar and vocals, Father John Misty on drums and vocals, and Jeff on guitar.",0,,,1.0,0.0
+21200,1667314241,740,1,1,4:16,1,0,0,,0,,,1.0,0.0
+21201,1667314241,422,1,2,,1,0,0,,0,,,1.0,0.0
+21202,1667314241,725,1,3,,6,0,0,,0,,,1.0,0.0
 12522,1658554962,478,1,1,10:02,1,0,0,Flopener.,0,,,1.0,
 12523,1658554962,414,1,2,15:06,1,0,0,"Slow, melodic version.",0,,,1.0,
 12524,1658554962,605,1,3,18:30,1,0,0,,0,,,1.0,
@@ -4234,6 +4234,11 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 24402,1670439739,733,2,11,8:58,1,0,0,,0,,...,1.0,
 24403,1670439739,408,2,12,16:04,5,0,0,,0,,...,1.0,
 24404,1670439739,427,e,13,4:39,6,0,0,Wilson Pickett. With Jimmy Fallon on vocals.,0,,...,1.0,
+24418,1670439778,463,1,1,11:07,3,0,0,Fast version.,1,"Great opener begins a fantastic segment of music in the ensuing ""Hollywood Nights"" and ""Bob Don"" before finishing ""Echo.""",...,1.0,
+24419,1670439778,488,1,2,12:51,2,0,0,Bob Seger & The Silver Bullet Band.,0,,...,1.0,
+24420,1670439778,429,1,3,10:41,3,0,0,With.,0,,...,1.0,
+24421,1670439778,463,1,4,2:07,1,0,0,,0,,...,1.0,
+24422,1670439778,609,1,5,6:58,2,0,0,,0,,...,1.0,
 24423,1670439778,610,1,6,5:28,1,0,0,,0,,...,1.0,
 24424,1670439778,817,1,7,6:56,1,0,0,,0,,...,1.0,
 24425,1670439778,541,1,8,14:54,4,0,0,,0,,...,1.0,
@@ -4243,11 +4248,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 24429,1670439778,403,2,12,19:40,1,0,0,With Writing a Novel teases.,1,"Extended Trevor solo kicks off jam & finds a beautiful theme that is quickly picked up/repeated by Rick/Peter in gorgeous interplay. After Pete solo & return to Trevor’s theme, Ben goes 2X time as band soars through multiple peaks & explosive finish.",...,1.0,
 24430,1670439778,432,2,13,9:21,5,0,0,,0,,...,1.0,
 24431,1670439778,738,e,14,16:55,6,0,0,,0,,...,1.0,
-24418,1670439778,463,1,1,11:07,3,0,0,Fast version.,1,"Great opener begins a fantastic segment of music in the ensuing ""Hollywood Nights"" and ""Bob Don"" before finishing ""Echo.""",...,1.0,
-24419,1670439778,488,1,2,12:51,2,0,0,Bob Seger & The Silver Bullet Band.,0,,...,1.0,
-24420,1670439778,429,1,3,10:41,3,0,0,With.,0,,...,1.0,
-24421,1670439778,463,1,4,2:07,1,0,0,,0,,...,1.0,
-24422,1670439778,609,1,5,6:58,2,0,0,,0,,...,1.0,
 24451,1670439789,404,1,1,15:49,1,0,0,,1,"Did this kick off the show of 2023, or does it just make you think it does? No matter, the energy, propulsiveness, and endless riffing from Rick leads to a well-earned peak, which spills over at 13:28 to a late-night percussive jam. No let-up on Night 5!",,1.0,
 24452,1670439789,410,1,2,16:21,1,0,0,80s synth version. With Welcome to Delta jam.,0,,,1.0,
 24453,1670439789,490,1,3,7:33,1,0,0,With Coach on rainstick.,0,,,1.0,

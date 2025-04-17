@@ -6,8 +6,10 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from io import StringIO
+import logging
 
-#import os
+SONG_TABLE_IDX = 1
+
 
 class GooseSetlistCollector(SetlistCollector):
     """Scraper for Goose show data using phish.net API."""
@@ -45,20 +47,20 @@ class GooseSetlistCollector(SetlistCollector):
     
     def load_song_data(self) -> pd.DataFrame:
         """Load and process song data from API and website."""
-        # Get song list from API and Scraping
-
+        # Get song list from API and scrape additional info from website
         songdata_api = pd.DataFrame(self._make_api_request('songs', 'v2')['data']).drop(columns=['slug','created_at','updated_at'])
-        #columns = ['id','name','isoriginal','original_artist']
-                
+
         # Get additional song info from website
         response = requests.get("https://elgoose.net/song/")
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
         tables = pd.read_html(StringIO(str(soup.find_all('table'))))
-        songdata_scrape = tables[1].sort_values(by='Song Name').reset_index(drop=True)
-        # columns = ['Song Name','Original Artist','Debut Date','Last Played,'Times Played Live,'Avg Show Gap']
-        
-        # Merge and clean up data
+        if not tables or len(tables) <= SONG_TABLE_IDX:
+            logging.error(f"Expected table at index {SONG_TABLE_IDX} not found in Goose song page.")
+            return pd.DataFrame()
+        songdata_scrape = tables[SONG_TABLE_IDX].sort_values(by='Song Name').reset_index(drop=True)
+
+        # Merge and clean up song data from API and website
         merged_data = songdata_api.merge(
             songdata_scrape,
             left_on="name",
@@ -82,40 +84,45 @@ class GooseSetlistCollector(SetlistCollector):
 
         return merged_data[list(final_columns.keys())].rename(columns=final_columns)
     
-    def load_show_data(self) -> Tuple[pd.DataFrame, pd.DataFrame]:
-            """Load and process show and venue data."""
-            shows = pd.DataFrame(self._make_api_request('shows', 'v2')['data'])
-            
-            # Split into past and future shows
-            past_shows = shows[shows['showdate'] < self.today]
-            future_shows = shows[shows['showdate'] >= self.today].sort_values('showdate').head(1)
-            all_shows = pd.concat([past_shows, future_shows])
-            all_shows = all_shows[(all_shows['artist'] == 'Goose')].copy().reset_index(drop=True)
-            
-            # Create venue dataset
-            venue_data = (all_shows[['venue_id', 'venuename', 'city', 'state', 'country', 'location']]
-                        .drop_duplicates()
-                        .sort_values('venue_id')
-                        .reset_index(drop=True)
-                        .rename(columns={'venue':'venue_name'}))
-            
-            # Create tour dataset
-            tour_data = (all_shows[['tour_id', 'tourname']]
-                        .drop_duplicates()
-                        .sort_values('tour_id')
-                        .reset_index(drop=True))
-            
-            # Create show dataset
-            show_data = (all_shows[['show_id', 'showdate', 'venue_id', 'tour_id',  'showorder']]
-                        .sort_values('showdate')
-                        .reset_index(names='show_number')
-                        .rename(columns={'showdate':'show_date','showorder':'show_order'})
-                        .assign(show_number=lambda x: x['show_number'] + 1)
-                        )
-            show_data['tour_id'] = show_data['tour_id'].astype('Int64').astype(str)
-            
-            return show_data, venue_data, tour_data
-        
+    def load_show_data(self) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+        """Load and process show, venue, and tour data."""
+        shows = pd.DataFrame(self._make_api_request('shows', 'v2')['data'])
+
+        # Split into past and future shows
+        past_shows = shows[shows['showdate'] < self.today]
+        future_shows = shows[shows['showdate'] >= self.today].sort_values('showdate').head(1)
+        all_shows = pd.concat([past_shows, future_shows])
+        all_shows = all_shows[(all_shows['artist'] == 'Goose')].copy().reset_index(drop=True)
+
+        # Create venue dataset
+        venue_data = (
+            all_shows[['venue_id', 'venuename', 'city', 'state', 'country', 'location']]
+            .drop_duplicates()
+            .sort_values('venue_id')
+            .reset_index(drop=True)
+            .rename(columns={'venue': 'venue_name'})
+        )
+
+        # Create tour dataset
+        tour_data = (
+            all_shows[['tour_id', 'tourname']]
+            .drop_duplicates()
+            .sort_values('tour_id')
+            .reset_index(drop=True)
+        )
+
+        # Create show dataset
+        show_data = (
+            all_shows[['show_id', 'showdate', 'venue_id', 'tour_id', 'showorder']]
+            .sort_values('showdate')
+            .reset_index(names='show_number')
+            .rename(columns={'showdate': 'show_date', 'showorder': 'show_order'})
+            .assign(show_number=lambda x: x['show_number'] + 1)
+        )
+        show_data['tour_id'] = show_data['tour_id'].astype('Int64').astype(str)
+
+        return show_data, venue_data, tour_data
+
     def load_setlist_data(self) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """Load and process setlist and transition data."""
         setlist_df = pd.DataFrame(self._make_api_request('setlists', 'v1')['data'])
@@ -137,11 +144,11 @@ class GooseSetlistCollector(SetlistCollector):
     def create_and_save_data(self) -> None:
         """Save Goose data to CSV files in the data directory."""
         
-        print(f"Loading Song Data")
+        logging.info("Loading Song Data")
         song_data = self.load_song_data()
-        print(f"Loading Show and Venue Data")
+        logging.info("Loading Show and Venue Data")
         show_data, venue_data, tour_data = self.load_show_data()
-        print(f"Loading Setlist and Transition Data")
+        logging.info("Loading Setlist and Transition Data")
         setlist_data, transition_data = self.load_setlist_data()
     
         try:
@@ -156,10 +163,10 @@ class GooseSetlistCollector(SetlistCollector):
             }
             
             # Save each file
-            print("Saving data.")
+            logging.info("Saving data.")
             for filename, data in data_pairs.items():
                 filepath = self.data_dir / filename
                 data.to_csv(filepath, index=False)
         
         except Exception as e:
-            print(f"Error saving Goose data: {e}")
+            logging.error(f"Error saving Goose data: {e}")

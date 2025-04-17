@@ -6,8 +6,10 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from io import StringIO
+import logging
 
-#import os
+SONG_TABLE_IDX = 0
+
 
 class PhishSetlistCollector(SetlistCollector):
     """Scraper for Phish show data using phish.net API."""
@@ -52,18 +54,18 @@ class PhishSetlistCollector(SetlistCollector):
 
     def load_song_data(self) -> pd.DataFrame:
         """Load and process song data from API and website."""
-        # Get song list from API
+        # Get song list from API and scrape additional info from website
         song_data = pd.DataFrame(self._make_api_request('songs')['data'])
         song_data = song_data.drop(columns=['slug', 'last_permalink', 'debut_permalink'])
-        
-        # Get additional song info from website
+
         response = requests.get("https://phish.net/song")
         response.raise_for_status()
         soup = BeautifulSoup(response.text, 'html.parser')
-        
         tables = pd.read_html(StringIO(str(soup.find_all('table'))))
-        website_data = tables[0].sort_values(by='Song Name').reset_index(drop=True)
-        
+        if not tables or len(tables) <= SONG_TABLE_IDX:
+            logging.error(f"Expected table at index {SONG_TABLE_IDX} not found in Phish song page.")
+            return pd.DataFrame()
+        website_data = tables[SONG_TABLE_IDX].sort_values(by='Song Name').reset_index(drop=True)
         # Merge and clean up data
         merged_data = song_data.merge(
             website_data,
@@ -71,40 +73,42 @@ class PhishSetlistCollector(SetlistCollector):
             right_on="Song Name",
             how="inner"
         )
-        
         final_columns = {
             'songid': 'song_id',
             'Song Name': 'song',
             'Original Artist': 'original_artist',
             'Debut': 'debut_date'
         }
-
         return merged_data[list(final_columns.keys())].rename(columns=final_columns)
     
     def load_show_data(self) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """Load and process show and venue data."""
         shows = pd.DataFrame(self._make_api_request('shows/artist/phish')['data'])
-        
+
         # Split into past and future shows
         past_shows = shows[shows['showdate'] < self.today]
         future_shows = shows[shows['showdate'] >= self.today].sort_values('showdate').head(1)
         all_shows = pd.concat([past_shows, future_shows])
-        
+
         # Create venue dataset
-        venue_data = (all_shows[['venueid', 'venue', 'city', 'state', 'country']]
-                     .drop_duplicates()
-                     .sort_values('venueid')
-                     .reset_index(drop=True))
-        
+        venue_data = (
+            all_shows[['venueid', 'venue', 'city', 'state', 'country']]
+            .drop_duplicates()
+            .sort_values('venueid')
+            .reset_index(drop=True)
+        )
+
         # Create show dataset
-        show_data = (all_shows[['showid', 'showdate', 'venueid', 'tourid', 
-                               'exclude_from_stats', 'setlist_notes']]
-                    .sort_values('showdate')
-                    .reset_index(names='show_number')
-                    .assign(show_number=lambda x: x['show_number'] + 1))
-        
+        show_data = (
+            all_shows[['showid', 'showdate', 'venueid', 'tourid',
+                       'exclude_from_stats', 'setlist_notes']]
+            .sort_values('showdate')
+            .reset_index(names='show_number')
+            .assign(show_number=lambda x: x['show_number'] + 1)
+        )
+
         show_data['tourid'] = show_data['tourid'].astype('Int64').astype(str)
-        
+
         return show_data, venue_data
 
     def load_setlist_data(self) -> Tuple[pd.DataFrame, pd.DataFrame]:
@@ -127,11 +131,11 @@ class PhishSetlistCollector(SetlistCollector):
     def create_and_save_data(self) -> None:
         """Save Phish data to CSV files in the data directory."""
         
-        print(f"Loading Song Data")
+        logging.info("Loading Song Data")
         song_data = self.load_song_data()
-        print(f"Loading Show and Venue Data")
+        logging.info("Loading Show and Venue Data")
         show_data, venue_data = self.load_show_data()
-        print(f"Loading Setlist and Transition Data")
+        logging.info("Loading Setlist and Transition Data")
         setlist_data, transition_data = self.load_setlist_data()
     
         try:
@@ -145,10 +149,10 @@ class PhishSetlistCollector(SetlistCollector):
             }
             
             # Save each file
-            print("Saving data.")
+            logging.info("Saving data.")
             for filename, data in data_pairs.items():
                 filepath = self.data_dir / filename
                 data.to_csv(filepath, index=False)
         
         except Exception as e:
-            print(f"Error saving Phish data: {e}")
+            logging.error(f"Error saving Phish data: {e}")

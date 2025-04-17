@@ -1,6 +1,5 @@
-from typing import Tuple, Optional
+from typing import Tuple
 from SetlistCollector import SetlistCollector
-from pathlib import Path
 from datetime import datetime, date
 import requests
 import pandas as pd
@@ -8,6 +7,10 @@ import numpy as np
 import re
 from bs4 import BeautifulSoup
 from io import StringIO
+import logging
+
+SONG_TABLE_IDX = 1
+VENUE_TABLE_IDX = 0
 
 class UMSetlistCollector(SetlistCollector):
     """Scraper for Umphrey's McGee show data using allthings.umphreys.com."""
@@ -19,57 +22,56 @@ class UMSetlistCollector(SetlistCollector):
         
     def load_song_data(self) -> pd.DataFrame:
         """
-        Load song list data from allthings.umphreys.com.
-        
-        Returns:
-            DataFrame containing song list data.
+        Load and return song list data from allthings.umphreys.com as a DataFrame.
         """
         songlist_url = f"{self.base_url}/song/"
         response = requests.get(songlist_url)
         response.raise_for_status()
-        
+
         html_content = response.text
         soup = BeautifulSoup(html_content, 'html.parser')
         tables = soup.find_all('table')
-        
-        if tables:
-            tables_str = str(tables)
-            tables_io = StringIO(tables_str)
-            tables = pd.read_html(tables_io)
-            
-        songlist_data = tables[1].copy().sort_values(by='Song Name').reset_index(drop=True)
+
+        if not tables or len(tables) <= SONG_TABLE_IDX:
+            logging.error(f"Expected song table at index {SONG_TABLE_IDX} not found in UM song page.")
+            return pd.DataFrame()
+        tables_str = str(tables)
+        tables_io = StringIO(tables_str)
+        tables = pd.read_html(tables_io)
+
+        songlist_data = tables[SONG_TABLE_IDX].copy().sort_values(by='Song Name').reset_index(drop=True)
         songlist_data['Debut Date'] = pd.to_datetime(songlist_data['Debut Date']).dt.date
         songlist_data['Last Played'] = pd.to_datetime(songlist_data['Last Played']).dt.date
-            
+
         return songlist_data
     
     def load_show_data(self) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """
-        Load venue data from allthings.umphreys.com.
-        
-        Returns:
-            Tuple containing (empty DataFrame for show data, DataFrame for venue data).
+        Load and return venue data from allthings.umphreys.com.
+        Returns a tuple: (empty DataFrame for show data, DataFrame for venue data).
         """
         venues_url = f"{self.base_url}/venues/"
         response = requests.get(venues_url)
         response.raise_for_status()
-        
+
         html_content = response.text
         soup = BeautifulSoup(html_content, 'html.parser')
         tables = soup.find_all('table')
-        
-        if tables:
-            tables_str = str(tables)
-            tables_io = StringIO(tables_str)
-            tables = pd.read_html(tables_io)
-            
-        venue_data = tables[0].copy().reset_index(names='id')
+
+        if not tables or len(tables) <= VENUE_TABLE_IDX:
+            logging.error(f"Expected venue table at index {VENUE_TABLE_IDX} not found in UM venue page.")
+            return pd.DataFrame(), pd.DataFrame()
+        tables_str = str(tables)
+        tables_io = StringIO(tables_str)
+        tables = pd.read_html(tables_io)
+
+        venue_data = tables[VENUE_TABLE_IDX].copy().reset_index(names='id')
         venue_data['id'] = venue_data['id'].astype(str)
         venue_data['Last Played'] = pd.to_datetime(venue_data['Last Played']).dt.date
-        
+
         # Return empty DataFrame for show_data to match abstract method signature
         show_data = pd.DataFrame()
-            
+
         return show_data, venue_data
     
     def create_setlist_data(self) -> pd.DataFrame:
@@ -99,29 +101,29 @@ class UMSetlistCollector(SetlistCollector):
             song_url = songlist_url + song
             response = requests.get(song_url)
             response.raise_for_status()
-            
             html_content = response.text
             soup = BeautifulSoup(html_content, 'html.parser')
             title_tag = soup.find('title')
             title = re.search(r'"(.*?)"', title_tag.get_text()).group(1) if title_tag and '"' in title_tag.get_text() else 'Unknown Title'
-            
             tables = soup.find_all('table')
-            if tables:
-                tables_str = str(tables)
-                tables_io = StringIO(tables_str)
-                tables = pd.read_html(tables_io)
-                
+            if not tables or len(tables) == 0:
+                logging.warning(f"No tables found for song {song} at {song_url}")
+                continue
+            tables_str = str(tables)
+            tables_io = StringIO(tables_str)
+            tables = pd.read_html(tables_io)
             song_table = tables[0].copy().sort_values(by='Date Played').reset_index(drop=True)
             song_table.insert(0, 'Song Name', title)
             song_table['Date Played'] = pd.to_datetime(song_table['Date Played']).dt.date
             if 'Show Gap' in song_table.columns:
                 song_table = song_table.drop(columns=['Show Gap'])
             setlists.append(song_table)
-            
+        if not setlists:
+            logging.error("No setlists could be parsed from UM song pages.")
+            return pd.DataFrame()
         setlist_data = pd.concat(setlists).reset_index(drop=True)
         setlist_data['Footnote'] = setlist_data['Footnote'].fillna('')
         setlist_data = setlist_data.sort_values(by=['Date Played', 'Song Name'], ascending=[False, True]).reset_index(drop=True)
-        
         return setlist_data
     
     def update_setlist_data(self, venue_data: pd.DataFrame) -> pd.DataFrame:
@@ -137,14 +139,12 @@ class UMSetlistCollector(SetlistCollector):
         try:
             # Load existing setlist data
             existing_setlist_data = pd.read_csv(self.data_dir / 'setlistdata.csv')
-            
             # Use maximum date played to filter venue data for missing shows
             last_show = datetime.strptime(existing_setlist_data['Date Played'].max(), '%Y-%m-%d').date()
-            print(f"Previous Last Show in Dataset: {last_show}")
-            
+            logging.info(f"Previous Last Show in Dataset: {last_show}")
             existing_setlist_data['Date Played'] = pd.to_datetime(existing_setlist_data['Date Played']).dt.date
         except (FileNotFoundError, pd.errors.EmptyDataError):
-            print("No existing setlist data found.")
+            logging.warning("No existing setlist data found.")
             return None  # Return None to indicate update is not possible
         
         missing_setlists_venues = venue_data[
@@ -347,7 +347,7 @@ class UMSetlistCollector(SetlistCollector):
         elif method == 'Update':
             setlist_data = self.update_setlist_data(venue_data)
             if setlist_data is None:
-                print("Switching to 'All' method since update is not possible.")
+                logging.info("Switching to 'All' method since update is not possible.")
                 setlist_data = self.create_setlist_data()
         else:
             raise ValueError(f"Invalid method: {method}. Use 'All' or 'Update'.")
@@ -360,11 +360,11 @@ class UMSetlistCollector(SetlistCollector):
     def create_and_save_data(self) -> None:
         """Save UM data to CSV files in the data directory."""
         
-        print(f"Loading Song Data")
+        logging.info("Loading Song Data")
         song_data = self.load_song_data()
-        print(f"Loading Show and Venue Data")
+        logging.info("Loading Show and Venue Data")
         show_data, venue_data = self.load_show_data()
-        print(f"Loading Setlist and Transition Data")
+        logging.info("Loading Setlist and Transition Data")
         setlist_data, transition_data = self.load_setlist_data()
     
         try:
@@ -376,7 +376,7 @@ class UMSetlistCollector(SetlistCollector):
             }
             
             # Save each file
-            print("Saving data.")
+            logging.info("Saving data.")
             for filename, data in data_pairs.items():
                 filepath = self.data_dir / filename
                 data.to_csv(filepath, index=False)

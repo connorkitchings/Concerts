@@ -1,6 +1,5 @@
-from typing import Tuple, Optional
+from typing import Tuple
 from SetlistCollector import SetlistCollector
-from pathlib import Path
 from datetime import datetime, date
 import requests
 import pandas as pd
@@ -8,26 +7,41 @@ import numpy as np
 import re
 from bs4 import BeautifulSoup
 from io import StringIO
+import logging
+
+# Logging Best Practices:
+# - Use logging.debug/info/warning/error/critical for all output.
+# - Include exc_info=True in error logs for stack traces.
+# - Log function entry/exit for public methods.
+# - Use debug-level logs for detailed data inspection.
+# - Configure logging at the module entrypoint or main script.
+
+# Configure logging for this module (can be overridden by main script)
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(name)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
+logger = logging.getLogger(__name__)
+
+# Constants for table indices
+SONG_CODES_TABLE_IDX = 3
+SETLIST_TABLE_IDX = 4
 
 class WSPSetlistCollector(SetlistCollector):
-    """Scraper for Widespread Panic show data. """
+    """Scraper for Widespread Panic show data using everydaycompanion.com."""
 
     def __init__(self):
-        """
-        Initialize WSPSetlistCollector.
-        
-        """
+        """Initialize WSPSetlistCollector."""
         super().__init__(band='WSP')
-        # Set start year and end year
         self.start_year = 1985
         self.this_year = datetime.today().year
-        
-        # Set today's date
         self.today = date.today()
-        
-        # Define comma songs and dictionary 
-        self.comma_songs = ['Guns', 'And Money', 'Let Me Follow You Down', 'Let Me Hold Your Hand', 
-                          "Please Don't Go", 'Rattle', 'And Roll', 'Narrow Mind', 'Woman Smarter']
+        # Define comma songs and dictionary for special cases
+        self.comma_songs = [
+            'Guns', 'And Money', 'Let Me Follow You Down', 'Let Me Hold Your Hand',
+            "Please Don't Go", 'Rattle', 'And Roll', 'Narrow Mind', 'Woman Smarter'
+        ]
         self.comma_songs_completer = {
             'Lawyers': 'Lawyers Guns And Money',
             'Baby': 'One of the 3 Baby Songs',
@@ -35,28 +49,34 @@ class WSPSetlistCollector(SetlistCollector):
             'Weak Brain': 'Weak Brain, Narrow Mind',
             'Man Smart': 'Man Smart, Woman Smarter'
         }
-        
-        # Set url
         self.base_url = 'http://www.everydaycompanion.com/'
-        
-        # Set up link_list
         self.link_list = []
-        
+
     def load_show_data(self):
+        """
+        Load and return show data for all years (except 2004) from everydaycompanion.com.
+        Returns a DataFrame of show dates and venues.
+        """
         tour_list = [x for x in range(self.start_year, self.this_year + 1) if x != 2004]
-        tour_df_list = pd.DataFrame()
+        tour_df_list = []
 
         for yr in tour_list:
             yr_str = str(yr)[-2:]
             year_link = f"{self.base_url}asp/tour{yr_str}.asp"
-            response = requests.get(year_link)
-            soup = BeautifulSoup(response.content, 'html.parser')
-            
             try:
-                tour_string = soup.find('p').get_text()
-            except:
-                print(f"No data on Everyday Companion for {yr}.")
-                break  
+                response = requests.get(year_link)
+                soup = BeautifulSoup(response.content, 'html.parser')
+                p_tag = soup.find('p')
+                if p_tag is None:
+                    logger.warning(f"No <p> tag found for year {yr}.")
+                    continue
+                tour_string = p_tag.get_text()
+            except AttributeError as e:
+                logger.warning(f"No data on Everyday Companion for {yr}: {e}", exc_info=True)
+                continue
+            except Exception as e:
+                logger.error(f"Unexpected error fetching/parsing year {yr}: {e}", exc_info=True)
+                continue
             tour_string = re.sub(r'\?\?', '00', tour_string)
 
             # Split the string into individual dates
@@ -68,41 +88,55 @@ class WSPSetlistCollector(SetlistCollector):
                 'venue': venues
             })
 
+            # If tour_data is empty, skip this year
+            if tour_data.empty:
+                logger.warning(f"No show data extracted for year {yr}, skipping.")
+                continue
+
             tour_data['link_date'] = tour_data['date'].apply(lambda x: str(x[6:])+str(x[0:2])+str(x[3:5]))
+            
             for index, value in tour_data['link_date'].items():
                 if value[0] in ['8', '9']:
                     tour_data.at[index, 'link_date'] = '19' + value
                 if value[0] in ['0', '1', '2']:
                     tour_data.at[index, 'link_date'] = '20' + value
-                    
+
             tour_data['date_count'] = tour_data.groupby('link_date').cumcount() + 1
             tour_data['assigned_letter'] = tour_data['date_count'].apply(lambda x: chr(ord('a') + x - 1))
             tour_data['link'] = self.base_url+'setlists/'+tour_data['link_date']+tour_data['assigned_letter']+'.asp'
+
             tour_data.drop(columns=['date_count','assigned_letter'], inplace=True)
 
             tour_data['running_count'] = tour_data.groupby(['date', 'venue']).cumcount() + 1
             
             # Extract year, month, day from link
-            tour_data[['year', 'month', 'day']] = tour_data['link'].str.extract(r'(\d{4})(\d{2})(\d{2})')
+            tour_data[['year', 'month', 'day']] = tour_data['link'].str.extract(r'(\d{4})(\d{2})(\d{2})') 
+
             tour_data['date_ec'] = tour_data['date']
             tour_data['date'] = pd.to_datetime(tour_data['date'], format='%m/%d/%y', errors='coerce').fillna(pd.NaT)
             tour_data['weekday'] = pd.to_datetime(tour_data['date'], errors='coerce').dt.strftime('%A')
-
+        
             # Split venue information
-            tour_data[['venue_name', 'city', 'state']] = tour_data['venue'].str.rsplit(', ', n=2, expand=True)
+            try:
+                tour_data[['venue_name', 'city', 'state']] = tour_data['venue'].str.rsplit(', ', n=2, expand=True)
+            except Exception as e:
+                logging.error(f"[{yr}] Venue split error: {e}. Data: {tour_data['venue'].head(2).tolist()}")
+                continue
             tour_data['city'] = tour_data['city'].str.upper()
-            tour_data['venue_name'] = tour_data.apply(lambda row: row['venue_name'] if pd.notna(row['venue_name']) else ', '.join(row[:-2]), axis=1)
-            tour_data[['city', 'venue_name']] = tour_data[['city', 'venue_name']].apply(lambda col: col.str.upper())
+            tour_data['venue_name'] = tour_data['venue_name'].str.upper()
             tour_data.rename(columns={'venue':'venue_full', 'venue_name':'venue'},inplace=True)
             tour_data['venue_full'] = tour_data['venue_full'].str.upper()
 
             tour_data.drop(columns=['link_date', 'running_count'], inplace=True)
             tour_data['show_index_withinyear'] = tour_data.index + 1
-            tour_df_list = pd.concat([tour_df_list, tour_data])
-            
+            tour_df_list.append(tour_data)
+
         # Combine DataFrames From Loop List
-        combined_tour_data = tour_df_list.reset_index(drop=True)
+        combined_tour_data = pd.concat(tour_df_list, ignore_index=True)
         combined_tour_data['show_index_overall'] = combined_tour_data.index + 1
+
+        # Initialize date_ec before assignment
+        combined_tour_data['date_ec'] = combined_tour_data['date'].astype(str)
 
         combined_tour_data['date_ec'] = combined_tour_data.apply(lambda row: f'??/{row["day"]}/{row["year"][-2:]}' if row['month'] == '00' else row['date_ec'],axis=1)
         combined_tour_data['date_ec'] = combined_tour_data.apply(lambda row: f'{row["month"]}/??/{row["year"][-2:]}' if row['day'] == '00' else row['date_ec'],axis=1)
@@ -159,9 +193,7 @@ class WSPSetlistCollector(SetlistCollector):
 
         # Convert 'date' to datetime format (without immediately formatting back to string)
         combined_tour_data['date'] = pd.to_datetime(combined_tour_data['date'], format='%m-%d-%y', errors='coerce')
-
-        # Get today's date
-
+        
         # Find the first future date (including today)
         future_dates = combined_tour_data[combined_tour_data['date'].dt.date >= self.today].dropna(subset=['date'])
         first_future_date = future_dates['date'].min()
@@ -177,17 +209,23 @@ class WSPSetlistCollector(SetlistCollector):
 
     def load_song_data(self):
         songcode_url = f"{self.base_url}asp/songcode.asp"
-        response = requests.get(songcode_url)
-        response.raise_for_status()
-        html_content = response.text
-        soup = BeautifulSoup(html_content, 'html.parser')
-        tables = soup.find_all('table')
+        try:
+            response = requests.get(songcode_url)
+            response.raise_for_status()
+            html_content = response.text
+            soup = BeautifulSoup(html_content, 'html.parser')
+            tables = soup.find_all('table')
+        except Exception as e:
+            logger.error(f"Error fetching song codes: {e}", exc_info=True)
+            return pd.DataFrame()
 
-        if tables:
-            tables_str = str(tables)  # Convert tables to string
-            tables_io = StringIO(tables_str)  # Wrap in StringIO
-            tables = pd.read_html(tables_io)
-        song_codes = tables[3].copy()
+        if not tables or len(tables) <= SONG_CODES_TABLE_IDX:
+            logger.error(f"Expected table at index {SONG_CODES_TABLE_IDX} not found in song codes page.")
+            return pd.DataFrame()
+        tables_str = str(tables)
+        tables_io = StringIO(tables_str)
+        tables = pd.read_html(tables_io)
+        song_codes = tables[SONG_CODES_TABLE_IDX].copy()
 
         # Set the first row as header
         song_codes.columns = song_codes.iloc[0]  # Assign first row as header
@@ -209,17 +247,26 @@ class WSPSetlistCollector(SetlistCollector):
         return song_codes
 
     def get_setlist_from_link(self, setlist_link):
-        response = requests.get(setlist_link)
-        response.raise_for_status()
-        html_content = response.text
-        soup = BeautifulSoup(html_content, 'html.parser')
-        tables = soup.find_all('table')
-        if tables:
+        try:
+            response = requests.get(setlist_link)
+            response.raise_for_status()
+            html_content = response.text
+            soup = BeautifulSoup(html_content, 'html.parser')
+            tables = soup.find_all('table')
+            if not tables or len(tables) <= 4:
+                logger.error(f"Not enough tables found for link {setlist_link}. Skipping.")
+                return pd.DataFrame()
             tables_str = str(tables)  # Convert tables to string
             tables_io = StringIO(tables_str)  # Wrap in StringIO
             tables = pd.read_html(tables_io)
-        setlist_raw = tables[4].copy()
-        setlist_raw['Raw'] = setlist_raw[0].str.replace("ï", "i")
+            setlist_raw = tables[4].copy()
+        except Exception as e:
+            logger.error(f"Error fetching/parsing setlist from {setlist_link}: {e}", exc_info=True)
+            return pd.DataFrame()
+        if setlist_raw.empty or 0 not in setlist_raw.columns:
+            logger.warning(f"Setlist table at {setlist_link} is empty or missing expected columns. Skipping.")
+            return pd.DataFrame()
+        setlist_raw['Raw'] = setlist_raw[0].astype(str).str.replace("ï", "i")
         setlist_raw['set'] = setlist_raw['Raw'].apply(lambda x: x[:3] if x[:2] in (['0:', '1:', '2:', '3:', '4:', 'E:','E1','E2','E3','E4']) else 'Notes')
         setlist_raw['set'] = setlist_raw['set'].apply(lambda x: 'Details' if x[:2] == '??'or re.match(r"^\d{2}/", x[:2]) else x)
         setlist_raw['set'] = setlist_raw['set'].str.strip()
@@ -257,19 +304,25 @@ class WSPSetlistCollector(SetlistCollector):
         if is_notes > 0:
             try:
                 notes_df = setlist_raw.loc[setlist_raw['set'].isin(['Notes'])].loc[:, ['Raw']]
-                notes_str_series = notes_df['Raw'].iloc[1]
-                notes_split = re.split(r'(\*+|\[)', notes_str_series)
-                notes_split = [s for s in notes_split if s]
-                notes_split = [s for s in notes_split if s.startswith(' ') or s.startswith('*')]
-                notes_df = pd.DataFrame({'song_notes_key': notes_split[::2], 'song_note_detail': notes_split[1::2]})
-                if setlist_link=="http://everydaycompanion.com/setlists/20091017a.asp":
-                    notes_df = pd.DataFrame({'song_notes_key':['*'], 'song_note_detail':['with The Allman Brothers']})
-                if setlist_link=="http://everydaycompanion.com/setlists/20161030a.asp":
-                    notes_df = pd.DataFrame({'song_notes_key':['*'], 'song_note_detail':['Steve Lopez on Percussion']})
-                    notes_df['song_note_detail'] = notes_df['song_note_detail'].str.lstrip()
-                songs_final = pd.merge(songs, notes_df, how='left', left_on='song_notes_key', right_on='song_notes_key')
-                songs_final.drop(columns=['song_notes_key', 'notes_id'], inplace=True)
-            except AttributeError as notes_error:
+                if len(notes_df) < 2:
+                    logging.warning(f"Notes DataFrame too short for link {setlist_link}. Skipping notes parsing.")
+                    songs_final = songs.copy()
+                    songs_final['song_note_detail'] = ''
+                else:
+                    notes_str_series = notes_df['Raw'].iloc[1]
+                    notes_split = re.split(r'(\*+|\[)', notes_str_series)
+                    notes_split = [s for s in notes_split if s]
+                    notes_split = [s for s in notes_split if s.startswith(' ') or s.startswith('*')]
+                    notes_df = pd.DataFrame({'song_notes_key': notes_split[::2], 'song_note_detail': notes_split[1::2]})
+                    if setlist_link=="http://everydaycompanion.com/setlists/20091017a.asp":
+                        notes_df = pd.DataFrame({'song_notes_key':['*'], 'song_note_detail':['with The Allman Brothers']})
+                    if setlist_link=="http://everydaycompanion.com/setlists/20161030a.asp":
+                        notes_df = pd.DataFrame({'song_notes_key':['*'], 'song_note_detail':['Steve Lopez on Percussion']})
+                        notes_df['song_note_detail'] = notes_df['song_note_detail'].str.lstrip()
+                    songs_final = pd.merge(songs, notes_df, how='left', left_on='song_notes_key', right_on='song_notes_key')
+                    songs_final.drop(columns=['song_notes_key', 'notes_id'], inplace=True)
+            except Exception as notes_error:
+                logger.warning(f"Notes parsing error for link {setlist_link}: {notes_error}", exc_info=True)
                 songs_final = songs.copy()
                 songs_final['song_note_detail'] = ''
         else:
@@ -280,35 +333,67 @@ class WSPSetlistCollector(SetlistCollector):
 
     def load_setlist_data(self, link_list, method='update'):
         if method == 'all':
-            print("Loading all WSP Setlist Data")
-            all_setlists = pd.DataFrame()
+            logger.info("Loading All WSP Setlist Data")
+            setlist_frames = []
             for link in link_list:
                 link_setlist = self.get_setlist_from_link(link)
-                all_setlists = pd.concat([all_setlists, link_setlist]).reset_index(drop=True)
-        
+                if link_setlist is not None and not link_setlist.empty:
+                    setlist_frames.append(link_setlist)
+                else:
+                    # Extract date from the link string (expects .../YYYYMMDDx.asp)
+                    match = re.search(r'(\d{8})[a-z]\.asp', link)
+                    if match:
+                        showdate = match.group(1)
+                        formatted_date = datetime.strptime(showdate, "%Y%m%d").strftime("%m/%d/%Y")
+                        logger.warning(f"No setlist data returned for date {formatted_date}, skipping.")
+                    else:
+                        logger.warning(f"No setlist data returned for link {link}, skipping.")
+            if not setlist_frames:
+                logger.error("No setlist data found for any link.")
+                return pd.DataFrame()
+            all_setlists = pd.concat(setlist_frames, ignore_index=True)
         elif method == 'update':
-            print("Updating Existing WSP Setlist Data")
-            
-            all_setlists = pd.read_csv((self.data_dir / "setlistdata.csv"))
+            logger.info("Updating Existing WSP Setlist Data")
+            try:
+                all_setsets = pd.read_csv((self.data_dir / "setlistdata.csv"))
+            except Exception as e:
+                logger.error(f"Error reading setlistdata.csv: {e}", exc_info=True)
+                return pd.DataFrame()
             filtered_link_list = [link for link in link_list if str(self.this_year) in link.split('/')[-1] or str(self.this_year - 1)  in link.split('/')[-1]]
-            
             for link in filtered_link_list:
                 link_setlist = self.get_setlist_from_link(link)
-                all_setlists = pd.concat([all_setlists, link_setlist])
-                all_setlists = all_setlists.drop_duplicates(subset=['link', 'song_name', 'set', 'song_index_show', 'song_index_set']).reset_index(drop=True)
+                if link_setlist is not None and not link_setlist.empty:
+                    all_setsets = pd.concat([all_setsets, link_setlist])
+                    all_setsets = all_setsets.drop_duplicates(subset=['link', 'song_name', 'set', 'song_index_show', 'song_index_set']).reset_index(drop=True)
+                else:
+                    # Extract date from the link string (expects .../YYYYMMDDx.asp)
+                    match = re.search(r'(\d{8})[a-z]\.asp', link)
+                    if match:
+                        showdate = match.group(1)
+                        try:
+                            formatted_date = datetime.strptime(showdate, "%Y%m%d").strftime("%m/%d/%Y")
+                        except ValueError:
+                            formatted_date = showdate
+                        logger.warning(f"No setlist data returned for date {formatted_date}, skipping.")
+                    else:
+                        logger.warning(f"No setlist data returned for link {link}, skipping.")
+            return all_setsets
+        else:
+            logger.error(f"Unknown method '{method}' for load_setlist_data.")
+            return pd.DataFrame()
 
-        return all_setlists
-    
     def create_and_save_data(self) -> None:
         """Save WSP data to CSV files in the data directory."""
-        
-        print(f"Loading Song Data")
+        logging.info("Loading Song Data")
         song_data = self.load_song_data()
-        print(f"Loading Show Data")
+        logging.info("Loading Show Data")
         show_data = self.load_show_data()
+        if show_data is None or show_data.empty:
+            logging.error("No show data loaded for WSP. Skipping setlist collection.")
+            return
         self.link_list = show_data.link.unique()
         setlist_data = self.load_setlist_data(self.link_list, method = 'update')
-    
+
         try:
             # Define files to save
             data_pairs = {
@@ -316,13 +401,11 @@ class WSPSetlistCollector(SetlistCollector):
                 'showdata.csv': show_data,
                 'setlistdata.csv': setlist_data
             }
-            
             # Save each file
-            print("Saving data.")
+            logger.info("Saving data.")
             for filename, data in data_pairs.items():
                 filepath = self.data_dir / filename
                 data.to_csv(filepath, index=False)
-        
         except Exception as e:
-            print(f"Error saving Widespread Panic data: {e}")
-        
+            logger.error(f"Error saving Widespread Panic data: {e}", exc_info=True)
+        logger.info("Finished create_and_save_data")

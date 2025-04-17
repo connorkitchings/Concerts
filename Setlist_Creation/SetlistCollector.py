@@ -4,6 +4,7 @@ from pathlib import Path
 import pandas as pd
 from datetime import date, datetime
 import importlib
+import logging
 
 # Define Abstract Setlist Collector Class
 class SetlistCollector(ABC):
@@ -12,16 +13,19 @@ class SetlistCollector(ABC):
     Provides a standardized interface for data collection and saving.
     """
     
+    # Configurable allowed bands list
+    ALLOWED_BANDS = ['Goose', 'Phish', 'UM', 'WSP']
+
     def __init__(self, band: str, base_dir: Optional[str] = None):
         """
         Initialize the band data scraper.
         
         Args:
-        band: Name of the band (must be in ['Goose','Phish','WSP'])
-        base_dir: Base directory for data storage. Defaults to script directory's parent
+            band: Name of the band (must be in ALLOWED_BANDS)
+            base_dir: Base directory for data storage. Defaults to script directory's parent
         """
-        if band not in ['Goose', 'Phish', 'UM', 'WSP']:
-            raise ValueError(f"Band must be one of: Goose, Phish, UM, WSP. Got: {band}")
+        if band not in self.ALLOWED_BANDS:
+            raise ValueError(f"Band must be one of: {self.ALLOWED_BANDS}. Got: {band}")
         
         self.band = band
         self.base_dir = base_dir or str(Path(__file__).parent.parent)
@@ -51,11 +55,16 @@ class SetlistCollector(ABC):
 class SetlistCollectorManager:
     """
     Manager class to handle multiple band data scrapers.
+    - Register scraper classes for each band.
+    - Run scraping for all or a subset of registered bands.
+    - Reports summary of successes and failures.
     """
     
     def __init__(self):
-        """Initialize the scraper manager."""
+        """Initialize the scraper manager and scraper registry."""
         self.scrapers: Dict[str, SetlistCollector] = {}
+        self.successful: Dict[str, float] = {}
+        self.failed: Dict[str, str] = {}
     
     def register_scraper(self, scraper_class: type) -> None:
         """
@@ -71,28 +80,35 @@ class SetlistCollectorManager:
             scraper_instance = scraper_class()  # Ensure scraper_class does not require extra arguments
             self.scrapers[scraper_instance.band] = scraper_instance
         except Exception as e:
-            print(f"Error registering scraper {scraper_class.__name__}: {e}")
+            logging.error(f"Error registering scraper {scraper_class.__name__}: {e}")
     
     def scrape_all(self) -> None:
-        """Scrape data for all registered bands."""
+        """
+        Scrape data for all registered bands.
+        Prints a summary of successes and failures.
+        """
         overall_start_time = datetime.now()
+        self.successful = {}
+        self.failed = {}
         for band, scraper in self.scrapers.items():
-            print(f"\nScraping data for {band}")
+            logging.info(f"Scraping data for {band}")
             start_time = datetime.now()
-
             try:
-                # Save collected data
-                scraper.create_and_save_data()  # Using each band's defined save method 
-                
+                scraper.create_and_save_data()
                 end_time = datetime.now()
                 execution_time = (end_time - start_time).total_seconds()
-                minutes, seconds = divmod(execution_time, 60)  # Convert seconds into minutes and seconds
-                print(f"{band} Setlist Collection Time: {int(minutes)} minutes and {seconds:.2f} seconds")
-
+                minutes, seconds = divmod(execution_time, 60)
+                logging.info(f"{band} Setlist Collection Time: {int(minutes)} minutes and {seconds:.2f} seconds")
+                self.successful[band] = execution_time
             except Exception as e:
-                print(f"Error scraping data for {band}: {e}")
-                
+                logging.error(f"Error scraping data for {band}: {e}")
+                self.failed[band] = str(e)
         overall_end_time = datetime.now()
         overall_execution_time = (overall_end_time - overall_start_time).total_seconds()
-        minutes, seconds = divmod(overall_execution_time, 60)  # Convert seconds into minutes and seconds
-        print(f"Total Setlist Collection Time: {int(minutes)} minutes and {seconds:.2f} seconds")
+        minutes, seconds = divmod(overall_execution_time, 60)
+        logging.info(f"Total Setlist Collection Time: {int(minutes)} minutes and {seconds:.2f} seconds")
+        logging.info("--- Scrape Summary ---")
+        for band, t in self.successful.items():
+            logging.info(f"SUCCESS: {band} ({t:.2f} seconds)")
+        for band, err in self.failed.items():
+            logging.error(f"FAIL: {band} ({err})")
