@@ -2,7 +2,7 @@ name: Daily Data Update
 
 on:
   schedule:
-    - cron: "0 16 * * *"  # 7 PM UTC = 3 PM EDT - 16 is noon
+    - cron: "0 17 * * *"  # 7 PM UTC = 3 PM EDT - 16 is noon
   workflow_dispatch:     # Allow manual triggering too
 
 jobs:
