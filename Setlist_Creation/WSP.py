@@ -1,20 +1,16 @@
 from typing import Tuple
 from SetlistCollector import SetlistCollector
 from datetime import datetime, date
-import requests
 import pandas as pd
 import numpy as np
-import re
+import requests
 from bs4 import BeautifulSoup
-from io import StringIO
+import re
 import logging
-
-# Logging Best Practices:
-# - Use logging.debug/info/warning/error/critical for all output.
-# - Include exc_info=True in error logs for stack traces.
-# - Log function entry/exit for public methods.
-# - Use debug-level logs for detailed data inspection.
-# - Configure logging at the module entrypoint or main script.
+from pathlib import Path
+import json
+import os
+from io import StringIO
 
 # Configure logging for this module (can be overridden by main script)
 logging.basicConfig(
@@ -30,6 +26,7 @@ SETLIST_TABLE_IDX = 4
 
 class WSPSetlistCollector(SetlistCollector):
     """Scraper for Widespread Panic show data using everydaycompanion.com."""
+    # NOTE: If you have a method that loads setlist data, add last_updated logic there as in other collectors.
 
     def __init__(self):
         """Initialize WSPSetlistCollector."""
@@ -408,4 +405,9 @@ class WSPSetlistCollector(SetlistCollector):
                 data.to_csv(filepath, index=False)
         except Exception as e:
             logger.error(f"Error saving Widespread Panic data: {e}", exc_info=True)
+        # Save last_updated timestamp to a json file in the data directory
+        self.update_last_updated()  # Use current time from SetlistCollector
+        os.makedirs(self.data_dir, exist_ok=True)
+        with open(os.path.join(self.data_dir, 'last_updated.json'), 'w') as f:
+            json.dump({'last_updated': self.last_updated}, f)
         logger.info("Finished create_and_save_data")

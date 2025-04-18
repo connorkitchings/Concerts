@@ -7,6 +7,8 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from io import StringIO
 import logging
+import json 
+import os
 
 SONG_TABLE_IDX = 0
 
@@ -114,6 +116,11 @@ class PhishSetlistCollector(SetlistCollector):
     def load_setlist_data(self) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """Load and process setlist and transition data."""
         setlist_data = pd.DataFrame(self._make_api_request('setlists')['data'])
+        self.update_last_updated()  # Update timestamp
+        # Save last_updated to a json file in the data directory
+        os.makedirs(self.data_dir, exist_ok=True)
+        with open(os.path.join(self.data_dir, 'last_updated.json'), 'w') as f:
+            json.dump({'last_updated': self.last_updated}, f)
 
         # Create transition data
         transition_data = (setlist_data[['transition', 'trans_mark']]
@@ -125,8 +132,8 @@ class PhishSetlistCollector(SetlistCollector):
                           'transition', 'isreprise', 'isjam', 'isjamchart',
                           'jamchart_description', 'tracktime', 'gap',
                           'is_original', 'soundcheck', 'footnote', 'exclude']
-        
-        return setlist_data[setlist_columns], transition_data
+        setlist_df = setlist_data[setlist_columns].copy()
+        return setlist_df, transition_data
 
     def create_and_save_data(self) -> None:
         """Save Phish data to CSV files in the data directory."""

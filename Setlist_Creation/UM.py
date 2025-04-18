@@ -8,6 +8,8 @@ import re
 from bs4 import BeautifulSoup
 from io import StringIO
 import logging
+import json
+import os
 
 SONG_TABLE_IDX = 1
 VENUE_TABLE_IDX = 0
@@ -84,9 +86,7 @@ class UMSetlistCollector(SetlistCollector):
         songlist_url = f"{self.base_url}/song/"
         response = requests.get(songlist_url)
         response.raise_for_status()
-        
-        html_content = response.text
-        soup = BeautifulSoup(html_content, 'html.parser')
+        soup = BeautifulSoup(response.text, 'html.parser')
         tables = soup.find_all('table')
         
         if tables:
@@ -124,6 +124,11 @@ class UMSetlistCollector(SetlistCollector):
         setlist_data = pd.concat(setlists).reset_index(drop=True)
         setlist_data['Footnote'] = setlist_data['Footnote'].fillna('')
         setlist_data = setlist_data.sort_values(by=['Date Played', 'Song Name'], ascending=[False, True]).reset_index(drop=True)
+        self.update_last_updated()  # Update timestamp
+        # Save last_updated to a json file in the data directory
+        os.makedirs(self.data_dir, exist_ok=True)
+        with open(os.path.join(self.data_dir, 'last_updated.json'), 'w') as f:
+            json.dump({'last_updated': self.last_updated}, f)
         return setlist_data
     
     def update_setlist_data(self, venue_data: pd.DataFrame) -> pd.DataFrame:
@@ -383,3 +388,8 @@ class UMSetlistCollector(SetlistCollector):
         
         except Exception as e:
             print(f"Error saving UM data: {e}")
+        # Save last_updated timestamp to a json file in the data directory
+        self.update_last_updated()
+        os.makedirs(self.data_dir, exist_ok=True)
+        with open(os.path.join(self.data_dir, 'last_updated.json'), 'w') as f:
+            json.dump({'last_updated': self.last_updated}, f)

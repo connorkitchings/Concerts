@@ -11,6 +11,7 @@ class SetlistCollector(ABC):
     """
     Abstract base class for band data scraping.
     Provides a standardized interface for data collection and saving.
+    Adds a last_updated attribute to track the last update time (ISO8601 string).
     """
     
     # Configurable allowed bands list
@@ -30,6 +31,14 @@ class SetlistCollector(ABC):
         self.band = band
         self.base_dir = base_dir or str(Path(__file__).parent.parent)
         self.data_dir = Path(self.base_dir) / "Data" / band / "From Web"
+        # Add last_updated timestamp (ISO8601 string)
+        self.last_updated = datetime.now().isoformat()
+
+    def update_last_updated(self, timestamp: str = None):
+        """
+        Update the last_updated timestamp. If no timestamp is provided, use the current time.
+        """
+        self.last_updated = timestamp or datetime.now().isoformat()
         
     @abstractmethod
     def load_song_data(self) -> pd.DataFrame:

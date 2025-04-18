@@ -7,6 +7,8 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from io import StringIO
 import logging
+import json
+import os
 
 SONG_TABLE_IDX = 1
 
@@ -126,6 +128,11 @@ class GooseSetlistCollector(SetlistCollector):
     def load_setlist_data(self) -> Tuple[pd.DataFrame, pd.DataFrame]:
         """Load and process setlist and transition data."""
         setlist_df = pd.DataFrame(self._make_api_request('setlists', 'v1')['data'])
+        self.update_last_updated()  # Update timestamp
+        # Save last_updated to a json file in the data directory
+        os.makedirs(self.data_dir, exist_ok=True)
+        with open(os.path.join(self.data_dir, 'last_updated.json'), 'w') as f:
+            json.dump({'last_updated': self.last_updated}, f)
 
         # Create transition data
         transition_data = (setlist_df[['transition_id', 'transition']]
@@ -133,7 +140,6 @@ class GooseSetlistCollector(SetlistCollector):
                            .sort_values(by=['transition_id']))
         
         setlist_data = setlist_df[setlist_df['artist'] == "Goose"].copy().reset_index(drop=True)
-        
         # Create setlist dataset
         setlist_columns = ['uniqueid', 'show_id', 'song_id','setnumber','position','tracktime',
                             'transition_id','isreprise','isjam','footnote','isjamchart',

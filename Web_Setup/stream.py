@@ -3,6 +3,8 @@ import pandas as pd
 from pathlib import Path
 from streamlit_option_menu import option_menu
 from PIL import Image
+import datetime
+from stream_utils import get_last_updated_times
 
 # Define base directory and bands
 base_url = "https://raw.githubusercontent.com/connorkitchings/Concerts/main/"
@@ -50,6 +52,9 @@ for band in bands:
     with st.spinner(f"Loading {band} data..."):
         notebook_data, ckplus_data = load_data(band)
         data_dict[band] = {"notebook": notebook_data, "ckplus": ckplus_data}
+
+# Load last updated times for all bands
+last_updated_dict = get_last_updated_times(bands)
 
 # ---- NAVIGATION MENU ---
 selected = option_menu(
@@ -99,11 +104,33 @@ if selected in bands:
     with tab1:
         st.markdown(f"<h3 style='text-align: center;'>{band_notebooks[selected]} Notebook Predictions</h3>", unsafe_allow_html=True)
         st.table(data_dict[selected]["notebook"])
+        # Format last updated string
+        last_raw = last_updated_dict.get(selected, 'Unknown')
+        try:
+            if last_raw != 'Unknown':
+                dt = datetime.datetime.fromisoformat(last_raw)
+                formatted = dt.strftime('%B %d, %Y %I:%M %p')
+            else:
+                formatted = 'Unknown'
+        except Exception:
+            formatted = last_raw
+        st.caption(f"Predictions made with data last updated: {formatted}")
     
     # CK+ tab
     with tab2:
         st.markdown("<h3 style='text-align: center;'>CK+ Predictions</h3>", unsafe_allow_html=True)
         st.table(data_dict[selected]["ckplus"])
+        # Format last updated string
+        last_raw = last_updated_dict.get(selected, 'Unknown')
+        try:
+            if last_raw != 'Unknown':
+                dt = datetime.datetime.fromisoformat(last_raw)
+                formatted = dt.strftime('%B %d, %Y %I:%M %p')
+            else:
+                formatted = 'Unknown'
+        except Exception:
+            formatted = last_raw
+        st.caption(f"Predictions made with data last updated: {formatted}")
 
 # Add a footer with additional information
 st.markdown("---")
