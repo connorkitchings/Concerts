@@ -26,9 +26,6 @@ jobs:
       - name: Run data creation script
         run: python Setlist_Creation/Get_Setlists.py
 
-      - name: Run make predictions script
-        run: python Making_Predictions/Make_Predictions.py
-
       - name: Commit and push changes
         run: |
           git config --global user.name "github-actions"
