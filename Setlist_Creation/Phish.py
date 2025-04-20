@@ -29,6 +29,7 @@ class PhishSetlistCollector(SetlistCollector):
         if api_key_env:
             self.api_key = api_key_env
         else:
+            logging.error("API key not found in environment variables.")
             if credentials_path is None:
                 current_dir = Path(__file__).resolve()
                 three_dirs_up = current_dir.parent.parent.parent
