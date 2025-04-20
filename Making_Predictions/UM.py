@@ -29,35 +29,61 @@ class UMPredictionMaker(PredictionMaker):
     def load_data(self) -> Tuple[pd.DataFrame, ...]:
         """Load band data from data directory"""
         
-        files = ["songdata.csv", "venuedata.csv", "setlistdata.csv"]
-        data = {file.split('.')[0]: pd.read_csv(self.data_dir / file) for file in files}
+        # Load all available collector output files for UM
+        files = ["songdata.csv", "venuedata.csv", "showdata.csv", "setlistdata.csv", "transitiondata.csv"]
+        data = {}
+        for file in files:
+            path = self.data_dir / file
+            if path.exists():
+                data[file.split('.')[0]] = pd.read_csv(path)
+            else:
+                data[file.split('.')[0]] = None
 
-        # Access individual DataFrames
+        # Assign DataFrames using collector schema
         self.songdata = data["songdata"]
-        self.songdata['Song Name'] = self.songdata['Song Name'].str.strip()
-        
+        if self.songdata is not None:
+            # Standardize song name column if present
+            if 'Song Name' in self.songdata.columns:
+                self.songdata['Song Name'] = self.songdata['Song Name'].str.strip()
+            elif 'song' in self.songdata.columns:
+                self.songdata['song'] = self.songdata['song'].str.strip()
         self.venuedata = data["venuedata"]
-        
-        self.setlistdata = data["setlistdata"].dropna(subset='Song Name').reset_index(drop=True)
-        self.setlistdata['Song Name'] = self.setlistdata['Song Name'].str.strip()
-        
-        # Convert Date Played to datetime
-        self.setlistdata['Date Played'] = pd.to_datetime(self.setlistdata['Date Played'])
-        
-        # Sort by date and song name
-        self.setlistdata = self.setlistdata.sort_values(by=['Date Played', 'Song Name']).reset_index(drop=True)
-        
-        # Calculate the isreprise column (whether a song appears multiple times in the same show)
-        self.setlistdata['isreprise'] = self.setlistdata.groupby(['Date Played', 'Song Name']).cumcount().astype(int)
-        
-        # Remove reprises to only keep the first occurrence of each song in a show
-        self.setlistdata = self.setlistdata[self.setlistdata['isreprise']==0].copy().reset_index(drop=True)
-        
-        # Create a show_index column to track show order
-        self.setlistdata['show_index'] = self.setlistdata['Date Played'].rank(method='dense').astype(int)
-        
-        # Get the last show index
-        self.last_show = self.setlistdata['show_index'].max()
+        self.showdata = data["showdata"]
+        self.setlistdata = data["setlistdata"]
+        if self.setlistdata is not None:
+            # Standardize song name column
+            if 'Song Name' in self.setlistdata.columns:
+                self.setlistdata = self.setlistdata.dropna(subset=['Song Name']).reset_index(drop=True)
+                self.setlistdata['Song Name'] = self.setlistdata['Song Name'].str.strip()
+                date_col = 'Date Played'
+            elif 'song_name' in self.setlistdata.columns:
+                self.setlistdata = self.setlistdata.dropna(subset=['song_name']).reset_index(drop=True)
+                self.setlistdata['song_name'] = self.setlistdata['song_name'].str.strip()
+                date_col = 'show_date'
+            else:
+                date_col = None
+            # Convert date column to datetime
+            if date_col and date_col in self.setlistdata.columns:
+                self.setlistdata[date_col] = pd.to_datetime(self.setlistdata[date_col])
+            # Sort by date and song name
+            if date_col:
+                self.setlistdata = self.setlistdata.sort_values(by=[date_col, self.setlistdata.columns[self.setlistdata.columns.str.contains('song', case=False)][0]]).reset_index(drop=True)
+            # Remove reprises
+            song_col = self.setlistdata.columns[self.setlistdata.columns.str.contains('song', case=False)][0]
+            if date_col:
+                self.setlistdata['isreprise'] = self.setlistdata.groupby([date_col, song_col]).cumcount().astype(int)
+                self.setlistdata = self.setlistdata[self.setlistdata['isreprise']==0].copy().reset_index(drop=True)
+            # Create a show_index column to track show order
+            if date_col:
+                self.setlistdata['show_index'] = self.setlistdata[date_col].rank(method='dense').astype(int)
+            # Get the last show index
+            if 'show_index' in self.setlistdata.columns:
+                self.last_show = self.setlistdata['show_index'].max()
+            else:
+                self.last_show = None
+        else:
+            self.last_show = None
+        self.transitiondata = data["transitiondata"]
         
         return tuple(data.values())
     

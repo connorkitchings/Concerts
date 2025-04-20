@@ -36,19 +36,31 @@ class PhishPredictionMaker(PredictionMaker):
     def load_data(self) -> Tuple[pd.DataFrame, ...]:
         """Load band data from data directory"""
         
+        # Load all available collector output files for Phish
         files = ["songdata.csv", "venuedata.csv", "showdata.csv", "transitiondata.csv", "setlistdata.csv"]
-        data = {file.split('.')[0]: pd.read_csv(self.data_dir / file) for file in files}
+        data = {}
+        for file in files:
+            path = self.data_dir / file
+            if path.exists():
+                data[file.split('.')[0]] = pd.read_csv(path)
+            else:
+                data[file.split('.')[0]] = None
 
-        # Access individual DataFrames
+        # Assign DataFrames using collector schema
         self.songdata = data["songdata"]
         self.venuedata = data["venuedata"]
         self.showdata = data["showdata"]
-        self.showdata = self.showdata[self.showdata['exclude_from_stats'] != 1].copy().reset_index(drop=True)
-        self.transitiondata = data["transitiondata"]  # Fixed typo
+        if self.showdata is not None and 'exclude_from_stats' in self.showdata.columns:
+            self.showdata = self.showdata[self.showdata['exclude_from_stats'] != 1].copy().reset_index(drop=True)
+        self.transitiondata = data["transitiondata"]
         self.setlistdata = data["setlistdata"]
-        
-        self.last_show = self.showdata['show_number'].max() - 1
-        
+
+        # Use collector's show_number if available
+        if self.showdata is not None and 'show_number' in self.showdata.columns:
+            self.last_show = self.showdata['show_number'].max() - 1
+        else:
+            self.last_show = None
+
         return tuple(data.values())
     
     def get_setlist_by_song(self) -> pd.DataFrame:

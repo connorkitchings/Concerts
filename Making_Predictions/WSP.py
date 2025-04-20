@@ -35,21 +35,43 @@ class WSPPredictionMaker(PredictionMaker):
     def load_data(self) -> Tuple[pd.DataFrame, ...]:
         """Load band data from data directory"""
         
-        files = ["songdata.csv", "showdata.csv", "setlistdata.csv"]
-        data = {file.split('.')[0]: pd.read_csv(self.data_dir / file) for file in files}
+        # Load all available collector output files for WSP
+        files = ["songdata.csv", "venuedata.csv", "showdata.csv", "setlistdata.csv", "transitiondata.csv"]
+        data = {}
+        for file in files:
+            path = self.data_dir / file
+            if path.exists():
+                data[file.split('.')[0]] = pd.read_csv(path)
+            else:
+                data[file.split('.')[0]] = None
 
-        # Access individual DataFrames
+        # Assign DataFrames using collector schema
         self.songdata = data["songdata"]
-        self.songdata['song'] = self.songdata['song'].str.title()
+        if self.songdata is not None and 'song' in self.songdata.columns:
+            self.songdata['song'] = self.songdata['song'].str.title()
+        self.venuedata = data["venuedata"]
         self.showdata = data["showdata"]
-        self.setlistdata = data["setlistdata"].dropna(subset='song_name').reset_index(drop=True)
-        self.setlistdata['song_name'] = self.setlistdata['song_name'].str.title()
-        self.setlistdata = self.setlistdata.sort_values(by=['link', 'song_name', 'song_index_show']).reset_index(drop=True)
-        self.setlistdata['isreprise'] = self.setlistdata.groupby(['link', 'song_name']).cumcount().astype(int)
-        self.setlistdata = self.setlistdata[self.setlistdata['isreprise']==0].copy().sort_values(by=['link', 'song_index_show']).reset_index(drop=True)
-        
-        self.last_show = self.showdata['show_index_overall'].max()
-        
+        self.setlistdata = data["setlistdata"]
+        if self.setlistdata is not None and 'song_name' in self.setlistdata.columns:
+            self.setlistdata = self.setlistdata.dropna(subset=['song_name']).reset_index(drop=True)
+            self.setlistdata['song_name'] = self.setlistdata['song_name'].str.title()
+            # Efficiently remove reprises using collector's columns
+            self.setlistdata = self.setlistdata.sort_values(by=['link', 'song_name', 'song_index_show']).reset_index(drop=True)
+            self.setlistdata['isreprise'] = self.setlistdata.groupby(['link', 'song_name']).cumcount().astype(int)
+            self.setlistdata = self.setlistdata[self.setlistdata['isreprise']==0].copy().sort_values(by=['link', 'song_index_show']).reset_index(drop=True)
+        self.transitiondata = data["transitiondata"]
+
+        # Use collector's show_number if available, else fallback
+        if self.showdata is not None:
+            if 'show_number' in self.showdata.columns:
+                self.last_show = self.showdata['show_number'].max()
+            elif 'show_index_overall' in self.showdata.columns:
+                self.last_show = self.showdata['show_index_overall'].max()
+            else:
+                self.last_show = None
+        else:
+            self.last_show = None
+
         return tuple(data.values())
     
     def get_setlist_by_song(self) -> pd.DataFrame:
