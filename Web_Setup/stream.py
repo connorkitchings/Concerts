@@ -4,7 +4,7 @@ from pathlib import Path
 from streamlit_option_menu import option_menu
 from PIL import Image
 import datetime
-from stream_utils import get_last_updated_times
+from stream_utils import get_last_updated_times, get_next_show_info
 
 # Define base directory and bands
 base_url = "https://raw.githubusercontent.com/connorkitchings/Concerts/main/"
@@ -102,6 +102,14 @@ if selected in bands:
     
     # Notebook tab
     with tab1:
+        # Show next show info for Goose and WSP
+        if selected in ["Goose", "WSP"]:
+            show_info = get_next_show_info(selected)
+            if show_info:
+                st.markdown(
+                    f"<h4 style='text-align: center;'>Predictions for next show: {show_info.get('date', '?')} at {show_info.get('venue', '?')} in {show_info.get('city', '?')}, {show_info.get('state', '?')}</h4>",
+                    unsafe_allow_html=True
+                )
         st.markdown(f"<h3 style='text-align: center;'>{band_notebooks[selected]} Notebook Predictions</h3>", unsafe_allow_html=True)
         st.table(data_dict[selected]["notebook"])
         # Format last updated string
@@ -118,6 +126,14 @@ if selected in bands:
     
     # CK+ tab
     with tab2:
+        # Show next show info for Goose and WSP
+        if selected in ["Goose", "WSP"]:
+            show_info = get_next_show_info(selected)
+            if show_info:
+                st.markdown(
+                    f"<h4 style='text-align: center;'>Predictions for next show: {show_info.get('date', '?')} at {show_info.get('venue', '?')} in {show_info.get('city', '?')}, {show_info.get('state', '?')}</h4>",
+                    unsafe_allow_html=True
+                )
         st.markdown("<h3 style='text-align: center;'>CK+ Predictions</h3>", unsafe_allow_html=True)
         st.table(data_dict[selected]["ckplus"])
         # Format last updated string
@@ -137,6 +153,3 @@ st.markdown("---")
 st.markdown(f"<h2 style='text-align: center;'>About Jam Band Nerd</h2>", unsafe_allow_html=True)
 st.markdown(f"<h3 style='text-align: center;'>This application provides insights and analysis for various jam bands' performances.</h3>", unsafe_allow_html=True)
 st.markdown(f"<h3 style='text-align: center;'>If you wish to contact administrators, please email jambandnerd@gmail.com.</h3>", unsafe_allow_html=True)
-#st.markdown("### About Jam Band Nerd")
-#st.write("This application provides insights and analysis for various jam bands' performances.")
-#st.write("If you wish to contact administrators, please email jambandnerd@gmail.com.")

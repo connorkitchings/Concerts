@@ -146,7 +146,6 @@ class UMSetlistCollector(SetlistCollector):
             existing_setlist_data = pd.read_csv(self.data_dir / 'setlistdata.csv')
             # Use maximum date played to filter venue data for missing shows
             last_show = datetime.strptime(existing_setlist_data['Date Played'].max(), '%Y-%m-%d').date()
-            logging.info(f"Previous Last Show in Dataset: {last_show}")
             existing_setlist_data['Date Played'] = pd.to_datetime(existing_setlist_data['Date Played']).dt.date
         except (FileNotFoundError, pd.errors.EmptyDataError):
             logging.warning("No existing setlist data found.")

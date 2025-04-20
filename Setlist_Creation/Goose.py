@@ -173,6 +173,38 @@ class GooseSetlistCollector(SetlistCollector):
             for filename, data in data_pairs.items():
                 filepath = self.data_dir / filename
                 data.to_csv(filepath, index=False)
-        
+
+            # --- Save next_show.json ---
+            # Find the next show after today
+            today_dt = pd.to_datetime(self.today)
+            future_shows = show_data[pd.to_datetime(show_data['show_date']) > today_dt]
+            if not future_shows.empty:
+                next_show_row = future_shows.sort_values('show_date').iloc[0]
+                venue_row = venue_data[venue_data['venue_id'] == next_show_row['venue_id']]
+                if not venue_row.empty:
+                    venue_info = venue_row.iloc[0]
+                    next_show = {
+                        "date": str(next_show_row['show_date']),
+                        "venue_id": int(next_show_row['venue_id']),
+                        "venue": venue_info['venuename'],
+                        "city": venue_info['city'],
+                        "state": venue_info['state']
+                    }
+                else:
+                    next_show = {
+                        "date": str(next_show_row['show_date']),
+                        "venue_id": int(next_show_row['venue_id']),
+                        "venue": None,
+                        "city": None,
+                        "state": None
+                    }
+            else:
+                next_show = None
+            # Write JSON to From Web directory
+            from_web_dir = Path(self.data_dir) / "From Web"
+            os.makedirs(from_web_dir, exist_ok=True)
+            with open(from_web_dir / "next_show.json", "w") as f:
+                json.dump({"next_show": next_show}, f, indent=2)
+
         except Exception as e:
             logging.error(f"Error saving Goose data: {e}")

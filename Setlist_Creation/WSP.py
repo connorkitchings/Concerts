@@ -403,6 +403,27 @@ class WSPSetlistCollector(SetlistCollector):
             for filename, data in data_pairs.items():
                 filepath = self.data_dir / filename
                 data.to_csv(filepath, index=False)
+
+            # --- Save next_show.json ---
+            # Find the next show after today
+            today_dt = pd.to_datetime(self.today)
+            show_data['parsed_date'] = pd.to_datetime(show_data['date'], errors='coerce')
+            future_shows = show_data[show_data['parsed_date'] > today_dt]
+            if not future_shows.empty:
+                next_show_row = future_shows.sort_values('parsed_date').iloc[0]
+                next_show = {
+                    "date": str(next_show_row['parsed_date'].date()),
+                    "venue": next_show_row['venue'],
+                    "city": next_show_row['city'],
+                    "state": next_show_row['state']
+                }
+            else:
+                next_show = None
+            # Write JSON to From Web directory
+            from_web_dir = Path(self.data_dir) / "From Web"
+            os.makedirs(from_web_dir, exist_ok=True)
+            with open(from_web_dir / "next_show.json", "w") as f:
+                json.dump({"next_show": next_show}, f, indent=2)
         except Exception as e:
             logger.error(f"Error saving Widespread Panic data: {e}", exc_info=True)
         # Save last_updated timestamp to a json file in the data directory
