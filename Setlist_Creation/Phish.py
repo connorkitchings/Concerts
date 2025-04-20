@@ -25,16 +25,19 @@ class PhishSetlistCollector(SetlistCollector):
         """
         super().__init__(band='Phish')
         
-        if credentials_path is None:
-            current_dir = Path(__file__).resolve()
-            three_dirs_up = current_dir.parent.parent.parent
-            credentials_path = three_dirs_up / "Credentials" / "phish_net.txt"
-            
-        try:
-            with open(credentials_path) as f:
-                self.api_key = f.readline().strip().split(": ")[1].strip("'")
-        except FileNotFoundError:
-            raise FileNotFoundError(f"Credentials file not found at {credentials_path}")
+        api_key_env = os.getenv("PHISH_API_KEY")
+        if api_key_env:
+            self.api_key = api_key_env
+        else:
+            if credentials_path is None:
+                current_dir = Path(__file__).resolve()
+                three_dirs_up = current_dir.parent.parent.parent
+                credentials_path = three_dirs_up / "Credentials" / "phish_net.txt"
+            try:
+                with open(credentials_path) as f:
+                    self.api_key = f.readline().strip().split(": ")[1].strip("'")
+            except FileNotFoundError:
+                raise FileNotFoundError(f"Credentials file not found at {credentials_path}")
         
         # Set today's date
         self.today = datetime.today().strftime('%Y-%m-%d')
