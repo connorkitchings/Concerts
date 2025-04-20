@@ -2,8 +2,7 @@ name: Daily Data Update
 
 on:
   schedule:
-    - cron: "30 4 * * *"  # 11:30 PM Central Time (4:30 AM UTC)
-    #- cron: "30 4 * * *"  # 11:30 PM Central Time (4:30 AM UTC)
+    - cron: "35 4 * * *"  # 11:30 PM Central Time (4:30 AM UTC)
   workflow_dispatch:     # Allow manual triggering too
 
 jobs:
