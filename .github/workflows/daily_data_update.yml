@@ -1,9 +1,11 @@
 name: Daily Data Update
 
+permissions:
+  contents: write
+
 on:
   schedule:
-    #- cron: "0 19 * * *"  # 3:00 PM Eastern Time (19:00 UTC)
-    - cron: "47 4 * * *"  # 11:50 PM Central Time (04:50 UTC)
+    - cron: "46 23 * * *"  # 7:46 PM Eastern Time (23:46 UTC)
   workflow_dispatch:     # Allow manual triggering too
 
 jobs:
@@ -31,9 +33,11 @@ jobs:
         run: python Setlist_Creation/Get_Setlists.py
 
       - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add Data/**/*.csv
           git commit -m "Daily data update" || echo "No changes to commit"
-          git push
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/connorkitchings/Concerts.git HEAD:main
