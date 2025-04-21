@@ -1,1 +1,11 @@
-{"next_show": null}
+{
+  "next_show": {
+    "show_number": 2168,
+    "showid": 1737486760,
+    "showdate": "2025-04-20",
+    "venueid": 1645,
+    "tourid": "209",
+    "exclude_from_stats": 0,
+    "setlist_notes": ""
+  }
+}

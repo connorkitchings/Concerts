@@ -146,6 +146,18 @@ class PhishSetlistCollector(SetlistCollector):
         song_data = self.load_song_data()
         logging.info("Loading Show and Venue Data")
         show_data, venue_data = self.load_show_data()
+
+        # Save next upcoming show to next_show.json in self.data_dir
+        os.makedirs(self.data_dir, exist_ok=True)
+        next_show = show_data[show_data['showdate'] >= self.today].sort_values('showdate').head(1)
+        next_show_path = self.data_dir / "next_show.json"
+        if not next_show.empty:
+            next_show_record = next_show.iloc[0].to_dict()
+            with open(next_show_path, "w") as f:
+                json.dump({"next_show": next_show_record}, f, indent=2)
+        else:
+            if next_show_path.exists():
+                next_show_path.unlink()
         logging.info("Loading Setlist and Transition Data")
         setlist_data, transition_data = self.load_setlist_data()
     

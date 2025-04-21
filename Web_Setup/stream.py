@@ -103,7 +103,7 @@ if selected in bands:
     # Notebook tab
     with tab1:
         # Show next show info for Goose and WSP
-        if selected in ["Goose", "WSP"]:
+        if selected in ["Goose", "WSP", "Phish"]:
             show_info = get_next_show_info(selected)
             if show_info:
                 st.markdown(
@@ -127,7 +127,7 @@ if selected in bands:
     # CK+ tab
     with tab2:
         # Show next show info for Goose and WSP
-        if selected in ["Goose", "WSP"]:
+        if selected in ["Goose", "WSP", "Phish"]:
             show_info = get_next_show_info(selected)
             if show_info:
                 st.markdown(
