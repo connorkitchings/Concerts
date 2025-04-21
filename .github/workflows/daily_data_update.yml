@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: "55 23 * * *"  # 7:55 PM Eastern Time (23:55 UTC)
+    - cron: "0 19 * * *"  # 3:00 PM Eastern Time (19:00 UTC)
   workflow_dispatch:     # Allow manual triggering too
 
 jobs:
@@ -31,6 +31,9 @@ jobs:
         env:
           PHISH_API_KEY: ${{ secrets.PHISH_API_KEY }}
         run: python Setlist_Creation/Get_Setlists.py
+
+      - name: Run predictions script
+        run: python Making_Predictions/Make_Predictions.py
 
       - name: Commit and push changes
         env:
