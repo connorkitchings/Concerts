@@ -5,7 +5,7 @@ permissions:
 
 on:
   schedule:
-    - cron: "0 19 * * *"  # 3:00 PM Eastern Time (19:00 UTC)
+    - cron: "15 15 * * *"  # 3:00 PM Eastern Time (19:00 UTC)
   workflow_dispatch:     # Allow manual triggering too
 
 jobs:
