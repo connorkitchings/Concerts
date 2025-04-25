@@ -1,7 +1,7 @@
 song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg_show_gap
 400,Turned Clouds,1,Goose,2014-11-21,2025-02-08,111,6.74
 402,Into the Myst,1,Goose,2014-12-23,2025-02-08,71,10.8
-403,Arcadia,1,Goose,2014-11-21,2025-02-11,197,3.86
+403,Arcadia,1,Goose,2014-11-21,2025-04-24,198,3.84
 404,Time to Flee,1,Goose,2018-03-15,2025-02-13,106,5.27
 405,Wysteria Lane,1,Vasudo,2017-04-01,2025-02-10,107,6.07
 406,Lead the Way,1,Goose,2014-12-20,2024-11-09,85,8.88
@@ -19,7 +19,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 418,Tumble,1,Vasudo,2019-01-31,2025-02-15,116,4.04
 419,Disco Inferno,0,The Trammps,2018-10-26,2022-12-18,29,16.17
 420,Creatures,1,Goose,2015-10-01,2025-02-14,128,5.59
-421,So Ready,1,Goose,2015-03-14,2025-02-13,138,5.39
+421,So Ready,1,Goose,2015-03-14,2025-04-24,139,5.35
 422,Slow Ready,1,Goose,2019-03-01,2025-02-10,88,5.16
 424,I'm Writing A Novel,0,Father John Misty,2020-03-21,2025-02-06,14,24.07
 425,The Whales,1,Goose,2020-06-27,2025-02-06,43,7.37
@@ -105,7 +105,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 509,Love Me Sexy,0,Jackie Moon,2019-10-31,2019-11-27,2,193.5
 510,Love T.K.O.,0,Teddy Pendergrass,2018-04-06,2018-04-21,2,263.0
 511,Lovely Day,0,Bill Withers,2020-01-24,2020-03-11,2,182.5
-512,Madhuvan,1,Goose,2014-12-20,2025-02-15,165,4.91
+512,Madhuvan,1,Goose,2014-12-20,2025-04-24,166,4.88
 513,Mas Que Nada,0,Sergio Mendes,2018-07-12,2024-10-24,22,22.45
 514,Make The Move,0,Kenny Loggins,2018-07-05,2024-06-20,19,27.56
 515,Me and Julio Down By The Schoolyard,0,Paul Simon,2018-04-21,2022-06-12,21,24.67
@@ -210,8 +210,9 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 637,(dawn),1,Goose,2022-01-26,2025-02-15,9,28.11
 639,The Labyrinth,1,Goose,2021-06-11,2024-12-31,10,29.3
 641,Franklin's Tower,0,Grateful Dead,2024-12-14,2024-12-14,1,12.0
-645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-02-14,20,4.1
+645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-04-24,21,3.9
 646,Turbulence & The Night Rays,1,Vasudo,2022-06-10,2025-02-06,39,5.62
+647,Your Direction,1,Vasudo,2025-04-24,2025-04-24,1,0.0
 650,The Night They Drove Old Dixie Down,0,The Band,2016-06-17,2024-06-22,2,346.0
 651,The Shape I'm In,0,The Band,2023-10-01,2023-10-01,1,102.0
 656,Back On The Train,0,Phish,2014-12-23,2019-05-04,2,372.5
@@ -244,11 +245,11 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 732,Dim Lights,1,Orebolo,2024-11-10,2024-11-10,1,17.0
 733,Arise,1,St. John's Revival,2022-01-30,2024-09-27,6,41.5
 735,California Magic,1,Goose,2022-03-01,2025-02-07,42,5.67
-736,Silver Rising,1,Goose,2022-02-02,2025-02-08,58,4.28
+736,Silver Rising,1,Goose,2022-02-02,2025-04-24,59,4.2
 737,Jeff Engborg,1,Great Blue,2022-02-05,2025-02-07,11,22.27
 738,Dripfield,1,Goose,2022-02-26,2025-02-14,55,4.43
-739,Sinnerman,0,Nina Simone,2022-02-26,2025-02-15,11,21.73
-740,Hungersite,1,Goose,2022-02-26,2025-02-15,61,3.92
+739,Sinnerman,0,Nina Simone,2022-02-26,2025-04-24,12,19.92
+740,Hungersite,1,Goose,2022-02-26,2025-04-24,62,3.85
 741,Trevor Reads Poetry,1,Goose,2020-06-20,2023-09-23,6,53.67
 747,Happy Birthday,0,Goose,2018-02-15,2020-10-15,6,89.5
 760,Hallelujah,0,Leonard Cohen,2017-05-20,2017-05-20,1,630.0
@@ -265,7 +266,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 805,Everything Must Go,1,Goose,2022-10-01,2025-02-13,34,5.68
 807,"So Fresh, So Clean",0,Outkast,2022-10-08,2022-10-08,1,188.0
 808,Born To Be Wild,0,Steppenwolf,2022-10-15,2022-10-15,1,183.0
-809,Thatch,1,Goose,2022-11-13,2025-02-15,46,3.85
+809,Thatch,1,Goose,2022-11-13,2025-04-24,47,3.77
 811,You Are So Beautiful,0,Joe Cocker,2017-05-20,2017-05-20,1,630.0
 812,"Signed, Sealed, Delivered",0,Stevie Wonder,2017-05-20,2017-05-20,1,630.0
 813,Burning Down the House,0,Talking Heads,2017-05-20,2023-12-08,2,315.0
@@ -298,7 +299,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 911,No California,0,Ilsey Juber,2024-06-07,2025-02-08,3,24.0
 914,True Love Waits,0,Radiohead,2024-09-19,2025-02-07,2,20.5
 930,SALT,1,Goose,2024-04-07,2025-02-06,10,9.11
-931,Give it Time,1,Goose,2024-04-09,2025-02-15,15,5.33
+931,Give it Time,1,Goose,2024-04-09,2025-04-24,16,5.0
 933,How it Ends,1,Vasudo,2024-04-10,2024-04-10,1,79.0
 935,Gen X Cops,0,Vampire Weekend,2024-04-10,2024-04-10,1,79.0
 943,Draconian Meter Maid,1,Swimmer,2024-09-01,2025-02-06,9,6.0
