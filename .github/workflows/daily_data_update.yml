@@ -5,8 +5,8 @@ permissions:
 
 on:
   schedule:
-    - cron: "0 19 * * *"  # 3:00 PM Eastern Time (19:00 UTC)
-  workflow_dispatch:     # Allow manual triggering too
+    - cron: "0 22 * * *"  # 5:00 PM Central Time (15:15 UTC during DST)
+  workflow_dispatch:       # Allow manual triggering too
 
 jobs:
   run-script-and-commit:
@@ -41,6 +41,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git pull origin main --rebase
           git add Data/**/*.csv
           git commit -m "Daily data update" || echo "No changes to commit"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/connorkitchings/Concerts.git HEAD:main
