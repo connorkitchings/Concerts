@@ -41,7 +41,9 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git stash -u
           git pull origin main --rebase
+          git stash pop || true
           git add Data/**/*.csv
           git commit -m "Daily data update" || echo "No changes to commit"
           git push https://x-access-token:${GITHUB_TOKEN}@github.com/connorkitchings/Concerts.git HEAD:main
