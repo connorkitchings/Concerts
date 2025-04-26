@@ -328,6 +328,32 @@ class WSPSetlistCollector(SetlistCollector):
         songs_final = songs_final.reset_index(drop=True)
         return songs_final
 
+    def update_next_show_json(self, show_data: pd.DataFrame) -> None:
+        """Update the next_show.json file with the next upcoming show."""
+        # Find the next show after today
+        today_dt = pd.to_datetime(self.today)
+        show_data['parsed_date'] = pd.to_datetime(show_data['date'], errors='coerce')
+        future_shows = show_data[show_data['parsed_date'] >= today_dt]
+        
+        if not future_shows.empty:
+            next_show_row = future_shows.sort_values('parsed_date').iloc[0]
+            next_show = {
+                "date": str(next_show_row['parsed_date'].date()),
+                "venue": next_show_row['venue'],
+                "city": next_show_row['city'],
+                "state": next_show_row['state']
+            }
+            logger.info(f"Found next show: {next_show['date']} at {next_show['venue']} in {next_show['city']}, {next_show['state']}")
+        else:
+            next_show = None
+            logger.info("No future shows found in schedule")
+
+        # Write JSON to From Web directory
+        next_show_path = self.data_dir / "next_show.json"
+        with open(next_show_path, "w") as f:
+            json.dump({"next_show": next_show}, f, indent=2)
+        logger.info(f"Updated next_show.json")
+
     def load_setlist_data(self, link_list, method='update'):
         if method == 'all':
             logger.info("Loading All WSP Setlist Data")
@@ -349,6 +375,7 @@ class WSPSetlistCollector(SetlistCollector):
                 logger.error("No setlist data found for any link.")
                 return pd.DataFrame()
             all_setlists = pd.concat(setlist_frames, ignore_index=True)
+            return all_setlists
         elif method == 'update':
             logger.info("Updating Existing WSP Setlist Data")
             try:
@@ -388,8 +415,17 @@ class WSPSetlistCollector(SetlistCollector):
         if show_data is None or show_data.empty:
             logging.error("No show data loaded for WSP. Skipping setlist collection.")
             return
+
+        # Create data directory if it doesn't exist
+        os.makedirs(self.data_dir, exist_ok=True)
+
+        # Check if setlist data exists to determine method
+        setlist_file = self.data_dir / "setlistdata.csv"
+        method = 'update' if setlist_file.exists() else 'all'
+        logger.info(f"Using {method} method for setlist data collection")
+
         self.link_list = show_data.link.unique()
-        setlist_data = self.load_setlist_data(self.link_list, method = 'update')
+        setlist_data = self.load_setlist_data(self.link_list, method=method)
 
         try:
             # Define files to save
@@ -399,36 +435,21 @@ class WSPSetlistCollector(SetlistCollector):
                 'setlistdata.csv': setlist_data
             }
             # Save each file
-            logger.info("Saving data.")
+            logger.info("Saving data")
             for filename, data in data_pairs.items():
                 filepath = self.data_dir / filename
                 data.to_csv(filepath, index=False)
+                logger.info(f"Saved {filename}")
 
-            # --- Save next_show.json ---
-            # Find the next show after today
-            today_dt = pd.to_datetime(self.today)
-            show_data['parsed_date'] = pd.to_datetime(show_data['date'], errors='coerce')
-            future_shows = show_data[show_data['parsed_date'] > today_dt]
-            if not future_shows.empty:
-                next_show_row = future_shows.sort_values('parsed_date').iloc[0]
-                next_show = {
-                    "date": str(next_show_row['parsed_date'].date()),
-                    "venue": next_show_row['venue'],
-                    "city": next_show_row['city'],
-                    "state": next_show_row['state']
-                }
-            else:
-                next_show = None
-            # Write JSON to From Web directory
-            from_web_dir = Path(self.data_dir) / "From Web"
-            os.makedirs(from_web_dir, exist_ok=True)
-            with open(from_web_dir / "next_show.json", "w") as f:
-                json.dump({"next_show": next_show}, f, indent=2)
+            # Update next show information
+            self.update_next_show_json(show_data)
+
         except Exception as e:
             logger.error(f"Error saving Widespread Panic data: {e}", exc_info=True)
-        # Save last_updated timestamp to a json file in the data directory
+            return
+
+        # Save last_updated timestamp
         self.update_last_updated()  # Use current time from SetlistCollector
-        os.makedirs(self.data_dir, exist_ok=True)
         with open(os.path.join(self.data_dir, 'last_updated.json'), 'w') as f:
             json.dump({'last_updated': self.last_updated}, f)
-        logger.info("Finished create_and_save_data")
+        logger.info("Successfully completed create_and_save_data")

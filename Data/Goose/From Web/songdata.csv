@@ -14,6 +14,8 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 413,Jive II,1,Goose,2015-03-14,2025-02-15,82,9.0
 414,All I Need,1,LP Giobbi,2023-09-14,2023-09-14,1,115.0
 414,All I Need,1,Goose,2017-01-28,2025-02-13,145,4.78
+864,All I Need,0,LP Giobbi,2023-09-14,2023-09-14,1,115.0
+864,All I Need,0,Goose,2017-01-28,2025-02-13,145,4.78
 415,Butter Rum,1,Vasudo,2018-04-06,2025-02-11,112,4.83
 416,Yeti,1,Great Blue,2018-10-26,2025-02-10,113,4.6
 418,Tumble,1,Vasudo,2019-01-31,2025-02-15,116,4.04
@@ -202,6 +204,8 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 630,Shakedown Street,0,Grateful Dead,2016-11-23,2016-11-23,1,668.0
 631,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,153.0
 631,Revival,0,The Allman Brothers Band,2017-05-20,2017-05-20,1,630.0
+868,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,153.0
+868,Revival,0,The Allman Brothers Band,2017-05-20,2017-05-20,1,630.0
 632,Wasted Words,0,The Allman Brothers Band,2017-01-28,2017-01-28,1,660.0
 633,Psycho Killer,0,Talking Heads,2016-11-23,2024-11-10,3,222.67
 634,First Tube,0,Phish,2016-10-09,2016-11-23,2,338.5
@@ -280,11 +284,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 833,Stand By Me,0,Ben E. King,2016-10-09,2017-05-20,2,338.5
 834,Loving Cup,0,The Rolling Stones,2016-10-09,2016-10-09,1,677.0
 843,Wild Summer Nights,0,John Cafferty,2023-07-04,2023-07-04,1,122.0
-864,All I Need,0,LP Giobbi,2023-09-14,2023-09-14,1,115.0
-864,All I Need,0,Goose,2017-01-28,2025-02-13,145,4.78
 867,I Would Die 4 U,0,Prince,2023-10-06,2025-02-11,7,14.14
-868,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,153.0
-868,Revival,0,The Allman Brothers Band,2017-05-20,2017-05-20,1,630.0
 883,Mirrors,0,Justin Timberlake,2023-12-08,2023-12-08,1,84.0
 884,Man in the Mirror,0,Michael Jackson,2023-12-08,2023-12-08,1,84.0
 885,Fire,0,Jimi Hendrix,2023-12-08,2023-12-08,1,84.0

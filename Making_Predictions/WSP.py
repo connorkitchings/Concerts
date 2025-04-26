@@ -138,7 +138,8 @@ class WSPPredictionMaker(PredictionMaker):
         my_song_data['ltp_date'] = pd.to_datetime(my_song_data['ltp_date'], format='%m/%d/%y').dt.date
 
         ck_plus = (my_song_data[(my_song_data['times_played_total'] > 10) & 
-                                (my_song_data['ltp_date'] > five_years_ago)].copy()           
+                                (my_song_data['ltp_date'] > five_years_ago) &
+                                (my_song_data['song_name'] != 'Drums')].copy()           
                    .sort_values(by='gap_zscore', ascending=False)
                    .reset_index(drop=True)
                    .drop(columns=['debut_date', 'std_gap','gap_zscore'])
@@ -196,7 +197,7 @@ class WSPPredictionMaker(PredictionMaker):
             )[['song', 'times_played_in_last_year', 'ltp_date','current_gap', 'avg_gap', 'med_gap']]
 
         notebook = (
-            notebook[(notebook['current_gap'] > 3)]
+            notebook[(notebook['current_gap'] > 3) & (notebook['song'] != 'Drums')]
             .sort_values(by='times_played_in_last_year', ascending=False)
             .reset_index(drop=True)
         )
