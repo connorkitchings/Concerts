@@ -137,8 +137,8 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 135,"Canopy Club, The",Urbana,IL,USA,38,2018-10-18
 136,Cape Cod Melody Tent,Hyannis,MA,USA,2,2023-06-03
 137,Capitol Center for the Arts,Concord,NH,USA,1,2011-09-14
-138,"Capitol Theatre, The",Davenport,IA,USA,2,2009-07-16
-139,"Capitol Theatre, The",Port Chester,NY,USA,11,2025-02-01
+138,"Capitol Theatre, The",Port Chester,NY,USA,11,2025-02-01
+139,"Capitol Theatre, The",Davenport,IA,USA,2,2009-07-16
 140,Cargo at Whitney Peak,Reno,NV,USA,1,2015-03-08
 141,Carling Academy Islington,London,,England,1,2008-03-14
 142,Carnival's Celebration,Atlantic Ocean,,Atlantic Ocean,2,2005-01-09
@@ -261,8 +261,8 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 259,Festival Pier at Penn's Landing,Philadelphia,PA,USA,2,2008-07-25
 260,Field Museum,Chicago,IL,USA,1,2001-08-16
 261,Filene Center at Wolf Trap,Vienna,VA,USA,2,2013-09-01
-262,"Fillmore, The",San Francisco,CA,USA,10,2011-03-13
-263,"Fillmore, The",Philadelphia,PA,USA,9,2023-01-14
+262,"Fillmore, The",Philadelphia,PA,USA,9,2023-01-14
+263,"Fillmore, The",San Francisco,CA,USA,10,2011-03-13
 264,"Fillmore, The",Charlotte,NC,USA,8,2024-01-11
 265,"Fillmore, The",Detroit,MI,USA,17,2024-02-03
 266,Fillmore Auditorium,Denver,CO,USA,24,2019-12-31
@@ -303,8 +303,8 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 301,Goose Island Brewery,Chicago,IL,USA,1,2003-02-23
 302,"Gothic Theatre, The",Englewood,CO,USA,6,2010-07-04
 303,Graceland Soundstage at Elvis Presley's Memphis,Memphis,TN,USA,1,2020-02-12
-304,"Granada Theater, The",Dallas,TX,USA,4,2008-09-12
-305,"Granada Theater, The",Lawrence,KS,USA,5,2005-02-28
+304,"Granada Theater, The",Lawrence,KS,USA,5,2005-02-28
+305,"Granada Theater, The",Dallas,TX,USA,4,2008-09-12
 306,"Grand Ballroom, The",New York,NY,USA,1,2008-10-13
 307,Grand Opera House,Wilmington,DE,USA,1,2009-04-02
 308,Grand Sierra Theatre,Reno,NV,USA,2,2022-09-04
@@ -344,8 +344,8 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 342,Henfling's,Santa Cruz,CA,USA,1,2001-07-04
 343,Henry Maier Festival Park,Milwaukee,WI,USA,9,2024-06-22
 344,High Falls,Rochester,NY,USA,1,2005-07-19
-345,Higher Ground,Winooski,VT,USA,3,2003-03-01
-346,Higher Ground,South Burlington,VT,USA,20,2024-04-25
+345,Higher Ground,South Burlington,VT,USA,20,2024-04-25
+346,Higher Ground,Winooski,VT,USA,3,2003-03-01
 347,Historic Ashland Armory,Ashland,OR,USA,2,2012-03-21
 348,"Hive, The",Sandpoint,ID,USA,4,2019-03-10
 349,Hog Ridge Hollow Amphitheater,Fayetteville,AR,USA,1,2003-09-27
@@ -354,19 +354,19 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 352,Hoosier Fest,Bloomington,IN,USA,1,2000-08-26
 353,Horizon Event Center,Clive,IA,USA,1,2024-05-18
 354,Horning's Hideout,North Plains,OR,USA,1,2022-07-23
-355,House of Blues,Las Vegas,NV,USA,5,2013-03-21
-356,House of Blues,Lake Buena Vista,FL,USA,5,2023-04-14
-357,House of Blues,New Orleans,LA,USA,7,2012-04-14
-358,House of Blues,Houston,TX,USA,5,2023-04-21
+355,House of Blues,Cambridge,MA,USA,1,2001-02-20
+356,House of Blues,Chicago,IL,USA,6,2004-10-08
+357,House of Blues,Houston,TX,USA,5,2023-04-21
+358,House of Blues,San Diego,CA,USA,9,2015-03-05
 359,House of Blues,Boston,MA,USA,13,2024-04-27
-360,House of Blues,Cambridge,MA,USA,1,2001-02-20
-361,House of Blues,Chicago,IL,USA,6,2004-10-08
-362,House of Blues,Cleveland,OH,USA,13,2024-01-31
-363,House of Blues,San Diego,CA,USA,9,2015-03-05
-364,House of Blues,Anaheim,CA,USA,3,2023-02-24
-365,House of Blues,Atlantic City,NJ,USA,3,2011-09-22
-366,House of Blues,North Myrtle Beach,SC,USA,5,2016-07-08
-367,House of Blues,Dallas,TX,USA,11,2023-04-22
+360,House of Blues,Atlantic City,NJ,USA,3,2011-09-22
+361,House of Blues,North Myrtle Beach,SC,USA,5,2016-07-08
+362,House of Blues,Dallas,TX,USA,11,2023-04-22
+363,House of Blues,Anaheim,CA,USA,3,2023-02-24
+364,House of Blues,Cleveland,OH,USA,13,2024-01-31
+365,House of Blues,Las Vegas,NV,USA,5,2013-03-21
+366,House of Blues,New Orleans,LA,USA,7,2012-04-14
+367,House of Blues,Lake Buena Vista,FL,USA,5,2023-04-14
 368,House of Blues - Parish,New Orleans,LA,USA,1,2003-04-30
 369,House of Blues - Sunset Strip,West Hollywood,CA,USA,9,2013-03-23
 370,House of Glass,Dunsmuir,CA,USA,1,2003-07-08
@@ -417,10 +417,10 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 415,Kingston Downs,Rome,GA,USA,1,2015-05-24
 416,Kirby Fieldhouse - Hampden-Sydney College,Hampden Sydney,VA,USA,1,2014-10-17
 417,"Klein, The",Bridgeport,CT,USA,2,2013-10-17
-418,Knitting Factory,Reno,NV,USA,2,2010-10-02
-419,Knitting Factory,Boise,ID,USA,3,2012-03-24
-420,Knitting Factory,New York,NY,USA,1,2002-06-07
-421,Knitting Factory,Spokane,WA,USA,1,2009-10-21
+418,Knitting Factory,New York,NY,USA,1,2002-06-07
+419,Knitting Factory,Spokane,WA,USA,1,2009-10-21
+420,Knitting Factory,Reno,NV,USA,2,2010-10-02
+421,Knitting Factory,Boise,ID,USA,3,2012-03-24
 422,Knust,Hamburg,,Germany,1,2006-03-23
 423,Koka Booth Amphitheatre at Regency Park,Cary,NC,USA,2,2008-07-31
 424,Kresge Auditorium,Interlochen,MI,USA,1,2012-07-03
@@ -443,8 +443,8 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 441,"Lawn at White River State Park, The",Indianapolis,IN,USA,9,2019-08-24
 442,LeClaire Park,Davenport,IA,USA,1,2005-08-20
 443,Legend Valley Music Center,Thornville,OH,USA,3,2022-07-16
-444,Legends,Boone,NC,USA,2,2010-11-10
-445,Legends,Notre Dame,IN,USA,1,2003-11-07
+444,Legends,Notre Dame,IN,USA,1,2003-11-07
+445,Legends,Boone,NC,USA,2,2010-11-10
 446,Legends Lounge,Las Vegas,NV,USA,1,2001-07-11
 447,Les Conneries,Montreal,QC,Canada,1,1999-07-04
 448,Levitt Pavilion for the Performing Arts,Westport,CT,USA,1,2024-07-04
@@ -552,8 +552,8 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 550,Mulberry Mountain,Ozark,AR,USA,14,2019-05-31
 551,Murat Shrine Center,Indianapolis,IN,USA,10,2009-03-14
 552,"Music Box, The",Omaha,NE,USA,2,2001-06-14
-553,Music Farm,Charleston,SC,USA,14,2015-09-26
-554,Music Farm,Columbia,SC,USA,2,2017-06-02
+553,Music Farm,Columbia,SC,USA,2,2017-06-02
+554,Music Farm,Charleston,SC,USA,14,2015-09-26
 555,Music Millennium (Northwest),Portland,OR,USA,1,2006-04-08
 556,Muskegon Summer Celebration,Muskegon,MI,USA,1,2007-07-04
 557,"National, The",Richmond,VA,USA,13,2024-01-14
@@ -766,10 +766,10 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 764,Starr Hill Music Hall,Charlottesville,VA,USA,1,2002-02-20
 765,"State Fair of West Virginia, The",Lewisburg,WV,USA,1,2023-09-22
 766,"State Theatre, The",State College,PA,USA,3,2013-10-21
-767,State Theatre,St. Petersburg,FL,USA,1,2007-02-22
-768,"State Theatre, The",Ithaca,NY,USA,1,2006-09-28
+767,"State Theatre, The",Ithaca,NY,USA,1,2006-09-28
+768,"State Theatre, The",Falls Church,VA,USA,4,2003-11-15
 769,State Theatre,Portland,ME,USA,9,2024-07-06
-770,"State Theatre, The",Falls Church,VA,USA,4,2003-11-15
+770,State Theatre,St. Petersburg,FL,USA,1,2007-02-22
 771,"State Theatre, The",South Bend,IN,USA,16,2003-12-10
 772,Stateside Amphitheater at Jay Peak Resort,Jay,VT,USA,1,2015-06-19
 773,SteelStacks Campus,Bethlehem,PA,USA,1,2011-09-04
@@ -779,7 +779,7 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 777,Stone Pony Summerstage,Asbury Park,NJ,USA,11,2024-08-28
 778,"Stones Throw, The",Eau Claire,WI,USA,1,2004-02-29
 779,"Strand, The",Providence,RI,USA,1,2018-05-18
-780,Stubb's BBQ,Austin,TX,USA,10,2017-04-20
+780,Stubb's BBQ,Austin,TX,USA,11,2025-04-27
 781,Studio C,Boulder,CO,USA,2,2005-02-25
 782,"Studio Hall, University of Wisconsin",Oshkosh,WI,USA,1,2003-10-17
 783,Studio Z,San Francisco,CA,USA,1,2003-07-09
@@ -816,8 +816,8 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 814,Time Warner Uptown Amphitheatre,Charlotte,NC,USA,1,2013-08-28
 815,Tipitina's,New Orleans,LA,USA,1,2002-03-13
 816,Tipitina's Uptown,New Orleans,LA,USA,3,2005-04-30
-817,Toad's Place,New Haven,CT,USA,4,2009-04-05
-818,Toad's Place,Richmond,VA,USA,1,2007-10-16
+817,Toad's Place,Richmond,VA,USA,1,2007-10-16
+818,Toad's Place,New Haven,CT,USA,4,2009-04-05
 819,Tongue-N-Groove,San Francisco,CA,USA,1,2001-07-03
 820,Tower Records (Columbus),San Francisco,CA,USA,1,2006-04-15
 821,"Tower Theatre, The",Upper Darby,PA,USA,1,2014-08-09
@@ -874,8 +874,8 @@ id,Venue Name,City,State,Country,Times Played,Last Played
 872,"Warfield, The",San Francisco,CA,USA,1,2008-10-31
 873,"Warhouse, The",Indianapolis,IN,USA,1,1998-06-05
 874,Water Street Music Hall,Rochester,NY,USA,5,2012-10-18
-875,Waterfront Park,Louisville,KY,USA,2,2010-07-10
-876,Waterfront Park,Burlington,VT,USA,1,2014-08-07
+875,Waterfront Park,Burlington,VT,USA,1,2014-08-07
+876,Waterfront Park,Louisville,KY,USA,2,2010-07-10
 877,"Webster Theater, The",Hartford,CT,USA,1,2005-09-15
 878,Weed Street Summer Fest,Chicago,IL,USA,3,2002-06-29
 879,"Weesner Family Amphitheater, Minnesota Zoo",Apple Valley,MN,USA,3,2008-07-06
