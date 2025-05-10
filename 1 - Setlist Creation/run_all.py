@@ -28,14 +28,11 @@ def run_band(band, script_path, logger):
     import time
     script_full_path = os.path.join(BASE_DIR, script_path)
     logger.info(f"Running {band} pipeline")
-    start_time = time.time()
     result = subprocess.run([sys.executable, script_full_path], capture_output=True, text=True)
-    duration = time.time() - start_time
     if result.stdout:
         logger.info(f"{band} output:\n{result.stdout}")
     if result.stderr and result.returncode != 0:
         logger.error(f"{band} [stderr]:\n{result.stderr}")
-    logger.info(f"Finished {band} pipeline in {duration:.2f} seconds.")
 
 def main():
     # Add blank line to log file to separate runs

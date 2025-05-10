@@ -1,5 +1,8 @@
 import os
-import logging
+from logger import get_logger
+
+logger = get_logger(__name__)
+
 import json
 from datetime import datetime
 from pathlib import Path
@@ -18,7 +21,7 @@ def load_song_data():
     soup = BeautifulSoup(response.text, 'html.parser')
     tables = pd.read_html(StringIO(str(soup.find_all('table'))))
     if not tables or len(tables) <= SONG_TABLE_IDX:
-        logging.error(f"Expected table at index {SONG_TABLE_IDX} not found in Goose song page.")
+        logger.error(f"Expected table at index {SONG_TABLE_IDX} not found in Goose song page.")
         return pd.DataFrame()
     songdata_scrape = tables[SONG_TABLE_IDX].sort_values(by='Song Name').reset_index(drop=True)
     merged_data = songdata_api.merge(

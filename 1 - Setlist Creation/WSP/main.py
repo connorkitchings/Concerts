@@ -3,7 +3,7 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-import logging
+from logger import get_logger
 from scrape_shows import scrape_wsp_shows
 from scrape_songs import scrape_wsp_songs
 from scrape_setlists import load_setlist_data
@@ -15,12 +15,22 @@ import time
 
 if __name__ == "__main__":
     import traceback
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(asctime)s [%(levelname)s] %(name)s - %(message)s',
-        datefmt='%Y-%m-%d %H:%M:%S'
-    )
-    logger = logging.getLogger(__name__)
+    logger = get_logger(__name__)
+    # Log previous last update
+    data_dir = get_data_dir()
+    last_updated_path = os.path.join(data_dir, "last_updated.json")
+    prev_update = None
+    if os.path.exists(last_updated_path):
+        try:
+            import json
+            with open(last_updated_path, "r") as f:
+                prev_update = json.load(f).get("last_updated")
+        except Exception as e:
+            logger.warning(f"Could not read last_updated.json: {e}")
+    if prev_update:
+        logger.info(f"Previous Last update: {prev_update}")
+    else:
+        logger.info("No previous update found.")
     start_time = time.time()
     try:
         data_dir = get_data_dir()

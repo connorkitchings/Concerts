@@ -3,7 +3,10 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from io import StringIO
 import re
-import logging
+from logger import get_logger
+
+logger = get_logger(__name__)
+
 import os
 import json
 from datetime import datetime
@@ -50,7 +53,7 @@ def get_setlist_from_url(url, show_date=None):
         soup = BeautifulSoup(html_content, 'html.parser')
         tables = soup.find_all('table')
         if not tables or len(tables) == 0:
-            logging.warning(f"No tables found for setlist at {url}")
+            logger.warning(f"No tables found for setlist at {url}")
             return pd.DataFrame()
         tables_str = str(tables)
         tables_io = StringIO(tables_str)
@@ -63,7 +66,7 @@ def get_setlist_from_url(url, show_date=None):
         song_table['Date Played'] = pd.to_datetime(song_table['Date Played']).dt.date
         return song_table
     except Exception as e:
-        logging.error(f"Error fetching setlist from {url}: {e}", exc_info=True)
+        logger.error(f"Error fetching setlist from {url}: {e}", exc_info=True)
         return pd.DataFrame()
 
 def scrape_um_setlist_data(base_url=BASE_URL):
@@ -79,7 +82,7 @@ def scrape_um_setlist_data(base_url=BASE_URL):
     if tables:
         tables_str = str(tables)
     else:
-        logging.error("No tables found on UM songlist page.")
+        logger.error("No tables found on UM songlist page.")
         return pd.DataFrame()
     # Extract song names using regex
     pattern = r'href="/song/([^"]+)"'
@@ -95,7 +98,7 @@ def scrape_um_setlist_data(base_url=BASE_URL):
         title = re.search(r'"(.*?)"', title_tag.get_text()).group(1) if title_tag and '"' in title_tag.get_text() else 'Unknown Title'
         tables = soup.find_all('table')
         if not tables or len(tables) == 0:
-            logging.warning(f"No tables found for song {song} at {song_url}")
+            logger.warning(f"No tables found for song {song} at {song_url}")
             continue
         tables_str = str(tables)
         tables_io = StringIO(tables_str)
@@ -107,7 +110,7 @@ def scrape_um_setlist_data(base_url=BASE_URL):
             song_table = song_table.drop(columns=['Show Gap'])
         setlists.append(song_table)
     if not setlists:
-        logging.error("No setlists could be parsed from UM song pages.")
+        logger.error("No setlists could be parsed from UM song pages.")
         return pd.DataFrame()
     setlist_data = pd.concat(setlists).reset_index(drop=True)
     setlist_data['Footnote'] = setlist_data['Footnote'].fillna('')
@@ -118,10 +121,10 @@ def update_um_data():
     data_dir = get_data_dir()
     existing_data = load_existing_data(data_dir)
     last_update = get_last_update_time(data_dir)
-    print(f"Last update: {last_update}")
+    logger.info(f"Last update: {last_update}")
 
     # Update song catalog
-    print("Checking for new songs...")
+    logger.info("Checking for new songs...")
     new_song_data = scrape_um_songs()
     if not existing_data['songdata.csv'].empty:
         merged_songs = pd.concat([existing_data['songdata.csv'], new_song_data]).drop_duplicates(subset=['Song Name'])
@@ -129,7 +132,7 @@ def update_um_data():
         merged_songs = new_song_data
 
     # Update venue data
-    print("Checking for new venues...")
+    logger.info("Checking for new venues...")
     _, new_venue_data = scrape_um_shows()
     if not existing_data['venuedata.csv'].empty:
         merged_venues = pd.concat([existing_data['venuedata.csv'], new_venue_data]).drop_duplicates()
@@ -137,14 +140,14 @@ def update_um_data():
         merged_venues = new_venue_data
 
     # Update setlist data
-    print("Checking for new setlists...")
+    logger.info("Checking for new setlists...")
     new_setlist_data = create_um_setlist_data()
     if not existing_data['setlistdata.csv'].empty:
         merged_setlists = pd.concat([existing_data['setlistdata.csv'], new_setlist_data]).drop_duplicates()
     else:
         merged_setlists = new_setlist_data
 
-    print("Saving updated data...")
+    logger.info("Saving updated data...")
     save_um_data(merged_songs, merged_venues, merged_setlists, data_dir)
     save_query_data(data_dir)
-    print("UM data update complete.")
+    logger.info("UM data update complete.")

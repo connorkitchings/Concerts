@@ -2,7 +2,10 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from io import StringIO
-import logging
+from logger import get_logger
+
+logger = get_logger(__name__)
+
 
 VENUE_TABLE_IDX = 0
 BASE_URL = "https://allthings.umphreys.com"
@@ -19,7 +22,7 @@ def scrape_um_shows(base_url=BASE_URL):
     soup = BeautifulSoup(html_content, 'html.parser')
     tables = soup.find_all('table')
     if not tables or len(tables) <= VENUE_TABLE_IDX:
-        logging.error(f"Expected venue table at index {VENUE_TABLE_IDX} not found in UM venue page.")
+        logger.error(f"Expected venue table at index {VENUE_TABLE_IDX} not found in UM venue page.")
         return pd.DataFrame(), pd.DataFrame()
     tables_str = str(tables)
     tables_io = StringIO(tables_str)

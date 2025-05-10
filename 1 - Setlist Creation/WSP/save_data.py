@@ -1,11 +1,14 @@
 import os
 import json
 from datetime import datetime, date
-import logging
+from logger import get_logger
+
+logger = get_logger(__name__)
+
 import csv
 import pandas as pd
 
-logger = logging.getLogger(__name__)
+# logger initialized above using get_logger from logger.py
 def save_wsp_data(song_data, show_data, setlist_data, data_dir):
     os.makedirs(data_dir, exist_ok=True)
     data_pairs = {

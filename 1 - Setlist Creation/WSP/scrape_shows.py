@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 import re
-import logging
-logger = logging.getLogger(__name__)
+from logger import get_logger
+logger = get_logger(__name__)
 from datetime import datetime, date
 
 def scrape_wsp_shows(base_url='http://www.everydaycompanion.com/', start_year=1985, skip_years=[2004]):

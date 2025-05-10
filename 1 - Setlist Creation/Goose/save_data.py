@@ -2,6 +2,10 @@ import os
 import json
 from datetime import datetime
 from utils import get_date_and_time
+from logger import get_logger
+
+logger = get_logger(__name__)
+
 
 def save_goose_data(song_data, show_data, venue_data, setlist_data, transition_data, data_dir):
     os.makedirs(data_dir, exist_ok=True)

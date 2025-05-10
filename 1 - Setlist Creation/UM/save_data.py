@@ -18,6 +18,10 @@ def save_um_data(song_data, venue_data, setlist_data, data_dir):
     next_show_path = os.path.join(data_dir, "next_show.json")
     if next_show is not None and not next_show.empty:
         next_show_record = next_show.iloc[0].to_dict()
+        # Ensure all date/datetime objects are converted to strings
+        for k, v in next_show_record.items():
+            if hasattr(v, 'isoformat'):
+                next_show_record[k] = v.isoformat()
         with open(next_show_path, "w") as f:
             json.dump({"next_show": next_show_record}, f, indent=2)
     else:

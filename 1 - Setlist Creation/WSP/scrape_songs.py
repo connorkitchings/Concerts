@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import logging
-logger = logging.getLogger(__name__)
+from logger import get_logger
+logger = get_logger(__name__)
 from io import StringIO
 
 SONG_CODES_TABLE_IDX = 3

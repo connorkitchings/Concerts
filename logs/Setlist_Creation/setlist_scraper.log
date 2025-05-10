@@ -1,0 +1,127 @@
+
+[2025-05-09 12:03:04] INFO __main__: Running Phish pipeline
+[2025-05-09 12:03:05] INFO __main__: Previous Last update: 05/09/2025 11:59
+[2025-05-09 12:03:05] INFO __main__: Loading Song Data
+[2025-05-09 12:03:07] INFO __main__: Loading Show and Venue Data
+[2025-05-09 12:03:07] INFO __main__: Loading Setlist and Transition Data
+[2025-05-09 12:03:16] INFO __main__: Phish pipeline completed in 10.36 seconds.
+[2025-05-09 12:03:16] INFO __main__: Running Goose pipeline
+[2025-05-09 12:03:17] INFO __main__: Previous Last update: 05/09/2025 11:59
+[2025-05-09 12:03:17] INFO __main__: Loading Song Data
+[2025-05-09 12:03:18] INFO __main__: Loading Show, Venue, and Tour Data
+[2025-05-09 12:03:18] INFO __main__: Loading Setlist and Transition Data
+[2025-05-09 12:03:19] INFO __main__: Goose pipeline completed in 2.42 seconds.
+[2025-05-09 12:03:19] INFO __main__: Running UM pipeline
+[2025-05-09 12:03:20] INFO __main__: Previous Last update: 2025-05-09 11:59:35
+[2025-05-09 12:03:20] INFO __main__: Scraping latest song data...
+[2025-05-09 12:03:25] INFO __main__: Scraping latest venue data...
+[2025-05-09 12:03:27] INFO __main__: Loading existing setlist data (no update)...
+[2025-05-09 12:03:27] INFO __main__: Saving updated data...
+[2025-05-09 12:03:27] INFO __main__: UM data update complete.
+[2025-05-09 12:03:27] INFO __main__: UM pipeline completed in 7.35 seconds.
+[2025-05-09 12:03:27] INFO __main__: Running WSP pipeline
+[2025-05-09 12:03:28] INFO __main__: Previous Last update: 2025-05-09 11:59:52
+[2025-05-09 12:03:28] INFO __main__: Scraping WSP show data...
+[2025-05-09 12:03:36] INFO __main__: Scraped 3,229 shows.
+[2025-05-09 12:03:36] INFO __main__: Scraping WSP song catalog...
+[2025-05-09 12:03:37] INFO __main__: Scraped 696 songs.
+[2025-05-09 12:03:37] INFO __main__: Scraping WSP setlists (all mode)
+[2025-05-09 12:03:37] INFO __main__: Loaded existing setlistdata.csv with 62,067 rows.
+[2025-05-09 12:03:37] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-05-09 12:03:44] WARNING scrape_setlists: No setlist data returned for date 05/16/2025, skipping.
+[2025-05-09 12:03:45] WARNING scrape_setlists: No setlist data returned for date 05/17/2025, skipping.
+[2025-05-09 12:03:45] WARNING scrape_setlists: No setlist data returned for date 06/04/2025, skipping.
+[2025-05-09 12:03:45] WARNING scrape_setlists: No setlist data returned for date 06/05/2025, skipping.
+[2025-05-09 12:03:45] WARNING scrape_setlists: No setlist data returned for date 06/06/2025, skipping.
+[2025-05-09 12:03:45] INFO __main__: Scraped/updated setlist data for all years now has 62,067 rows.
+[2025-05-09 12:03:45] INFO __main__: Saving WSP data...
+[2025-05-09 12:03:45] INFO save_data: Found next show: 2025-05-16 at Family Circle Stadium in Charleston, SC
+[2025-05-09 12:03:45] INFO __main__: WSP scraping pipeline completed in 17.31 seconds.
+[2025-05-09 12:03:46] INFO __main__: All band pipelines completed in 41.62 seconds.
+[2025-05-09 12:07:41] INFO __main__: Previous Last update: 2025-05-09 12:03:27
+[2025-05-09 12:07:41] INFO __main__: Scraping latest song data...
+[2025-05-09 12:07:46] INFO __main__: Scraping latest venue data...
+[2025-05-09 12:07:48] INFO __main__: Loading existing setlist data (no update)...
+[2025-05-09 12:07:48] INFO __main__: Saving updated data...
+[2025-05-09 12:07:48] INFO __main__: UM data update complete.
+[2025-05-09 12:07:48] INFO __main__: UM pipeline completed in 7.50 seconds.
+
+[2025-05-09 12:10:30] INFO __main__: Running Phish pipeline
+[2025-05-09 12:10:31] INFO __main__: Previous Last update: 05/09/2025 12:03
+[2025-05-09 12:10:31] INFO __main__: Loading Song Data
+[2025-05-09 12:10:33] INFO __main__: Loading Show and Venue Data
+[2025-05-09 12:10:34] INFO __main__: Loading Setlist and Transition Data
+[2025-05-09 12:10:43] INFO __main__: Phish pipeline completed in 11.10 seconds.
+[2025-05-09 12:10:43] INFO __main__: Running Goose pipeline
+[2025-05-09 12:10:44] INFO __main__: Previous Last update: 05/09/2025 12:03
+[2025-05-09 12:10:44] INFO __main__: Loading Song Data
+[2025-05-09 12:10:55] INFO __main__: Loading Show, Venue, and Tour Data
+[2025-05-09 12:10:56] INFO __main__: Loading Setlist and Transition Data
+[2025-05-09 12:10:57] INFO __main__: Goose pipeline completed in 12.80 seconds.
+[2025-05-09 12:10:57] INFO __main__: Running UM pipeline
+[2025-05-09 12:10:57] INFO __main__: Previous Last update: 2025-05-09 12:07:48
+[2025-05-09 12:10:57] INFO __main__: Scraping latest song data...
+[2025-05-09 12:11:02] INFO __main__: Scraping latest venue data...
+[2025-05-09 12:11:04] INFO __main__: Loading existing setlist data (no update)...
+[2025-05-09 12:11:04] INFO __main__: Saving updated data...
+[2025-05-09 12:11:04] INFO __main__: UM data update complete.
+[2025-05-09 12:11:04] INFO __main__: UM pipeline completed in 7.19 seconds.
+[2025-05-09 12:11:05] INFO __main__: Running WSP pipeline
+[2025-05-09 12:11:05] INFO __main__: Previous Last update: 2025-05-09 12:03:45
+[2025-05-09 12:11:05] INFO __main__: Scraping WSP show data...
+[2025-05-09 12:11:12] INFO __main__: Scraped 3,229 shows.
+[2025-05-09 12:11:12] INFO __main__: Scraping WSP song catalog...
+[2025-05-09 12:11:13] INFO __main__: Scraped 696 songs.
+[2025-05-09 12:11:13] INFO __main__: Scraping WSP setlists (all mode)
+[2025-05-09 12:11:13] INFO __main__: Loaded existing setlistdata.csv with 62,067 rows.
+[2025-05-09 12:11:13] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-05-09 12:11:22] WARNING scrape_setlists: No setlist data returned for date 05/16/2025, skipping.
+[2025-05-09 12:11:22] WARNING scrape_setlists: No setlist data returned for date 05/17/2025, skipping.
+[2025-05-09 12:11:22] WARNING scrape_setlists: No setlist data returned for date 06/04/2025, skipping.
+[2025-05-09 12:11:23] WARNING scrape_setlists: No setlist data returned for date 06/05/2025, skipping.
+[2025-05-09 12:11:23] WARNING scrape_setlists: No setlist data returned for date 06/06/2025, skipping.
+[2025-05-09 12:11:23] INFO __main__: Scraped/updated setlist data for all years now has 62,067 rows.
+[2025-05-09 12:11:23] INFO __main__: Saving WSP data...
+[2025-05-09 12:11:23] INFO save_data: Found next show: 2025-05-16 at Family Circle Stadium in Charleston, SC
+[2025-05-09 12:11:23] INFO __main__: WSP scraping pipeline completed in 18.20 seconds.
+[2025-05-09 12:11:23] INFO __main__: All band pipelines completed in 53.50 seconds.
+
+[2025-05-09 12:11:44] INFO __main__: Running Phish pipeline
+[2025-05-09 12:11:46] INFO __main__: Previous Last update: 05/09/2025 12:10
+[2025-05-09 12:11:46] INFO __main__: Loading Song Data
+[2025-05-09 12:11:47] INFO __main__: Loading Show and Venue Data
+[2025-05-09 12:11:48] INFO __main__: Loading Setlist and Transition Data
+[2025-05-09 12:11:56] INFO __main__: Phish pipeline completed in 9.88 seconds.
+[2025-05-09 12:11:56] INFO __main__: Running Goose pipeline
+[2025-05-09 12:11:57] INFO __main__: Previous Last update: 05/09/2025 12:10
+[2025-05-09 12:11:57] INFO __main__: Loading Song Data
+[2025-05-09 12:11:58] INFO __main__: Loading Show, Venue, and Tour Data
+[2025-05-09 12:11:58] INFO __main__: Loading Setlist and Transition Data
+[2025-05-09 12:11:59] INFO __main__: Goose pipeline completed in 2.63 seconds.
+[2025-05-09 12:12:00] INFO __main__: Running UM pipeline
+[2025-05-09 12:12:00] INFO __main__: Previous Last update: 2025-05-09 12:11:04
+[2025-05-09 12:12:00] INFO __main__: Scraping latest song data...
+[2025-05-09 12:12:06] INFO __main__: Scraping latest venue data...
+[2025-05-09 12:12:07] INFO __main__: Loading existing setlist data (no update)...
+[2025-05-09 12:12:07] INFO __main__: Saving updated data...
+[2025-05-09 12:12:08] INFO __main__: UM data update complete.
+[2025-05-09 12:12:08] INFO __main__: UM pipeline completed in 7.43 seconds.
+[2025-05-09 12:12:08] INFO __main__: Running WSP pipeline
+[2025-05-09 12:12:08] INFO __main__: Previous Last update: 2025-05-09 12:11:23
+[2025-05-09 12:12:08] INFO __main__: Scraping WSP show data...
+[2025-05-09 12:12:15] INFO __main__: Scraped 3,229 shows.
+[2025-05-09 12:12:15] INFO __main__: Scraping WSP song catalog...
+[2025-05-09 12:12:16] INFO __main__: Scraped 696 songs.
+[2025-05-09 12:12:16] INFO __main__: Scraping WSP setlists (all mode)
+[2025-05-09 12:12:16] INFO __main__: Loaded existing setlistdata.csv with 62,067 rows.
+[2025-05-09 12:12:17] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-05-09 12:12:24] WARNING scrape_setlists: No setlist data returned for date 05/16/2025, skipping.
+[2025-05-09 12:12:24] WARNING scrape_setlists: No setlist data returned for date 05/17/2025, skipping.
+[2025-05-09 12:12:24] WARNING scrape_setlists: No setlist data returned for date 06/04/2025, skipping.
+[2025-05-09 12:12:24] WARNING scrape_setlists: No setlist data returned for date 06/05/2025, skipping.
+[2025-05-09 12:12:24] WARNING scrape_setlists: No setlist data returned for date 06/06/2025, skipping.
+[2025-05-09 12:12:24] INFO __main__: Scraped/updated setlist data for all years now has 62,067 rows.
+[2025-05-09 12:12:24] INFO __main__: Saving WSP data...
+[2025-05-09 12:12:25] INFO save_data: Found next show: 2025-05-16 at Family Circle Stadium in Charleston, SC
+[2025-05-09 12:12:25] INFO __main__: WSP scraping pipeline completed in 16.44 seconds.
+[2025-05-09 12:12:25] INFO __main__: All band pipelines completed in 40.49 seconds.

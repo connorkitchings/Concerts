@@ -1,5 +1,8 @@
 import os
-import logging
+from logger import get_logger
+
+logger = get_logger(__name__)
+
 import requests
 import pathlib
 
@@ -15,8 +18,8 @@ def access_credentials():
         with open(credentials_path) as f:
             return f.readline().strip().split(": ")[1].strip("'")
     except FileNotFoundError:
-        logging.error(f"Credentials file not found at {credentials_path}")
-    logging.error("API key not found in environment variables or credentials file.")
+        logger.error(f"Credentials file not found at {credentials_path}")
+    logger.error("API key not found in environment variables or credentials file.")
     raise FileNotFoundError("Phish.net API key not found.")
 
 # Helper to make API requests

@@ -2,7 +2,10 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from io import StringIO
-import logging
+from logger import get_logger
+
+logger = get_logger(__name__)
+
 
 SONG_TABLE_IDX = 1
 
@@ -20,7 +23,7 @@ def scrape_um_songs(base_url=BASE_URL):
     soup = BeautifulSoup(html_content, 'html.parser')
     tables = soup.find_all('table')
     if not tables or len(tables) <= SONG_TABLE_IDX:
-        logging.error(f"Expected song table at index {SONG_TABLE_IDX} not found in UM song page.")
+        logger.error(f"Expected song table at index {SONG_TABLE_IDX} not found in UM song page.")
         return pd.DataFrame()
     tables_str = str(tables)
     tables_io = StringIO(tables_str)

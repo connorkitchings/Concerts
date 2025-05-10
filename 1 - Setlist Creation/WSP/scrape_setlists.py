@@ -1,8 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-import logging
-logger = logging.getLogger(__name__)
+from logger import get_logger
+logger = get_logger(__name__)
 from io import StringIO
 import numpy as np
 import re
@@ -115,7 +115,7 @@ def load_setlist_data(link_list, method='all', existing_setlist_data=None):
     Load setlist data for a list of show links. Returns a single merged DataFrame.
     """
     if method == 'all':
-        logging.info("Loading All WSP Setlist Data")
+        logger.info("Loading All WSP Setlist Data")
         setlist_frames = []
         for link in link_list:
             setlist = get_setlist_from_link(link)
@@ -138,7 +138,7 @@ def load_setlist_data(link_list, method='all', existing_setlist_data=None):
         all_setlists = pd.concat(setlist_frames, ignore_index=True)
         return all_setlists
     elif method == 'update':
-        logging.info("Updating Existing WSP Setlist Data")
+        logger.info("Updating Existing WSP Setlist Data")
         if existing_setlist_data is None:
             logger.error("No existing setlist data provided for update mode.")
             return pd.DataFrame(columns=EXPECTED_COLUMNS)

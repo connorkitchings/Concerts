@@ -13,7 +13,7 @@ import argparse
 import pandas as pd
 import time
 
-def main(update_setlists=False):
+def main(update_setlists=True):
     import traceback
     logger = get_logger(__name__)
     start_time = time.time()

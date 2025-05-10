@@ -1,5 +1,8 @@
 import os
-import logging
+from logger import get_logger
+
+logger = get_logger(__name__)
+
 from datetime import datetime
 from pathlib import Path
 import pandas as pd
@@ -16,7 +19,7 @@ def load_song_data(api_key):
     soup = BeautifulSoup(response.text, 'html.parser')
     tables = pd.read_html(StringIO(str(soup.find_all('table'))))
     if not tables:
-        logging.error(f"Expected table not found in Phish song page.")
+        logger.error(f"Expected table not found in Phish song page.")
         return pd.DataFrame()
     website_data = tables[0].sort_values(by='Song Name').reset_index(drop=True)
     merged_data = song_data.merge(
