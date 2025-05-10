@@ -12,11 +12,14 @@ This directory contains the code and data pipeline for scraping, processing, and
 ### 1. `main.py`
 - **Purpose**: Orchestrates the entire UM data pipeline.
 - **Workflow**:
-  1. Scrapes song catalog (`scrape_songs.py`)
-  2. Scrapes venue data (`scrape_shows.py`)
-  3. Scrapes setlists for all shows (`scrape_setlists.py`) (optional, can be slow)
-  4. Saves all outputs to disk (`save_data.py`)
+  1. Scrapes the full UM song catalog (`scrape_songs.py`).
+  2. Scrapes the full UM venue catalog (`scrape_shows.py`).
+  3. Updates setlist data using the incremental update method (`incremental_um_setlist_update`), which fetches setlists for the last year and current year only, appends new data, and removes duplicates. (Switch to `full_um_setlist_update` in code for a full historical refresh.)
+  4. Sorts setlist data by most recent date and set order before saving.
+  5. Saves all outputs to disk (`save_data.py`).
+  6. Updates `last_updated.json` and `next_show.json` after a successful run.
 - **Logging**: Provides detailed logs for each step.
+- **Note**: The pipeline is designed for efficient incremental updates but supports full refresh if needed by modifying the update method in `main.py`.
 
 ### 2. `scrape_songs.py`
 - **Function**: `scrape_um_songs`
@@ -31,14 +34,15 @@ This directory contains the code and data pipeline for scraping, processing, and
 - **Key Columns**: `Venue Name`, `City`, `State`, `Country`, `Times Played`, `Last Played`.
 
 ### 4. `scrape_setlists.py`
-- **Functions**: `scrape_um_setlist_data`, `get_setlist_from_url`, `load_existing_data`, `get_last_update_time`, `update_um_data`
-- **Purpose**: 
-  - `scrape_um_setlist_data`: Scrapes setlist data for all songs and shows.
-  - `get_setlist_from_url`: Scrapes setlist for a specific show.
-  - `load_existing_data`: Loads existing data from disk.
-  - `update_um_data`: Updates all data and saves it.
-  - `get_last_update_time`: Reads the last update timestamp.
-- **Outputs**: DataFrame with detailed setlist information for each show.
+- **Functions**: `full_um_setlist_update`, `incremental_um_setlist_update`, `_sort_setlist_df`, `save_um_setlist_data`, `load_existing_data`, `get_last_update_time`
+- **Purpose**:
+  - `full_um_setlist_update`: Fetches and builds a complete setlist dataset for all years (1998–present) from the UM website.
+  - `incremental_um_setlist_update`: Efficiently fetches setlists for just the last and current year, appends to existing data, and removes duplicates.
+  - `_sort_setlist_df`: Sorts setlist data by most recent date and set order (using custom set label logic).
+  - `save_um_setlist_data`: Sorts and saves setlist data to disk.
+  - `load_existing_data`: Loads existing song, venue, and setlist data from disk.
+  - `get_last_update_time`: Reads the last update timestamp from `last_updated.json`.
+- **Outputs**: DataFrame with detailed setlist information for each show, always sorted by most recent date and set order.
 
 ### 5. `save_data.py`
 - **Functions**: `save_um_data`, `save_query_data`
@@ -99,4 +103,9 @@ All data is stored in `3 - Data/UM/AllThingsUM/`:
 
 ## Running the Pipeline
 
-Run `main.py` to execute the full scraping and data-saving process. All required dependencies are standard (requests, pandas, BeautifulSoup, etc.). Use the `--update-setlists` flag to force a full setlist scrape (can be slow).
+Run `main.py` to execute the full scraping and data-saving process. All required dependencies are standard (requests, pandas, BeautifulSoup, etc.).
+
+- By default, the pipeline performs an **incremental setlist update** (last year and current year only, fast).
+- To perform a **full setlist update** (all years, slow), edit the update method in `main.py` to use `full_um_setlist_update` instead of `incremental_um_setlist_update`.
+
+No command-line flags are required; behavior is controlled in code for reliability and reproducibility.
