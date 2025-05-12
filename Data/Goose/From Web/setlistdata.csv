@@ -2252,6 +2252,14 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 1295,1602829578,420,1,3,15:28,2,0,0,,0,,,1.0,
 1296,1602829578,403,1,4,8:42,2,0,0,,0,,,1.0,
 1297,1602829578,533,1,5,5:34,6,0,0,Fatboy Slim.,0,,,1.0,
+1275,1602828850,512,1,1,,1,0,0,,0,,,1.0,
+1276,1602828850,519,1,2,,1,0,0,Billy Joel.,0,,,1.0,
+1277,1602828850,462,1,3,,1,0,0,,0,,,1.0,
+1278,1602828850,582,1,4,,1,0,0,The Band.,0,,,1.0,
+1279,1602828850,478,1,5,,1,0,0,,0,,,1.0,
+1280,1602828850,441,1,6,,2,0,0,Stevie Wonder.,0,,,1.0,
+1281,1602828850,433,1,7,,1,0,0,Deodato.,0,,,1.0,
+1282,1602828850,400,1,8,,6,0,0,Rick asked Coach what he wanted to hear.,0,,,1.0,
 1259,1602828440,415,1,1,,1,0,0,,0,,,1.0,
 1260,1602828440,408,1,2,,1,0,0,,0,,,1.0,
 1261,1602828440,482,1,3,,1,0,0,Creedence Clearwater Revival.,0,,,1.0,
@@ -2261,14 +2269,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 1265,1602828440,411,1,7,,1,0,0,,0,,,1.0,
 1266,1602828440,410,1,8,,1,0,0,,0,,,1.0,
 1267,1602828440,578,1,9,,6,0,0,Bobby Blue Bland.,0,,,1.0,
-1275,1602828850,512,1,1,,1,0,0,,0,,,1.0,
-1276,1602828850,519,1,2,,1,0,0,Billy Joel.,0,,,1.0,
-1277,1602828850,462,1,3,,1,0,0,,0,,,1.0,
-1278,1602828850,582,1,4,,1,0,0,The Band.,0,,,1.0,
-1279,1602828850,478,1,5,,1,0,0,,0,,,1.0,
-1280,1602828850,441,1,6,,2,0,0,Stevie Wonder.,0,,,1.0,
-1281,1602828850,433,1,7,,1,0,0,Deodato.,0,,,1.0,
-1282,1602828850,400,1,8,,6,0,0,Rick asked Coach what he wanted to hear.,0,,,1.0,
 1252,1602828053,406,1,1,,1,0,0,,0,,,1.0,
 1253,1602828053,465,1,2,,2,0,0,,0,,,1.0,
 1254,1602828053,439,1,3,,1,0,0,The Wood Brothers. With Brandon Niederauer on guitar.,0,,,1.0,
@@ -2386,13 +2386,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 992,1599321248,802,2,15,20:42,2,0,0,Included &quot;+10 Minute Jam&quot; and &quot;20 Push Ups&quot; bingo balls. Each member of the band and Coach did 20 push-ups..,0,,,1.0,0.0
 1029,1599321248,460,2,16,8:28,5,0,0,The Band.,0,,,1.0,0.0
 1049,1599321248,412,e,17,11:48,6,0,0,,0,,,1.0,0.0
-802,1601960752,419,1,1,10:35,1,0,0,The Trammps.,0,,,1.0,0.0
-803,1601960752,408,1,2,14:06,3,0,0,,1,"Interesting Rick from the beginning, lots of whammy octave-up usage. Phenomenal -> to ""Creatures"".",,1.0,0.0
-804,1601960752,420,1,3,18:35,3,0,0,,1,"-> in from ""Hot Tea"". Peppy version that hits nice two-chord jam on the outro before seamlessly returning to ""Tea"".",,1.0,0.0
-805,1601960752,408,1,4,2:51,1,0,0,,1,"End of a fantastic ""Hot Teatures"" sandwich.",,1.0,0.0
-806,1601960752,422,1,5,11:13,2,0,0,,0,,,1.0,0.0
-807,1601960752,802,1,6,4:02,2,0,0,Free Space Jam. With Peaches En Regalia tease from Rick.,0,,,1.0,0.0
-808,1601960752,414,1,7,17:45,4,0,0,"Slow, melodic version. With Loose Ends jam.",0,,,1.0,0.0
 809,1601960752,424,2,8,8:03,2,0,0,Father John Misty. Included &quot;Reggae Feel&quot; bingo ball.,0,,,1.0,0.0
 811,1601960752,425,2,9,7:59,1,0,0,FTP as Goose. Mystery Song #2.,0,,,1.0,0.0
 812,1601960752,426,2,10,6:21,1,0,0,Kylie Minogue.,0,,,1.0,0.0
@@ -2407,6 +2400,13 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 821,1601960752,415,e,19,1:36,4,0,0,,0,,,1.0,0.0
 14940,1601960752,436,e2,20,4:19,1,0,0,"Billy Ray Cyrus. With Trevor on vocals, Peter on bass, Coach on rainstick, and Pete Campbell on gong.",0,,,1.0,0.0
 14962,1601960752,438,e2,21,19:37,6,0,0,,0,,,1.0,0.0
+802,1601960752,419,1,1,10:35,1,0,0,The Trammps.,0,,,1.0,0.0
+803,1601960752,408,1,2,14:06,3,0,0,,1,"Interesting Rick from the beginning, lots of whammy octave-up usage. Phenomenal -> to ""Creatures"".",,1.0,0.0
+804,1601960752,420,1,3,18:35,3,0,0,,1,"-> in from ""Hot Tea"". Peppy version that hits nice two-chord jam on the outro before seamlessly returning to ""Tea"".",,1.0,0.0
+805,1601960752,408,1,4,2:51,1,0,0,,1,"End of a fantastic ""Hot Teatures"" sandwich.",,1.0,0.0
+806,1601960752,422,1,5,11:13,2,0,0,,0,,,1.0,0.0
+807,1601960752,802,1,6,4:02,2,0,0,Free Space Jam. With Peaches En Regalia tease from Rick.,0,,,1.0,0.0
+808,1601960752,414,1,7,17:45,4,0,0,"Slow, melodic version. With Loose Ends jam.",0,,,1.0,0.0
 784,1601959001,547,1,1,5:18,1,0,0,Bob Dylan. FTP. Performed acoustic. With Jeff on upright bass.,0,,,1.0,
 785,1601959001,490,1,2,6:23,1,0,0,Performed acoustic. With Coach on rainstick.,0,,,1.0,
 786,1601959001,400,1,3,9:32,1,0,0,Performed acoustic in acoustic arrangement.,0,,,1.0,
