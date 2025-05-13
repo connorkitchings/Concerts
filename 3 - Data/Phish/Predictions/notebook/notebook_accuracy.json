@@ -1,0 +1,514 @@
+{
+  "top_25": {
+    "top_n": 25,
+    "overall_accuracy": 0.37887,
+    "results": [
+      {
+        "showid": "1737486860",
+        "showdate": "2025-04-27",
+        "accuracy": 0.41176
+      },
+      {
+        "showid": "1737486843",
+        "showdate": "2025-04-26",
+        "accuracy": 0.33333
+      },
+      {
+        "showid": "1737486827",
+        "showdate": "2025-04-25",
+        "accuracy": 0.58824
+      },
+      {
+        "showid": "1737486800",
+        "showdate": "2025-04-23",
+        "accuracy": 0.4
+      },
+      {
+        "showid": "1737486782",
+        "showdate": "2025-04-22",
+        "accuracy": 0.47059
+      },
+      {
+        "showid": "1737486760",
+        "showdate": "2025-04-20",
+        "accuracy": 0.55556
+      },
+      {
+        "showid": "1737486683",
+        "showdate": "2025-04-19",
+        "accuracy": 0.3125
+      },
+      {
+        "showid": "1737486654",
+        "showdate": "2025-04-18",
+        "accuracy": 0.26667
+      },
+      {
+        "showid": "1718730981",
+        "showdate": "2025-02-01",
+        "accuracy": 0.58824
+      },
+      {
+        "showid": "1718730936",
+        "showdate": "2025-01-31",
+        "accuracy": 0.52941
+      },
+      {
+        "showid": "1718730894",
+        "showdate": "2025-01-30",
+        "accuracy": 0.3
+      },
+      {
+        "showid": "1718730861",
+        "showdate": "2025-01-29",
+        "accuracy": 0.33333
+      },
+      {
+        "showid": "1738096515",
+        "showdate": "2025-01-28",
+        "accuracy": 0.33333
+      },
+      {
+        "showid": "1727805859",
+        "showdate": "2024-12-31",
+        "accuracy": 0.58621
+      },
+      {
+        "showid": "1727805841",
+        "showdate": "2024-12-30",
+        "accuracy": 0.45
+      },
+      {
+        "showid": "1727805824",
+        "showdate": "2024-12-29",
+        "accuracy": 0.26667
+      },
+      {
+        "showid": "1727805806",
+        "showdate": "2024-12-28",
+        "accuracy": 0.30435
+      },
+      {
+        "showid": "1725991676",
+        "showdate": "2024-10-27",
+        "accuracy": 0.22222
+      },
+      {
+        "showid": "1725991657",
+        "showdate": "2024-10-26",
+        "accuracy": 0.42105
+      },
+      {
+        "showid": "1725991638",
+        "showdate": "2024-10-25",
+        "accuracy": 0.2381
+      },
+      {
+        "showid": "1709062115",
+        "showdate": "2024-09-01",
+        "accuracy": 0.68421
+      },
+      {
+        "showid": "1709062091",
+        "showdate": "2024-08-31",
+        "accuracy": 0.41176
+      },
+      {
+        "showid": "1709062071",
+        "showdate": "2024-08-30",
+        "accuracy": 0.52941
+      },
+      {
+        "showid": "1709062053",
+        "showdate": "2024-08-29",
+        "accuracy": 0.1875
+      },
+      {
+        "showid": "1694536576",
+        "showdate": "2024-08-18",
+        "accuracy": 0.5
+      },
+      {
+        "showid": "1694536535",
+        "showdate": "2024-08-17",
+        "accuracy": 0.5
+      },
+      {
+        "showid": "1694536484",
+        "showdate": "2024-08-16",
+        "accuracy": 0.5
+      },
+      {
+        "showid": "1694536244",
+        "showdate": "2024-08-15",
+        "accuracy": 0.44444
+      },
+      {
+        "showid": "1723666648",
+        "showdate": "2024-08-14",
+        "accuracy": 0.0
+      },
+      {
+        "showid": "1709062035",
+        "showdate": "2024-08-11",
+        "accuracy": 0.52632
+      },
+      {
+        "showid": "1709062017",
+        "showdate": "2024-08-10",
+        "accuracy": 0.40909
+      },
+      {
+        "showid": "1709061985",
+        "showdate": "2024-08-09",
+        "accuracy": 0.5
+      },
+      {
+        "showid": "1709061965",
+        "showdate": "2024-08-07",
+        "accuracy": 0.375
+      },
+      {
+        "showid": "1709061944",
+        "showdate": "2024-08-06",
+        "accuracy": 0.55
+      },
+      {
+        "showid": "1709061924",
+        "showdate": "2024-08-04",
+        "accuracy": 0.25
+      },
+      {
+        "showid": "1709061909",
+        "showdate": "2024-08-03",
+        "accuracy": 0.1875
+      },
+      {
+        "showid": "1709061889",
+        "showdate": "2024-08-02",
+        "accuracy": 0.27778
+      },
+      {
+        "showid": "1709061872",
+        "showdate": "2024-07-31",
+        "accuracy": 0.3
+      },
+      {
+        "showid": "1709061846",
+        "showdate": "2024-07-30",
+        "accuracy": 0.35294
+      },
+      {
+        "showid": "1709061823",
+        "showdate": "2024-07-28",
+        "accuracy": 0.42105
+      },
+      {
+        "showid": "1709061804",
+        "showdate": "2024-07-27",
+        "accuracy": 0.27778
+      },
+      {
+        "showid": "1709061781",
+        "showdate": "2024-07-26",
+        "accuracy": 0.33333
+      },
+      {
+        "showid": "1709061756",
+        "showdate": "2024-07-24",
+        "accuracy": 0.44444
+      },
+      {
+        "showid": "1709061734",
+        "showdate": "2024-07-23",
+        "accuracy": 0.36842
+      },
+      {
+        "showid": "1709061711",
+        "showdate": "2024-07-21",
+        "accuracy": 0.47059
+      },
+      {
+        "showid": "1709061690",
+        "showdate": "2024-07-20",
+        "accuracy": 0.33333
+      },
+      {
+        "showid": "1709061666",
+        "showdate": "2024-07-19",
+        "accuracy": 0.25
+      },
+      {
+        "showid": "1720546298",
+        "showdate": "2024-07-17",
+        "accuracy": 0.0
+      },
+      {
+        "showid": "1720403683",
+        "showdate": "2024-07-11",
+        "accuracy": 0.0
+      },
+      {
+        "showid": "1701353487",
+        "showdate": "2024-04-21",
+        "accuracy": 0.64706
+      }
+    ]
+  },
+  "top_50": {
+    "top_n": 50,
+    "overall_accuracy": 0.56671,
+    "results": [
+      {
+        "showid": "1737486860",
+        "showdate": "2025-04-27",
+        "accuracy": 0.64706
+      },
+      {
+        "showid": "1737486843",
+        "showdate": "2025-04-26",
+        "accuracy": 0.55556
+      },
+      {
+        "showid": "1737486827",
+        "showdate": "2025-04-25",
+        "accuracy": 0.64706
+      },
+      {
+        "showid": "1737486800",
+        "showdate": "2025-04-23",
+        "accuracy": 0.8
+      },
+      {
+        "showid": "1737486782",
+        "showdate": "2025-04-22",
+        "accuracy": 0.82353
+      },
+      {
+        "showid": "1737486760",
+        "showdate": "2025-04-20",
+        "accuracy": 0.72222
+      },
+      {
+        "showid": "1737486683",
+        "showdate": "2025-04-19",
+        "accuracy": 0.375
+      },
+      {
+        "showid": "1737486654",
+        "showdate": "2025-04-18",
+        "accuracy": 0.33333
+      },
+      {
+        "showid": "1718730981",
+        "showdate": "2025-02-01",
+        "accuracy": 0.82353
+      },
+      {
+        "showid": "1718730936",
+        "showdate": "2025-01-31",
+        "accuracy": 0.76471
+      },
+      {
+        "showid": "1718730894",
+        "showdate": "2025-01-30",
+        "accuracy": 0.55
+      },
+      {
+        "showid": "1718730861",
+        "showdate": "2025-01-29",
+        "accuracy": 0.44444
+      },
+      {
+        "showid": "1738096515",
+        "showdate": "2025-01-28",
+        "accuracy": 1.0
+      },
+      {
+        "showid": "1727805859",
+        "showdate": "2024-12-31",
+        "accuracy": 0.82759
+      },
+      {
+        "showid": "1727805841",
+        "showdate": "2024-12-30",
+        "accuracy": 0.75
+      },
+      {
+        "showid": "1727805824",
+        "showdate": "2024-12-29",
+        "accuracy": 0.53333
+      },
+      {
+        "showid": "1727805806",
+        "showdate": "2024-12-28",
+        "accuracy": 0.43478
+      },
+      {
+        "showid": "1725991676",
+        "showdate": "2024-10-27",
+        "accuracy": 0.33333
+      },
+      {
+        "showid": "1725991657",
+        "showdate": "2024-10-26",
+        "accuracy": 0.57895
+      },
+      {
+        "showid": "1725991638",
+        "showdate": "2024-10-25",
+        "accuracy": 0.2381
+      },
+      {
+        "showid": "1709062115",
+        "showdate": "2024-09-01",
+        "accuracy": 0.89474
+      },
+      {
+        "showid": "1709062091",
+        "showdate": "2024-08-31",
+        "accuracy": 0.47059
+      },
+      {
+        "showid": "1709062071",
+        "showdate": "2024-08-30",
+        "accuracy": 0.58824
+      },
+      {
+        "showid": "1709062053",
+        "showdate": "2024-08-29",
+        "accuracy": 0.25
+      },
+      {
+        "showid": "1694536576",
+        "showdate": "2024-08-18",
+        "accuracy": 0.625
+      },
+      {
+        "showid": "1694536535",
+        "showdate": "2024-08-17",
+        "accuracy": 0.75
+      },
+      {
+        "showid": "1694536484",
+        "showdate": "2024-08-16",
+        "accuracy": 0.7
+      },
+      {
+        "showid": "1694536244",
+        "showdate": "2024-08-15",
+        "accuracy": 0.55556
+      },
+      {
+        "showid": "1723666648",
+        "showdate": "2024-08-14",
+        "accuracy": 0.0
+      },
+      {
+        "showid": "1709062035",
+        "showdate": "2024-08-11",
+        "accuracy": 0.57895
+      },
+      {
+        "showid": "1709062017",
+        "showdate": "2024-08-10",
+        "accuracy": 0.72727
+      },
+      {
+        "showid": "1709061985",
+        "showdate": "2024-08-09",
+        "accuracy": 0.66667
+      },
+      {
+        "showid": "1709061965",
+        "showdate": "2024-08-07",
+        "accuracy": 0.45833
+      },
+      {
+        "showid": "1709061944",
+        "showdate": "2024-08-06",
+        "accuracy": 0.7
+      },
+      {
+        "showid": "1709061924",
+        "showdate": "2024-08-04",
+        "accuracy": 0.3125
+      },
+      {
+        "showid": "1709061909",
+        "showdate": "2024-08-03",
+        "accuracy": 0.4375
+      },
+      {
+        "showid": "1709061889",
+        "showdate": "2024-08-02",
+        "accuracy": 0.5
+      },
+      {
+        "showid": "1709061872",
+        "showdate": "2024-07-31",
+        "accuracy": 0.5
+      },
+      {
+        "showid": "1709061846",
+        "showdate": "2024-07-30",
+        "accuracy": 0.47059
+      },
+      {
+        "showid": "1709061823",
+        "showdate": "2024-07-28",
+        "accuracy": 0.63158
+      },
+      {
+        "showid": "1709061804",
+        "showdate": "2024-07-27",
+        "accuracy": 0.61111
+      },
+      {
+        "showid": "1709061781",
+        "showdate": "2024-07-26",
+        "accuracy": 0.52381
+      },
+      {
+        "showid": "1709061756",
+        "showdate": "2024-07-24",
+        "accuracy": 0.72222
+      },
+      {
+        "showid": "1709061734",
+        "showdate": "2024-07-23",
+        "accuracy": 0.68421
+      },
+      {
+        "showid": "1709061711",
+        "showdate": "2024-07-21",
+        "accuracy": 0.64706
+      },
+      {
+        "showid": "1709061690",
+        "showdate": "2024-07-20",
+        "accuracy": 0.61111
+      },
+      {
+        "showid": "1709061666",
+        "showdate": "2024-07-19",
+        "accuracy": 0.3125
+      },
+      {
+        "showid": "1720546298",
+        "showdate": "2024-07-17",
+        "accuracy": 0.4
+      },
+      {
+        "showid": "1720403683",
+        "showdate": "2024-07-11",
+        "accuracy": 0.0
+      },
+      {
+        "showid": "1701353487",
+        "showdate": "2024-04-21",
+        "accuracy": 0.82353
+      }
+    ]
+  }
+}

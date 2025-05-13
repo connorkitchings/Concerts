@@ -34,6 +34,41 @@ python predict_today.py
 
 The output will be saved to the predictions folder as `todaysnotebook.csv`.
 
+### Historical Evaluation
+
+To evaluate prediction accuracy over the last N shows (default 50) for both top 25 and top 50 predictions:
+
+```bash
+python historical_testing.py --num_shows 50
+```
+
+This will generate a single JSON file:
+```
+../../../3 - Data/UM/Predictions/notebook/notebook_accuracy.json
+```
+with the following structure:
+
+```json
+{
+  "top_25": {
+    "most_recent_shows": 50,
+    "overall_accuracy": <float>,
+    "results": [
+      {"showid": ..., "showdate": ..., "accuracy": ...},
+      ...
+    ]
+  },
+  "top_50": {
+    "most_recent_shows": 50,
+    "overall_accuracy": <float>,
+    "results": [ ... ]
+  }
+}
+```
+- Each `results` array is sorted by showdate descending (most recent first).
+- `overall_accuracy` is the average per-show accuracy for that group.
+- `most_recent_shows` is the number of shows evaluated in each group.
+
 ### Logging
 
 All scripts in this folder use a unified logger. Log messages are saved to:
