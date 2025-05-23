@@ -30,5 +30,4 @@ def scrape_um_shows(base_url=BASE_URL):
     venue_data = tables[VENUE_TABLE_IDX].copy().reset_index(names='id')
     venue_data['id'] = venue_data['id'].astype(str)
     venue_data['Last Played'] = pd.to_datetime(venue_data['Last Played']).dt.date
-    show_data = pd.DataFrame()
-    return show_data, venue_data
+    return venue_data

@@ -6,19 +6,14 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from logger import get_logger
 from scrape_songs import scrape_um_songs
 from scrape_shows import scrape_um_shows
-from scrape_setlists import (
-    scrape_um_setlist_data,
-    full_um_setlist_update,
-    incremental_um_setlist_update,
-    get_last_update_time,
-)
+from scrape_setlists import fetch_um_setlist_data
 from save_data import save_um_data, save_query_data
-from utils import get_data_dir
+from utils import get_data_dir, get_last_update_time
 import time
-from logger import get_logger
+import traceback
+
 
 def main():
-    import traceback
     logger = get_logger(__name__)
     start_time = time.time()
     try:
@@ -32,20 +27,16 @@ def main():
 
         # Scrape venues
         logger.info("Scraping latest venue data...")
-        _, venue_data = scrape_um_shows()
+        venue_data = scrape_um_shows()
         
-        # Scrape setlists (FULL)
-        #logger.info("Scraping latest setlist data...")
-        #setlist_data = full_um_setlist_update()
-
-        # Update setlists (INCREMENTAL)
-        logger.info("Performing INCREMENTAL setlist update (last year + this year)...")
-        setlist_data = incremental_um_setlist_update()
+        # Scrape setlists
+        logger.info("Scraping full setlist data...")
+        setlist_data = fetch_um_setlist_data()
+        logger.info(f"Fetched {len(setlist_data):,} setlist songs for {len(setlist_data['link'].unique()):,} shows.")
 
         # Save all data
         save_um_data(song_data, venue_data, setlist_data, data_dir)
         save_query_data(data_dir)
-        logger.info("UM data update complete.")
         elapsed = time.time() - start_time
         logger.info(f"UM pipeline completed in {elapsed:.2f} seconds.")
     except Exception as e:

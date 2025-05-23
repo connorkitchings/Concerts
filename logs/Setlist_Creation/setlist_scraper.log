@@ -1,38 +1,264 @@
-[2025-05-10 13:05:27] INFO __main__: Running Phish pipeline
-[2025-05-10 13:05:29] INFO __main__: Previous Last update: 05/10/2025 13:04
-[2025-05-10 13:05:29] INFO __main__: Loading Song Data
-[2025-05-10 13:05:31] INFO __main__: Loading Show and Venue Data
-[2025-05-10 13:05:31] INFO __main__: Loading Setlist and Transition Data
-[2025-05-10 13:05:38] INFO __main__: Phish pipeline completed in 9.35 seconds.
-[2025-05-10 13:05:39] INFO __main__: Running Goose pipeline
-[2025-05-10 13:05:40] INFO __main__: Previous Last update: 05/10/2025 13:04
-[2025-05-10 13:05:40] INFO __main__: Loading Song Data
-[2025-05-10 13:05:41] INFO __main__: Loading Show, Venue, and Tour Data
-[2025-05-10 13:05:41] INFO __main__: Loading Setlist and Transition Data
-[2025-05-10 13:05:42] INFO __main__: Goose pipeline completed in 2.04 seconds.
-[2025-05-10 13:05:42] INFO __main__: Running UM pipeline
-[2025-05-10 13:05:43] INFO __main__: Previous Last update: 2025-05-10 13:04:27
-[2025-05-10 13:05:43] INFO __main__: Scraping latest song data...
-[2025-05-10 13:05:49] INFO __main__: Scraping latest venue data...
-[2025-05-10 13:05:51] INFO __main__: Performing INCREMENTAL setlist update (last year + this year)...
-[2025-05-10 13:05:54] INFO __main__: UM data update complete.
-[2025-05-10 13:05:54] INFO __main__: UM pipeline completed in 10.56 seconds.
-[2025-05-10 13:05:54] INFO __main__: Running WSP pipeline
-[2025-05-10 13:05:55] INFO __main__: Previous Last update: 2025-05-10 13:04:49
-[2025-05-10 13:05:55] INFO __main__: Scraping WSP show data...
-[2025-05-10 13:06:03] INFO __main__: Scraped 3,229 shows.
-[2025-05-10 13:06:03] INFO __main__: Scraping WSP song catalog...
-[2025-05-10 13:06:05] INFO __main__: Scraped 696 songs.
-[2025-05-10 13:06:05] INFO __main__: Scraping WSP setlists (all mode)
-[2025-05-10 13:06:05] INFO __main__: Loaded existing setlistdata.csv with 62,067 rows.
-[2025-05-10 13:06:05] INFO scrape_setlists: Updating Existing WSP Setlist Data
-[2025-05-10 13:06:14] WARNING scrape_setlists: No setlist data returned for date 05/16/2025, skipping.
-[2025-05-10 13:06:14] WARNING scrape_setlists: No setlist data returned for date 05/17/2025, skipping.
-[2025-05-10 13:06:14] WARNING scrape_setlists: No setlist data returned for date 06/04/2025, skipping.
-[2025-05-10 13:06:14] WARNING scrape_setlists: No setlist data returned for date 06/05/2025, skipping.
-[2025-05-10 13:06:15] WARNING scrape_setlists: No setlist data returned for date 06/06/2025, skipping.
-[2025-05-10 13:06:15] INFO __main__: Scraped/updated setlist data for all years now has 62,067 rows.
-[2025-05-10 13:06:15] INFO __main__: Saving WSP data...
-[2025-05-10 13:06:15] INFO save_data: Found next show: 2025-05-16 at Family Circle Stadium in Charleston, SC
-[2025-05-10 13:06:15] INFO __main__: WSP scraping pipeline completed in 19.54 seconds.
-[2025-05-10 13:06:15] INFO __main__: All band pipelines completed in 47.65 seconds.
+[2025-05-22 22:55:53] INFO __main__: Previous Last update: 2025-05-22 22:52:08
+[2025-05-22 22:55:53] INFO __main__: Scraping latest song data...
+[2025-05-22 22:56:00] INFO __main__: Scraping latest venue data...
+[2025-05-22 22:56:02] INFO __main__: Scraping full setlist data...
+[2025-05-22 22:56:03] INFO scrape_setlists: Found 61 setlists for 1998.
+[2025-05-22 22:56:05] INFO scrape_setlists: Found 87 setlists for 1999.
+[2025-05-22 22:56:07] INFO scrape_setlists: Found 90 setlists for 2000.
+[2025-05-22 22:56:11] INFO scrape_setlists: Found 140 setlists for 2001.
+[2025-05-22 22:56:15] INFO scrape_setlists: Found 160 setlists for 2002.
+[2025-05-22 22:56:18] INFO scrape_setlists: Found 156 setlists for 2003.
+[2025-05-22 22:56:22] INFO scrape_setlists: Found 144 setlists for 2004.
+[2025-05-22 22:56:25] INFO scrape_setlists: Found 140 setlists for 2005.
+[2025-05-22 22:56:28] INFO scrape_setlists: Found 132 setlists for 2006.
+[2025-05-22 22:56:30] INFO scrape_setlists: Found 119 setlists for 2007.
+[2025-05-22 22:56:32] INFO scrape_setlists: Found 113 setlists for 2008.
+[2025-05-22 22:56:35] INFO scrape_setlists: Found 122 setlists for 2009.
+[2025-05-22 22:56:37] INFO scrape_setlists: Found 112 setlists for 2010.
+[2025-05-22 22:56:40] INFO scrape_setlists: Found 110 setlists for 2011.
+[2025-05-22 22:56:43] INFO scrape_setlists: Found 117 setlists for 2012.
+[2025-05-22 22:56:46] INFO scrape_setlists: Found 106 setlists for 2013.
+[2025-05-22 22:56:48] INFO scrape_setlists: Found 107 setlists for 2014.
+[2025-05-22 22:56:50] INFO scrape_setlists: Found 95 setlists for 2015.
+[2025-05-22 22:56:53] INFO scrape_setlists: Found 101 setlists for 2016.
+[2025-05-22 22:56:55] INFO scrape_setlists: Found 91 setlists for 2017.
+[2025-05-22 22:56:57] INFO scrape_setlists: Found 88 setlists for 2018.
+[2025-05-22 22:56:59] INFO scrape_setlists: Found 96 setlists for 2019.
+[2025-05-22 22:57:00] INFO scrape_setlists: Found 32 setlists for 2020.
+[2025-05-22 22:57:01] INFO scrape_setlists: Found 55 setlists for 2021.
+[2025-05-22 22:57:03] INFO scrape_setlists: Found 74 setlists for 2022.
+[2025-05-22 22:57:04] INFO scrape_setlists: Found 81 setlists for 2023.
+[2025-05-22 22:57:06] INFO scrape_setlists: Found 86 setlists for 2024.
+[2025-05-22 22:57:07] INFO scrape_setlists: Found 40 setlists for 2025.
+[2025-05-22 22:57:07] INFO scrape_setlists: 2,855 total shows found.
+[2025-05-22 22:57:07] INFO scrape_setlists: No existing setlist data found, starting fresh.
+[2025-05-22 22:57:24] INFO scrape_setlists: Parsed 50 setlists so far...
+[2025-05-22 22:57:40] INFO scrape_setlists: Parsed 100 setlists so far...
+[2025-05-22 22:57:56] INFO scrape_setlists: Parsed 150 setlists so far...
+[2025-05-22 22:58:13] INFO scrape_setlists: Parsed 200 setlists so far...
+[2025-05-22 22:58:30] INFO scrape_setlists: Parsed 250 setlists so far...
+[2025-05-22 22:58:48] INFO scrape_setlists: Parsed 300 setlists so far...
+[2025-05-22 22:59:07] INFO scrape_setlists: Parsed 350 setlists so far...
+[2025-05-22 22:59:23] INFO scrape_setlists: Parsed 400 setlists so far...
+[2025-05-22 22:59:41] INFO scrape_setlists: Parsed 450 setlists so far...
+[2025-05-22 22:59:59] INFO scrape_setlists: Parsed 500 setlists so far...
+[2025-05-22 23:00:18] INFO scrape_setlists: Parsed 550 setlists so far...
+[2025-05-22 23:00:34] INFO scrape_setlists: Parsed 600 setlists so far...
+[2025-05-22 23:00:51] INFO scrape_setlists: Parsed 650 setlists so far...
+[2025-05-22 23:01:08] INFO scrape_setlists: Missing fields (country) for setlist: January 6, 2004
+[2025-05-22 23:01:08] INFO scrape_setlists: Moving state to country for setlist page: January 6, 2004
+[2025-05-22 23:01:08] INFO scrape_setlists: Missing fields (country) for setlist: January 8, 2004
+[2025-05-22 23:01:08] INFO scrape_setlists: Moving state to country for setlist page: January 8, 2004
+[2025-05-22 23:01:10] INFO scrape_setlists: Parsed 700 setlists so far...
+[2025-05-22 23:01:28] INFO scrape_setlists: Parsed 750 setlists so far...
+[2025-05-22 23:01:44] INFO scrape_setlists: Parsed 800 setlists so far...
+[2025-05-22 23:01:57] INFO scrape_setlists: Missing fields (country) for setlist: January 8, 2005
+[2025-05-22 23:01:57] INFO scrape_setlists: Moving state to country for setlist page: January 8, 2005
+[2025-05-22 23:01:58] INFO scrape_setlists: Missing fields (country) for setlist: January 9, 2005
+[2025-05-22 23:01:58] INFO scrape_setlists: Moving state to country for setlist page: January 9, 2005
+[2025-05-22 23:02:01] INFO scrape_setlists: Parsed 850 setlists so far...
+[2025-05-22 23:02:04] INFO scrape_setlists: Missing fields (country) for setlist: March 20, 2005
+[2025-05-22 23:02:04] INFO scrape_setlists: Moving state to country for setlist page: March 20, 2005
+[2025-05-22 23:02:04] INFO scrape_setlists: Missing fields (country) for setlist: March 21, 2005
+[2025-05-22 23:02:04] INFO scrape_setlists: Moving state to country for setlist page: March 21, 2005
+[2025-05-22 23:02:05] INFO scrape_setlists: Missing fields (country) for setlist: March 22, 2005
+[2025-05-22 23:02:05] INFO scrape_setlists: Moving state to country for setlist page: March 22, 2005
+[2025-05-22 23:02:18] INFO scrape_setlists: Parsed 900 setlists so far...
+[2025-05-22 23:02:35] INFO scrape_setlists: Parsed 950 setlists so far...
+[2025-05-22 23:02:45] INFO scrape_setlists: Missing fields (country) for setlist: January 7, 2006
+[2025-05-22 23:02:45] INFO scrape_setlists: Moving state to country for setlist page: January 7, 2006
+[2025-05-22 23:02:46] INFO scrape_setlists: Missing fields (country) for setlist: January 9, 2006
+[2025-05-22 23:02:46] INFO scrape_setlists: Moving state to country for setlist page: January 9, 2006
+[2025-05-22 23:02:52] INFO scrape_setlists: Missing fields (country) for setlist: March 14, 2006
+[2025-05-22 23:02:52] INFO scrape_setlists: Moving state to country for setlist page: March 14, 2006
+[2025-05-22 23:02:52] INFO scrape_setlists: Missing fields (country) for setlist: March 15, 2006
+[2025-05-22 23:02:52] INFO scrape_setlists: Moving state to country for setlist page: March 15, 2006
+[2025-05-22 23:02:52] INFO scrape_setlists: Parsed 1000 setlists so far...
+[2025-05-22 23:02:52] INFO scrape_setlists: Missing fields (country) for setlist: March 16, 2006
+[2025-05-22 23:02:52] INFO scrape_setlists: Moving state to country for setlist page: March 16, 2006
+[2025-05-22 23:02:53] INFO scrape_setlists: Missing fields (country) for setlist: March 19, 2006
+[2025-05-22 23:02:53] INFO scrape_setlists: Moving state to country for setlist page: March 19, 2006
+[2025-05-22 23:02:53] INFO scrape_setlists: Missing fields (country) for setlist: March 20, 2006
+[2025-05-22 23:02:53] INFO scrape_setlists: Moving state to country for setlist page: March 20, 2006
+[2025-05-22 23:02:54] INFO scrape_setlists: Missing fields (country) for setlist: March 21, 2006
+[2025-05-22 23:02:54] INFO scrape_setlists: Moving state to country for setlist page: March 21, 2006
+[2025-05-22 23:02:54] INFO scrape_setlists: Missing fields (country) for setlist: March 23, 2006
+[2025-05-22 23:02:54] INFO scrape_setlists: Moving state to country for setlist page: March 23, 2006
+[2025-05-22 23:03:07] INFO scrape_setlists: Parsed 1050 setlists so far...
+[2025-05-22 23:03:10] INFO scrape_setlists: Missing fields (country) for setlist: July 30, 2006
+[2025-05-22 23:03:10] INFO scrape_setlists: Moving state to country for setlist page: July 30, 2006
+[2025-05-22 23:03:24] INFO scrape_setlists: Parsed 1100 setlists so far...
+[2025-05-22 23:03:28] INFO scrape_setlists: Missing fields (country) for setlist: January 4, 2007
+[2025-05-22 23:03:28] INFO scrape_setlists: Moving state to country for setlist page: January 4, 2007
+[2025-05-22 23:03:28] INFO scrape_setlists: Missing fields (country) for setlist: January 6, 2007
+[2025-05-22 23:03:28] INFO scrape_setlists: Moving state to country for setlist page: January 6, 2007
+[2025-05-22 23:03:42] INFO scrape_setlists: Parsed 1150 setlists so far...
+[2025-05-22 23:03:58] INFO scrape_setlists: Parsed 1200 setlists so far...
+[2025-05-22 23:04:07] INFO scrape_setlists: Missing fields (country) for setlist: December 13, 2007
+[2025-05-22 23:04:07] INFO scrape_setlists: Moving state to country for setlist page: December 13, 2007
+[2025-05-22 23:04:08] INFO scrape_setlists: Missing fields (country) for setlist: December 14, 2007
+[2025-05-22 23:04:08] INFO scrape_setlists: Moving state to country for setlist page: December 14, 2007
+[2025-05-22 23:04:08] INFO scrape_setlists: Missing fields (country) for setlist: December 16, 2007
+[2025-05-22 23:04:08] INFO scrape_setlists: Moving state to country for setlist page: December 16, 2007
+[2025-05-22 23:04:15] INFO scrape_setlists: Missing fields (country) for setlist: March 14, 2008
+[2025-05-22 23:04:15] INFO scrape_setlists: Moving state to country for setlist page: March 14, 2008
+[2025-05-22 23:04:15] INFO scrape_setlists: Missing fields (country) for setlist: March 16, 2008
+[2025-05-22 23:04:15] INFO scrape_setlists: Moving state to country for setlist page: March 16, 2008
+[2025-05-22 23:04:15] INFO scrape_setlists: Missing fields (country) for setlist: March 18, 2008
+[2025-05-22 23:04:15] INFO scrape_setlists: Moving state to country for setlist page: March 18, 2008
+[2025-05-22 23:04:16] INFO scrape_setlists: Missing fields (country) for setlist: March 19, 2008
+[2025-05-22 23:04:16] INFO scrape_setlists: Moving state to country for setlist page: March 19, 2008
+[2025-05-22 23:04:16] INFO scrape_setlists: Parsed 1250 setlists so far...
+[2025-05-22 23:04:31] INFO scrape_setlists: Parsed 1300 setlists so far...
+[2025-05-22 23:04:45] INFO scrape_setlists: Missing fields (country) for setlist: December 11, 2008
+[2025-05-22 23:04:45] INFO scrape_setlists: Moving state to country for setlist page: December 11, 2008
+[2025-05-22 23:04:45] INFO scrape_setlists: Missing fields (country) for setlist: December 12, 2008
+[2025-05-22 23:04:45] INFO scrape_setlists: Moving state to country for setlist page: December 12, 2008
+[2025-05-22 23:04:45] INFO scrape_setlists: Missing fields (country) for setlist: December 13, 2008
+[2025-05-22 23:04:45] INFO scrape_setlists: Moving state to country for setlist page: December 13, 2008
+[2025-05-22 23:04:49] INFO scrape_setlists: Parsed 1350 setlists so far...
+[2025-05-22 23:05:07] INFO scrape_setlists: Parsed 1400 setlists so far...
+[2025-05-22 23:05:25] INFO scrape_setlists: Parsed 1450 setlists so far...
+[2025-05-22 23:05:28] INFO scrape_setlists: Missing fields (country) for setlist: December 10, 2009
+[2025-05-22 23:05:28] INFO scrape_setlists: Moving state to country for setlist page: December 10, 2009
+[2025-05-22 23:05:29] INFO scrape_setlists: Missing fields (country) for setlist: December 11, 2009
+[2025-05-22 23:05:29] INFO scrape_setlists: Moving state to country for setlist page: December 11, 2009
+[2025-05-22 23:05:29] INFO scrape_setlists: Missing fields (country) for setlist: December 13, 2009
+[2025-05-22 23:05:29] INFO scrape_setlists: Moving state to country for setlist page: December 13, 2009
+[2025-05-22 23:05:41] INFO scrape_setlists: Missing fields (country) for setlist: March 21, 2010
+[2025-05-22 23:05:41] INFO scrape_setlists: Moving state to country for setlist page: March 21, 2010
+[2025-05-22 23:05:42] INFO scrape_setlists: Missing fields (country) for setlist: March 22, 2010
+[2025-05-22 23:05:42] INFO scrape_setlists: Moving state to country for setlist page: March 22, 2010
+[2025-05-22 23:05:42] INFO scrape_setlists: Missing fields (country) for setlist: March 23, 2010
+[2025-05-22 23:05:42] INFO scrape_setlists: Moving state to country for setlist page: March 23, 2010
+[2025-05-22 23:05:42] INFO scrape_setlists: Parsed 1500 setlists so far...
+[2025-05-22 23:05:59] INFO scrape_setlists: Parsed 1550 setlists so far...
+[2025-05-22 23:06:08] INFO scrape_setlists: Missing fields (country) for setlist: January 20, 2011
+[2025-05-22 23:06:08] INFO scrape_setlists: Moving state to country for setlist page: January 20, 2011
+[2025-05-22 23:06:08] INFO scrape_setlists: Missing fields (country) for setlist: January 21, 2011
+[2025-05-22 23:06:08] INFO scrape_setlists: Moving state to country for setlist page: January 21, 2011
+[2025-05-22 23:06:08] INFO scrape_setlists: Missing fields (country) for setlist: January 23, 2011
+[2025-05-22 23:06:08] INFO scrape_setlists: Moving state to country for setlist page: January 23, 2011
+[2025-05-22 23:06:16] INFO scrape_setlists: Parsed 1600 setlists so far...
+[2025-05-22 23:06:33] INFO scrape_setlists: Parsed 1650 setlists so far...
+[2025-05-22 23:06:46] INFO scrape_setlists: Missing fields (country) for setlist: January 9, 2012
+[2025-05-22 23:06:46] INFO scrape_setlists: Moving state to country for setlist page: January 9, 2012
+[2025-05-22 23:06:46] INFO scrape_setlists: Missing fields (country) for setlist: January 10, 2012
+[2025-05-22 23:06:46] INFO scrape_setlists: Moving state to country for setlist page: January 10, 2012
+[2025-05-22 23:06:47] INFO scrape_setlists: Missing fields (country) for setlist: January 26, 2012
+[2025-05-22 23:06:47] INFO scrape_setlists: Moving state to country for setlist page: January 26, 2012
+[2025-05-22 23:06:47] INFO scrape_setlists: Missing fields (country) for setlist: January 27, 2012
+[2025-05-22 23:06:47] INFO scrape_setlists: Moving state to country for setlist page: January 27, 2012
+[2025-05-22 23:06:47] INFO scrape_setlists: Missing fields (country) for setlist: January 29, 2012
+[2025-05-22 23:06:47] INFO scrape_setlists: Moving state to country for setlist page: January 29, 2012
+[2025-05-22 23:06:49] INFO scrape_setlists: Parsed 1700 setlists so far...
+[2025-05-22 23:07:06] INFO scrape_setlists: Parsed 1750 setlists so far...
+[2025-05-22 23:07:22] INFO scrape_setlists: Missing fields (country) for setlist: December 18, 2012
+[2025-05-22 23:07:22] INFO scrape_setlists: Moving state to country for setlist page: December 18, 2012
+[2025-05-22 23:07:23] INFO scrape_setlists: Missing fields (country) for setlist: December 19, 2012
+[2025-05-22 23:07:23] INFO scrape_setlists: Moving state to country for setlist page: December 19, 2012
+[2025-05-22 23:07:23] INFO scrape_setlists: Missing fields (country) for setlist: December 20, 2012
+[2025-05-22 23:07:23] INFO scrape_setlists: Moving state to country for setlist page: December 20, 2012
+[2025-05-22 23:07:23] INFO scrape_setlists: Parsed 1800 setlists so far...
+[2025-05-22 23:07:42] INFO scrape_setlists: Parsed 1850 setlists so far...
+[2025-05-22 23:07:59] INFO scrape_setlists: Parsed 1900 setlists so far...
+[2025-05-22 23:08:00] INFO scrape_setlists: Missing fields (country) for setlist: December 16, 2013
+[2025-05-22 23:08:00] INFO scrape_setlists: Moving state to country for setlist page: December 16, 2013
+[2025-05-22 23:08:00] INFO scrape_setlists: Missing fields (country) for setlist: December 17, 2013
+[2025-05-22 23:08:00] INFO scrape_setlists: Moving state to country for setlist page: December 17, 2013
+[2025-05-22 23:08:00] INFO scrape_setlists: Missing fields (country) for setlist: December 19, 2013
+[2025-05-22 23:08:00] INFO scrape_setlists: Moving state to country for setlist page: December 19, 2013
+[2025-05-22 23:08:16] INFO scrape_setlists: Parsed 1950 setlists so far...
+[2025-05-22 23:08:22] INFO scrape_setlists: Missing fields (country) for setlist: June 19, 2014
+[2025-05-22 23:08:22] INFO scrape_setlists: Moving state to country for setlist page: June 19, 2014
+[2025-05-22 23:08:22] INFO scrape_setlists: Missing fields (country) for setlist: June 20, 2014
+[2025-05-22 23:08:22] INFO scrape_setlists: Moving state to country for setlist page: June 20, 2014
+[2025-05-22 23:08:22] INFO scrape_setlists: Missing fields (country) for setlist: June 21, 2014
+[2025-05-22 23:08:22] INFO scrape_setlists: Moving state to country for setlist page: June 21, 2014
+[2025-05-22 23:08:35] INFO scrape_setlists: Parsed 2000 setlists so far...
+[2025-05-22 23:08:38] INFO scrape_setlists: Missing fields (country) for setlist: December 4, 2014
+[2025-05-22 23:08:38] INFO scrape_setlists: Moving state to country for setlist page: December 4, 2014
+[2025-05-22 23:08:38] INFO scrape_setlists: Missing fields (country) for setlist: December 5, 2014
+[2025-05-22 23:08:38] INFO scrape_setlists: Moving state to country for setlist page: December 5, 2014
+[2025-05-22 23:08:39] INFO scrape_setlists: Missing fields (country) for setlist: December 6, 2014
+[2025-05-22 23:08:39] INFO scrape_setlists: Moving state to country for setlist page: December 6, 2014
+[2025-05-22 23:08:41] INFO scrape_setlists: Missing fields (country) for setlist: January 10, 2015
+[2025-05-22 23:08:41] INFO scrape_setlists: Moving state to country for setlist page: January 10, 2015
+[2025-05-22 23:08:52] INFO scrape_setlists: Parsed 2050 setlists so far...
+[2025-05-22 23:09:08] INFO scrape_setlists: Parsed 2100 setlists so far...
+[2025-05-22 23:09:10] INFO scrape_setlists: Missing fields (country) for setlist: December 3, 2015
+[2025-05-22 23:09:10] INFO scrape_setlists: Moving state to country for setlist page: December 3, 2015
+[2025-05-22 23:09:11] INFO scrape_setlists: Missing fields (country) for setlist: December 5, 2015
+[2025-05-22 23:09:11] INFO scrape_setlists: Moving state to country for setlist page: December 5, 2015
+[2025-05-22 23:09:11] INFO scrape_setlists: Missing fields (country) for setlist: December 6, 2015
+[2025-05-22 23:09:11] INFO scrape_setlists: Moving state to country for setlist page: December 6, 2015
+[2025-05-22 23:09:25] INFO scrape_setlists: Parsed 2150 setlists so far...
+[2025-05-22 23:09:42] INFO scrape_setlists: Parsed 2200 setlists so far...
+[2025-05-22 23:09:44] INFO scrape_setlists: Missing fields (country) for setlist: December 2, 2016
+[2025-05-22 23:09:44] INFO scrape_setlists: Moving state to country for setlist page: December 2, 2016
+[2025-05-22 23:09:44] INFO scrape_setlists: Missing fields (country) for setlist: December 3, 2016
+[2025-05-22 23:09:44] INFO scrape_setlists: Moving state to country for setlist page: December 3, 2016
+[2025-05-22 23:09:44] INFO scrape_setlists: Missing fields (country) for setlist: December 4, 2016
+[2025-05-22 23:09:44] INFO scrape_setlists: Moving state to country for setlist page: December 4, 2016
+[2025-05-22 23:09:58] INFO scrape_setlists: Parsed 2250 setlists so far...
+[2025-05-22 23:10:14] INFO scrape_setlists: Missing fields (country) for setlist: December 1, 2017
+[2025-05-22 23:10:14] INFO scrape_setlists: Moving state to country for setlist page: December 1, 2017
+[2025-05-22 23:10:14] INFO scrape_setlists: Missing fields (country) for setlist: December 2, 2017
+[2025-05-22 23:10:14] INFO scrape_setlists: Moving state to country for setlist page: December 2, 2017
+[2025-05-22 23:10:15] INFO scrape_setlists: Missing fields (country) for setlist: December 3, 2017
+[2025-05-22 23:10:15] INFO scrape_setlists: Moving state to country for setlist page: December 3, 2017
+[2025-05-22 23:10:15] INFO scrape_setlists: Parsed 2300 setlists so far...
+[2025-05-22 23:10:31] INFO scrape_setlists: Parsed 2350 setlists so far...
+[2025-05-22 23:10:43] INFO scrape_setlists: Missing fields (country) for setlist: December 13, 2018
+[2025-05-22 23:10:43] INFO scrape_setlists: Moving state to country for setlist page: December 13, 2018
+[2025-05-22 23:10:44] INFO scrape_setlists: Missing fields (country) for setlist: December 14, 2018
+[2025-05-22 23:10:44] INFO scrape_setlists: Moving state to country for setlist page: December 14, 2018
+[2025-05-22 23:10:44] INFO scrape_setlists: Missing fields (country) for setlist: December 15, 2018
+[2025-05-22 23:10:44] INFO scrape_setlists: Moving state to country for setlist page: December 15, 2018
+[2025-05-22 23:10:48] INFO scrape_setlists: Missing fields (country) for setlist: January 15, 2019
+[2025-05-22 23:10:48] INFO scrape_setlists: Moving state to country for setlist page: January 15, 2019
+[2025-05-22 23:10:48] INFO scrape_setlists: Missing fields (country) for setlist: January 16, 2019
+[2025-05-22 23:10:48] INFO scrape_setlists: Moving state to country for setlist page: January 16, 2019
+[2025-05-22 23:10:50] INFO scrape_setlists: Parsed 2400 setlists so far...
+[2025-05-22 23:11:07] INFO scrape_setlists: Parsed 2450 setlists so far...
+[2025-05-22 23:11:23] INFO scrape_setlists: Parsed 2500 setlists so far...
+[2025-05-22 23:11:39] INFO scrape_setlists: Parsed 2550 setlists so far...
+[2025-05-22 23:11:46] INFO scrape_setlists: Missing fields (country) for setlist: December 5, 2021
+[2025-05-22 23:11:46] INFO scrape_setlists: Moving state to country for setlist page: December 5, 2021
+[2025-05-22 23:11:46] INFO scrape_setlists: Missing fields (country) for setlist: December 6, 2021
+[2025-05-22 23:11:46] INFO scrape_setlists: Moving state to country for setlist page: December 6, 2021
+[2025-05-22 23:11:47] INFO scrape_setlists: Missing fields (country) for setlist: December 7, 2021
+[2025-05-22 23:11:47] INFO scrape_setlists: Moving state to country for setlist page: December 7, 2021
+[2025-05-22 23:11:54] INFO scrape_setlists: Missing fields (country) for setlist: March 25, 2022
+[2025-05-22 23:11:54] INFO scrape_setlists: Moving state to country for setlist page: March 25, 2022
+[2025-05-22 23:11:54] INFO scrape_setlists: Missing fields (country) for setlist: March 25, 2022
+[2025-05-22 23:11:54] INFO scrape_setlists: Moving state to country for setlist page: March 25, 2022
+[2025-05-22 23:11:55] INFO scrape_setlists: Missing fields (country) for setlist: March 26, 2022
+[2025-05-22 23:11:55] INFO scrape_setlists: Moving state to country for setlist page: March 26, 2022
+[2025-05-22 23:11:55] INFO scrape_setlists: Parsed 2600 setlists so far...
+[2025-05-22 23:11:55] INFO scrape_setlists: Missing fields (country) for setlist: March 27, 2022
+[2025-05-22 23:11:55] INFO scrape_setlists: Moving state to country for setlist page: March 27, 2022
+[2025-05-22 23:12:10] INFO scrape_setlists: Parsed 2650 setlists so far...
+[2025-05-22 23:12:14] INFO scrape_setlists: Missing fields (country) for setlist: February 10, 2023
+[2025-05-22 23:12:14] INFO scrape_setlists: Moving state to country for setlist page: February 10, 2023
+[2025-05-22 23:12:15] INFO scrape_setlists: Missing fields (country) for setlist: February 11, 2023
+[2025-05-22 23:12:15] INFO scrape_setlists: Moving state to country for setlist page: February 11, 2023
+[2025-05-22 23:12:27] INFO scrape_setlists: Parsed 2700 setlists so far...
+[2025-05-22 23:12:47] INFO scrape_setlists: Parsed 2750 setlists so far...
+[2025-05-22 23:13:04] INFO scrape_setlists: Parsed 2800 setlists so far...
+[2025-05-22 23:13:10] INFO scrape_setlists: Missing fields (country) for setlist: January 23, 2025
+[2025-05-22 23:13:10] INFO scrape_setlists: Splitting city field on comma and shifting right for setlist page: January 23, 2025
+[2025-05-22 23:13:15] INFO scrape_setlists: Missing fields (country) for setlist: March 9, 2025
+[2025-05-22 23:13:15] INFO scrape_setlists: Moving state to country for setlist page: March 9, 2025
+[2025-05-22 23:13:19] INFO scrape_setlists: Missing fields (country) for setlist: April 18, 2025
+[2025-05-22 23:13:19] INFO scrape_setlists: Moving state to country for setlist page: April 18, 2025
+[2025-05-22 23:13:19] INFO scrape_setlists: Missing fields (country) for setlist: April 19, 2025
+[2025-05-22 23:13:19] INFO scrape_setlists: Moving state to country for setlist page: April 19, 2025
+[2025-05-22 23:13:20] INFO scrape_setlists: Missing fields (country) for setlist: April 19, 2025
+[2025-05-22 23:13:20] INFO scrape_setlists: Moving state to country for setlist page: April 19, 2025
+[2025-05-22 23:13:20] INFO scrape_setlists: Missing fields (country) for setlist: April 20, 2025
+[2025-05-22 23:13:20] INFO scrape_setlists: Moving state to country for setlist page: April 20, 2025
+[2025-05-22 23:13:20] INFO scrape_setlists: Parsed 2850 setlists so far...
+[2025-05-22 23:13:22] WARNING scrape_setlists: Missed 9 setlists: ['https://allthings.umphreys.com/setlists/umphreys-mcgee-december-17-1998-the-factory-south-bend-in-usa.html', 'https://allthings.umphreys.com/setlists/umphreys-mcgee-december-18-1998-madison-oyster-bar-south-bend-in-usa.html', 'https://allthings.umphreys.com/setlists/umphreys-mcgee-february-18-1999-orbit-music-mishawaka-in-usa.html', 'https://allthings.umphreys.com/setlists/umphreys-mcgee-february-25-1999-senior-bar-notre-dame-in-usa.html', 'https://allthings.umphreys.com/setlists/umphreys-mcgee-february-26-1999-martyrs039-chicago-il-usa.html', 'https://allthings.umphreys.com/setlists/umphreys-mcgee-september-22-2001-woodward-festival-titusville-pa-usa.html', 'https://allthings.umphreys.com/setlists/umphreys-mcgee-december-11-2001-the-blind-pig-ann-arbor-mi-usa.html', 'https://allthings.umphreys.com/setlists/umphreys-mcgee-january-23-2016-beacon-theatre-new-york-ny-usa.html', 'https://allthings.umphreys.com/setlists/umphreys-mcgee-may-22-2025-the-windjammer-isle-of-palms-sc-usa.html']
+[2025-05-22 23:13:22] INFO __main__: Fetched 46,745 setlist songs for 2,846 shows.
+[2025-05-22 23:13:23] INFO __main__: UM pipeline completed in 1049.75 seconds.

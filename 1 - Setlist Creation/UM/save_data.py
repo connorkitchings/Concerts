@@ -2,7 +2,6 @@ import os
 import json
 from datetime import datetime
 import pandas as pd
-from scrape_setlists import _sort_setlist_df
 
 def save_um_data(song_data, venue_data, setlist_data, data_dir):
     os.makedirs(data_dir, exist_ok=True)
@@ -31,7 +30,7 @@ def save_um_data(song_data, venue_data, setlist_data, data_dir):
     data_pairs = {
         'songdata.csv': song_data,
         'venuedata.csv': venue_data,
-        'setlistdata.csv': _sort_setlist_df(setlist_data)
+        'setlistdata.csv': setlist_data
     }
     for filename, data in data_pairs.items():
         filepath = os.path.join(data_dir, filename)
