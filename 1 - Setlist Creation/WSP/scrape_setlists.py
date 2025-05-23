@@ -136,6 +136,7 @@ def load_setlist_data(link_list, method='all', existing_setlist_data=None):
             logger.error("No setlist data found for any link.")
             return pd.DataFrame(columns=EXPECTED_COLUMNS)
         all_setlists = pd.concat(setlist_frames, ignore_index=True)
+        all_setlists = all_setlists.dropna(subset=['song_name']).reset_index(drop=True)
         return all_setlists
     elif method == 'update':
         logger.info("Updating Existing WSP Setlist Data")
@@ -160,6 +161,7 @@ def load_setlist_data(link_list, method='all', existing_setlist_data=None):
                     logger.warning(f"No setlist data returned for date {formatted_date}, skipping.")
                 else:
                     logger.warning(f"No setlist data returned for link {link}, skipping.")
+        all_setsets = all_setsets.dropna(subset=['song_name']).reset_index(drop=True)
         return all_setsets
     else:
         logger.error(f"Unknown method '{method}' for load_setlist_data.")
