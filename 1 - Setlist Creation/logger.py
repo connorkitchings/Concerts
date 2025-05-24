@@ -24,10 +24,11 @@ from typing import Optional
 
 def get_logger(
     name: str,
-    log_file: str,
+    log_file: str = "../../logs/data_pipeline.log",
     log_level: str = 'INFO',
     log_max_bytes: int = 5 * 1024 * 1024,
-    log_backup_count: int = 5
+    log_backup_count: int = 5,
+    add_console_handler: bool = True
 ) -> logging.Logger:
     """
     Create and configure a logger with a size-based rotating file handler.
@@ -38,13 +39,14 @@ def get_logger(
         log_level (str, optional): Logging level (e.g., 'INFO', 'DEBUG'). Defaults to 'INFO'.
         log_max_bytes (int, optional): Maximum size in bytes before rotating log. Defaults to 5 MB.
         log_backup_count (int, optional): Number of backup log files to keep. Defaults to 5.
+        add_console_handler (bool, optional): If True, also add a StreamHandler to the logger. Defaults to True.
 
     Returns:
         logging.Logger: Configured logger instance.
 
     This logger uses a RotatingFileHandler, which automatically rotates the log file when it exceeds the specified size (log_max_bytes). Old log files are kept up to log_backup_count backups.
     Log output format: [timestamp] LEVEL logger_name: message
-    Logs are also streamed to the console for convenience.
+    If add_console_handler is True, logs are also streamed to the console for convenience.
     """
     os.makedirs(os.path.dirname(log_file), exist_ok=True)
     logger: logging.Logger = logging.getLogger(name)
@@ -54,7 +56,8 @@ def get_logger(
         formatter = logging.Formatter('[%(asctime)s] %(levelname)s %(name)s: %(message)s')
         handler.setFormatter(formatter)
         logger.addHandler(handler)
-        console_handler = logging.StreamHandler()
-        console_handler.setFormatter(formatter)
-        logger.addHandler(console_handler)
+        if add_console_handler:
+            console_handler = logging.StreamHandler()
+            console_handler.setFormatter(formatter)
+            logger.addHandler(console_handler)
     return logger

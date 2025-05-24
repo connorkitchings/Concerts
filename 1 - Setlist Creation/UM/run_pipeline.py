@@ -3,7 +3,7 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from UM.logger import get_logger
+from logger import get_logger
 from scrape_songs import scrape_um_songs
 from scrape_shows import scrape_um_shows
 from scrape_setlists import fetch_um_setlist_data
@@ -22,7 +22,7 @@ def main() -> None:
     Inputs: None (uses utility functions and imported modules).
     Outputs: None (side effects: saves data to disk, logs output).
     """
-    logger = get_logger(__name__)
+    logger = get_logger(__name__, add_console_handler=True)
     start_time = time.time()
     try:
         data_dir = DATA_DIR

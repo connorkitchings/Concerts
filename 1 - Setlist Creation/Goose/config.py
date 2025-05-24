@@ -11,8 +11,7 @@ from datetime import datetime
 BAND_NAME: str = os.environ.get('GOOSE_BAND_NAME', 'Goose')
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 DATA_DIR: str = os.environ.get('GOOSE_DATA_DIR', str(PROJECT_ROOT / '3 - Data' / BAND_NAME / 'ElGoose'))
-LOG_DIR: str = os.environ.get('GOOSE_LOG_DIR', str(PROJECT_ROOT / 'logs' / 'Setlist_Creation' / BAND_NAME))
-LOG_FILE: str = os.environ.get("GOOSE_LOG_FILE", str(Path(LOG_DIR) / f"data_pipeline.log"))
+LOG_FILE: str = os.environ.get("GOOSE_LOG_FILE", str(PROJECT_ROOT / 'logs' / 'data_pipeline.log'))
 
 # --- Filenames ---
 SONG_DATA_FILENAME: str = os.environ.get('GOOSE_SONG_DATA_FILENAME', 'songdata.csv')

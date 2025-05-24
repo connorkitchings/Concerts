@@ -27,8 +27,7 @@ VENUE_TABLE_IDX = int(os.environ.get("UM_VENUE_TABLE_IDX", 0))
 BAND_NAME = os.environ.get("UM_BAND_NAME", "UM")
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = Path(os.environ.get("UM_DATA_DIR", str(PROJECT_ROOT / '3 - Data' / BAND_NAME / 'AllThingsUM')))
-LOG_DIR = Path(os.environ.get("UM_LOG_DIR", str(PROJECT_ROOT / 'logs' / 'Setlist_Creation' / BAND_NAME)))
-LOG_FILE = Path(os.environ.get("UM_LOG_FILE", str(LOG_DIR / 'data_pipeline.log')))
+LOG_FILE = Path(os.environ.get("UM_LOG_FILE", str(PROJECT_ROOT / 'logs' / 'data_pipeline.log')))
 
 # --- Filenames ---
 # Environment: UM_SONG_DATA_FILENAME, etc.

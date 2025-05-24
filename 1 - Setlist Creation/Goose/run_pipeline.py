@@ -3,7 +3,7 @@ import os
 import json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from Goose.logger import get_logger
+from logger import get_logger
 from export_data import save_goose_data, save_query_data
 from Goose.config import DATA_DIR
 from Goose.utils import get_date_and_time, print_relative_path

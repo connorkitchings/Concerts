@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 import re
-from WSP.logger import get_logger
-logger = get_logger(__name__)
+from logger import get_logger
+logger = get_logger(__name__, add_console_handler=True)
 from datetime import datetime, date
 
 from WSP.config import BASE_URL, SKIP_YEARS

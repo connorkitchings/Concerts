@@ -4,10 +4,10 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import os
 import re
-from UM.logger import get_logger
+from logger import get_logger
 from UM.config import BASE_URL, DATA_DIR
 
-logger = get_logger(__name__)
+logger = get_logger(__name__, add_console_handler=True)
 
 def fetch_soup(url: str) -> BeautifulSoup:
     """

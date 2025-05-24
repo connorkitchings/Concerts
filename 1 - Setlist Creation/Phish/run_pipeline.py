@@ -3,7 +3,7 @@ import os
 import json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from Phish.logger import get_logger
+from logger import get_logger
 from call_api import access_credentials
 from export_data import save_phish_data, save_query_data
 from Phish.config import DATA_DIR
@@ -19,7 +19,7 @@ All configuration is managed via config.py and environment variables.
 """
 def main() -> None:
     import traceback
-    logger = get_logger(__name__)
+    logger = get_logger(__name__, add_console_handler=True)
     api_key = access_credentials()
     data_dir = DATA_DIR
     # Log previous last update

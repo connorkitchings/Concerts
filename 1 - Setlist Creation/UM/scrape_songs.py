@@ -2,10 +2,9 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from io import StringIO
-from UM.logger import get_logger
+from logger import get_logger
 
-logger = get_logger(__name__)
-
+logger = get_logger(__name__, add_console_handler=True)
 
 from UM.config import BASE_URL, SONG_TABLE_IDX
 

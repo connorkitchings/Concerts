@@ -8,7 +8,7 @@ def get_logger(name=None):
     Usage: logger = get_logger(__name__)
     """
     # Compute the log directory relative to this file's parent (Notebook)
-    log_dir = '/Users/connorkitchings/Desktop/Repositories/Concerts/logs/Notebook'
+    log_dir = '/Users/connorkitchings/Desktop/Repositories/Concerts/logs/'
     os.makedirs(log_dir, exist_ok=True)
     log_file = os.path.join(log_dir, 'notebook.log')
 

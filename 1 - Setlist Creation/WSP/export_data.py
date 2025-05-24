@@ -1,9 +1,9 @@
 import os
 import json
 from datetime import datetime, date
-from WSP.logger import get_logger
+from logger import get_logger
 
-logger = get_logger(__name__)
+logger = get_logger(__name__, add_console_handler=True)
 
 import csv
 import pandas as pd

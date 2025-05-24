@@ -3,8 +3,8 @@ from datetime import datetime, date
 import pandas as pd
 import json
 from pathlib import Path
-from UM.logger import get_logger
-logger = get_logger(__name__)
+from logger import get_logger
+logger = get_logger(__name__, add_console_handler=True)
 
 def save_um_data(song_data: pd.DataFrame, venue_data: pd.DataFrame, setlist_data: pd.DataFrame, data_dir=None) -> None:
     data_dir = Path(data_dir) if data_dir is not None else Path(DATA_DIR)

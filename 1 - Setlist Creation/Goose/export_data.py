@@ -3,10 +3,9 @@ import json
 from datetime import datetime
 from Goose.config import DATA_DIR, SONG_DATA_FILENAME, SHOW_DATA_FILENAME, VENUE_DATA_FILENAME, SETLIST_DATA_FILENAME, TRANSITION_DATA_FILENAME, NEXT_SHOW_FILENAME, LAST_UPDATED_FILENAME
 from Goose.utils import get_date_and_time
-from Goose.logger import get_logger
+from logger import get_logger
 
-logger = get_logger(__name__)
-
+logger = get_logger(__name__, add_console_handler=True)
 
 def save_goose_data(song_data: 'pd.DataFrame', show_data: 'pd.DataFrame', venue_data: 'pd.DataFrame', setlist_data: 'pd.DataFrame', transition_data: 'pd.DataFrame', data_dir: str = DATA_DIR) -> None:
     """

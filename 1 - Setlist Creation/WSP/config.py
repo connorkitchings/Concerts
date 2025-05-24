@@ -27,8 +27,7 @@ SETLIST_TABLE_IDX = int(os.environ.get("WSP_SETLIST_TABLE_IDX", 4))
 BAND_NAME: str = os.environ.get("WSP_BAND_NAME", "WSP")
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 DATA_DIR: str = os.environ.get("WSP_DATA_DIR", str(PROJECT_ROOT / '3 - Data' / BAND_NAME / 'EverydayCompanion'))
-LOG_DIR: str = os.environ.get("WSP_LOG_DIR", str(PROJECT_ROOT / 'logs' / 'Setlist_Creation' / BAND_NAME))
-LOG_FILE: str = os.environ.get("WSP_LOG_FILE", str(Path(LOG_DIR) / f"data_pipeline.log"))
+LOG_FILE: str = os.environ.get("WSP_LOG_FILE", str(PROJECT_ROOT / 'logs' / 'data_pipeline.log'))
 
 # --- Logging ---
 LOG_LEVEL: str = os.environ.get("WSP_LOG_LEVEL", "INFO")

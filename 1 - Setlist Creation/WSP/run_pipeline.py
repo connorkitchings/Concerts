@@ -8,7 +8,7 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from WSP.logger import get_logger
+from logger import get_logger
 from scrape_shows import scrape_wsp_shows
 from scrape_songs import scrape_wsp_songs
 from scrape_setlists import load_setlist_data
@@ -21,7 +21,7 @@ import time
 
 if __name__ == "__main__":
     import traceback
-    logger = get_logger(__name__)
+    logger = get_logger(__name__, add_console_handler=True)
     # Log previous last update
     data_dir = DATA_DIR
     last_updated_path = os.path.join(data_dir, "last_updated.json")

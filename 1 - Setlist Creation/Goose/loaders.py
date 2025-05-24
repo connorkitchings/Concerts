@@ -1,7 +1,7 @@
 import os
-from Goose.logger import get_logger
+from logger import get_logger
 
-logger = get_logger(__name__)
+logger = get_logger(__name__, add_console_handler=True)
 
 import json
 from datetime import datetime
