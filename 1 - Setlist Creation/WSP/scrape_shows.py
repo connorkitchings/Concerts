@@ -3,14 +3,22 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
 import re
-from logger import get_logger
+from WSP.logger import get_logger
 logger = get_logger(__name__)
 from datetime import datetime, date
 
-def scrape_wsp_shows(base_url='http://www.everydaycompanion.com/', start_year=1985, skip_years=[2004]):
+from WSP.config import BASE_URL, SKIP_YEARS
+
+def scrape_wsp_shows(base_url: str = BASE_URL, start_year: int = 1985, skip_years: list = SKIP_YEARS) -> 'pd.DataFrame':
     """
     Scrape and return show data for all years (except those in skip_years) from everydaycompanion.com.
-    Returns a DataFrame of show dates and venues.
+
+    Args:
+        base_url (str): Base URL for Everyday Companion. Defaults to BASE_URL from config.
+        start_year (int): First year to scrape. Defaults to 1985.
+        skip_years (list): Years to skip. Defaults to SKIP_YEARS from config.
+    Returns:
+        pd.DataFrame: DataFrame of show dates and venues.
     """
     today = date.today()
     this_year = today.year

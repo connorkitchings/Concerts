@@ -3,18 +3,25 @@ import os
 import json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from logger import get_logger
+from Phish.logger import get_logger
 from call_api import access_credentials
-from save_data import save_phish_data, save_query_data
-from utils import get_data_dir
+from export_data import save_phish_data, save_query_data
+from Phish.config import DATA_DIR
+from Phish.utils import get_date_and_time, print_relative_path
 from loaders import load_song_data, load_show_data, load_setlist_data
 import time
 
-def main():
+"""
+Phish Setlist Creation Pipeline Orchestration Script
+
+Runs the scraping, processing, and saving of Phish show, song, and setlist data.
+All configuration is managed via config.py and environment variables.
+"""
+def main() -> None:
     import traceback
     logger = get_logger(__name__)
     api_key = access_credentials()
-    data_dir = get_data_dir()
+    data_dir = DATA_DIR
     # Log previous last update
     last_updated_path = os.path.join(data_dir, "last_updated.json")
     prev_update = None

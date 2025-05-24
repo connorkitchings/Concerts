@@ -1,7 +1,7 @@
 import os
 import json
 from datetime import datetime, date
-from logger import get_logger
+from WSP.logger import get_logger
 
 logger = get_logger(__name__)
 
@@ -9,29 +9,49 @@ import csv
 import pandas as pd
 
 # logger initialized above using get_logger from logger.py
-def save_wsp_data(song_data, show_data, setlist_data, data_dir):
+from WSP.config import DATA_DIR, SONG_DATA_FILENAME, SHOW_DATA_FILENAME, SETLIST_DATA_FILENAME, NEXT_SHOW_FILENAME, LAST_UPDATED_FILENAME
+
+"""
+WSP Data Export Script
+
+Handles saving WSP show, song, and setlist data to CSV and JSON files.
+All configuration is managed via config.py and environment variables.
+"""
+
+def save_wsp_data(song_data: 'pd.DataFrame', show_data: 'pd.DataFrame', setlist_data: 'pd.DataFrame', data_dir: str = DATA_DIR) -> None:
+    """
+    Save WSP data (songs, shows, setlists) to CSV files and update JSON files for last updated and next show.
+
+    Args:
+        song_data (pd.DataFrame): DataFrame of song data.
+        show_data (pd.DataFrame): DataFrame of show data.
+        setlist_data (pd.DataFrame): DataFrame of setlist data.
+        data_dir (str): Directory to save files. Defaults to DATA_DIR from config.
+    Returns:
+        None
+    """
     os.makedirs(data_dir, exist_ok=True)
     data_pairs = {
-        'songdata.csv': song_data,
-        'showdata.csv': show_data,
-        'setlistdata.csv': setlist_data
+        SONG_DATA_FILENAME: song_data,
+        SHOW_DATA_FILENAME: show_data,
+        SETLIST_DATA_FILENAME: setlist_data
     }
     for filename, data in data_pairs.items():
         filepath = os.path.join(data_dir, filename)
-        if filename == 'setlistdata.csv':
+        if filename == SETLIST_DATA_FILENAME:
             data.to_csv(filepath, index=False, quoting=csv.QUOTE_MINIMAL)
         else:
             data.to_csv(filepath, index=False)
     
     # Save last_updated timestamp
-    last_updated_path = os.path.join(data_dir, "last_updated.json")
+    last_updated_path = os.path.join(data_dir, LAST_UPDATED_FILENAME)
     with open(last_updated_path, "w") as f:
         json.dump({"last_updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S')}, f)
     
     # Update Next Show
     today = datetime.today()
     today_date = today.date()
-    next_show_path = os.path.join(data_dir, "next_show.json")
+    next_show_path = os.path.join(data_dir, NEXT_SHOW_FILENAME)
     show_data['date'] = pd.to_datetime(show_data['date'], format='%m/%d/%Y', errors='coerce').dt.date
     future_shows = show_data[show_data['date'] >= today_date].sort_values('date', ascending=True)
     if not future_shows.empty:

@@ -2,10 +2,27 @@
 
 This directory contains the code and data pipeline for scraping, processing, and storing Umphrey’s McGee (UM) setlist, song, and venue data from allthings.umphreys.com.
 
+## Configuration & Environment Variables
+
+All major settings (paths, filenames, URLs, logging, scrape years, etc.) are centralized in `UM/config.py`.
+- **Environment Variable Overrides:** You can override any config value by setting the corresponding environment variable before running the pipeline. See `config.py` for a full list of supported variables (e.g., `UM_DATA_DIR`, `UM_LOG_LEVEL`, `UM_SCRAPE_YEARS`, `UM_BAND_NAME`, etc.).
+- **Example:**
+  ```bash
+  UM_BAND_NAME="WSP" UM_LOG_LEVEL="DEBUG" UM_SCRAPE_YEARS="2022,2023,2024" python3 UM/run_pipeline.py
+  ```
+
+## Logging System
+
+UM uses its own `logger.py`, wrapping a shared general logger utility. Logs are always written to the correct, config-driven location for UM, as set in `config.py`. This prevents cross-band log contamination and makes the logging system robust and easy to maintain. To change log location or settings, update the environment variables or `UM/config.py`.
+
+## Utility Functions
+
+- **print_relative_path(path):** Prints any file or directory path relative to the first occurrence of `Concerts/`. Useful for environment-agnostic logging or output.
+
 ## Directory Structure
 
 - **UM/**: Main Python package for scraping and data management.
-- **Data Output**: All processed data is saved to `../../3 - Data/UM/AllThingsUM/`.
+- **Data Output**: All processed data is saved to the location defined by `DATA_DIR` in config (default: `../../3 - Data/UM/AllThingsUM/`).
 
 ## Modules Overview
 

@@ -1,14 +1,18 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-from logger import get_logger
+from WSP.logger import get_logger
 logger = get_logger(__name__)
 from io import StringIO
 import numpy as np
 import re
 from datetime import datetime
+try:
+    from export_data import save_wsp_data
+except ImportError:
+    pass
 
-SETLIST_TABLE_IDX = 4
+from WSP.config import SETLIST_TABLE_IDX
 COMMA_SONGS = [
     'Guns', 'And Money', 'Let Me Follow You Down', 'Let Me Hold Your Hand',
     "Please Don't Go", 'Rattle', 'And Roll', 'Narrow Mind', 'Woman Smarter'
@@ -110,10 +114,21 @@ def get_setlist_from_link(link):
     songs_final = songs_final[EXPECTED_COLUMNS]
     return songs_final
 
-def load_setlist_data(link_list, method='all', existing_setlist_data=None):
+def load_setlist_data(link_list: list, method: str = 'all', existing_setlist_data: 'pd.DataFrame' = None) -> 'pd.DataFrame':
     """
-    Load setlist data for a list of show links. Returns a single merged DataFrame.
+    Load setlist data for a list of show links, returning a single merged DataFrame.
+
+    Args:
+        link_list (list): List of show links to scrape setlists for.
+        method (str): Scraping method ('all', 'update', etc.). Defaults to 'all'.
+        existing_setlist_data (pd.DataFrame, optional): Existing setlist data to update. Defaults to None.
+    Returns:
+        pd.DataFrame: Merged DataFrame of setlist data.
     """
+    if existing_setlist_data is not None:
+        logger.info(f"Loaded existing setlistdata.csv with {len(existing_setlist_data):,} rows.")
+    else:
+        logger.info("No existing setlistdata.csv found.")
     if method == 'all':
         logger.info("Loading All WSP Setlist Data")
         setlist_frames = []

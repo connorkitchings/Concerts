@@ -2,16 +2,23 @@ import requests
 import pandas as pd
 from bs4 import BeautifulSoup
 from io import StringIO
-from logger import get_logger
+from UM.logger import get_logger
 
 logger = get_logger(__name__)
 
 
-SONG_TABLE_IDX = 1
+from UM.config import BASE_URL, SONG_TABLE_IDX
 
-BASE_URL = "https://allthings.umphreys.com"
+def scrape_um_songs(base_url: str = BASE_URL) -> pd.DataFrame:
+    """
+    Scrape and return the UM song catalog from allthings.umphreys.com.
 
-def scrape_um_songs(base_url=BASE_URL):
+    Args:
+        base_url (str): Base URL for the UM website (default is BASE_URL).
+
+    Returns:
+        pd.DataFrame: DataFrame containing song metadata.
+    """
     """
     Scrape and return the UM song catalog from allthings.umphreys.com.
     Returns a DataFrame with song metadata.

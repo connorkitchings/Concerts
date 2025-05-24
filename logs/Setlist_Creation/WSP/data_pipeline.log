@@ -1,0 +1,45 @@
+[2025-05-23 21:41:33,556] INFO __main__: Previous Last update: 2025-05-23 21:34:39
+[2025-05-23 21:41:33,556] INFO __main__: Scraping WSP show data...
+[2025-05-23 21:41:40,997] INFO __main__: Scraped 3,229 shows.
+[2025-05-23 21:41:40,997] INFO __main__: Scraping WSP song catalog...
+[2025-05-23 21:41:43,221] INFO __main__: Scraped 696 songs.
+[2025-05-23 21:41:43,221] INFO __main__: Scraping WSP setlists...
+[2025-05-23 21:41:43,301] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,109 rows.
+[2025-05-23 21:41:43,302] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-05-23 21:41:53,261] WARNING scrape_setlists: No setlist data returned for date 06/04/2025, skipping.
+[2025-05-23 21:41:53,486] WARNING scrape_setlists: No setlist data returned for date 06/05/2025, skipping.
+[2025-05-23 21:41:53,713] WARNING scrape_setlists: No setlist data returned for date 06/06/2025, skipping.
+[2025-05-23 21:41:53,727] INFO __main__: Scraped/updated setlist data for all years now has 62,109 rows.
+[2025-05-23 21:41:53,727] INFO __main__: Saving WSP data...
+[2025-05-23 21:41:54,091] INFO export_data: Found next show: 2025-06-04 at Chicago Theatre in Chicago, IL
+[2025-05-23 21:41:54,091] INFO __main__: WSP scraping pipeline completed in 20.54 seconds.
+[2025-05-23 21:45:13,079] INFO __main__: Previous Last update: 2025-05-23 21:41:54
+[2025-05-23 21:45:13,080] INFO __main__: Scraping WSP show data...
+[2025-05-23 21:45:20,364] INFO __main__: Scraped 3,229 shows.
+[2025-05-23 21:45:20,365] INFO __main__: Scraping WSP song catalog...
+[2025-05-23 21:45:22,593] INFO __main__: Scraped 696 songs.
+[2025-05-23 21:45:22,593] INFO __main__: Scraping WSP setlists...
+[2025-05-23 21:45:22,677] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,109 rows.
+[2025-05-23 21:45:22,678] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-05-23 21:45:32,048] WARNING scrape_setlists: No setlist data returned for date 06/04/2025, skipping.
+[2025-05-23 21:45:32,205] WARNING scrape_setlists: No setlist data returned for date 06/05/2025, skipping.
+[2025-05-23 21:45:32,367] WARNING scrape_setlists: No setlist data returned for date 06/06/2025, skipping.
+[2025-05-23 21:45:32,385] INFO __main__: Scraped/updated setlist data for all years now has 62,109 rows.
+[2025-05-23 21:45:32,385] INFO __main__: Saving WSP data...
+[2025-05-23 21:45:32,729] INFO export_data: Found next show: 2025-06-04 at Chicago Theatre in Chicago, IL
+[2025-05-23 21:45:32,729] INFO __main__: WSP scraping pipeline completed in 19.65 seconds.
+[2025-05-23 21:53:47,540] INFO __main__: Previous Last update: 2025-05-23 21:45:32
+[2025-05-23 21:53:47,540] INFO __main__: Scraping WSP show data...
+[2025-05-23 21:53:54,514] INFO __main__: Scraped 3,229 shows.
+[2025-05-23 21:53:54,514] INFO __main__: Scraping WSP song catalog...
+[2025-05-23 21:53:56,804] INFO __main__: Scraped 696 songs.
+[2025-05-23 21:53:56,804] INFO __main__: Scraping WSP setlists...
+[2025-05-23 21:53:56,866] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,109 rows.
+[2025-05-23 21:53:56,867] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-05-23 21:54:06,037] WARNING scrape_setlists: No setlist data returned for date 06/04/2025, skipping.
+[2025-05-23 21:54:06,190] WARNING scrape_setlists: No setlist data returned for date 06/05/2025, skipping.
+[2025-05-23 21:54:06,345] WARNING scrape_setlists: No setlist data returned for date 06/06/2025, skipping.
+[2025-05-23 21:54:06,358] INFO __main__: Scraped/updated setlist data for all years now has 62,109 rows.
+[2025-05-23 21:54:06,358] INFO __main__: Saving WSP data...
+[2025-05-23 21:54:06,687] INFO export_data: Found next show: 2025-06-04 at Chicago Theatre in Chicago, IL
+[2025-05-23 21:54:06,687] INFO __main__: WSP scraping pipeline completed in 19.15 seconds.

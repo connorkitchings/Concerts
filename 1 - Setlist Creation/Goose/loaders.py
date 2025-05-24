@@ -1,5 +1,5 @@
 import os
-from logger import get_logger
+from Goose.logger import get_logger
 
 logger = get_logger(__name__)
 
@@ -12,7 +12,13 @@ from bs4 import BeautifulSoup
 from io import StringIO
 from call_api import make_api_request
 
-def load_song_data():
+def load_song_data() -> 'pd.DataFrame':
+    """
+    Load and process Goose song data from API and website scrape.
+
+    Returns:
+        pd.DataFrame: DataFrame containing merged song data.
+    """
     """Load and process Goose song data from API and website scrape."""
     SONG_TABLE_IDX = 1
     songdata_api = pd.DataFrame(make_api_request('songs', 'v2')['data']).drop(columns=['slug','created_at','updated_at'], errors='ignore')
@@ -44,7 +50,13 @@ def load_song_data():
     }
     return merged_data.rename(columns=final_columns)
 
-def load_show_data():
+def load_show_data() -> tuple['pd.DataFrame', 'pd.DataFrame', 'pd.DataFrame']:
+    """
+    Load and process Goose show, venue, and tour data.
+
+    Returns:
+        tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]: Tuple of DataFrames for show data, venue data, and tour data.
+    """
     """Load and process Goose show, venue, and tour data."""
     today = datetime.today().strftime('%Y-%m-%d')
     shows = pd.DataFrame(make_api_request('shows', 'v2')['data'])
@@ -75,7 +87,17 @@ def load_show_data():
     show_data['tour_id'] = show_data['tour_id'].astype('Int64').astype(str)
     return show_data, venue_data, tour_data
 
-def load_setlist_data(data_dir):
+from Goose.config import DATA_DIR
+
+def load_setlist_data(data_dir: str = DATA_DIR) -> tuple['pd.DataFrame', 'pd.DataFrame']:
+    """
+    Load and process Goose setlist and transition data.
+
+    Args:
+        data_dir (str): Directory containing data files. Defaults to DATA_DIR from config.
+    Returns:
+        tuple[pd.DataFrame, pd.DataFrame]: Tuple of DataFrames for setlist data and transition data.
+    """
     """Load and process Goose setlist and transition data."""
     setlist_df = pd.DataFrame(make_api_request('setlists', 'v1')['data'])
     # Save last_updated to a json file in the data directory

@@ -1,5 +1,5 @@
 import os
-from logger import get_logger
+from Phish.logger import get_logger
 
 logger = get_logger(__name__)
 
@@ -10,8 +10,17 @@ import requests
 from bs4 import BeautifulSoup
 from io import StringIO
 from call_api import make_api_request
+from export_data import save_phish_data, save_query_data
 
-def load_song_data(api_key):
+def load_song_data(api_key: str) -> 'pd.DataFrame':
+    """
+    Load song data from the Phish API.
+
+    Args:
+        api_key (str): API key for authentication.
+    Returns:
+        pd.DataFrame: DataFrame containing song data.
+    """
     song_data = pd.DataFrame(make_api_request('songs', api_key)['data'])
     song_data = song_data.drop(columns=['slug', 'last_permalink', 'debut_permalink'])
     response = requests.get("https://phish.net/song")
@@ -36,7 +45,15 @@ def load_song_data(api_key):
     }
     return merged_data[list(final_columns.keys())].rename(columns=final_columns)
 
-def load_show_data(api_key):
+def load_show_data(api_key: str) -> tuple['pd.DataFrame', 'pd.DataFrame']:
+    """
+    Load show and venue data from the Phish API.
+
+    Args:
+        api_key (str): API key for authentication.
+    Returns:
+        tuple[pd.DataFrame, pd.DataFrame]: Tuple of DataFrames for show data and venue data.
+    """
     today = datetime.today().strftime('%Y-%m-%d')
     shows = pd.DataFrame(make_api_request('shows/artist/phish', api_key)['data'])
     past_shows = shows[shows['showdate'] < today]
@@ -58,7 +75,18 @@ def load_show_data(api_key):
     show_data['tourid'] = show_data['tourid'].astype('Int64').astype(str)
     return show_data, venue_data
 
-def load_setlist_data(api_key, data_dir):
+from Phish.config import DATA_DIR
+
+def load_setlist_data(api_key: str, data_dir: str = DATA_DIR) -> tuple['pd.DataFrame', 'pd.DataFrame']:
+    """
+    Load setlist and transition data from the Phish API and local files.
+
+    Args:
+        api_key (str): API key for authentication.
+        data_dir (str): Directory containing data files. Defaults to DATA_DIR from config.
+    Returns:
+        tuple[pd.DataFrame, pd.DataFrame]: Tuple of DataFrames for setlist data and transition data.
+    """
     setlist_data = pd.DataFrame(make_api_request('setlists', api_key)['data'])
     last_updated = datetime.today().strftime('%Y-%m-%d')
     transition_data = (setlist_data[['transition', 'trans_mark']]

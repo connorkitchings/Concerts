@@ -1,16 +1,25 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-from logger import get_logger
+from WSP.logger import get_logger
 logger = get_logger(__name__)
 from io import StringIO
 
-SONG_CODES_TABLE_IDX = 3
+try:
+    from export_data import save_wsp_data
+except ImportError:
+    pass
 
-def scrape_wsp_songs(base_url='http://www.everydaycompanion.com/'):
+from WSP.config import SONG_CODES_TABLE_IDX, SONG_CODES_URL
+
+def scrape_wsp_songs(base_url: str = 'http://www.everydaycompanion.com/') -> 'pd.DataFrame':
     """
     Scrape and return the WSP song catalog from everydaycompanion.com.
-    Returns a DataFrame with song, code, times played, etc.
+
+    Args:
+        base_url (str): Base URL for Everyday Companion. Defaults to 'http://www.everydaycompanion.com/'.
+    Returns:
+        pd.DataFrame: DataFrame with columns ['song', 'code', 'times_played', 'aka', 'ftp', 'ltp'].
     """
     songcode_url = f"{base_url}asp/songcode.asp"
     try:

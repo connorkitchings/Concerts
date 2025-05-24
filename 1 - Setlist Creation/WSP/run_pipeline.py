@@ -1,14 +1,20 @@
-# Orchestration script for WSP scraping pipeline
+"""
+WSP Setlist Creation Pipeline Orchestration Script
+
+Runs the scraping, processing, and saving of Widespread Panic (WSP) show, song, and setlist data.
+All configuration is managed via config.py and environment variables.
+"""
 import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from logger import get_logger
+from WSP.logger import get_logger
 from scrape_shows import scrape_wsp_shows
 from scrape_songs import scrape_wsp_songs
 from scrape_setlists import load_setlist_data
-from save_data import save_wsp_data
-from utils import get_data_dir
+from export_data import save_wsp_data
+from WSP.config import DATA_DIR
+from WSP.utils import get_date_and_time
 import pandas as pd
 import os
 import time
@@ -17,7 +23,7 @@ if __name__ == "__main__":
     import traceback
     logger = get_logger(__name__)
     # Log previous last update
-    data_dir = get_data_dir()
+    data_dir = DATA_DIR
     last_updated_path = os.path.join(data_dir, "last_updated.json")
     prev_update = None
     if os.path.exists(last_updated_path):
@@ -33,7 +39,7 @@ if __name__ == "__main__":
         logger.info("No previous update found.")
     start_time = time.time()
     try:
-        data_dir = get_data_dir()
+        data_dir = DATA_DIR
         logger.info("Scraping WSP show data...")
         show_data = scrape_wsp_shows()
         logger.info(f"Scraped {len(show_data):,} shows.")
@@ -42,12 +48,11 @@ if __name__ == "__main__":
         song_data = scrape_wsp_songs()
         logger.info(f"Scraped {len(song_data):,} songs.")
 
-        logger.info("Scraping WSP setlists (all mode)")
+        logger.info("Scraping WSP setlists...")
         setlistdata_path = os.path.join(data_dir, 'setlistdata.csv')
         if os.path.exists(setlistdata_path):
             try:
                 existing_setlist_data = pd.read_csv(setlistdata_path)
-                logger.info(f"Loaded existing setlistdata.csv with {len(existing_setlist_data):,} rows.")
             except Exception as e:
                 logger.warning(f"Could not load existing setlistdata.csv: {e}")
         link_list = show_data['link'].tolist()

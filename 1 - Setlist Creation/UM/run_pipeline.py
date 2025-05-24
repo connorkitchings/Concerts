@@ -3,21 +3,29 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from logger import get_logger
+from UM.logger import get_logger
 from scrape_songs import scrape_um_songs
 from scrape_shows import scrape_um_shows
 from scrape_setlists import fetch_um_setlist_data
-from save_data import save_um_data, save_query_data
-from utils import get_data_dir, get_last_update_time
+from export_data import save_um_data, save_query_data
+from UM.config import DATA_DIR
+from UM.utils import get_last_update_time
 import time
 import traceback
 
 
-def main():
+def main() -> None:
+    """
+    Orchestrates the UM scraping pipeline: scrapes song, venue, and setlist data, saves the results,
+    and logs progress and errors.
+
+    Inputs: None (uses utility functions and imported modules).
+    Outputs: None (side effects: saves data to disk, logs output).
+    """
     logger = get_logger(__name__)
     start_time = time.time()
     try:
-        data_dir = get_data_dir()
+        data_dir = DATA_DIR
         last_update = get_last_update_time(data_dir)
         logger.info(f"Previous Last update: {last_update}")
 

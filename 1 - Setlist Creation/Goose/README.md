@@ -9,35 +9,79 @@ This directory contains the code and data pipeline for scraping, processing, and
 
 ## Modules Overview
 
-### 1. `main.py`
+### 1. `run_pipeline.py`
 - **Purpose**: Orchestrates the entire Goose data pipeline.
 - **Workflow**:
   1. Loads song catalog (`loaders.py`)
   2. Loads show, venue, and tour data (`loaders.py`)
   3. Loads setlist and transition data (`loaders.py`)
-  4. Saves all outputs to disk (`save_data.py`)
-- **Logging**: Provides detailed logs for each step.
+  4. Saves all outputs to disk (`export_data.py`)
+- **Modular Logging**: Goose uses its own `logger.py`, wrapping a shared general logger utility. Logs are always written to the correct, config-driven location for Goose, as set in `config.py`. This prevents cross-band log contamination and makes the logging system robust and easy to maintain.
 
-### 2. `call_api.py`
+### 2. `config.py`
+- **Purpose**: Centralized configuration for all paths, filenames, logging, and environment variable overrides.
+- **How to use**: Adjust settings via environment variables or edit `config.py` directly. See below for available variables.
+
+### Logging System
+
+Goose has its own `logger.py` that wraps a shared general logger utility. The logger is always configured using Goose's `config.py` settings (`LOG_FILE`, `LOG_LEVEL`, etc.), ensuring that logs are written to the correct location and never overlap with other bands. To change log location or settings, update the environment variables or `Goose/config.py`.
+
+### 3. `call_api.py`
 - **Functions**: `make_api_request`
 - **Purpose**: Makes HTTP requests to the ElGoose.net API (v1/v2) and returns JSON data.
 
-### 3. `loaders.py`
+### 4. `loaders.py`
 - **Functions**: `load_song_data`, `load_show_data`, `load_setlist_data`
 - **Purpose**: Loads and processes data from the ElGoose.net API and website.
   - `load_song_data`: Merges API song data with scraped song metadata.
   - `load_show_data`: Loads show, venue, and tour data, handles past/future shows.
   - `load_setlist_data`: Loads setlist and transition data, processes columns.
 
-### 4. `save_data.py`
+### 5. `export_data.py`
 - **Functions**: `save_goose_data`, `save_query_data`
 - **Purpose**: Saves the processed DataFrames to CSV files and JSON files in the data directory.
   - `save_goose_data`: Handles saving all main data outputs and next show info.
   - `save_query_data`: Writes the last updated timestamp.
 
-### 5. `utils.py`
-- **Functions**: `get_data_dir`, `get_date_and_time`
-- **Purpose**: Utility functions for managing data paths and timestamps.
+### 6. `utils.py`
+- **Functions**: `print_relative_path`, `get_date_and_time`
+- **Purpose**: Utility functions for managing data paths and timestamps. All functions include type hints and Google-style docstrings.
+
+---
+
+## Configuration & Environment Variables
+
+All pipeline settings are managed via `config.py` and can be overridden with environment variables. Key variables include:
+
+- `GOOSE_DATA_DIR`: Path to the data directory.
+- `GOOSE_LOG_DIR`: Path to the log directory.
+- `GOOSE_BAND_NAME`: Band name (default: 'Goose').
+- `GOOSE_SONG_DATA_FILENAME`, `GOOSE_SHOW_DATA_FILENAME`, etc.: Output file names.
+- `GOOSE_LOG_LEVEL`, `GOOSE_LOG_MAX_BYTES`, `GOOSE_LOG_BACKUP_COUNT`: Logging settings.
+
+Update your environment or `.env` file to customize the pipeline without changing code.
+
+## Logging
+
+- Logs are written to the directory specified by `GOOSE_LOG_DIR` (default: `../../logs/Setlist_Creation/Goose/`).
+- Log rotation and level are controlled via environment variables or `config.py`.
+- All major steps and errors are logged for traceability.
+
+## Type Hints & Docstrings
+
+- All Python code uses type hints for function signatures and variables.
+- All functions and classes include Google-style docstrings for clarity and maintainability.
+
+## Usage
+
+1. Set up your environment variables as needed (see above).
+2. Run the pipeline:
+   ```bash
+   python run_pipeline.py
+   ```
+3. Outputs will be saved to the data directory and logs to the log directory.
+
+---
 
 ---
 
