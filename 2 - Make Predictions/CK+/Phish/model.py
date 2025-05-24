@@ -13,7 +13,6 @@ def aggregate_setlist_features(df, method='mean'):
         pd.DataFrame: CK+ score and related features per song
     """
     max_show_num = df['show_index_overall'].max()
-    print()
     df = df.sort_values(by=['song', 'show_index_overall'], ascending=[True, True])
     df['gap'] = df.groupby('song')['show_index_overall'].diff()
 
@@ -49,5 +48,4 @@ def aggregate_setlist_features(df, method='mean'):
     song_stats['gap_z_score'] = song_stats['gap_ratio'] / song_stats['std_gap']
     song_stats['ck+_score'] = song_stats['gap_z_score'] * song_stats['gap_ratio']
     song_stats = song_stats[final_columns].sort_values(by='ck+_score', ascending=False).reset_index(drop=True)
-    print(song_stats.head(10))
     return song_stats.head(50)

@@ -1,0 +1,28 @@
+[2025-05-24 15:43:46] INFO data_loader: Loaded setlist (46,757) rows from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/setlistdata.csv, venues from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/venuedata.csv, songs from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/songdata.csv
+[2025-05-24 15:44:10] INFO data_loader: Loaded setlist (46,757) rows from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/setlistdata.csv, venues from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/venuedata.csv, songs from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/songdata.csv
+[2025-05-24 15:44:10] INFO model: Aggregated CK+ features for 535 songs using mean gap.
+[2025-05-24 15:44:10] INFO __main__: Saved CK+ predictions to /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/Predictions/todaysck+.csv
+[2025-05-24 15:45:10] INFO data_loader: Loaded setlist (46,757) rows from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/setlistdata.csv, venues from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/venuedata.csv, songs from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/songdata.csv
+[2025-05-24 15:45:10] INFO model: Aggregated CK+ features for 535 songs using mean gap.
+[2025-05-24 15:45:10] INFO __main__: Saved CK+ predictions to /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/Predictions/todaysck+.csv
+[2025-05-24 15:46:31] INFO data_loader: Loaded setlist (46,757) rows from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/setlistdata.csv, venues from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/venuedata.csv, songs from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/songdata.csv
+[2025-05-24 15:46:31] INFO model: Aggregated CK+ features for 275 songs using mean gap.
+[2025-05-24 15:46:31] INFO __main__: Saved CK+ predictions to /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/Predictions/todaysck+.csv
+[2025-05-24 15:48:46] INFO __main__: Running predictions for WSP...
+[2025-05-24 15:48:47] INFO data_loader: Loaded setlist (59,660) rows from setlistdata.csv, shows from showdata.csv, songs from songdata.csv
+[2025-05-24 15:48:47] INFO __main__: Saved CK+ predictions to /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/WSP/Predictions/todaysck+.csv
+[2025-05-24 15:48:48] INFO __main__: Predictions for WSP completed successfully.
+[2025-05-24 15:48:48] INFO __main__: Running predictions for Phish...
+[2025-05-24 15:48:48] INFO data_loader: Loaded setlist (64,273) rows from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/Phish/PhishNet/setlistdata.csv, shows from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/Phish/PhishNet/showdata.csv, songs from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/Phish/PhishNet/songdata.csv
+[2025-05-24 15:48:48] INFO __main__: Saved CK+ predictions to /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/Phish/Predictions/todaysck+.csv
+[2025-05-24 15:48:48] INFO __main__: Predictions for Phish completed successfully.
+[2025-05-24 15:48:48] INFO __main__: Running predictions for Goose...
+[2025-05-24 15:48:49] INFO data_loader: Loaded (6,470) rows from setlistdata.csv, 731 shows from showdata.csv, 333 songs from songdata.csv.
+[2025-05-24 15:48:49] INFO __main__: Saved CK+ predictions to /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/Goose/Predictions/todaysck+.csv
+[2025-05-24 15:48:49] INFO __main__: Predictions for Goose completed successfully.
+[2025-05-24 15:48:49] INFO __main__: Running predictions for UM...
+[2025-05-24 15:48:50] INFO data_loader: Loaded setlist (46,757) rows from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/setlistdata.csv, venues from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/venuedata.csv, songs from /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/songdata.csv
+[2025-05-24 15:48:50] INFO model: Aggregated CK+ features for 275 songs using mean gap.
+[2025-05-24 15:48:50] INFO __main__: Saved CK+ predictions to /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/Predictions/todaysck+.csv
+[2025-05-24 15:48:50] INFO __main__: Predictions for UM completed successfully.
+[2025-05-24 15:48:50] INFO __main__: All band predictions completed successfully.
