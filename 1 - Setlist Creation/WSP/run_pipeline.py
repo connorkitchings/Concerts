@@ -8,7 +8,7 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from logger import get_logger
+from logger import get_logger, restrict_to_repo_root
 from scrape_shows import scrape_wsp_shows
 from scrape_songs import scrape_wsp_songs
 from scrape_setlists import load_setlist_data

@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import os
 import re
-from logger import get_logger
+from logger import get_logger, restrict_to_repo_root
 from UM.config import BASE_URL, DATA_DIR
 
 logger = get_logger(__name__, add_console_handler=True)

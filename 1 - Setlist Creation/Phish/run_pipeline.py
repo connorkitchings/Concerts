@@ -3,7 +3,7 @@ import os
 import json
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from logger import get_logger
+from logger import get_logger, restrict_to_repo_root
 from call_api import access_credentials
 from export_data import save_phish_data, save_query_data
 from Phish.config import DATA_DIR

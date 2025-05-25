@@ -1,6 +1,8 @@
 import os
 import pandas as pd
-from logger import get_logger
+import sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from logger import get_logger, restrict_to_repo_root
 
 logger = get_logger(__name__)
 
@@ -27,5 +29,5 @@ def load_setlist_and_showdata(
     })
     df['show_date'] = pd.to_datetime(df['show_date'], errors='coerce')
     df = df[~df['song'].isnull()].copy()
-    logger.info(f"Loaded setlist ({len(df):,}) rows from {setlist_path}, venues from {venuedata_path}, songs from {songdata_path}")
+    logger.info(f"Loaded setlist ({len(df):,}) rows from {restrict_to_repo_root(setlist_path)}, venues from {restrict_to_repo_root(venuedata_path)}, songs from {restrict_to_repo_root(songdata_path)}")
     return df

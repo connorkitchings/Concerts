@@ -3,7 +3,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from datetime import datetime
 from data_loader import load_setlist_and_showdata
 from model import aggregate_setlist_features
-from logger import get_logger
+from logger import get_logger, restrict_to_repo_root
 
 logger = get_logger(__name__)
 
@@ -24,4 +24,4 @@ if __name__ == "__main__":
     os.makedirs(predictions_folder, exist_ok=True)
     out_path = os.path.join(predictions_folder, 'todaysck+.csv')
     ckplus_df.to_csv(out_path, index=False)
-    logger.info(f"Saved CK+ predictions to {out_path}")
+    logger.info(f"Saved CK+ predictions to {restrict_to_repo_root(out_path)}")

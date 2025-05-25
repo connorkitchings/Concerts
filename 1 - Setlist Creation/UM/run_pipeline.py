@@ -3,7 +3,7 @@ import sys
 import os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from logger import get_logger
+from logger import get_logger, restrict_to_repo_root
 from scrape_songs import scrape_um_songs
 from scrape_shows import scrape_um_shows
 from scrape_setlists import fetch_um_setlist_data

@@ -1,7 +1,7 @@
 from pathlib import Path
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from logger import get_logger
+from logger import get_logger, restrict_to_repo_root
 from data_loader import load_setlist_and_showdata
 from model import aggregate_setlist_features
 
@@ -17,4 +17,4 @@ if __name__ == "__main__":
     ckplus_df = aggregate_setlist_features(df)
     out_path = SCRIPT_DIR.parent.parent.parent / "3 - Data/Goose/Predictions/todaysck+.csv"
     ckplus_df.to_csv(out_path, index=False)
-    logger.info(f"Saved CK+ predictions to {out_path}")
+    logger.info(f"Saved CK+ predictions to {restrict_to_repo_root(out_path)}")

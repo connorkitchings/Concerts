@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
-from logger import get_logger
+from logger import get_logger, restrict_to_repo_root
 logger = get_logger(__name__, add_console_handler=True)
 from io import StringIO
 import numpy as np

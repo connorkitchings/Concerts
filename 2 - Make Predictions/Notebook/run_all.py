@@ -12,15 +12,9 @@ import subprocess
 import sys
 import os
 import time
+from logger import get_logger
 
-try:
-    from logger import get_logger
-except ImportError:
-    def get_logger(name):
-        class DummyLogger:
-            def info(self, msg): print(msg)
-            def error(self, msg): print(msg)
-        return DummyLogger()
+logger = get_logger(__name__)
 
 BANDS = {
     "Phish": "Phish/predict_today.py",
@@ -31,23 +25,31 @@ BANDS = {
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-def run_band(band, script_path, logger):
+def run_band(band: str, script_path: str) -> int:
     script_full_path = os.path.join(BASE_DIR, script_path)
     logger.info(f"Running {band} prediction pipeline...")
     if not os.path.exists(script_full_path):
         logger.error(f"predict_today.py not found for {band}! ({script_full_path})")
-        return
+        return 1
     result = subprocess.run([sys.executable, script_full_path], capture_output=True, text=True)
     if result.stdout:
         logger.info(f"{band} output:\n{result.stdout}")
     if result.stderr and result.returncode != 0:
         logger.error(f"{band} [stderr]:\n{result.stderr}")
+    if result.returncode == 0:
+        logger.info(f"Predictions for {band} completed successfully.")
+    else:
+        logger.error(f"Predictions for {band} failed with exit code {result.returncode}.")
+    return result.returncode
 
-def main():
-    logger = get_logger(__name__)
+
+def main() -> None:
+    """
+    Runs predict_today.py for all supported bands.
+    """
     total_start = time.time()
     for band, script in BANDS.items():
-        run_band(band, script, logger)
+        run_band(band, script)
     total_duration = time.time() - total_start
     logger.info(f"All band prediction pipelines completed in {total_duration:.2f} seconds.")
 

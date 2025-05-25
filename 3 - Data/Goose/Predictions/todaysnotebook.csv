@@ -1,153 +1,145 @@
 song,times_played_last_year,last_time_played_date,current_show_gap,average_gap,median_gap
-Animal,17,2025-02-14,5,4.438,4.5
-Tumble,16,2025-02-15,3,4.8,5.0
-All I Need,16,2025-02-13,3,4.733,5.0
-The Empress Of Organos,15,2025-02-07,9,4.643,4.0
-Rockdale,15,2025-02-11,7,4.714,4.0
-Atlas Dogs,15,2025-02-13,6,4.786,4.5
-Arrow,15,2025-02-13,6,4.929,4.0
-Everything Must Go,14,2025-02-13,6,5.308,5.0
-Mr. Action,14,2025-02-13,3,5.462,5.0
-Echo of a Rose,14,2025-02-15,4,5.077,4.0
-Dripfield,14,2025-02-14,5,5.154,5.0
-Flodown,14,2025-02-13,6,4.846,4.0
-Yeti,13,2025-02-10,3,5.917,5.5
-Pancakes,13,2025-02-15,3,5.583,5.0
-Red Bird,13,2025-02-07,9,5.333,5.0
-Feel it Now,13,2025-02-14,5,5.917,3.5
-Slow Ready,13,2025-02-10,3,5.917,5.5
-Creatures,13,2025-02-14,5,5.667,5.5
-Same Old Shenanigans,12,2025-02-08,8,6.182,4.0
-Turbulence & The Night Rays,12,2025-02-06,10,6.0,7.0
-Butter Rum,12,2025-02-11,7,5.727,5.0
-California Magic,11,2025-02-07,9,6.2,6.5
-A Western Sun,11,2025-02-14,3,6.6,4.5
-Borne,11,2025-02-08,8,6.6,7.5
-Seekers on the Ridge pt II,11,2025-02-11,7,6.5,5.5
-Seekers on the Ridge pt I,11,2025-02-11,7,6.5,5.5
-Dr. Darkness,11,2025-02-06,10,6.0,6.0
-"One In, One Out",10,2025-02-14,5,4.778,5.0
-The Whales,9,2025-02-06,10,7.75,7.0
-Wysteria Lane,9,2025-02-10,3,9.125,8.5
-Jive Lee,9,2024-11-07,14,7.75,6.5
-Jive I,9,2025-02-13,6,8.75,8.5
-Earthling or Alien?,9,2025-02-10,3,9.125,8.0
-Draconian Meter Maid,9,2025-02-06,10,5.625,6.0
-Elizabeth,8,2025-02-10,3,9.0,7.0
-Indian River,8,2024-10-30,16,7.714,5.0
-SALT,8,2025-02-06,10,6.143,5.0
-This Old Sea,8,2025-02-14,5,8.571,6.0
-Bob Don,8,2025-02-11,7,9.0,7.0
-Jive II,8,2025-02-15,4,9.286,10.0
-Time to Flee,7,2025-02-13,6,11.333,9.5
-Interlude II,7,2025-02-13,3,8.167,9.5
-White Lights,7,2025-02-13,6,11.333,8.5
-726,7,2025-02-15,4,10.5,10.5
-Factory Fiction,6,2025-02-11,7,11.0,10.0
-Your Ocean,6,2025-02-10,3,14.2,10.0
-Shama Lama Ding Dong,6,2025-02-11,7,12.2,9.0
-My Mind Has Been Consumed By Media,5,2024-11-10,23,6.0,6.0
-Rosewood Heart,5,2025-02-11,7,15.25,16.5
-I Would Die 4 U,5,2025-02-11,7,17.0,18.0
-Lead the Way,5,2024-11-09,25,11.0,7.0
-Spirit Of The Dark Horse,5,2025-02-15,4,16.25,15.0
-The Way It Is,5,2025-02-10,3,16.75,14.0
-Travelers,5,2024-11-07,26,11.25,12.5
-Turn On Your Love Light,5,2025-02-07,9,10.75,7.5
-(dawn),5,2025-02-15,4,17.0,18.0
-Butterflies,5,2024-11-01,28,10.25,8.0
-Elmeg The Wise,5,2024-11-07,26,11.25,12.5
-Don't Do It,5,2024-11-24,12,15.25,18.5
-Eminence Front,5,2024-11-12,11,16.25,14.5
-Doc Brown,5,2025-02-14,5,15.75,15.5
-Pumped Up Kicks,4,2024-11-13,13,9.667,8.0
-Jeff Engborg,4,2025-02-07,9,15.0,9.0
-Green River,4,2025-02-07,9,19.0,18.0
-Atlas,4,2025-02-07,9,17.667,21.0
-The Old Man's Boat,4,2024-11-08,24,15.333,11.0
-Mas Que Nada,4,2024-10-24,32,14.0,7.0
-Hollywood Nights,4,2024-11-04,11,20.0,22.0
-I'm Writing A Novel,4,2025-02-06,10,19.333,18.0
-Electric Avenue,3,2024-10-30,30,18.0,18.0
-Moby,3,2025-02-13,6,31.0,31.0
-State Of The Art (A.E.I.O.U.),3,2024-11-02,27,16.0,16.0
-No California,3,2025-02-08,8,32.0,32.0
-Rock The Casbah,3,2024-10-30,30,16.5,16.5
-Bloodbuzz Ohio,3,2025-02-06,10,21.5,21.5
-Can't Get You Out Of My Head,3,2024-10-26,14,30.5,30.5
-Loose Ends,3,2024-11-12,22,18.5,18.5
-Don’t Leave Me This Way,3,2025-02-14,5,7.0,7.0
-AUATC,3,2024-10-26,14,22.5,22.5
-Inside Out,3,2025-02-13,6,31.5,31.5
-Doobie Song,2,2024-09-04,36,28.0,28.0
-The Labyrinth,2,2024-12-31,17,47.0,47.0
-Psycho Killer,2,2024-11-10,23,6.0,6.0
-Sirius,2,2024-12-14,19,1.0,1.0
-Cantaloupe Island,2,2024-10-01,16,54.0,54.0
-Please Forgive Me,2,2024-09-11,35,39.0,39.0
-Peggy-O,2,2024-11-12,22,50.0,50.0
-The Killing Moon,2,2024-09-14,51,12.0,12.0
-Caution,2,2024-10-24,32,6.0,6.0
-Danger Zone,2,2024-11-07,26,42.0,42.0
-Running Up That Hill,2,2024-11-09,25,4.0,4.0
-Love Is A Battlefield,2,2025-02-14,5,56.0,56.0
-Whip It,2,2024-11-13,21,7.0,7.0
-You Spin Me Round (Like A Record),2,2024-11-12,22,7.0,7.0
-It Burns Within,2,2024-06-26,59,14.0,14.0
-Tomorrow Never Knows,2,2024-09-22,45,28.0,28.0
-Weird Fishes / Arpeggi,2,2024-09-26,43,22.0,22.0
-Look Out Cleveland,2,2024-09-22,45,26.0,26.0
-In Your Eyes,2,2024-09-14,51,7.0,7.0
-Jam,2,2025-03-11,1,18.0,18.0
-Wild Night,2,2025-02-11,7,20.0,20.0
-Make The Move,2,2024-06-20,40,24.0,24.0
-Maniac,2,2024-11-07,26,3.0,3.0
-Me & My Uncle,2,2024-09-15,50,17.0,17.0
-Milestone 2 (Skux Life),2,2024-09-20,47,9.0,9.0
-True Love Waits,2,2025-02-07,9,39.0,39.0
-A Fifth Of Beethoven,1,2024-06-11,69,,
-Switchin',1,2024-09-03,37,,
-The King,1,2024-12-13,20,,
-Take On Me,1,2024-10-26,14,,
-Brokedown Palace,1,2024-10-25,13,,
-Wipeout,1,2024-10-31,29,,
-The Night They Drove Old Dixie Down,1,2024-06-22,62,,
-Achy Breaky Heart,1,2024-11-10,23,,
-The W.S. Walcott Medicine Show,1,2024-09-24,44,,
-War Pigs,1,2024-10-01,16,,
-Arise,1,2024-09-27,42,,
-Atlantic City,1,2024-11-10,23,,
-Trick To Happy,1,2025-02-10,3,,
-Stranger Things,1,2024-10-31,29,,
-I Only Have Eyes For You,1,2024-12-31,17,,
-Cold Rain And Snow,1,2024-10-25,13,,
-Flood in Franklin Park,1,2025-02-06,10,,
-I2I,1,2024-12-31,17,,
-Honeybee,1,2024-06-10,70,,
-Help on the Way,1,2024-12-14,19,,
-Get Down Tonight,1,2024-12-14,19,,
-Kashmir.,1,2024-12-13,20,,
-Franklin's Tower,1,2024-12-14,19,,
-Lily's Tiger,1,2024-09-15,50,,
-Liza Jane,1,2024-06-25,60,,
-(satellite),1,2024-09-13,33,,
-Low Rider,1,2024-12-30,18,,
-Mad World,1,2024-09-20,47,,
-Magic Carpet Ride,1,2024-06-18,65,,
-Moonrise,1,2024-11-10,23,,
-Everybody Wants To Rule The World,1,2024-10-31,29,,
-Spain,1,2024-06-25,60,,
-No Rain,1,2024-06-28,58,,
-Not Alone,1,2024-11-07,26,,
-Escape (The Piña Colada Song),1,2024-06-18,65,,
-One More Day,1,2024-09-20,47,,
-Praise You,1,2024-06-30,56,,
-Rosa Lee McFall,1,2024-09-06,54,,
-I'm Alright,1,2024-06-20,64,,
-Secret Agent Man,1,2024-06-23,61,,
-Dim Lights,1,2024-11-10,23,,
-Ship Of Fools,1,2024-10-01,16,,
-Sleepwalk,1,2024-06-16,66,,
-Slip Slidin’ Away,1,2024-12-14,19,,
-Slipknot!,1,2024-12-14,19,,
-Draggin' the Line,1,2024-09-24,44,,
+Hot Love & The Lazy Poet,20,2025-04-24,3,3.895,4.0
+Arcadia,19,2025-04-25,0,4.278,3.5
+Silver Rising,17,2025-04-24,3,4.375,4.0
+All I Need,16,2025-02-13,4,4.8,5.0
+Drive,16,2025-05-08,6,4.467,4.0
+Big Modern!,16,2025-05-08,5,3.467,3.0
+Hot Tea,16,2025-04-25,0,5.133,5.0
+Give it Time,15,2025-05-08,3,5.0,4.5
+So Ready,14,2025-04-24,3,5.231,4.0
+Turned Clouds,14,2025-05-08,0,6.0,6.0
+Mr. Action,14,2025-02-13,4,5.538,5.0
+Creatures,13,2025-02-14,6,5.75,5.5
+Lead Up,13,2025-05-08,7,5.5,5.0
+Slow Ready,13,2025-02-10,4,6.0,5.5
+Madhuvan,13,2025-04-24,3,5.833,6.0
+Yeti,13,2025-02-10,4,6.0,5.5
+Into the Myst,13,2025-05-08,9,5.667,5.0
+Turbulence & The Night Rays,12,2025-02-06,11,6.091,7.0
+Same Old Shenanigans,12,2025-02-08,9,6.273,4.0
+A Western Sun,11,2025-02-14,4,6.7,4.5
+Dr. Darkness,11,2025-02-06,11,6.1,6.0
+Borne,11,2025-02-08,9,6.7,7.5
+"One In, One Out",10,2025-02-14,6,4.889,5.0
+Earthling or Alien?,9,2025-02-10,4,9.25,8.0
+Wysteria Lane,9,2025-02-10,4,9.25,8.5
+Jive Lee,9,2024-11-07,15,7.875,6.5
+The Whales,9,2025-02-06,11,7.875,7.0
+Jive I,9,2025-02-13,7,8.875,8.5
+Indian River,8,2024-10-30,19,7.571,5.0
+Jive II,8,2025-02-15,5,9.429,9.0
+Elizabeth,8,2025-02-10,4,9.143,7.0
+This Old Sea,8,2025-02-14,6,8.714,6.0
+Interlude II,7,2025-02-13,4,8.333,9.0
+White Lights,7,2025-02-13,7,11.5,8.5
+Time to Flee,7,2025-02-13,7,11.5,9.5
+Factory Fiction,6,2025-02-11,8,11.2,11.0
+Fish In The Sea,6,2025-05-08,9,12.0,9.0
+Shama Lama Ding Dong,6,2025-02-11,8,12.4,9.0
+Sinnerman,6,2025-04-24,3,10.4,7.0
+Your Ocean,6,2025-02-10,4,14.4,10.0
+My Mind Has Been Consumed By Media,5,2024-11-10,26,5.75,6.0
+Lead the Way,5,2024-11-09,28,10.75,6.5
+Rosewood Heart,5,2025-02-11,8,15.5,16.0
+Spirit Of The Dark Horse,5,2025-02-15,5,16.5,16.0
+The Way It Is,5,2025-02-10,4,17.0,15.0
+Travelers,5,2024-11-07,29,11.0,12.5
+Turn On Your Love Light,5,2025-02-07,10,11.0,8.5
+(dawn),5,2025-02-15,5,17.25,18.5
+Doc Brown,5,2025-02-14,6,16.0,16.5
+Don't Do It,5,2024-11-24,13,15.5,18.0
+Elmeg The Wise,5,2024-11-07,29,11.0,12.5
+Butterflies,5,2024-11-01,31,10.0,7.5
+Pumped Up Kicks,4,2024-11-13,14,10.0,10.0
+Green River,4,2025-02-07,10,19.333,17.0
+Mas Que Nada,4,2024-10-24,35,13.667,6.0
+I'm Writing A Novel,4,2025-02-06,11,19.667,20.0
+The Old Man's Boat,4,2024-11-08,27,15.0,11.0
+Eminence Front,4,2024-11-12,12,22.0,19.0
+Hollywood Nights,4,2024-11-04,12,20.333,24.0
+Jeff Engborg,4,2025-02-07,10,15.333,9.0
+No California,3,2025-02-08,9,32.5,32.5
+Electric Avenue,3,2024-10-30,33,17.5,17.5
+Can't Get You Out Of My Head,3,2024-10-26,15,31.0,31.0
+Loose Ends,3,2024-11-12,25,18.0,18.0
+Rock The Casbah,3,2024-10-30,33,16.0,16.0
+Don’t Leave Me This Way,3,2025-02-14,6,8.0,8.0
+Bloodbuzz Ohio,3,2025-02-06,11,22.0,22.0
+Moby,3,2025-02-13,7,31.5,31.5
+AUATC,3,2024-10-26,15,23.0,23.0
+Inside Out,3,2025-02-13,7,32.0,32.0
+Look Out Cleveland,2,2024-09-22,47,26.0,26.0
+Jam,2,2025-03-11,2,20.0,20.0
+Peggy-O,2,2024-11-12,25,49.0,49.0
+Caution,2,2024-10-24,35,6.0,6.0
+Psycho Killer,2,2024-11-10,26,6.0,6.0
+It Burns Within,2,2024-06-26,61,14.0,14.0
+Running Up That Hill,2,2024-11-09,28,4.0,4.0
+The Labyrinth,2,2024-12-31,20,46.0,46.0
+Doobie Song,2,2024-09-04,39,27.0,27.0
+In Your Eyes,2,2024-09-14,53,7.0,7.0
+You Spin Me Round (Like A Record),2,2024-11-12,25,7.0,7.0
+Sirius,2,2024-12-14,22,1.0,1.0
+The Killing Moon,2,2024-09-14,53,12.0,12.0
+Your Direction,2,2025-05-08,3,15.0,15.0
+Danger Zone,2,2024-11-07,29,41.0,41.0
+Cantaloupe Island,2,2024-10-01,19,53.0,53.0
+Please Forgive Me,2,2024-09-11,38,38.0,38.0
+Weird Fishes / Arpeggi,2,2024-09-26,45,22.0,22.0
+Love Is A Battlefield,2,2025-02-14,6,57.0,57.0
+Whip It,2,2024-11-13,24,7.0,7.0
+Tomorrow Never Knows,2,2024-09-22,47,28.0,28.0
+True Love Waits,2,2025-02-07,10,40.0,40.0
+Milestone 2 (Skux Life),2,2024-09-20,49,9.0,9.0
+Wild Night,2,2025-02-11,8,22.0,22.0
+Maniac,2,2024-11-07,29,3.0,3.0
+Brokedown Palace,1,2024-10-25,14,,
+Atlantic City,1,2024-11-10,26,,
+Switchin',1,2024-09-03,40,,
+Take On Me,1,2024-10-26,15,,
+War Pigs,1,2024-10-01,19,,
+Trick To Happy,1,2025-02-10,4,,
+Wipeout,1,2024-10-31,32,,
+The King,1,2024-12-13,23,,
+The Night They Drove Old Dixie Down,1,2024-06-22,64,,
+A Fifth Of Beethoven,1,2024-06-11,71,,
+Cold Rain And Snow,1,2024-10-25,14,,
+Torero,1,2025-05-08,18,,
+The W.S. Walcott Medicine Show,1,2024-09-24,46,,
+Achy Breaky Heart,1,2024-11-10,26,,
+Arise,1,2024-09-27,44,,
+Stranger Things,1,2024-10-31,32,,
+I'm Alright,1,2024-06-20,66,,
+Spain,1,2024-06-25,62,,
+Slipknot!,1,2024-12-14,22,,
+I2I,1,2024-12-31,20,,
+In Bloom,1,2025-05-08,18,,
+I Only Have Eyes For You,1,2024-12-31,20,,
+Honeybee,1,2024-06-10,72,,
+Help on the Way,1,2024-12-14,22,,
+Get Down Tonight,1,2024-12-14,22,,
+Kashmir.,1,2024-12-13,23,,
+Franklin's Tower,1,2024-12-14,22,,
+Flood in Franklin Park,1,2025-02-06,11,,
+Lily's Tiger,1,2024-09-15,52,,
+Liza Jane,1,2024-06-25,62,,
+Low Rider,1,2024-12-30,21,,
+(satellite),1,2024-09-13,36,,
+Everybody Wants To Rule The World,1,2024-10-31,32,,
+Magic Carpet Ride,1,2024-06-18,67,,
+Make The Move,1,2024-06-20,66,,
+Moonrise,1,2024-11-10,26,,
+Escape (The Piña Colada Song),1,2024-06-18,67,,
+No Rain,1,2024-06-28,60,,
+Not Alone,1,2024-11-07,29,,
+One More Day,1,2024-09-20,49,,
+Praise You,1,2024-06-30,58,,
+Ride Like The Wind,1,2025-05-08,18,,
+Rosa Lee McFall,1,2024-09-06,56,,
+Draggin' the Line,1,2024-09-24,46,,
+Secret Agent Man,1,2024-06-23,63,,
+Ship Of Fools,1,2024-10-01,19,,
+Sleepwalk,1,2024-06-16,68,,
+Slip Slidin’ Away,1,2024-12-14,22,,
+Mad World,1,2024-09-20,49,,

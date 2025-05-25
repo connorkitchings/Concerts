@@ -1,7 +1,7 @@
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pandas as pd
-from logger import get_logger
+from logger import get_logger, restrict_to_repo_root
 
 logger = get_logger(__name__)
 
@@ -27,5 +27,5 @@ def load_setlist_and_showdata(setlist_path, showdata_path, songdata_path):
     for col in ['song_name', 'song_x', 'song_y']:
         if col in df.columns and col != 'song':
             df = df.drop(columns=[col])
-    logger.info(f"Loaded setlist ({len(df):,}) rows from {setlist_path}, shows from {showdata_path}, songs from {songdata_path}")
+    logger.info(f"Loaded setlist ({len(df):,}) rows from {restrict_to_repo_root(setlist_path)}, shows from {restrict_to_repo_root(showdata_path)}, songs from {restrict_to_repo_root(songdata_path)}")
     return df
