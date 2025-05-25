@@ -10,7 +10,7 @@ The Notebook pipeline predicts which songs are most likely to be played at upcom
 ---
 
 ## What is the Notebook Method?
-The Notebook method is based on the system used by Trey Anastasio of Phish and made famous by Phish.net's "Trey's Notebook." This method predicts setlists by identifying songs that are frequently played in the recent past, but have not been played in the last few shows. It is designed to capture the patterns that bands use when constructing setlists, favoring songs that are in "rotation" but not overplayed.
+The Notebook method is based on the system made famous by Phish.net's "Trey's Notebook." This method predicts setlists by identifying songs that are frequently played in the recent past, but have not been played in the last few shows. It is designed to capture the patterns that bands use when constructing setlists, favoring songs that are in "rotation" but not overplayed.
 
 **Credit:** This method is directly inspired by Phish.net's Trey's Notebook and is adapted here for multiple bands.
 
