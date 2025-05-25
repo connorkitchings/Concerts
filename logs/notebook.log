@@ -1,17 +1,17 @@
-[2025-05-25 11:23:04] INFO __main__: Running Phish prediction pipeline...
-[2025-05-25 11:23:05] INFO data_loader: Loaded setlist (64,273) rows from Concerts/3 - Data/Phish/PhishNet/setlistdata.csv, shows from Concerts/3 - Data/Phish/PhishNet/showdata.csv, songs from Concerts/3 - Data/Phish/PhishNet/songdata.csv
-[2025-05-25 11:23:06] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/Phish/Predictions/todaysnotebook.csv
-[2025-05-25 11:23:06] INFO __main__: Predictions for Phish completed successfully.
-[2025-05-25 11:23:06] INFO __main__: Running Goose prediction pipeline...
-[2025-05-25 11:23:07] INFO data_loader: Loaded setlist (6,470) rows from Concerts/3 - Data/Goose/ElGoose/setlistdata.csv, shows from Concerts/3 - Data/Goose/ElGoose/showdata.csv, songs from Concerts/3 - Data/Goose/ElGoose/songdata.csv
-[2025-05-25 11:23:07] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/Goose/Predictions/todaysnotebook.csv
-[2025-05-25 11:23:07] INFO __main__: Predictions for Goose completed successfully.
-[2025-05-25 11:23:07] INFO __main__: Running UM prediction pipeline...
-[2025-05-25 11:23:08] INFO data_loader: Loaded setlist (46,773) rows from Concerts/3 - Data/UM/AllThingsUM/setlistdata.csv, venues from Concerts/3 - Data/UM/AllThingsUM/venuedata.csv, songs from Concerts/3 - Data/UM/AllThingsUM/songdata.csv
-[2025-05-25 11:23:08] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/UM/Predictions/todaysnotebook.csv
-[2025-05-25 11:23:08] INFO __main__: Predictions for UM completed successfully.
-[2025-05-25 11:23:08] INFO __main__: Running WSP prediction pipeline...
-[2025-05-25 11:23:09] INFO data_loader: Loaded setlist (59,660) rows from Concerts/3 - Data/WSP/EverydayCompanion/setlistdata.csv, shows from Concerts/3 - Data/WSP/EverydayCompanion/showdata.csv, songs from Concerts/3 - Data/WSP/EverydayCompanion/songdata.csv
-[2025-05-25 11:23:09] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/WSP/Predictions/todaysnotebook.csv
-[2025-05-25 11:23:09] INFO __main__: Predictions for WSP completed successfully.
-[2025-05-25 11:23:09] INFO __main__: All band prediction pipelines completed in 4.48 seconds.
+[2025-05-25 11:57:45] INFO __main__: Running Phish prediction pipeline...
+[2025-05-25 11:57:45] INFO data_loader: Loaded setlist (64,273) rows from Concerts/3 - Data/Phish/PhishNet/setlistdata.csv, shows from Concerts/3 - Data/Phish/PhishNet/showdata.csv, songs from Concerts/3 - Data/Phish/PhishNet/songdata.csv
+[2025-05-25 11:57:46] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/Phish/Predictions/todaysnotebook.csv
+[2025-05-25 11:57:46] INFO __main__: Predictions for Phish completed successfully.
+[2025-05-25 11:57:46] INFO __main__: Running Goose prediction pipeline...
+[2025-05-25 11:57:46] INFO data_loader: Loaded setlist (6,470) rows from Concerts/3 - Data/Goose/ElGoose/setlistdata.csv, shows from Concerts/3 - Data/Goose/ElGoose/showdata.csv, songs from Concerts/3 - Data/Goose/ElGoose/songdata.csv
+[2025-05-25 11:57:46] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/Goose/Predictions/todaysnotebook.csv
+[2025-05-25 11:57:46] INFO __main__: Predictions for Goose completed successfully.
+[2025-05-25 11:57:46] INFO __main__: Running UM prediction pipeline...
+[2025-05-25 11:57:47] INFO data_loader: Loaded setlist (46,773) rows from Concerts/3 - Data/UM/AllThingsUM/setlistdata.csv, venues from Concerts/3 - Data/UM/AllThingsUM/venuedata.csv, songs from Concerts/3 - Data/UM/AllThingsUM/songdata.csv
+[2025-05-25 11:57:47] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/UM/Predictions/todaysnotebook.csv
+[2025-05-25 11:57:47] INFO __main__: Predictions for UM completed successfully.
+[2025-05-25 11:57:47] INFO __main__: Running WSP prediction pipeline...
+[2025-05-25 11:57:48] INFO data_loader: Loaded setlist (59,660) rows from Concerts/3 - Data/WSP/EverydayCompanion/setlistdata.csv, shows from Concerts/3 - Data/WSP/EverydayCompanion/showdata.csv, songs from Concerts/3 - Data/WSP/EverydayCompanion/songdata.csv
+[2025-05-25 11:57:48] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/WSP/Predictions/todaysnotebook.csv
+[2025-05-25 11:57:48] INFO __main__: Predictions for WSP completed successfully.
+[2025-05-25 11:57:48] INFO __main__: All band prediction pipelines completed in 3.03 seconds.
