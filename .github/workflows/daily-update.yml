@@ -1,0 +1,38 @@
+name: Daily Setlist & Prediction Update
+
+on:
+  schedule:
+    # Runs at 19:00 UTC (3pm ET) every day
+    - cron: '0 19 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-data-and-predictions:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          # Install from requirements.txt if present, otherwise install common packages
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            pip install numpy pandas scikit-learn xgboost
+          fi
+
+      - name: Run Setlist Creation
+        run: python '1 - Setlist Creation/run_all.py'
+
+      - name: Run Make Predictions
+        run: python '2 - Make Predictions/update_predictions.py'
