@@ -1,17 +1,845 @@
-[2025-05-25 11:57:45] INFO __main__: Running Phish prediction pipeline...
-[2025-05-25 11:57:45] INFO data_loader: Loaded setlist (64,273) rows from Concerts/3 - Data/Phish/PhishNet/setlistdata.csv, shows from Concerts/3 - Data/Phish/PhishNet/showdata.csv, songs from Concerts/3 - Data/Phish/PhishNet/songdata.csv
-[2025-05-25 11:57:46] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/Phish/Predictions/todaysnotebook.csv
-[2025-05-25 11:57:46] INFO __main__: Predictions for Phish completed successfully.
-[2025-05-25 11:57:46] INFO __main__: Running Goose prediction pipeline...
-[2025-05-25 11:57:46] INFO data_loader: Loaded setlist (6,470) rows from Concerts/3 - Data/Goose/ElGoose/setlistdata.csv, shows from Concerts/3 - Data/Goose/ElGoose/showdata.csv, songs from Concerts/3 - Data/Goose/ElGoose/songdata.csv
-[2025-05-25 11:57:46] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/Goose/Predictions/todaysnotebook.csv
-[2025-05-25 11:57:46] INFO __main__: Predictions for Goose completed successfully.
-[2025-05-25 11:57:46] INFO __main__: Running UM prediction pipeline...
-[2025-05-25 11:57:47] INFO data_loader: Loaded setlist (46,773) rows from Concerts/3 - Data/UM/AllThingsUM/setlistdata.csv, venues from Concerts/3 - Data/UM/AllThingsUM/venuedata.csv, songs from Concerts/3 - Data/UM/AllThingsUM/songdata.csv
-[2025-05-25 11:57:47] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/UM/Predictions/todaysnotebook.csv
-[2025-05-25 11:57:47] INFO __main__: Predictions for UM completed successfully.
-[2025-05-25 11:57:47] INFO __main__: Running WSP prediction pipeline...
-[2025-05-25 11:57:48] INFO data_loader: Loaded setlist (59,660) rows from Concerts/3 - Data/WSP/EverydayCompanion/setlistdata.csv, shows from Concerts/3 - Data/WSP/EverydayCompanion/showdata.csv, songs from Concerts/3 - Data/WSP/EverydayCompanion/songdata.csv
-[2025-05-25 11:57:48] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/WSP/Predictions/todaysnotebook.csv
-[2025-05-25 11:57:48] INFO __main__: Predictions for WSP completed successfully.
-[2025-05-25 11:57:48] INFO __main__: All band prediction pipelines completed in 3.03 seconds.
+[2025-05-26 11:01:44] INFO __main__: Running Phish prediction pipeline...
+[2025-05-26 11:01:46] INFO data_loader: Loaded setlist (64,273) rows from Concerts/3 - Data/Phish/PhishNet/setlistdata.csv, shows from Concerts/3 - Data/Phish/PhishNet/showdata.csv, songs from Concerts/3 - Data/Phish/PhishNet/songdata.csv
+[2025-05-26 11:01:46] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/Phish/Predictions/todaysnotebook.csv
+[2025-05-26 11:01:46] INFO __main__: Predictions for Phish completed successfully.
+[2025-05-26 11:01:46] INFO __main__: Running Phish accuracy update pipeline...
+[2025-05-26 11:01:47] INFO data_loader: Loaded setlist (64,273) rows from Concerts/3 - Data/Phish/PhishNet/setlistdata.csv, shows from Concerts/3 - Data/Phish/PhishNet/showdata.csv, songs from Concerts/3 - Data/Phish/PhishNet/songdata.csv
+[2025-05-26 11:01:47] INFO __main__: Evaluating show on 2024-04-21 for top_25
+[2025-05-26 11:01:47] INFO __main__: Show 2024-04-21 (top_25): Recall: 64.71%, Precision: 44.00%
+[2025-05-26 11:01:47] INFO __main__: Evaluating show on 2024-07-11 for top_25
+[2025-05-26 11:01:47] INFO __main__: Show 2024-07-11 (top_25): Recall: 0.00%, Precision: 0.00%
+[2025-05-26 11:01:47] INFO __main__: Evaluating show on 2024-07-17 for top_25
+[2025-05-26 11:01:47] INFO __main__: Show 2024-07-17 (top_25): Recall: 0.00%, Precision: 0.00%
+[2025-05-26 11:01:47] INFO __main__: Evaluating show on 2024-07-19 for top_25
+[2025-05-26 11:01:47] INFO __main__: Show 2024-07-19 (top_25): Recall: 25.00%, Precision: 16.00%
+[2025-05-26 11:01:47] INFO __main__: Evaluating show on 2024-07-20 for top_25
+[2025-05-26 11:01:48] INFO __main__: Show 2024-07-20 (top_25): Recall: 33.33%, Precision: 24.00%
+[2025-05-26 11:01:48] INFO __main__: Evaluating show on 2024-07-21 for top_25
+[2025-05-26 11:01:48] INFO __main__: Show 2024-07-21 (top_25): Recall: 47.06%, Precision: 32.00%
+[2025-05-26 11:01:48] INFO __main__: Evaluating show on 2024-07-23 for top_25
+[2025-05-26 11:01:48] INFO __main__: Show 2024-07-23 (top_25): Recall: 36.84%, Precision: 28.00%
+[2025-05-26 11:01:48] INFO __main__: Evaluating show on 2024-07-24 for top_25
+[2025-05-26 11:01:48] INFO __main__: Show 2024-07-24 (top_25): Recall: 44.44%, Precision: 32.00%
+[2025-05-26 11:01:48] INFO __main__: Evaluating show on 2024-07-26 for top_25
+[2025-05-26 11:01:48] INFO __main__: Show 2024-07-26 (top_25): Recall: 33.33%, Precision: 28.00%
+[2025-05-26 11:01:48] INFO __main__: Evaluating show on 2024-07-27 for top_25
+[2025-05-26 11:01:48] INFO __main__: Show 2024-07-27 (top_25): Recall: 27.78%, Precision: 20.00%
+[2025-05-26 11:01:48] INFO __main__: Evaluating show on 2024-07-28 for top_25
+[2025-05-26 11:01:48] INFO __main__: Show 2024-07-28 (top_25): Recall: 42.11%, Precision: 32.00%
+[2025-05-26 11:01:48] INFO __main__: Evaluating show on 2024-07-30 for top_25
+[2025-05-26 11:01:48] INFO __main__: Show 2024-07-30 (top_25): Recall: 35.29%, Precision: 24.00%
+[2025-05-26 11:01:48] INFO __main__: Evaluating show on 2024-07-31 for top_25
+[2025-05-26 11:01:48] INFO __main__: Show 2024-07-31 (top_25): Recall: 30.00%, Precision: 24.00%
+[2025-05-26 11:01:48] INFO __main__: Evaluating show on 2024-08-02 for top_25
+[2025-05-26 11:01:48] INFO __main__: Show 2024-08-02 (top_25): Recall: 27.78%, Precision: 20.00%
+[2025-05-26 11:01:48] INFO __main__: Evaluating show on 2024-08-03 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-03 (top_25): Recall: 18.75%, Precision: 12.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-04 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-04 (top_25): Recall: 25.00%, Precision: 16.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-06 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-06 (top_25): Recall: 55.00%, Precision: 44.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-07 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-07 (top_25): Recall: 37.50%, Precision: 36.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-09 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-09 (top_25): Recall: 50.00%, Precision: 36.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-10 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-10 (top_25): Recall: 40.91%, Precision: 36.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-11 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-11 (top_25): Recall: 52.63%, Precision: 40.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-14 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-14 (top_25): Recall: 0.00%, Precision: 0.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-15 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-15 (top_25): Recall: 44.44%, Precision: 32.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-16 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-16 (top_25): Recall: 50.00%, Precision: 40.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-17 for top_25
+[2025-05-26 11:01:49] INFO __main__: Show 2024-08-17 (top_25): Recall: 50.00%, Precision: 40.00%
+[2025-05-26 11:01:49] INFO __main__: Evaluating show on 2024-08-18 for top_25
+[2025-05-26 11:01:50] INFO __main__: Show 2024-08-18 (top_25): Recall: 50.00%, Precision: 32.00%
+[2025-05-26 11:01:50] INFO __main__: Evaluating show on 2024-08-29 for top_25
+[2025-05-26 11:01:50] INFO __main__: Show 2024-08-29 (top_25): Recall: 18.75%, Precision: 12.00%
+[2025-05-26 11:01:50] INFO __main__: Evaluating show on 2024-08-30 for top_25
+[2025-05-26 11:01:50] INFO __main__: Show 2024-08-30 (top_25): Recall: 52.94%, Precision: 36.00%
+[2025-05-26 11:01:50] INFO __main__: Evaluating show on 2024-08-31 for top_25
+[2025-05-26 11:01:50] INFO __main__: Show 2024-08-31 (top_25): Recall: 41.18%, Precision: 28.00%
+[2025-05-26 11:01:50] INFO __main__: Evaluating show on 2024-09-01 for top_25
+[2025-05-26 11:01:50] INFO __main__: Show 2024-09-01 (top_25): Recall: 68.42%, Precision: 52.00%
+[2025-05-26 11:01:50] INFO __main__: Evaluating show on 2024-10-25 for top_25
+[2025-05-26 11:01:50] INFO __main__: Show 2024-10-25 (top_25): Recall: 23.81%, Precision: 20.00%
+[2025-05-26 11:01:50] INFO __main__: Evaluating show on 2024-10-26 for top_25
+[2025-05-26 11:01:50] INFO __main__: Show 2024-10-26 (top_25): Recall: 42.11%, Precision: 32.00%
+[2025-05-26 11:01:50] INFO __main__: Evaluating show on 2024-10-27 for top_25
+[2025-05-26 11:01:50] INFO __main__: Show 2024-10-27 (top_25): Recall: 22.22%, Precision: 16.00%
+[2025-05-26 11:01:50] INFO __main__: Evaluating show on 2024-12-28 for top_25
+[2025-05-26 11:01:50] INFO __main__: Show 2024-12-28 (top_25): Recall: 30.43%, Precision: 28.00%
+[2025-05-26 11:01:50] INFO __main__: Evaluating show on 2024-12-29 for top_25
+[2025-05-26 11:01:50] INFO __main__: Show 2024-12-29 (top_25): Recall: 26.67%, Precision: 16.00%
+[2025-05-26 11:01:50] INFO __main__: Evaluating show on 2024-12-30 for top_25
+[2025-05-26 11:01:51] INFO __main__: Show 2024-12-30 (top_25): Recall: 45.00%, Precision: 36.00%
+[2025-05-26 11:01:51] INFO __main__: Evaluating show on 2024-12-31 for top_25
+[2025-05-26 11:01:51] INFO __main__: Show 2024-12-31 (top_25): Recall: 58.62%, Precision: 68.00%
+[2025-05-26 11:01:51] INFO __main__: Evaluating show on 2025-01-28 for top_25
+[2025-05-26 11:01:51] INFO __main__: Show 2025-01-28 (top_25): Recall: 33.33%, Precision: 4.00%
+[2025-05-26 11:01:51] INFO __main__: Evaluating show on 2025-01-29 for top_25
+[2025-05-26 11:01:51] INFO __main__: Show 2025-01-29 (top_25): Recall: 33.33%, Precision: 24.00%
+[2025-05-26 11:01:51] INFO __main__: Evaluating show on 2025-01-30 for top_25
+[2025-05-26 11:01:51] INFO __main__: Show 2025-01-30 (top_25): Recall: 30.00%, Precision: 24.00%
+[2025-05-26 11:01:51] INFO __main__: Evaluating show on 2025-01-31 for top_25
+[2025-05-26 11:01:51] INFO __main__: Show 2025-01-31 (top_25): Recall: 52.94%, Precision: 36.00%
+[2025-05-26 11:01:51] INFO __main__: Evaluating show on 2025-02-01 for top_25
+[2025-05-26 11:01:51] INFO __main__: Show 2025-02-01 (top_25): Recall: 58.82%, Precision: 40.00%
+[2025-05-26 11:01:51] INFO __main__: Evaluating show on 2025-04-18 for top_25
+[2025-05-26 11:01:51] INFO __main__: Show 2025-04-18 (top_25): Recall: 26.67%, Precision: 16.00%
+[2025-05-26 11:01:51] INFO __main__: Evaluating show on 2025-04-19 for top_25
+[2025-05-26 11:01:52] INFO __main__: Show 2025-04-19 (top_25): Recall: 31.25%, Precision: 20.00%
+[2025-05-26 11:01:52] INFO __main__: Evaluating show on 2025-04-20 for top_25
+[2025-05-26 11:01:52] INFO __main__: Show 2025-04-20 (top_25): Recall: 55.56%, Precision: 40.00%
+[2025-05-26 11:01:52] INFO __main__: Evaluating show on 2025-04-22 for top_25
+[2025-05-26 11:01:52] INFO __main__: Show 2025-04-22 (top_25): Recall: 47.06%, Precision: 32.00%
+[2025-05-26 11:01:52] INFO __main__: Evaluating show on 2025-04-23 for top_25
+[2025-05-26 11:01:52] INFO __main__: Show 2025-04-23 (top_25): Recall: 40.00%, Precision: 24.00%
+[2025-05-26 11:01:52] INFO __main__: Evaluating show on 2025-04-25 for top_25
+[2025-05-26 11:01:52] INFO __main__: Show 2025-04-25 (top_25): Recall: 58.82%, Precision: 40.00%
+[2025-05-26 11:01:52] INFO __main__: Evaluating show on 2025-04-26 for top_25
+[2025-05-26 11:01:52] INFO __main__: Show 2025-04-26 (top_25): Recall: 33.33%, Precision: 24.00%
+[2025-05-26 11:01:52] INFO __main__: Evaluating show on 2025-04-27 for top_25
+[2025-05-26 11:01:52] INFO __main__: Show 2025-04-27 (top_25): Recall: 41.18%, Precision: 28.00%
+[2025-05-26 11:01:52] INFO __main__: Evaluating show on 2024-04-21 for top_50
+[2025-05-26 11:01:52] INFO __main__: Show 2024-04-21 (top_50): Recall: 82.35%, Precision: 28.00%
+[2025-05-26 11:01:52] INFO __main__: Evaluating show on 2024-07-11 for top_50
+[2025-05-26 11:01:52] INFO __main__: Show 2024-07-11 (top_50): Recall: 0.00%, Precision: 0.00%
+[2025-05-26 11:01:52] INFO __main__: Evaluating show on 2024-07-17 for top_50
+[2025-05-26 11:01:52] INFO __main__: Show 2024-07-17 (top_50): Recall: 40.00%, Precision: 4.00%
+[2025-05-26 11:01:52] INFO __main__: Evaluating show on 2024-07-19 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-07-19 (top_50): Recall: 31.25%, Precision: 10.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-07-20 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-07-20 (top_50): Recall: 61.11%, Precision: 22.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-07-21 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-07-21 (top_50): Recall: 64.71%, Precision: 22.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-07-23 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-07-23 (top_50): Recall: 68.42%, Precision: 26.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-07-24 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-07-24 (top_50): Recall: 72.22%, Precision: 26.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-07-26 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-07-26 (top_50): Recall: 52.38%, Precision: 22.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-07-27 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-07-27 (top_50): Recall: 61.11%, Precision: 22.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-07-28 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-07-28 (top_50): Recall: 63.16%, Precision: 24.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-07-30 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-07-30 (top_50): Recall: 47.06%, Precision: 16.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-07-31 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-07-31 (top_50): Recall: 50.00%, Precision: 20.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-08-02 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-08-02 (top_50): Recall: 50.00%, Precision: 18.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-08-03 for top_50
+[2025-05-26 11:01:53] INFO __main__: Show 2024-08-03 (top_50): Recall: 43.75%, Precision: 14.00%
+[2025-05-26 11:01:53] INFO __main__: Evaluating show on 2024-08-04 for top_50
+[2025-05-26 11:01:54] INFO __main__: Show 2024-08-04 (top_50): Recall: 31.25%, Precision: 10.00%
+[2025-05-26 11:01:54] INFO __main__: Evaluating show on 2024-08-06 for top_50
+[2025-05-26 11:01:54] INFO __main__: Show 2024-08-06 (top_50): Recall: 70.00%, Precision: 28.00%
+[2025-05-26 11:01:54] INFO __main__: Evaluating show on 2024-08-07 for top_50
+[2025-05-26 11:01:54] INFO __main__: Show 2024-08-07 (top_50): Recall: 45.83%, Precision: 22.00%
+[2025-05-26 11:01:54] INFO __main__: Evaluating show on 2024-08-09 for top_50
+[2025-05-26 11:01:54] INFO __main__: Show 2024-08-09 (top_50): Recall: 66.67%, Precision: 24.00%
+[2025-05-26 11:01:54] INFO __main__: Evaluating show on 2024-08-10 for top_50
+[2025-05-26 11:01:54] INFO __main__: Show 2024-08-10 (top_50): Recall: 72.73%, Precision: 32.00%
+[2025-05-26 11:01:54] INFO __main__: Evaluating show on 2024-08-11 for top_50
+[2025-05-26 11:01:54] INFO __main__: Show 2024-08-11 (top_50): Recall: 57.89%, Precision: 22.00%
+[2025-05-26 11:01:54] INFO __main__: Evaluating show on 2024-08-14 for top_50
+[2025-05-26 11:01:54] INFO __main__: Show 2024-08-14 (top_50): Recall: 0.00%, Precision: 0.00%
+[2025-05-26 11:01:54] INFO __main__: Evaluating show on 2024-08-15 for top_50
+[2025-05-26 11:01:54] INFO __main__: Show 2024-08-15 (top_50): Recall: 55.56%, Precision: 20.00%
+[2025-05-26 11:01:54] INFO __main__: Evaluating show on 2024-08-16 for top_50
+[2025-05-26 11:01:54] INFO __main__: Show 2024-08-16 (top_50): Recall: 70.00%, Precision: 28.00%
+[2025-05-26 11:01:54] INFO __main__: Evaluating show on 2024-08-17 for top_50
+[2025-05-26 11:01:54] INFO __main__: Show 2024-08-17 (top_50): Recall: 75.00%, Precision: 30.00%
+[2025-05-26 11:01:54] INFO __main__: Evaluating show on 2024-08-18 for top_50
+[2025-05-26 11:01:55] INFO __main__: Show 2024-08-18 (top_50): Recall: 62.50%, Precision: 20.00%
+[2025-05-26 11:01:55] INFO __main__: Evaluating show on 2024-08-29 for top_50
+[2025-05-26 11:01:55] INFO __main__: Show 2024-08-29 (top_50): Recall: 25.00%, Precision: 8.00%
+[2025-05-26 11:01:55] INFO __main__: Evaluating show on 2024-08-30 for top_50
+[2025-05-26 11:01:55] INFO __main__: Show 2024-08-30 (top_50): Recall: 58.82%, Precision: 20.00%
+[2025-05-26 11:01:55] INFO __main__: Evaluating show on 2024-08-31 for top_50
+[2025-05-26 11:01:55] INFO __main__: Show 2024-08-31 (top_50): Recall: 47.06%, Precision: 16.00%
+[2025-05-26 11:01:55] INFO __main__: Evaluating show on 2024-09-01 for top_50
+[2025-05-26 11:01:55] INFO __main__: Show 2024-09-01 (top_50): Recall: 89.47%, Precision: 34.00%
+[2025-05-26 11:01:55] INFO __main__: Evaluating show on 2024-10-25 for top_50
+[2025-05-26 11:01:55] INFO __main__: Show 2024-10-25 (top_50): Recall: 23.81%, Precision: 10.00%
+[2025-05-26 11:01:55] INFO __main__: Evaluating show on 2024-10-26 for top_50
+[2025-05-26 11:01:55] INFO __main__: Show 2024-10-26 (top_50): Recall: 57.89%, Precision: 22.00%
+[2025-05-26 11:01:55] INFO __main__: Evaluating show on 2024-10-27 for top_50
+[2025-05-26 11:01:55] INFO __main__: Show 2024-10-27 (top_50): Recall: 33.33%, Precision: 12.00%
+[2025-05-26 11:01:55] INFO __main__: Evaluating show on 2024-12-28 for top_50
+[2025-05-26 11:01:55] INFO __main__: Show 2024-12-28 (top_50): Recall: 43.48%, Precision: 20.00%
+[2025-05-26 11:01:55] INFO __main__: Evaluating show on 2024-12-29 for top_50
+[2025-05-26 11:01:55] INFO __main__: Show 2024-12-29 (top_50): Recall: 53.33%, Precision: 16.00%
+[2025-05-26 11:01:55] INFO __main__: Evaluating show on 2024-12-30 for top_50
+[2025-05-26 11:01:56] INFO __main__: Show 2024-12-30 (top_50): Recall: 75.00%, Precision: 30.00%
+[2025-05-26 11:01:56] INFO __main__: Evaluating show on 2024-12-31 for top_50
+[2025-05-26 11:01:56] INFO __main__: Show 2024-12-31 (top_50): Recall: 82.76%, Precision: 48.00%
+[2025-05-26 11:01:56] INFO __main__: Evaluating show on 2025-01-28 for top_50
+[2025-05-26 11:01:56] INFO __main__: Show 2025-01-28 (top_50): Recall: 100.00%, Precision: 6.00%
+[2025-05-26 11:01:56] INFO __main__: Evaluating show on 2025-01-29 for top_50
+[2025-05-26 11:01:56] INFO __main__: Show 2025-01-29 (top_50): Recall: 44.44%, Precision: 16.00%
+[2025-05-26 11:01:56] INFO __main__: Evaluating show on 2025-01-30 for top_50
+[2025-05-26 11:01:56] INFO __main__: Show 2025-01-30 (top_50): Recall: 55.00%, Precision: 22.00%
+[2025-05-26 11:01:56] INFO __main__: Evaluating show on 2025-01-31 for top_50
+[2025-05-26 11:01:56] INFO __main__: Show 2025-01-31 (top_50): Recall: 76.47%, Precision: 26.00%
+[2025-05-26 11:01:56] INFO __main__: Evaluating show on 2025-02-01 for top_50
+[2025-05-26 11:01:56] INFO __main__: Show 2025-02-01 (top_50): Recall: 82.35%, Precision: 28.00%
+[2025-05-26 11:01:56] INFO __main__: Evaluating show on 2025-04-18 for top_50
+[2025-05-26 11:01:56] INFO __main__: Show 2025-04-18 (top_50): Recall: 33.33%, Precision: 10.00%
+[2025-05-26 11:01:56] INFO __main__: Evaluating show on 2025-04-19 for top_50
+[2025-05-26 11:01:56] INFO __main__: Show 2025-04-19 (top_50): Recall: 37.50%, Precision: 12.00%
+[2025-05-26 11:01:56] INFO __main__: Evaluating show on 2025-04-20 for top_50
+[2025-05-26 11:01:56] INFO __main__: Show 2025-04-20 (top_50): Recall: 72.22%, Precision: 26.00%
+[2025-05-26 11:01:56] INFO __main__: Evaluating show on 2025-04-22 for top_50
+[2025-05-26 11:01:57] INFO __main__: Show 2025-04-22 (top_50): Recall: 82.35%, Precision: 28.00%
+[2025-05-26 11:01:57] INFO __main__: Evaluating show on 2025-04-23 for top_50
+[2025-05-26 11:01:57] INFO __main__: Show 2025-04-23 (top_50): Recall: 80.00%, Precision: 24.00%
+[2025-05-26 11:01:57] INFO __main__: Evaluating show on 2025-04-25 for top_50
+[2025-05-26 11:01:57] INFO __main__: Show 2025-04-25 (top_50): Recall: 64.71%, Precision: 22.00%
+[2025-05-26 11:01:57] INFO __main__: Evaluating show on 2025-04-26 for top_50
+[2025-05-26 11:01:57] INFO __main__: Show 2025-04-26 (top_50): Recall: 55.56%, Precision: 20.00%
+[2025-05-26 11:01:57] INFO __main__: Evaluating show on 2025-04-27 for top_50
+[2025-05-26 11:01:57] INFO __main__: Show 2025-04-27 (top_50): Recall: 64.71%, Precision: 22.00%
+[2025-05-26 11:01:57] INFO __main__: Saved combined accuracy and precision results to Concerts/3 - Data/Phish/Predictions/notebook/notebook_accuracy.json
+[2025-05-26 11:01:57] INFO __main__: Phish historical_testing.py output:
+Saved results to Concerts/3 - Data/Phish/Predictions/notebook/notebook_accuracy_top25.json and Concerts/3 - Data/Phish/Predictions/notebook/notebook_accuracy_top50.json
+
+[2025-05-26 11:01:57] INFO __main__: Accuracy update for Phish completed successfully.
+[2025-05-26 11:01:57] INFO __main__: Running Goose prediction pipeline...
+[2025-05-26 11:01:58] INFO data_loader: Loaded setlist (6,470) rows from Concerts/3 - Data/Goose/ElGoose/setlistdata.csv, shows from Concerts/3 - Data/Goose/ElGoose/showdata.csv, songs from Concerts/3 - Data/Goose/ElGoose/songdata.csv
+[2025-05-26 11:01:58] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/Goose/Predictions/todaysnotebook.csv
+[2025-05-26 11:01:58] INFO __main__: Predictions for Goose completed successfully.
+[2025-05-26 11:01:58] INFO __main__: Running Goose accuracy update pipeline...
+[2025-05-26 11:01:59] INFO data_loader: Loaded setlist (6,470) rows from Concerts/3 - Data/Goose/ElGoose/setlistdata.csv, shows from Concerts/3 - Data/Goose/ElGoose/showdata.csv, songs from Concerts/3 - Data/Goose/ElGoose/songdata.csv
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-12 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-12 (top_25): Recall: 72.73%, Precision: 32.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-13 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-13 (top_25): Recall: 46.15%, Precision: 24.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-14 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-14 (top_25): Recall: 85.71%, Precision: 48.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-15 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-15 (top_25): Recall: 61.54%, Precision: 32.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-17 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-17 (top_25): Recall: 50.00%, Precision: 28.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-19 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-19 (top_25): Recall: 64.29%, Precision: 36.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-20 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-20 (top_25): Recall: 64.29%, Precision: 36.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-21 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-21 (top_25): Recall: 83.33%, Precision: 40.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-22 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-22 (top_25): Recall: 83.33%, Precision: 40.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-24 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-24 (top_25): Recall: 54.55%, Precision: 24.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-26 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-26 (top_25): Recall: 41.67%, Precision: 20.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-27 for top_25
+[2025-05-26 11:01:59] INFO __main__: Show 2024-09-27 (top_25): Recall: 50.00%, Precision: 28.00%
+[2025-05-26 11:01:59] INFO __main__: Evaluating show on 2024-09-28 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-09-28 (top_25): Recall: 75.00%, Precision: 36.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-10-01 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-10-01 (top_25): Recall: 61.11%, Precision: 44.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-10-04 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-10-04 (top_25): Recall: 12.50%, Precision: 4.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-10-24 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-10-24 (top_25): Recall: 50.00%, Precision: 28.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-10-25 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-10-25 (top_25): Recall: 43.75%, Precision: 28.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-10-26 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-10-26 (top_25): Recall: 50.00%, Precision: 32.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-10-29 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-10-29 (top_25): Recall: 69.23%, Precision: 36.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-10-30 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-10-30 (top_25): Recall: 73.33%, Precision: 44.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-10-31 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-10-31 (top_25): Recall: 46.67%, Precision: 28.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-11-01 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-11-01 (top_25): Recall: 71.43%, Precision: 40.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-11-02 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-11-02 (top_25): Recall: 71.43%, Precision: 40.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-11-04 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-11-04 (top_25): Recall: 50.00%, Precision: 32.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-11-07 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-11-07 (top_25): Recall: 46.67%, Precision: 28.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-11-08 for top_25
+[2025-05-26 11:02:00] INFO __main__: Show 2024-11-08 (top_25): Recall: 38.46%, Precision: 20.00%
+[2025-05-26 11:02:00] INFO __main__: Evaluating show on 2024-11-09 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2024-11-09 (top_25): Recall: 26.67%, Precision: 16.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2024-11-10 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2024-11-10 (top_25): Recall: 50.00%, Precision: 32.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2024-11-12 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2024-11-12 (top_25): Recall: 62.50%, Precision: 40.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2024-11-13 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2024-11-13 (top_25): Recall: 66.67%, Precision: 40.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2024-11-24 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2024-11-24 (top_25): Recall: 20.00%, Precision: 4.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2024-12-13 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2024-12-13 (top_25): Recall: 35.00%, Precision: 28.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2024-12-14 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2024-12-14 (top_25): Recall: 40.00%, Precision: 32.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2024-12-30 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2024-12-30 (top_25): Recall: 38.46%, Precision: 20.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2024-12-31 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2024-12-31 (top_25): Recall: 40.00%, Precision: 24.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2025-02-06 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2025-02-06 (top_25): Recall: 21.43%, Precision: 12.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2025-02-07 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2025-02-07 (top_25): Recall: 28.57%, Precision: 16.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2025-02-08 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2025-02-08 (top_25): Recall: 58.33%, Precision: 28.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2025-02-10 for top_25
+[2025-05-26 11:02:01] INFO __main__: Show 2025-02-10 (top_25): Recall: 73.33%, Precision: 44.00%
+[2025-05-26 11:02:01] INFO __main__: Evaluating show on 2025-02-11 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-02-11 (top_25): Recall: 64.29%, Precision: 36.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2025-02-13 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-02-13 (top_25): Recall: 42.86%, Precision: 24.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2025-02-14 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-02-14 (top_25): Recall: 53.85%, Precision: 28.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2025-02-15 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-02-15 (top_25): Recall: 53.85%, Precision: 28.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2025-03-11 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-03-11 (top_25): Recall: 0.00%, Precision: 0.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2025-04-24 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-04-24 (top_25): Recall: 30.00%, Precision: 12.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2025-04-25 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-04-25 (top_25): Recall: 66.67%, Precision: 8.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2025-05-08 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-05-08 (top_25): Recall: 36.36%, Precision: 16.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2025-05-09 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-05-09 (top_25): Recall: 46.15%, Precision: 24.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2025-05-10 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-05-10 (top_25): Recall: 28.57%, Precision: 8.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2025-05-10 for top_25
+[2025-05-26 11:02:02] INFO __main__: Show 2025-05-10 (top_25): Recall: 76.92%, Precision: 40.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2024-09-12 for top_50
+[2025-05-26 11:02:02] INFO __main__: Show 2024-09-12 (top_50): Recall: 81.82%, Precision: 18.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2024-09-13 for top_50
+[2025-05-26 11:02:02] INFO __main__: Show 2024-09-13 (top_50): Recall: 53.85%, Precision: 14.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2024-09-14 for top_50
+[2025-05-26 11:02:02] INFO __main__: Show 2024-09-14 (top_50): Recall: 92.86%, Precision: 26.00%
+[2025-05-26 11:02:02] INFO __main__: Evaluating show on 2024-09-15 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-09-15 (top_50): Recall: 61.54%, Precision: 16.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-09-17 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-09-17 (top_50): Recall: 71.43%, Precision: 20.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-09-19 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-09-19 (top_50): Recall: 71.43%, Precision: 20.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-09-20 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-09-20 (top_50): Recall: 71.43%, Precision: 20.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-09-21 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-09-21 (top_50): Recall: 83.33%, Precision: 20.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-09-22 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-09-22 (top_50): Recall: 83.33%, Precision: 20.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-09-24 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-09-24 (top_50): Recall: 63.64%, Precision: 14.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-09-26 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-09-26 (top_50): Recall: 75.00%, Precision: 18.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-09-27 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-09-27 (top_50): Recall: 64.29%, Precision: 18.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-09-28 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-09-28 (top_50): Recall: 91.67%, Precision: 22.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-10-01 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-10-01 (top_50): Recall: 72.22%, Precision: 26.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-10-04 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-10-04 (top_50): Recall: 25.00%, Precision: 4.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-10-24 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-10-24 (top_50): Recall: 85.71%, Precision: 24.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-10-25 for top_50
+[2025-05-26 11:02:03] INFO __main__: Show 2024-10-25 (top_50): Recall: 43.75%, Precision: 14.00%
+[2025-05-26 11:02:03] INFO __main__: Evaluating show on 2024-10-26 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-10-26 (top_50): Recall: 75.00%, Precision: 24.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-10-29 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-10-29 (top_50): Recall: 92.31%, Precision: 24.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-10-30 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-10-30 (top_50): Recall: 86.67%, Precision: 26.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-10-31 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-10-31 (top_50): Recall: 46.67%, Precision: 14.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-11-01 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-11-01 (top_50): Recall: 85.71%, Precision: 24.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-11-02 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-11-02 (top_50): Recall: 85.71%, Precision: 24.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-11-04 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-11-04 (top_50): Recall: 62.50%, Precision: 20.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-11-07 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-11-07 (top_50): Recall: 66.67%, Precision: 20.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-11-08 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-11-08 (top_50): Recall: 61.54%, Precision: 16.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-11-09 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-11-09 (top_50): Recall: 46.67%, Precision: 14.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-11-10 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-11-10 (top_50): Recall: 68.75%, Precision: 22.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-11-12 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-11-12 (top_50): Recall: 68.75%, Precision: 22.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-11-13 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-11-13 (top_50): Recall: 93.33%, Precision: 28.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-11-24 for top_50
+[2025-05-26 11:02:04] INFO __main__: Show 2024-11-24 (top_50): Recall: 60.00%, Precision: 6.00%
+[2025-05-26 11:02:04] INFO __main__: Evaluating show on 2024-12-13 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2024-12-13 (top_50): Recall: 35.00%, Precision: 14.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2024-12-14 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2024-12-14 (top_50): Recall: 45.00%, Precision: 18.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2024-12-30 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2024-12-30 (top_50): Recall: 46.15%, Precision: 12.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2024-12-31 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2024-12-31 (top_50): Recall: 46.67%, Precision: 14.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-02-06 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2025-02-06 (top_50): Recall: 28.57%, Precision: 8.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-02-07 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2025-02-07 (top_50): Recall: 42.86%, Precision: 12.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-02-08 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2025-02-08 (top_50): Recall: 58.33%, Precision: 14.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-02-10 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2025-02-10 (top_50): Recall: 93.33%, Precision: 28.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-02-11 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2025-02-11 (top_50): Recall: 92.86%, Precision: 26.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-02-13 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2025-02-13 (top_50): Recall: 57.14%, Precision: 16.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-02-14 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2025-02-14 (top_50): Recall: 61.54%, Precision: 16.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-02-15 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2025-02-15 (top_50): Recall: 92.31%, Precision: 24.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-03-11 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2025-03-11 (top_50): Recall: 0.00%, Precision: 0.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-04-24 for top_50
+[2025-05-26 11:02:05] INFO __main__: Show 2025-04-24 (top_50): Recall: 30.00%, Precision: 6.00%
+[2025-05-26 11:02:05] INFO __main__: Evaluating show on 2025-04-25 for top_50
+[2025-05-26 11:02:06] INFO __main__: Show 2025-04-25 (top_50): Recall: 66.67%, Precision: 4.00%
+[2025-05-26 11:02:06] INFO __main__: Evaluating show on 2025-05-08 for top_50
+[2025-05-26 11:02:06] INFO __main__: Show 2025-05-08 (top_50): Recall: 36.36%, Precision: 8.00%
+[2025-05-26 11:02:06] INFO __main__: Evaluating show on 2025-05-09 for top_50
+[2025-05-26 11:02:06] INFO __main__: Show 2025-05-09 (top_50): Recall: 76.92%, Precision: 20.00%
+[2025-05-26 11:02:06] INFO __main__: Evaluating show on 2025-05-10 for top_50
+[2025-05-26 11:02:06] INFO __main__: Show 2025-05-10 (top_50): Recall: 28.57%, Precision: 4.00%
+[2025-05-26 11:02:06] INFO __main__: Evaluating show on 2025-05-10 for top_50
+[2025-05-26 11:02:06] INFO __main__: Show 2025-05-10 (top_50): Recall: 84.62%, Precision: 22.00%
+[2025-05-26 11:02:06] INFO __main__: Saved combined accuracy and precision results to Concerts/3 - Data/Goose/Predictions/notebook/notebook_accuracy.json
+[2025-05-26 11:02:06] INFO __main__: Goose historical_testing.py output:
+Saved results to Concerts/3 - Data/Goose/Predictions/notebook/notebook_accuracy.json
+
+[2025-05-26 11:02:06] INFO __main__: Accuracy update for Goose completed successfully.
+[2025-05-26 11:02:06] INFO __main__: Running UM prediction pipeline...
+[2025-05-26 11:02:07] INFO data_loader: Loaded setlist (46,773) rows from Concerts/3 - Data/UM/AllThingsUM/setlistdata.csv, venues from Concerts/3 - Data/UM/AllThingsUM/venuedata.csv, songs from Concerts/3 - Data/UM/AllThingsUM/songdata.csv
+[2025-05-26 11:02:07] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/UM/Predictions/todaysnotebook.csv
+[2025-05-26 11:02:07] INFO __main__: Predictions for UM completed successfully.
+[2025-05-26 11:02:07] INFO __main__: Running UM accuracy update pipeline...
+[2025-05-26 11:02:08] INFO data_loader: Loaded setlist (46,773) rows from Concerts/3 - Data/UM/AllThingsUM/setlistdata.csv, venues from Concerts/3 - Data/UM/AllThingsUM/venuedata.csv, songs from Concerts/3 - Data/UM/AllThingsUM/songdata.csv
+[2025-05-26 11:02:08] INFO __main__: Evaluating show on 2024-09-13 for top_25
+[2025-05-26 11:02:08] INFO __main__: Show 2024-09-13 (top_25): Recall: 43.75%, Precision: 28.00%
+[2025-05-26 11:02:08] INFO __main__: Evaluating show on 2024-09-15 for top_25
+[2025-05-26 11:02:08] INFO __main__: Show 2024-09-15 (top_25): Recall: 25.00%, Precision: 8.00%
+[2025-05-26 11:02:08] INFO __main__: Evaluating show on 2024-10-26 for top_25
+[2025-05-26 11:02:08] INFO __main__: Show 2024-10-26 (top_25): Recall: 14.29%, Precision: 8.00%
+[2025-05-26 11:02:08] INFO __main__: Evaluating show on 2024-12-10 for top_25
+[2025-05-26 11:02:08] INFO __main__: Show 2024-12-10 (top_25): Recall: 30.00%, Precision: 12.00%
+[2025-05-26 11:02:08] INFO __main__: Evaluating show on 2024-12-11 for top_25
+[2025-05-26 11:02:08] INFO __main__: Show 2024-12-11 (top_25): Recall: 27.27%, Precision: 12.00%
+[2025-05-26 11:02:08] INFO __main__: Evaluating show on 2024-12-12 for top_25
+[2025-05-26 11:02:08] INFO __main__: Show 2024-12-12 (top_25): Recall: 50.00%, Precision: 24.00%
+[2025-05-26 11:02:08] INFO __main__: Evaluating show on 2024-12-28 for top_25
+[2025-05-26 11:02:08] INFO __main__: Show 2024-12-28 (top_25): Recall: 42.86%, Precision: 24.00%
+[2025-05-26 11:02:08] INFO __main__: Evaluating show on 2024-12-29 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2024-12-29 (top_25): Recall: 33.33%, Precision: 24.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2024-12-30 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2024-12-30 (top_25): Recall: 37.50%, Precision: 24.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2024-12-31 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2024-12-31 (top_25): Recall: 21.74%, Precision: 20.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-01-16 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-01-16 (top_25): Recall: 33.33%, Precision: 20.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-01-17 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-01-17 (top_25): Recall: 33.33%, Precision: 20.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-01-18 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-01-18 (top_25): Recall: 31.25%, Precision: 20.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-01-19 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-01-19 (top_25): Recall: 17.65%, Precision: 12.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-01-22 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-01-22 (top_25): Recall: 26.67%, Precision: 16.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-01-23 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-01-23 (top_25): Recall: 12.50%, Precision: 8.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-01-24 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-01-24 (top_25): Recall: 21.43%, Precision: 12.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-01-25 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-01-25 (top_25): Recall: 12.50%, Precision: 8.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-01-30 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-01-30 (top_25): Recall: 18.75%, Precision: 12.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-01-31 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-01-31 (top_25): Recall: 25.00%, Precision: 12.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-02-01 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-02-01 (top_25): Recall: 33.33%, Precision: 20.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-02-02 for top_25
+[2025-05-26 11:02:09] INFO __main__: Show 2025-02-02 (top_25): Recall: 33.33%, Precision: 20.00%
+[2025-05-26 11:02:09] INFO __main__: Evaluating show on 2025-02-26 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-02-26 (top_25): Recall: 46.67%, Precision: 28.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-02-27 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-02-27 (top_25): Recall: 11.11%, Precision: 8.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-02-28 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-02-28 (top_25): Recall: 35.71%, Precision: 20.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-01 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-01 (top_25): Recall: 38.46%, Precision: 20.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-05 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-05 (top_25): Recall: 17.65%, Precision: 12.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-06 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-06 (top_25): Recall: 13.33%, Precision: 8.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-07 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-07 (top_25): Recall: 6.67%, Precision: 4.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-08 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-08 (top_25): Recall: 42.86%, Precision: 24.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-09 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-09 (top_25): Recall: 14.29%, Precision: 4.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-12 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-12 (top_25): Recall: 50.00%, Precision: 32.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-13 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-13 (top_25): Recall: 11.76%, Precision: 8.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-14 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-14 (top_25): Recall: 37.50%, Precision: 24.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-15 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-15 (top_25): Recall: 37.50%, Precision: 24.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-19 for top_25
+[2025-05-26 11:02:10] INFO __main__: Show 2025-03-19 (top_25): Recall: 38.46%, Precision: 20.00%
+[2025-05-26 11:02:10] INFO __main__: Evaluating show on 2025-03-20 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-03-20 (top_25): Recall: 31.25%, Precision: 20.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-03-21 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-03-21 (top_25): Recall: 26.67%, Precision: 16.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-03-22 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-03-22 (top_25): Recall: 35.71%, Precision: 20.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-04-04 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-04-04 (top_25): Recall: 13.64%, Precision: 12.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-04-05 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-04-05 (top_25): Recall: 23.81%, Precision: 20.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-04-18 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-04-18 (top_25): Recall: 35.71%, Precision: 20.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-04-19 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-04-19 (top_25): Recall: 26.09%, Precision: 24.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-04-20 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-04-20 (top_25): Recall: 25.00%, Precision: 16.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-04-25 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-04-25 (top_25): Recall: 20.00%, Precision: 12.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-04-26 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-04-26 (top_25): Recall: 29.41%, Precision: 20.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-04-27 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-04-27 (top_25): Recall: 60.00%, Precision: 36.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-04-29 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-04-29 (top_25): Recall: 22.22%, Precision: 16.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-05-22 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-05-22 (top_25): Recall: 0.00%, Precision: 0.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2025-05-23 for top_25
+[2025-05-26 11:02:11] INFO __main__: Show 2025-05-23 (top_25): Recall: 26.67%, Precision: 16.00%
+[2025-05-26 11:02:11] INFO __main__: Evaluating show on 2024-09-13 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2024-09-13 (top_50): Recall: 50.00%, Precision: 16.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2024-09-15 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2024-09-15 (top_50): Recall: 25.00%, Precision: 4.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2024-10-26 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2024-10-26 (top_50): Recall: 21.43%, Precision: 6.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2024-12-10 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2024-12-10 (top_50): Recall: 50.00%, Precision: 10.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2024-12-11 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2024-12-11 (top_50): Recall: 54.55%, Precision: 12.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2024-12-12 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2024-12-12 (top_50): Recall: 66.67%, Precision: 16.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2024-12-28 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2024-12-28 (top_50): Recall: 57.14%, Precision: 16.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2024-12-29 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2024-12-29 (top_50): Recall: 38.89%, Precision: 14.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2024-12-30 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2024-12-30 (top_50): Recall: 68.75%, Precision: 22.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2024-12-31 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2024-12-31 (top_50): Recall: 52.17%, Precision: 24.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2025-01-16 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2025-01-16 (top_50): Recall: 53.33%, Precision: 16.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2025-01-17 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2025-01-17 (top_50): Recall: 60.00%, Precision: 18.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2025-01-18 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2025-01-18 (top_50): Recall: 37.50%, Precision: 12.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2025-01-19 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2025-01-19 (top_50): Recall: 41.18%, Precision: 14.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2025-01-22 for top_50
+[2025-05-26 11:02:12] INFO __main__: Show 2025-01-22 (top_50): Recall: 40.00%, Precision: 12.00%
+[2025-05-26 11:02:12] INFO __main__: Evaluating show on 2025-01-23 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-01-23 (top_50): Recall: 50.00%, Precision: 16.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-01-24 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-01-24 (top_50): Recall: 35.71%, Precision: 10.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-01-25 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-01-25 (top_50): Recall: 31.25%, Precision: 10.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-01-30 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-01-30 (top_50): Recall: 31.25%, Precision: 10.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-01-31 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-01-31 (top_50): Recall: 58.33%, Precision: 14.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-02-01 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-02-01 (top_50): Recall: 60.00%, Precision: 18.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-02-02 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-02-02 (top_50): Recall: 53.33%, Precision: 16.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-02-26 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-02-26 (top_50): Recall: 73.33%, Precision: 22.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-02-27 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-02-27 (top_50): Recall: 27.78%, Precision: 10.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-02-28 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-02-28 (top_50): Recall: 42.86%, Precision: 12.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-03-01 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-03-01 (top_50): Recall: 69.23%, Precision: 18.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-03-05 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-03-05 (top_50): Recall: 52.94%, Precision: 18.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-03-06 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-03-06 (top_50): Recall: 33.33%, Precision: 10.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-03-07 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-03-07 (top_50): Recall: 46.67%, Precision: 14.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-03-08 for top_50
+[2025-05-26 11:02:13] INFO __main__: Show 2025-03-08 (top_50): Recall: 50.00%, Precision: 14.00%
+[2025-05-26 11:02:13] INFO __main__: Evaluating show on 2025-03-09 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-03-09 (top_50): Recall: 42.86%, Precision: 6.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-03-12 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-03-12 (top_50): Recall: 50.00%, Precision: 16.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-03-13 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-03-13 (top_50): Recall: 41.18%, Precision: 14.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-03-14 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-03-14 (top_50): Recall: 56.25%, Precision: 18.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-03-15 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-03-15 (top_50): Recall: 50.00%, Precision: 16.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-03-19 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-03-19 (top_50): Recall: 61.54%, Precision: 16.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-03-20 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-03-20 (top_50): Recall: 50.00%, Precision: 16.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-03-21 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-03-21 (top_50): Recall: 53.33%, Precision: 16.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-03-22 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-03-22 (top_50): Recall: 50.00%, Precision: 14.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-04-04 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-04-04 (top_50): Recall: 18.18%, Precision: 8.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-04-05 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-04-05 (top_50): Recall: 23.81%, Precision: 10.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-04-18 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-04-18 (top_50): Recall: 42.86%, Precision: 12.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-04-19 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-04-19 (top_50): Recall: 39.13%, Precision: 18.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-04-20 for top_50
+[2025-05-26 11:02:14] INFO __main__: Show 2025-04-20 (top_50): Recall: 37.50%, Precision: 12.00%
+[2025-05-26 11:02:14] INFO __main__: Evaluating show on 2025-04-25 for top_50
+[2025-05-26 11:02:15] INFO __main__: Show 2025-04-25 (top_50): Recall: 33.33%, Precision: 10.00%
+[2025-05-26 11:02:15] INFO __main__: Evaluating show on 2025-04-26 for top_50
+[2025-05-26 11:02:15] INFO __main__: Show 2025-04-26 (top_50): Recall: 35.29%, Precision: 12.00%
+[2025-05-26 11:02:15] INFO __main__: Evaluating show on 2025-04-27 for top_50
+[2025-05-26 11:02:15] INFO __main__: Show 2025-04-27 (top_50): Recall: 73.33%, Precision: 22.00%
+[2025-05-26 11:02:15] INFO __main__: Evaluating show on 2025-04-29 for top_50
+[2025-05-26 11:02:15] INFO __main__: Show 2025-04-29 (top_50): Recall: 27.78%, Precision: 10.00%
+[2025-05-26 11:02:15] INFO __main__: Evaluating show on 2025-05-22 for top_50
+[2025-05-26 11:02:15] INFO __main__: Show 2025-05-22 (top_50): Recall: 25.00%, Precision: 6.00%
+[2025-05-26 11:02:15] INFO __main__: Evaluating show on 2025-05-23 for top_50
+[2025-05-26 11:02:15] INFO __main__: Show 2025-05-23 (top_50): Recall: 53.33%, Precision: 16.00%
+[2025-05-26 11:02:15] INFO __main__: Saved combined accuracy and precision results to Concerts/3 - Data/UM/Predictions/notebook/notebook_accuracy.json
+[2025-05-26 11:02:15] INFO __main__: UM historical_testing.py output:
+Saved results to Concerts/3 - Data/UM/Predictions/notebook/notebook_accuracy.json
+
+[2025-05-26 11:02:15] INFO __main__: Accuracy update for UM completed successfully.
+[2025-05-26 11:02:15] INFO __main__: Running WSP prediction pipeline...
+[2025-05-26 11:02:16] INFO data_loader: Loaded setlist (59,660) rows from Concerts/3 - Data/WSP/EverydayCompanion/setlistdata.csv, shows from Concerts/3 - Data/WSP/EverydayCompanion/showdata.csv, songs from Concerts/3 - Data/WSP/EverydayCompanion/songdata.csv
+[2025-05-26 11:02:16] INFO __main__: Saved Notebook predictions to Concerts/3 - Data/WSP/Predictions/todaysnotebook.csv
+[2025-05-26 11:02:16] INFO __main__: Predictions for WSP completed successfully.
+[2025-05-26 11:02:16] INFO __main__: Running WSP accuracy update pipeline...
+[2025-05-26 11:02:17] INFO data_loader: Loaded setlist (59,660) rows from Concerts/3 - Data/WSP/EverydayCompanion/setlistdata.csv, shows from Concerts/3 - Data/WSP/EverydayCompanion/showdata.csv, songs from Concerts/3 - Data/WSP/EverydayCompanion/songdata.csv
+[2025-05-26 11:02:17] INFO __main__: Evaluating show on 2023-05-06 for top_25
+[2025-05-26 11:02:17] INFO __main__: Show 2023-05-06 (top_25): Recall: 61.90%, Precision: 52.00%
+[2025-05-26 11:02:17] INFO __main__: Evaluating show on 2023-05-27 for top_25
+[2025-05-26 11:02:18] INFO __main__: Show 2023-05-27 (top_25): Recall: 45.00%, Precision: 36.00%
+[2025-05-26 11:02:18] INFO __main__: Evaluating show on 2023-05-28 for top_25
+[2025-05-26 11:02:18] INFO __main__: Show 2023-05-28 (top_25): Recall: 45.00%, Precision: 36.00%
+[2025-05-26 11:02:18] INFO __main__: Evaluating show on 2023-06-23 for top_25
+[2025-05-26 11:02:18] INFO __main__: Show 2023-06-23 (top_25): Recall: 31.58%, Precision: 24.00%
+[2025-05-26 11:02:18] INFO __main__: Evaluating show on 2023-06-24 for top_25
+[2025-05-26 11:02:19] INFO __main__: Show 2023-06-24 (top_25): Recall: 50.00%, Precision: 44.00%
+[2025-05-26 11:02:19] INFO __main__: Evaluating show on 2023-06-25 for top_25
+[2025-05-26 11:02:19] INFO __main__: Show 2023-06-25 (top_25): Recall: 50.00%, Precision: 44.00%
+[2025-05-26 11:02:19] INFO __main__: Evaluating show on 2023-07-28 for top_25
+[2025-05-26 11:02:19] INFO __main__: Show 2023-07-28 (top_25): Recall: 55.00%, Precision: 44.00%
+[2025-05-26 11:02:19] INFO __main__: Evaluating show on 2023-07-29 for top_25
+[2025-05-26 11:02:20] INFO __main__: Show 2023-07-29 (top_25): Recall: 42.86%, Precision: 36.00%
+[2025-05-26 11:02:20] INFO __main__: Evaluating show on 2023-07-30 for top_25
+[2025-05-26 11:02:20] INFO __main__: Show 2023-07-30 (top_25): Recall: 60.00%, Precision: 48.00%
+[2025-05-26 11:02:20] INFO __main__: Evaluating show on 2023-08-25 for top_25
+[2025-05-26 11:02:20] INFO __main__: Show 2023-08-25 (top_25): Recall: 50.00%, Precision: 36.00%
+[2025-05-26 11:02:20] INFO __main__: Evaluating show on 2023-08-26 for top_25
+[2025-05-26 11:02:20] INFO __main__: Show 2023-08-26 (top_25): Recall: 47.37%, Precision: 36.00%
+[2025-05-26 11:02:20] INFO __main__: Evaluating show on 2023-08-27 for top_25
+[2025-05-26 11:02:21] INFO __main__: Show 2023-08-27 (top_25): Recall: 47.62%, Precision: 40.00%
+[2025-05-26 11:02:21] INFO __main__: Evaluating show on 2023-09-15 for top_25
+[2025-05-26 11:02:21] INFO __main__: Show 2023-09-15 (top_25): Recall: 31.82%, Precision: 28.00%
+[2025-05-26 11:02:21] INFO __main__: Evaluating show on 2023-09-16 for top_25
+[2025-05-26 11:02:21] INFO __main__: Show 2023-09-16 (top_25): Recall: 43.48%, Precision: 40.00%
+[2025-05-26 11:02:21] INFO __main__: Evaluating show on 2023-10-20 for top_25
+[2025-05-26 11:02:22] INFO __main__: Show 2023-10-20 (top_25): Recall: 47.62%, Precision: 40.00%
+[2025-05-26 11:02:22] INFO __main__: Evaluating show on 2023-10-21 for top_25
+[2025-05-26 11:02:22] INFO __main__: Show 2023-10-21 (top_25): Recall: 42.86%, Precision: 36.00%
+[2025-05-26 11:02:22] INFO __main__: Evaluating show on 2023-10-22 for top_25
+[2025-05-26 11:02:22] INFO __main__: Show 2023-10-22 (top_25): Recall: 54.55%, Precision: 48.00%
+[2025-05-26 11:02:22] INFO __main__: Evaluating show on 2023-10-27 for top_25
+[2025-05-26 11:02:23] INFO __main__: Show 2023-10-27 (top_25): Recall: 57.14%, Precision: 48.00%
+[2025-05-26 11:02:23] INFO __main__: Evaluating show on 2023-10-28 for top_25
+[2025-05-26 11:02:23] INFO __main__: Show 2023-10-28 (top_25): Recall: 18.52%, Precision: 20.00%
+[2025-05-26 11:02:23] INFO __main__: Evaluating show on 2023-12-29 for top_25
+[2025-05-26 11:02:23] INFO __main__: Show 2023-12-29 (top_25): Recall: 47.37%, Precision: 36.00%
+[2025-05-26 11:02:23] INFO __main__: Evaluating show on 2023-12-30 for top_25
+[2025-05-26 11:02:24] INFO __main__: Show 2023-12-30 (top_25): Recall: 42.11%, Precision: 32.00%
+[2025-05-26 11:02:24] INFO __main__: Evaluating show on 2023-12-31 for top_25
+[2025-05-26 11:02:24] INFO __main__: Show 2023-12-31 (top_25): Recall: 41.38%, Precision: 48.00%
+[2025-05-26 11:02:24] INFO __main__: Evaluating show on 2024-01-18 for top_25
+[2025-05-26 11:02:24] INFO __main__: Show 2024-01-18 (top_25): Recall: 61.90%, Precision: 52.00%
+[2025-05-26 11:02:24] INFO __main__: Evaluating show on 2024-01-19 for top_25
+[2025-05-26 11:02:24] INFO __main__: Show 2024-01-19 (top_25): Recall: 45.00%, Precision: 36.00%
+[2025-05-26 11:02:24] INFO __main__: Evaluating show on 2024-01-20 for top_25
+[2025-05-26 11:02:25] INFO __main__: Show 2024-01-20 (top_25): Recall: 60.87%, Precision: 56.00%
+[2025-05-26 11:02:25] INFO __main__: Evaluating show on 2024-03-22 for top_25
+[2025-05-26 11:02:25] INFO __main__: Show 2024-03-22 (top_25): Recall: 36.84%, Precision: 28.00%
+[2025-05-26 11:02:25] INFO __main__: Evaluating show on 2024-03-23 for top_25
+[2025-05-26 11:02:25] INFO __main__: Show 2024-03-23 (top_25): Recall: 52.63%, Precision: 40.00%
+[2025-05-26 11:02:25] INFO __main__: Evaluating show on 2024-03-24 for top_25
+[2025-05-26 11:02:26] INFO __main__: Show 2024-03-24 (top_25): Recall: 47.37%, Precision: 36.00%
+[2025-05-26 11:02:26] INFO __main__: Evaluating show on 2024-04-14 for top_25
+[2025-05-26 11:02:26] INFO __main__: Show 2024-04-14 (top_25): Recall: 43.48%, Precision: 40.00%
+[2025-05-26 11:02:26] INFO __main__: Evaluating show on 2024-04-15 for top_25
+[2025-05-26 11:02:26] INFO __main__: Show 2024-04-15 (top_25): Recall: 27.78%, Precision: 20.00%
+[2025-05-26 11:02:26] INFO __main__: Evaluating show on 2024-04-16 for top_25
+[2025-05-26 11:02:27] INFO __main__: Show 2024-04-16 (top_25): Recall: 35.00%, Precision: 28.00%
+[2025-05-26 11:02:27] INFO __main__: Evaluating show on 2024-04-17 for top_25
+[2025-05-26 11:02:27] INFO __main__: Show 2024-04-17 (top_25): Recall: 50.00%, Precision: 40.00%
+[2025-05-26 11:02:27] INFO __main__: Evaluating show on 2024-04-25 for top_25
+[2025-05-26 11:02:27] INFO __main__: Show 2024-04-25 (top_25): Recall: 5.56%, Precision: 4.00%
+[2025-05-26 11:02:27] INFO __main__: Evaluating show on 2024-05-24 for top_25
+[2025-05-26 11:02:28] INFO __main__: Show 2024-05-24 (top_25): Recall: 36.84%, Precision: 28.00%
+[2025-05-26 11:02:28] INFO __main__: Evaluating show on 2024-05-25 for top_25
+[2025-05-26 11:02:28] INFO __main__: Show 2024-05-25 (top_25): Recall: 20.00%, Precision: 16.00%
+[2025-05-26 11:02:28] INFO __main__: Evaluating show on 2024-06-20 for top_25
+[2025-05-26 11:02:28] INFO __main__: Show 2024-06-20 (top_25): Recall: 0.00%, Precision: 0.00%
+[2025-05-26 11:02:28] INFO __main__: Evaluating show on 2024-06-21 for top_25
+[2025-05-26 11:02:28] INFO __main__: Show 2024-06-21 (top_25): Recall: 54.55%, Precision: 48.00%
+[2025-05-26 11:02:28] INFO __main__: Evaluating show on 2024-06-22 for top_25
+[2025-05-26 11:02:29] INFO __main__: Show 2024-06-22 (top_25): Recall: 47.83%, Precision: 44.00%
+[2025-05-26 11:02:29] INFO __main__: Evaluating show on 2024-06-23 for top_25
+[2025-05-26 11:02:29] INFO __main__: Show 2024-06-23 (top_25): Recall: 37.50%, Precision: 36.00%
+[2025-05-26 11:02:29] INFO __main__: Evaluating show on 2025-02-14 for top_25
+[2025-05-26 11:02:29] INFO __main__: Show 2025-02-14 (top_25): Recall: 18.18%, Precision: 16.00%
+[2025-05-26 11:02:29] INFO __main__: Evaluating show on 2025-02-15 for top_25
+[2025-05-26 11:02:29] INFO __main__: Show 2025-02-15 (top_25): Recall: 21.05%, Precision: 16.00%
+[2025-05-26 11:02:29] INFO __main__: Evaluating show on 2025-02-16 for top_25
+[2025-05-26 11:02:30] INFO __main__: Show 2025-02-16 (top_25): Recall: 42.86%, Precision: 36.00%
+[2025-05-26 11:02:30] INFO __main__: Evaluating show on 2025-03-21 for top_25
+[2025-05-26 11:02:30] INFO __main__: Show 2025-03-21 (top_25): Recall: 55.56%, Precision: 40.00%
+[2025-05-26 11:02:30] INFO __main__: Evaluating show on 2025-03-22 for top_25
+[2025-05-26 11:02:30] INFO __main__: Show 2025-03-22 (top_25): Recall: 57.89%, Precision: 44.00%
+[2025-05-26 11:02:30] INFO __main__: Evaluating show on 2025-03-23 for top_25
+[2025-05-26 11:02:30] INFO __main__: Show 2025-03-23 (top_25): Recall: 42.86%, Precision: 36.00%
+[2025-05-26 11:02:30] INFO __main__: Evaluating show on 2025-04-24 for top_25
+[2025-05-26 11:02:30] INFO __main__: Show 2025-04-24 (top_25): Recall: 36.84%, Precision: 28.00%
+[2025-05-26 11:02:30] INFO __main__: Evaluating show on 2025-04-25 for top_25
+[2025-05-26 11:02:31] INFO __main__: Show 2025-04-25 (top_25): Recall: 38.10%, Precision: 32.00%
+[2025-05-26 11:02:31] INFO __main__: Evaluating show on 2025-04-26 for top_25
+[2025-05-26 11:02:31] INFO __main__: Show 2025-04-26 (top_25): Recall: 50.00%, Precision: 44.00%
+[2025-05-26 11:02:31] INFO __main__: Evaluating show on 2025-05-16 for top_25
+[2025-05-26 11:02:31] INFO __main__: Show 2025-05-16 (top_25): Recall: 55.00%, Precision: 44.00%
+[2025-05-26 11:02:31] INFO __main__: Evaluating show on 2025-05-17 for top_25
+[2025-05-26 11:02:31] INFO __main__: Show 2025-05-17 (top_25): Recall: 47.83%, Precision: 44.00%
+[2025-05-26 11:02:31] INFO __main__: Evaluating show on 2023-05-06 for top_50
+[2025-05-26 11:02:31] INFO __main__: Show 2023-05-06 (top_50): Recall: 61.90%, Precision: 26.00%
+[2025-05-26 11:02:31] INFO __main__: Evaluating show on 2023-05-27 for top_50
+[2025-05-26 11:02:32] INFO __main__: Show 2023-05-27 (top_50): Recall: 65.00%, Precision: 26.00%
+[2025-05-26 11:02:32] INFO __main__: Evaluating show on 2023-05-28 for top_50
+[2025-05-26 11:02:32] INFO __main__: Show 2023-05-28 (top_50): Recall: 60.00%, Precision: 24.00%
+[2025-05-26 11:02:32] INFO __main__: Evaluating show on 2023-06-23 for top_50
+[2025-05-26 11:02:32] INFO __main__: Show 2023-06-23 (top_50): Recall: 63.16%, Precision: 24.00%
+[2025-05-26 11:02:32] INFO __main__: Evaluating show on 2023-06-24 for top_50
+[2025-05-26 11:02:33] INFO __main__: Show 2023-06-24 (top_50): Recall: 72.73%, Precision: 32.00%
+[2025-05-26 11:02:33] INFO __main__: Evaluating show on 2023-06-25 for top_50
+[2025-05-26 11:02:33] INFO __main__: Show 2023-06-25 (top_50): Recall: 72.73%, Precision: 32.00%
+[2025-05-26 11:02:33] INFO __main__: Evaluating show on 2023-07-28 for top_50
+[2025-05-26 11:02:33] INFO __main__: Show 2023-07-28 (top_50): Recall: 70.00%, Precision: 28.00%
+[2025-05-26 11:02:33] INFO __main__: Evaluating show on 2023-07-29 for top_50
+[2025-05-26 11:02:34] INFO __main__: Show 2023-07-29 (top_50): Recall: 47.62%, Precision: 20.00%
+[2025-05-26 11:02:34] INFO __main__: Evaluating show on 2023-07-30 for top_50
+[2025-05-26 11:02:34] INFO __main__: Show 2023-07-30 (top_50): Recall: 70.00%, Precision: 28.00%
+[2025-05-26 11:02:34] INFO __main__: Evaluating show on 2023-08-25 for top_50
+[2025-05-26 11:02:34] INFO __main__: Show 2023-08-25 (top_50): Recall: 61.11%, Precision: 22.00%
+[2025-05-26 11:02:34] INFO __main__: Evaluating show on 2023-08-26 for top_50
+[2025-05-26 11:02:35] INFO __main__: Show 2023-08-26 (top_50): Recall: 47.37%, Precision: 18.00%
+[2025-05-26 11:02:35] INFO __main__: Evaluating show on 2023-08-27 for top_50
+[2025-05-26 11:02:35] INFO __main__: Show 2023-08-27 (top_50): Recall: 66.67%, Precision: 28.00%
+[2025-05-26 11:02:35] INFO __main__: Evaluating show on 2023-09-15 for top_50
+[2025-05-26 11:02:35] INFO __main__: Show 2023-09-15 (top_50): Recall: 54.55%, Precision: 24.00%
+[2025-05-26 11:02:35] INFO __main__: Evaluating show on 2023-09-16 for top_50
+[2025-05-26 11:02:35] INFO __main__: Show 2023-09-16 (top_50): Recall: 47.83%, Precision: 22.00%
+[2025-05-26 11:02:35] INFO __main__: Evaluating show on 2023-10-20 for top_50
+[2025-05-26 11:02:36] INFO __main__: Show 2023-10-20 (top_50): Recall: 61.90%, Precision: 26.00%
+[2025-05-26 11:02:36] INFO __main__: Evaluating show on 2023-10-21 for top_50
+[2025-05-26 11:02:36] INFO __main__: Show 2023-10-21 (top_50): Recall: 47.62%, Precision: 20.00%
+[2025-05-26 11:02:36] INFO __main__: Evaluating show on 2023-10-22 for top_50
+[2025-05-26 11:02:36] INFO __main__: Show 2023-10-22 (top_50): Recall: 68.18%, Precision: 30.00%
+[2025-05-26 11:02:36] INFO __main__: Evaluating show on 2023-10-27 for top_50
+[2025-05-26 11:02:37] INFO __main__: Show 2023-10-27 (top_50): Recall: 76.19%, Precision: 32.00%
+[2025-05-26 11:02:37] INFO __main__: Evaluating show on 2023-10-28 for top_50
+[2025-05-26 11:02:37] INFO __main__: Show 2023-10-28 (top_50): Recall: 25.93%, Precision: 14.00%
+[2025-05-26 11:02:37] INFO __main__: Evaluating show on 2023-12-29 for top_50
+[2025-05-26 11:02:37] INFO __main__: Show 2023-12-29 (top_50): Recall: 57.89%, Precision: 22.00%
+[2025-05-26 11:02:37] INFO __main__: Evaluating show on 2023-12-30 for top_50
+[2025-05-26 11:02:38] INFO __main__: Show 2023-12-30 (top_50): Recall: 52.63%, Precision: 20.00%
+[2025-05-26 11:02:38] INFO __main__: Evaluating show on 2023-12-31 for top_50
+[2025-05-26 11:02:38] INFO __main__: Show 2023-12-31 (top_50): Recall: 58.62%, Precision: 34.00%
+[2025-05-26 11:02:38] INFO __main__: Evaluating show on 2024-01-18 for top_50
+[2025-05-26 11:02:38] INFO __main__: Show 2024-01-18 (top_50): Recall: 80.95%, Precision: 34.00%
+[2025-05-26 11:02:38] INFO __main__: Evaluating show on 2024-01-19 for top_50
+[2025-05-26 11:02:39] INFO __main__: Show 2024-01-19 (top_50): Recall: 65.00%, Precision: 26.00%
+[2025-05-26 11:02:39] INFO __main__: Evaluating show on 2024-01-20 for top_50
+[2025-05-26 11:02:39] INFO __main__: Show 2024-01-20 (top_50): Recall: 73.91%, Precision: 34.00%
+[2025-05-26 11:02:39] INFO __main__: Evaluating show on 2024-03-22 for top_50
+[2025-05-26 11:02:39] INFO __main__: Show 2024-03-22 (top_50): Recall: 52.63%, Precision: 20.00%
+[2025-05-26 11:02:39] INFO __main__: Evaluating show on 2024-03-23 for top_50
+[2025-05-26 11:02:39] INFO __main__: Show 2024-03-23 (top_50): Recall: 63.16%, Precision: 24.00%
+[2025-05-26 11:02:39] INFO __main__: Evaluating show on 2024-03-24 for top_50
+[2025-05-26 11:02:40] INFO __main__: Show 2024-03-24 (top_50): Recall: 47.37%, Precision: 18.00%
+[2025-05-26 11:02:40] INFO __main__: Evaluating show on 2024-04-14 for top_50
+[2025-05-26 11:02:40] INFO __main__: Show 2024-04-14 (top_50): Recall: 73.91%, Precision: 34.00%
+[2025-05-26 11:02:40] INFO __main__: Evaluating show on 2024-04-15 for top_50
+[2025-05-26 11:02:40] INFO __main__: Show 2024-04-15 (top_50): Recall: 50.00%, Precision: 18.00%
+[2025-05-26 11:02:40] INFO __main__: Evaluating show on 2024-04-16 for top_50
+[2025-05-26 11:02:41] INFO __main__: Show 2024-04-16 (top_50): Recall: 50.00%, Precision: 20.00%
+[2025-05-26 11:02:41] INFO __main__: Evaluating show on 2024-04-17 for top_50
+[2025-05-26 11:02:41] INFO __main__: Show 2024-04-17 (top_50): Recall: 80.00%, Precision: 32.00%
+[2025-05-26 11:02:41] INFO __main__: Evaluating show on 2024-04-25 for top_50
+[2025-05-26 11:02:41] INFO __main__: Show 2024-04-25 (top_50): Recall: 11.11%, Precision: 4.00%
+[2025-05-26 11:02:41] INFO __main__: Evaluating show on 2024-05-24 for top_50
+[2025-05-26 11:02:41] INFO __main__: Show 2024-05-24 (top_50): Recall: 47.37%, Precision: 18.00%
+[2025-05-26 11:02:41] INFO __main__: Evaluating show on 2024-05-25 for top_50
+[2025-05-26 11:02:42] INFO __main__: Show 2024-05-25 (top_50): Recall: 30.00%, Precision: 12.00%
+[2025-05-26 11:02:42] INFO __main__: Evaluating show on 2024-06-20 for top_50
+[2025-05-26 11:02:42] INFO __main__: Show 2024-06-20 (top_50): Recall: 0.00%, Precision: 0.00%
+[2025-05-26 11:02:42] INFO __main__: Evaluating show on 2024-06-21 for top_50
+[2025-05-26 11:02:42] INFO __main__: Show 2024-06-21 (top_50): Recall: 77.27%, Precision: 34.00%
+[2025-05-26 11:02:42] INFO __main__: Evaluating show on 2024-06-22 for top_50
+[2025-05-26 11:02:43] INFO __main__: Show 2024-06-22 (top_50): Recall: 56.52%, Precision: 26.00%
+[2025-05-26 11:02:43] INFO __main__: Evaluating show on 2024-06-23 for top_50
+[2025-05-26 11:02:43] INFO __main__: Show 2024-06-23 (top_50): Recall: 50.00%, Precision: 24.00%
+[2025-05-26 11:02:43] INFO __main__: Evaluating show on 2025-02-14 for top_50
+[2025-05-26 11:02:43] INFO __main__: Show 2025-02-14 (top_50): Recall: 36.36%, Precision: 16.00%
+[2025-05-26 11:02:43] INFO __main__: Evaluating show on 2025-02-15 for top_50
+[2025-05-26 11:02:44] INFO __main__: Show 2025-02-15 (top_50): Recall: 36.84%, Precision: 14.00%
+[2025-05-26 11:02:44] INFO __main__: Evaluating show on 2025-02-16 for top_50
+[2025-05-26 11:02:44] INFO __main__: Show 2025-02-16 (top_50): Recall: 47.62%, Precision: 20.00%
+[2025-05-26 11:02:44] INFO __main__: Evaluating show on 2025-03-21 for top_50
+[2025-05-26 11:02:44] INFO __main__: Show 2025-03-21 (top_50): Recall: 66.67%, Precision: 24.00%
+[2025-05-26 11:02:44] INFO __main__: Evaluating show on 2025-03-22 for top_50
+[2025-05-26 11:02:45] INFO __main__: Show 2025-03-22 (top_50): Recall: 63.16%, Precision: 24.00%
+[2025-05-26 11:02:45] INFO __main__: Evaluating show on 2025-03-23 for top_50
+[2025-05-26 11:02:45] INFO __main__: Show 2025-03-23 (top_50): Recall: 57.14%, Precision: 24.00%
+[2025-05-26 11:02:45] INFO __main__: Evaluating show on 2025-04-24 for top_50
+[2025-05-26 11:02:45] INFO __main__: Show 2025-04-24 (top_50): Recall: 57.89%, Precision: 22.00%
+[2025-05-26 11:02:45] INFO __main__: Evaluating show on 2025-04-25 for top_50
+[2025-05-26 11:02:45] INFO __main__: Show 2025-04-25 (top_50): Recall: 57.14%, Precision: 24.00%
+[2025-05-26 11:02:45] INFO __main__: Evaluating show on 2025-04-26 for top_50
+[2025-05-26 11:02:45] INFO __main__: Show 2025-04-26 (top_50): Recall: 59.09%, Precision: 26.00%
+[2025-05-26 11:02:45] INFO __main__: Evaluating show on 2025-05-16 for top_50
+[2025-05-26 11:02:45] INFO __main__: Show 2025-05-16 (top_50): Recall: 65.00%, Precision: 26.00%
+[2025-05-26 11:02:45] INFO __main__: Evaluating show on 2025-05-17 for top_50
+[2025-05-26 11:02:46] INFO __main__: Show 2025-05-17 (top_50): Recall: 60.87%, Precision: 28.00%
+[2025-05-26 11:02:46] INFO __main__: Saved combined accuracy and precision results to Concerts/3 - Data/WSP/Predictions/notebook/notebook_accuracy.json
+[2025-05-26 11:02:46] INFO __main__: WSP historical_testing.py output:
+Saved results to Concerts/3 - Data/WSP/Predictions/notebook/notebook_accuracy.json
+
+[2025-05-26 11:02:46] INFO __main__: Accuracy update for WSP completed successfully.
+[2025-05-26 11:02:46] INFO __main__: All band prediction pipelines completed in 61.39 seconds.

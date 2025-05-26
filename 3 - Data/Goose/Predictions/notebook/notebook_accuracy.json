@@ -1,513 +1,615 @@
 {
   "top_25": {
     "most_recent_shows": 50,
-    "overall_accuracy": 0.52135,
+    "overall_recall": 0.51553,
+    "overall_precision": 0.2776,
     "results": [
+      {
+        "showid": "1727890109",
+        "showdate": "2025-05-10",
+        "recall": 0.28571,
+        "precision": 0.08
+      },
+      {
+        "showid": "1743623827",
+        "showdate": "2025-05-10",
+        "recall": 0.76923,
+        "precision": 0.4
+      },
       {
         "showid": "1727890094",
         "showdate": "2025-05-09",
-        "accuracy": 0.5
+        "recall": 0.46154,
+        "precision": 0.24
       },
       {
         "showid": "1727890080",
         "showdate": "2025-05-08",
-        "accuracy": 0.36364
+        "recall": 0.36364,
+        "precision": 0.16
       },
       {
         "showid": "1745685585",
         "showdate": "2025-04-25",
-        "accuracy": 0.66667
+        "recall": 0.66667,
+        "precision": 0.08
       },
       {
         "showid": "1737015351",
         "showdate": "2025-04-24",
-        "accuracy": 0.3
+        "recall": 0.3,
+        "precision": 0.12
       },
       {
         "showid": "1741108426",
         "showdate": "2025-03-11",
-        "accuracy": 0.0
+        "recall": 0.0,
+        "precision": 0.0
       },
       {
         "showid": "1731951387",
         "showdate": "2025-02-15",
-        "accuracy": 0.53846
+        "recall": 0.53846,
+        "precision": 0.28
       },
       {
         "showid": "1731951172",
         "showdate": "2025-02-14",
-        "accuracy": 0.53846
+        "recall": 0.53846,
+        "precision": 0.28
       },
       {
         "showid": "1731951149",
         "showdate": "2025-02-13",
-        "accuracy": 0.42857
+        "recall": 0.42857,
+        "precision": 0.24
       },
       {
         "showid": "1731950869",
         "showdate": "2025-02-11",
-        "accuracy": 0.64286
+        "recall": 0.64286,
+        "precision": 0.36
       },
       {
         "showid": "1732138914",
         "showdate": "2025-02-10",
-        "accuracy": 0.73333
+        "recall": 0.73333,
+        "precision": 0.44
       },
       {
         "showid": "1731950848",
         "showdate": "2025-02-08",
-        "accuracy": 0.58333
+        "recall": 0.58333,
+        "precision": 0.28
       },
       {
         "showid": "1731950167",
         "showdate": "2025-02-07",
-        "accuracy": 0.28571
+        "recall": 0.28571,
+        "precision": 0.16
       },
       {
         "showid": "1731950152",
         "showdate": "2025-02-06",
-        "accuracy": 0.21429
+        "recall": 0.21429,
+        "precision": 0.12
       },
       {
         "showid": "1721059705",
         "showdate": "2024-12-31",
-        "accuracy": 0.4
+        "recall": 0.4,
+        "precision": 0.24
       },
       {
         "showid": "1721059697",
         "showdate": "2024-12-30",
-        "accuracy": 0.38462
+        "recall": 0.38462,
+        "precision": 0.2
       },
       {
         "showid": "1719248984",
         "showdate": "2024-12-14",
-        "accuracy": 0.4
+        "recall": 0.4,
+        "precision": 0.32
       },
       {
         "showid": "1719248965",
         "showdate": "2024-12-13",
-        "accuracy": 0.35
+        "recall": 0.35,
+        "precision": 0.28
       },
       {
         "showid": "1730168333",
         "showdate": "2024-11-24",
-        "accuracy": 0.2
+        "recall": 0.2,
+        "precision": 0.04
       },
       {
         "showid": "1719248917",
         "showdate": "2024-11-13",
-        "accuracy": 0.66667
+        "recall": 0.66667,
+        "precision": 0.4
       },
       {
         "showid": "1719248901",
         "showdate": "2024-11-12",
-        "accuracy": 0.625
+        "recall": 0.625,
+        "precision": 0.4
       },
       {
         "showid": "1719248831",
         "showdate": "2024-11-10",
-        "accuracy": 0.5
+        "recall": 0.5,
+        "precision": 0.32
       },
       {
         "showid": "1719248797",
         "showdate": "2024-11-09",
-        "accuracy": 0.26667
+        "recall": 0.26667,
+        "precision": 0.16
       },
       {
         "showid": "1719248817",
         "showdate": "2024-11-08",
-        "accuracy": 0.38462
+        "recall": 0.38462,
+        "precision": 0.2
       },
       {
         "showid": "1719248761",
         "showdate": "2024-11-07",
-        "accuracy": 0.46667
+        "recall": 0.46667,
+        "precision": 0.28
       },
       {
         "showid": "1730823679",
         "showdate": "2024-11-04",
-        "accuracy": 0.5
+        "recall": 0.5,
+        "precision": 0.32
       },
       {
         "showid": "1719248650",
         "showdate": "2024-11-02",
-        "accuracy": 0.71429
+        "recall": 0.71429,
+        "precision": 0.4
       },
       {
         "showid": "1719248634",
         "showdate": "2024-11-01",
-        "accuracy": 0.71429
+        "recall": 0.71429,
+        "precision": 0.4
       },
       {
         "showid": "1719248592",
         "showdate": "2024-10-31",
-        "accuracy": 0.46667
+        "recall": 0.46667,
+        "precision": 0.28
       },
       {
         "showid": "1719248561",
         "showdate": "2024-10-30",
-        "accuracy": 0.73333
+        "recall": 0.73333,
+        "precision": 0.44
       },
       {
         "showid": "1719248538",
         "showdate": "2024-10-29",
-        "accuracy": 0.69231
+        "recall": 0.69231,
+        "precision": 0.36
       },
       {
         "showid": "1728407482",
         "showdate": "2024-10-26",
-        "accuracy": 0.5
+        "recall": 0.5,
+        "precision": 0.32
       },
       {
         "showid": "1728409724",
         "showdate": "2024-10-25",
-        "accuracy": 0.4375
+        "recall": 0.4375,
+        "precision": 0.28
       },
       {
         "showid": "1719248440",
         "showdate": "2024-10-24",
-        "accuracy": 0.5
+        "recall": 0.5,
+        "precision": 0.28
       },
       {
         "showid": "1716390709",
         "showdate": "2024-10-04",
-        "accuracy": 0.125
+        "recall": 0.125,
+        "precision": 0.04
       },
       {
         "showid": "1727545020",
         "showdate": "2024-10-01",
-        "accuracy": 0.61111
+        "recall": 0.61111,
+        "precision": 0.44
       },
       {
         "showid": "1712075724",
         "showdate": "2024-09-28",
-        "accuracy": 0.75
+        "recall": 0.75,
+        "precision": 0.36
       },
       {
         "showid": "1712075463",
         "showdate": "2024-09-27",
-        "accuracy": 0.5
+        "recall": 0.5,
+        "precision": 0.28
       },
       {
         "showid": "1712075435",
         "showdate": "2024-09-26",
-        "accuracy": 0.41667
+        "recall": 0.41667,
+        "precision": 0.2
       },
       {
         "showid": "1712075420",
         "showdate": "2024-09-24",
-        "accuracy": 0.54545
+        "recall": 0.54545,
+        "precision": 0.24
       },
       {
         "showid": "1712075391",
         "showdate": "2024-09-22",
-        "accuracy": 0.83333
+        "recall": 0.83333,
+        "precision": 0.4
       },
       {
         "showid": "1712075274",
         "showdate": "2024-09-21",
-        "accuracy": 0.83333
+        "recall": 0.83333,
+        "precision": 0.4
       },
       {
         "showid": "1712075248",
         "showdate": "2024-09-20",
-        "accuracy": 0.64286
+        "recall": 0.64286,
+        "precision": 0.36
       },
       {
         "showid": "1712075232",
         "showdate": "2024-09-19",
-        "accuracy": 0.64286
+        "recall": 0.64286,
+        "precision": 0.36
       },
       {
         "showid": "1712075204",
         "showdate": "2024-09-17",
-        "accuracy": 0.5
+        "recall": 0.5,
+        "precision": 0.28
       },
       {
         "showid": "1712075175",
         "showdate": "2024-09-15",
-        "accuracy": 0.61538
+        "recall": 0.61538,
+        "precision": 0.32
       },
       {
         "showid": "1712075027",
         "showdate": "2024-09-14",
-        "accuracy": 0.85714
+        "recall": 0.85714,
+        "precision": 0.48
       },
       {
         "showid": "1719248398",
         "showdate": "2024-09-13",
-        "accuracy": 0.46154
+        "recall": 0.46154,
+        "precision": 0.24
       },
       {
         "showid": "1719248336",
         "showdate": "2024-09-12",
-        "accuracy": 0.72727
-      },
-      {
-        "showid": "1719248320",
-        "showdate": "2024-09-11",
-        "accuracy": 0.69231
-      },
-      {
-        "showid": "1712075003",
-        "showdate": "2024-09-09",
-        "accuracy": 0.61538
+        "recall": 0.72727,
+        "precision": 0.32
       }
     ]
   },
   "top_50": {
     "most_recent_shows": 50,
-    "overall_accuracy": 0.65712,
+    "overall_recall": 0.64309,
+    "overall_precision": 0.1728,
     "results": [
+      {
+        "showid": "1727890109",
+        "showdate": "2025-05-10",
+        "recall": 0.28571,
+        "precision": 0.04
+      },
+      {
+        "showid": "1743623827",
+        "showdate": "2025-05-10",
+        "recall": 0.84615,
+        "precision": 0.22
+      },
       {
         "showid": "1727890094",
         "showdate": "2025-05-09",
-        "accuracy": 0.83333
+        "recall": 0.76923,
+        "precision": 0.2
       },
       {
         "showid": "1727890080",
         "showdate": "2025-05-08",
-        "accuracy": 0.36364
+        "recall": 0.36364,
+        "precision": 0.08
       },
       {
         "showid": "1745685585",
         "showdate": "2025-04-25",
-        "accuracy": 0.66667
+        "recall": 0.66667,
+        "precision": 0.04
       },
       {
         "showid": "1737015351",
         "showdate": "2025-04-24",
-        "accuracy": 0.3
+        "recall": 0.3,
+        "precision": 0.06
       },
       {
         "showid": "1741108426",
         "showdate": "2025-03-11",
-        "accuracy": 0.0
+        "recall": 0.0,
+        "precision": 0.0
       },
       {
         "showid": "1731951387",
         "showdate": "2025-02-15",
-        "accuracy": 0.92308
+        "recall": 0.92308,
+        "precision": 0.24
       },
       {
         "showid": "1731951172",
         "showdate": "2025-02-14",
-        "accuracy": 0.61538
+        "recall": 0.61538,
+        "precision": 0.16
       },
       {
         "showid": "1731951149",
         "showdate": "2025-02-13",
-        "accuracy": 0.57143
+        "recall": 0.57143,
+        "precision": 0.16
       },
       {
         "showid": "1731950869",
         "showdate": "2025-02-11",
-        "accuracy": 0.92857
+        "recall": 0.92857,
+        "precision": 0.26
       },
       {
         "showid": "1732138914",
         "showdate": "2025-02-10",
-        "accuracy": 0.93333
+        "recall": 0.93333,
+        "precision": 0.28
       },
       {
         "showid": "1731950848",
         "showdate": "2025-02-08",
-        "accuracy": 0.58333
+        "recall": 0.58333,
+        "precision": 0.14
       },
       {
         "showid": "1731950167",
         "showdate": "2025-02-07",
-        "accuracy": 0.42857
+        "recall": 0.42857,
+        "precision": 0.12
       },
       {
         "showid": "1731950152",
         "showdate": "2025-02-06",
-        "accuracy": 0.28571
+        "recall": 0.28571,
+        "precision": 0.08
       },
       {
         "showid": "1721059705",
         "showdate": "2024-12-31",
-        "accuracy": 0.46667
+        "recall": 0.46667,
+        "precision": 0.14
       },
       {
         "showid": "1721059697",
         "showdate": "2024-12-30",
-        "accuracy": 0.46154
+        "recall": 0.46154,
+        "precision": 0.12
       },
       {
         "showid": "1719248984",
         "showdate": "2024-12-14",
-        "accuracy": 0.45
+        "recall": 0.45,
+        "precision": 0.18
       },
       {
         "showid": "1719248965",
         "showdate": "2024-12-13",
-        "accuracy": 0.35
+        "recall": 0.35,
+        "precision": 0.14
       },
       {
         "showid": "1730168333",
         "showdate": "2024-11-24",
-        "accuracy": 0.6
+        "recall": 0.6,
+        "precision": 0.06
       },
       {
         "showid": "1719248917",
         "showdate": "2024-11-13",
-        "accuracy": 0.93333
+        "recall": 0.93333,
+        "precision": 0.28
       },
       {
         "showid": "1719248901",
         "showdate": "2024-11-12",
-        "accuracy": 0.6875
+        "recall": 0.6875,
+        "precision": 0.22
       },
       {
         "showid": "1719248831",
         "showdate": "2024-11-10",
-        "accuracy": 0.6875
+        "recall": 0.6875,
+        "precision": 0.22
       },
       {
         "showid": "1719248797",
         "showdate": "2024-11-09",
-        "accuracy": 0.46667
+        "recall": 0.46667,
+        "precision": 0.14
       },
       {
         "showid": "1719248817",
         "showdate": "2024-11-08",
-        "accuracy": 0.61538
+        "recall": 0.61538,
+        "precision": 0.16
       },
       {
         "showid": "1719248761",
         "showdate": "2024-11-07",
-        "accuracy": 0.66667
+        "recall": 0.66667,
+        "precision": 0.2
       },
       {
         "showid": "1730823679",
         "showdate": "2024-11-04",
-        "accuracy": 0.625
+        "recall": 0.625,
+        "precision": 0.2
       },
       {
         "showid": "1719248650",
         "showdate": "2024-11-02",
-        "accuracy": 0.85714
+        "recall": 0.85714,
+        "precision": 0.24
       },
       {
         "showid": "1719248634",
         "showdate": "2024-11-01",
-        "accuracy": 0.85714
+        "recall": 0.85714,
+        "precision": 0.24
       },
       {
         "showid": "1719248592",
         "showdate": "2024-10-31",
-        "accuracy": 0.46667
+        "recall": 0.46667,
+        "precision": 0.14
       },
       {
         "showid": "1719248561",
         "showdate": "2024-10-30",
-        "accuracy": 0.86667
+        "recall": 0.86667,
+        "precision": 0.26
       },
       {
         "showid": "1719248538",
         "showdate": "2024-10-29",
-        "accuracy": 0.92308
+        "recall": 0.92308,
+        "precision": 0.24
       },
       {
         "showid": "1728407482",
         "showdate": "2024-10-26",
-        "accuracy": 0.75
+        "recall": 0.75,
+        "precision": 0.24
       },
       {
         "showid": "1728409724",
         "showdate": "2024-10-25",
-        "accuracy": 0.4375
+        "recall": 0.4375,
+        "precision": 0.14
       },
       {
         "showid": "1719248440",
         "showdate": "2024-10-24",
-        "accuracy": 0.85714
+        "recall": 0.85714,
+        "precision": 0.24
       },
       {
         "showid": "1716390709",
         "showdate": "2024-10-04",
-        "accuracy": 0.25
+        "recall": 0.25,
+        "precision": 0.04
       },
       {
         "showid": "1727545020",
         "showdate": "2024-10-01",
-        "accuracy": 0.72222
+        "recall": 0.72222,
+        "precision": 0.26
       },
       {
         "showid": "1712075724",
         "showdate": "2024-09-28",
-        "accuracy": 0.91667
+        "recall": 0.91667,
+        "precision": 0.22
       },
       {
         "showid": "1712075463",
         "showdate": "2024-09-27",
-        "accuracy": 0.64286
+        "recall": 0.64286,
+        "precision": 0.18
       },
       {
         "showid": "1712075435",
         "showdate": "2024-09-26",
-        "accuracy": 0.75
+        "recall": 0.75,
+        "precision": 0.18
       },
       {
         "showid": "1712075420",
         "showdate": "2024-09-24",
-        "accuracy": 0.63636
+        "recall": 0.63636,
+        "precision": 0.14
       },
       {
         "showid": "1712075391",
         "showdate": "2024-09-22",
-        "accuracy": 0.83333
+        "recall": 0.83333,
+        "precision": 0.2
       },
       {
         "showid": "1712075274",
         "showdate": "2024-09-21",
-        "accuracy": 0.83333
+        "recall": 0.83333,
+        "precision": 0.2
       },
       {
         "showid": "1712075248",
         "showdate": "2024-09-20",
-        "accuracy": 0.71429
+        "recall": 0.71429,
+        "precision": 0.2
       },
       {
         "showid": "1712075232",
         "showdate": "2024-09-19",
-        "accuracy": 0.71429
+        "recall": 0.71429,
+        "precision": 0.2
       },
       {
         "showid": "1712075204",
         "showdate": "2024-09-17",
-        "accuracy": 0.71429
+        "recall": 0.71429,
+        "precision": 0.2
       },
       {
         "showid": "1712075175",
         "showdate": "2024-09-15",
-        "accuracy": 0.61538
+        "recall": 0.61538,
+        "precision": 0.16
       },
       {
         "showid": "1712075027",
         "showdate": "2024-09-14",
-        "accuracy": 0.92857
+        "recall": 0.92857,
+        "precision": 0.26
       },
       {
         "showid": "1719248398",
         "showdate": "2024-09-13",
-        "accuracy": 0.53846
+        "recall": 0.53846,
+        "precision": 0.14
       },
       {
         "showid": "1719248336",
         "showdate": "2024-09-12",
-        "accuracy": 0.81818
-      },
-      {
-        "showid": "1719248320",
-        "showdate": "2024-09-11",
-        "accuracy": 0.92308
-      },
-      {
-        "showid": "1712075003",
-        "showdate": "2024-09-09",
-        "accuracy": 0.84615
+        "recall": 0.81818,
+        "precision": 0.18
       }
     ]
   }

@@ -6,6 +6,57 @@ DATA_DIR = Path('../../../3 - Data/WSP/EverydayCompanion')
 SHOWDATA = DATA_DIR / 'showdata.csv'
 SETLISTDATA = DATA_DIR / 'setlistdata.csv'
 
+def load_and_setup_data(band: str) -> pd.DataFrame:
+    """
+    Load and setup data for a specific band.
+    Args:
+        band: The band to load data for.
+    Returns:
+        A pandas DataFrame containing the loaded and setup data.
+    """
+    if band == 'WSP':
+        DATA_DIR = Path('../../../3 - Data/WSP/EverydayCompanion')
+        SHOWDATA = DATA_DIR / 'showdata.csv'
+        SETLISTDATA = DATA_DIR / 'setlistdata.csv'
+        SONGDATA = DATA_DIR / 'songdata.csv'
+        df = SETLISTDATA.merge(SHOWDATA, on='link', how='left')
+        df = df.merge(SONGDATA, on='song_name', how='left')
+        return df
+    elif band == 'Phish':
+        DATA_DIR = Path('../../../3 - Data/Phish/PhishNet')
+        SHOWDATA = DATA_DIR / 'showdata.csv'
+        SETLISTDATA = DATA_DIR / 'setlistdata.csv'
+        SONGDATA = DATA_DIR / 'songdata.csv'
+        VENUEDATA = DATA_DIR / 'venuedata.csv'
+        df = SETLISTDATA.merge(SHOWDATA, on='link', how='left')
+        df = df.merge(SONGDATA, on='song_name', how='left')
+        df = df.merge(VENUEDATA, on='venue', how='left')
+        return df
+    elif band == 'Goose':
+        DATA_DIR = Path('../../../3 - Data/Goose/ElGoose')
+        SHOWDATA = DATA_DIR / 'showdata.csv'
+        SETLISTDATA = DATA_DIR / 'setlistdata.csv'
+        SONGDATA = DATA_DIR / 'songdata.csv'
+        VENUEDATA = DATA_DIR / 'venuedata.csv'
+        df = SETLISTDATA.merge(SHOWDATA, on='link', how='left')
+        df = df.merge(SONGDATA, on='song_name', how='left')
+        df = df.merge(VENUEDATA, on='venue', how='left')
+        return df
+    elif band == 'UM':
+        DATA_DIR = Path('../../../3 - Data/UM/AllThingsUM')
+        SETLISTDATA = DATA_DIR / 'setlistdata.csv'
+        SONGDATA = DATA_DIR / 'songdata.csv'
+        VENUEDATA = DATA_DIR / 'venuedata.csv'
+        df = SETLISTDATA.merge(SHOWDATA, on='link', how='left')
+        df = df.merge(SONGDATA, on='song_name', how='left')
+        df = df.merge(VENUEDATA, on='venue', how='left')
+        return df
+    else:
+        print("Invalid band name")
+        return None
+    
+    
+
 def setup_data(test_date):
     
     test_date = pd.to_datetime(test_date, format='%m/%d/%Y')

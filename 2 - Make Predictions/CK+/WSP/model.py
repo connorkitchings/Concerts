@@ -4,7 +4,7 @@ from logger import get_logger
 
 logger = get_logger(__name__)
 
-def aggregate_setlist_features(df, method='mean'):
+def aggregate_setlist_features(df: pd.DataFrame, method: str = 'mean') -> pd.DataFrame:
     """
     Aggregates setlist data by song name for WSP using the CK+ (gap-based) method.
     Args:
@@ -13,6 +13,11 @@ def aggregate_setlist_features(df, method='mean'):
     Returns:
         pd.DataFrame: CK+ score and related features per song
     """
+    # Ensure 'show_index_overall' exists
+    if 'show_index_overall' not in df.columns:
+        show_order = df[['link', 'show_date']].drop_duplicates().sort_values('show_date').reset_index(drop=True)
+        show_order['show_index_overall'] = show_order.index + 1
+        df = df.merge(show_order[['link', 'show_index_overall']], on='link', how='left')
     max_show_num = df['show_index_overall'].max()
     df = df.sort_values(by=['song', 'show_index_overall'], ascending=[True, True])
     df['gap'] = df.groupby('song')['show_index_overall'].diff()

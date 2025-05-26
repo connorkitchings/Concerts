@@ -1,0 +1,606 @@
+{
+  "top_25": [
+    {
+      "show_id": 1743623827,
+      "show_date": "2025-05-10 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1727890109,
+      "show_date": "2025-05-10 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1727890094,
+      "show_date": "2025-05-09 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1727890080,
+      "show_date": "2025-05-08 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1745685585,
+      "show_date": "2025-04-25 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1737015351,
+      "show_date": "2025-04-24 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1741108426,
+      "show_date": "2025-03-11 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731951387,
+      "show_date": "2025-02-15 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731951172,
+      "show_date": "2025-02-14 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731951149,
+      "show_date": "2025-02-13 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731950869,
+      "show_date": "2025-02-11 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1732138914,
+      "show_date": "2025-02-10 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731950848,
+      "show_date": "2025-02-08 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731950167,
+      "show_date": "2025-02-07 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731950152,
+      "show_date": "2025-02-06 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1721059705,
+      "show_date": "2024-12-31 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1721059697,
+      "show_date": "2024-12-30 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248984,
+      "show_date": "2024-12-14 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248965,
+      "show_date": "2024-12-13 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1730168333,
+      "show_date": "2024-11-24 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248917,
+      "show_date": "2024-11-13 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248901,
+      "show_date": "2024-11-12 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248831,
+      "show_date": "2024-11-10 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248797,
+      "show_date": "2024-11-09 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248817,
+      "show_date": "2024-11-08 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248761,
+      "show_date": "2024-11-07 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1730823679,
+      "show_date": "2024-11-04 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248650,
+      "show_date": "2024-11-02 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248634,
+      "show_date": "2024-11-01 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248592,
+      "show_date": "2024-10-31 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248561,
+      "show_date": "2024-10-30 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248538,
+      "show_date": "2024-10-29 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1728407482,
+      "show_date": "2024-10-26 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1728409724,
+      "show_date": "2024-10-25 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248440,
+      "show_date": "2024-10-24 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1716390709,
+      "show_date": "2024-10-04 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1727545020,
+      "show_date": "2024-10-01 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075724,
+      "show_date": "2024-09-28 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075463,
+      "show_date": "2024-09-27 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075435,
+      "show_date": "2024-09-26 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075420,
+      "show_date": "2024-09-24 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075391,
+      "show_date": "2024-09-22 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075274,
+      "show_date": "2024-09-21 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075248,
+      "show_date": "2024-09-20 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075232,
+      "show_date": "2024-09-19 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075204,
+      "show_date": "2024-09-17 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075175,
+      "show_date": "2024-09-15 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075027,
+      "show_date": "2024-09-14 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248398,
+      "show_date": "2024-09-13 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248336,
+      "show_date": "2024-09-12 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    }
+  ],
+  "top_50": [
+    {
+      "show_id": 1743623827,
+      "show_date": "2025-05-10 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1727890109,
+      "show_date": "2025-05-10 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1727890094,
+      "show_date": "2025-05-09 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1727890080,
+      "show_date": "2025-05-08 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1745685585,
+      "show_date": "2025-04-25 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1737015351,
+      "show_date": "2025-04-24 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1741108426,
+      "show_date": "2025-03-11 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731951387,
+      "show_date": "2025-02-15 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731951172,
+      "show_date": "2025-02-14 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731951149,
+      "show_date": "2025-02-13 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731950869,
+      "show_date": "2025-02-11 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1732138914,
+      "show_date": "2025-02-10 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731950848,
+      "show_date": "2025-02-08 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731950167,
+      "show_date": "2025-02-07 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1731950152,
+      "show_date": "2025-02-06 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1721059705,
+      "show_date": "2024-12-31 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1721059697,
+      "show_date": "2024-12-30 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248984,
+      "show_date": "2024-12-14 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248965,
+      "show_date": "2024-12-13 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1730168333,
+      "show_date": "2024-11-24 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248917,
+      "show_date": "2024-11-13 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248901,
+      "show_date": "2024-11-12 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248831,
+      "show_date": "2024-11-10 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248797,
+      "show_date": "2024-11-09 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248817,
+      "show_date": "2024-11-08 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248761,
+      "show_date": "2024-11-07 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1730823679,
+      "show_date": "2024-11-04 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248650,
+      "show_date": "2024-11-02 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248634,
+      "show_date": "2024-11-01 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248592,
+      "show_date": "2024-10-31 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248561,
+      "show_date": "2024-10-30 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248538,
+      "show_date": "2024-10-29 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1728407482,
+      "show_date": "2024-10-26 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1728409724,
+      "show_date": "2024-10-25 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248440,
+      "show_date": "2024-10-24 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1716390709,
+      "show_date": "2024-10-04 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1727545020,
+      "show_date": "2024-10-01 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075724,
+      "show_date": "2024-09-28 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075463,
+      "show_date": "2024-09-27 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075435,
+      "show_date": "2024-09-26 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075420,
+      "show_date": "2024-09-24 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075391,
+      "show_date": "2024-09-22 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075274,
+      "show_date": "2024-09-21 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075248,
+      "show_date": "2024-09-20 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075232,
+      "show_date": "2024-09-19 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075204,
+      "show_date": "2024-09-17 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075175,
+      "show_date": "2024-09-15 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1712075027,
+      "show_date": "2024-09-14 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248398,
+      "show_date": "2024-09-13 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_id": 1719248336,
+      "show_date": "2024-09-12 00:00:00",
+      "recall": 0.0,
+      "precision": 0.0
+    }
+  ]
+}
