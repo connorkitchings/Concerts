@@ -6,7 +6,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 405,Wysteria Lane,1,Vasudo,2017-04-01,2025-02-10,107,6.13
 406,Lead the Way,1,Goose,2014-12-20,2024-11-09,85,8.96
 407,Interlude I,1,Goose,2019-11-09,2024-04-08,2,195.0
-408,Hot Tea,1,Vasudo,2018-08-02,2025-04-25,147,3.65
+408,Hot Tea,1,Vasudo,2018-08-02,2025-05-25,148,3.62
 409,Interlude II,1,Goose,2024-04-08,2025-02-13,8,11.0
 410,Indian River,1,Goose,2014-12-20,2024-10-30,114,6.61
 411,Jive I,1,Goose,2014-11-21,2025-02-13,127,5.99
@@ -20,7 +20,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 419,Disco Inferno,0,The Trammps,2018-10-26,2022-12-18,29,16.41
 420,Creatures,1,Goose,2015-10-01,2025-02-14,128,5.65
 421,So Ready,1,Goose,2015-03-14,2025-04-24,139,5.4
-422,Slow Ready,1,Goose,2019-03-01,2025-05-09,88,5.19
+422,Slow Ready,1,Goose,2019-03-01,2025-05-25,89,5.19
 424,I'm Writing A Novel,0,Father John Misty,2020-03-21,2025-02-06,14,24.57
 425,The Whales,1,Goose,2020-06-27,2025-02-06,43,7.53
 426,Can't Get You Out Of My Head,0,Kylie Minogue,2019-03-01,2024-10-26,22,20.27
@@ -210,9 +210,9 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 637,(dawn),1,Goose,2022-01-26,2025-02-15,9,28.89
 639,The Labyrinth,1,Goose,2021-06-11,2024-12-31,10,30.0
 641,Franklin's Tower,0,Grateful Dead,2024-12-14,2024-12-14,1,19.0
-645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-04-24,21,4.24
+645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-05-25,22,4.05
 646,Turbulence & The Night Rays,1,Vasudo,2022-06-10,2025-02-06,39,5.79
-647,Your Direction,1,Vasudo,2025-04-24,2025-05-08,2,3.5
+647,Your Direction,1,Vasudo,2025-04-24,2025-05-25,3,2.33
 650,The Night They Drove Old Dixie Down,0,The Band,2016-06-17,2024-06-22,2,349.5
 651,The Shape I'm In,0,The Band,2023-10-01,2023-10-01,1,109.0
 656,Back On The Train,0,Phish,2014-12-23,2019-05-04,2,376.0
@@ -230,7 +230,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 710,The Old Man's Boat,1,Goose,2021-10-08,2024-11-08,27,10.41
 711,Life On The Shelf,1,Goose,2021-10-09,2022-10-14,9,31.11
 712,Dr. Darkness,1,Goose,2022-01-26,2025-02-06,40,6.5
-714,Rockdale,1,Vasudo,2021-10-30,2025-05-09,64,4.47
+714,Rockdale,1,Vasudo,2021-10-30,2025-05-25,65,4.4
 716,Draggin' the Line,0,Tommy James,2021-10-31,2024-09-24,2,138.0
 717,I'm A Believer,0,The Monkees,2021-10-31,2021-11-19,2,138.0
 718,American Woman,0,The Guess Who,2021-10-31,2022-02-12,3,92.0
@@ -244,18 +244,18 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 731,Moonrise,1,Orebolo,2022-06-25,2024-11-10,3,72.67
 732,Dim Lights,1,Orebolo,2024-11-10,2025-05-10,2,12.0
 733,Arise,1,St. John's Revival,2022-01-30,2024-09-27,6,42.67
-735,California Magic,1,Goose,2022-03-01,2025-05-10,43,5.7
-736,Silver Rising,1,Goose,2022-02-02,2025-04-24,59,4.32
+735,California Magic,1,Goose,2022-03-01,2025-05-25,44,5.57
+736,Silver Rising,1,Goose,2022-02-02,2025-05-25,60,4.25
 737,Jeff Engborg,1,Great Blue,2022-02-05,2025-02-07,11,22.91
 738,Dripfield,1,Goose,2022-02-26,2025-05-10,56,4.47
 739,Sinnerman,0,Nina Simone,2022-02-26,2025-04-24,12,20.5
-740,Hungersite,1,Goose,2022-02-26,2025-05-10,63,3.9
+740,Hungersite,1,Goose,2022-02-26,2025-05-25,64,3.84
 741,Trevor Reads Poetry,1,Goose,2020-06-20,2023-09-23,6,54.83
 747,Happy Birthday,0,Goose,2018-02-15,2020-10-15,6,90.67
 760,Hallelujah,0,Leonard Cohen,2017-05-20,2017-05-20,1,637.0
 762,Loose Ends,1,Vasudo,2019-09-01,2024-11-12,16,25.31
 763,Butterflies,1,Great Blue,2022-06-10,2024-11-01,19,11.89
-764,Animal,1,Goose,2022-06-11,2025-05-10,59,3.81
+764,Animal,1,Goose,2022-06-11,2025-05-25,60,3.75
 765,It's My Life,0,Talk Talk,2022-08-17,2022-08-17,1,210.0
 766,Bloodbuzz Ohio,0,The National,2022-08-18,2025-02-06,9,23.22
 767,Milestone 2 (Skux Life),0,Moniker,2022-08-18,2024-09-20,3,69.67
@@ -275,14 +275,14 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 818,Auld Lang Syne,0,Traditional,2017-12-31,2022-12-31,2,282.0
 819,This Year's Love,0,David Gray,2022-12-31,2022-12-31,1,174.0
 820,Not Alone,1,Goose,2023-03-09,2024-11-07,5,34.0
-822,Lead Up,1,Goose,2023-03-10,2025-05-08,31,5.63
+822,Lead Up,1,Goose,2023-03-10,2025-05-25,32,5.45
 823,Feel it Now,1,Goose,2023-03-11,2025-05-10,29,5.79
 833,Stand By Me,0,Ben E. King,2016-10-09,2017-05-20,2,342.0
 834,Loving Cup,0,The Rolling Stones,2016-10-09,2016-10-09,1,684.0
 843,Wild Summer Nights,0,John Cafferty,2023-07-04,2023-07-04,1,129.0
 864,All I Need,0,LP Giobbi,2023-09-14,2023-09-14,1,122.0
 864,All I Need,0,Goose,2017-01-28,2025-02-13,145,4.83
-867,I Would Die 4 U,0,Prince,2023-10-06,2025-05-10,8,13.25
+867,I Would Die 4 U,0,Prince,2023-10-06,2025-05-25,9,11.78
 868,Revival,0,The Allman Brothers Band,2017-05-20,2017-05-20,1,637.0
 868,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,154.75
 883,Mirrors,0,Justin Timberlake,2023-12-08,2023-12-08,1,91.0
@@ -300,7 +300,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 911,No California,0,Ilsey Juber,2024-06-07,2025-02-08,3,26.33
 914,True Love Waits,0,Radiohead,2024-09-19,2025-02-07,2,24.0
 930,SALT,1,Goose,2024-04-07,2025-05-09,11,8.9
-931,Give it Time,1,Goose,2024-04-09,2025-05-08,17,5.12
+931,Give it Time,1,Goose,2024-04-09,2025-05-25,18,4.83
 933,How it Ends,1,Vasudo,2024-04-10,2025-05-10,2,43.0
 935,Gen X Cops,0,Vampire Weekend,2024-04-10,2024-04-10,1,86.0
 943,Draconian Meter Maid,1,Swimmer,2024-09-01,2025-05-09,10,6.1
