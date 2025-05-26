@@ -1,6 +1,7 @@
 import os
 import json
 from datetime import datetime
+import pandas as pd
 from Phish.config import DATA_DIR, SONG_DATA_FILENAME, SHOW_DATA_FILENAME, VENUE_DATA_FILENAME, SETLIST_DATA_FILENAME, TRANSITION_DATA_FILENAME, NEXT_SHOW_FILENAME, LAST_UPDATED_FILENAME
 from Phish.utils import get_date_and_time
 
@@ -25,6 +26,9 @@ def save_phish_data(song_data: 'pd.DataFrame', show_data: 'pd.DataFrame', venue_
     next_show_path = os.path.join(data_dir, NEXT_SHOW_FILENAME)
     if not next_show.empty:
         next_show_record = next_show.iloc[0].to_dict()
+        # Convert Timestamp or datetime to string for JSON serialization
+        if isinstance(next_show_record.get("showdate"), (pd.Timestamp, datetime)):
+            next_show_record["showdate"] = str(next_show_record["showdate"].date())
         with open(next_show_path, "w") as f:
             json.dump({"next_show": next_show_record}, f, indent=2)
     else:

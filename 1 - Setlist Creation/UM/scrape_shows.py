@@ -1,37 +1,40 @@
-import requests
 import pandas as pd
-from bs4 import BeautifulSoup
-from io import StringIO
-from logger import get_logger, restrict_to_repo_root
+from pathlib import Path
+from logger import get_logger
+from UM.config import DATA_DIR
 
 logger = get_logger(__name__, add_console_handler=True)
 
-from UM.config import BASE_URL, VENUE_TABLE_IDX
+SHOW_DATA_FILENAME = 'showdata.csv'
 
-def scrape_um_shows(base_url: str = BASE_URL) -> pd.DataFrame:
+def create_show_data(setlist_data: pd.DataFrame, data_dir: str | Path = None) -> pd.DataFrame:
     """
-    Scrape and return UM venue data from allthings.umphreys.com.
+    Create a DataFrame for showdata.csv: one row per show with unique show ID/link, date, venue, city, state, country, and sequential show_number.
 
     Args:
-        base_url (str): Base URL for the UM website (default is BASE_URL).
+        setlist_data (pd.DataFrame): DataFrame containing setlist data with show-level columns.
+        data_dir (str | Path, optional): Directory to save showdata.csv. Defaults to DATA_DIR.
 
     Returns:
-        pd.DataFrame: DataFrame containing venue data with columns such as 'id', 'Last Played', etc.
+        pd.DataFrame: DataFrame of unique shows with sequential show_number.
     """
-    venues_url = f"{base_url}/venues/"
-    response = requests.get(venues_url)
-    response.raise_for_status()
-    html_content = response.text
-    soup = BeautifulSoup(html_content, 'html.parser')
-    tables = soup.find_all('table')
-    if not tables or len(tables) <= VENUE_TABLE_IDX:
-        logger.error(f"Expected venue table at index {VENUE_TABLE_IDX} not found in UM venue page.")
+    data_dir = Path(data_dir) if data_dir is not None else Path(DATA_DIR)
+    data_dir.mkdir(parents=True, exist_ok=True)
+    if setlist_data.empty:
+        logger.warning("No setlist data provided to create_show_data.")
         return pd.DataFrame()
-    tables_str = str(tables)
-    tables_io = StringIO(tables_str)
-    tables = pd.read_html(tables_io)
-    venue_data = tables[VENUE_TABLE_IDX].copy().reset_index(names='id')
-    venue_data['id'] = venue_data['id'].astype(str)
-    venue_data['Last Played'] = pd.to_datetime(venue_data['Last Played']).dt.date
-    logger.info(f"Scraped {len(venue_data)} venues from {venues_url}")
-    return venue_data
+    # Extract unique shows based on link (show_id), date, venue, city, state, country
+    show_cols = ['link', 'date', 'venue', 'city', 'state', 'country']
+    shows = setlist_data[show_cols].drop_duplicates().copy()
+    # Parse date for sorting
+    shows['parsed_date'] = pd.to_datetime(shows['date'], errors='coerce')
+    shows = shows.sort_values('parsed_date').reset_index(drop=True)
+    shows['show_number'] = shows.index + 1
+    shows = shows.drop(columns=['parsed_date'])
+    # Save to CSV
+    showdata_path = data_dir / SHOW_DATA_FILENAME
+    shows.to_csv(showdata_path, index=False)
+    from UM.utils import print_relative_path
+    logger.info(f"Saved showdata.csv with {len(shows)} shows to ", end='')
+    print_relative_path(showdata_path)
+    return shows

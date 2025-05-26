@@ -48,3 +48,58 @@
 [2025-05-25 11:27:12,058] INFO band_pipeline: WSP pipeline completed successfully.
 [2025-05-25 11:27:12,058] INFO band_pipeline: Finished WSP pipeline.
 [2025-05-25 11:27:12,059] INFO band_pipeline: All band pipelines completed in 46.54 seconds.
+[2025-05-26 11:45:49,890] INFO __main__: Previous Last update: 2025-05-25 11:26:52
+[2025-05-26 11:45:49,890] INFO __main__: Scraping latest song data...
+[2025-05-26 11:45:54,984] INFO __main__: Scraping latest venue data...
+[2025-05-26 11:45:56,766] INFO scrape_venues: Scraped 922 venues from https://allthings.umphreys.com/venues/
+[2025-05-26 11:45:56,767] INFO __main__: Scraping full setlist data...
+[2025-05-26 11:45:58,395] INFO scrape_setlists: Found 86 setlists for 2024.
+[2025-05-26 11:45:59,388] INFO scrape_setlists: Found 43 setlists for 2025.
+[2025-05-26 11:45:59,388] INFO scrape_setlists: 129 total shows found.
+[2025-05-26 11:45:59,550] INFO scrape_setlists: Found 2,848 existing setlists.
+[2025-05-26 11:45:59,555] INFO scrape_setlists: There are 2 new setlists to scrape.
+[2025-05-26 11:46:00,068] WARNING scrape_setlists: Missed 1 setlists: ['https://allthings.umphreys.com/setlists/umphreys-mcgee-may-25-2025-cohabspace-high-point-nc-usa.html']
+[2025-05-26 11:46:00,141] INFO __main__: Fetched 46,785 setlist songs for 2,849 shows.
+[2025-05-26 11:46:00,201] INFO scrape_shows: Saved showdata.csv with 2849 shows to /Users/connorkitchings/Desktop/Repositories/Concerts/3 - Data/UM/AllThingsUM/showdata.csv
+[2025-05-26 11:46:00,960] INFO __main__: UM pipeline completed in 11.07 seconds.
+[2025-05-26 11:53:23,765] INFO __main__: Previous Last update: 05/25/2025 11:26
+[2025-05-26 11:53:23,766] INFO __main__: Loading Song Data
+[2025-05-26 11:53:25,674] INFO __main__: Loading Show and Venue Data
+[2025-05-26 11:53:26,188] INFO __main__: Loading Setlist and Transition Data
+[2025-05-26 11:53:34,066] ERROR __main__: Phish pipeline failed: Object of type Timestamp is not JSON serializable
+Traceback (most recent call last):
+  File "/Users/connorkitchings/Desktop/Repositories/Concerts/1 - Setlist Creation/Phish/run_pipeline.py", line 46, in main
+    save_phish_data(song_data, show_data, venue_data, setlist_data, transition_data, data_dir)
+  File "/Users/connorkitchings/Desktop/Repositories/Concerts/1 - Setlist Creation/Phish/export_data.py", line 29, in save_phish_data
+    json.dump({"next_show": next_show_record}, f, indent=2)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/__init__.py", line 179, in dump
+    for chunk in iterable:
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 431, in _iterencode
+    yield from _iterencode_dict(o, _current_indent_level)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 405, in _iterencode_dict
+    yield from chunks
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 438, in _iterencode
+    o = _default(o)
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/json/encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Timestamp is not JSON serializable
+
+[2025-05-26 11:54:06,683] INFO __main__: Previous Last update: 05/25/2025 11:26
+[2025-05-26 11:54:06,683] INFO __main__: Loading Song Data
+[2025-05-26 11:54:08,310] INFO __main__: Loading Show and Venue Data
+[2025-05-26 11:54:08,676] INFO __main__: Loading Setlist and Transition Data
+[2025-05-26 11:54:18,027] ERROR __main__: Phish pipeline failed: name 'pd' is not defined
+Traceback (most recent call last):
+  File "/Users/connorkitchings/Desktop/Repositories/Concerts/1 - Setlist Creation/Phish/run_pipeline.py", line 46, in main
+    save_phish_data(song_data, show_data, venue_data, setlist_data, transition_data, data_dir)
+  File "/Users/connorkitchings/Desktop/Repositories/Concerts/1 - Setlist Creation/Phish/export_data.py", line 29, in save_phish_data
+    if isinstance(next_show_record.get("showdate"), (pd.Timestamp, datetime)):
+NameError: name 'pd' is not defined
+
+[2025-05-26 11:54:30,107] INFO __main__: Previous Last update: 05/25/2025 11:26
+[2025-05-26 11:54:30,108] INFO __main__: Loading Song Data
+[2025-05-26 11:54:31,530] INFO __main__: Loading Show and Venue Data
+[2025-05-26 11:54:31,936] INFO __main__: Loading Setlist and Transition Data
+[2025-05-26 11:54:41,452] INFO __main__: Phish pipeline completed in 11.34 seconds.

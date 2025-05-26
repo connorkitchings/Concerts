@@ -67,7 +67,9 @@ def load_show_data(api_key: str) -> tuple['pd.DataFrame', 'pd.DataFrame']:
     show_data = (
         all_shows[['showid', 'showdate', 'venueid', 'tourid',
                    'exclude_from_stats', 'setlist_notes']]
+        .assign(showdate=lambda x: pd.to_datetime(x['showdate']))
         .sort_values('showdate')
+        .reset_index(drop=True)
         .reset_index(names='show_number')
         .assign(show_number=lambda x: x['show_number'] + 1)
     )

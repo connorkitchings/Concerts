@@ -45,7 +45,10 @@ UM uses its own `logger.py`, wrapping a shared general logger utility. Logs are 
 - **Key Columns**: `Song Name`, `Original Artist`, `Debut Date`, `Last Played`, `Times Played Live`, `Avg Show Gap`.
 
 ### 3. `scrape_shows.py`
-- **Function**: `scrape_um_shows`
+- **Function**: `create_show_data`
+- **Purpose**: Extracts unique shows from setlist data, assigns sequential numbers, and saves `showdata.csv` (one row per show) in the data directory.
+- **Outputs**: DataFrame with show metadata and sequential show_number.
+- **Key Columns**: `link`, `date`, `venue`, `city`, `state`, `country`, `show_number`.
 - **Purpose**: Scrapes the UM venue catalog from allthings.umphreys.com.
 - **Outputs**: DataFrame with venue metadata.
 - **Key Columns**: `Venue Name`, `City`, `State`, `Country`, `Times Played`, `Last Played`.
@@ -84,6 +87,7 @@ All data is stored in `3 - Data/UM/AllThingsUM/`:
 | `songdata.csv`      | Song catalog: song name, original artist, debut/last played, play counts, avg gap. |
 | `venuedata.csv`     | Venue metadata: venue name, city, state, country, play counts, last played.|
 | `setlistdata.csv`   | Song-by-song setlist data for each show (very large file).                |
+| `showdata.csv`      | One row per show: show ID (link), date, venue, city, state, country, sequential show number. |
 | `last_updated.json` | Timestamp of the most recent pipeline run.                                |
 | `next_show.json`    | Metadata for the next scheduled UM show.                                  |
 
@@ -107,6 +111,16 @@ All data is stored in `3 - Data/UM/AllThingsUM/`:
 
 - Columns may include: `Date Played`, `Song Name`, `Show Date`, `Footnote`, etc.
 - Each row represents a song played at a specific show.
+
+### Example: `showdata.csv` Columns
+
+- `link`: Unique show ID (URL or identifier)
+- `date`: Show date
+- `venue`: Venue name
+- `city`: City
+- `state`: State
+- `country`: Country
+- `show_number`: Sequential number by date
 
 ---
 

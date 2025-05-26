@@ -1,10 +1,38 @@
 from UM.config import DATA_DIR, SONG_DATA_FILENAME, VENUE_DATA_FILENAME, SETLIST_DATA_FILENAME, NEXT_SHOW_FILENAME, LAST_UPDATED_FILENAME
+SHOW_DATA_FILENAME = 'showdata.csv'  # New output file
 from datetime import datetime, date
 import pandas as pd
 import json
 from pathlib import Path
 from logger import get_logger
 logger = get_logger(__name__, add_console_handler=True)
+
+
+def save_show_data(setlist_data: pd.DataFrame, data_dir: str | Path = None) -> None:
+    """
+    Create and save showdata.csv: one row per show with unique show ID/link, date, venue, city, state, country, and sequential show_number.
+
+    Args:
+        setlist_data (pd.DataFrame): DataFrame containing setlist data with show-level columns.
+        data_dir (str | Path, optional): Directory to save showdata.csv. Defaults to DATA_DIR.
+    """
+    data_dir = Path(data_dir) if data_dir is not None else Path(DATA_DIR)
+    data_dir.mkdir(parents=True, exist_ok=True)
+    if setlist_data.empty:
+        logger.warning("No setlist data provided to save_show_data.")
+        return
+    # Extract unique shows based on link (show_id), date, venue, city, state, country
+    show_cols = ['link', 'date', 'venue', 'city', 'state', 'country']
+    shows = setlist_data[show_cols].drop_duplicates().copy()
+    # Parse date for sorting
+    shows['parsed_date'] = pd.to_datetime(shows['date'], errors='coerce')
+    shows = shows.sort_values('parsed_date').reset_index(drop=True)
+    shows['show_number'] = shows.index + 1
+    shows = shows.drop(columns=['parsed_date'])
+    # Save to CSV
+    showdata_path = data_dir / SHOW_DATA_FILENAME
+    shows.to_csv(showdata_path, index=False)
+    logger.info(f"Saved showdata.csv with {len(shows)} shows to {showdata_path}")
 
 def save_um_data(song_data: pd.DataFrame, venue_data: pd.DataFrame, setlist_data: pd.DataFrame, data_dir=None) -> None:
     data_dir = Path(data_dir) if data_dir is not None else Path(DATA_DIR)

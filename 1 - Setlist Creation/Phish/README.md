@@ -35,13 +35,15 @@ Phish has its own `logger.py` that wraps a shared general logger utility. The lo
 - **Functions**: `load_song_data`, `load_show_data`, `load_setlist_data`
 - **Purpose**: Loads and processes data from the Phish.net API and phish.net website.
   - `load_song_data`: Merges API song data with scraped song metadata.
-  - `load_show_data`: Loads show and venue data, handles past/future shows.
+  - `load_show_data`: Loads show and venue data, handles past/future shows. 
+    - **Note**: As of May 2025, `showdate` is explicitly parsed as a datetime before sorting, ensuring robust chronological ordering. The `show_number` column is assigned only after this sort, so the lowest `show_number` always corresponds to the earliest show. This fixes previous issues where show_number did not match true show order.
   - `load_setlist_data`: Loads setlist and transition data, processes columns.
 
 ### 5. `export_data.py`
 - **Functions**: `save_phish_data`, `save_query_data`
 - **Purpose**: Saves the processed DataFrames to CSV files and JSON files in the data directory.
-  - `save_phish_data`: Writes all major data files, including next show info.
+  - `save_phish_data`: Writes all major data files, including next show info. 
+    - **Note**: As of May 2025, JSON export is robust to pandas `Timestamp` serialization errors—dates are converted to ISO strings before writing to JSON. This prevents pipeline failures related to datetime serialization.
   - `save_query_data`: Writes the last update timestamp.
 - **Files Created**: `songdata.csv`, `showdata.csv`, `venuedata.csv`, `setlistdata.csv`, `transitiondata.csv`, `last_updated.json`, `next_show.json`.
 
