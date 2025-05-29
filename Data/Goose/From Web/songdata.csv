@@ -1,9 +1,9 @@
 song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg_show_gap
-400,Turned Clouds,1,Goose,2014-11-21,2025-05-08,113,6.7
+400,Turned Clouds,1,Goose,2014-11-21,2025-05-28,114,6.64
 402,Into the Myst,1,Goose,2014-12-23,2025-05-08,72,10.77
-403,Arcadia,1,Goose,2014-11-21,2025-04-25,199,3.86
+403,Arcadia,1,Goose,2014-11-21,2025-05-28,200,3.84
 404,Time to Flee,1,Goose,2018-03-15,2025-02-13,106,5.36
-405,Wysteria Lane,1,Vasudo,2017-04-01,2025-02-10,107,6.15
+405,Wysteria Lane,1,Vasudo,2017-04-01,2025-05-28,108,6.09
 406,Lead the Way,1,Goose,2014-12-20,2024-11-09,85,8.99
 407,Interlude I,1,Goose,2019-11-09,2024-04-08,2,196.0
 408,Hot Tea,1,Vasudo,2018-08-02,2025-05-25,148,3.64
@@ -19,9 +19,9 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 418,Tumble,1,Vasudo,2019-01-31,2025-05-10,117,4.08
 419,Disco Inferno,0,The Trammps,2018-10-26,2022-12-18,29,16.48
 420,Creatures,1,Goose,2015-10-01,2025-05-27,129,5.62
-421,So Ready,1,Goose,2015-03-14,2025-04-24,139,5.41
+421,So Ready,1,Goose,2015-03-14,2025-05-28,140,5.37
 422,Slow Ready,1,Goose,2019-03-01,2025-05-25,89,5.21
-424,I'm Writing A Novel,0,Father John Misty,2020-03-21,2025-02-06,14,24.71
+424,I'm Writing A Novel,0,Father John Misty,2020-03-21,2025-05-28,15,23.07
 425,The Whales,1,Goose,2020-06-27,2025-02-06,43,7.58
 426,Can't Get You Out Of My Head,0,Kylie Minogue,2019-03-01,2024-10-26,22,20.36
 427,Mustang Sally,0,Wilson Pickett,2014-12-20,2023-03-10,14,53.93
@@ -58,7 +58,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 460,Don't Do It,0,The Band,2016-08-12,2025-05-27,37,18.76
 461,Doobie Song,1,Goose,2019-03-01,2024-09-04,23,19.48
 462,Drive,1,Goose,2018-08-03,2025-05-08,108,4.92
-463,Echo of a Rose,1,Vasudo,2018-08-02,2025-05-10,109,5.13
+463,Echo of a Rose,1,Vasudo,2018-08-02,2025-05-28,110,5.08
 464,Electric Avenue,0,Eddy Grant,2018-12-22,2024-10-30,37,12.43
 465,Elizabeth,1,Goose,2018-03-15,2025-02-10,62,8.87
 466,Elmeg The Wise,1,St. John's Revival,2016-07-09,2024-11-07,22,33.29
@@ -76,7 +76,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 479,Get The Funk Out Ma Face,0,Brothers Johnson,2019-10-31,2023-04-21,7,56.57
 480,Ghostbusters,0,Ray Parker Jr.,2018-10-26,2024-04-24,4,159.33
 481,Ghostbusters Rap,0,Run DMC,2018-10-27,2022-10-14,20,23.85
-482,Green River,0,Creedence Clearwater Revival,2016-07-09,2025-05-27,32,21.84
+482,Green River,0,Creedence Clearwater Revival,2016-07-09,2025-05-28,33,21.18
 483,Gone Gone Good,1,Goose,2014-11-21,2015-03-14,3,252.33
 484,Gringo,1,Goose,2014-12-20,2019-12-21,5,151.0
 485,Hard To Handle,0,Otis Redding,2014-11-26,2023-01-15,7,108.0
@@ -229,7 +229,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 709,2021,0,Vampire Weekend,2021-10-08,2021-12-31,3,141.5
 710,The Old Man's Boat,1,Goose,2021-10-08,2024-11-08,27,10.48
 711,Life On The Shelf,1,Goose,2021-10-09,2022-10-14,9,31.33
-712,Dr. Darkness,1,Goose,2022-01-26,2025-02-06,40,6.55
+712,Dr. Darkness,1,Goose,2022-01-26,2025-05-28,41,6.39
 714,Rockdale,1,Vasudo,2021-10-30,2025-05-25,65,4.43
 716,Draggin' the Line,0,Tommy James,2021-10-31,2024-09-24,2,139.0
 717,I'm A Believer,0,The Monkees,2021-10-31,2021-11-19,2,139.0
@@ -271,7 +271,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 812,"Signed, Sealed, Delivered",0,Stevie Wonder,2017-05-20,2017-05-20,1,639.0
 813,Burning Down the House,0,Talking Heads,2017-05-20,2023-12-08,2,319.5
 814,Get Lucky,0,Daft Punk,2017-05-20,2017-05-20,1,639.0
-817,Mr. Action,1,Goose,2022-12-18,2025-02-13,32,5.56
+817,Mr. Action,1,Goose,2022-12-18,2025-05-28,33,5.39
 818,Auld Lang Syne,0,Traditional,2017-12-31,2022-12-31,2,283.0
 819,This Year's Love,0,David Gray,2022-12-31,2022-12-31,1,176.0
 820,Not Alone,1,Goose,2023-03-09,2024-11-07,5,34.4
@@ -299,12 +299,12 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 910,"Don’t Think Twice, It’s Alright",0,Bob Dylan,2025-05-10,2025-05-10,1,4.0
 911,No California,0,Ilsey Juber,2024-06-07,2025-02-08,3,27.0
 914,True Love Waits,0,Radiohead,2024-09-19,2025-02-07,2,25.0
-930,SALT,1,Goose,2024-04-07,2025-05-09,11,9.1
+930,SALT,1,Goose,2024-04-07,2025-05-28,12,8.27
 931,Give it Time,1,Goose,2024-04-09,2025-05-25,18,4.94
 933,How it Ends,1,Vasudo,2024-04-10,2025-05-27,3,29.33
 935,Gen X Cops,0,Vampire Weekend,2024-04-10,2024-04-10,1,88.0
-943,Draconian Meter Maid,1,Swimmer,2024-09-01,2025-05-09,10,6.3
-945,Big Modern!,1,Goose,2024-09-01,2025-05-27,18,3.71
+943,Draconian Meter Maid,1,Swimmer,2024-09-01,2025-05-28,11,5.73
+945,Big Modern!,1,Goose,2024-09-01,2025-05-28,19,3.5
 946,"One In, One Out",1,Goose,2024-09-02,2025-05-27,11,5.64
 947,My Mind Has Been Consumed By Media,1,Swimmer,2024-09-03,2024-11-10,5,12.2
 948,War Pigs,0,Black Sabbath,2024-10-01,2024-10-01,1,42.0
@@ -324,11 +324,11 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 967,The King,1,Goose,2024-12-13,2024-12-13,1,22.0
 968,Low Rider,0,War,2024-12-30,2024-12-30,1,20.0
 969,I Only Have Eyes For You,0,The Flamingos,2024-12-31,2024-12-31,1,19.0
-970,Dustin Hoffman,1,Goose,2025-05-10,2025-05-10,1,4.0
+970,Dustin Hoffman,1,Goose,2025-05-10,2025-05-28,2,2.0
 971,Iguana Song,1,Goose,2025-05-09,2025-05-27,2,3.0
 972,Flood in Franklin Park,0,Grant Green,2014-12-23,2025-02-06,2,377.0
 973,Trick To Happy,0,Bahamas,2025-02-10,2025-02-10,1,15.0
 978,In Bloom,0,Nirvana,2025-05-08,2025-05-08,1,7.0
-979,Torero,1,Goose,2025-05-08,2025-05-08,1,7.0
+979,Torero,1,Goose,2025-05-08,2025-05-28,2,3.5
 980,Ride Like The Wind,0,Christopher Cross,2025-05-08,2025-05-08,1,7.0
 981,fast:slow,1,Goose,2025-05-09,2025-05-09,1,6.0
