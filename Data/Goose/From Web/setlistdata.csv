@@ -2135,6 +2135,7 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 3137,1613158668,414,1,7,15:00,2,0,0,"Slow, melodic version.",0,,"Liza Jane, The W.S. Walcott Medicine Show",1.0,
 3138,1613158668,464,1,8,8:36,1,0,0,Eddy Grant.,0,,"Liza Jane, The W.S. Walcott Medicine Show",1.0,
 3139,1613158668,578,1,9,8:38,6,0,0,Bobby Blue Bland.,0,,"Liza Jane, The W.S. Walcott Medicine Show",1.0,
+3121,1613158190,463,1,5,5:00,1,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 3122,1613158190,455,1,6,9:59,1,0,0,Talking Heads.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 3123,1613158190,403,1,7,15:30,1,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 3124,1613158190,512,1,8,6:57,2,0,0,Unfinished.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
@@ -2148,7 +2149,6 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 3118,1613158190,469,1,2,6:34,1,0,0,Rupert Holmes.,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 3119,1613158190,418,1,3,13:42,1,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 3120,1613158190,405,1,4,11:00,2,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
-3121,1613158190,463,1,5,5:00,1,0,0,,0,,"Jam, No Rain, I'm Alright > Make The Move",1.0,
 586,1597168237,462,1,1,,2,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
 1379,1597168237,564,1,2,,1,0,0,Wes Montgomery.,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
 1380,1597168237,406,1,3,,1,0,0,,0,,"Arrow, Lovely Day, Honeybee",1.0,0.0
@@ -3436,12 +3436,12 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 10631,1647972561,557,2,10,18:26,2,0,0,Played in an alternate arrangement.,0,,,1.0,
 10632,1647972561,513,2,11,11:12,5,0,0,Sergio Mendes.,0,,,1.0,
 10633,1647972561,421,e,12,14:33,6,0,0,,0,,,1.0,
-10682,1647972862,725,1,1,20:38,1,0,0,,0,,,1.0,
+10682,1647972862,725,1,1,20:38,1,0,0,,1,Gold standard for blissful early jamming section with Pete's gorgeous keys and an all-time Rick solo. Standard but dance-filled groove in second half.,,1.0,
 10683,1647972862,541,1,2,14:38,1,0,0,,0,,,1.0,
 10684,1647972862,711,1,3,5:07,2,0,0,,0,,,1.0,
-10685,1647972862,412,1,4,37:29,1,0,0,With Echo of a Rose jam.,0,,,1.0,
+10685,1647972862,412,1,4,37:29,1,0,0,With Echo of a Rose jam.,1,"38 minute two part monster. First 23 minutes highlight Goose’s ability to drive their jams in different directions. Second begins with a clear shift into Echo, resulting in an Echo jam and finishing into an epic raging peak.",,1.0,
 10686,1647972862,737,1,5,12:33,4,0,0,,0,,,1.0,
-10687,1647972862,432,2,6,19:48,1,0,0,,0,,,1.0,
+10687,1647972862,432,2,6,19:48,1,0,0,,1,Gets a second outro jam for the first time ever. Gorgeous major-key playing.,,1.0,
 10688,1647972862,512,2,7,20:07,1,0,0,,1,Peter plays with the reverb on the organ early on in the jam for a haunting vibe.,,1.0,
 10689,1647972862,678,2,8,7:17,1,0,0,Jackson Browne.,0,,,1.0,
 10690,1647972862,416,2,9,12:57,5,0,0,With Oh Yeah quote from Rick.,1,"Extended and funky groove. No one band member is really soloing, which lends a unique and cool quality to it.",,1.0,
@@ -6385,3 +6385,19 @@ uniqueid,show_id,song_id,setnumber,position,tracktime,transition_id,isreprise,is
 65352,1738001411,741,2,14,2:09,1,0,0,Frogs by Remo Perini.,0,,,1.0,0.0
 65367,1738001411,982,2,15,6:37,5,0,0,Led Zeppelin. FTP.,0,,,1.0,0.0
 65383,1738001411,418,e,16,9:42,6,0,0,,0,,,1.0,0.0
+65424,1738001727,723,1,1,10:40,1,0,0,,0,,,1.0,0.0
+65426,1738001727,735,1,2,7:25,1,0,0,,0,,,1.0,0.0
+65429,1738001727,645,1,3,6:09,1,0,0,,0,,,1.0,0.0
+65433,1738001727,822,1,4,6:22,1,0,0,,0,,,1.0,0.0
+65438,1738001727,947,1,5,8:15,1,0,0,,0,,,1.0,0.0
+65444,1738001727,435,1,6,15:04,3,0,0,With Dixie Chicken tease from Rick.,0,,,1.0,0.0
+65451,1738001727,409,1,7,1:41,3,0,0,,0,,,1.0,0.0
+65459,1738001727,411,1,8,8:52,1,0,0,,0,,,1.0,0.0
+65468,1738001727,416,1,9,6:26,3,0,0,,0,,,1.0,0.0
+65478,1738001727,534,1,10,5:51,3,0,0,Foster The People.,0,,,1.0,0.0
+65489,1738001727,416,1,11,3:08,4,0,0,,0,,,1.0,0.0
+65512,1738001727,512,2,12,8:16,2,0,0,,0,,,1.0,0.0
+65525,1738001727,412,2,13,39:18,2,0,0,,0,,,1.0,0.0
+65539,1738001727,464,2,14,9:49,2,0,0,Eddy Grant.,0,,,1.0,0.0
+65554,1738001727,512,2,15,9:03,5,0,0,,0,,,1.0,0.0
+65585,1738001727,541,e,16,9:46,6,0,0,,0,,,1.0,0.0

@@ -7,15 +7,15 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 406,Lead the Way,1,Goose,2014-12-20,2024-11-09,85,9.02
 407,Interlude I,1,Goose,2019-11-09,2024-04-08,2,197.5
 408,Hot Tea,1,Vasudo,2018-08-02,2025-05-30,149,3.63
-409,Interlude II,1,Goose,2024-04-08,2025-02-13,8,11.63
+409,Interlude II,1,Goose,2024-04-08,2025-06-01,9,10.33
 410,Indian River,1,Goose,2014-12-20,2024-10-30,114,6.65
-411,Jive I,1,Goose,2014-11-21,2025-02-13,127,6.03
-412,Rosewood Heart,1,Goose,2015-02-20,2025-02-11,61,12.34
+411,Jive I,1,Goose,2014-11-21,2025-06-01,128,5.98
+412,Rosewood Heart,1,Goose,2015-02-20,2025-06-01,62,12.15
 413,Jive II,1,Goose,2015-03-14,2025-02-15,82,9.15
 414,All I Need,1,LP Giobbi,2023-09-14,2023-09-14,1,127.0
 414,All I Need,1,Goose,2017-01-28,2025-05-31,146,4.83
 415,Butter Rum,1,Vasudo,2018-04-06,2025-05-10,114,4.89
-416,Yeti,1,Great Blue,2018-10-26,2025-02-10,113,4.72
+416,Yeti,1,Great Blue,2018-10-26,2025-06-01,115,4.67
 418,Tumble,1,Vasudo,2019-01-31,2025-05-31,118,4.07
 419,Disco Inferno,0,The Trammps,2018-10-26,2022-12-18,29,16.59
 420,Creatures,1,Goose,2015-10-01,2025-05-27,129,5.64
@@ -32,7 +32,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 432,726,1,Goose,2020-06-20,2025-05-10,37,9.03
 433,Also Sprach Zarathustra,0,Deodato,2016-04-20,2020-02-29,14,54.54
 434,A Fifth Of Beethoven,0,Walter Murphy,2019-10-31,2024-06-11,14,30.69
-435,A Western Sun,1,Goose,2015-04-18,2025-02-14,68,10.99
+435,A Western Sun,1,Goose,2015-04-18,2025-06-01,69,10.83
 436,Achy Breaky Heart,0,Billy Ray Cyrus,2017-12-23,2024-11-10,4,142.75
 437,Ain't Life Grand,0,Widespread Panic,2019-10-05,2019-12-08,2,201.5
 438,Arrow,1,Goose,2019-12-21,2025-05-31,83,5.01
@@ -59,7 +59,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 461,Doobie Song,1,Goose,2019-03-01,2024-09-04,23,19.61
 462,Drive,1,Goose,2018-08-03,2025-05-31,109,4.9
 463,Echo of a Rose,1,Vasudo,2018-08-02,2025-05-28,110,5.11
-464,Electric Avenue,0,Eddy Grant,2018-12-22,2024-10-30,37,12.51
+464,Electric Avenue,0,Eddy Grant,2018-12-22,2025-06-01,38,12.18
 465,Elizabeth,1,Goose,2018-03-15,2025-02-10,62,8.92
 466,Elmeg The Wise,1,St. John's Revival,2016-07-09,2025-05-30,23,31.91
 467,Elmer Theme,0,Elmer Bernstein,2018-10-26,2018-10-26,1,481.0
@@ -105,7 +105,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 509,Love Me Sexy,0,Jackie Moon,2019-10-31,2019-11-27,2,199.5
 510,Love T.K.O.,0,Teddy Pendergrass,2018-04-06,2018-04-21,2,269.0
 511,Lovely Day,0,Bill Withers,2020-01-24,2020-03-11,2,188.5
-512,Madhuvan,1,Goose,2014-12-20,2025-04-24,166,4.95
+512,Madhuvan,1,Goose,2014-12-20,2025-06-01,168,4.92
 513,Mas Que Nada,0,Sergio Mendes,2018-07-12,2025-05-31,23,22.0
 514,Make The Move,0,Kenny Loggins,2018-07-05,2024-06-20,19,28.22
 515,Me and Julio Down By The Schoolyard,0,Paul Simon,2018-04-21,2022-06-12,21,25.24
@@ -125,12 +125,12 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 531,Peggy-O,0,Grateful Dead,2015-02-20,2024-11-12,16,47.06
 532,Pinche Gringo,1,Goose,2015-03-14,2015-03-14,1,750.0
 533,Praise You,0,Fatboy Slim,2016-04-15,2024-06-30,9,88.88
-534,Pumped Up Kicks,0,Foster The People,2016-11-23,2024-11-13,24,28.33
+534,Pumped Up Kicks,0,Foster The People,2016-11-23,2025-06-01,25,27.2
 536,Red Bird,1,Goose,2022-01-29,2025-05-31,52,5.04
 537,Red Red Wine,0,UB40,2018-12-22,2018-12-22,1,463.0
 538,Rosa Lee McFall,0,Grateful Dead,2019-08-08,2024-09-06,3,139.0
 539,Rosetta,0,Earl Hines,2014-12-20,2015-02-20,3,252.67
-541,Same Old Shenanigans,1,Goose,2016-03-19,2025-02-08,55,13.02
+541,Same Old Shenanigans,1,Goose,2016-03-19,2025-06-01,56,12.79
 542,Savin' The Day,0,Alessi Brothers,2018-10-27,2018-10-27,1,480.0
 543,Sco-Mule,0,Government Mule ft. John Scofield,2014-11-26,2021-11-16,8,94.88
 544,Secret Agent Man,0,Johnny Rivers,2018-07-12,2024-06-23,5,126.5
@@ -210,7 +210,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 637,(dawn),1,Goose,2022-01-26,2025-02-15,9,29.44
 639,The Labyrinth,1,Goose,2021-06-11,2024-12-31,10,30.5
 641,Franklin's Tower,0,Grateful Dead,2024-12-14,2024-12-14,1,24.0
-645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-05-25,22,4.27
+645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-06-01,23,4.09
 646,Turbulence & The Night Rays,1,Vasudo,2022-06-10,2025-05-30,40,5.78
 647,Your Direction,1,Vasudo,2025-04-24,2025-05-30,4,3.0
 650,The Night They Drove Old Dixie Down,0,The Band,2016-06-17,2024-06-22,2,352.0
@@ -237,14 +237,14 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 719,Magic Carpet Ride,0,Steppenwolf,2021-10-31,2024-06-18,11,28.1
 720,Whip It,0,Devo,2021-10-31,2024-11-13,7,40.14
 721,Just The Two Of Us,0,Bill Withers,2021-10-31,2021-10-31,1,281.0
-723,Pancakes,1,Great Blue,2022-01-27,2025-05-10,60,5.08
+723,Pancakes,1,Great Blue,2022-01-27,2025-06-01,61,4.98
 725,Borne,1,Goose,2022-01-28,2025-05-27,44,6.12
 727,Atlas Dogs,1,Goose,2022-01-28,2025-05-27,49,5.37
 730,Circle Of Life,0,Elton John,2017-12-23,2021-12-31,3,190.33
 731,Moonrise,1,Orebolo,2022-06-25,2024-11-10,3,74.33
 732,Dim Lights,1,Orebolo,2024-11-10,2025-05-10,2,14.5
 733,Arise,1,St. John's Revival,2022-01-30,2024-09-27,6,43.5
-735,California Magic,1,Goose,2022-03-01,2025-05-25,44,5.68
+735,California Magic,1,Goose,2022-03-01,2025-06-01,45,5.56
 736,Silver Rising,1,Goose,2022-02-02,2025-05-30,61,4.26
 737,Jeff Engborg,1,Great Blue,2022-02-05,2025-02-07,11,23.36
 738,Dripfield,1,Goose,2022-02-26,2025-05-27,57,4.48
@@ -275,7 +275,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 818,Auld Lang Syne,0,Traditional,2017-12-31,2022-12-31,2,284.5
 819,This Year's Love,0,David Gray,2022-12-31,2022-12-31,1,179.0
 820,Not Alone,1,Goose,2023-03-09,2024-11-07,5,35.0
-822,Lead Up,1,Goose,2023-03-10,2025-05-25,32,5.61
+822,Lead Up,1,Goose,2023-03-10,2025-06-01,33,5.44
 823,Feel It Now,1,Goose,2023-03-11,2025-05-30,30,5.77
 833,Stand By Me,0,Ben E. King,2016-10-09,2017-05-20,2,344.5
 834,Loving Cup,0,The Rolling Stones,2016-10-09,2016-10-09,1,689.0
@@ -306,7 +306,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 943,Draconian Meter Maid,1,Swimmer,2024-09-01,2025-05-28,11,6.0
 945,Big Modern!,1,Goose,2024-09-01,2025-05-28,19,3.67
 946,"One In, One Out",1,Goose,2024-09-02,2025-05-27,11,5.91
-947,My Mind Has Been Consumed By Media,1,Swimmer,2024-09-03,2024-11-10,5,12.8
+947,My Mind Has Been Consumed By Media,1,Swimmer,2024-09-03,2025-06-01,6,10.67
 948,War Pigs,0,Black Sabbath,2024-10-01,2024-10-01,1,45.0
 950,You Spin Me Round (Like A Record),0,Dead or Alive,2024-10-31,2024-11-12,2,18.0
 951,Stranger Things,0,S U R V I V E,2024-10-31,2024-10-31,2,36.0
