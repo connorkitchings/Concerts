@@ -1,113 +1,135 @@
 song,times_played_in_last_year,ltp_date,current_gap,avg_gap,med_gap
-We Walk Each Other Home,10,04/25/25,4.0,2.44,2.0
-Rebirtha,8,04/25/25,4.0,3.43,3.0
-Chilly Water,7,04/25/25,4.0,342.43,4.0
-Holden Oversoul,7,04/24/25,5.0,342.14,4.0
-Greta,7,04/25/25,4.0,4.0,4.0
-Pigeons,7,04/25/25,4.0,342.29,4.0
-Porch Song,6,04/24/25,5.0,399.33,4.0
-Surprise Valley,6,04/24/25,5.0,4.2,4.0
-Party At Your Mama'S House,5,04/24/25,5.0,5.25,4.5
-Ribs And Whiskey,5,04/25/25,4.0,481.0,6.0
-Trashy,5,04/24/25,5.0,5.75,6.0
-Big Wooly Mammoth,5,04/24/25,5.0,4.75,5.0
-Jack,5,04/25/25,4.0,479.4,6.0
-Disco,5,04/25/25,4.0,480.4,6.0
-Climb To Safety,5,04/25/25,4.0,5.0,5.5
-Goodpeople,5,04/25/25,4.0,5.75,5.5
-Rock,5,04/25/25,4.0,479.6,6.0
-Hatfield,4,04/24/25,5.0,599.0,6.5
-No Sugar Tonight/New Mother Nature,4,04/24/25,5.0,734.5,8.0
-Dark Bar,4,03/21/25,8.0,6.33,6.0
-Tie Your Shoes,4,04/25/25,4.0,599.0,8.0
-Mr. Soul,4,04/25/25,4.0,600.75,8.5
-Little Kin,4,04/25/25,4.0,8.0,7.0
-Red Hot Mama,4,04/24/25,5.0,6.33,6.0
-Conrad,4,04/24/25,5.0,599.0,8.5
-Life During Wartime,3,03/21/25,8.0,9.0,9.0
-Jamais Vu,3,05/24/24,17.0,4.5,4.5
-Makes Sense To Me,3,04/25/25,4.0,799.0,13.0
-Keep Me In Your Heart,3,04/24/25,5.0,4.0,4.0
-The Waker,3,02/14/25,11.0,8.5,8.5
-Tail Dragger,3,02/16/25,9.0,8.5,8.5
-Shut Up And Drive,3,03/23/25,6.0,11.0,11.0
-The Take Out,3,02/16/25,9.0,797.33,4.0
-Travelin' Man,3,02/14/25,11.0,8.5,8.5
-Radio Child,3,06/22/24,13.0,4.0,4.0
-Better Off,3,06/22/24,13.0,796.67,9.0
-Fishing,3,02/14/25,11.0,6.0,6.0
-Expiration Day,3,04/25/25,4.0,11.0,11.0
-Dear Prudence,2,02/16/25,9.0,10.0,10.0
-Christmas Katie,2,03/23/25,6.0,12.0,12.0
-Impossible,2,04/15/24,21.0,1193.0,1193.0
-Arleen,2,03/23/25,6.0,1367.0,1367.0
-Honey Bee,2,05/25/24,16.0,8.0,8.0
-Flat Foot Flewzy,2,06/23/24,12.0,1194.5,1194.5
-For What It'S Worth,2,03/21/25,8.0,1479.5,1479.5
-Cotton Was King,2,03/21/25,8.0,15.0,15.0
-Chainsaw City,2,02/15/25,10.0,1236.5,1236.5
-Can'T Get High,2,03/21/25,8.0,13.0,13.0
-You Wreck Me,2,03/22/25,7.0,11.0,11.0
-Worry,2,04/16/24,20.0,1191.5,1191.5
-Walk On,2,03/22/25,7.0,1223.5,1223.5
-Travelin' Light,2,04/14/24,22.0,1189.0,1189.0
-Smokestack Lightning,2,02/16/25,9.0,1315.5,1315.5
-Stop Breakin' Down Blues,2,04/24/25,5.0,5.0,5.0
-Sewing Machine,2,04/25/25,4.0,18.0,18.0
-Send Your Mind,2,04/24/25,5.0,1198.0,1198.0
-Vacation,2,03/23/25,6.0,1291.5,1291.5
-North,2,04/14/24,22.0,6.0,6.0
-Proving Ground,2,04/25/25,4.0,1200.5,1200.5
-Protein Drink,2,04/25/25,4.0,18.0,18.0
-Mercy,2,02/15/25,10.0,1195.5,1195.5
-Stop-Go,2,03/21/25,8.0,1196.0,1196.0
-Knocking 'Round The Zoo,2,04/15/24,21.0,1190.0,1190.0
-Low Spark Of High Heeled Boys,2,03/23/25,6.0,1199.5,1199.5
-Lawyers Guns And Money,2,04/24/25,5.0,1486.0,1486.0
-B Of D,2,06/22/24,13.0,1194.5,1194.5
-Coconut,2,04/24/25,5.0,1370.0,1370.0
-Bird On A Wire,1,01/19/24,27.0,,
-Cease Fire,1,05/24/24,17.0,,
-Can'T Find My Way Home,1,04/15/24,21.0,2380.0,2380.0
-A Hard Rain'S A-Gonna Fall,1,03/22/24,25.0,,
-Aunt Avis,1,03/22/24,25.0,,
-Breathing Slow,1,04/14/24,22.0,2786.0,2786.0
-Contentment Blues,1,04/16/24,20.0,2382.0,2382.0
-Don'T Be Denied,1,06/23/24,12.0,2964.0,2964.0
-Don'T Wanna Lose You,1,03/22/25,7.0,,
-Dyin' Man,1,03/23/25,6.0,,
-Dream Song,1,05/25/24,16.0,2387.0,2387.0
-End Of The Show,1,02/16/25,9.0,,
-City Of Dreams,1,03/24/24,23.0,2464.0,2464.0
-Imitation Leather Shoes,1,04/24/25,5.0,,
-Heroes (Db),1,02/15/25,10.0,,
-Heaven,1,04/16/24,20.0,2385.0,2385.0
-Happy,1,04/15/24,21.0,,
-Genesis,1,02/14/25,11.0,2646.0,2646.0
-Four Cornered Room,1,02/16/25,9.0,,
-Godzilla,1,04/25/25,4.0,,
-Fixin' To Die,1,04/24/25,5.0,2410.0,2410.0
-Degenerate,1,02/15/25,10.0,,
-Let It Rock,1,04/15/24,21.0,2603.0,2603.0
-Lawyers,1,04/16/24,20.0,2998.0,2998.0
-Let'S Get Down To Business,1,05/24/24,17.0,,
-Life As A Tree,1,06/23/24,12.0,,
-Machine Gun,1,02/16/25,9.0,,
-Maggot Brain,1,03/21/25,8.0,,
-May Your Glass Be Filled,1,03/23/25,6.0,,
-Nobody'S Loss,1,04/16/24,20.0,,
-Old Joe,1,04/14/24,22.0,,
-One Kind Favor,1,03/21/25,8.0,,
-Piece Of My Heart,1,05/25/24,16.0,,
-Sleepy Monkey,1,03/23/24,24.0,2379.0,2379.0
-Room At The Top,1,03/24/24,23.0,,
-Slippin' Into Darkness,1,01/19/24,27.0,,
-Steven'S Cat,1,02/14/25,11.0,,
-Stranger In A Strange Land,1,03/22/24,25.0,,
-Sometimes,1,02/16/25,9.0,,
-St. Louis,1,01/20/24,26.0,,
-There Is A Time,1,06/22/24,13.0,,
-Tortured Artist,1,04/14/24,22.0,,
-Waitin' For The Bus,1,05/25/24,16.0,,
-Who Do You Belong To?,1,04/14/24,22.0,,
-You Can'T Always Get What You Want,1,05/25/24,16.0,,
+We Walk Each Other Home,10,04/25/25,5.0,2.44,2.0
+Ain'T Life Grand,8,04/26/25,4.0,3.29,3.0
+Halloween Face,8,04/26/25,4.0,3.29,3.0
+Rebirtha,8,04/25/25,5.0,3.43,3.0
+Bust It Big,8,04/26/25,4.0,3.14,3.0
+All Time Low,7,04/26/25,4.0,3.67,3.5
+Pigeons,7,04/25/25,5.0,342.29,4.0
+Holden Oversoul,7,04/24/25,6.0,342.14,4.0
+Chilly Water,7,04/25/25,5.0,342.43,4.0
+Blue Carousel,7,04/26/25,4.0,4.0,3.5
+Greta,7,04/25/25,5.0,4.0,4.0
+Pleas,6,04/26/25,4.0,400.0,5.5
+Surprise Valley,6,04/24/25,6.0,4.2,4.0
+Space Wrangler,6,04/26/25,4.0,399.67,4.5
+Blue Indian,6,04/26/25,4.0,4.2,4.0
+Porch Song,6,04/24/25,6.0,399.33,4.0
+Big Wooly Mammoth,5,04/24/25,6.0,4.75,5.0
+Trashy,5,04/24/25,6.0,5.75,6.0
+Little Lilly,5,04/26/25,4.0,5.0,5.0
+Climb To Safety,5,04/25/25,5.0,5.0,5.5
+Disco,5,04/25/25,5.0,480.4,6.0
+Blight,5,04/26/25,4.0,5.5,5.5
+Goodpeople,5,04/25/25,5.0,5.75,5.5
+Barstools And Dreamers,5,04/26/25,4.0,479.8,5.0
+Bear'S Gone Fishin',5,04/26/25,4.0,6.25,5.5
+Jack,5,04/25/25,5.0,479.4,6.0
+Ribs And Whiskey,5,04/25/25,5.0,481.0,6.0
+Rock,5,04/25/25,5.0,479.6,6.0
+Machine,5,04/26/25,4.0,480.6,5.0
+Party At Your Mama'S House,5,04/24/25,6.0,5.25,4.5
+Mr. Soul,4,04/25/25,5.0,600.75,8.5
+Little Kin,4,04/25/25,5.0,8.0,7.0
+Red Hot Mama,4,04/24/25,6.0,6.33,6.0
+No Sugar Tonight/New Mother Nature,4,04/24/25,6.0,734.5,8.0
+I'M Not Alone,4,04/26/25,4.0,600.0,7.0
+Hatfield,4,04/24/25,6.0,599.0,6.5
+Dark Bar,4,03/21/25,9.0,6.33,6.0
+Conrad,4,04/24/25,6.0,599.0,8.5
+Tie Your Shoes,4,04/25/25,5.0,599.0,8.0
+Thought Sausage,4,04/26/25,4.0,8.0,8.0
+Fishing,3,02/14/25,12.0,6.0,6.0
+Jamais Vu,3,05/24/24,18.0,4.5,4.5
+Down,3,04/26/25,4.0,5.5,5.5
+Keep Me In Your Heart,3,04/24/25,6.0,4.0,4.0
+Radio Child,3,06/22/24,14.0,4.0,4.0
+Expiration Day,3,04/25/25,5.0,11.0,11.0
+The Take Out,3,02/16/25,10.0,797.33,4.0
+Travelin' Man,3,02/14/25,12.0,8.5,8.5
+The Waker,3,02/14/25,12.0,8.5,8.5
+One Arm Steve,3,04/26/25,4.0,11.5,11.5
+Tail Dragger,3,02/16/25,10.0,8.5,8.5
+Makes Sense To Me,3,04/25/25,5.0,799.0,13.0
+Life During Wartime,3,03/21/25,9.0,9.0,9.0
+Shut Up And Drive,3,03/23/25,7.0,11.0,11.0
+Better Off,3,06/22/24,14.0,796.67,9.0
+Worry,2,04/16/24,21.0,1191.5,1191.5
+Arleen,2,03/23/25,7.0,1367.0,1367.0
+B Of D,2,06/22/24,14.0,1194.5,1194.5
+You Wreck Me,2,03/22/25,8.0,11.0,11.0
+Lawyers Guns And Money,2,04/24/25,6.0,1486.0,1486.0
+For What It'S Worth,2,03/21/25,9.0,1479.5,1479.5
+Flat Foot Flewzy,2,06/23/24,13.0,1194.5,1194.5
+Knocking 'Round The Zoo,2,04/15/24,22.0,1190.0,1190.0
+Dear Prudence,2,02/16/25,10.0,10.0,10.0
+Cotton Was King,2,03/21/25,9.0,15.0,15.0
+Christmas Katie,2,03/23/25,7.0,12.0,12.0
+I Walk On Guilded Splinters,2,04/26/25,4.0,1201.0,1201.0
+Coconut,2,04/24/25,6.0,1370.0,1370.0
+Chainsaw City,2,02/15/25,11.0,1236.5,1236.5
+Can'T Get High,2,03/21/25,9.0,13.0,13.0
+Impossible,2,04/15/24,22.0,1193.0,1193.0
+Honey Bee,2,05/25/24,17.0,8.0,8.0
+Walk On,2,03/22/25,8.0,1223.5,1223.5
+Travelin' Light,2,04/14/24,23.0,1189.0,1189.0
+Vacation,2,03/23/25,7.0,1291.5,1291.5
+Smokestack Lightning,2,02/16/25,10.0,1315.5,1315.5
+Sewing Machine,2,04/25/25,5.0,18.0,18.0
+Send Your Mind,2,04/24/25,6.0,1198.0,1198.0
+Stop Breakin' Down Blues,2,04/24/25,6.0,5.0,5.0
+Mercy,2,02/15/25,11.0,1195.5,1195.5
+North,2,04/14/24,23.0,6.0,6.0
+Stop-Go,2,03/21/25,9.0,1196.0,1196.0
+Protein Drink,2,04/25/25,5.0,18.0,18.0
+Low Spark Of High Heeled Boys,2,03/23/25,7.0,1199.5,1199.5
+Pickin' Up The Pieces,2,04/26/25,4.0,1199.0,1199.0
+Proving Ground,2,04/25/25,5.0,1200.5,1200.5
+Aunt Avis,1,03/22/24,26.0,,
+A Hard Rain'S A-Gonna Fall,1,03/22/24,26.0,,
+Cease Fire,1,05/24/24,18.0,,
+City Of Dreams,1,03/24/24,24.0,2464.0,2464.0
+Black Sabbath,1,04/26/25,4.0,3078.0,3078.0
+Can'T Find My Way Home,1,04/15/24,22.0,2380.0,2380.0
+Breathing Slow,1,04/14/24,23.0,2786.0,2786.0
+Bird On A Wire,1,01/19/24,28.0,,
+Don'T Be Denied,1,06/23/24,13.0,2964.0,2964.0
+Don'T Wanna Lose You,1,03/22/25,8.0,,
+Contentment Blues,1,04/16/24,21.0,2382.0,2382.0
+Degenerate,1,02/15/25,11.0,,
+Genesis,1,02/14/25,12.0,2646.0,2646.0
+Godzilla,1,04/25/25,5.0,,
+Dream Song,1,05/25/24,17.0,2387.0,2387.0
+Dyin' Man,1,03/23/25,7.0,,
+Life As A Tree,1,06/23/24,13.0,,
+Let'S Get Down To Business,1,05/24/24,18.0,,
+Let It Rock,1,04/15/24,22.0,2603.0,2603.0
+Lawyers,1,04/16/24,21.0,2998.0,2998.0
+Heroes (Db),1,02/15/25,11.0,,
+Imitation Leather Shoes,1,04/24/25,6.0,,
+Happy,1,04/15/24,22.0,,
+Heaven,1,04/16/24,21.0,2385.0,2385.0
+Four Cornered Room,1,02/16/25,10.0,,
+Fixin' To Die,1,04/24/25,6.0,2410.0,2410.0
+End Of The Show,1,02/16/25,10.0,,
+Fairies Wear Boots,1,04/26/25,4.0,,
+Maggot Brain,1,03/21/25,9.0,,
+Me And The Devil Blues,1,04/26/25,4.0,2398.0,2398.0
+Nobody'S Loss,1,04/16/24,21.0,,
+Old Joe,1,04/14/24,23.0,,
+Room At The Top,1,03/24/24,24.0,,
+Piece Of My Heart,1,05/25/24,17.0,,
+One Kind Favor,1,03/21/25,9.0,,
+Machine Gun,1,02/16/25,10.0,,
+May Your Glass Be Filled,1,03/23/25,7.0,,
+Sleepy Monkey,1,03/23/24,25.0,2379.0,2379.0
+Slippin' Into Darkness,1,01/19/24,28.0,,
+Sometimes,1,02/16/25,10.0,,
+Stranger In A Strange Land,1,03/22/24,26.0,,
+St. Louis,1,01/20/24,27.0,,
+Steven'S Cat,1,02/14/25,12.0,,
+There Is A Time,1,06/22/24,14.0,,
+Tortured Artist,1,04/14/24,23.0,,
+Waitin' For The Bus,1,05/25/24,17.0,,
+Who Do You Belong To?,1,04/14/24,23.0,,
+You Can'T Always Get What You Want,1,05/25/24,17.0,,

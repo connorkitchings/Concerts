@@ -1,9 +1,9 @@
 song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg_show_gap
-400,Turned Clouds,1,Goose,2014-11-21,2025-05-28,114,6.68
+400,Turned Clouds,1,Goose,2014-11-21,2025-06-04,115,6.63
 402,Into the Myst,1,Goose,2014-12-23,2025-06-03,73,10.69
 403,Arcadia,1,Goose,2014-11-21,2025-05-28,200,3.87
-404,Time to Flee,1,Goose,2018-03-15,2025-02-13,106,5.41
-405,Wysteria Lane,1,Vasudo,2017-04-01,2025-05-28,108,6.14
+404,Time to Flee,1,Goose,2018-03-15,2025-06-04,108,5.35
+405,Wysteria Lane,1,Vasudo,2017-04-01,2025-06-04,109,6.08
 406,Lead the Way,1,Goose,2014-12-20,2024-11-09,85,9.05
 407,Interlude I,1,Goose,2019-11-09,2024-04-08,2,198.5
 408,Hot Tea,1,Vasudo,2018-08-02,2025-05-30,149,3.64
@@ -20,9 +20,9 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 419,Disco Inferno,0,The Trammps,2018-10-26,2022-12-18,29,16.66
 420,Creatures,1,Goose,2015-10-01,2025-05-27,129,5.66
 421,So Ready,1,Goose,2015-03-14,2025-05-28,140,5.41
-422,Slow Ready,1,Goose,2019-03-01,2025-05-25,89,5.27
+422,Slow Ready,1,Goose,2019-03-01,2025-06-04,90,5.21
 424,I'm Writing A Novel,0,Father John Misty,2020-03-21,2025-05-28,15,23.4
-425,The Whales,1,Goose,2020-06-27,2025-02-06,43,7.7
+425,The Whales,1,Goose,2020-06-27,2025-06-04,44,7.52
 426,Can't Get You Out Of My Head,0,Kylie Minogue,2019-03-01,2024-10-26,22,20.59
 427,Mustang Sally,0,Wilson Pickett,2014-12-20,2023-03-10,14,54.29
 428,Weird Fishes / Arpeggi,0,Radiohead,2018-02-08,2024-09-26,10,55.5
@@ -156,10 +156,10 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 566,Tennessee Jed,0,Grateful Dead,2014-11-26,2019-11-27,3,253.67
 567,The Big Bang,0,Johnny Mandel,2018-07-05,2018-07-05,1,510.0
 569,The Waking End,1,Goose,2014-11-21,2014-11-21,1,762.0
-570,The Way It Is,0,Bruce Hornsby,2018-05-03,2025-02-10,39,13.59
+570,The Way It Is,0,Bruce Hornsby,2018-05-03,2025-06-04,40,13.25
 571,These Boots Are Made For Walkin',0,Nancy Sinatra,2018-07-12,2018-07-12,1,508.0
 572,This Old Sea,1,Goose,2014-12-20,2025-05-27,38,20.0
-573,Tomorrow Never Knows,0,The Beatles,2019-12-21,2024-09-22,12,31.92
+573,Tomorrow Never Knows,0,The Beatles,2019-12-21,2025-06-04,13,29.46
 574,Travelers,1,Goose,2020-06-19,2025-05-30,28,12.04
 575,Tried & Tempted,0,The Wood Brothers,2015-02-20,2015-02-20,1,755.0
 576,Trouble,0,Elvis Presley,2019-11-27,2023-10-01,3,130.67
@@ -191,8 +191,8 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 606,The Killing Moon,0,Echo & The Bunnymen,2020-11-07,2024-09-14,6,52.5
 607,Head Over Heels,0,Tears For Fears,2020-11-07,2020-11-07,2,315.0
 608,Notorious,0,Duran Duran,2020-11-07,2020-11-07,1,315.0
-609,Seekers on the Ridge pt I,1,Goose,2020-11-07,2025-05-31,50,6.3
-610,Seekers on the Ridge pt II,1,Goose,2020-11-07,2025-05-31,50,6.3
+609,Seekers on the Ridge pt I,1,Goose,2020-11-07,2025-06-04,51,6.18
+610,Seekers on the Ridge pt II,1,Goose,2020-11-07,2025-06-04,51,6.18
 611,Mad World,0,Tears For Fears,2020-11-07,2024-09-20,2,157.5
 612,Love Is A Battlefield,0,Pat Benatar,2020-12-11,2025-02-14,7,44.86
 613,You and Whose Army,0,Radiohead,2020-12-11,2021-11-07,2,157.0
@@ -210,7 +210,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 637,(dawn),1,Goose,2022-01-26,2025-02-15,9,29.67
 639,The Labyrinth,1,Goose,2021-06-11,2024-12-31,10,30.7
 641,Franklin's Tower,0,Grateful Dead,2024-12-14,2024-12-14,1,26.0
-645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-06-01,23,4.17
+645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-06-04,24,4.0
 646,Turbulence & The Night Rays,1,Vasudo,2022-06-10,2025-05-30,40,5.83
 647,Your Direction,1,Vasudo,2025-04-24,2025-05-30,4,3.5
 650,The Night They Drove Old Dixie Down,0,The Band,2016-06-17,2024-06-22,2,353.0
@@ -247,9 +247,9 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 735,California Magic,1,Goose,2022-03-01,2025-06-01,45,5.6
 736,Silver Rising,1,Goose,2022-02-02,2025-05-30,61,4.3
 737,Jeff Engborg,1,Great Blue,2022-02-05,2025-02-07,11,23.55
-738,Dripfield,1,Goose,2022-02-26,2025-05-27,57,4.52
+738,Dripfield,1,Goose,2022-02-26,2025-06-04,58,4.44
 739,Sinnerman,0,Nina Simone,2022-02-26,2025-04-24,12,21.08
-740,Hungersite,1,Goose,2022-02-26,2025-05-30,65,3.89
+740,Hungersite,1,Goose,2022-02-26,2025-06-04,66,3.83
 741,Trevor Reads Poetry,1,Goose,2020-06-20,2025-05-31,7,48.0
 747,Happy Birthday,0,Goose,2018-02-15,2020-10-15,6,91.83
 760,Hallelujah,0,Leonard Cohen,2017-05-20,2017-05-20,1,644.0
