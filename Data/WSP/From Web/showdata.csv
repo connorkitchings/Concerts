@@ -1,14 +1,19 @@
 date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_index_withinyear,run_index,venue_full,link
+,1985,00,00,,??/??/85,"A-FRAME, WEYMANDA COURT",ATHENS,GA,1,1,1,"A-FRAME, WEYMANDA COURT, ATHENS, GA",http://www.everydaycompanion.com/setlists/19850000a.asp
 02/24/85,1985,02,24,Sunday,1985-02-24,"A-FRAME, WEYMANDA COURT",ATHENS,GA,2,2,1,"A-FRAME, WEYMANDA COURT, ATHENS, GA",http://www.everydaycompanion.com/setlists/19850224a.asp
 06/22/85,1985,06,22,Saturday,1985-06-22,UPTOWN LOUNGE,ATHENS,GA,3,3,2,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19850622a.asp
 10/19/85,1985,10,19,Saturday,1985-10-19,US AWARE FESTIVAL,ATHENS,GA,4,4,3,"US AWARE FESTIVAL, ATHENS, GA",http://www.everydaycompanion.com/setlists/19851019a.asp
 10/24/85,1985,10,24,Thursday,1985-10-24,"PHI DELTA THETA HOUSE, UNIVERSITY OF GEORGIA",ATHENS,GA,5,5,4,"PHI DELTA THETA HOUSE, UNIVERSITY OF GEORGIA, ATHENS, GA",http://www.everydaycompanion.com/setlists/19851024a.asp
+,1986,00,00,,??/??/86,** UNKNOWN **,** UNKNOWN **,UU,6,1,5,"** UNKNOWN **, ** UNKNOWN **, UU",http://www.everydaycompanion.com/setlists/19860000a.asp
+,1986,00,00,,??/??/86,"PHI DELTA THETA HOUSE, UNIVERSITY OF GEORGIA",ATHENS,GA,7,2,6,"PHI DELTA THETA HOUSE, UNIVERSITY OF GEORGIA, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860000b.asp
 02/06/86,1986,02,06,Thursday,1986-02-06,THE MAD HATTER BALLROOM,ATHENS,GA,8,3,7,"THE MAD HATTER BALLROOM, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860206a.asp
 02/13/86,1986,02,13,Thursday,1986-02-13,UPTOWN LOUNGE,ATHENS,GA,9,4,8,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860213a.asp
 02/17/86,1986,02,17,Monday,1986-02-17,UPTOWN LOUNGE,ATHENS,GA,10,5,8,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860217a.asp
 02/27/86,1986,02,27,Thursday,1986-02-27,RUGBY'S,ATHENS,GA,11,6,9,"RUGBY'S, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860227a.asp
+,1986,03,00,,03/??/86,UPTOWN LOUNGE,ATHENS,GA,12,7,10,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860300a.asp
 03/03/86,1986,03,03,Monday,1986-03-03,UPTOWN LOUNGE,ATHENS,GA,13,8,10,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860303a.asp
 03/17/86,1986,03,17,Monday,1986-03-17,UPTOWN LOUNGE,ATHENS,GA,14,9,10,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860317a.asp
+,1986,04,00,,04/??/86,** UNKNOWN **,ATLANTA,GA,15,10,11,"** UNKNOWN **, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19860400a.asp
 04/05/86,1986,04,05,Saturday,1986-04-05,UPTOWN LOUNGE,ATHENS,GA,16,11,12,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860405a.asp
 04/07/86,1986,04,07,Monday,1986-04-07,UPTOWN LOUNGE,ATHENS,GA,17,12,12,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860407a.asp
 04/14/86,1986,04,14,Monday,1986-04-14,UPTOWN LOUNGE,ATHENS,GA,18,13,12,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860414a.asp
@@ -28,6 +33,7 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 06/23/86,1986,06,23,Monday,1986-06-23,UPTOWN LOUNGE,ATHENS,GA,32,27,18,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860623a.asp
 06/26/86,1986,06,26,Thursday,1986-06-26,HARRY'S,ATHENS,GA,33,28,19,"HARRY'S, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860626a.asp
 06/30/86,1986,06,30,Monday,1986-06-30,UPTOWN LOUNGE,ATHENS,GA,34,29,20,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860630a.asp
+,1986,07,00,,07/??/86,WASHINGTON PARK,MACON,GA,35,30,21,"WASHINGTON PARK, MACON, GA",http://www.everydaycompanion.com/setlists/19860700a.asp
 07/08/86,1986,07,08,Tuesday,1986-07-08,UPTOWN LOUNGE,ATHENS,GA,36,31,22,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860708a.asp
 07/14/86,1986,07,14,Monday,1986-07-14,UPTOWN LOUNGE,ATHENS,GA,37,32,22,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860714a.asp
 07/18/86,1986,07,18,Friday,1986-07-18,UPTOWN LOUNGE,ATHENS,GA,38,33,22,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19860718a.asp
@@ -59,6 +65,9 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 12/05/86,1986,12,05,Friday,1986-12-05,TK HARTY'S,ATHENS,GA,64,59,33,"TK HARTY'S, ATHENS, GA",http://www.everydaycompanion.com/setlists/19861205a.asp
 12/08/86,1986,12,08,Monday,1986-12-08,UPTOWN LOUNGE,ATHENS,GA,65,60,34,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19861208a.asp
 12/12/86,1986,12,12,Friday,1986-12-12,UPTOWN LOUNGE,ATHENS,GA,66,61,34,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19861212a.asp
+,1987,00,00,,??/??/87,** UNKNOWN **,** UNKNOWN **,UU,67,1,35,"** UNKNOWN **, ** UNKNOWN **, UU",http://www.everydaycompanion.com/setlists/19870000a.asp
+,1987,00,00,,??/??/87,** UNKNOWN **,** UNKNOWN **,UU,68,2,35,"** UNKNOWN **, ** UNKNOWN **, UU",http://www.everydaycompanion.com/setlists/19870000b.asp
+,1987,01,00,,01/??/87,40 WATT CLUB,ATHENS,GA,69,3,36,"40 WATT CLUB, ATHENS, GA",http://www.everydaycompanion.com/setlists/19870100a.asp
 01/03/87,1987,01,03,Saturday,1987-01-03,THE ROOKERY,MACON,GA,70,4,37,"THE ROOKERY, MACON, GA",http://www.everydaycompanion.com/setlists/19870103a.asp
 01/05/87,1987,01,05,Monday,1987-01-05,UPTOWN LOUNGE,ATHENS,GA,71,5,38,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19870105a.asp
 01/12/87,1987,01,12,Monday,1987-01-12,UPTOWN LOUNGE,ATHENS,GA,72,6,38,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19870112a.asp
@@ -127,6 +136,7 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 09/17/87,1987,09,17,Thursday,1987-09-17,SPANISH MOON,CLEMSON,SC,135,69,81,"SPANISH MOON, CLEMSON, SC",http://www.everydaycompanion.com/setlists/19870917a.asp
 09/21/87,1987,09,21,Monday,1987-09-21,UPTOWN LOUNGE,ATHENS,GA,136,70,82,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19870921a.asp
 09/23/87,1987,09,23,Wednesday,1987-09-23,THE MINESHAFT,CHARLOTTESVILLE,VA,137,71,83,"THE MINESHAFT, CHARLOTTESVILLE, VA",http://www.everydaycompanion.com/setlists/19870923a.asp
+,1987,10,00,,10/??/87,UPTOWN LOUNGE,ATHENS,GA,138,72,84,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19871000a.asp
 10/04/87,1987,10,04,Sunday,1987-10-04,THE NICK,BIRMINGHAM,AL,139,73,85,"THE NICK, BIRMINGHAM, AL",http://www.everydaycompanion.com/setlists/19871004a.asp
 10/05/87,1987,10,05,Monday,1987-10-05,UPTOWN LOUNGE,ATHENS,GA,140,74,86,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19871005a.asp
 10/07/87,1987,10,07,Wednesday,1987-10-07,NEW DELI,GREENVILLE,NC,141,75,87,"NEW DELI, GREENVILLE, NC",http://www.everydaycompanion.com/setlists/19871007a.asp
@@ -214,6 +224,8 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 08/09/88,1988,08,09,Tuesday,1988-08-09,WAR EAGLE SUPPER CLUB,AUBURN,AL,223,68,160,"WAR EAGLE SUPPER CLUB, AUBURN, AL",http://www.everydaycompanion.com/setlists/19880809a.asp
 08/13/88,1988,08,13,Saturday,1988-08-13,PITA POTPOURRI,ATLANTA,GA,224,69,161,"PITA POTPOURRI, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19880813a.asp
 08/26/88,1988,08,26,Friday,1988-08-26,UPTOWN LOUNGE,ATHENS,GA,225,70,162,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19880826a.asp
+,1988,09,00,,09/??/88,O'NEILLY'S PUB,MACON,GA,226,71,163,"O'NEILLY'S PUB, MACON, GA",http://www.everydaycompanion.com/setlists/19880900a.asp
+,1988,09,00,,09/??/88,"PHI KAPPA PHI HOUSE, PRESBYTERIAN COLLEGE",CLINTON,SC,227,72,164,"PHI KAPPA PHI HOUSE, PRESBYTERIAN COLLEGE, CLINTON, SC",http://www.everydaycompanion.com/setlists/19880900b.asp
 09/07/88,1988,09,07,Wednesday,1988-09-07,UPTOWN LOUNGE,ATHENS,GA,228,73,165,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19880907a.asp
 09/09/88,1988,09,09,Friday,1988-09-09,LITTLE FIVE POINTS PUB,ATLANTA,GA,229,74,166,"LITTLE FIVE POINTS PUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19880909a.asp
 09/10/88,1988,09,10,Saturday,1988-09-10,"SIGMA ALPHA EPSILON HOUSE, UNIVERSITY OF GEORGIA",ATHENS,GA,230,75,167,"SIGMA ALPHA EPSILON HOUSE, UNIVERSITY OF GEORGIA, ATHENS, GA",http://www.everydaycompanion.com/setlists/19880910a.asp
@@ -265,6 +277,8 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 12/21/88,1988,12,21,Wednesday,1988-12-21,DALTON COUNTRY CLUB,DALTON,GA,276,121,210,"DALTON COUNTRY CLUB, DALTON, GA",http://www.everydaycompanion.com/setlists/19881221a.asp
 12/22/88,1988,12,22,Thursday,1988-12-22,COTTON CLUB,ATLANTA,GA,277,122,211,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19881222a.asp
 12/31/88,1988,12,31,Saturday,1988-12-31,UPTOWN LOUNGE,ATHENS,GA,278,123,212,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19881231a.asp
+,1989,00,00,,??/??/89,W.C. DON'S,JACKSON,MS,279,1,213,"W.C. DON'S, JACKSON, MS",http://www.everydaycompanion.com/setlists/19890000a.asp
+,1989,01,00,,01/??/89,"PHI DELTA THETA HOUSE, UNIVERSITY OF GEORGIA",ATHENS,GA,280,2,214,"PHI DELTA THETA HOUSE, UNIVERSITY OF GEORGIA, ATHENS, GA",http://www.everydaycompanion.com/setlists/19890100a.asp
 01/13/89,1989,01,13,Friday,1989-01-13,UPTOWN LOUNGE,ATHENS,GA,281,3,215,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19890113a.asp
 01/14/89,1989,01,14,Saturday,1989-01-14,LITTLE FIVE POINTS PUB,ATLANTA,GA,282,4,216,"LITTLE FIVE POINTS PUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19890114a.asp
 01/17/89,1989,01,17,Tuesday,1989-01-17,NEW HORIZONS,RICHMOND,VA,283,5,217,"NEW HORIZONS, RICHMOND, VA",http://www.everydaycompanion.com/setlists/19890117a.asp
@@ -286,6 +300,7 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 03/23/89,1989,03,23,Thursday,1989-03-23,UPTOWN LOUNGE,ATHENS,GA,299,21,233,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19890323a.asp
 03/25/89,1989,03,25,Saturday,1989-03-25,COTTON CLUB,ATLANTA,GA,300,22,234,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19890325a.asp
 03/31/89,1989,03,31,Friday,1989-03-31,4808 CLUB,CHARLOTTE,NC,301,23,235,"4808 CLUB, CHARLOTTE, NC",http://www.everydaycompanion.com/setlists/19890331a.asp
+,1989,04,00,,04/??/89,SIGMA ALPHA EPSILON HOUSE,TUSCALOOSA,AL,302,24,236,"SIGMA ALPHA EPSILON HOUSE, TUSCALOOSA, AL",http://www.everydaycompanion.com/setlists/19890400a.asp
 04/08/89,1989,04,08,Saturday,1989-04-08,THE ARMORY,VALDOSTA,GA,303,25,237,"THE ARMORY, VALDOSTA, GA",http://www.everydaycompanion.com/setlists/19890408a.asp
 04/10/89,1989,04,10,Monday,1989-04-10,"DOBBS UNIVERSITY CENTER, EMORY UNIVERISTY",ATLANTA,GA,304,26,238,"DOBBS UNIVERSITY CENTER, EMORY UNIVERISTY, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19890410a.asp
 04/13/89,1989,04,13,Thursday,1989-04-13,"EDGAR'S CAMPUS BAR, CLEMSON UNIVERSITY",CLEMSON,SC,305,27,239,"EDGAR'S CAMPUS BAR, CLEMSON UNIVERSITY, CLEMSON, SC",http://www.everydaycompanion.com/setlists/19890413a.asp
@@ -294,6 +309,7 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 04/21/89,1989,04,21,Friday,1989-04-21,"PHI DELTA THETA HOUSE, UNIVERSITY OF THE SOUTH",SEWANEE,TN,308,30,242,"PHI DELTA THETA HOUSE, UNIVERSITY OF THE SOUTH, SEWANEE, TN",http://www.everydaycompanion.com/setlists/19890421a.asp
 04/22/89,1989,04,22,Saturday,1989-04-22,JOHN BROWN'S FARM,OXFORD,MS,309,31,243,"JOHN BROWN'S FARM, OXFORD, MS",http://www.everydaycompanion.com/setlists/19890422a.asp
 04/26/89,1989,04,26,Wednesday,1989-04-26,COTTON CLUB,ATLANTA,GA,310,32,244,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19890426a.asp
+,1989,05,00,,05/??/89,THE BREWERY,RALEIGH,NC,311,33,245,"THE BREWERY, RALEIGH, NC",http://www.everydaycompanion.com/setlists/19890500a.asp
 05/04/89,1989,05,04,Thursday,1989-05-04,UPTOWN LOUNGE,ATHENS,GA,312,34,246,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19890504a.asp
 05/05/89,1989,05,05,Friday,1989-05-05,THE CAVE,DAHLONEGA,GA,313,35,247,"THE CAVE, DAHLONEGA, GA",http://www.everydaycompanion.com/setlists/19890505a.asp
 05/13/89,1989,05,13,Saturday,1989-05-13,NEW HORIZONS,RICHMOND,VA,314,36,248,"NEW HORIZONS, RICHMOND, VA",http://www.everydaycompanion.com/setlists/19890513a.asp
@@ -319,6 +335,7 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 08/19/89,1989,08,19,Saturday,1989-08-19,COTTON CLUB,ATLANTA,GA,334,56,265,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19890819a.asp
 08/22/89,1989,08,22,Tuesday,1989-08-22,"SIGMA ALPHA EPSILON HOUSE, DAVIDSON COLLEGE",DAVIDSON,NC,335,57,266,"SIGMA ALPHA EPSILON HOUSE, DAVIDSON COLLEGE, DAVIDSON, NC",http://www.everydaycompanion.com/setlists/19890822a.asp
 08/29/89,1989,08,29,Tuesday,1989-08-29,ROCKAFELLA'S PUB,COLUMBIA,SC,336,58,267,"ROCKAFELLA'S PUB, COLUMBIA, SC",http://www.everydaycompanion.com/setlists/19890829a.asp
+,1989,09,00,,09/??/89,"EDGAR'S CAMPUS BAR, CLEMSON UNIVERSITY",CLEMSON,SC,337,59,268,"EDGAR'S CAMPUS BAR, CLEMSON UNIVERSITY, CLEMSON, SC",http://www.everydaycompanion.com/setlists/19890900a.asp
 09/04/89,1989,09,04,Monday,1989-09-04,"PHI DELTA THETA HOUSE, UNIVERSITY OF GEORGIA",ATHENS,GA,338,60,269,"PHI DELTA THETA HOUSE, UNIVERSITY OF GEORGIA, ATHENS, GA",http://www.everydaycompanion.com/setlists/19890904a.asp
 09/08/89,1989,09,08,Friday,1989-09-08,THE LEGION,VALDOSTA,GA,339,61,270,"THE LEGION, VALDOSTA, GA",http://www.everydaycompanion.com/setlists/19890908a.asp
 09/11/89,1989,09,11,Monday,1989-09-11,"SIGMA ALPHA EPSILON HOUSE, UNIVERSITY OF GEORGIA",ATHENS,GA,340,62,271,"SIGMA ALPHA EPSILON HOUSE, UNIVERSITY OF GEORGIA, ATHENS, GA",http://www.everydaycompanion.com/setlists/19890911a.asp
@@ -326,6 +343,7 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 09/24/89,1989,09,24,Sunday,1989-09-24,THE BAYOU,WASHINGTON,DC,342,64,273,"THE BAYOU, WASHINGTON, DC",http://www.everydaycompanion.com/setlists/19890924a.asp
 09/28/89,1989,09,28,Thursday,1989-09-28,UPTOWN LOUNGE,ATHENS,GA,343,65,274,"UPTOWN LOUNGE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19890928a.asp
 09/29/89,1989,09,29,Friday,1989-09-29,"CHI PHI HOUSE, UNIVERSITY OF GEORGIA",ATHENS,GA,344,66,275,"CHI PHI HOUSE, UNIVERSITY OF GEORGIA, ATHENS, GA",http://www.everydaycompanion.com/setlists/19890929a.asp
+,1989,10,00,,10/??/89,ELMO HOUSE,CHARLOTTESVILLE,VA,345,67,276,"ELMO HOUSE, CHARLOTTESVILLE, VA",http://www.everydaycompanion.com/setlists/19891000a.asp
 10/04/89,1989,10,04,Wednesday,1989-10-04,THE NICK,BIRMINGHAM,AL,346,68,277,"THE NICK, BIRMINGHAM, AL",http://www.everydaycompanion.com/setlists/19891004a.asp
 10/07/89,1989,10,07,Saturday,1989-10-07,"KAPPA ALPHA HOUSE, GEORGIA INSTITUTE OF TECHNOLOGY",ATLANTA,GA,347,69,278,"KAPPA ALPHA HOUSE, GEORGIA INSTITUTE OF TECHNOLOGY, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19891007a.asp
 10/12/89,1989,10,12,Thursday,1989-10-12,CAT'S CRADLE,CHAPEL HILL,NC,348,70,279,"CAT'S CRADLE, CHAPEL HILL, NC",http://www.everydaycompanion.com/setlists/19891012a.asp
@@ -374,6 +392,7 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 12/29/89,1989,12,29,Friday,1989-12-29,GEORGIA THEATRE,ATHENS,GA,391,113,319,"GEORGIA THEATRE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19891229a.asp
 12/30/89,1989,12,30,Saturday,1989-12-30,COTTON CLUB,ATLANTA,GA,392,114,320,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19891230a.asp
 12/31/89,1989,12,31,Sunday,1989-12-31,COTTON CLUB,ATLANTA,GA,393,115,320,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19891231a.asp
+,1990,00,00,,??/??/90,JOHNNY D'S,SOMERVILLE,MA,394,1,321,"JOHNNY D'S, SOMERVILLE, MA",http://www.everydaycompanion.com/setlists/19900000a.asp
 01/04/90,1990,01,04,Thursday,1990-01-04,MAX'S ON BROADWAY,BALTIMORE,MD,395,2,322,"MAX'S ON BROADWAY, BALTIMORE, MD",http://www.everydaycompanion.com/setlists/19900104a.asp
 01/05/90,1990,01,05,Friday,1990-01-05,THE BAYOU,WASHINGTON,DC,396,3,323,"THE BAYOU, WASHINGTON, DC",http://www.everydaycompanion.com/setlists/19900105a.asp
 01/06/90,1990,01,06,Saturday,1990-01-06,THE JADE ELEPHANT,RICHMOND,VA,397,4,324,"THE JADE ELEPHANT, RICHMOND, VA",http://www.everydaycompanion.com/setlists/19900106a.asp
@@ -483,6 +502,7 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 07/27/90,1990,07,27,Friday,1990-07-27,COTTON CLUB,ATLANTA,GA,501,108,420,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19900727a.asp
 07/28/90,1990,07,28,Saturday,1990-07-28,COTTON CLUB,ATLANTA,GA,502,109,420,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19900728a.asp
 07/31/90,1990,07,31,Tuesday,1990-07-31,TIPITINA'S,NEW ORLEANS,LA,503,110,421,"TIPITINA'S, NEW ORLEANS, LA",http://www.everydaycompanion.com/setlists/19900731a.asp
+,1990,08,00,,08/??/90,EXCELSIOR MILL,ATLANTA,GA,504,111,422,"EXCELSIOR MILL, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19900800a.asp
 08/02/90,1990,08,02,Thursday,1990-08-02,CANTINA SANTA FE,CORPUS CHRISTI,TX,505,112,423,"CANTINA SANTA FE, CORPUS CHRISTI, TX",http://www.everydaycompanion.com/setlists/19900802a.asp
 08/03/90,1990,08,03,Friday,1990-08-03,THE TEXAS TAVERN,AUSTIN,TX,506,113,424,"THE TEXAS TAVERN, AUSTIN, TX",http://www.everydaycompanion.com/setlists/19900803a.asp
 08/04/90,1990,08,04,Saturday,1990-08-04,RHYTHM ROOM,DALLAS,TX,507,114,425,"RHYTHM ROOM, DALLAS, TX",http://www.everydaycompanion.com/setlists/19900804a.asp
@@ -547,6 +567,7 @@ date,year,month,day,weekday,date_ec,venue,city,state,show_index_overall,show_ind
 12/29/90,1990,12,29,Saturday,1990-12-29,COTTON CLUB,ATLANTA,GA,566,173,476,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19901229a.asp
 12/30/90,1990,12,30,Sunday,1990-12-30,COTTON CLUB,ATLANTA,GA,567,174,476,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19901230a.asp
 12/31/90,1990,12,31,Monday,1990-12-31,COTTON CLUB,ATLANTA,GA,568,175,476,"COTTON CLUB, ATLANTA, GA",http://www.everydaycompanion.com/setlists/19901231a.asp
+,1991,00,00,,??/??/91,HOLLINS UNIVERSITY,ROANOKE,VA,569,1,477,"HOLLINS UNIVERSITY, ROANOKE, VA",http://www.everydaycompanion.com/setlists/19910000a.asp
 01/07/91,1991,01,07,Monday,1991-01-07,GEORGIA THEATRE,ATHENS,GA,570,2,478,"GEORGIA THEATRE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19910107a.asp
 01/08/91,1991,01,08,Tuesday,1991-01-08,GEORGIA THEATRE,ATHENS,GA,571,3,478,"GEORGIA THEATRE, ATHENS, GA",http://www.everydaycompanion.com/setlists/19910108a.asp
 01/10/91,1991,01,10,Thursday,1991-01-10,"UNDERWOOD AUDITORIUM, VANDERBILT UNIVERSITY",NASHVILLE,TN,572,4,479,"UNDERWOOD AUDITORIUM, VANDERBILT UNIVERSITY, NASHVILLE, TN",http://www.everydaycompanion.com/setlists/19910110a.asp
