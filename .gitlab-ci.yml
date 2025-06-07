@@ -1,8 +1,0 @@
-job_using_api:
-  image: python:3.10
-  script:
-    - echo "Using the API key..."
-    - python -m pip install --upgrade pip
-    - pip install -r requirements.txt
-    - python Setlist_Creation/Get_Setlists.py
-    - curl -H "Authorization: Bearer $phish_api_key" https://api.example.com/endpoint

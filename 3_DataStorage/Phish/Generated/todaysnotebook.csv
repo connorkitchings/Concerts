@@ -1,0 +1,169 @@
+song,times_played_last_year,last_time_played_date,current_show_gap,average_gap,median_gap
+Sigma Oasis,10,2025-04-20,6,4.333,4.0
+Bathtub Gin,10,2025-04-19,7,4.222,4.0
+Character Zero,10,2025-04-23,4,4.778,5.0
+Theme From the Bottom,10,2025-04-18,8,4.222,4.0
+Free,9,2025-04-19,7,5.0,5.0
+Down with Disease,9,2025-04-22,5,5.125,5.0
+No Men In No Man's Land,9,2025-04-22,5,5.25,5.0
+Tweezer,9,2025-04-23,4,5.25,5.5
+Back on the Train,9,2025-04-18,8,5.0,4.5
+Backwards Down the Number Line,8,2025-04-19,7,5.571,6.0
+First Tube,8,2025-04-23,4,6.143,5.0
+Ruby Waves,8,2025-04-22,5,6.0,6.0
+Tube,8,2025-04-18,8,5.571,6.0
+"My Friend, My Friend",8,2025-04-19,7,5.714,6.0
+Golden Age,8,2025-04-18,8,5.286,5.0
+Maze,8,2025-04-22,5,5.714,5.0
+A Wave of Hope,7,2025-04-20,6,7.0,6.0
+Pillow Jets,7,2025-04-23,4,7.167,5.0
+Crosseyed and Painless,7,2025-04-23,4,7.333,7.5
+Prince Caspian,7,2025-01-31,11,6.167,6.5
+Split Open and Melt,6,2025-04-22,5,7.8,7.0
+Bouncing Around the Room,6,2025-04-20,6,8.2,5.0
+Reba,6,2025-04-23,4,8.6,7.0
+Weekapaug Groove,6,2025-04-22,5,8.2,7.0
+Monsters,6,2025-04-19,7,7.2,9.0
+Mike's Song,6,2025-04-22,5,8.2,7.0
+Lonely Trip,5,2025-04-23,4,11.0,9.0
+Axilla (Part II),5,2025-04-22,5,8.5,8.5
+Mountains in the Mist,5,2024-12-28,12,8.75,8.5
+Fluffhead,5,2025-04-22,5,10.5,10.0
+Steam,5,2024-10-25,15,7.5,7.5
+What's the Use?,5,2025-04-22,5,7.25,7.0
+David Bowie,5,2025-04-23,4,10.5,6.5
+Bug,5,2025-04-18,8,7.25,6.5
+Cities,5,2025-04-20,6,8.25,7.5
+Simple,5,2025-04-23,4,10.25,9.5
+Sample in a Jar,5,2025-04-23,4,8.5,8.5
+Gumbo,4,2025-04-23,4,12.333,13.0
+The Wedge,4,2025-01-30,15,7.333,8.0
+Golgi Apparatus,4,2024-12-31,9,9.667,12.0
+Gotta Jibboo,4,2024-10-27,13,11.0,10.0
+Walls of the Cave,4,2025-04-19,7,11.333,11.0
+Farmhouse,4,2025-04-19,7,11.0,7.0
+My Soul,4,2025-04-22,0,12.667,8.0
+Halley's Comet,4,2025-04-22,5,11.0,10.0
+Waste,4,2025-04-22,5,12.0,6.0
+Plasma,4,2025-04-20,6,11.667,12.0
+Roggae,4,2025-04-22,5,14.333,16.0
+Scents and Subtle Sounds,4,2025-04-20,6,13.333,8.0
+I Am Hydrogen,4,2025-04-22,5,13.667,13.0
+Mull,3,2025-04-18,8,16.0,16.0
+NICU,3,2024-08-15,36,6.0,6.0
+Ocelot,3,2025-01-28,0,18.0,18.0
+Saw It Again,3,2025-01-31,20,14.0,14.0
+Limb By Limb,3,2024-10-27,13,13.0,13.0
+Set Your Soul Free,3,2025-01-29,22,7.5,7.5
+I Always Wanted It This Way,3,2025-04-18,8,13.0,13.0
+Funky Bitch,3,2025-01-30,21,13.5,13.5
+Undermind,3,2024-08-31,24,8.5,8.5
+Wilson,3,2025-04-20,6,18.0,18.0
+Boogie On Reggae Woman,3,2025-04-20,6,20.0,20.0
+Buried Alive,3,2025-04-22,5,19.5,19.5
+Wading in the Velvet Sea,3,2025-04-23,4,12.0,12.0
+Heavy Things,2,2024-10-27,13,21.0,21.0
+Party Time,2,2024-08-18,32,13.0,13.0
+Driver,2,2024-12-28,12,18.0,18.0
+My Sweet One,2,2025-01-29,13,9.0,9.0
+Drift While You're Sleeping,2,2024-08-03,33,10.0,10.0
+Dirt,2,2024-10-25,15,22.0,22.0
+Pebbles and Marbles,2,2025-04-19,7,28.0,28.0
+Peaches en Regalia,2,2024-08-16,31,16.0,16.0
+Meatstick,2,2024-08-17,32,14.0,14.0
+Cars Trucks Buses,2,2025-01-31,20,16.0,16.0
+Punch You in the Eye,2,2025-04-23,4,30.0,30.0
+Sleeping Monkey,2,2025-04-19,7,8.0,8.0
+Axilla,2,2024-08-18,27,18.0,18.0
+Ya Mar,2,2024-08-18,39,6.0,6.0
+Shade,2,2025-01-30,21,13.0,13.0
+Mercy,2,2025-02-01,19,22.0,22.0
+Twenty Years Later,2,2025-01-30,21,16.0,16.0
+Suzy Greenberg,2,2025-04-19,7,37.0,37.0
+Grind,2,2024-12-31,9,26.0,26.0
+Human Nature,2,2024-08-11,27,16.0,16.0
+Halfway to the Moon,2,2025-01-30,21,13.0,13.0
+I Never Needed You Like This Before,2,2024-08-11,27,9.0,9.0
+If I Could,2,2025-04-18,8,27.0,27.0
+It's Ice,2,2024-08-07,30,13.0,13.0
+Izabella,2,2024-08-18,33,12.0,12.0
+Julius,2,2024-08-09,29,12.0,12.0
+The Well,2,2025-04-23,4,35.0,35.0
+Jam,2,2025-01-28,0,16.0,16.0
+Loving Cup,2,2024-08-31,24,6.0,6.0
+Vultures,1,2024-07-30,36,,
+The Mango Song,1,2024-12-28,12,,
+Sugar Shack,1,2024-08-29,26,,
+Silent in the Morning,1,2024-07-26,39,,
+Sightless Escape,1,2025-01-31,20,,
+Woodlands Jam,1,2024-08-16,47,,
+Train Song,1,2024-08-06,31,,
+Winterqueen,1,2024-12-30,10,,
+Wingsuit,1,2024-08-04,32,,
+The Oh Kee Pa Ceremony,1,2024-08-02,34,,
+Strawberry Letter 23,1,2024-08-06,31,,
+Soul Planet,1,2024-08-04,32,,
+When the Circus Comes,1,2024-07-20,43,,
+Soul Shakedown Party,1,2025-02-01,19,,
+Thread,1,2024-07-21,42,,
+Weigh,1,2024-08-10,28,,
+Strange Design,1,2024-08-30,25,,
+Turtle in the Clouds,1,2024-07-31,35,,
+Waves,1,2024-08-10,28,,
+The Connection,1,2024-07-21,42,,
+The Old Home Place,1,2024-08-07,30,,
+The Horse,1,2024-07-26,39,,
+The Final Hurrah,1,2024-08-04,32,,
+Stairway to Heaven,1,2024-08-14,16,,
+The Dogs,1,2024-08-04,32,,
+Stealing Time From the Faulty Plan,1,2024-08-04,32,,
+The Curtain With,1,2024-07-24,40,,
+A Day in the Life,1,2024-08-02,34,,
+Miss You,1,2024-07-31,35,,
+Shine a Light,1,2024-08-09,29,,
+Destiny Unbound,1,2024-08-04,32,,
+Ginseng Sullivan,1,2024-08-07,30,,
+Fuck Your Face,1,2024-12-28,12,,
+Frankenstein,1,2024-08-07,30,,
+Foam,1,2024-07-27,38,,
+Fikus,1,2024-08-11,27,,
+Fee,1,2024-08-30,25,,
+Esther,1,2024-07-27,38,,
+Dog Log,1,2024-09-01,23,,
+Dinner and a Movie,1,2024-08-10,28,,
+Death Don't Hurt Very Long,1,2024-08-07,30,,
+Guelah Papyrus,1,2024-08-30,25,,
+Contact,1,2024-07-26,39,,
+Brian and Robert,1,2024-07-26,39,,
+Box of Rain,1,2024-10-25,15,,
+Bold As Love,1,2024-12-29,11,,
+Billy Breathes,1,2024-08-04,32,,
+Big Black Furry Creature from Mars,1,2024-08-09,29,,
+Beauty of My Dreams,1,2024-08-06,31,,
+Auld Lang Syne,1,2024-12-31,9,,
+Access Me,1,2024-10-27,13,,
+Good Times Bad Times,1,2024-07-26,39,,
+Guy Forget,1,2024-08-03,33,,
+Seven Below,1,2024-12-30,10,,
+A Song I Heard the Ocean Sing,1,2024-07-28,37,,
+Scent of a Mule,1,2024-08-02,34,,
+Sabotage,1,2024-09-01,23,,
+Round Room,1,2024-12-28,12,,
+Rock and Roll,1,2024-08-03,33,,
+Poor Heart,1,2024-12-28,12,,
+Nothing,1,2024-10-26,14,,
+Nellie Kane,1,2024-08-06,31,,
+Mr. Completely,1,2024-07-31,35,,
+Moonage Daydream,1,2024-07-27,38,,
+Midnight Rider,1,2024-08-14,16,,
+Guyute,1,2024-07-23,41,,
+Meat,1,2024-07-30,36,,
+McGrupp and the Watchful Hosemasters,1,2024-08-04,32,,
+Lengthwise,1,2024-12-30,10,,
+Leaves,1,2024-07-24,40,,
+Lawn Boy,1,2024-07-31,35,,
+Knuckle Bone Broth Avenue,1,2024-08-04,32,,
+Icculus,1,2024-12-31,9,,
+I Didn't Know,1,2024-08-03,33,,
+Horn,1,2024-07-31,35,,
+Your Pet Cat,1,2024-08-16,47,,

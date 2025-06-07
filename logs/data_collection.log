@@ -1,0 +1,225 @@
+[2025-06-07 11:46:08,067] INFO run_all_pipeline: Starting Phish pipeline...
+[2025-06-07 11:46:08,067] INFO run_all_pipeline: ===== Running Phish pipeline =====
+[2025-06-07 11:46:09,661] INFO run_all_pipeline: [Phish] Traceback (most recent call last):
+[2025-06-07 11:46:09,662] INFO run_all_pipeline: [Phish]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Phish/run_pipeline.py", line 8, in <module>
+[2025-06-07 11:46:09,662] INFO run_all_pipeline: [Phish]     from export_data import save_phish_data, save_query_data
+[2025-06-07 11:46:09,662] INFO run_all_pipeline: [Phish]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Phish/export_data.py", line 5, in <module>
+[2025-06-07 11:46:09,662] INFO run_all_pipeline: [Phish]     from Phish.config import DATA_DIR, SONG_DATA_FILENAME, SHOW_DATA_FILENAME, VENUE_DATA_FILENAME, SETLIST_DATA_FILENAME, TRANSITION_DATA_FILENAME, NEXT_SHOW_FILENAME, LAST_UPDATED_FILENAME
+[2025-06-07 11:46:09,662] INFO run_all_pipeline: [Phish] ImportError: cannot import name 'DATA_DIR' from 'Phish.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Phish/config.py)
+[2025-06-07 11:46:09,751] ERROR run_all_pipeline: Phish pipeline exited with code 1
+[2025-06-07 11:46:09,752] INFO run_all_pipeline: Finished Phish pipeline.
+[2025-06-07 11:46:09,752] INFO run_all_pipeline: Starting Goose pipeline...
+[2025-06-07 11:46:09,752] INFO run_all_pipeline: ===== Running Goose pipeline =====
+[2025-06-07 11:46:09,835] INFO run_all_pipeline: [Goose] Traceback (most recent call last):
+[2025-06-07 11:46:09,835] INFO run_all_pipeline: [Goose]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Goose/run_pipeline.py", line 7, in <module>
+[2025-06-07 11:46:09,836] INFO run_all_pipeline: [Goose]     from export_data import save_goose_data, save_query_data
+[2025-06-07 11:46:09,836] INFO run_all_pipeline: [Goose]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Goose/export_data.py", line 4, in <module>
+[2025-06-07 11:46:09,836] INFO run_all_pipeline: [Goose]     from Goose.config import DATA_DIR, SONG_DATA_FILENAME, SHOW_DATA_FILENAME, VENUE_DATA_FILENAME, SETLIST_DATA_FILENAME, TRANSITION_DATA_FILENAME, NEXT_SHOW_FILENAME, LAST_UPDATED_FILENAME
+[2025-06-07 11:46:09,836] INFO run_all_pipeline: [Goose] ImportError: cannot import name 'DATA_DIR' from 'Goose.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Goose/config.py)
+[2025-06-07 11:46:09,844] ERROR run_all_pipeline: Goose pipeline exited with code 1
+[2025-06-07 11:46:09,845] INFO run_all_pipeline: Finished Goose pipeline.
+[2025-06-07 11:46:09,845] INFO run_all_pipeline: Starting UM pipeline...
+[2025-06-07 11:46:09,845] INFO run_all_pipeline: ===== Running UM pipeline =====
+[2025-06-07 11:46:10,745] INFO run_all_pipeline: [UM] Traceback (most recent call last):
+[2025-06-07 11:46:10,745] INFO run_all_pipeline: [UM]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/run_pipeline.py", line 9, in <module>
+[2025-06-07 11:46:10,746] INFO run_all_pipeline: [UM]     from scrape_setlists import fetch_um_setlist_data
+[2025-06-07 11:46:10,746] INFO run_all_pipeline: [UM]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/scrape_setlists.py", line 8, in <module>
+[2025-06-07 11:46:10,746] INFO run_all_pipeline: [UM]     from UM.config import BASE_URL, DATA_DIR
+[2025-06-07 11:46:10,746] INFO run_all_pipeline: [UM] ImportError: cannot import name 'DATA_DIR' from 'UM.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/config.py)
+[2025-06-07 11:46:10,828] ERROR run_all_pipeline: UM pipeline exited with code 1
+[2025-06-07 11:46:10,828] INFO run_all_pipeline: Finished UM pipeline.
+[2025-06-07 11:46:10,828] INFO run_all_pipeline: Starting WSP pipeline...
+[2025-06-07 11:46:10,829] INFO run_all_pipeline: ===== Running WSP pipeline =====
+[2025-06-07 11:46:11,678] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:11,677] INFO __main__: Previous Last update: 2025-06-07 11:45:11
+[2025-06-07 11:46:11,679] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:11,678] INFO __main__: Scraping WSP show data...
+[2025-06-07 11:46:17,793] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:17,793] INFO __main__: Scraped 3,229 shows.
+[2025-06-07 11:46:17,794] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:17,793] INFO __main__: Scraping WSP song catalog...
+[2025-06-07 11:46:19,735] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:19,734] INFO __main__: Scraped 696 songs.
+[2025-06-07 11:46:19,735] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:19,735] INFO __main__: Scraping WSP setlists...
+[2025-06-07 11:46:19,806] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[2025-06-07 11:46:19,806] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-06-07 11:46:19,806] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:19,806] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[2025-06-07 11:46:19,806] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:19,806] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-06-07 11:46:28,887] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:28,886] INFO __main__: Scraped/updated setlist data for all years now has 62,173 rows.
+[2025-06-07 11:46:28,888] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:28,887] INFO __main__: Saving WSP data...
+[2025-06-07 11:46:29,353] INFO export_data: No future shows found in schedule
+[2025-06-07 11:46:29,354] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:29,353] INFO export_data: No future shows found in schedule
+[2025-06-07 11:46:29,354] INFO run_all_pipeline: [WSP] [2025-06-07 11:46:29,354] INFO __main__: WSP scraping pipeline completed in 17.68 seconds.
+[2025-06-07 11:46:29,439] INFO run_all_pipeline: WSP pipeline completed successfully.
+[2025-06-07 11:46:29,439] INFO run_all_pipeline: Finished WSP pipeline.
+[2025-06-07 11:46:29,439] INFO run_all_pipeline: All band pipelines completed in 21.37 seconds.
+[2025-06-07 11:48:00,176] INFO run_all_pipeline: Starting Phish pipeline...
+[2025-06-07 11:48:00,176] INFO run_all_pipeline: ===== Running Phish pipeline =====
+[2025-06-07 11:48:01,787] INFO run_all_pipeline: [Phish] Traceback (most recent call last):
+[2025-06-07 11:48:01,790] INFO run_all_pipeline: [Phish]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Phish/run_pipeline.py", line 8, in <module>
+[2025-06-07 11:48:01,791] INFO run_all_pipeline: [Phish]     from export_data import save_phish_data, save_query_data
+[2025-06-07 11:48:01,791] INFO run_all_pipeline: [Phish]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Phish/export_data.py", line 6, in <module>
+[2025-06-07 11:48:01,810] INFO run_all_pipeline: [Phish]     from Phish.utils import get_date_and_time
+[2025-06-07 11:48:01,812] INFO run_all_pipeline: [Phish]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Phish/utils.py", line 4, in <module>
+[2025-06-07 11:48:01,812] INFO run_all_pipeline: [Phish]     from Phish.config import DATA_DIR
+[2025-06-07 11:48:01,833] INFO run_all_pipeline: [Phish] ImportError: cannot import name 'DATA_DIR' from 'Phish.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Phish/config.py)
+[2025-06-07 11:48:01,887] ERROR run_all_pipeline: Phish pipeline exited with code 1
+[2025-06-07 11:48:01,887] INFO run_all_pipeline: Finished Phish pipeline.
+[2025-06-07 11:48:01,887] INFO run_all_pipeline: Starting Goose pipeline...
+[2025-06-07 11:48:01,887] INFO run_all_pipeline: ===== Running Goose pipeline =====
+[2025-06-07 11:48:01,970] INFO run_all_pipeline: [Goose] Traceback (most recent call last):
+[2025-06-07 11:48:01,971] INFO run_all_pipeline: [Goose]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Goose/run_pipeline.py", line 7, in <module>
+[2025-06-07 11:48:01,971] INFO run_all_pipeline: [Goose]     from export_data import save_goose_data, save_query_data
+[2025-06-07 11:48:01,971] INFO run_all_pipeline: [Goose]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Goose/export_data.py", line 5, in <module>
+[2025-06-07 11:48:01,971] INFO run_all_pipeline: [Goose]     from Goose.utils import get_date_and_time
+[2025-06-07 11:48:01,971] INFO run_all_pipeline: [Goose]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Goose/utils.py", line 5, in <module>
+[2025-06-07 11:48:01,971] INFO run_all_pipeline: [Goose]     from Goose.config import DATA_DIR
+[2025-06-07 11:48:01,971] INFO run_all_pipeline: [Goose] ImportError: cannot import name 'DATA_DIR' from 'Goose.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Goose/config.py)
+[2025-06-07 11:48:01,979] ERROR run_all_pipeline: Goose pipeline exited with code 1
+[2025-06-07 11:48:01,979] INFO run_all_pipeline: Finished Goose pipeline.
+[2025-06-07 11:48:01,979] INFO run_all_pipeline: Starting UM pipeline...
+[2025-06-07 11:48:01,980] INFO run_all_pipeline: ===== Running UM pipeline =====
+[2025-06-07 11:48:02,892] INFO run_all_pipeline: [UM] Traceback (most recent call last):
+[2025-06-07 11:48:02,892] INFO run_all_pipeline: [UM]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/run_pipeline.py", line 9, in <module>
+[2025-06-07 11:48:02,892] INFO run_all_pipeline: [UM]     from scrape_setlists import fetch_um_setlist_data
+[2025-06-07 11:48:02,893] INFO run_all_pipeline: [UM]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/scrape_setlists.py", line 8, in <module>
+[2025-06-07 11:48:02,893] INFO run_all_pipeline: [UM]     from UM.config import BASE_URL, DATA_DIR
+[2025-06-07 11:48:02,893] INFO run_all_pipeline: [UM] ImportError: cannot import name 'DATA_DIR' from 'UM.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/config.py)
+[2025-06-07 11:48:02,975] ERROR run_all_pipeline: UM pipeline exited with code 1
+[2025-06-07 11:48:02,975] INFO run_all_pipeline: Finished UM pipeline.
+[2025-06-07 11:48:02,976] INFO run_all_pipeline: Starting WSP pipeline...
+[2025-06-07 11:48:02,976] INFO run_all_pipeline: ===== Running WSP pipeline =====
+[2025-06-07 11:48:03,862] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:03,861] INFO __main__: Previous Last update: 2025-06-07 11:46:29
+[2025-06-07 11:48:03,863] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:03,862] INFO __main__: Scraping WSP show data...
+[2025-06-07 11:48:10,430] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:10,429] INFO __main__: Scraped 3,229 shows.
+[2025-06-07 11:48:10,430] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:10,429] INFO __main__: Scraping WSP song catalog...
+[2025-06-07 11:48:12,326] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:12,326] INFO __main__: Scraped 696 songs.
+[2025-06-07 11:48:12,327] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:12,326] INFO __main__: Scraping WSP setlists...
+[2025-06-07 11:48:12,403] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[2025-06-07 11:48:12,403] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-06-07 11:48:12,403] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:12,403] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[2025-06-07 11:48:12,403] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:12,403] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-06-07 11:48:21,606] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:21,605] INFO __main__: Scraped/updated setlist data for all years now has 62,173 rows.
+[2025-06-07 11:48:21,607] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:21,606] INFO __main__: Saving WSP data...
+[2025-06-07 11:48:21,940] INFO export_data: No future shows found in schedule
+[2025-06-07 11:48:21,940] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:21,940] INFO export_data: No future shows found in schedule
+[2025-06-07 11:48:21,941] INFO run_all_pipeline: [WSP] [2025-06-07 11:48:21,940] INFO __main__: WSP scraping pipeline completed in 18.08 seconds.
+[2025-06-07 11:48:22,053] INFO run_all_pipeline: WSP pipeline completed successfully.
+[2025-06-07 11:48:22,053] INFO run_all_pipeline: Finished WSP pipeline.
+[2025-06-07 11:48:22,053] INFO run_all_pipeline: All band pipelines completed in 21.88 seconds.
+[2025-06-07 11:50:20,641] INFO run_all_pipeline: Starting Phish pipeline...
+[2025-06-07 11:50:20,642] INFO run_all_pipeline: ===== Running Phish pipeline =====
+[2025-06-07 11:50:23,122] INFO run_all_pipeline: [Phish] Traceback (most recent call last):
+[2025-06-07 11:50:23,123] INFO run_all_pipeline: [Phish]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Phish/run_pipeline.py", line 11, in <module>
+[2025-06-07 11:50:23,123] INFO run_all_pipeline: [Phish]     from loaders import load_song_data, load_show_data, load_setlist_data
+[2025-06-07 11:50:23,123] INFO run_all_pipeline: [Phish]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Phish/loaders.py", line 79, in <module>
+[2025-06-07 11:50:23,123] INFO run_all_pipeline: [Phish]     from Phish.config import DATA_DIR
+[2025-06-07 11:50:23,123] INFO run_all_pipeline: [Phish] ImportError: cannot import name 'DATA_DIR' from 'Phish.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Phish/config.py)
+[2025-06-07 11:50:23,209] ERROR run_all_pipeline: Phish pipeline exited with code 1
+[2025-06-07 11:50:23,209] INFO run_all_pipeline: Finished Phish pipeline.
+[2025-06-07 11:50:23,209] INFO run_all_pipeline: Starting Goose pipeline...
+[2025-06-07 11:50:23,209] INFO run_all_pipeline: ===== Running Goose pipeline =====
+[2025-06-07 11:50:24,067] INFO run_all_pipeline: [Goose] Traceback (most recent call last):
+[2025-06-07 11:50:24,068] INFO run_all_pipeline: [Goose]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Goose/run_pipeline.py", line 10, in <module>
+[2025-06-07 11:50:24,068] INFO run_all_pipeline: [Goose]     from loaders import load_song_data, load_show_data, load_setlist_data
+[2025-06-07 11:50:24,068] INFO run_all_pipeline: [Goose]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Goose/loaders.py", line 90, in <module>
+[2025-06-07 11:50:24,068] INFO run_all_pipeline: [Goose]     from Goose.config import DATA_DIR
+[2025-06-07 11:50:24,068] INFO run_all_pipeline: [Goose] ImportError: cannot import name 'DATA_DIR' from 'Goose.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/Goose/config.py)
+[2025-06-07 11:50:24,141] ERROR run_all_pipeline: Goose pipeline exited with code 1
+[2025-06-07 11:50:24,141] INFO run_all_pipeline: Finished Goose pipeline.
+[2025-06-07 11:50:24,142] INFO run_all_pipeline: Starting UM pipeline...
+[2025-06-07 11:50:24,142] INFO run_all_pipeline: ===== Running UM pipeline =====
+[2025-06-07 11:50:25,201] INFO run_all_pipeline: [UM] Traceback (most recent call last):
+[2025-06-07 11:50:25,201] INFO run_all_pipeline: [UM]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/run_pipeline.py", line 9, in <module>
+[2025-06-07 11:50:25,202] INFO run_all_pipeline: [UM]     from scrape_setlists import fetch_um_setlist_data
+[2025-06-07 11:50:25,202] INFO run_all_pipeline: [UM]   File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/scrape_setlists.py", line 8, in <module>
+[2025-06-07 11:50:25,202] INFO run_all_pipeline: [UM]     from UM.config import BASE_URL, DATA_DIR
+[2025-06-07 11:50:25,202] INFO run_all_pipeline: [UM] ImportError: cannot import name 'DATA_DIR' from 'UM.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/config.py)
+[2025-06-07 11:50:25,284] ERROR run_all_pipeline: UM pipeline exited with code 1
+[2025-06-07 11:50:25,284] INFO run_all_pipeline: Finished UM pipeline.
+[2025-06-07 11:50:25,285] INFO run_all_pipeline: Starting WSP pipeline...
+[2025-06-07 11:50:25,285] INFO run_all_pipeline: ===== Running WSP pipeline =====
+[2025-06-07 11:50:26,247] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:26,247] INFO __main__: Previous Last update: 2025-06-07 11:48:21
+[2025-06-07 11:50:26,248] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:26,247] INFO __main__: Scraping WSP show data...
+[2025-06-07 11:50:32,279] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:32,279] INFO __main__: Scraped 3,229 shows.
+[2025-06-07 11:50:32,280] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:32,279] INFO __main__: Scraping WSP song catalog...
+[2025-06-07 11:50:34,367] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:34,367] INFO __main__: Scraped 696 songs.
+[2025-06-07 11:50:34,367] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:34,367] INFO __main__: Scraping WSP setlists...
+[2025-06-07 11:50:34,444] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[2025-06-07 11:50:34,444] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-06-07 11:50:34,444] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:34,444] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[2025-06-07 11:50:34,444] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:34,444] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-06-07 11:50:43,544] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:43,543] INFO __main__: Scraped/updated setlist data for all years now has 62,173 rows.
+[2025-06-07 11:50:43,544] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:43,544] INFO __main__: Saving WSP data...
+[2025-06-07 11:50:44,039] INFO export_data: No future shows found in schedule
+[2025-06-07 11:50:44,039] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:44,039] INFO export_data: No future shows found in schedule
+[2025-06-07 11:50:44,040] INFO run_all_pipeline: [WSP] [2025-06-07 11:50:44,040] INFO __main__: WSP scraping pipeline completed in 17.79 seconds.
+[2025-06-07 11:50:44,143] INFO run_all_pipeline: WSP pipeline completed successfully.
+[2025-06-07 11:50:44,143] INFO run_all_pipeline: Finished WSP pipeline.
+[2025-06-07 11:50:44,143] INFO run_all_pipeline: All band pipelines completed in 23.50 seconds.
+[2025-06-07 11:58:46,200] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[2025-06-07 11:58:46,201] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-06-07 11:58:55,671] INFO export_data: No future shows found in schedule
+[2025-06-07 12:00:02,748] INFO loaders: Attempting to load setlist and transition data...
+[2025-06-07 12:00:02,749] INFO loaders: Making API request for 'setlists'...
+[2025-06-07 12:00:11,372] INFO loaders: Successfully retrieved setlist data with 64157 records.
+[2025-06-07 12:00:11,402] INFO loaders: Successfully processed setlist and transition data.
+[2025-06-07 12:06:58,088] INFO loaders: Attempting to load setlist and transition data...
+[2025-06-07 12:06:58,088] INFO loaders: Making API request for 'setlists'...
+[2025-06-07 12:07:07,051] INFO loaders: Successfully retrieved setlist data with 64157 records.
+[2025-06-07 12:07:07,078] INFO loaders: Successfully processed setlist and transition data.
+[2025-06-07 12:17:48,337] INFO run_all_pipeline: Starting Phish pipeline...
+[2025-06-07 12:17:48,338] INFO run_all_pipeline: ===== Running Phish pipeline =====
+[2025-06-07 12:17:49,933] INFO run_all_pipeline: [Phish] [2025-06-07 12:17:49,932] INFO __main__: Previous Last update: 2025-06-07 12:09:31
+[2025-06-07 12:17:49,933] INFO run_all_pipeline: [Phish] [2025-06-07 12:17:49,933] INFO __main__: Loading Song Data
+[2025-06-07 12:17:51,698] INFO run_all_pipeline: [Phish] [2025-06-07 12:17:51,698] INFO __main__: Loading Show and Venue Data
+[2025-06-07 12:17:52,295] INFO run_all_pipeline: [Phish] [2025-06-07 12:17:52,294] INFO __main__: Loading Setlist and Transition Data
+[2025-06-07 12:17:52,295] INFO run_all_pipeline: [Phish] [2025-06-07 12:17:52,295] INFO __main__: Calling load_setlist_data...
+[2025-06-07 12:18:00,002] INFO run_all_pipeline: [Phish] [2025-06-07 12:18:00,001] INFO __main__: load_setlist_data returned. Setlist data rows: 64,157, Transition data rows: 7
+[2025-06-07 12:18:00,570] INFO run_all_pipeline: [Phish] [2025-06-07 12:18:00,570] INFO __main__: Phish pipeline completed in 10.64 seconds.
+[2025-06-07 12:18:00,796] INFO run_all_pipeline: Phish pipeline completed successfully.
+[2025-06-07 12:18:00,796] INFO run_all_pipeline: Finished Phish pipeline.
+[2025-06-07 12:18:00,797] INFO run_all_pipeline: Starting Goose pipeline...
+[2025-06-07 12:18:00,797] INFO run_all_pipeline: ===== Running Goose pipeline =====
+[2025-06-07 12:18:02,037] INFO run_all_pipeline: [Goose] [2025-06-07 12:18:02,036] INFO __main__: Previous Last update: 06/07/2025 11:54
+[2025-06-07 12:18:02,037] INFO run_all_pipeline: [Goose] [2025-06-07 12:18:02,036] INFO __main__: Loading Song Data
+[2025-06-07 12:18:03,120] INFO run_all_pipeline: [Goose] [2025-06-07 12:18:03,120] INFO __main__: Loading Show, Venue, and Tour Data
+[2025-06-07 12:18:03,445] INFO run_all_pipeline: [Goose] [2025-06-07 12:18:03,445] INFO __main__: Loading Setlist and Transition Data
+[2025-06-07 12:18:04,583] INFO run_all_pipeline: [Goose] [2025-06-07 12:18:04,583] INFO __main__: Goose pipeline completed in 2.55 seconds.
+[2025-06-07 12:18:04,673] INFO run_all_pipeline: Goose pipeline completed successfully.
+[2025-06-07 12:18:04,674] INFO run_all_pipeline: Finished Goose pipeline.
+[2025-06-07 12:18:04,674] INFO run_all_pipeline: Starting UM pipeline...
+[2025-06-07 12:18:04,674] INFO run_all_pipeline: ===== Running UM pipeline =====
+[2025-06-07 12:18:05,528] INFO run_all_pipeline: [UM] [2025-06-07 12:18:05,528] INFO __main__: Previous Last update: 2025-06-07 12:17:04
+[2025-06-07 12:18:05,528] INFO run_all_pipeline: [UM] [2025-06-07 12:18:05,528] INFO __main__: Scraping latest song data...
+[2025-06-07 12:18:10,594] INFO run_all_pipeline: [UM] [2025-06-07 12:18:10,594] INFO __main__: Song scraping completed. Found 1020 songs.
+[2025-06-07 12:18:10,595] INFO run_all_pipeline: [UM] [2025-06-07 12:18:10,594] INFO __main__: Scraping latest venue data...
+[2025-06-07 12:18:12,408] INFO run_all_pipeline: [UM] [2025-06-07 12:18:12,407] INFO scrape_venues: Scraped 923 venues from https://allthings.umphreys.com/venues/
+[2025-06-07 12:18:12,409] INFO run_all_pipeline: [UM] [2025-06-07 12:18:12,408] INFO __main__: Scraping full setlist data...
+[2025-06-07 12:18:14,085] INFO run_all_pipeline: [UM] [2025-06-07 12:18:14,085] INFO scrape_setlists: Found 86 setlists for 2024.
+[2025-06-07 12:18:15,351] INFO run_all_pipeline: [UM] [2025-06-07 12:18:15,351] INFO scrape_setlists: Found 47 setlists for 2025.
+[2025-06-07 12:18:15,351] INFO run_all_pipeline: [UM] [2025-06-07 12:18:15,351] INFO scrape_setlists: 133 total shows found.
+[2025-06-07 12:18:15,528] INFO run_all_pipeline: [UM] [2025-06-07 12:18:15,528] INFO scrape_setlists: Found 2,854 existing setlists.
+[2025-06-07 12:18:15,532] INFO run_all_pipeline: [UM] [2025-06-07 12:18:15,532] INFO scrape_setlists: There are 0 new setlists to scrape.
+[2025-06-07 12:18:15,532] INFO run_all_pipeline: [UM] [2025-06-07 12:18:15,532] INFO scrape_setlists: No new setlists to scrape.
+[2025-06-07 12:18:15,539] INFO run_all_pipeline: [UM] [2025-06-07 12:18:15,538] INFO __main__: Fetched 46,858 setlist songs for 2,854 shows.
+[2025-06-07 12:18:15,600] INFO run_all_pipeline: [UM] [2025-06-07 12:18:15,600] INFO scrape_shows: Saved showdata.csv with 2,854 shows to ../3_DataStorage/UM/Collected/showdata.csv
+[2025-06-07 12:18:16,316] INFO run_all_pipeline: [UM] [2025-06-07 12:18:16,316] INFO __main__: UM pipeline completed in 10.79 seconds.
+[2025-06-07 12:18:16,318] INFO run_all_pipeline: [UM] Concerts/3_DataStorage/UM/Collected/showdata.csv
+[2025-06-07 12:18:16,406] INFO run_all_pipeline: UM pipeline completed successfully.
+[2025-06-07 12:18:16,406] INFO run_all_pipeline: Finished UM pipeline.
+[2025-06-07 12:18:16,407] INFO run_all_pipeline: Starting WSP pipeline...
+[2025-06-07 12:18:16,407] INFO run_all_pipeline: ===== Running WSP pipeline =====
+[2025-06-07 12:18:17,421] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:17,420] INFO __main__: Previous Last update: 2025-06-07 11:58:55
+[2025-06-07 12:18:17,421] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:17,421] INFO __main__: Scraping WSP show data...
+[2025-06-07 12:18:23,928] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:23,928] INFO __main__: Scraped 3,229 shows.
+[2025-06-07 12:18:23,928] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:23,928] INFO __main__: Scraping WSP song catalog...
+[2025-06-07 12:18:25,902] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:25,902] INFO __main__: Scraped 696 songs.
+[2025-06-07 12:18:25,902] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:25,902] INFO __main__: Scraping WSP setlists...
+[2025-06-07 12:18:25,976] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[2025-06-07 12:18:25,977] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-06-07 12:18:25,977] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:25,976] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[2025-06-07 12:18:25,977] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:25,977] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[2025-06-07 12:18:35,364] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:35,363] INFO __main__: Scraped/updated setlist data for all years now has 62,173 rows.
+[2025-06-07 12:18:35,365] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:35,364] INFO __main__: Saving WSP data...
+[2025-06-07 12:18:35,775] INFO export_data: No future shows found in schedule
+[2025-06-07 12:18:35,775] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:35,775] INFO export_data: No future shows found in schedule
+[2025-06-07 12:18:35,776] INFO run_all_pipeline: [WSP] [2025-06-07 12:18:35,776] INFO __main__: WSP scraping pipeline completed in 18.35 seconds.
+[2025-06-07 12:18:35,879] INFO run_all_pipeline: WSP pipeline completed successfully.
+[2025-06-07 12:18:35,879] INFO run_all_pipeline: Finished WSP pipeline.
+[2025-06-07 12:18:35,879] INFO run_all_pipeline: All band pipelines completed in 47.54 seconds.
