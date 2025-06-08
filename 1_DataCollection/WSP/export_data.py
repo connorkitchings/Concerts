@@ -2,6 +2,7 @@ import os
 import json
 from datetime import datetime, date
 from logger import get_logger
+from common_utils import get_date_and_time
 
 logger = get_logger(__name__, add_console_handler=True)
 
@@ -46,7 +47,7 @@ def save_wsp_data(song_data: 'pd.DataFrame', show_data: 'pd.DataFrame', setlist_
     # Save last_updated timestamp
     last_updated_path = os.path.join(data_dir, LAST_UPDATED_FILENAME)
     with open(last_updated_path, "w") as f:
-        json.dump({"last_updated": datetime.now().strftime('%Y-%m-%d %H:%M:%S')}, f)
+        json.dump({"last_updated": get_date_and_time()}, f)
     
     # Update Next Show
     today = datetime.today()

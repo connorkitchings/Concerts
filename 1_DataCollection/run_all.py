@@ -98,6 +98,7 @@ def main() -> None:
     total_duration = time.time() - total_start
     logger.info(f"All band pipelines completed in {total_duration:.2f} seconds.")
     print(f"\nAll band pipelines completed in {total_duration:.2f} seconds.")
+    logging.shutdown() # Ensure all logs are flushed
 
 if __name__ == "__main__":
     main()

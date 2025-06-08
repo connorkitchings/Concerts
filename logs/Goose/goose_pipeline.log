@@ -1,5 +1,0 @@
-[06-08-2025 15:51:52,763] INFO __main__: Previous Last update: 06/08/2025 15:44
-[06-08-2025 15:51:52,763] INFO __main__: Loading Song Data
-[06-08-2025 15:51:53,901] INFO __main__: Loading Show, Venue, and Tour Data
-[06-08-2025 15:51:54,377] INFO __main__: Loading Setlist and Transition Data
-[06-08-2025 15:51:55,502] INFO __main__: Goose pipeline completed in 2.74 seconds.

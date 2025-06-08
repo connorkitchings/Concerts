@@ -1,142 +1,63 @@
-# UM Setlist Creation Pipeline
+# Umphrey's McGee (UM) Data Collection Pipeline
 
-This directory contains the code and data pipeline for scraping, processing, and storing Umphrey’s McGee (UM) setlist, song, and venue data from allthings.umphreys.com.
+## Overview
 
-## Configuration & Environment Variables
+This pipeline collects and processes show, song, venue, and setlist data for Umphrey's McGee (UM). It scrapes data directly from allthings.umphreys.com. This pipeline does not require an API key.
 
-All major settings (paths, filenames, URLs, logging, scrape years, etc.) are centralized in `UM/config.py`.
-- **Environment Variable Overrides:** You can override any config value by setting the corresponding environment variable before running the pipeline. See `config.py` for a full list of supported variables (e.g., `UM_DATA_DIR`, `UM_LOG_LEVEL`, `UM_SCRAPE_YEARS`, `UM_BAND_NAME`, etc.).
-- **Example:**
-  ```bash
-  UM_BAND_NAME="WSP" UM_LOG_LEVEL="DEBUG" UM_SCRAPE_YEARS="2022,2023,2024" python3 UM/run_pipeline.py
-  ```
+## Data Sources
 
-## Logging System
+- allthings.umphreys.com (website scraping)
 
-UM uses its own `logger.py`, wrapping a shared general logger utility. Logs are always written to the correct, config-driven location for UM, as set in `config.py`. This prevents cross-band log contamination and makes the logging system robust and easy to maintain. To change log location or settings, update the environment variables or `UM/config.py`.
+## Core Scripts
 
-## Utility Functions
+- `main.py`: Orchestrates the entire data collection, processing, and saving workflow.
+- `config.py`: Manages all UM-specific configurations, including URLs, file paths, filenames, and logging settings.
+- `scrape_songs.py`: Scrapes song catalog information.
+- `scrape_shows.py`: Scrapes venue information and processes show data.
+- `scrape_setlists.py`: Scrapes detailed setlist information.
+- `save_data.py`: Saves the processed DataFrames to CSV files and relevant metadata to JSON files.
+- `utils.py`: Contains utility functions specific to the UM pipeline.
 
-- **print_relative_path(path):** Prints any file or directory path relative to the first occurrence of `Concerts/`. Useful for environment-agnostic logging or output.
+## Data Output
 
-## Directory Structure
+All processed data is saved to `../../3_DataStorage/UM/Collected/`.
 
-- **UM/**: Main Python package for scraping and data management.
-- **Data Output**: All processed data is saved to the location defined by `DATA_DIR` in config (default: `../../3 - Data/UM/AllThingsUM/`).
+Key files include:
 
-## Modules Overview
+- `songdata.csv`: Catalog of songs with details.
+- `venuedata.csv`: Information about venues where UM has performed.
+- `showdata.csv`: Information about each show, including date, venue, and other details.
+- `setlistdata.csv`: Detailed setlist information for each show.
+- `last_updated.json`: Timestamp of the last successful pipeline run.
+- `next_show.json`: Information about the next upcoming UM show, if available.
 
-### 1. `main.py`
-- **Purpose**: Orchestrates the entire UM data pipeline.
-- **Workflow**:
-  1. Scrapes the full UM song catalog (`scrape_songs.py`).
-  2. Scrapes the full UM venue catalog (`scrape_shows.py`).
-  3. Updates setlist data using the incremental update method (`incremental_um_setlist_update`), which fetches setlists for the last year and current year only, appends new data, and removes duplicates. (Switch to `full_um_setlist_update` in code for a full historical refresh.)
-  4. Sorts setlist data by most recent date and set order before saving.
-  5. Saves all outputs to disk (`save_data.py`).
-  6. Updates `last_updated.json` and `next_show.json` after a successful run.
-- **Logging**: Provides detailed logs for each step.
-- **Note**: The pipeline is designed for efficient incremental updates but supports full refresh if needed by modifying the update method in `main.py`.
+## Configuration
 
-### 2. `scrape_songs.py`
-- **Function**: `scrape_um_songs`
-- **Purpose**: Scrapes the UM song catalog from allthings.umphreys.com.
-- **Outputs**: DataFrame with song metadata.
-- **Key Columns**: `Song Name`, `Original Artist`, `Debut Date`, `Last Played`, `Times Played Live`, `Avg Show Gap`.
+- All pipeline settings are managed in `UM/config.py`.
+- Many settings can be overridden by environment variables (e.g., `UM_DATA_DIR`, `UM_SCRAPE_YEARS`).
+- No API key is required for this pipeline.
 
-### 3. `scrape_shows.py`
-- **Function**: `create_show_data`
-- **Purpose**: Extracts unique shows from setlist data, assigns sequential numbers, and saves `showdata.csv` (one row per show) in the data directory.
-- **Outputs**: DataFrame with show metadata and sequential show_number.
-- **Key Columns**: `link`, `date`, `venue`, `city`, `state`, `country`, `show_number`.
-- **Purpose**: Scrapes the UM venue catalog from allthings.umphreys.com.
-- **Outputs**: DataFrame with venue metadata.
-- **Key Columns**: `Venue Name`, `City`, `State`, `Country`, `Times Played`, `Last Played`.
+## Logging
 
-### 4. `scrape_setlists.py`
-- **Functions**: `full_um_setlist_update`, `incremental_um_setlist_update`, `_sort_setlist_df`, `save_um_setlist_data`, `load_existing_data`, `get_last_update_time`
-- **Purpose**:
-  - `full_um_setlist_update`: Fetches and builds a complete setlist dataset for all years (1998–present) from the UM website.
-  - `incremental_um_setlist_update`: Efficiently fetches setlists for just the last and current year, appends to existing data, and removes duplicates.
-  - `_sort_setlist_df`: Sorts setlist data by most recent date and set order (using custom set label logic).
-  - `save_um_setlist_data`: Sorts and saves setlist data to disk.
-  - `load_existing_data`: Loads existing song, venue, and setlist data from disk.
-  - `get_last_update_time`: Reads the last update timestamp from `last_updated.json`.
-- **Outputs**: DataFrame with detailed setlist information for each show, always sorted by most recent date and set order.
+- Logs are written to `../../logs/UM/um_pipeline.log`.
+- Log rotation, level, and formatting are configured via `UM/config.py` and the shared `logger.py` utility.
 
-### 5. `save_data.py`
-- **Functions**: `save_um_data`, `save_query_data`
-- **Purpose**: Saves the processed DataFrames to CSV files in the data directory. Writes:
-  - `last_updated.json`: Timestamp of last data update.
-  - `next_show.json`: Metadata for the next upcoming show.
-- **Files Created**: `songdata.csv`, `venuedata.csv`, `setlistdata.csv`, `last_updated.json`, `next_show.json`.
+## How to Run
 
-### 6. `utils.py`
-- **Functions**: 
-  - `get_data_dir`: Returns the path to the data directory.
-  - `get_date_and_time`: Returns the current date and time as a string.
+1. Navigate to the UM pipeline directory:
 
----
+   ```bash
+   cd /Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/
+   ```
 
-## Data Outputs
+2. Execute the pipeline:
 
-All data is stored in `3 - Data/UM/AllThingsUM/`:
+   ```bash
+   python main.py
+   ```
 
-| File                | Description                                                               |
-|---------------------|---------------------------------------------------------------------------|
-| `songdata.csv`      | Song catalog: song name, original artist, debut/last played, play counts, avg gap. |
-| `venuedata.csv`     | Venue metadata: venue name, city, state, country, play counts, last played.|
-| `setlistdata.csv`   | Song-by-song setlist data for each show (very large file).                |
-| `showdata.csv`      | One row per show: show ID (link), date, venue, city, state, country, sequential show number. |
-| `last_updated.json` | Timestamp of the most recent pipeline run.                                |
-| `next_show.json`    | Metadata for the next scheduled UM show.                                  |
+   *Note: By default, the pipeline performs an incremental setlist update. To perform a full historical update, you may need to modify the call within `main.py` (e.g., to use a function like `full_um_setlist_update` if available in `scrape_setlists.py`).*
 
-### Example: `songdata.csv` Columns
+## Dependencies
 
-- `Song Name`: Name of the song
-- `Original Artist`: Artist if cover
-- `Debut Date`: Date first played
-- `Last Played`: Date last played
-- `Times Played Live`: Number of times played
-- `Avg Show Gap`: Average number of shows between plays
-
-### Example: `venuedata.csv` Columns
-
-- `Venue Name`: Name of the venue
-- `City`, `State`, `Country`
-- `Times Played`: Number of shows at the venue
-- `Last Played`: Date of last show at the venue
-
-### Example: `setlistdata.csv` Columns
-
-- Columns may include: `Date Played`, `Song Name`, `Show Date`, `Footnote`, etc.
-- Each row represents a song played at a specific show.
-
-### Example: `showdata.csv` Columns
-
-- `link`: Unique show ID (URL or identifier)
-- `date`: Show date
-- `venue`: Venue name
-- `city`: City
-- `state`: State
-- `country`: Country
-- `show_number`: Sequential number by date
-
----
-
-## Pipeline Context
-
-- The pipeline is designed for reproducibility and automated updates.
-- Data is scraped directly from allthings.umphreys.com, ensuring up-to-date information.
-- All modules are highly modular, allowing for extension or adaptation.
-
----
-
-## Running the Pipeline
-
-Run `main.py` to execute the full scraping and data-saving process. All required dependencies are standard (requests, pandas, BeautifulSoup, etc.).
-
-- By default, the pipeline performs an **incremental setlist update** (last year and current year only, fast).
-- To perform a **full setlist update** (all years, slow), edit the update method in `main.py` to use `full_um_setlist_update` instead of `incremental_um_setlist_update`.
-
-No command-line flags are required; behavior is controlled in code for reliability and reproducibility.
+All dependencies are managed in the main `requirements.txt` file in the project root.

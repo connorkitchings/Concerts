@@ -5,7 +5,7 @@ from datetime import datetime # Added for timestamp formatting
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from logger import get_logger # Removed restrict_to_repo_root
-from call_api import access_credentials
+from Phish.config import API_KEY # Import API_KEY directly from config
 from export_data import save_phish_data, save_query_data
 from Phish.config import DATA_COLLECTED_DIR, LOG_FILE_PATH # Import band-specific LOG_FILE_PATH
 from common_config import DATETIME_FORMAT # Import DATETIME_FORMAT for parsing
@@ -22,7 +22,7 @@ def main() -> None:
     import traceback
     # Use the band-specific log file path from Phish.config
     logger = get_logger(__name__, log_file=LOG_FILE_PATH, add_console_handler=True)
-    api_key = access_credentials()
+    api_key = API_KEY # Use API_KEY from config
     data_dir = DATA_COLLECTED_DIR
     # Log previous last update
     last_updated_path = os.path.join(data_dir, "last_updated.json")

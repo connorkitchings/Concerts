@@ -16,13 +16,12 @@ from scrape_songs import scrape_wsp_songs
 from scrape_setlists import load_setlist_data
 from export_data import save_wsp_data
 from WSP.config import DATA_COLLECTED_DIR, LOG_FILE_PATH # Import band-specific LOG_FILE_PATH
-from WSP.utils import get_date_and_time
 from common_config import DATETIME_FORMAT # Import DATETIME_FORMAT for parsing
 import pandas as pd
 import os
 import time
 
-if __name__ == "__main__":
+def main() -> None:
     import traceback
     # Use the band-specific log file path from WSP.config
     logger = get_logger(__name__, log_file=LOG_FILE_PATH, add_console_handler=True)
@@ -82,3 +81,6 @@ if __name__ == "__main__":
         logger.info(f"WSP scraping pipeline completed in {elapsed:.2f} seconds.")
     except Exception as e:
         logger.error(f"WSP pipeline failed: {e}\n{traceback.format_exc()}")
+
+if __name__ == "__main__":
+    main()

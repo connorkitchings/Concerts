@@ -1,4 +1,5 @@
 import requests
+import traceback
 import pandas as pd
 from bs4 import BeautifulSoup
 from datetime import datetime
@@ -172,134 +173,8 @@ def parse_setlist_link(link: str) -> pd.DataFrame:
             df['date'] = pd.NaT
         return df
     except Exception as e:
-        logger.error(f"Error parsing setlist page {link}: {e}")
+        logger.error(f"Error parsing setlist page {link}: {e}\n{traceback.format_exc()}")
         return pd.DataFrame(columns=["song", "set", "set_index", "show_index", "date", "venue", "city", "state", "country", "link", "footnotes"])
-
-    try:
-        response = requests.get(link)
-        soup = BeautifulSoup(response.content, 'html.parser')
-
-        # Extract metadata from the header
-        header = soup.find("div", class_="setlist-date-long")
-        if not header:
-            logger.warning(f"Missing header for setlist page: {link}")
-            return pd.DataFrame(columns=["song", "set", "set_index", "show_index", "date", "venue", "city", "state", "country", "link", "footnotes"])
-        a_tags = header.find_all("a")
-        def safe_get(idx):
-            return a_tags[idx].text.strip() if len(a_tags) > idx else None
-        date = safe_get(1)
-        venue = safe_get(3)
-        city = safe_get(4)
-        state = safe_get(5)
-        country = safe_get(6)
-        # Log if any are missing
-        missing = []
-        for field, val in zip(["date", "venue", "city", "state", "country"], [date, venue, city, state, country]):
-            if val is None:
-                missing.append(field)
-        if missing:
-            # Prefer date for log context, fallback to link
-            log_id = date if date else link
-            logger.info(f"Missing fields ({', '.join(missing)}) for setlist: {log_id}")
-        # Adjustment for missing country
-        if not country:
-            log_id = date if date else link
-            # If city or state has a comma, split and shift only the right part
-            if city and ',' in city:
-                logger.info(f"Splitting city field on comma and shifting right for setlist page: {log_id}")
-                city_left, city_right = [s.strip() for s in city.split(',', 1)]
-                # Shift: country <- state, state <- city_right, city <- city_left
-                country = state
-                state = city_right
-                city = city_left
-            elif state and ',' in state:
-                logger.info(f"Splitting state field on comma and shifting right for setlist page: {log_id}")
-                state_left, state_right = [s.strip() for s in state.split(',', 1)]
-                country = state_right
-                state = state_left
-            else:
-                # Move state to country, clear state
-                logger.info(f"Moving state to country for setlist page: {log_id}")
-                country = state
-                state = None
-        # If all are missing, skip
-        if all(x is None for x in [date, venue, city, state, country]):
-            logger.warning(f"All location fields missing for setlist page: {link}")
-            return pd.DataFrame(columns=["song", "set", "set_index", "show_index", "footnotes","date", "venue", "city", "state", "country", "link"])
-
-        # ... rest of function ...
-    except Exception as e:
-        logger.error(f"Error parsing setlist page {link}: {e}")
-        return pd.DataFrame(columns=["song", "set", "set_index", "show_index", "date", "venue", "city", "state", "country", "link", "footnotes"])
-
-    # --- Footnote extraction ---
-    footnotes_map = {}
-    footnotes_section = soup.select_one(".setlist-footnotes")
-    if footnotes_section:
-        for line in footnotes_section.stripped_strings:
-            if line.startswith("[") and "]" in line:
-                key = line.split("]")[0].strip("[]")
-                value = line.split("]")[1].strip()
-                footnotes_map[key] = value
-    # --- End footnote extraction ---
-
-    # Initialize results
-    records = []
-    encore_count = 0
-    show_index = 0
-
-    # Locate the body with sets
-    setlist_body = soup.find("div", class_="setlist-body")
-    paragraphs = setlist_body.find_all("p")
-
-    for p in paragraphs:
-        b_tag = p.find("b")
-        if not b_tag:
-            continue
-
-        set_label = b_tag.text.replace(":", "").strip()
-        # Handle 'One Set' as set '1'
-        if set_label.lower() == "one set":
-            set_name = "1"
-        elif set_label.lower().startswith("set"):
-            set_number = set_label.lower().replace("set", "").strip()
-            set_name = set_number
-        elif "encore" in set_label.lower():
-            encore_count += 1
-            set_name = "E" if encore_count == 1 else f"E{encore_count}"
-        else:
-            continue
-
-        songs = p.find_all("span", class_="setlist-songbox")
-        for set_index, song_span in enumerate(songs, start=1):
-            # Extract song name and footnote key (superscript)
-            song_name = song_span.get_text(strip=True).split("[")[0].strip(",> ")
-            sup = song_span.find("sup")
-            footnote_key = sup.text.strip("[]") if sup else ""
-            show_index += 1
-            records.append({
-                "song": song_name,
-                "set": set_name,
-                "in_set_index": set_index,
-                "in_show_index": show_index,
-                "footnotes": footnotes_map.get(footnote_key, "") if footnote_key else "",
-                "date": date,
-                "venue": venue,
-                "city": city,
-                "state": state,
-                "country": country,
-                "link": link
-            })
-
-    # Convert to DataFrame
-    df = pd.DataFrame(records)
-    # Defensive: Only convert if 'date' exists and not empty
-    if not df.empty and 'date' in df.columns:
-        df['date'] = pd.to_datetime(df['date'], errors='coerce')
-        df['date'] = df['date'].dt.strftime('%m/%d/%Y')
-    else:
-        df['date'] = pd.NaT
-    return df
 
 def fetch_requested_setlists(url_list: list[str]) -> pd.DataFrame:
     """

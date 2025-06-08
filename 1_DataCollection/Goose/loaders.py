@@ -1,7 +1,7 @@
 import os
 from logger import get_logger
-
-logger = get_logger(__name__, add_console_handler=True)
+from Goose import config
+logger = get_logger(__name__, log_file=config.LOG_FILE_PATH, add_console_handler=True)
 
 import json
 from datetime import datetime
@@ -100,11 +100,6 @@ def load_setlist_data(data_dir: str = DATA_COLLECTED_DIR) -> tuple['pd.DataFrame
     """
     """Load and process Goose setlist and transition data."""
     setlist_df = pd.DataFrame(make_api_request('setlists', 'v1')['data'])
-    # Save last_updated to a json file in the data directory
-    os.makedirs(data_dir, exist_ok=True)
-    last_updated = datetime.now().isoformat()
-    with open(os.path.join(data_dir, 'last_updated.json'), 'w') as f:
-        json.dump({'last_updated': last_updated}, f)
     transition_data = (setlist_df[['transition_id', 'transition']]
                        .drop_duplicates()
                        .sort_values(by=['transition_id']))
