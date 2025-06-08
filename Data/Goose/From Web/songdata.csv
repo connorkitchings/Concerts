@@ -1,6 +1,6 @@
 song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg_show_gap
 400,Turned Clouds,1,Goose,2014-11-21,2025-06-04,115,6.64
-402,Into the Myst,1,Goose,2014-12-23,2025-06-03,73,10.72
+402,Into the Myst,1,Goose,2014-12-23,2025-06-07,74,10.57
 403,Arcadia,1,Goose,2014-11-21,2025-06-06,201,3.86
 404,Time to Flee,1,Goose,2018-03-15,2025-06-04,108,5.37
 405,Wysteria Lane,1,Vasudo,2017-04-01,2025-06-04,109,6.1
@@ -18,7 +18,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 416,Yeti,1,Great Blue,2018-10-26,2025-06-01,115,4.71
 418,Tumble,1,Vasudo,2019-01-31,2025-06-06,119,4.07
 419,Disco Inferno,0,The Trammps,2018-10-26,2022-12-18,29,16.72
-420,Creatures,1,Goose,2015-10-01,2025-05-27,129,5.67
+420,Creatures,1,Goose,2015-10-01,2025-06-07,130,5.63
 421,So Ready,1,Goose,2015-03-14,2025-05-28,140,5.42
 422,Slow Ready,1,Goose,2019-03-01,2025-06-04,90,5.23
 424,I'm Writing A Novel,0,Father John Misty,2020-03-21,2025-05-28,15,23.53
@@ -32,7 +32,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 432,726,1,Goose,2020-06-20,2025-05-10,37,9.14
 433,Also Sprach Zarathustra,0,Deodato,2016-04-20,2020-02-29,14,54.85
 434,A Fifth Of Beethoven,0,Walter Murphy,2019-10-31,2024-06-11,14,31.0
-435,A Western Sun,1,Goose,2015-04-18,2025-06-01,69,10.88
+435,A Western Sun,1,Goose,2015-04-18,2025-06-07,70,10.73
 436,Achy Breaky Heart,0,Billy Ray Cyrus,2017-12-23,2024-11-10,4,143.75
 437,Ain't Life Grand,0,Widespread Panic,2019-10-05,2019-12-08,2,203.5
 438,Arrow,1,Goose,2019-12-21,2025-05-31,83,5.07
@@ -187,7 +187,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 601,Atlantic City,0,Bruce Springsteen,2020-03-15,2024-11-10,4,88.5
 602,AUATC,0,Bon Iver,2020-10-19,2024-10-26,9,35.67
 603,Lily's Tiger,1,Great Blue,2020-11-06,2024-09-15,3,106.0
-604,The Empress Of Organos,1,Vasudo,2020-11-06,2025-05-09,81,4.61
+604,The Empress Of Organos,1,Vasudo,2020-11-06,2025-06-07,82,4.54
 605,Earthling or Alien?,1,Goose,2020-11-06,2025-02-10,46,7.07
 606,The Killing Moon,0,Echo & The Bunnymen,2020-11-07,2024-09-14,6,52.83
 607,Head Over Heels,0,Tears For Fears,2020-11-07,2020-11-07,2,317.0
@@ -201,8 +201,8 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 620,Jack-A-Roe,0,Traditional,2022-06-24,2022-06-24,1,229.0
 628,Interlude III,1,Goose,2024-04-08,2024-04-08,1,97.0
 630,Shakedown Street,0,Grateful Dead,2016-11-23,2016-11-23,1,684.0
-631,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,157.0
 631,Revival,0,The Allman Brothers Band,2017-05-20,2017-05-20,1,646.0
+631,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,157.0
 632,Wasted Words,0,The Allman Brothers Band,2017-01-28,2017-01-28,1,676.0
 633,Psycho Killer,0,Talking Heads,2016-11-23,2025-06-06,4,171.0
 634,First Tube,0,Phish,2016-10-09,2016-11-23,2,346.5
@@ -213,12 +213,13 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 641,Franklin's Tower,0,Grateful Dead,2024-12-14,2024-12-14,1,28.0
 645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-06-04,24,4.08
 646,Turbulence & The Night Rays,1,Vasudo,2022-06-10,2025-06-06,41,5.73
-647,Your Direction,1,Vasudo,2025-04-24,2025-05-30,4,4.0
+647,Your Direction,1,Vasudo,2025-04-24,2025-06-07,5,3.2
 650,The Night They Drove Old Dixie Down,0,The Band,2016-06-17,2024-06-22,2,354.0
 651,The Shape I'm In,0,The Band,2023-10-01,2023-10-01,1,118.0
 656,Back On The Train,0,Phish,2014-12-23,2019-05-04,2,380.5
 659,U.S. Blues,0,Grateful Dead,2023-07-04,2023-07-04,1,138.0
 662,Funky Bitch,0,Son Seals,2016-10-09,2016-10-09,1,693.0
+663,Jed Stone,0,Vasudo,2025-06-07,2025-06-07,1,0.0
 676,Welcome To Delta,1,Goose,2021-05-09,2021-05-09,1,310.0
 677,Moby,1,Goose,2021-05-08,2025-02-13,20,15.55
 678,Doctor My Eyes,0,Jackson Browne,2021-05-04,2023-04-13,5,62.6
@@ -231,7 +232,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 710,The Old Man's Boat,1,Goose,2021-10-08,2025-06-03,28,10.36
 711,Life On The Shelf,1,Goose,2021-10-09,2022-10-14,9,32.11
 712,Dr. Darkness,1,Goose,2022-01-26,2025-05-28,41,6.56
-714,Rockdale,1,Vasudo,2021-10-30,2025-05-30,66,4.47
+714,Rockdale,1,Vasudo,2021-10-30,2025-06-07,67,4.4
 716,Draggin' the Line,0,Tommy James,2021-10-31,2024-09-24,2,142.5
 717,I'm A Believer,0,The Monkees,2021-10-31,2021-11-19,2,142.5
 718,American Woman,0,The Guess Who,2021-10-31,2022-02-12,3,95.0
@@ -249,7 +250,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 736,Silver Rising,1,Goose,2022-02-02,2025-05-30,61,4.33
 737,Jeff Engborg,1,Great Blue,2022-02-05,2025-02-07,11,23.73
 738,Dripfield,1,Goose,2022-02-26,2025-06-04,58,4.47
-739,Sinnerman,0,Nina Simone,2022-02-26,2025-04-24,12,21.25
+739,Sinnerman,0,Nina Simone,2022-02-26,2025-06-07,13,19.62
 740,Hungersite,1,Goose,2022-02-26,2025-06-04,66,3.86
 741,Trevor Reads Poetry,1,Goose,2020-06-20,2025-05-31,7,48.29
 747,Happy Birthday,0,Goose,2018-02-15,2020-10-15,6,92.17
@@ -284,8 +285,8 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 864,All I Need,0,LP Giobbi,2023-09-14,2023-09-14,1,131.0
 864,All I Need,0,Goose,2017-01-28,2025-05-31,146,4.86
 867,I Would Die 4 U,0,Prince,2023-10-06,2025-05-25,9,12.78
-868,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,157.0
 868,Revival,0,The Allman Brothers Band,2017-05-20,2017-05-20,1,646.0
+868,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,157.0
 883,Mirrors,0,Justin Timberlake,2023-12-08,2023-12-08,1,100.0
 884,Man in the Mirror,0,Michael Jackson,2023-12-08,2023-12-08,1,100.0
 885,Fire,0,Jimi Hendrix,2023-12-08,2023-12-08,1,100.0
@@ -305,15 +306,15 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 933,How It Ends,1,Vasudo,2024-04-10,2025-06-06,5,19.0
 935,Gen X Cops,0,Vampire Weekend,2024-04-10,2024-04-10,1,95.0
 943,Draconian Meter Maid,1,Swimmer,2024-09-01,2025-06-03,12,5.83
-945,Big Modern!,1,Goose,2024-09-01,2025-06-03,20,3.68
+945,Big Modern!,1,Goose,2024-09-01,2025-06-07,21,3.5
 946,"One In, One Out",1,Goose,2024-09-02,2025-05-27,11,6.27
-947,My Mind Has Been Consumed By Media,1,Swimmer,2024-09-03,2025-06-01,6,11.33
+947,My Mind Has Been Consumed By Media,1,Swimmer,2024-09-03,2025-06-07,7,9.71
 948,War Pigs,0,Black Sabbath,2024-10-01,2024-10-01,1,49.0
 950,You Spin Me Round (Like A Record),0,Dead or Alive,2024-10-31,2025-06-03,3,13.33
 951,Stranger Things,0,S U R V I V E,2024-10-31,2024-10-31,2,40.0
 952,Maniac,0,Michael Sembello,2024-10-31,2024-11-07,3,20.0
 953,Wipeout,0,Bob Berryhill,2024-10-31,2024-10-31,1,40.0
-955,Running Up That Hill,0,Kate Bush,2024-10-31,2024-11-09,2,20.0
+955,Running Up That Hill,0,Kate Bush,2024-10-31,2025-06-07,3,13.33
 956,Everybody Wants To Rule The World,0,Tears For Fears,2024-10-31,2024-10-31,1,40.0
 958,Sirius,0,The Alan Parsons Project,2024-12-13,2024-12-14,2,14.5
 959,Kashmir.,0,Led Zeppelin,2024-12-13,2024-12-13,1,29.0
@@ -325,12 +326,12 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 967,The King,1,Goose,2024-12-13,2024-12-13,1,29.0
 968,Low Rider,0,War,2024-12-30,2024-12-30,1,27.0
 969,I Only Have Eyes For You,0,The Flamingos,2024-12-31,2024-12-31,1,26.0
-970,Dustin Hoffman,1,Goose,2025-05-10,2025-06-03,3,3.67
+970,Dustin Hoffman,1,Goose,2025-05-10,2025-06-07,4,2.75
 971,Iguana Song,1,Goose,2025-05-09,2025-06-03,3,4.33
 972,Flood in Franklin Park,0,Grant Green,2014-12-23,2025-02-06,2,380.5
 973,Trick To Happy,0,Bahamas,2025-02-10,2025-02-10,1,22.0
 978,In Bloom,0,Nirvana,2025-05-08,2025-05-08,1,14.0
-979,Torero,1,Goose,2025-05-08,2025-05-28,2,7.0
+979,Torero,1,Goose,2025-05-08,2025-06-07,3,4.67
 980,Ride Like The Wind,0,Christopher Cross,2025-05-08,2025-05-08,1,14.0
-981,fast:slow,1,Goose,2025-05-09,2025-05-09,1,13.0
+981,fast:slow,1,Goose,2025-05-09,2025-06-07,2,6.5
 982,Moby Dick,0,Led Zeppelin,2025-05-31,2025-05-31,1,5.0
