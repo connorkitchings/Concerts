@@ -1,59 +1,15 @@
-[2025-06-07 12:14:47,912] INFO __main__: Previous Last update: 2025-05-26 11:46:00
-[2025-06-07 12:14:47,912] INFO __main__: Scraping latest song data...
-[2025-06-07 12:14:53,394] INFO __main__: Scraping latest venue data...
-[2025-06-07 12:14:55,169] INFO scrape_venues: Scraped 923 venues from https://allthings.umphreys.com/venues/
-[2025-06-07 12:14:55,171] INFO __main__: Scraping full setlist data...
-[2025-06-07 12:14:56,815] INFO scrape_setlists: Found 86 setlists for 2024.
-[2025-06-07 12:14:57,964] INFO scrape_setlists: Found 47 setlists for 2025.
-[2025-06-07 12:14:57,964] INFO scrape_setlists: 133 total shows found.
-[2025-06-07 12:14:57,965] ERROR __main__: UM pipeline failed: cannot import name 'DATA_DIR' from 'UM.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/config.py)
-Traceback (most recent call last):
-  File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/run_pipeline.py", line 44, in main
-    setlist_data = fetch_um_setlist_data()
-  File "/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/scrape_setlists.py", line 357, in fetch_um_setlist_data
-    from UM.config import DATA_DIR
-ImportError: cannot import name 'DATA_DIR' from 'UM.config' (/Users/connorkitchings/Desktop/Repositories/Concerts/1_DataCollection/UM/config.py)
-
-[2025-06-07 12:16:11,244] INFO __main__: Previous Last update: 2025-05-26 11:46:00
-[2025-06-07 12:16:11,244] INFO __main__: Scraping latest song data...
-[2025-06-07 12:16:16,300] INFO __main__: Scraping latest venue data...
-[2025-06-07 12:16:18,264] INFO scrape_venues: Scraped 923 venues from https://allthings.umphreys.com/venues/
-[2025-06-07 12:16:18,265] INFO __main__: Scraping full setlist data...
-[2025-06-07 12:16:19,951] INFO scrape_setlists: Found 86 setlists for 2024.
-[2025-06-07 12:16:21,109] INFO scrape_setlists: Found 47 setlists for 2025.
-[2025-06-07 12:16:21,109] INFO scrape_setlists: 133 total shows found.
-[2025-06-07 12:16:21,276] INFO scrape_setlists: Found 2,849 existing setlists.
-[2025-06-07 12:16:21,282] INFO scrape_setlists: There are 5 new setlists to scrape.
-[2025-06-07 12:16:22,789] INFO __main__: Fetched 46,858 setlist songs for 2,854 shows.
-[2025-06-07 12:16:22,856] INFO scrape_shows: Saved showdata.csv with 2854 shows to 3_DataStorage/UM/Collected/showdata.csv
-[2025-06-07 12:16:23,746] INFO __main__: UM pipeline completed in 12.50 seconds.
-[2025-06-07 12:16:53,692] INFO __main__: Previous Last update: 2025-06-07 12:16:23
-[2025-06-07 12:16:53,692] INFO __main__: Scraping latest song data...
-[2025-06-07 12:16:58,647] INFO __main__: Song scraping completed. Found 1020 songs.
-[2025-06-07 12:16:58,647] INFO __main__: Scraping latest venue data...
-[2025-06-07 12:17:00,535] INFO scrape_venues: Scraped 923 venues from https://allthings.umphreys.com/venues/
-[2025-06-07 12:17:00,536] INFO __main__: Scraping full setlist data...
-[2025-06-07 12:17:02,223] INFO scrape_setlists: Found 86 setlists for 2024.
-[2025-06-07 12:17:03,393] INFO scrape_setlists: Found 47 setlists for 2025.
-[2025-06-07 12:17:03,393] INFO scrape_setlists: 133 total shows found.
-[2025-06-07 12:17:03,573] INFO scrape_setlists: Found 2,854 existing setlists.
-[2025-06-07 12:17:03,577] INFO scrape_setlists: There are 0 new setlists to scrape.
-[2025-06-07 12:17:03,577] INFO scrape_setlists: No new setlists to scrape.
-[2025-06-07 12:17:03,584] INFO __main__: Fetched 46,858 setlist songs for 2,854 shows.
-[2025-06-07 12:17:03,648] INFO scrape_shows: Saved showdata.csv with 2,854 shows to 3_DataStorage/UM/Collected/showdata.csv
-[2025-06-07 12:17:04,341] INFO __main__: UM pipeline completed in 10.65 seconds.
-[2025-06-07 12:18:05,528] INFO __main__: Previous Last update: 2025-06-07 12:17:04
-[2025-06-07 12:18:05,528] INFO __main__: Scraping latest song data...
-[2025-06-07 12:18:10,594] INFO __main__: Song scraping completed. Found 1020 songs.
-[2025-06-07 12:18:10,594] INFO __main__: Scraping latest venue data...
-[2025-06-07 12:18:12,407] INFO scrape_venues: Scraped 923 venues from https://allthings.umphreys.com/venues/
-[2025-06-07 12:18:12,408] INFO __main__: Scraping full setlist data...
-[2025-06-07 12:18:14,085] INFO scrape_setlists: Found 86 setlists for 2024.
-[2025-06-07 12:18:15,351] INFO scrape_setlists: Found 47 setlists for 2025.
-[2025-06-07 12:18:15,351] INFO scrape_setlists: 133 total shows found.
-[2025-06-07 12:18:15,528] INFO scrape_setlists: Found 2,854 existing setlists.
-[2025-06-07 12:18:15,532] INFO scrape_setlists: There are 0 new setlists to scrape.
-[2025-06-07 12:18:15,532] INFO scrape_setlists: No new setlists to scrape.
-[2025-06-07 12:18:15,538] INFO __main__: Fetched 46,858 setlist songs for 2,854 shows.
-[2025-06-07 12:18:15,600] INFO scrape_shows: Saved showdata.csv with 2,854 shows to ../3_DataStorage/UM/Collected/showdata.csv
-[2025-06-07 12:18:16,316] INFO __main__: UM pipeline completed in 10.79 seconds.
+[06-08-2025 15:51:56,190] INFO __main__: Previous Last update: 06/08/2025 15:47
+[06-08-2025 15:51:56,190] INFO __main__: Scraping latest song data...
+[06-08-2025 15:52:01,005] INFO __main__: Song scraping completed. Found 1020 songs.
+[06-08-2025 15:52:01,005] INFO __main__: Scraping latest venue data...
+[06-08-2025 15:52:02,763] INFO scrape_venues: Scraped 923 venues from https://allthings.umphreys.com/venues/
+[06-08-2025 15:52:02,764] INFO __main__: Scraping full setlist data...
+[06-08-2025 15:52:04,480] INFO scrape_setlists: Found 86 setlists for 2024.
+[06-08-2025 15:52:05,658] INFO scrape_setlists: Found 47 setlists for 2025.
+[06-08-2025 15:52:05,659] INFO scrape_setlists: 133 total shows found.
+[06-08-2025 15:52:05,799] INFO scrape_setlists: Found 2,854 existing setlists.
+[06-08-2025 15:52:05,803] INFO scrape_setlists: There are 0 new setlists to scrape.
+[06-08-2025 15:52:05,804] INFO scrape_setlists: No new setlists to scrape.
+[06-08-2025 15:52:05,811] INFO __main__: Fetched 46,858 setlist songs for 2,854 shows.
+[06-08-2025 15:52:05,864] INFO scrape_shows: Saved showdata.csv with 2,854 shows to ../3_DataStorage/UM/Collected/showdata.csv
+[06-08-2025 15:52:06,213] INFO __main__: UM pipeline completed in 10.02 seconds.

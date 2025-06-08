@@ -1,1 +1,10 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Environment
 .env
+.venv/
+env/
+venv/

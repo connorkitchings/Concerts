@@ -1,40 +1,6 @@
-[2025-06-07 11:59:13,529] INFO __main__: Previous Last update: 05/26/2025 11:54
-[2025-06-07 11:59:13,529] INFO __main__: Loading Song Data
-[2025-06-07 11:59:18,307] INFO __main__: Loading Show and Venue Data
-[2025-06-07 11:59:18,691] INFO __main__: Loading Setlist and Transition Data
-[2025-06-07 11:59:27,719] INFO __main__: Phish pipeline completed in 14.19 seconds.
-[2025-06-07 12:00:00,701] INFO __main__: Previous Last update: 06/07/2025 11:59
-[2025-06-07 12:00:00,702] INFO __main__: Loading Song Data
-[2025-06-07 12:00:02,330] INFO __main__: Loading Show and Venue Data
-[2025-06-07 12:00:02,748] INFO __main__: Loading Setlist and Transition Data
-[2025-06-07 12:00:02,748] INFO __main__: Calling load_setlist_data...
-[2025-06-07 12:00:11,522] INFO __main__: load_setlist_data returned. Setlist data rows: 64157, Transition data rows: 7
-[2025-06-07 12:00:11,955] INFO __main__: Phish pipeline completed in 11.25 seconds.
-[2025-06-07 12:06:56,131] INFO __main__: Previous Last update: 06/07/2025 12:00
-[2025-06-07 12:06:56,132] INFO __main__: Loading Song Data
-[2025-06-07 12:06:57,677] INFO __main__: Loading Show and Venue Data
-[2025-06-07 12:06:58,087] INFO __main__: Loading Setlist and Transition Data
-[2025-06-07 12:06:58,087] INFO __main__: Calling load_setlist_data...
-[2025-06-07 12:07:07,180] INFO __main__: load_setlist_data returned. Setlist data rows: 64157, Transition data rows: 7
-[2025-06-07 12:07:07,636] INFO __main__: Phish pipeline completed in 11.50 seconds.
-[2025-06-07 12:07:48,947] INFO __main__: Previous Last update: 2025-06-07 12:07:07
-[2025-06-07 12:07:48,947] INFO __main__: Loading Song Data
-[2025-06-07 12:07:50,660] INFO __main__: Loading Show and Venue Data
-[2025-06-07 12:07:51,099] INFO __main__: Loading Setlist and Transition Data
-[2025-06-07 12:07:51,100] INFO __main__: Calling load_setlist_data...
-[2025-06-07 12:07:59,756] INFO __main__: load_setlist_data returned. Setlist data rows: 64157, Transition data rows: 7
-[2025-06-07 12:08:00,237] INFO __main__: Phish pipeline completed in 11.29 seconds.
-[2025-06-07 12:09:19,861] INFO __main__: Previous Last update: 2025-06-07 12:08:00
-[2025-06-07 12:09:19,861] INFO __main__: Loading Song Data
-[2025-06-07 12:09:21,307] INFO __main__: Loading Show and Venue Data
-[2025-06-07 12:09:21,685] INFO __main__: Loading Setlist and Transition Data
-[2025-06-07 12:09:21,686] INFO __main__: Calling load_setlist_data...
-[2025-06-07 12:09:29,757] INFO __main__: load_setlist_data returned. Setlist data rows: 64,157, Transition data rows: 7
-[2025-06-07 12:09:31,200] INFO __main__: Phish pipeline completed in 11.34 seconds.
-[2025-06-07 12:17:49,932] INFO __main__: Previous Last update: 2025-06-07 12:09:31
-[2025-06-07 12:17:49,933] INFO __main__: Loading Song Data
-[2025-06-07 12:17:51,698] INFO __main__: Loading Show and Venue Data
-[2025-06-07 12:17:52,294] INFO __main__: Loading Setlist and Transition Data
-[2025-06-07 12:17:52,295] INFO __main__: Calling load_setlist_data...
-[2025-06-07 12:18:00,001] INFO __main__: load_setlist_data returned. Setlist data rows: 64,157, Transition data rows: 7
-[2025-06-07 12:18:00,570] INFO __main__: Phish pipeline completed in 10.64 seconds.
+[06-08-2025 15:51:41,426] INFO __main__: Previous Last update: 06/08/2025 15:45
+[06-08-2025 15:51:41,426] INFO __main__: Loading Song Data
+[06-08-2025 15:51:42,978] INFO __main__: Loading Show and Venue Data
+[06-08-2025 15:51:43,453] INFO __main__: Loading Setlist and Transition Data
+[06-08-2025 15:51:51,337] INFO __main__: load_setlist_data returned. Setlist data rows: 64,157, Transition data rows: 7
+[06-08-2025 15:51:51,658] INFO __main__: Phish pipeline completed in 10.23 seconds.

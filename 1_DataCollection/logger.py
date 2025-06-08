@@ -64,7 +64,7 @@ def get_logger(
     logger.setLevel(effective_log_level)
     if not logger.handlers:
         handler = RotatingFileHandler(str(log_file_path), maxBytes=log_max_bytes, backupCount=log_backup_count) # RotatingFileHandler expects a string path
-        formatter = logging.Formatter('[%(asctime)s] %(levelname)s %(name)s: %(message)s')
+        formatter = logging.Formatter('[%(asctime)s,%(msecs)03d] %(levelname)s %(name)s: %(message)s', datefmt='%m-%d-%Y %H:%M:%S')
         handler.setFormatter(formatter)
         logger.addHandler(handler)
         if add_console_handler:

@@ -6,6 +6,8 @@ All configuration is managed via config.py and environment variables.
 """
 import sys
 import os
+from datetime import datetime # Added for timestamp formatting
+import json # Moved import json to top
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from logger import get_logger # Removed restrict_to_repo_root
@@ -15,6 +17,7 @@ from scrape_setlists import load_setlist_data
 from export_data import save_wsp_data
 from WSP.config import DATA_COLLECTED_DIR, LOG_FILE_PATH # Import band-specific LOG_FILE_PATH
 from WSP.utils import get_date_and_time
+from common_config import DATETIME_FORMAT # Import DATETIME_FORMAT for parsing
 import pandas as pd
 import os
 import time
@@ -26,16 +29,25 @@ if __name__ == "__main__":
     # Log previous last update
     data_dir = DATA_COLLECTED_DIR
     last_updated_path = os.path.join(data_dir, "last_updated.json")
-    prev_update = None
+    prev_update_str = None
     if os.path.exists(last_updated_path):
         try:
-            import json
             with open(last_updated_path, "r") as f:
-                prev_update = json.load(f).get("last_updated")
+                prev_update_str = json.load(f).get("last_updated")
         except Exception as e:
             logger.warning(f"Could not read last_updated.json: {e}")
-    if prev_update:
-        logger.info(f"Previous Last update: {prev_update}")
+
+    if prev_update_str:
+        try:
+            # Parse the existing timestamp (YYYY-MM-DD HH:MM:SS)
+            dt_object = datetime.strptime(prev_update_str, DATETIME_FORMAT)
+            # Format to MM/DD/YYYY HH:MM
+            formatted_prev_update = dt_object.strftime('%m/%d/%Y %H:%M')
+            logger.info(f"Previous Last update: {formatted_prev_update}")
+        except ValueError:
+            # If parsing fails, log the original string as a fallback
+            logger.warning(f"Could not parse previous update timestamp: {prev_update_str}. Logging as is.")
+            logger.info(f"Previous Last update: {prev_update_str}")
     else:
         logger.info("No previous update found.")
     start_time = time.time()
