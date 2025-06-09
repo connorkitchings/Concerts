@@ -219,7 +219,7 @@ song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg
 656,Back On The Train,0,Phish,2014-12-23,2019-05-04,2,380.5
 659,U.S. Blues,0,Grateful Dead,2023-07-04,2023-07-04,1,138.0
 662,Funky Bitch,0,Son Seals,2016-10-09,2016-10-09,1,693.0
-663,Jed Stone,0,Vasudo,2025-06-07,2025-06-07,1,0.0
+663,Jed Stone,1,Vasudo,2025-06-07,2025-06-07,1,0.0
 676,Welcome To Delta,1,Goose,2021-05-09,2021-05-09,1,310.0
 677,Moby,1,Goose,2021-05-08,2025-02-13,20,15.55
 678,Doctor My Eyes,0,Jackson Browne,2021-05-04,2023-04-13,5,62.6
