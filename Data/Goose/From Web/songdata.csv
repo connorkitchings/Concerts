@@ -1,337 +1,337 @@
 song_id,song,is_original,original_artist,debut_date,last_played,times_played,avg_show_gap
-400,Turned Clouds,1,Goose,2014-11-21,2025-06-04,115,6.65
-402,Into the Myst,1,Goose,2014-12-23,2025-06-07,74,10.58
-403,Arcadia,1,Goose,2014-11-21,2025-06-06,201,3.86
-404,Time to Flee,1,Goose,2018-03-15,2025-06-04,108,5.38
-405,Wysteria Lane,1,Vasudo,2017-04-01,2025-06-04,109,6.11
-406,Lead the Way,1,Goose,2014-12-20,2024-11-09,85,9.08
-407,Interlude I,1,Goose,2019-11-09,2024-04-08,2,200.0
+400,Turned Clouds,1,Goose,2014-11-21,2025-06-04,115,6.66
+402,Into the Myst,1,Goose,2014-12-23,2025-06-07,74,10.6
+403,Arcadia,1,Goose,2014-11-21,2025-06-06,201,3.87
+404,Time to Flee,1,Goose,2018-03-15,2025-06-04,108,5.39
+405,Wysteria Lane,1,Vasudo,2017-04-01,2025-06-04,109,6.12
+406,Lead the Way,1,Goose,2014-12-20,2025-06-10,86,8.99
+407,Interlude I,1,Goose,2019-11-09,2024-04-08,2,200.5
 408,Hot Tea,1,Vasudo,2018-08-02,2025-05-30,149,3.67
-409,Interlude II,1,Goose,2024-04-08,2025-06-01,9,10.89
-410,Indian River,1,Goose,2014-12-20,2025-06-06,115,6.63
-411,Jive I,1,Goose,2014-11-21,2025-06-01,128,6.02
-412,Rosewood Heart,1,Goose,2015-02-20,2025-06-01,62,12.23
-413,Jive II,1,Goose,2015-03-14,2025-06-03,83,9.1
-414,All I Need,1,LP Giobbi,2023-09-14,2023-09-14,1,132.0
-414,All I Need,1,Goose,2017-01-28,2025-05-31,146,4.87
-415,Butter Rum,1,Vasudo,2018-04-06,2025-05-10,114,4.94
-416,Yeti,1,Great Blue,2018-10-26,2025-06-01,115,4.72
-418,Tumble,1,Vasudo,2019-01-31,2025-06-06,119,4.08
-419,Disco Inferno,0,The Trammps,2018-10-26,2022-12-18,29,16.76
-420,Creatures,1,Goose,2015-10-01,2025-06-07,130,5.64
-421,So Ready,1,Goose,2015-03-14,2025-05-28,140,5.43
-422,Slow Ready,1,Goose,2019-03-01,2025-06-04,90,5.24
-424,I'm Writing A Novel,0,Father John Misty,2020-03-21,2025-05-28,15,23.6
-425,The Whales,1,Goose,2020-06-27,2025-06-04,44,7.59
-426,Can't Get You Out Of My Head,0,Kylie Minogue,2019-03-01,2024-10-26,22,20.73
-427,Mustang Sally,0,Wilson Pickett,2014-12-20,2023-03-10,14,54.5
-428,Weird Fishes / Arpeggi,0,Radiohead,2018-02-08,2024-09-26,10,55.8
-429,Bob Don,1,Goose,2020-01-24,2025-06-03,55,6.95
-430,What's Up?,0,4 Non Blondes,2018-06-01,2023-10-06,8,65.63
-431,Rock The Casbah,0,The Clash,2020-06-27,2024-10-30,12,27.83
-432,726,1,Goose,2020-06-20,2025-05-10,37,9.16
-433,Also Sprach Zarathustra,0,Deodato,2016-04-20,2020-02-29,14,54.92
-434,A Fifth Of Beethoven,0,Walter Murphy,2019-10-31,2024-06-11,14,31.08
-435,A Western Sun,1,Goose,2015-04-18,2025-06-07,70,10.74
-436,Achy Breaky Heart,0,Billy Ray Cyrus,2017-12-23,2024-11-10,4,144.0
-437,Ain't Life Grand,0,Widespread Panic,2019-10-05,2019-12-08,2,204.0
-438,Arrow,1,Goose,2019-12-21,2025-05-31,83,5.08
-439,Atlas,0,The Wood Brothers,2015-02-20,2025-05-10,37,20.49
-440,Billie Jean,0,Michael Jackson,2014-11-21,2019-12-14,6,127.5
-441,Boogie On Reggae Woman,0,Stevie Wonder,2014-12-20,2020-02-29,13,58.69
-442,Boogie Wonderland,0,"Earth, Wind & Fire and The Emotions",2018-07-05,2018-11-21,2,256.5
-443,Brown-Eyed Women,0,Grateful Dead,2016-07-09,2017-07-08,3,235.67
-444,Cantaloupe Island,0,Herbie Hancock,2015-03-14,2024-10-01,11,68.64
-445,Carol Of The Bells,0,Mykola Leontovych,2015-12-19,2022-12-17,3,242.67
-446,Caution,0,Bob Marley,2014-12-20,2024-10-24,16,47.69
-447,Chank,0,John Scofield,2014-11-21,2014-12-23,3,255.0
-449,Christmas Must Be Tonight,0,The Band,2019-12-21,2022-12-16,2,193.0
-450,Christmas Wrapping,0,The Waitresses,2017-12-23,2019-12-21,3,192.0
-451,Cleanin' Up The Town,0,The Bus Boys,2018-10-26,2018-10-26,1,486.0
-452,Cold Rain And Snow,0,Grateful Dead,2014-11-26,2024-10-25,2,382.0
-453,Compared To What,0,Gene McDaniels,2017-07-08,2017-07-13,2,314.5
-455,Crosseyed & Painless,0,Talking Heads,2016-04-15,2022-12-18,41,17.46
-456,Dancing In The Moonlight,0,King Harvest,2014-12-20,2023-07-01,13,58.69
-457,Danger Zone,0,Kenny Loggins,2016-11-23,2024-11-07,20,36.05
-458,Day-O,0,Harry Belafonte,2018-12-22,2019-05-25,2,234.0
-459,Doc Brown,1,Great Blue,2018-06-01,2025-05-31,45,11.93
-460,Don't Do It,0,The Band,2016-08-12,2025-05-27,37,18.97
-461,Doobie Song,1,Goose,2019-03-01,2024-09-04,23,19.83
-462,Drive,1,Goose,2018-08-03,2025-06-06,110,4.9
-463,Echo of a Rose,1,Vasudo,2018-08-02,2025-06-06,112,5.11
-464,Electric Avenue,0,Eddy Grant,2018-12-22,2025-06-01,38,12.32
-465,Elizabeth,1,Goose,2018-03-15,2025-02-10,62,9.0
-466,Elmeg The Wise,1,St. John's Revival,2016-07-09,2025-05-30,23,32.14
-467,Elmer Theme,0,Elmer Bernstein,2018-10-26,2018-10-26,1,486.0
-468,Eminence Front,0,The Who,2019-04-18,2024-11-12,13,34.31
-469,Escape (The Piña Colada Song),0,Rupert Holmes,2016-11-23,2024-06-18,28,24.46
-471,Everywhere,0,Michelle Branch,2018-11-16,2019-12-08,3,160.0
-472,I2I,0,Tevin Campbell,2019-06-15,2024-12-31,2,217.0
-473,Factory Fiction,1,Vasudo,2016-10-09,2025-06-06,25,28.92
-474,Feel Like Making Love,0,Bad Company,2019-10-05,2019-11-27,2,204.0
-475,Feliz Navidad,0,Jose Feliciano,2018-12-22,2018-12-22,1,468.0
-476,Fire On The Mountain,0,Grateful Dead,2014-11-26,2014-11-26,1,764.0
-477,Fish In The Sea,0,Fat Freddy's Drop,2020-06-26,2025-05-08,26,12.88
-478,Flodown,1,Vasudo,2015-09-26,2025-05-27,154,4.83
-479,Get The Funk Out Ma Face,0,Brothers Johnson,2019-10-31,2023-04-21,7,57.71
-480,Ghostbusters,0,Ray Parker Jr.,2018-10-26,2024-04-24,4,162.0
-481,Ghostbusters Rap,0,Run DMC,2018-10-27,2022-10-14,20,24.25
-482,Green River,0,Creedence Clearwater Revival,2016-07-09,2025-05-28,33,21.42
-483,Gone Gone Good,1,Goose,2014-11-21,2015-03-14,3,255.0
-484,Gringo,1,Goose,2014-12-20,2019-12-21,5,152.6
-485,Hard To Handle,0,Otis Redding,2014-11-26,2023-01-15,7,109.14
-486,Heart's On Fire,0,Passenger,2015-02-20,2015-02-20,1,758.0
-488,Hollywood Nights,0,Bob Seger & The Silver Bullet Band,2018-05-03,2025-05-31,13,41.0
-489,Home,0,Edward Sharp & The Magnetic Zeros,2018-03-15,2018-03-15,1,549.0
-490,Honeybee,1,Goose,2019-12-21,2024-06-10,33,11.7
-491,Feeling Hot Hot Hot,0,The Merrymen,2018-12-22,2019-12-06,14,33.43
-492,Hot Night,0,Laura Branigan,2018-10-27,2020-06-20,6,97.0
-493,I Shot The Sheriff,0,Bob Marley,2014-11-26,2015-04-18,2,382.0
-494,I Touch Myself,0,Divinyls,2018-07-12,2019-02-15,2,255.5
-495,I Wish,0,Stevie Wonder,2014-11-21,2022-03-01,13,58.85
-496,I'm Alright,0,Kenny Loggins,2018-07-05,2024-06-20,17,34.2
-497,In Memory Of Elizabeth Reed,0,The Allman Brothers Band,2017-01-28,2023-10-08,3,169.25
-498,In Your Eyes,0,Peter Gabriel,2020-06-20,2024-09-14,10,33.9
-499,Inside Out,0,Spoon,2019-10-18,2025-02-13,16,25.44
-500,It Burns Within,1,St. John's Revival,2014-12-20,2024-06-26,10,76.3
-501,"It's All Over Now, Baby Blue",0,Bob Dylan,2015-04-18,2021-06-15,2,376.0
-502,Jive Lee,1,Goose,2018-06-02,2025-06-03,84,6.31
-503,Johnny B. Goode,0,Chuck Berry,2018-05-04,2018-05-04,1,532.0
-504,Kung Fu Fighting,0,Carl Douglas,2016-11-23,2019-03-01,2,342.5
-505,Lady Marmalade,0,Patti Labell,2019-10-31,2019-12-13,3,134.67
-506,Let's Dance,0,David Bowie,2017-05-20,2018-04-21,9,71.89
-507,Linus And Lucy,0,Vince Guaraldi,2014-12-20,2022-12-17,8,152.6
-508,Liza Jane,0,African American Folk Song,2018-06-01,2024-06-25,19,27.63
-509,Love Me Sexy,0,Jackie Moon,2019-10-31,2019-11-27,2,202.0
-510,Love T.K.O.,0,Teddy Pendergrass,2018-04-06,2018-04-21,2,271.5
-511,Lovely Day,0,Bill Withers,2020-01-24,2020-03-11,2,191.0
-512,Madhuvan,1,Goose,2014-12-20,2025-06-01,168,4.95
-513,Mas Que Nada,0,Sergio Mendes,2018-07-12,2025-05-31,23,22.22
-514,Make The Move,0,Kenny Loggins,2018-07-05,2024-06-20,19,28.5
-515,Me and Julio Down By The Schoolyard,0,Paul Simon,2018-04-21,2022-06-12,21,25.48
-516,Mele Kalikimaka,0,Bing Crosby,2018-12-22,2018-12-22,1,468.0
-519,Movin' Out (Anthony's Song),0,Billy Joel,2019-06-15,2021-11-10,14,31.0
-520,Mr. Night,0,Kenny Loggins,2018-07-05,2018-07-05,1,513.0
-521,My Generation,0,The Who,2018-07-12,2022-08-12,7,73.0
-522,Never Never Gonna Give Ya Up,0,Barry White,2019-10-31,2019-10-31,1,404.0
-523,New Speedway Boogie,0,Grateful Dead,2014-11-26,2014-11-26,1,764.0
-524,Nights In White Satin,0,The Moody Blues,2020-01-25,2023-09-26,8,47.63
-525,No Rain,0,Blind Melon,2018-06-02,2024-06-28,17,30.82
-526,On Our Own,0,Bobby Brown,2018-10-26,2018-10-26,1,486.0
-527,One More Day,0,The Wood Brothers,2015-04-18,2024-09-20,13,57.85
-528,One More Saturday Night,0,Grateful Dead,2014-12-20,2021-12-31,21,38.15
-529,One Way Out,0,The Allman Brothers Band,2017-01-28,2017-07-08,2,338.5
-530,Peaches En Regalia,0,Frank Zappa,2016-10-09,2019-09-06,7,99.14
-531,Peggy-O,0,Grateful Dead,2015-02-20,2024-11-12,16,47.38
-532,Pinche Gringo,1,Goose,2015-03-14,2015-03-14,1,755.0
-533,Praise You,0,Fatboy Slim,2016-04-15,2024-06-30,9,89.5
-534,Pumped Up Kicks,0,Foster The People,2016-11-23,2025-06-01,25,27.4
-536,Red Bird,1,Goose,2022-01-29,2025-05-31,52,5.13
-537,Red Red Wine,0,UB40,2018-12-22,2018-12-22,1,468.0
-538,Rosa Lee McFall,0,Grateful Dead,2019-08-08,2024-09-06,3,140.67
-539,Rosetta,0,Earl Hines,2014-12-20,2015-02-20,3,254.33
-541,Same Old Shenanigans,1,Goose,2016-03-19,2025-06-01,56,12.88
-542,Savin' The Day,0,Alessi Brothers,2018-10-27,2018-10-27,1,485.0
-543,Sco-Mule,0,Government Mule ft. John Scofield,2014-11-26,2021-11-16,8,95.5
-544,Secret Agent Man,0,Johnny Rivers,2018-07-12,2024-06-23,5,127.75
-545,Shama Lama Ding Dong,0,Otis Day and The Knights,2016-10-09,2025-02-11,43,16.14
-546,She Drives Me Crazy,0,Fine Young Cannibals,2017-08-19,2017-08-19,1,614.0
-547,Shelter From The Storm,0,Bob Dylan,2020-06-28,2020-06-28,1,333.0
-548,Shoe Dog,0,John Scofield,2014-11-26,2014-11-26,1,764.0
-549,Short People,0,Randy Newman,2019-10-31,2019-12-13,3,134.67
-550,Shout,0,The Isley Brothers,2014-12-20,2020-03-05,8,95.38
-551,Sleepwalk,0,Santo & Johnny,2019-10-19,2024-06-16,4,101.5
-552,Soul Bossa Nova,0,Quincy Jones,2018-07-12,2021-10-31,3,255.5
-553,Soul Shakedown Party,0,Bob Marley,2016-10-09,2017-08-19,4,173.5
-555,Spain,0,Chick Corea,2015-10-01,2024-06-25,4,183.25
-556,Spanish Moon,0,Little Feat,2016-10-09,2017-10-02,2,347.0
-557,Spirit Of The Dark Horse,1,Goose,2014-11-26,2025-02-15,35,21.83
-558,State Of The Art (A.E.I.O.U.),0,Jim James,2020-09-17,2025-06-06,11,29.82
-559,Stormy Monday,0,The Allman Brothers Band,2018-05-04,2018-05-04,1,532.0
-560,Strokin',0,Clarence Carter,2018-04-21,2021-06-19,6,89.17
-561,Summertime Blues,0,Eddie Cochran,2018-07-05,2018-07-05,1,513.0
-562,Suzie Q,0,Creedence Clearwater Revival,2025-06-06,2025-06-06,1,2.0
-563,Sweet Home Chicago,0,The Blues Brothers,2019-12-21,2019-12-21,1,386.0
-564,Switchin',0,Wes Montgomery,2015-02-20,2024-09-03,27,28.07
-565,Take On Me,0,A-Ha,2016-11-23,2024-10-26,9,76.11
-566,Tennessee Jed,0,Grateful Dead,2014-11-26,2019-11-27,3,254.67
-567,The Big Bang,0,Johnny Mandel,2018-07-05,2018-07-05,1,513.0
-569,The Waking End,1,Goose,2014-11-21,2014-11-21,1,765.0
-570,The Way It Is,0,Bruce Hornsby,2018-05-03,2025-06-04,40,13.33
-571,These Boots Are Made For Walkin',0,Nancy Sinatra,2018-07-12,2018-07-12,1,511.0
-572,This Old Sea,1,Goose,2014-12-20,2025-05-27,38,20.08
-573,Tomorrow Never Knows,0,The Beatles,2019-12-21,2025-06-04,13,29.69
-574,Travelers,1,Goose,2020-06-19,2025-05-30,28,12.14
-575,Tried & Tempted,0,The Wood Brothers,2015-02-20,2015-02-20,1,758.0
-576,Trouble,0,Elvis Presley,2019-11-27,2023-10-01,3,131.67
-577,Turkish Hills,1,Goose,2018-08-02,2018-11-16,2,253.0
-578,Turn On Your Love Light,0,Bobby Blue Bland,2016-04-20,2025-06-03,52,13.73
-579,Two Tickets To Paradise,0,Eddie Money,2019-07-13,2019-07-13,1,426.0
-580,Up On Cripple Creek,0,The Band,2016-04-15,2017-07-15,6,119.33
-581,Use Me,0,Bill Withers,2014-11-21,2022-03-10,6,127.5
-582,The W.S. Walcott Medicine Show,0,The Band,2018-03-15,2024-09-24,19,30.5
-583,Wake Up,0,Arcade Fire,2015-02-20,2022-06-25,2,379.0
-585,What The World Needs Now Is Love,0,Sergio Mendes,2018-07-12,2018-07-12,1,511.0
-586,White Lights,1,Goose,2018-12-22,2025-02-13,73,6.99
-587,Why Can't We Be Friends,0,War,2019-10-31,2019-10-31,1,404.0
-588,Wild Night,0,Van Morrison,2014-12-20,2025-02-11,19,40.16
-590,Your Ocean,1,Goose,2015-04-18,2025-06-03,35,21.49
-591,Look Out Cleveland,0,The Band,2020-10-03,2024-09-22,10,32.5
-592,Me & My Uncle,0,John Philips,2014-11-26,2025-05-10,36,21.22
-593,(Marie's The Name) His Latest Flame,0,Elvis Presley,2019-06-28,2022-08-20,4,107.5
-595,"Well, You Can Do It Without Me",0,Father John Misty,2020-09-11,2020-09-11,1,331.0
-596,Love And Happiness,0,Al Green,2019-10-05,2019-10-05,1,408.0
-597,Night Moves,0,Bob Seger & The Silver Bullet Band,2019-10-05,2019-10-05,1,408.0
-598,Ship Of Fools,0,Grateful Dead,2024-10-01,2024-10-01,1,50.0
-599,Gun Street Girl,0,Tom Waits,2020-03-21,2022-09-30,4,88.5
-601,Atlantic City,0,Bruce Springsteen,2020-03-15,2024-11-10,4,88.75
-602,AUATC,0,Bon Iver,2020-10-19,2024-10-26,9,35.78
-603,Lily's Tiger,1,Great Blue,2020-11-06,2024-09-15,3,106.33
-604,The Empress Of Organos,1,Vasudo,2020-11-06,2025-06-07,82,4.56
-605,Earthling or Alien?,1,Goose,2020-11-06,2025-02-10,46,7.09
-606,The Killing Moon,0,Echo & The Bunnymen,2020-11-07,2024-09-14,6,53.0
-607,Head Over Heels,0,Tears For Fears,2020-11-07,2020-11-07,2,318.0
-608,Notorious,0,Duran Duran,2020-11-07,2020-11-07,1,318.0
-609,Seekers on the Ridge pt I,1,Goose,2020-11-07,2025-06-04,51,6.24
-610,Seekers on the Ridge pt II,1,Goose,2020-11-07,2025-06-04,51,6.24
-611,Mad World,0,Tears For Fears,2020-11-07,2024-09-20,2,159.0
-612,Love Is A Battlefield,0,Pat Benatar,2020-12-11,2025-02-14,7,45.29
-613,You and Whose Army,0,Radiohead,2020-12-11,2021-11-07,2,158.5
-614,Brokedown Palace,0,Grateful Dead,2021-06-18,2024-10-25,3,101.67
-620,Jack-A-Roe,0,Traditional,2022-06-24,2022-06-24,1,230.0
-628,Interlude III,1,Goose,2024-04-08,2024-04-08,1,98.0
-630,Shakedown Street,0,Grateful Dead,2016-11-23,2016-11-23,1,685.0
-631,Revival,0,The Allman Brothers Band,2017-05-20,2017-05-20,1,647.0
-631,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,157.25
-632,Wasted Words,0,The Allman Brothers Band,2017-01-28,2017-01-28,1,677.0
-633,Psycho Killer,0,Talking Heads,2016-11-23,2025-06-06,4,171.25
-634,First Tube,0,Phish,2016-10-09,2016-11-23,2,347.0
-635,I Will Survive,0,Gloria Gaynor,2016-11-23,2016-11-23,1,685.0
-636,(satellite),1,Goose,2018-06-01,2024-09-13,3,175.0
-637,(dawn),1,Goose,2022-01-26,2025-02-15,9,30.0
-639,The Labyrinth,1,Goose,2021-06-11,2024-12-31,10,31.0
-641,Franklin's Tower,0,Grateful Dead,2024-12-14,2024-12-14,1,29.0
-645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-06-04,24,4.13
-646,Turbulence & The Night Rays,1,Vasudo,2022-06-10,2025-06-06,41,5.76
-647,Your Direction,1,Vasudo,2025-04-24,2025-06-07,5,3.4
-650,The Night They Drove Old Dixie Down,0,The Band,2016-06-17,2024-06-22,2,354.5
-651,The Shape I'm In,0,The Band,2023-10-01,2023-10-01,1,119.0
-656,Back On The Train,0,Phish,2014-12-23,2019-05-04,2,381.0
-659,U.S. Blues,0,Grateful Dead,2023-07-04,2023-07-04,1,139.0
-662,Funky Bitch,0,Son Seals,2016-10-09,2016-10-09,1,694.0
-663,Jed Stone,1,Vasudo,2025-06-07,2025-06-07,1,1.0
-676,Welcome To Delta,1,Goose,2021-05-09,2021-05-09,1,311.0
-677,Moby,1,Goose,2021-05-08,2025-02-13,20,15.6
-678,Doctor My Eyes,0,Jackson Browne,2021-05-04,2023-04-13,5,62.8
-679,Tribute To Gold,0,Duke Herrington,2021-06-13,2022-02-02,4,154.0
-681,Innocent Son,0,Fleet Foxes,2021-06-16,2021-06-16,1,306.0
-684,Bingo Tour Theme,1,Goose,2021-07-03,2021-07-10,3,100.67
-685,Please Forgive Me,0,David Gray,2021-08-21,2024-09-11,11,26.91
-694,Dragonfly,1,Goose,2021-10-09,2023-04-27,7,41.43
-709,2021,0,Vampire Weekend,2021-10-08,2021-12-31,3,145.5
-710,The Old Man's Boat,1,Goose,2021-10-08,2025-06-03,28,10.39
-711,Life On The Shelf,1,Goose,2021-10-09,2022-10-14,9,32.22
-712,Dr. Darkness,1,Goose,2022-01-26,2025-05-28,41,6.59
-714,Rockdale,1,Vasudo,2021-10-30,2025-06-07,67,4.42
-716,Draggin' the Line,0,Tommy James,2021-10-31,2024-09-24,2,143.0
-717,I'm A Believer,0,The Monkees,2021-10-31,2021-11-19,2,143.0
-718,American Woman,0,The Guess Who,2021-10-31,2022-02-12,3,95.33
-719,Magic Carpet Ride,0,Steppenwolf,2021-10-31,2024-06-18,11,28.6
-720,Whip It,0,Devo,2021-10-31,2025-06-03,8,35.75
-721,Just The Two Of Us,0,Bill Withers,2021-10-31,2021-10-31,1,286.0
-723,Pancakes,1,Great Blue,2022-01-27,2025-06-01,61,5.08
-725,Borne,1,Goose,2022-01-28,2025-05-27,44,6.23
-727,Atlas Dogs,1,Goose,2022-01-28,2025-06-03,50,5.36
-730,Circle Of Life,0,Elton John,2017-12-23,2021-12-31,3,192.0
-731,Moonrise,1,Orebolo,2022-06-25,2024-11-10,3,76.0
-732,Dim Lights,1,Orebolo,2024-11-10,2025-05-10,2,17.0
-733,Arise,1,St. John's Revival,2022-01-30,2024-09-27,6,44.33
-735,California Magic,1,Goose,2022-03-01,2025-06-01,45,5.67
-736,Silver Rising,1,Goose,2022-02-02,2025-05-30,61,4.34
-737,Jeff Engborg,1,Great Blue,2022-02-05,2025-02-07,11,23.82
-738,Dripfield,1,Goose,2022-02-26,2025-06-04,58,4.49
-739,Sinnerman,0,Nina Simone,2022-02-26,2025-06-07,13,19.69
-740,Hungersite,1,Goose,2022-02-26,2025-06-04,66,3.88
-741,Trevor Reads Poetry,1,Goose,2020-06-20,2025-05-31,7,48.43
-747,Happy Birthday,0,Goose,2018-02-15,2020-10-15,6,92.33
-760,Hallelujah,0,Leonard Cohen,2017-05-20,2017-05-20,1,647.0
-762,Loose Ends,1,Vasudo,2019-09-01,2024-11-12,16,25.94
-763,Butterflies,1,Great Blue,2022-06-10,2024-11-01,19,12.42
-764,Animal,1,Goose,2022-06-11,2025-06-06,62,3.79
-765,It's My Life,0,Talk Talk,2022-08-17,2022-08-17,1,220.0
-766,Bloodbuzz Ohio,0,The National,2022-08-18,2025-02-06,9,24.33
-767,Milestone 2 (Skux Life),0,Moniker,2022-08-18,2024-09-20,3,73.0
-768,Don't Be Cruel,0,Elvis Presley,2022-08-20,2022-08-20,1,218.0
-802,Jam,1,Goose,2014-11-21,2025-03-11,25,45.0
-803,Mini Mall Rap,1,Goose,2020-06-26,2020-06-26,1,335.0
-804,Caravan,0,Van Morrison,2016-10-09,2016-10-09,1,694.0
-805,Everything Must Go,1,Goose,2022-10-01,2025-05-31,36,5.83
-807,"So Fresh, So Clean",0,Outkast,2022-10-08,2022-10-08,1,205.0
-808,Born To Be Wild,0,Steppenwolf,2022-10-15,2022-10-15,1,200.0
-809,Thatch,1,Goose,2022-11-13,2025-05-30,49,3.96
-811,You Are So Beautiful,0,Joe Cocker,2017-05-20,2017-05-20,1,647.0
-812,"Signed, Sealed, Delivered",0,Stevie Wonder,2017-05-20,2017-05-20,1,647.0
-813,Burning Down the House,0,Talking Heads,2017-05-20,2023-12-08,2,323.5
-814,Get Lucky,0,Daft Punk,2017-05-20,2017-05-20,1,647.0
-817,Mr. Action,1,Goose,2022-12-18,2025-05-28,33,5.64
-818,Auld Lang Syne,0,Traditional,2017-12-31,2022-12-31,2,287.0
-819,This Year's Love,0,David Gray,2022-12-31,2022-12-31,1,184.0
-820,Not Alone,1,Goose,2023-03-09,2024-11-07,5,36.0
-822,Lead Up,1,Goose,2023-03-10,2025-06-01,33,5.59
-823,Feel It Now,1,Goose,2023-03-11,2025-05-30,30,5.93
-833,Stand By Me,0,Ben E. King,2016-10-09,2017-05-20,2,347.0
-834,Loving Cup,0,The Rolling Stones,2016-10-09,2016-10-09,1,694.0
-843,Wild Summer Nights,0,John Cafferty,2023-07-04,2023-07-04,1,139.0
-864,All I Need,0,LP Giobbi,2023-09-14,2023-09-14,1,132.0
-864,All I Need,0,Goose,2017-01-28,2025-05-31,146,4.87
-867,I Would Die 4 U,0,Prince,2023-10-06,2025-05-25,9,12.89
-868,Revival,0,The Allman Brothers Band,2017-05-20,2017-05-20,1,647.0
-868,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,157.25
-883,Mirrors,0,Justin Timberlake,2023-12-08,2023-12-08,1,101.0
-884,Man in the Mirror,0,Michael Jackson,2023-12-08,2023-12-08,1,101.0
-885,Fire,0,Jimi Hendrix,2023-12-08,2023-12-08,1,101.0
-886,Sex On Fire,0,Kings of Leon,2023-12-08,2023-12-08,1,101.0
-887,99 Red Balloons,0,Nena,2023-12-09,2023-12-09,1,100.0
-888,Circles,0,Post Malone,2023-12-09,2024-04-24,2,50.0
-889,Big Blue,0,Vampire Weekend,2023-12-09,2023-12-09,1,100.0
-890,I’m Forever Blowing Bubbles,0,John Kellette,2023-12-09,2023-12-09,1,100.0
-891,Jungle,0,ELO,2023-12-09,2023-12-09,1,100.0
-892,Jungle Boogie,0,Kool & The Gang,2023-12-09,2023-12-09,1,100.0
-893,Run Through The Jungle,0,Creedence Clearwater Revival,2023-12-09,2023-12-09,1,100.0
-910,"Don’t Think Twice, It’s Alright",0,Bob Dylan,2025-05-10,2025-05-10,1,12.0
-911,No California,0,Ilsey Juber,2024-06-07,2025-05-30,4,22.25
-914,True Love Waits,0,Radiohead,2024-09-19,2025-02-07,2,29.0
-930,SALT,1,Goose,2024-04-07,2025-06-03,13,8.25
-931,Give It Time,1,Goose,2024-04-09,2025-05-30,19,5.11
-933,How It Ends,1,Vasudo,2024-04-10,2025-06-06,5,19.2
-935,Gen X Cops,0,Vampire Weekend,2024-04-10,2024-04-10,1,96.0
-943,Draconian Meter Maid,1,Swimmer,2024-09-01,2025-06-03,12,5.92
-945,Big Modern!,1,Goose,2024-09-01,2025-06-07,21,3.55
-946,"One In, One Out",1,Goose,2024-09-02,2025-05-27,11,6.36
-947,My Mind Has Been Consumed By Media,1,Swimmer,2024-09-03,2025-06-07,7,9.86
-948,War Pigs,0,Black Sabbath,2024-10-01,2024-10-01,1,50.0
-950,You Spin Me Round (Like A Record),0,Dead or Alive,2024-10-31,2025-06-03,3,13.67
-951,Stranger Things,0,S U R V I V E,2024-10-31,2024-10-31,2,41.0
-952,Maniac,0,Michael Sembello,2024-10-31,2024-11-07,3,20.5
-953,Wipeout,0,Bob Berryhill,2024-10-31,2024-10-31,1,41.0
-955,Running Up That Hill,0,Kate Bush,2024-10-31,2025-06-07,3,13.67
-956,Everybody Wants To Rule The World,0,Tears For Fears,2024-10-31,2024-10-31,1,41.0
-958,Sirius,0,The Alan Parsons Project,2024-12-13,2024-12-14,2,15.0
-959,Kashmir.,0,Led Zeppelin,2024-12-13,2024-12-13,1,30.0
-960,Slip Slidin’ Away,0,Paul Simon,2024-12-14,2024-12-14,1,29.0
-961,Help on the Way,0,Grateful Dead,2024-12-14,2024-12-14,1,29.0
-962,Slipknot!,0,Grateful Dead,2024-12-14,2024-12-14,1,29.0
-964,Don’t Leave Me This Way,0,Harold Melvin & The Blue Notes,2024-12-14,2025-05-30,4,7.25
-965,Get Down Tonight,0,KC and the Sunshine Band,2024-12-14,2024-12-14,1,29.0
-967,The King,1,Goose,2024-12-13,2024-12-13,1,30.0
-968,Low Rider,0,War,2024-12-30,2024-12-30,1,28.0
-969,I Only Have Eyes For You,0,The Flamingos,2024-12-31,2024-12-31,1,27.0
-970,Dustin Hoffman,1,Goose,2025-05-10,2025-06-07,4,3.0
-971,Iguana Song,1,Goose,2025-05-09,2025-06-03,3,4.67
-972,Flood in Franklin Park,0,Grant Green,2014-12-23,2025-02-06,2,381.0
-973,Trick To Happy,0,Bahamas,2025-02-10,2025-02-10,1,23.0
-978,In Bloom,0,Nirvana,2025-05-08,2025-05-08,1,15.0
-979,Torero,1,Goose,2025-05-08,2025-06-07,3,5.0
-980,Ride Like The Wind,0,Christopher Cross,2025-05-08,2025-05-08,1,15.0
-981,fast:slow,1,Goose,2025-05-09,2025-06-07,2,7.0
-982,Moby Dick,0,Led Zeppelin,2025-05-31,2025-05-31,1,6.0
+409,Interlude II,1,Goose,2024-04-08,2025-06-10,10,9.9
+410,Indian River,1,Goose,2014-12-20,2025-06-06,115,6.64
+411,Jive I,1,Goose,2014-11-21,2025-06-10,129,5.98
+412,Rosewood Heart,1,Goose,2015-02-20,2025-06-01,62,12.24
+413,Jive II,1,Goose,2015-03-14,2025-06-03,83,9.11
+414,All I Need,1,LP Giobbi,2023-09-14,2023-09-14,1,133.0
+414,All I Need,1,Goose,2017-01-28,2025-05-31,146,4.88
+415,Butter Rum,1,Vasudo,2018-04-06,2025-05-10,114,4.95
+416,Yeti,1,Great Blue,2018-10-26,2025-06-01,115,4.73
+418,Tumble,1,Vasudo,2019-01-31,2025-06-06,119,4.09
+419,Disco Inferno,0,The Trammps,2018-10-26,2022-12-18,29,16.79
+420,Creatures,1,Goose,2015-10-01,2025-06-07,130,5.65
+421,So Ready,1,Goose,2015-03-14,2025-06-10,141,5.4
+422,Slow Ready,1,Goose,2019-03-01,2025-06-04,90,5.25
+424,I'm Writing A Novel,0,Father John Misty,2020-03-21,2025-05-28,15,23.67
+425,The Whales,1,Goose,2020-06-27,2025-06-04,44,7.61
+426,Can't Get You Out Of My Head,0,Kylie Minogue,2019-03-01,2024-10-26,22,20.77
+427,Mustang Sally,0,Wilson Pickett,2014-12-20,2023-03-10,14,54.57
+428,Weird Fishes / Arpeggi,0,Radiohead,2018-02-08,2024-09-26,10,55.9
+429,Bob Don,1,Goose,2020-01-24,2025-06-03,55,6.96
+430,What's Up?,0,4 Non Blondes,2018-06-01,2023-10-06,8,65.75
+431,Rock The Casbah,0,The Clash,2020-06-27,2024-10-30,12,27.92
+432,726,1,Goose,2020-06-20,2025-05-10,37,9.19
+433,Also Sprach Zarathustra,0,Deodato,2016-04-20,2020-02-29,14,55.0
+434,A Fifth Of Beethoven,0,Walter Murphy,2019-10-31,2024-06-11,14,31.15
+435,A Western Sun,1,Goose,2015-04-18,2025-06-07,70,10.76
+436,Achy Breaky Heart,0,Billy Ray Cyrus,2017-12-23,2024-11-10,4,144.25
+437,Ain't Life Grand,0,Widespread Panic,2019-10-05,2019-12-08,2,204.5
+438,Arrow,1,Goose,2019-12-21,2025-06-10,84,5.03
+439,Atlas,0,The Wood Brothers,2015-02-20,2025-06-10,39,19.97
+440,Billie Jean,0,Michael Jackson,2014-11-21,2019-12-14,6,127.67
+441,Boogie On Reggae Woman,0,Stevie Wonder,2014-12-20,2020-02-29,13,58.77
+442,Boogie Wonderland,0,"Earth, Wind & Fire and The Emotions",2018-07-05,2018-11-21,2,257.0
+443,Brown-Eyed Women,0,Grateful Dead,2016-07-09,2017-07-08,3,236.0
+444,Cantaloupe Island,0,Herbie Hancock,2015-03-14,2024-10-01,11,68.73
+445,Carol Of The Bells,0,Mykola Leontovych,2015-12-19,2022-12-17,3,243.0
+446,Caution,0,Bob Marley,2014-12-20,2024-10-24,16,47.75
+447,Chank,0,John Scofield,2014-11-21,2014-12-23,3,255.33
+449,Christmas Must Be Tonight,0,The Band,2019-12-21,2022-12-16,2,193.5
+450,Christmas Wrapping,0,The Waitresses,2017-12-23,2019-12-21,3,192.33
+451,Cleanin' Up The Town,0,The Bus Boys,2018-10-26,2018-10-26,1,487.0
+452,Cold Rain And Snow,0,Grateful Dead,2014-11-26,2024-10-25,2,382.5
+453,Compared To What,0,Gene McDaniels,2017-07-08,2017-07-13,2,315.0
+455,Crosseyed & Painless,0,Talking Heads,2016-04-15,2022-12-18,41,17.49
+456,Dancing In The Moonlight,0,King Harvest,2014-12-20,2023-07-01,13,58.77
+457,Danger Zone,0,Kenny Loggins,2016-11-23,2024-11-07,20,36.11
+458,Day-O,0,Harry Belafonte,2018-12-22,2019-05-25,2,234.5
+459,Doc Brown,1,Great Blue,2018-06-01,2025-05-31,45,11.95
+460,Don't Do It,0,The Band,2016-08-12,2025-05-27,37,19.0
+461,Doobie Song,1,Goose,2019-03-01,2024-09-04,23,19.87
+462,Drive,1,Goose,2018-08-03,2025-06-06,110,4.91
+463,Echo of a Rose,1,Vasudo,2018-08-02,2025-06-06,112,5.12
+464,Electric Avenue,0,Eddy Grant,2018-12-22,2025-06-01,38,12.34
+465,Elizabeth,1,Goose,2018-03-15,2025-02-10,62,9.02
+466,Elmeg The Wise,1,St. John's Revival,2016-07-09,2025-05-30,23,32.18
+467,Elmer Theme,0,Elmer Bernstein,2018-10-26,2018-10-26,1,487.0
+468,Eminence Front,0,The Who,2019-04-18,2024-11-12,13,34.38
+469,Escape (The Piña Colada Song),0,Rupert Holmes,2016-11-23,2024-06-18,28,24.5
+471,Everywhere,0,Michelle Branch,2018-11-16,2019-12-08,3,160.33
+472,I2I,0,Tevin Campbell,2019-06-15,2024-12-31,2,217.5
+473,Factory Fiction,1,Vasudo,2016-10-09,2025-06-06,25,28.96
+474,Feel Like Making Love,0,Bad Company,2019-10-05,2019-11-27,2,204.5
+475,Feliz Navidad,0,Jose Feliciano,2018-12-22,2018-12-22,1,469.0
+476,Fire On The Mountain,0,Grateful Dead,2014-11-26,2014-11-26,1,765.0
+477,Fish In The Sea,0,Fat Freddy's Drop,2020-06-26,2025-05-08,26,12.92
+478,Flodown,1,Vasudo,2015-09-26,2025-05-27,154,4.84
+479,Get The Funk Out Ma Face,0,Brothers Johnson,2019-10-31,2023-04-21,7,57.86
+480,Ghostbusters,0,Ray Parker Jr.,2018-10-26,2024-04-24,4,162.33
+481,Ghostbusters Rap,0,Run DMC,2018-10-27,2022-10-14,20,24.3
+482,Green River,0,Creedence Clearwater Revival,2016-07-09,2025-05-28,33,21.45
+483,Gone Gone Good,1,Goose,2014-11-21,2015-03-14,3,255.33
+484,Gringo,1,Goose,2014-12-20,2019-12-21,5,152.8
+485,Hard To Handle,0,Otis Redding,2014-11-26,2023-01-15,7,109.29
+486,Heart's On Fire,0,Passenger,2015-02-20,2015-02-20,1,759.0
+488,Hollywood Nights,0,Bob Seger & The Silver Bullet Band,2018-05-03,2025-05-31,13,41.08
+489,Home,0,Edward Sharp & The Magnetic Zeros,2018-03-15,2018-03-15,1,550.0
+490,Honeybee,1,Goose,2019-12-21,2024-06-10,33,11.73
+491,Feeling Hot Hot Hot,0,The Merrymen,2018-12-22,2019-12-06,14,33.5
+492,Hot Night,0,Laura Branigan,2018-10-27,2020-06-20,6,97.2
+493,I Shot The Sheriff,0,Bob Marley,2014-11-26,2015-04-18,2,382.5
+494,I Touch Myself,0,Divinyls,2018-07-12,2019-02-15,2,256.0
+495,I Wish,0,Stevie Wonder,2014-11-21,2022-03-01,13,58.92
+496,I'm Alright,0,Kenny Loggins,2018-07-05,2024-06-20,17,34.27
+497,In Memory Of Elizabeth Reed,0,The Allman Brothers Band,2017-01-28,2023-10-08,3,169.5
+498,In Your Eyes,0,Peter Gabriel,2020-06-20,2024-09-14,10,34.0
+499,Inside Out,0,Spoon,2019-10-18,2025-02-13,16,25.5
+500,It Burns Within,1,St. John's Revival,2014-12-20,2024-06-26,10,76.4
+501,"It's All Over Now, Baby Blue",0,Bob Dylan,2015-04-18,2021-06-15,2,376.5
+502,Jive Lee,1,Goose,2018-06-02,2025-06-03,84,6.33
+503,Johnny B. Goode,0,Chuck Berry,2018-05-04,2018-05-04,1,533.0
+504,Kung Fu Fighting,0,Carl Douglas,2016-11-23,2019-03-01,2,343.0
+505,Lady Marmalade,0,Patti Labell,2019-10-31,2019-12-13,3,135.0
+506,Let's Dance,0,David Bowie,2017-05-20,2018-04-21,9,72.0
+507,Linus And Lucy,0,Vince Guaraldi,2014-12-20,2022-12-17,8,152.8
+508,Liza Jane,0,African American Folk Song,2018-06-01,2024-06-25,19,27.68
+509,Love Me Sexy,0,Jackie Moon,2019-10-31,2019-11-27,2,202.5
+510,Love T.K.O.,0,Teddy Pendergrass,2018-04-06,2018-04-21,2,272.0
+511,Lovely Day,0,Bill Withers,2020-01-24,2020-03-11,2,191.5
+512,Madhuvan,1,Goose,2014-12-20,2025-06-10,169,4.93
+513,Mas Que Nada,0,Sergio Mendes,2018-07-12,2025-05-31,23,22.26
+514,Make The Move,0,Kenny Loggins,2018-07-05,2024-06-20,19,28.56
+515,Me and Julio Down By The Schoolyard,0,Paul Simon,2018-04-21,2022-06-12,21,25.52
+516,Mele Kalikimaka,0,Bing Crosby,2018-12-22,2018-12-22,1,469.0
+519,Movin' Out (Anthony's Song),0,Billy Joel,2019-06-15,2021-11-10,14,31.07
+520,Mr. Night,0,Kenny Loggins,2018-07-05,2018-07-05,1,514.0
+521,My Generation,0,The Who,2018-07-12,2022-08-12,7,73.14
+522,Never Never Gonna Give Ya Up,0,Barry White,2019-10-31,2019-10-31,1,405.0
+523,New Speedway Boogie,0,Grateful Dead,2014-11-26,2014-11-26,1,765.0
+524,Nights In White Satin,0,The Moody Blues,2020-01-25,2023-09-26,8,47.75
+525,No Rain,0,Blind Melon,2018-06-02,2024-06-28,17,30.88
+526,On Our Own,0,Bobby Brown,2018-10-26,2018-10-26,1,487.0
+527,One More Day,0,The Wood Brothers,2015-04-18,2024-09-20,13,57.92
+528,One More Saturday Night,0,Grateful Dead,2014-12-20,2021-12-31,21,38.2
+529,One Way Out,0,The Allman Brothers Band,2017-01-28,2017-07-08,2,339.0
+530,Peaches En Regalia,0,Frank Zappa,2016-10-09,2019-09-06,7,99.29
+531,Peggy-O,0,Grateful Dead,2015-02-20,2024-11-12,16,47.44
+532,Pinche Gringo,1,Goose,2015-03-14,2015-03-14,1,756.0
+533,Praise You,0,Fatboy Slim,2016-04-15,2024-06-30,9,89.63
+534,Pumped Up Kicks,0,Foster The People,2016-11-23,2025-06-01,25,27.44
+536,Red Bird,1,Goose,2022-01-29,2025-05-31,52,5.15
+537,Red Red Wine,0,UB40,2018-12-22,2018-12-22,1,469.0
+538,Rosa Lee McFall,0,Grateful Dead,2019-08-08,2024-09-06,3,141.0
+539,Rosetta,0,Earl Hines,2014-12-20,2015-02-20,3,254.67
+541,Same Old Shenanigans,1,Goose,2016-03-19,2025-06-01,56,12.89
+542,Savin' The Day,0,Alessi Brothers,2018-10-27,2018-10-27,1,486.0
+543,Sco-Mule,0,Government Mule ft. John Scofield,2014-11-26,2021-11-16,8,95.63
+544,Secret Agent Man,0,Johnny Rivers,2018-07-12,2024-06-23,5,128.0
+545,Shama Lama Ding Dong,0,Otis Day and The Knights,2016-10-09,2025-02-11,43,16.16
+546,She Drives Me Crazy,0,Fine Young Cannibals,2017-08-19,2017-08-19,1,615.0
+547,Shelter From The Storm,0,Bob Dylan,2020-06-28,2020-06-28,1,334.0
+548,Shoe Dog,0,John Scofield,2014-11-26,2014-11-26,1,765.0
+549,Short People,0,Randy Newman,2019-10-31,2019-12-13,3,135.0
+550,Shout,0,The Isley Brothers,2014-12-20,2020-03-05,8,95.5
+551,Sleepwalk,0,Santo & Johnny,2019-10-19,2024-06-16,4,101.75
+552,Soul Bossa Nova,0,Quincy Jones,2018-07-12,2021-10-31,3,256.0
+553,Soul Shakedown Party,0,Bob Marley,2016-10-09,2017-08-19,4,173.75
+555,Spain,0,Chick Corea,2015-10-01,2024-06-25,4,183.5
+556,Spanish Moon,0,Little Feat,2016-10-09,2017-10-02,2,347.5
+557,Spirit Of The Dark Horse,1,Goose,2014-11-26,2025-02-15,35,21.86
+558,State Of The Art (A.E.I.O.U.),0,Jim James,2020-09-17,2025-06-06,11,29.91
+559,Stormy Monday,0,The Allman Brothers Band,2018-05-04,2018-05-04,1,533.0
+560,Strokin',0,Clarence Carter,2018-04-21,2021-06-19,6,89.33
+561,Summertime Blues,0,Eddie Cochran,2018-07-05,2018-07-05,1,514.0
+562,Suzie Q,0,Creedence Clearwater Revival,2025-06-06,2025-06-06,1,3.0
+563,Sweet Home Chicago,0,The Blues Brothers,2019-12-21,2019-12-21,1,387.0
+564,Switchin',0,Wes Montgomery,2015-02-20,2024-09-03,27,28.11
+565,Take On Me,0,A-Ha,2016-11-23,2024-10-26,9,76.22
+566,Tennessee Jed,0,Grateful Dead,2014-11-26,2019-11-27,3,255.0
+567,The Big Bang,0,Johnny Mandel,2018-07-05,2018-07-05,1,514.0
+569,The Waking End,1,Goose,2014-11-21,2014-11-21,1,766.0
+570,The Way It Is,0,Bruce Hornsby,2018-05-03,2025-06-04,40,13.35
+571,These Boots Are Made For Walkin',0,Nancy Sinatra,2018-07-12,2018-07-12,1,512.0
+572,This Old Sea,1,Goose,2014-12-20,2025-05-27,38,20.11
+573,Tomorrow Never Knows,0,The Beatles,2019-12-21,2025-06-04,13,29.77
+574,Travelers,1,Goose,2020-06-19,2025-05-30,28,12.18
+575,Tried & Tempted,0,The Wood Brothers,2015-02-20,2015-02-20,1,759.0
+576,Trouble,0,Elvis Presley,2019-11-27,2023-10-01,3,132.0
+577,Turkish Hills,1,Goose,2018-08-02,2018-11-16,2,253.5
+578,Turn On Your Love Light,0,Bobby Blue Bland,2016-04-20,2025-06-03,52,13.75
+579,Two Tickets To Paradise,0,Eddie Money,2019-07-13,2019-07-13,1,427.0
+580,Up On Cripple Creek,0,The Band,2016-04-15,2017-07-15,6,119.5
+581,Use Me,0,Bill Withers,2014-11-21,2022-03-10,6,127.67
+582,The W.S. Walcott Medicine Show,0,The Band,2018-03-15,2024-09-24,19,30.56
+583,Wake Up,0,Arcade Fire,2015-02-20,2022-06-25,2,379.5
+585,What The World Needs Now Is Love,0,Sergio Mendes,2018-07-12,2018-07-12,1,512.0
+586,White Lights,1,Goose,2018-12-22,2025-02-13,73,7.0
+587,Why Can't We Be Friends,0,War,2019-10-31,2019-10-31,1,405.0
+588,Wild Night,0,Van Morrison,2014-12-20,2025-02-11,19,40.21
+590,Your Ocean,1,Goose,2015-04-18,2025-06-03,35,21.51
+591,Look Out Cleveland,0,The Band,2020-10-03,2024-09-22,10,32.6
+592,Me & My Uncle,0,John Philips,2014-11-26,2025-05-10,36,21.25
+593,(Marie's The Name) His Latest Flame,0,Elvis Presley,2019-06-28,2022-08-20,4,107.75
+595,"Well, You Can Do It Without Me",0,Father John Misty,2020-09-11,2020-09-11,1,332.0
+596,Love And Happiness,0,Al Green,2019-10-05,2019-10-05,1,409.0
+597,Night Moves,0,Bob Seger & The Silver Bullet Band,2019-10-05,2019-10-05,1,409.0
+598,Ship Of Fools,0,Grateful Dead,2024-10-01,2024-10-01,1,51.0
+599,Gun Street Girl,0,Tom Waits,2020-03-21,2022-09-30,4,88.75
+601,Atlantic City,0,Bruce Springsteen,2020-03-15,2024-11-10,4,89.0
+602,AUATC,0,Bon Iver,2020-10-19,2024-10-26,9,35.89
+603,Lily's Tiger,1,Great Blue,2020-11-06,2024-09-15,3,106.67
+604,The Empress Of Organos,1,Vasudo,2020-11-06,2025-06-07,82,4.57
+605,Earthling or Alien?,1,Goose,2020-11-06,2025-02-10,46,7.11
+606,The Killing Moon,0,Echo & The Bunnymen,2020-11-07,2024-09-14,6,53.17
+607,Head Over Heels,0,Tears For Fears,2020-11-07,2020-11-07,2,319.0
+608,Notorious,0,Duran Duran,2020-11-07,2020-11-07,1,319.0
+609,Seekers on the Ridge pt I,1,Goose,2020-11-07,2025-06-04,51,6.25
+610,Seekers on the Ridge pt II,1,Goose,2020-11-07,2025-06-04,51,6.25
+611,Mad World,0,Tears For Fears,2020-11-07,2024-09-20,2,159.5
+612,Love Is A Battlefield,0,Pat Benatar,2020-12-11,2025-02-14,7,45.43
+613,You and Whose Army,0,Radiohead,2020-12-11,2021-11-07,2,159.0
+614,Brokedown Palace,0,Grateful Dead,2021-06-18,2024-10-25,3,102.0
+620,Jack-A-Roe,0,Traditional,2022-06-24,2022-06-24,1,231.0
+628,Interlude III,1,Goose,2024-04-08,2024-04-08,1,99.0
+630,Shakedown Street,0,Grateful Dead,2016-11-23,2016-11-23,1,686.0
+631,Revival,0,The Allman Brothers Band,2017-05-20,2017-05-20,1,648.0
+631,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,157.5
+632,Wasted Words,0,The Allman Brothers Band,2017-01-28,2017-01-28,1,678.0
+633,Psycho Killer,0,Talking Heads,2016-11-23,2025-06-06,4,171.5
+634,First Tube,0,Phish,2016-10-09,2016-11-23,2,347.5
+635,I Will Survive,0,Gloria Gaynor,2016-11-23,2016-11-23,1,686.0
+636,(satellite),1,Goose,2018-06-01,2024-09-13,3,175.33
+637,(dawn),1,Goose,2022-01-26,2025-02-15,9,30.11
+639,The Labyrinth,1,Goose,2021-06-11,2024-12-31,10,31.1
+641,Franklin's Tower,0,Grateful Dead,2024-12-14,2024-12-14,1,30.0
+645,Hot Love & The Lazy Poet,1,Vasudo,2024-04-07,2025-06-04,24,4.17
+646,Turbulence & The Night Rays,1,Vasudo,2022-06-10,2025-06-06,41,5.78
+647,Your Direction,1,Vasudo,2025-04-24,2025-06-07,5,3.6
+650,The Night They Drove Old Dixie Down,0,The Band,2016-06-17,2024-06-22,2,355.0
+651,The Shape I'm In,0,The Band,2023-10-01,2023-10-01,1,120.0
+656,Back On The Train,0,Phish,2014-12-23,2019-05-04,2,381.5
+659,U.S. Blues,0,Grateful Dead,2023-07-04,2023-07-04,1,140.0
+662,Funky Bitch,0,Son Seals,2016-10-09,2016-10-09,1,695.0
+663,Jed Stone,1,Vasudo,2025-06-07,2025-06-07,1,2.0
+676,Welcome To Delta,1,Goose,2021-05-09,2021-05-09,1,312.0
+677,Moby,1,Goose,2021-05-08,2025-02-13,20,15.65
+678,Doctor My Eyes,0,Jackson Browne,2021-05-04,2023-04-13,5,63.0
+679,Tribute To Gold,0,Duke Herrington,2021-06-13,2022-02-02,4,154.5
+681,Innocent Son,0,Fleet Foxes,2021-06-16,2021-06-16,1,307.0
+684,Bingo Tour Theme,1,Goose,2021-07-03,2021-07-10,3,101.0
+685,Please Forgive Me,0,David Gray,2021-08-21,2024-09-11,11,27.0
+694,Dragonfly,1,Goose,2021-10-09,2023-04-27,7,41.57
+709,2021,0,Vampire Weekend,2021-10-08,2021-12-31,3,146.0
+710,The Old Man's Boat,1,Goose,2021-10-08,2025-06-03,28,10.43
+711,Life On The Shelf,1,Goose,2021-10-09,2022-10-14,9,32.33
+712,Dr. Darkness,1,Goose,2022-01-26,2025-05-28,41,6.61
+714,Rockdale,1,Vasudo,2021-10-30,2025-06-07,67,4.43
+716,Draggin' the Line,0,Tommy James,2021-10-31,2024-09-24,2,143.5
+717,I'm A Believer,0,The Monkees,2021-10-31,2021-11-19,2,143.5
+718,American Woman,0,The Guess Who,2021-10-31,2022-02-12,3,95.67
+719,Magic Carpet Ride,0,Steppenwolf,2021-10-31,2024-06-18,11,28.7
+720,Whip It,0,Devo,2021-10-31,2025-06-03,8,35.88
+721,Just The Two Of Us,0,Bill Withers,2021-10-31,2021-10-31,1,287.0
+723,Pancakes,1,Great Blue,2022-01-27,2025-06-01,61,5.09
+725,Borne,1,Goose,2022-01-28,2025-05-27,44,6.26
+727,Atlas Dogs,1,Goose,2022-01-28,2025-06-03,50,5.38
+730,Circle Of Life,0,Elton John,2017-12-23,2021-12-31,3,192.33
+731,Moonrise,1,Orebolo,2022-06-25,2024-11-10,3,76.33
+732,Dim Lights,1,Orebolo,2024-11-10,2025-05-10,2,17.5
+733,Arise,1,St. John's Revival,2022-01-30,2024-09-27,6,44.5
+735,California Magic,1,Goose,2022-03-01,2025-06-01,45,5.69
+736,Silver Rising,1,Goose,2022-02-02,2025-06-10,62,4.29
+737,Jeff Engborg,1,Great Blue,2022-02-05,2025-02-07,11,23.91
+738,Dripfield,1,Goose,2022-02-26,2025-06-10,59,4.43
+739,Sinnerman,0,Nina Simone,2022-02-26,2025-06-07,13,19.77
+740,Hungersite,1,Goose,2022-02-26,2025-06-04,66,3.89
+741,Trevor Reads Poetry,1,Goose,2020-06-20,2025-05-31,7,48.57
+747,Happy Birthday,0,Goose,2018-02-15,2020-10-15,6,92.5
+760,Hallelujah,0,Leonard Cohen,2017-05-20,2017-05-20,1,648.0
+762,Loose Ends,1,Vasudo,2019-09-01,2024-11-12,16,26.0
+763,Butterflies,1,Great Blue,2022-06-10,2025-06-10,20,11.85
+764,Animal,1,Goose,2022-06-11,2025-06-06,62,3.81
+765,It's My Life,0,Talk Talk,2022-08-17,2022-08-17,1,221.0
+766,Bloodbuzz Ohio,0,The National,2022-08-18,2025-02-06,9,24.44
+767,Milestone 2 (Skux Life),0,Moniker,2022-08-18,2024-09-20,3,73.33
+768,Don't Be Cruel,0,Elvis Presley,2022-08-20,2022-08-20,1,219.0
+802,Jam,1,Goose,2014-11-21,2025-03-11,25,45.06
+803,Mini Mall Rap,1,Goose,2020-06-26,2020-06-26,1,336.0
+804,Caravan,0,Van Morrison,2016-10-09,2016-10-09,1,695.0
+805,Everything Must Go,1,Goose,2022-10-01,2025-05-31,36,5.86
+807,"So Fresh, So Clean",0,Outkast,2022-10-08,2022-10-08,1,206.0
+808,Born To Be Wild,0,Steppenwolf,2022-10-15,2022-10-15,1,201.0
+809,Thatch,1,Goose,2022-11-13,2025-05-30,49,3.98
+811,You Are So Beautiful,0,Joe Cocker,2017-05-20,2017-05-20,1,648.0
+812,"Signed, Sealed, Delivered",0,Stevie Wonder,2017-05-20,2017-05-20,1,648.0
+813,Burning Down the House,0,Talking Heads,2017-05-20,2023-12-08,2,324.0
+814,Get Lucky,0,Daft Punk,2017-05-20,2017-05-20,1,648.0
+817,Mr. Action,1,Goose,2022-12-18,2025-05-28,33,5.67
+818,Auld Lang Syne,0,Traditional,2017-12-31,2022-12-31,2,287.5
+819,This Year's Love,0,David Gray,2022-12-31,2022-12-31,1,185.0
+820,Not Alone,1,Goose,2023-03-09,2024-11-07,5,36.2
+822,Lead Up,1,Goose,2023-03-10,2025-06-01,33,5.63
+823,Feel It Now,1,Goose,2023-03-11,2025-05-30,30,5.97
+833,Stand By Me,0,Ben E. King,2016-10-09,2017-05-20,2,347.5
+834,Loving Cup,0,The Rolling Stones,2016-10-09,2016-10-09,1,695.0
+843,Wild Summer Nights,0,John Cafferty,2023-07-04,2023-07-04,1,140.0
+864,All I Need,0,LP Giobbi,2023-09-14,2023-09-14,1,133.0
+864,All I Need,0,Goose,2017-01-28,2025-05-31,146,4.88
+867,I Would Die 4 U,0,Prince,2023-10-06,2025-05-25,9,13.0
+868,Revival,0,The Allman Brothers Band,2017-05-20,2017-05-20,1,648.0
+868,Revival,0,Zach Williams,2017-07-08,2017-09-01,4,157.5
+883,Mirrors,0,Justin Timberlake,2023-12-08,2023-12-08,1,102.0
+884,Man in the Mirror,0,Michael Jackson,2023-12-08,2023-12-08,1,102.0
+885,Fire,0,Jimi Hendrix,2023-12-08,2023-12-08,1,102.0
+886,Sex On Fire,0,Kings of Leon,2023-12-08,2023-12-08,1,102.0
+887,99 Red Balloons,0,Nena,2023-12-09,2023-12-09,1,101.0
+888,Circles,0,Post Malone,2023-12-09,2024-04-24,2,50.5
+889,Big Blue,0,Vampire Weekend,2023-12-09,2023-12-09,1,101.0
+890,I’m Forever Blowing Bubbles,0,John Kellette,2023-12-09,2023-12-09,1,101.0
+891,Jungle,0,ELO,2023-12-09,2023-12-09,1,101.0
+892,Jungle Boogie,0,Kool & The Gang,2023-12-09,2023-12-09,1,101.0
+893,Run Through The Jungle,0,Creedence Clearwater Revival,2023-12-09,2023-12-09,1,101.0
+910,"Don’t Think Twice, It’s Alright",0,Bob Dylan,2025-05-10,2025-05-10,1,13.0
+911,No California,0,Ilsey Juber,2024-06-07,2025-05-30,4,22.5
+914,True Love Waits,0,Radiohead,2024-09-19,2025-06-10,3,19.67
+930,SALT,1,Goose,2024-04-07,2025-06-03,13,8.33
+931,Give It Time,1,Goose,2024-04-09,2025-05-30,19,5.16
+933,How It Ends,1,Vasudo,2024-04-10,2025-06-06,5,19.4
+935,Gen X Cops,0,Vampire Weekend,2024-04-10,2024-04-10,1,97.0
+943,Draconian Meter Maid,1,Swimmer,2024-09-01,2025-06-03,12,6.0
+945,Big Modern!,1,Goose,2024-09-01,2025-06-07,21,3.6
+946,"One In, One Out",1,Goose,2024-09-02,2025-06-10,12,5.92
+947,My Mind Has Been Consumed By Media,1,Swimmer,2024-09-03,2025-06-07,7,10.0
+948,War Pigs,0,Black Sabbath,2024-10-01,2024-10-01,1,51.0
+950,You Spin Me Round (Like A Record),0,Dead or Alive,2024-10-31,2025-06-03,3,14.0
+951,Stranger Things,0,S U R V I V E,2024-10-31,2024-10-31,2,42.0
+952,Maniac,0,Michael Sembello,2024-10-31,2024-11-07,3,21.0
+953,Wipeout,0,Bob Berryhill,2024-10-31,2024-10-31,1,42.0
+955,Running Up That Hill,0,Kate Bush,2024-10-31,2025-06-07,3,14.0
+956,Everybody Wants To Rule The World,0,Tears For Fears,2024-10-31,2024-10-31,1,42.0
+958,Sirius,0,The Alan Parsons Project,2024-12-13,2024-12-14,2,15.5
+959,Kashmir.,0,Led Zeppelin,2024-12-13,2024-12-13,1,31.0
+960,Slip Slidin’ Away,0,Paul Simon,2024-12-14,2024-12-14,1,30.0
+961,Help on the Way,0,Grateful Dead,2024-12-14,2024-12-14,1,30.0
+962,Slipknot!,0,Grateful Dead,2024-12-14,2024-12-14,1,30.0
+964,Don’t Leave Me This Way,0,Harold Melvin & The Blue Notes,2024-12-14,2025-05-30,4,7.5
+965,Get Down Tonight,0,KC and the Sunshine Band,2024-12-14,2024-12-14,1,30.0
+967,The King,1,Goose,2024-12-13,2024-12-13,1,31.0
+968,Low Rider,0,War,2024-12-30,2024-12-30,1,29.0
+969,I Only Have Eyes For You,0,The Flamingos,2024-12-31,2024-12-31,1,28.0
+970,Dustin Hoffman,1,Goose,2025-05-10,2025-06-07,4,3.25
+971,Iguana Song,1,Goose,2025-05-09,2025-06-03,3,5.0
+972,Flood in Franklin Park,0,Grant Green,2014-12-23,2025-02-06,2,381.5
+973,Trick To Happy,0,Bahamas,2025-02-10,2025-02-10,1,24.0
+978,In Bloom,0,Nirvana,2025-05-08,2025-05-08,1,16.0
+979,Torero,1,Goose,2025-05-08,2025-06-07,3,5.33
+980,Ride Like The Wind,0,Christopher Cross,2025-05-08,2025-05-08,1,16.0
+981,fast:slow,1,Goose,2025-05-09,2025-06-07,2,7.5
+982,Moby Dick,0,Led Zeppelin,2025-05-31,2025-05-31,1,7.0
