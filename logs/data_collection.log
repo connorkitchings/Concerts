@@ -1,0 +1,59 @@
+[06-13-2025 20:27:19,523] INFO run_all_pipeline: Starting Phish pipeline...
+[06-13-2025 20:27:19,523] INFO run_all_pipeline: ===== Running Phish pipeline =====
+[06-13-2025 20:27:24,390] INFO run_all_pipeline: [Phish] [06-13-2025 20:27:24,389] INFO __main__: Previous Last update: 06/08/2025 16:32
+[06-13-2025 20:27:24,391] INFO run_all_pipeline: [Phish] [06-13-2025 20:27:24,390] INFO __main__: Loading Song Data
+[06-13-2025 20:27:25,923] INFO run_all_pipeline: [Phish] [06-13-2025 20:27:25,923] INFO __main__: Loading Show and Venue Data
+[06-13-2025 20:27:26,570] INFO run_all_pipeline: [Phish] [06-13-2025 20:27:26,570] INFO __main__: Loading Setlist and Transition Data
+[06-13-2025 20:27:36,011] INFO run_all_pipeline: [Phish] [06-13-2025 20:27:36,010] INFO __main__: load_setlist_data returned. Setlist data rows: 64,157, Transition data rows: 7
+[06-13-2025 20:27:36,330] INFO run_all_pipeline: [Phish] [06-13-2025 20:27:36,329] INFO __main__: Phish pipeline completed in 11.94 seconds.
+[06-13-2025 20:27:36,433] INFO run_all_pipeline: Phish pipeline completed successfully.
+[06-13-2025 20:27:36,433] INFO run_all_pipeline: Finished Phish pipeline.
+[06-13-2025 20:27:36,434] INFO run_all_pipeline: Starting Goose pipeline...
+[06-13-2025 20:27:36,434] INFO run_all_pipeline: ===== Running Goose pipeline =====
+[06-13-2025 20:27:37,622] INFO run_all_pipeline: [Goose] [06-13-2025 20:27:37,622] INFO __main__: Previous Last update: 2025-06-08 16:28:12
+[06-13-2025 20:27:37,622] INFO run_all_pipeline: [Goose] [06-13-2025 20:27:37,622] INFO __main__: Loading Song Data
+[06-13-2025 20:27:38,641] INFO run_all_pipeline: [Goose] [06-13-2025 20:27:38,641] INFO __main__: Loading Show, Venue, and Tour Data
+[06-13-2025 20:27:38,983] INFO run_all_pipeline: [Goose] [06-13-2025 20:27:38,983] INFO __main__: Loading Setlist and Transition Data
+[06-13-2025 20:27:39,929] INFO run_all_pipeline: [Goose] [06-13-2025 20:27:39,929] INFO __main__: Goose pipeline completed in 2.31 seconds.
+[06-13-2025 20:27:40,007] INFO run_all_pipeline: Goose pipeline completed successfully.
+[06-13-2025 20:27:40,007] INFO run_all_pipeline: Finished Goose pipeline.
+[06-13-2025 20:27:40,007] INFO run_all_pipeline: Starting UM pipeline...
+[06-13-2025 20:27:40,007] INFO run_all_pipeline: ===== Running UM pipeline =====
+[06-13-2025 20:27:40,616] INFO run_all_pipeline: [UM] [06-13-2025 20:27:40,616] INFO __main__: Previous Last update: 06/08/2025 16:28
+[06-13-2025 20:27:40,616] INFO run_all_pipeline: [UM] [06-13-2025 20:27:40,616] INFO __main__: Scraping latest song data...
+[06-13-2025 20:27:42,190] INFO run_all_pipeline: [UM] [06-13-2025 20:27:42,189] INFO __main__: Song scraping completed. Found 1020 songs.
+[06-13-2025 20:27:42,190] INFO run_all_pipeline: [UM] [06-13-2025 20:27:42,189] INFO __main__: Scraping latest venue data...
+[06-13-2025 20:27:43,873] INFO run_all_pipeline: [UM] [06-13-2025 20:27:43,873] INFO scrape_venues: Scraped 923 venues from https://allthings.umphreys.com/venues/
+[06-13-2025 20:27:43,873] INFO run_all_pipeline: [UM] [06-13-2025 20:27:43,873] INFO __main__: Scraping full setlist data...
+[06-13-2025 20:27:44,640] INFO run_all_pipeline: [UM] [06-13-2025 20:27:44,640] INFO scrape_setlists: Found 86 setlists for 2024.
+[06-13-2025 20:27:45,198] INFO run_all_pipeline: [UM] [06-13-2025 20:27:45,197] INFO scrape_setlists: Found 47 setlists for 2025.
+[06-13-2025 20:27:45,198] INFO run_all_pipeline: [UM] [06-13-2025 20:27:45,198] INFO scrape_setlists: 133 total shows found.
+[06-13-2025 20:27:45,338] INFO run_all_pipeline: [UM] [06-13-2025 20:27:45,338] INFO scrape_setlists: Found 2,854 existing setlists.
+[06-13-2025 20:27:45,343] INFO run_all_pipeline: [UM] [06-13-2025 20:27:45,342] INFO scrape_setlists: There are 0 new setlists to scrape.
+[06-13-2025 20:27:45,343] INFO run_all_pipeline: [UM] [06-13-2025 20:27:45,342] INFO scrape_setlists: No new setlists to scrape.
+[06-13-2025 20:27:45,350] INFO run_all_pipeline: [UM] [06-13-2025 20:27:45,350] INFO __main__: Fetched 46,858 setlist songs for 2,854 shows.
+[06-13-2025 20:27:45,398] INFO run_all_pipeline: [UM] [06-13-2025 20:27:45,398] INFO scrape_shows: Saved showdata.csv with 2,854 shows to ../3_DataStorage/UM/Collected/showdata.csv
+[06-13-2025 20:27:45,776] INFO run_all_pipeline: [UM] [06-13-2025 20:27:45,776] INFO __main__: UM pipeline completed in 5.16 seconds.
+[06-13-2025 20:27:45,778] INFO run_all_pipeline: [UM] Concerts/3_DataStorage/UM/Collected/showdata.csv
+[06-13-2025 20:27:45,853] INFO run_all_pipeline: UM pipeline completed successfully.
+[06-13-2025 20:27:45,853] INFO run_all_pipeline: Finished UM pipeline.
+[06-13-2025 20:27:45,853] INFO run_all_pipeline: Starting WSP pipeline...
+[06-13-2025 20:27:45,853] INFO run_all_pipeline: ===== Running WSP pipeline =====
+[06-13-2025 20:27:46,454] INFO run_all_pipeline: [WSP] [06-13-2025 20:27:46,453] INFO __main__: Previous Last update: 06/08/2025 16:28
+[06-13-2025 20:27:46,454] INFO run_all_pipeline: [WSP] [06-13-2025 20:27:46,454] INFO __main__: Scraping WSP show data...
+[06-13-2025 20:27:53,340] INFO run_all_pipeline: [WSP] [06-13-2025 20:27:53,339] INFO __main__: Scraped 3,229 shows.
+[06-13-2025 20:27:53,340] INFO run_all_pipeline: [WSP] [06-13-2025 20:27:53,340] INFO __main__: Scraping WSP song catalog...
+[06-13-2025 20:27:54,287] INFO run_all_pipeline: [WSP] [06-13-2025 20:27:54,287] INFO __main__: Scraped 696 songs.
+[06-13-2025 20:27:54,287] INFO run_all_pipeline: [WSP] [06-13-2025 20:27:54,287] INFO __main__: Scraping WSP setlists...
+[06-13-2025 20:27:54,356] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[06-13-2025 20:27:54,357] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[06-13-2025 20:27:54,357] INFO run_all_pipeline: [WSP] [06-13-2025 20:27:54,356] INFO scrape_setlists: Loaded existing setlistdata.csv with 62,173 rows.
+[06-13-2025 20:27:54,357] INFO run_all_pipeline: [WSP] [06-13-2025 20:27:54,357] INFO scrape_setlists: Updating Existing WSP Setlist Data
+[06-13-2025 20:28:02,510] INFO run_all_pipeline: [WSP] [06-13-2025 20:28:02,510] INFO __main__: Scraped/updated setlist data for all years now has 62,186 rows.
+[06-13-2025 20:28:02,510] INFO run_all_pipeline: [WSP] [06-13-2025 20:28:02,510] INFO __main__: Saving WSP data...
+[06-13-2025 20:28:02,736] INFO export_data: No future shows found in schedule
+[06-13-2025 20:28:02,737] INFO run_all_pipeline: [WSP] [06-13-2025 20:28:02,736] INFO export_data: No future shows found in schedule
+[06-13-2025 20:28:02,737] INFO run_all_pipeline: [WSP] [06-13-2025 20:28:02,737] INFO __main__: WSP scraping pipeline completed in 16.28 seconds.
+[06-13-2025 20:28:02,935] INFO run_all_pipeline: WSP pipeline completed successfully.
+[06-13-2025 20:28:02,935] INFO run_all_pipeline: Finished WSP pipeline.
+[06-13-2025 20:28:02,935] INFO run_all_pipeline: All band pipelines completed in 43.41 seconds.

@@ -30,6 +30,30 @@ Key files include:
 - `last_updated.json`: Timestamp of the last successful pipeline run.
 - `next_show.json`: Information about the next upcoming WSP show, if available.
 
+### Example: `songdata.csv` Columns
+
+- `ftp`: First time played (date)
+- `ltp`: Last time played (date)
+- `times_played`: Number of times played
+- `aka`: Also known as (alternate titles)
+
+### Example: `showdata.csv` Columns
+
+- `date`, `year`, `month`, `day`, `weekday`, `venue`, `city`, `state`
+- `show_index_overall`, `show_index_withinyear`, `run_index`
+- `venue_full`: Full venue description
+- `link`: URL to setlist
+
+### Example: `setlistdata.csv` Columns
+
+- `song_name`: Name of the song played
+- `set`: Set number or encore
+- `song_index_set`: Song's position within the set
+- `song_index_show`: Song's position within the show
+- `into`: Indicates segue/transition (1/0)
+- `song_note_detail`: Notes about the song (e.g., guests, teases)
+- `link`: Show link
+
 ## Configuration
 
 - All pipeline settings are managed in `WSP/config.py`.
@@ -58,38 +82,3 @@ Key files include:
 ## Dependencies
 
 All dependencies are managed in the main `requirements.txt` file in the project root.
-- `ftp`: First time played (date)
-- `ltp`: Last time played (date)
-- `times_played`: Number of times played
-- `aka`: Also known as (alternate titles)
-
-### Example: `showdata.csv` Columns
-
-- `date`, `year`, `month`, `day`, `weekday`, `venue`, `city`, `state`
-- `show_index_overall`, `show_index_withinyear`, `run_index`
-- `venue_full`: Full venue description
-- `link`: URL to setlist
-
-### Example: `setlistdata.csv` Columns
-
-- `song_name`: Name of the song played
-- `set`: Set number or encore
-- `song_index_set`: Song's position within the set
-- `song_index_show`: Song's position within the show
-- `into`: Indicates segue/transition (1/0)
-- `song_note_detail`: Notes about the song (e.g., guests, teases)
-- `link`: Show link
-
----
-
-## Pipeline Context
-
-- The pipeline is designed for reproducibility and automated updates.
-- Data is scraped directly from everydaycompanion.com, ensuring up-to-date information.
-- All modules are highly modular, allowing for extension or adaptation to other bands or sources.
-
----
-
-## Running the Pipeline
-
-Run `main.py` to execute the full scraping and data-saving process. All required dependencies are standard (requests, pandas, BeautifulSoup, etc.).
