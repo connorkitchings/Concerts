@@ -1,6 +1,12 @@
 {
   "top_25": [
     {
+      "show_date": "2025-06-13 00:00:00",
+      "venue": "Sharkey's Event Center",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
       "show_date": "2025-06-01 00:00:00",
       "venue": "Jannus Live",
       "recall": 0.0,
@@ -290,12 +296,6 @@
     },
     {
       "show_date": "2024-12-29 00:00:00",
-      "venue": "Ogden Theatre",
-      "recall": 0.0,
-      "precision": 0.0
-    },
-    {
-      "show_date": "2024-12-28 00:00:00",
       "venue": "Ogden Theatre",
       "recall": 0.0,
       "precision": 0.0
@@ -303,6 +303,12 @@
   ],
   "top_50": [
     {
+      "show_date": "2025-06-13 00:00:00",
+      "venue": "Sharkey's Event Center",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
       "show_date": "2025-06-01 00:00:00",
       "venue": "Jannus Live",
       "recall": 0.0,
@@ -592,12 +598,6 @@
     },
     {
       "show_date": "2024-12-29 00:00:00",
-      "venue": "Ogden Theatre",
-      "recall": 0.0,
-      "precision": 0.0
-    },
-    {
-      "show_date": "2024-12-28 00:00:00",
       "venue": "Ogden Theatre",
       "recall": 0.0,
       "precision": 0.0

@@ -19,7 +19,7 @@ else:
 
 # Paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-data_folder = os.path.abspath(os.path.join(SCRIPT_DIR, "../../../3 - Data/UM/"))
+data_folder = os.path.abspath(os.path.join(SCRIPT_DIR, "../../../3_DataStorage/UM/"))
 setlist_path = os.path.join(data_folder, "Collected/setlistdata.csv")
 venuedata_path = os.path.join(data_folder, "Collected/venuedata.csv")
 songdata_path = os.path.join(data_folder, "Collected/songdata.csv")

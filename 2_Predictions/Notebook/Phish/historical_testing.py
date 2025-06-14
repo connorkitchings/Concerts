@@ -45,7 +45,7 @@ def compute_recall_at_n(predicted: List[str], actual: List[str], n: int) -> floa
 
 # Paths (same as predict_today.py)
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-data_folder = os.path.abspath(os.path.join(SCRIPT_DIR, "../../../3 - Data/Phish/"))
+data_folder = os.path.abspath(os.path.join(SCRIPT_DIR, "../../../3_DataStorage/Phish/"))
 setlist_path = os.path.join(data_folder, "Collected/setlistdata.csv")
 showdata_path = os.path.join(data_folder, "Collected/showdata.csv")
 songdata_path = os.path.join(data_folder, "Collected/songdata.csv")
