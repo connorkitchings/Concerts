@@ -94,7 +94,7 @@ def get_prediction_timestamp(band_dir: Path, file_label: str) -> Tuple[str, str]
     Returns:
         tuple: (date_str, time_str) of when prediction was made
     """
-    date_updated_path = band_dir / "Predictions" / "date_updated.json"
+    date_updated_path = band_dir / "Meta" / "date_updated.json"
     if not os.path.exists(date_updated_path):
         return "Unknown", "Unknown"
         
