@@ -20,10 +20,10 @@ else:
 # Paths
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 data_folder = os.path.abspath(os.path.join(SCRIPT_DIR, "../../../3 - Data/Goose/"))
-setlist_path = os.path.join(data_folder, "ElGoose/setlistdata.csv")
-showdata_path = os.path.join(data_folder, "ElGoose/showdata.csv")
-songdata_path = os.path.join(data_folder, "ElGoose/songdata.csv")
-prediction_save_dir = os.path.join(data_folder, "Predictions/notebook")
+setlist_path = os.path.join(data_folder, "Collected/setlistdata.csv")
+showdata_path = os.path.join(data_folder, "Collected/showdata.csv")
+songdata_path = os.path.join(data_folder, "Collected/songdata.csv")
+prediction_save_dir = os.path.join(data_folder, "Meta/notebook")
 os.makedirs(prediction_save_dir, exist_ok=True)
 from typing import List, Dict, Any
 
@@ -115,7 +115,8 @@ def evaluate_historical_accuracy(num_shows: int = 50) -> None:
             'overall_precision': overall_precision,
             'results': results_sorted
         }
-    save_json_path = os.path.join(prediction_save_dir, "notebook_accuracy.json")
+    save_json_path = os.path.join(data_folder, "Meta/notebook", "historical_accuracy.json")
+    os.makedirs(os.path.dirname(save_json_path), exist_ok=True)
     with open(save_json_path, 'w') as f:
         json.dump(combined_results, f, indent=2)
     rel_save_json_path = os.path.relpath(save_json_path, start=os.path.join(os.path.dirname(__file__), '../../../'))

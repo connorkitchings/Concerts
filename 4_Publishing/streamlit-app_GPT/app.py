@@ -35,14 +35,14 @@ def main() -> None:
     band_folders = sorted(list_band_folders(BANDS_DIR))
     band = st.sidebar.selectbox("Select Band", band_folders, format_func=lambda x: BAND_DISPLAY_NAMES.get(x, x))
 
-    band_dir = BANDS_DIR / band
+    band_dir = BANDS_DIR / band / "Generated"
     prediction_file_map = get_prediction_file_map(band_dir)
 
     if not prediction_file_map:
         st.warning(f"No prediction data found for {band}.")
         return
 
-    # Only show 'CK+' and 'Notebook' if present
+    # Show 'CK+', and 'Notebook' if present
     dropdown_options = sorted([lbl for lbl in ["CK+", "Notebook"] if lbl in prediction_file_map], reverse=True)
     file_label = st.sidebar.selectbox("Select Prediction Method", dropdown_options)
     

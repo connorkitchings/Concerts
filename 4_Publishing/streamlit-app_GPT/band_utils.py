@@ -20,13 +20,13 @@ def get_prediction_file_map(band_dir: Path) -> Dict[str, Path]:
     Returns:
         Dict[str, Path]: {'CK+': path, 'Notebook': path}
     """
-    predictions_dir = band_dir / "Predictions"
     file_map: Dict[str, Path] = {}
-    if predictions_dir.exists():
-        for f in predictions_dir.glob("*.csv"):
-            fname = f.name.lower()
-            if "ck+" in fname:
-                file_map["CK+"] = f
-            elif "notebook" in fname:
-                file_map["Notebook"] = f
+    for f in band_dir.glob("*.csv"):
+        fname = f.name.lower()
+        if fname == "todaysckplus.csv":
+            file_map["CK+"] = f  # Always map todaysckplus.csv to 'CK+'
+        elif "ck+" in fname and "ck+" not in file_map:
+            file_map["CK+"] = f  # Only map other CK+ files if not already set
+        elif "notebook" in fname:
+            file_map["Notebook"] = f
     return file_map

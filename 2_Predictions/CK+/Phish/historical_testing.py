@@ -49,12 +49,12 @@ def evaluate_historical_accuracy(num_shows: int = 50) -> None:
     """
     logger = get_logger(__name__)
     SCRIPT_DIR = Path(os.path.dirname(os.path.abspath(__file__)))
-    data_folder = SCRIPT_DIR.parent.parent.parent / "3 - Data/Phish/PhishNet"
+    data_folder = SCRIPT_DIR.parent.parent.parent / "3_DataStorage/Phish/Collected"
     setlist_path = data_folder / "setlistdata.csv"
     showdata_path = data_folder / "showdata.csv"
     songdata_path = data_folder / "songdata.csv"
-    predictions_dir = SCRIPT_DIR.parent.parent.parent / "3 - Data/Phish/Predictions/ckplus"
-    predictions_dir.mkdir(parents=True, exist_ok=True)
+    meta_dir = SCRIPT_DIR.parent.parent.parent / "3_DataStorage/Phish/Meta/ckplus"
+    meta_dir.mkdir(parents=True, exist_ok=True)
     # Load setlist data
     df = load_setlist_and_showdata(setlist_path, showdata_path, songdata_path)
     show_order = df[['showid', 'showdate']].drop_duplicates().sort_values('showdate').reset_index(drop=True)
@@ -70,8 +70,8 @@ def evaluate_historical_accuracy(num_shows: int = 50) -> None:
             show_df = df[df['showid'] == showid]
             actual = show_df['song'].tolist()
             # Use CK+ model to generate predictions for this show
-            showdate = show['show_date']
-            historical_df = df[df['show_date'] <= showdate]
+            showdate = show['showdate']
+            historical_df = df[df['showdate'] <= showdate]
             pred_df = aggregate_setlist_features(historical_df)
             predicted = pred_df['song'].tolist()[:top_n]
             recall = compute_recall_at_n(predicted, actual, top_n)
@@ -94,10 +94,9 @@ def evaluate_historical_accuracy(num_shows: int = 50) -> None:
         'top_25': results[25],
         'top_50': results[50]
     }
-    save_json_path = predictions_dir / "ckplus_accuracy.json"
-    with open(save_json_path, 'w') as f:
+    with open(meta_dir / "historical_accuracy.json", "w") as f:
         json.dump(combined_results, f, indent=2)
-    rel_save_json_path = restrict_to_repo_root(str(save_json_path))
+    rel_save_json_path = restrict_to_repo_root(str(meta_dir / "historical_accuracy.json"))
     logger.info(f"Saved combined accuracy and precision results to {rel_save_json_path}")
     print(f"Saved results to {rel_save_json_path}")
 
