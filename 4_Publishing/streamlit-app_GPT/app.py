@@ -32,6 +32,9 @@ def main() -> None:
     st.markdown("<h1 style='text-align: center;'>Jam Band Nerd</h1>", unsafe_allow_html=True)
 
     # --- MAIN APP ---
+    if not BANDS_DIR.exists():
+        st.error(f"Data directory '{BANDS_DIR.resolve()}' not found. Please ensure your data is uploaded and the path is correct.")
+        return
     band_folders = sorted(list_band_folders(BANDS_DIR))
     band = st.sidebar.selectbox("Select Band", band_folders, format_func=lambda x: BAND_DISPLAY_NAMES.get(x, x))
 
