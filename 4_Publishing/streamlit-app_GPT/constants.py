@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Dict
 
 # Data directory for band data
-BANDS_DIR: Path = Path("../../3_DataStorage")
+BANDS_DIR: Path = Path("3_DataStorage")
 
 # Display names for bands
 BAND_DISPLAY_NAMES: Dict[str, str] = {
