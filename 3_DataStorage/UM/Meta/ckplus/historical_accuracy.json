@@ -1,6 +1,18 @@
 {
   "top_25": [
     {
+      "show_date": "2025-06-15 00:00:00",
+      "venue": "Northlands",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_date": "2025-06-14 00:00:00",
+      "venue": "Higher Ground",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
       "show_date": "2025-06-13 00:00:00",
       "venue": "Sharkey's Event Center",
       "recall": 0.0,
@@ -285,24 +297,24 @@
     {
       "show_date": "2024-12-31 00:00:00",
       "venue": "Boulder Theater",
-      "recall": 0.0,
-      "precision": 0.0
-    },
-    {
-      "show_date": "2024-12-30 00:00:00",
-      "venue": "Boulder Theater",
-      "recall": 0.0,
-      "precision": 0.0
-    },
-    {
-      "show_date": "2024-12-29 00:00:00",
-      "venue": "Ogden Theatre",
       "recall": 0.0,
       "precision": 0.0
     }
   ],
   "top_50": [
     {
+      "show_date": "2025-06-15 00:00:00",
+      "venue": "Northlands",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
+      "show_date": "2025-06-14 00:00:00",
+      "venue": "Higher Ground",
+      "recall": 0.0,
+      "precision": 0.0
+    },
+    {
       "show_date": "2025-06-13 00:00:00",
       "venue": "Sharkey's Event Center",
       "recall": 0.0,
@@ -587,18 +599,6 @@
     {
       "show_date": "2024-12-31 00:00:00",
       "venue": "Boulder Theater",
-      "recall": 0.0,
-      "precision": 0.0
-    },
-    {
-      "show_date": "2024-12-30 00:00:00",
-      "venue": "Boulder Theater",
-      "recall": 0.0,
-      "precision": 0.0
-    },
-    {
-      "show_date": "2024-12-29 00:00:00",
-      "venue": "Ogden Theatre",
       "recall": 0.0,
       "precision": 0.0
     }

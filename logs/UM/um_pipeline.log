@@ -42,3 +42,17 @@
 [06-14-2025 19:30:48,051] INFO __main__: Fetched 46,866 setlist songs for 2,855 shows.
 [06-14-2025 19:30:48,114] INFO scrape_shows: Saved showdata.csv with 2,855 shows to ../3_DataStorage/UM/Collected/showdata.csv
 [06-14-2025 19:30:48,472] INFO __main__: UM pipeline completed in 5.47 seconds.
+[06-17-2025 17:41:12,120] INFO __main__: Previous Last update: 06/14/2025 19:30
+[06-17-2025 17:41:12,121] INFO __main__: Scraping latest song data...
+[06-17-2025 17:41:14,439] INFO __main__: Song scraping completed. Found 1022 songs.
+[06-17-2025 17:41:14,439] INFO __main__: Scraping latest venue data...
+[06-17-2025 17:41:16,552] INFO scrape_venues: Scraped 924 venues from https://allthings.umphreys.com/venues/
+[06-17-2025 17:41:16,552] INFO __main__: Scraping full setlist data...
+[06-17-2025 17:41:17,461] INFO scrape_setlists: Found 86 setlists for 2024.
+[06-17-2025 17:41:18,217] INFO scrape_setlists: Found 50 setlists for 2025.
+[06-17-2025 17:41:18,217] INFO scrape_setlists: 136 total shows found.
+[06-17-2025 17:41:18,352] INFO scrape_setlists: Found 2,855 existing setlists.
+[06-17-2025 17:41:18,357] INFO scrape_setlists: There are 2 new setlists to scrape.
+[06-17-2025 17:41:19,136] INFO __main__: Fetched 46,893 setlist songs for 2,857 shows.
+[06-17-2025 17:41:19,183] INFO scrape_shows: Saved showdata.csv with 2,857 shows to ../3_DataStorage/UM/Collected/showdata.csv
+[06-17-2025 17:41:19,542] INFO __main__: UM pipeline completed in 7.42 seconds.
