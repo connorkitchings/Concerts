@@ -1,15 +1,20 @@
-import sys, os
+import os
+import sys
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 from datetime import datetime
+
 from data_loader import load_setlist_and_showdata
-from model import aggregate_setlist_features
 from logger import get_logger, restrict_to_repo_root
+from model import aggregate_setlist_features
 from prediction_utils import update_date_updated
 
 logger = get_logger(__name__)
 
 if __name__ == "__main__":
-    root_folder = os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+    root_folder = os.path.dirname(
+        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    )
     data_folder = os.path.join(root_folder, "3_DataStorage/WSP/")
     collected_folder = os.path.join(data_folder, "Collected")
     generated_folder = os.path.join(data_folder, "Generated")
@@ -21,7 +26,9 @@ if __name__ == "__main__":
     today = datetime.now().strftime("%m-%d-%Y")
     agg_df = aggregate_setlist_features(df, today)
     agg_df.to_csv(os.path.join(generated_folder, "todaysnotebook.csv"), index=False)
-    logger.info(f"Saved Notebook predictions to {restrict_to_repo_root(generated_folder)}")
+    logger.info(
+        f"Saved Notebook predictions to {restrict_to_repo_root(generated_folder)}"
+    )
 
     # Update date_updated.json after successful save
-    update_date_updated('WSP', 'Notebook', datetime.now().isoformat())
+    update_date_updated("WSP", "Notebook", datetime.now().isoformat())

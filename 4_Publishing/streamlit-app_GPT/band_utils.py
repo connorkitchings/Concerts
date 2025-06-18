@@ -1,6 +1,8 @@
 """Band-specific utilities for Jam Band Nerd app."""
+
 from pathlib import Path
-from typing import List, Dict
+from typing import Dict, List
+
 
 def list_band_folders(bands_dir: Path) -> List[str]:
     """List band folders in the data directory.
@@ -11,6 +13,7 @@ def list_band_folders(bands_dir: Path) -> List[str]:
         List[str]: List of band folder names.
     """
     return [f.name for f in bands_dir.iterdir() if f.is_dir()]
+
 
 def get_prediction_file_map(band_dir: Path) -> Dict[str, Path]:
     """Return a map of canonical labels ('CK+', 'Notebook') to file paths if present for the band.

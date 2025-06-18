@@ -1,9 +1,9 @@
-from UM.config import DATA_COLLECTED_DIR, LAST_UPDATED_FILENAME
-from pathlib import Path
 import json
-from datetime import datetime
-import common_config # For DATETIME_FORMAT
-from common_utils import print_relative_path, get_date_and_time
+from pathlib import Path
+
+from UM.config import DATA_COLLECTED_DIR, LAST_UPDATED_FILENAME
+
+
 def get_last_update_time(data_dir: Path | None = None) -> str | None:
     """
     Returns the last update time from last_updated.json in the given directory, or None if not found.

@@ -1,10 +1,13 @@
 import os
-import pandas as pd
 import sys
+
+import pandas as pd
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from logger import get_logger, restrict_to_repo_root
 
 logger = get_logger(__name__)
+
 
 def load_setlist_and_showdata(setlist_path, showdata_path, songdata_path):
     """
@@ -13,20 +16,22 @@ def load_setlist_and_showdata(setlist_path, showdata_path, songdata_path):
     """
     df = pd.read_csv(setlist_path)
     # Remove Jam and Drums from setlist
-    df = df[~df['song_name'].isin(['JAM', 'DRUMS'])]
+    df = df[~df["song_name"].isin(["JAM", "DRUMS"])]
     show_df = pd.read_csv(showdata_path, usecols=["date", "show_index_overall", "link"])
     show_df = show_df.rename(columns={"date": "show_date"})
-    show_df["show_date"] = pd.to_datetime(show_df["show_date"], errors='coerce')
+    show_df["show_date"] = pd.to_datetime(show_df["show_date"], errors="coerce")
     df = df.merge(show_df, on="link", how="left")
     song_df = pd.read_csv(songdata_path, usecols=["song"])
     df = df.merge(song_df, left_on="song_name", right_on="song", how="left")
     # Drop rows with missing song names
-    df = df[~df['song_name'].isnull()].copy()
+    df = df[~df["song_name"].isnull()].copy()
     # Merge song info, but ensure only one 'song' column remains
-    df['song'] = df['song_name'].astype(str)
+    df["song"] = df["song_name"].astype(str)
     # Remove any duplicate song columns from merge
-    for col in ['song_name', 'song_x', 'song_y']:
-        if col in df.columns and col != 'song':
+    for col in ["song_name", "song_x", "song_y"]:
+        if col in df.columns and col != "song":
             df = df.drop(columns=[col])
-    logger.info(f"Loaded setlist ({len(df):,}) rows from {restrict_to_repo_root(setlist_path)}, shows from {restrict_to_repo_root(showdata_path)}, songs from {restrict_to_repo_root(songdata_path)}")
+    logger.info(
+        f"Loaded setlist ({len(df):,}) rows from {restrict_to_repo_root(setlist_path)}, shows from {restrict_to_repo_root(showdata_path)}, songs from {restrict_to_repo_root(songdata_path)}"
+    )
     return df

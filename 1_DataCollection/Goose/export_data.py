@@ -1,13 +1,31 @@
-import os
 import json
+import os
 from datetime import datetime
-from Goose.config import DATA_COLLECTED_DIR, SONG_DATA_FILENAME, SHOW_DATA_FILENAME, VENUE_DATA_FILENAME, SETLIST_DATA_FILENAME, TRANSITION_DATA_FILENAME, NEXT_SHOW_FILENAME, LAST_UPDATED_FILENAME
+
+from Goose.config import (
+    DATA_COLLECTED_DIR,
+    LAST_UPDATED_FILENAME,
+    NEXT_SHOW_FILENAME,
+    SETLIST_DATA_FILENAME,
+    SHOW_DATA_FILENAME,
+    SONG_DATA_FILENAME,
+    TRANSITION_DATA_FILENAME,
+    VENUE_DATA_FILENAME,
+)
 from Goose.utils import get_date_and_time
 from logger import get_logger
 
 logger = get_logger(__name__, add_console_handler=True)
 
-def save_goose_data(song_data: 'pd.DataFrame', show_data: 'pd.DataFrame', venue_data: 'pd.DataFrame', setlist_data: 'pd.DataFrame', transition_data: 'pd.DataFrame', data_dir: str = DATA_COLLECTED_DIR) -> None:
+
+def save_goose_data(
+    song_data: "pd.DataFrame",
+    show_data: "pd.DataFrame",
+    venue_data: "pd.DataFrame",
+    setlist_data: "pd.DataFrame",
+    transition_data: "pd.DataFrame",
+    data_dir: str = DATA_COLLECTED_DIR,
+) -> None:
     """
     Save Goose data (songs, shows, venues, setlists, transitions) to CSV files and update JSON files for last updated and next show.
 
@@ -22,8 +40,10 @@ def save_goose_data(song_data: 'pd.DataFrame', show_data: 'pd.DataFrame', venue_
         None
     """
     os.makedirs(data_dir, exist_ok=True)
-    today = datetime.today().strftime('%Y-%m-%d')
-    next_show = show_data[show_data['show_date'] >= today].sort_values('show_date').head(1)
+    today = datetime.today().strftime("%Y-%m-%d")
+    next_show = (
+        show_data[show_data["show_date"] >= today].sort_values("show_date").head(1)
+    )
     next_show_path = os.path.join(data_dir, NEXT_SHOW_FILENAME)
     if not next_show.empty:
         next_show_record = next_show.iloc[0].to_dict()
@@ -37,12 +57,13 @@ def save_goose_data(song_data: 'pd.DataFrame', show_data: 'pd.DataFrame', venue_
         SHOW_DATA_FILENAME: show_data,
         VENUE_DATA_FILENAME: venue_data,
         SETLIST_DATA_FILENAME: setlist_data,
-        TRANSITION_DATA_FILENAME: transition_data
+        TRANSITION_DATA_FILENAME: transition_data,
     }
     for filename, data in data_pairs.items():
         filepath = os.path.join(data_dir, filename)
         data.to_csv(filepath, index=False)
-        
+
+
 def save_query_data(data_dir: str = DATA_COLLECTED_DIR) -> None:
     """
     Save the last updated timestamp to a JSON file.

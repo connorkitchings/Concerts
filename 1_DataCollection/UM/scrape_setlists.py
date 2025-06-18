@@ -1,14 +1,25 @@
-import requests
-import traceback
-import pandas as pd
-from bs4 import BeautifulSoup
-from datetime import datetime
 import os
 import re
-from logger import get_logger
-from UM.config import BASE_URL, DATA_COLLECTED_DIR, LOG_FILE_PATH, SCRAPE_YEARS, SETLISTS_URL_TEMPLATE, SETLIST_DATA_FILENAME # Added LOG_FILE_PATH and moved other imports
+import traceback
+from datetime import datetime
 
-logger = get_logger(__name__, log_file=LOG_FILE_PATH, add_console_handler=True) # Updated logger
+import pandas as pd
+import requests
+from bs4 import BeautifulSoup
+from logger import get_logger
+from UM.config import (  # Added LOG_FILE_PATH and moved other imports
+    BASE_URL,
+    DATA_COLLECTED_DIR,
+    LOG_FILE_PATH,
+    SCRAPE_YEARS,
+    SETLIST_DATA_FILENAME,
+    SETLISTS_URL_TEMPLATE,
+)
+
+logger = get_logger(
+    __name__, log_file=LOG_FILE_PATH, add_console_handler=True
+)  # Updated logger
+
 
 def fetch_soup(url: str) -> BeautifulSoup:
     """
@@ -20,9 +31,10 @@ def fetch_soup(url: str) -> BeautifulSoup:
     Raises:
         requests.HTTPError: If the request fails.
     """
-    response = requests.get(url, timeout=60) # Added timeout
+    response = requests.get(url, timeout=60)  # Added timeout
     response.raise_for_status()
-    return BeautifulSoup(response.content, 'html.parser')
+    return BeautifulSoup(response.content, "html.parser")
+
 
 def fetch_setlist_urls() -> list[str]:
     """
@@ -38,6 +50,7 @@ def fetch_setlist_urls() -> list[str]:
     logger.info(f"{len(url_list):,} total shows found.")
     return url_list
 
+
 def fetch_setlist_urls_by_year(year: int) -> list[str]:
     """
     Fetches setlist URLs for a given year from allthings.umphreys.com.
@@ -49,20 +62,20 @@ def fetch_setlist_urls_by_year(year: int) -> list[str]:
     url = SETLISTS_URL_TEMPLATE.format(year=year)
     soup = fetch_soup(url)
     # Regex pattern for dates like "January 22, 2000"
-    date_pattern = re.compile(r"^(January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}$")
+    date_pattern = re.compile(
+        r"^(January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}$"
+    )
     base_url = "https://allthings.umphreys.com"
     date_url_pairs = []
     for a in soup.find_all("a", href=True):
         link_text = a.get_text(strip=True)
         if date_pattern.match(link_text):
-            full_url = base_url + a['href']
-            date_url_pairs.append({
-                "date": link_text,
-                "url": full_url
-            })
-    url_list = [x['url'] for x in date_url_pairs]
+            full_url = base_url + a["href"]
+            date_url_pairs.append({"date": link_text, "url": full_url})
+    url_list = [x["url"] for x in date_url_pairs]
     logger.info(f"Found {len(url_list):,} setlists for {year}.")
     return url_list
+
 
 def parse_setlist_link(link: str) -> pd.DataFrame:
     """
@@ -78,10 +91,26 @@ def parse_setlist_link(link: str) -> pd.DataFrame:
         header = soup.find("div", class_="setlist-date-long")
         if not header:
             logger.warning(f"Missing header for setlist page: {link}")
-            return pd.DataFrame(columns=["song", "set", "set_index", "show_index", "date", "venue", "city", "state", "country", "link", "footnotes"])
+            return pd.DataFrame(
+                columns=[
+                    "song",
+                    "set",
+                    "set_index",
+                    "show_index",
+                    "date",
+                    "venue",
+                    "city",
+                    "state",
+                    "country",
+                    "link",
+                    "footnotes",
+                ]
+            )
         a_tags = header.find_all("a")
+
         def safe_get(idx: int) -> str | None:
             return a_tags[idx].text.strip() if len(a_tags) > idx else None
+
         date = safe_get(1)
         venue = safe_get(3)
         city = safe_get(4)
@@ -89,7 +118,10 @@ def parse_setlist_link(link: str) -> pd.DataFrame:
         country = safe_get(6)
         # Log if any are missing
         missing = []
-        for field, val in zip(["date", "venue", "city", "state", "country"], [date, venue, city, state, country]):
+        for field, val in zip(
+            ["date", "venue", "city", "state", "country"],
+            [date, venue, city, state, country],
+        ):
             if val is None:
                 missing.append(field)
         if missing:
@@ -98,15 +130,19 @@ def parse_setlist_link(link: str) -> pd.DataFrame:
         # Adjustment for missing country
         if not country:
             log_id = date if date else link
-            if city and ',' in city:
-                logger.info(f"Splitting city field on comma and shifting right for setlist page: {log_id}")
-                city_left, city_right = [s.strip() for s in city.split(',', 1)]
+            if city and "," in city:
+                logger.info(
+                    f"Splitting city field on comma and shifting right for setlist page: {log_id}"
+                )
+                city_left, city_right = [s.strip() for s in city.split(",", 1)]
                 country = state
                 state = city_right
                 city = city_left
-            elif state and ',' in state:
-                logger.info(f"Splitting state field on comma and shifting right for setlist page: {log_id}")
-                state_left, state_right = [s.strip() for s in state.split(',', 1)]
+            elif state and "," in state:
+                logger.info(
+                    f"Splitting state field on comma and shifting right for setlist page: {log_id}"
+                )
+                state_left, state_right = [s.strip() for s in state.split(",", 1)]
                 country = state_right
                 state = state_left
             else:
@@ -115,7 +151,21 @@ def parse_setlist_link(link: str) -> pd.DataFrame:
                 state = None
         if all(x is None for x in [date, venue, city, state, country]):
             logger.warning(f"All location fields missing for setlist page: {link}")
-            return pd.DataFrame(columns=["song", "set", "set_index", "show_index", "footnotes","date", "venue", "city", "state", "country", "link"])
+            return pd.DataFrame(
+                columns=[
+                    "song",
+                    "set",
+                    "set_index",
+                    "show_index",
+                    "footnotes",
+                    "date",
+                    "venue",
+                    "city",
+                    "state",
+                    "country",
+                    "link",
+                ]
+            )
         # --- Footnote extraction ---
         footnotes_map = {}
         footnotes_section = soup.select_one(".setlist-footnotes")
@@ -152,29 +202,50 @@ def parse_setlist_link(link: str) -> pd.DataFrame:
                 sup = song_span.find("sup")
                 footnote_key = sup.text.strip("[]") if sup else ""
                 show_index += 1
-                records.append({
-                    "song": song_name,
-                    "set": set_name,
-                    "in_set_index": set_index,
-                    "in_show_index": show_index,
-                    "footnotes": footnotes_map.get(footnote_key, "") if footnote_key else "",
-                    "date": date,
-                    "venue": venue,
-                    "city": city,
-                    "state": state,
-                    "country": country,
-                    "link": link
-                })
+                records.append(
+                    {
+                        "song": song_name,
+                        "set": set_name,
+                        "in_set_index": set_index,
+                        "in_show_index": show_index,
+                        "footnotes": footnotes_map.get(footnote_key, "")
+                        if footnote_key
+                        else "",
+                        "date": date,
+                        "venue": venue,
+                        "city": city,
+                        "state": state,
+                        "country": country,
+                        "link": link,
+                    }
+                )
         df = pd.DataFrame(records)
-        if not df.empty and 'date' in df.columns:
-            df['date'] = pd.to_datetime(df['date'], errors='coerce')
-            df['date'] = df['date'].dt.strftime('%m/%d/%Y')
+        if not df.empty and "date" in df.columns:
+            df["date"] = pd.to_datetime(df["date"], errors="coerce")
+            df["date"] = df["date"].dt.strftime("%m/%d/%Y")
         else:
-            df['date'] = pd.NaT
+            df["date"] = pd.NaT
         return df
     except Exception as e:
-        logger.error(f"Error parsing setlist page {link}: {e}\n{traceback.format_exc()}")
-        return pd.DataFrame(columns=["song", "set", "set_index", "show_index", "date", "venue", "city", "state", "country", "link", "footnotes"])
+        logger.error(
+            f"Error parsing setlist page {link}: {e}\n{traceback.format_exc()}"
+        )
+        return pd.DataFrame(
+            columns=[
+                "song",
+                "set",
+                "set_index",
+                "show_index",
+                "date",
+                "venue",
+                "city",
+                "state",
+                "country",
+                "link",
+                "footnotes",
+            ]
+        )
+
 
 def fetch_requested_setlists(url_list: list[str]) -> pd.DataFrame:
     """
@@ -190,7 +261,7 @@ def fetch_requested_setlists(url_list: list[str]) -> pd.DataFrame:
         df = parse_setlist_link(url)
         if not df.empty and not df.isna().all().all():
             all_dfs.append(df)
-            scraped_links.update(df['link'].dropna().unique())
+            scraped_links.update(df["link"].dropna().unique())
         if i % 50 == 0:
             logger.info(f"Parsed {i} setlists so far...")
     if all_dfs:
@@ -200,7 +271,21 @@ def fetch_requested_setlists(url_list: list[str]) -> pd.DataFrame:
             logger.warning(f"Missed {len(missed_urls):,} setlists: {missed_urls}")
         return final_df
     else:
-        return pd.DataFrame(columns=["song", "set", "set_index", "show_index", "date", "venue", "city", "state", "country", "link", "footnotes"])
+        return pd.DataFrame(
+            columns=[
+                "song",
+                "set",
+                "set_index",
+                "show_index",
+                "date",
+                "venue",
+                "city",
+                "state",
+                "country",
+                "link",
+                "footnotes",
+            ]
+        )
 
     all_dfs = []
     scraped_links = set()
@@ -208,7 +293,7 @@ def fetch_requested_setlists(url_list: list[str]) -> pd.DataFrame:
         df = parse_setlist_link(url)
         if not df.empty and not df.isna().all().all():
             all_dfs.append(df)
-            scraped_links.update(df['link'].dropna().unique())
+            scraped_links.update(df["link"].dropna().unique())
         if i % 50 == 0:
             logger.info(f"Parsed {i} setlists so far...")
     if all_dfs:
@@ -218,8 +303,22 @@ def fetch_requested_setlists(url_list: list[str]) -> pd.DataFrame:
             logger.warning(f"Missed {len(missed_urls):,} setlists: {missed_urls}")
         return final_df
     else:
-        return pd.DataFrame(columns=["song", "set", "set_index", "show_index", "date", "venue", "city", "state", "country", "link", "footnotes"])
-    
+        return pd.DataFrame(
+            columns=[
+                "song",
+                "set",
+                "set_index",
+                "show_index",
+                "date",
+                "venue",
+                "city",
+                "state",
+                "country",
+                "link",
+                "footnotes",
+            ]
+        )
+
 
 def fetch_um_setlist_data() -> pd.DataFrame:
     """
@@ -233,18 +332,19 @@ def fetch_um_setlist_data() -> pd.DataFrame:
     setlist_path = os.path.join(data_dir, SETLIST_DATA_FILENAME)
     if os.path.exists(setlist_path):
         existing_df = pd.read_csv(setlist_path)
-        existing_urls = existing_df['link'].unique().tolist()
+        existing_urls = existing_df["link"].unique().tolist()
         logger.info(f"Found {len(existing_urls):,} existing setlists.")
         new_urls = [url for url in url_list if url not in existing_urls]
         logger.info(f"There are {len(new_urls):,} new setlists to scrape.")
         if len(new_urls) == 0:
             logger.info("No new setlists to scrape.")
             return existing_df
-        new_existing_data = existing_df[~existing_df['link'].isin(new_urls)]
+        new_existing_data = existing_df[~existing_df["link"].isin(new_urls)]
         new_df = fetch_requested_setlists(new_urls)
-        final_df = pd.concat([new_existing_data, new_df], ignore_index=True).drop_duplicates()
+        final_df = pd.concat(
+            [new_existing_data, new_df], ignore_index=True
+        ).drop_duplicates()
     else:
         logger.info(f"No existing setlist data found, starting fresh.")
         final_df = fetch_requested_setlists(url_list)
     return final_df
-    

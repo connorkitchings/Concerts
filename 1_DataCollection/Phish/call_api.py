@@ -1,10 +1,11 @@
-import os
 from logger import get_logger
 from Phish.config import LOG_FILE_PATH
 
 logger = get_logger(__name__, log_file=LOG_FILE_PATH, add_console_handler=True)
+
+
 import requests
-import pathlib
+
 
 # Helper to make API requests
 def make_api_request(endpoint: str, api_key: str) -> dict:

@@ -19,22 +19,22 @@ All arguments are type-hinted and documented. This logger is intended to be wrap
 
 import logging
 from logging.handlers import RotatingFileHandler
-import os
-from pathlib import Path # Added for Path type hint
-from typing import Union # To allow Path or str for log_file
+from pathlib import Path  # Added for Path type hint
+from typing import Union  # To allow Path or str for log_file
 
 # Import common configuration settings
 import common_config
 
 # The restrict_to_repo_root function has been removed as common_config.LOG_FILE_PATH handles project-relative logging.
 
+
 def get_logger(
     name: str,
     log_file: Union[str, Path] = common_config.LOG_FILE_PATH,
-    log_level: str = common_config._log_level_str, # Use string representation from common_config
+    log_level: str = common_config._log_level_str,  # Use string representation from common_config
     log_max_bytes: int = common_config.LOG_MAX_BYTES,
     log_backup_count: int = common_config.LOG_BACKUP_COUNT,
-    add_console_handler: bool = True
+    add_console_handler: bool = True,
 ) -> logging.Logger:
     """
     Create and configure a logger with a size-based rotating file handler.
@@ -55,7 +55,7 @@ def get_logger(
     If add_console_handler is True, logs are also streamed to the console for convenience.
     """
     # Ensure log directory exists
-    log_file_path = Path(log_file) # Ensure it's a Path object
+    log_file_path = Path(log_file)  # Ensure it's a Path object
     log_file_path.parent.mkdir(parents=True, exist_ok=True)
 
     logger: logging.Logger = logging.getLogger(name)
@@ -63,8 +63,13 @@ def get_logger(
     effective_log_level = getattr(logging, log_level.upper(), common_config.LOG_LEVEL)
     logger.setLevel(effective_log_level)
     if not logger.handlers:
-        handler = RotatingFileHandler(str(log_file_path), maxBytes=log_max_bytes, backupCount=log_backup_count) # RotatingFileHandler expects a string path
-        formatter = logging.Formatter('[%(asctime)s,%(msecs)03d] %(levelname)s %(name)s: %(message)s', datefmt='%m-%d-%Y %H:%M:%S')
+        handler = RotatingFileHandler(
+            str(log_file_path), maxBytes=log_max_bytes, backupCount=log_backup_count
+        )  # RotatingFileHandler expects a string path
+        formatter = logging.Formatter(
+            "[%(asctime)s,%(msecs)03d] %(levelname)s %(name)s: %(message)s",
+            datefmt="%m-%d-%Y %H:%M:%S",
+        )
         handler.setFormatter(formatter)
         logger.addHandler(handler)
         if add_console_handler:

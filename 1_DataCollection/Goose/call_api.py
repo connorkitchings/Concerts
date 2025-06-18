@@ -1,5 +1,6 @@
 import requests
 
+
 def make_api_request(endpoint: str, version: str = "v2") -> dict:
     """
     Make an API request to the Goose API.

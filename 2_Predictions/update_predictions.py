@@ -6,9 +6,10 @@ Runs both CK+ and Notebook prediction pipelines for all bands in sequence.
 Usage:
     python update_predictions.py
 """
-from subprocess import run, CalledProcessError
-from pathlib import Path
+
 import sys
+from pathlib import Path
+from subprocess import CalledProcessError, run
 
 CKP_DIR = Path(__file__).parent / "CK+"
 NB_DIR = Path(__file__).parent / "Notebook"

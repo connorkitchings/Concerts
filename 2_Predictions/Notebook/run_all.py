@@ -8,10 +8,12 @@ Module to run all four band prediction pipelines:
 Usage:
     python run_all.py
 """
+
+import os
 import subprocess
 import sys
-import os
 import time
+
 from logger import get_logger
 
 logger = get_logger(__name__)
@@ -19,23 +21,18 @@ logger = get_logger(__name__)
 BANDS = {
     "Phish": {
         "predict": "Phish/predict_today.py",
-        "accuracy": "Phish/historical_testing.py"
+        "accuracy": "Phish/historical_testing.py",
     },
     "Goose": {
         "predict": "Goose/predict_today.py",
-        "accuracy": "Goose/historical_testing.py"
+        "accuracy": "Goose/historical_testing.py",
     },
-    "UM": {
-        "predict": "UM/predict_today.py",
-        "accuracy": "UM/historical_testing.py"
-    },
-    "WSP": {
-        "predict": "WSP/predict_today.py",
-        "accuracy": "WSP/historical_testing.py"
-    },
+    "UM": {"predict": "UM/predict_today.py", "accuracy": "UM/historical_testing.py"},
+    "WSP": {"predict": "WSP/predict_today.py", "accuracy": "WSP/historical_testing.py"},
 }
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 
 def run_band(band: str, script_paths: dict) -> int:
     """
@@ -55,7 +52,9 @@ def run_band(band: str, script_paths: dict) -> int:
         logger.error(f"predict_today.py not found for {band}! ({predict_path})")
         code_sum += 1
     else:
-        result = subprocess.run([sys.executable, predict_path], capture_output=True, text=True)
+        result = subprocess.run(
+            [sys.executable, predict_path], capture_output=True, text=True
+        )
         if result.stdout:
             logger.info(f"{band} predict_today.py output:\n{result.stdout}")
         if result.stderr and result.returncode != 0:
@@ -63,7 +62,9 @@ def run_band(band: str, script_paths: dict) -> int:
         if result.returncode == 0:
             logger.info(f"Predictions for {band} completed successfully.")
         else:
-            logger.error(f"Predictions for {band} failed with exit code {result.returncode}.")
+            logger.error(
+                f"Predictions for {band} failed with exit code {result.returncode}."
+            )
         code_sum += result.returncode
     # Run accuracy update pipeline
     logger.info(f"Running {band} accuracy update pipeline...")
@@ -71,7 +72,9 @@ def run_band(band: str, script_paths: dict) -> int:
         logger.error(f"historical_testing.py not found for {band}! ({accuracy_path})")
         code_sum += 1
     else:
-        result = subprocess.run([sys.executable, accuracy_path], capture_output=True, text=True)
+        result = subprocess.run(
+            [sys.executable, accuracy_path], capture_output=True, text=True
+        )
         if result.stdout:
             logger.info(f"{band} historical_testing.py output:\n{result.stdout}")
         if result.stderr and result.returncode != 0:
@@ -79,7 +82,9 @@ def run_band(band: str, script_paths: dict) -> int:
         if result.returncode == 0:
             logger.info(f"Accuracy update for {band} completed successfully.")
         else:
-            logger.error(f"Accuracy update for {band} failed with exit code {result.returncode}.")
+            logger.error(
+                f"Accuracy update for {band} failed with exit code {result.returncode}."
+            )
         code_sum += result.returncode
     return code_sum
 
@@ -92,7 +97,10 @@ def main() -> None:
     for band, scripts in BANDS.items():
         run_band(band, scripts)
     total_duration = time.time() - total_start
-    logger.info(f"All band prediction pipelines completed in {total_duration:.2f} seconds.")
+    logger.info(
+        f"All band prediction pipelines completed in {total_duration:.2f} seconds."
+    )
+
 
 if __name__ == "__main__":
     main()

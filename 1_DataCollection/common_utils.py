@@ -1,9 +1,11 @@
 import os
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
+
 import common_config
 
-def print_relative_path(path: 'str | Path') -> None:
+
+def print_relative_path(path: "str | Path") -> None:
     """
     Print the given file or directory path relative to the first occurrence of 'Concerts/'.
 
@@ -13,13 +15,13 @@ def print_relative_path(path: 'str | Path') -> None:
         None
     """
     path_str = str(path)
-    marker = 'Concerts' + '/'
+    marker = "Concerts" + "/"
     idx = path_str.find(marker)
     if idx == -1:
-        marker = 'Concerts' + '\\'
+        marker = "Concerts" + "\\"
         idx = path_str.find(marker)
     if idx == -1:
-        marker = 'Concerts'
+        marker = "Concerts"
         idx = path_str.find(marker)
     if idx != -1:
         print(path_str[idx:])

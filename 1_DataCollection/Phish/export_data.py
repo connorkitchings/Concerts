@@ -1,11 +1,29 @@
-import os
 import json
+import os
 from datetime import datetime
+
 import pandas as pd
-from Phish.config import DATA_COLLECTED_DIR, SONG_DATA_FILENAME, SHOW_DATA_FILENAME, VENUE_DATA_FILENAME, SETLIST_DATA_FILENAME, TRANSITION_DATA_FILENAME, NEXT_SHOW_FILENAME, LAST_UPDATED_FILENAME
+from Phish.config import (
+    DATA_COLLECTED_DIR,
+    LAST_UPDATED_FILENAME,
+    NEXT_SHOW_FILENAME,
+    SETLIST_DATA_FILENAME,
+    SHOW_DATA_FILENAME,
+    SONG_DATA_FILENAME,
+    TRANSITION_DATA_FILENAME,
+    VENUE_DATA_FILENAME,
+)
 from Phish.utils import get_date_and_time
 
-def save_phish_data(song_data: 'pd.DataFrame', show_data: 'pd.DataFrame', venue_data: 'pd.DataFrame', setlist_data: 'pd.DataFrame', transition_data: 'pd.DataFrame', data_dir: str = DATA_COLLECTED_DIR) -> None:
+
+def save_phish_data(
+    song_data: "pd.DataFrame",
+    show_data: "pd.DataFrame",
+    venue_data: "pd.DataFrame",
+    setlist_data: "pd.DataFrame",
+    transition_data: "pd.DataFrame",
+    data_dir: str = DATA_COLLECTED_DIR,
+) -> None:
     """
     Save Phish data (songs, shows, venues, setlists, transitions) to CSV files and update JSON files for last updated and next show.
 
@@ -21,8 +39,10 @@ def save_phish_data(song_data: 'pd.DataFrame', show_data: 'pd.DataFrame', venue_
     """
     os.makedirs(data_dir, exist_ok=True)
     # Save next upcoming show to next_show.json
-    today = datetime.today().strftime('%Y-%m-%d')
-    next_show = show_data[show_data['showdate'] >= today].sort_values('showdate').head(1)
+    today = datetime.today().strftime("%Y-%m-%d")
+    next_show = (
+        show_data[show_data["showdate"] >= today].sort_values("showdate").head(1)
+    )
     next_show_path = os.path.join(data_dir, NEXT_SHOW_FILENAME)
     if not next_show.empty:
         next_show_record = next_show.iloc[0].to_dict()
@@ -40,12 +60,13 @@ def save_phish_data(song_data: 'pd.DataFrame', show_data: 'pd.DataFrame', venue_
         SHOW_DATA_FILENAME: show_data,
         VENUE_DATA_FILENAME: venue_data,
         SETLIST_DATA_FILENAME: setlist_data,
-        TRANSITION_DATA_FILENAME: transition_data
+        TRANSITION_DATA_FILENAME: transition_data,
     }
     for filename, data in data_pairs.items():
         filepath = os.path.join(data_dir, filename)
         data.to_csv(filepath, index=False)
-        
+
+
 def save_query_data(data_dir: str = DATA_COLLECTED_DIR) -> None:
     """
     Save the last updated timestamp to a JSON file.
