@@ -1,4 +1,4 @@
-# Concerts
+# JamBandNerd
 
 ## Creation and Purpose - 2/1/2025
 The purpose of this repository is to store all code and data associated with my research and modeling project regarding jam band setlists. As of now, my plan is to include the following bands: Widespread Panic, Phish, Umphrey's McGee, and Goose. 
