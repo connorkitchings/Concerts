@@ -23,6 +23,6 @@ dependencies = [
     "lxml==4.9.3",
 ]
 
-[tool.uv]
+[[tool.uv.index]]
 package = false
-index-url = "https://pypi.org/simple"
+url = "https://pypi.org/simple"
