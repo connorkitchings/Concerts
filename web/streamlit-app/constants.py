@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Dict
 
 # Data directory for band data
-BANDS_DIR: Path = (Path(__file__).parent.parent / "data").resolve()  # Robust path for local & Streamlit Cloud
+BANDS_DIR: Path = (Path(__file__).parent.parent.parent / "data").resolve()  # Points to repo-root/data
 
 # Display names for bands
 BAND_DISPLAY_NAMES: Dict[str, str] = {
