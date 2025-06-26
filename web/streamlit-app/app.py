@@ -42,9 +42,10 @@ def main() -> None:
             f"Data directory '{BANDS_DIR.resolve()}' not found. Please ensure your data is uploaded and the path is correct."
         )
         return
-    band_folders = sorted(list_band_folders(BANDS_DIR))
+    # Only allow Goose, Phish, and WSP (Widespread Panic) for selection
+    allowed_bands = ["Goose", "Phish", "WSP"]
     band = st.sidebar.selectbox(
-        "Select Band", band_folders, format_func=lambda x: BAND_DISPLAY_NAMES.get(x, x)
+        "Select Band", allowed_bands, format_func=lambda x: BAND_DISPLAY_NAMES.get(x, x)
     )
 
     band_dir = BANDS_DIR / band / "Generated"

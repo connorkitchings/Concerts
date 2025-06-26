@@ -4,13 +4,13 @@ from pathlib import Path
 from typing import Dict
 
 # Data directory for band data
-BANDS_DIR: Path = Path("3_DataStorage")
+BANDS_DIR: Path = Path("../../data")  # Path relative to streamlit-app directory
 
 # Display names for bands
 BAND_DISPLAY_NAMES: Dict[str, str] = {
     "Goose": "Goose",
     "Phish": "Phish",
-    "UM": "Umphrey's McGee",
+    # "UM": "Umphrey's McGee",  # UM temporarily disabled
     "WSP": "Widespread Panic",
 }
 
@@ -19,5 +19,5 @@ NOTEBOOK_LABELS: Dict[str, str] = {
     "Phish": "Trey's Notebook",
     "WSP": "JoJo's Notebook",
     "Goose": "Rick's Notebook",
-    "UM": "Joel's Notebook",
+    # "UM": "Joel's Notebook",  # UM temporarily disabled
 }

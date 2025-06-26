@@ -3,7 +3,8 @@ name: Daily Setlist & Prediction Update
 on:
   schedule:
     # Runs at 19:00 UTC (3pm ET) every day
-    - cron: '0 19 * * *'
+    #- cron: '0 19 * * *'
+    - cron: '10 19 * * *'
   workflow_dispatch:
 
 jobs:
@@ -31,8 +32,8 @@ jobs:
             pip install numpy pandas scikit-learn xgboost
           fi
 
-      - name: Run Setlist Creation
-        run: python '1 - Setlist Creation/run_all.py'
+      - name: Run All Data Pipelines
+        run: python scripts/run_all_pipelines.py
 
-      - name: Run Make Predictions
-        run: python '2 - Make Predictions/update_predictions.py'
+      - name: Run All Predictions
+        run: python scripts/make_all_predictions.py

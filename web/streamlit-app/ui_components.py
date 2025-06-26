@@ -15,14 +15,14 @@ def display_method_explanation(file_label: str) -> None:
     method_explanations = {
         "CK+": (
             """
-<div style='font-size:0.95em; color:#555; margin-bottom:10px;'>
-<b>CK+ Method:</b> The CK+ method is a statistical approach that predicts which songs are most likely to be played by analyzing the gaps between performances. It calculates how "overdue" a song is by comparing the current gap since it was last played to its historical average or median gap, normalizing this with a z-score. Songs are ranked by a composite CK+ score, with higher scores indicating a higher likelihood of being played next.
+<div style='font-size:0.95em; color:#fff; margin-bottom:10px;'>
+<b>CK+ Method:</b> This method uses a machine learning model trained on historical setlists and song transitions to predict the most likely songs for the next show. It incorporates recency, rarity, and show-to-show transitions to generate a ranked list and highlight songs with a high probability of being played tonight.
 </div>
             """
         ),
         "Notebook": (
             """
-<div style='font-size:0.95em; color:#555; margin-bottom:10px;'>
+<div style='font-size:0.95em; color:#fff; margin-bottom:10px;'>
 <b>Notebook Method:</b> Inspired by Phish.net's "Trey's Notebook," this method predicts setlists by focusing on songs played most frequently in the last year, while excluding songs played in the last three shows. It identifies songs that are in rotation but not overplayed, ranking them by recent play frequency and providing stats like last played date and average gap.
 </div>
             """
@@ -56,7 +56,10 @@ def display_next_show(next_show_str: Optional[str]) -> None:
         next_show_str: Formatted next show string or None
     """
     if next_show_str:
+        # Capitalize 'Next Show' if present
+        if next_show_str.lower().startswith("next show:"):
+            next_show_str = "Next Show:" + next_show_str[9:]
         st.markdown(
-            f"<h4 style='text-align: center; color: #666;'>{next_show_str}</h4>",
+            f"<h4 style='text-align: center; color: #fff;'>{next_show_str}</h4>",
             unsafe_allow_html=True,
         )

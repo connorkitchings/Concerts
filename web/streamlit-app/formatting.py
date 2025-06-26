@@ -26,15 +26,21 @@ def format_next_show_wsp(data: Dict[str, Any]) -> Optional[str]:
             date_fmt = date
     else:
         date_fmt = None
-    if date_fmt and venue and city and state and state != "UU":
-        return f"Next show: {date_fmt} at {venue} in {city}, {state}"
-    elif date_fmt and venue and city:
-        return f"Next show: {date_fmt} at {venue} in {city}"
-    elif date_fmt and venue:
-        return f"Next show: {date_fmt} at {venue}"
-    elif date_fmt:
-        return f"Next show: {date_fmt}"
-    return None
+    # Unified formatting: always 'Next show: <Date> at <Venue> in <City>, <State>'
+    parts = [f"Next show: {date_fmt}"] if date_fmt else []
+    if venue:
+        parts.append(f"at {venue}")
+    if city:
+        if not venue:
+            parts.append(f"in {city}")
+        else:
+            parts[-1] += f" in {city}"
+    if state and state != "UU":
+        if city or venue:
+            parts[-1] += f", {state}"
+        else:
+            parts.append(f"in {state}")
+    return " ".join(parts) if parts else None
 
 
 def format_next_show_um(data: Dict[str, Any]) -> Optional[str]:
@@ -56,15 +62,21 @@ def format_next_show_um(data: Dict[str, Any]) -> Optional[str]:
             date_fmt = date
     else:
         date_fmt = None
-    if date_fmt and venue and city and state:
-        return f"Next show: {date_fmt} at {venue} in {city}, {state}"
-    elif date_fmt and venue and city:
-        return f"Next show: {date_fmt} at {venue} in {city}"
-    elif date_fmt and venue:
-        return f"Next show: {date_fmt} at {venue}"
-    elif date_fmt:
-        return f"Next show: {date_fmt}"
-    return None
+    # Unified formatting: always 'Next show: <Date> at <Venue> in <City>, <State>'
+    parts = [f"Next show: {date_fmt}"] if date_fmt else []
+    if venue:
+        parts.append(f"at {venue}")
+    if city:
+        if not venue:
+            parts.append(f"in {city}")
+        else:
+            parts[-1] += f" in {city}"
+    if state:
+        if city or venue:
+            parts[-1] += f", {state}"
+        else:
+            parts.append(f"in {state}")
+    return " ".join(parts) if parts else None
 
 
 def format_next_show_phish_goose(
@@ -84,6 +96,17 @@ def format_next_show_phish_goose(
         Optional[str]: Formatted next show string, or None if not enough info
     """
     date = data.get(date_field) or data.get("showdate")
+    # Use venue_name, city, state directly if present
+    venue = data.get("venue_name")
+    city = data.get("city")
+    state = data.get("state")
+    if date and venue and city and state:
+        try:
+            date_fmt = datetime.strptime(date, "%Y-%m-%d").strftime("%m/%d/%Y")
+        except Exception:
+            date_fmt = date
+        return f"Next show: {date_fmt} at {venue} in {city}, {state}"
+    # Fallback to CSV lookup logic if any field missing
     venue_id_json = data.get("venue_id") or data.get("venueid")
     if not date or not showdata_path.exists() or not venuedata_path.exists():
         if date:
@@ -171,21 +194,21 @@ def format_next_show_phish_goose(
             )
             city = city or found.get("city") or found.get("City")
             state = state or found.get("state") or found.get("State")
-        if date_fmt and venue and city and state:
-            return f"Next show: {date_fmt} at {venue} in {city}, {state}"
-        elif date_fmt and venue and city:
-            return f"Next show: {date_fmt} at {venue} in {city}"
-        elif date_fmt and venue:
-            return f"Next show: {date_fmt} at {venue}"
-        elif date_fmt and city and state:
-            return f"Next show: {date_fmt} in {city}, {state}"
-        elif date_fmt and city:
-            return f"Next show: {date_fmt} in {city}"
-        elif date_fmt and state:
-            return f"Next show: {date_fmt} in {state}"
-        elif date_fmt:
-            return f"Next show: {date_fmt}"
-        return None
+        # Unified formatting: always 'Next show: <Date> at <Venue> in <City>, <State>'
+        parts = [f"Next show: {date_fmt}"] if date_fmt else []
+        if venue:
+            parts.append(f"at {venue}")
+        if city:
+            if not venue:
+                parts.append(f"in {city}")
+            else:
+                parts[-1] += f" in {city}"
+        if state:
+            if city or venue:
+                parts[-1] += f", {state}"
+            else:
+                parts.append(f"in {state}")
+        return " ".join(parts) if parts else None
     except Exception:
         try:
             date_fmt = datetime.strptime(date, "%Y-%m-%d").strftime("%m/%d/%Y")
