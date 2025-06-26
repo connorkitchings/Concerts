@@ -11,3 +11,6 @@ venv/
 
 # Logs
 logs/
+
+# macOS System Files
+.DS_Store
