@@ -25,21 +25,15 @@ The Notebook method is based on the system made famous by Phish.net's "Trey's No
 
 ## Folder Structure
 ```
-2 - Make Predictions/Notebook
+src/jambandnerd/predictions/notebook_model/
 │
-├── run_all.py           # Runs the prediction pipeline for all bands
-├── logger.py            # Logging utility for file/console output
-│
-├── WSP/                 # Widespread Panic pipeline
+├── [band]/                  # One subdirectory per band (phish, goose, wsp, um)
 │   ├── data_loader.py       # Loads and merges setlist, show, and song data
 │   ├── model.py             # Implements Notebook scoring method
 │   ├── predict_today.py     # Runs prediction, saves output
 │   └── __pycache__/         # Python cache (ignore)
-│
-├── Phish/               # Phish pipeline (same structure as WSP)
-├── Goose/               # Goose pipeline (same structure as WSP)
-├── UM/                  # Umphrey's McGee pipeline (same structure as WSP)
-└── __pycache__/         # Python cache (ignore)
+├── run_all.py               # (Legacy) Runs all band Notebook predictions
+├── logger.py                # Logging utility for file/console output
 ```
 
 ---

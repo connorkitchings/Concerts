@@ -24,22 +24,32 @@ The CK+ (Connor Kitchings Plus) method is a statistical approach that uses the h
 
 ## Folder Structure
 ```
-2 - Make Predictions/CK+
+src/jambandnerd/predictions/ckplus_model/
 │
-├── run_all.py           # Runs the prediction pipeline for all bands
-├── logger.py            # Logging utility for file/console output
-│
-├── WSP/                 # Widespread Panic pipeline
+├── [band]/                  # One subdirectory per band (phish, goose, wsp, um)
 │   ├── data_loader.py       # Loads and merges setlist, show, and song data
 │   ├── model.py             # Implements CK+ scoring method
 │   ├── predict_today.py     # Runs prediction, saves output
 │   └── __pycache__/         # Python cache (ignore)
-│
-├── Phish/               # Phish pipeline (same structure as WSP)
-├── Goose/               # Goose pipeline (same structure as WSP)
-├── UM/                  # Umphrey's McGee pipeline (same structure as WSP)
+├── run_all.py               # (Legacy) Runs all band CK+ predictions
+├── logger.py                # Logging utility for file/console output
 └── __pycache__/         # Python cache (ignore)
 ```
+
+---
+
+## Orchestration
+- To run all CK+ predictions for all bands, use the orchestration script:
+  ```bash
+  python scripts/run_all_predict_todays.py
+  ```
+- This will run all `predict_today.py` scripts for each band.
+
+---
+
+## CI/CD
+- Predictions are run nightly via GitHub Actions using the orchestration script.
+- Outputs are saved to `data/[band]/generated/`.
 
 ---
 
