@@ -4,7 +4,7 @@ Aggregate setlist data by song name for WSP using the CK+ (gap-based) method.
 
 import pandas as pd
 
-from predictions.ckplus.utils.logger import get_logger
+from utils.logger import get_logger
 
 logger = get_logger(__name__)
 

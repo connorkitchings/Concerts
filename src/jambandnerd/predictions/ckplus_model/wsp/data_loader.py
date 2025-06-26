@@ -5,7 +5,7 @@ Handles merging setlist, show, and song data for modeling.
 
 import pandas as pd
 
-from predictions.ckplus.utils.logger import get_logger, restrict_to_repo_root
+from utils.logger import get_logger, restrict_to_repo_root
 
 logger = get_logger(__name__)
 

@@ -28,7 +28,7 @@ BANDS = {
         "accuracy": "Goose/historical_testing.py",
     },
     "UM": {"predict": "UM/predict_today.py", "accuracy": "UM/historical_testing.py"},
-    "WSP": {"predict": "WSP/predict_today.py", "accuracy": "WSP/historical_testing.py"},
+    "WSP": {"predict": "WSP/predict_today.py"},
 }
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -36,15 +36,14 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def run_band(band: str, script_paths: dict) -> int:
     """
-    Runs both the prediction and accuracy update pipelines for a given band.
+    Runs the prediction pipeline for a given band.
     Args:
         band: Name of the band.
-        script_paths: Dict with 'predict' and 'accuracy' script relative paths.
+        script_paths: Dict with 'predict' script relative path.
     Returns:
-        Sum of exit codes for both scripts (0 if both succeed).
+        Exit code for the prediction script (0 if succeeds).
     """
     predict_path = os.path.join(BASE_DIR, script_paths["predict"])
-    accuracy_path = os.path.join(BASE_DIR, script_paths["accuracy"])
     code_sum = 0
     # Run prediction pipeline
     logger.info(f"Running {band} prediction pipeline...")
@@ -64,26 +63,6 @@ def run_band(band: str, script_paths: dict) -> int:
         else:
             logger.error(
                 f"Predictions for {band} failed with exit code {result.returncode}."
-            )
-        code_sum += result.returncode
-    # Run accuracy update pipeline
-    logger.info(f"Running {band} accuracy update pipeline...")
-    if not os.path.exists(accuracy_path):
-        logger.error(f"historical_testing.py not found for {band}! ({accuracy_path})")
-        code_sum += 1
-    else:
-        result = subprocess.run(
-            [sys.executable, accuracy_path], capture_output=True, text=True
-        )
-        if result.stdout:
-            logger.info(f"{band} historical_testing.py output:\n{result.stdout}")
-        if result.stderr and result.returncode != 0:
-            logger.error(f"{band} historical_testing.py [stderr]:\n{result.stderr}")
-        if result.returncode == 0:
-            logger.info(f"Accuracy update for {band} completed successfully.")
-        else:
-            logger.error(
-                f"Accuracy update for {band} failed with exit code {result.returncode}."
             )
         code_sum += result.returncode
     return code_sum

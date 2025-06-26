@@ -9,29 +9,40 @@ or ensure CKPlus is in your PYTHONPATH.
 
 import os
 from datetime import datetime
+import pathlib
 
-from predictions.ckplus.goose.data_loader import load_setlist_and_showdata
-from predictions.ckplus.goose.model import aggregate_setlist_features
-from predictions.ckplus.utils.logger import get_logger, restrict_to_repo_root
-from predictions.ckplus.utils.prediction_utils import update_date_updated
+import sys
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from utils.logger import get_logger
+from utils.prediction_utils import update_date_updated
+
+from data_loader import load_setlist_and_showdata
+from model import aggregate_setlist_features
 
 logger = get_logger(__name__)
 
 if __name__ == "__main__":
-    root_dir = os.path.dirname(
-        os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    )
-    data_folder = os.path.join(root_dir, "storage/goose/")
-    collected_folder = os.path.join(data_folder, "collected")
-    generated_folder = os.path.join(data_folder, "generated")
-    meta_folder = os.path.join(data_folder, "meta")
-    setlist_path = os.path.join(collected_folder, "setlistdata.csv")
-    showdata_path = os.path.join(collected_folder, "showdata.csv")
-    songdata_path = os.path.join(collected_folder, "songdata.csv")
+    # Robustly find project root (parent of 'src')
+    script_dir = pathlib.Path(__file__).resolve().parent
+    for parent in script_dir.parents:
+        if parent.name == "src":
+            project_root = parent.parent
+            break
+    else:
+        project_root = script_dir.parents[3]  # fallback if 'src' not found
+
+    data_folder = project_root / "data" / "goose"
+    collected_folder = data_folder / "collected"
+    generated_folder = data_folder / "generated"
+    setlist_path = collected_folder / "setlistdata.csv"
+    showdata_path = collected_folder / "showdata.csv"
+    songdata_path = collected_folder / "songdata.csv"
     df = load_setlist_and_showdata(setlist_path, showdata_path, songdata_path)
     ckplus_df = aggregate_setlist_features(df)
-    ckplus_df.to_csv(os.path.join(generated_folder, "todaysckplus.csv"), index=False)
-    logger.info("Saved CK+ predictions to %s", restrict_to_repo_root(generated_folder))
+    os.makedirs(generated_folder, exist_ok=True)
+    ckplus_df.to_csv(generated_folder / "todaysckplus.csv", index=False)
+    logger.info("Saved CK+ predictions to %s", generated_folder)
 
     # Update date_updated.json after successful save
-    update_date_updated("Goose", "CK+", datetime.now().isoformat())
+    update_date_updated("goose", "CK+", datetime.now().isoformat())

@@ -3,7 +3,10 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import pandas as pd
-from logger import get_logger, restrict_to_repo_root
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from utils.logger import get_logger, restrict_to_repo_root
 
 logger = get_logger(__name__)
 

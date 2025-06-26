@@ -3,7 +3,7 @@ Model feature aggregation for Phish CK+ prediction pipeline.
 Aggregates setlist data by song name using gap-based (CK+) method.
 """
 
-from predictions.ckplus.utils.logger import get_logger
+from utils.logger import get_logger
 
 logger = get_logger(__name__)
 

@@ -5,7 +5,7 @@ NOTE: For import resolution, run scripts from the CKPlus root directory
 and mark CKPlus as the source root in your IDE.
 """
 
-from predictions.ckplus.utils.logger import get_logger
+from utils.logger import get_logger
 
 logger = get_logger(__name__)
 

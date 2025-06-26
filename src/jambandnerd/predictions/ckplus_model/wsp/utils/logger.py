@@ -1,13 +1,8 @@
-# Logging utilities for Notebook
-
 import logging
-from typing import Optional
 
-
-def get_logger(name: Optional[str] = None) -> logging.Logger:
-    """Get a configured logger for the given name."""
+def get_logger(name):
     logger = logging.getLogger(name)
-    if not logger.handlers:
+    if not logger.hasHandlers():
         handler = logging.StreamHandler()
         formatter = logging.Formatter('[%(asctime)s] %(levelname)s %(name)s: %(message)s', datefmt='%m-%d-%Y %H:%M:%S,%f')
         handler.setFormatter(formatter)
@@ -15,7 +10,6 @@ def get_logger(name: Optional[str] = None) -> logging.Logger:
     logger.setLevel(logging.INFO)
     return logger
 
-
-def restrict_to_repo_root(path):
-    # Accepts a single argument and returns it as string for compatibility
-    return str(path)
+def restrict_to_repo_root(path=None):
+    # Compatibility: just return the path as string, or empty string
+    return str(path) if path is not None else ''

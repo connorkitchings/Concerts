@@ -7,7 +7,7 @@ and mark CKPlus as the source root in your IDE.
 
 import pandas as pd
 
-from predictions.ckplus.utils.logger import get_logger, restrict_to_repo_root
+from utils.logger import get_logger, restrict_to_repo_root
 
 logger = get_logger(__name__)
 

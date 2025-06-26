@@ -8,7 +8,7 @@ import sys
 
 import pandas as pd
 
-from predictions.ckplus.utils.logger import get_logger, restrict_to_repo_root
+from utils.logger import get_logger
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -29,8 +29,8 @@ def load_setlist_and_showdata(setlist_path, showdata_path, songdata_path):
     logger.info(
         "Loaded setlist (%s rows) from %s, shows from %s, songs from %s",
         f"{len(df):,}",
-        restrict_to_repo_root(setlist_path),
-        restrict_to_repo_root(showdata_path),
-        restrict_to_repo_root(songdata_path),
+        setlist_path,
+        showdata_path,
+        songdata_path,
     )
     return df
