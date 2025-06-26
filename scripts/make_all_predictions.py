@@ -11,27 +11,24 @@ import sys
 from pathlib import Path
 from subprocess import CalledProcessError, run
 
-CKP_DIR = Path(__file__).parent / "CK+"
-NB_DIR = Path(__file__).parent / "Notebook"
+import sys
+import subprocess
+from pathlib import Path
 
-
-def run_pipeline(name: str, path: Path) -> None:
-    """Run the prediction pipeline in the given directory."""
-    try:
-        print(f"\n=== Running {name} predictions ===")
-        run([sys.executable, "run_all.py"], cwd=path, check=True)
-        print(f"{name} predictions completed successfully.")
-    except CalledProcessError as e:
-        print(f"Error running {name} predictions: {e}")
+def main():
+    """Run all band prediction scripts (CK+ and Notebook for each band)."""
+    script_path = Path(__file__).parent / "run_all_predict_todays.py"
+    if not script_path.exists():
+        print(f"ERROR: {script_path} does not exist.")
         sys.exit(1)
-
-
-def main() -> None:
-    """Run both CK+ and Notebook band prediction pipelines."""
-    run_pipeline("CK+", CKP_DIR)
-    run_pipeline("Notebook", NB_DIR)
-    print("\nAll prediction pipelines completed.")
-
+    print(f"\n=== Running all band predictions using {script_path} ===")
+    try:
+        result = subprocess.run([sys.executable, str(script_path)], check=True, capture_output=True, text=True)
+        print(result.stdout)
+        print("All prediction pipelines completed.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error running predictions: {e}\n{e.stdout}\n{e.stderr}")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()

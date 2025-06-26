@@ -17,6 +17,13 @@ from jambandnerd.data_collection.goose.run_pipeline import main as goose_main
 
 def run_goose_pipeline() -> None:
     """Run the Goose data collection pipeline and log status."""
+    import os
+    setlist_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'goose', 'collected', 'setlistdata.csv')
+    if not os.path.exists(setlist_path):
+        os.makedirs(os.path.dirname(setlist_path), exist_ok=True)
+        with open(setlist_path, 'w') as f:
+            f.write('show_id,date,venue,city,state\n')  # Replace with actual headers as needed
+        print(f"WARNING: {setlist_path} not found. Created an empty file with headers.")
     print("Starting Goose pipeline...")
     try:
         goose_main()
