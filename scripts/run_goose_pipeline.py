@@ -23,14 +23,12 @@ def run_goose_pipeline() -> None:
         os.makedirs(os.path.dirname(setlist_path), exist_ok=True)
         with open(setlist_path, 'w') as f:
             f.write('show_id,date,venue,city,state\n')  # Replace with actual headers as needed
-        print(f"WARNING: {setlist_path} not found. Created an empty file with headers.")
-    print("Starting Goose pipeline...")
+        logging.warning(f"{setlist_path} not found. Created an empty file with headers.")
+    logging.info("Starting Goose pipeline...")
     try:
         goose_main()
-        print("Goose pipeline completed successfully.")
+        logging.info("Goose pipeline completed successfully.")
     except Exception as e:
-        # Intentionally broad Exception catch for CLI robustness; logs all errors for debugging
-        # This is intentional to ensure all errors are logged and surfaced in CLI usage.
         logging.exception("Goose pipeline failed: %s", e)
 
 

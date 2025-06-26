@@ -20,6 +20,13 @@ def run_um_pipeline() -> None:
     logging.basicConfig(
         level=logging.INFO, format="[%(asctime)s] %(levelname)s: %(message)s"
     )
+    # Check for setlistdata.csv before running pipeline
+    setlist_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'um', 'collected', 'setlistdata.csv')
+    if not os.path.exists(setlist_path):
+        os.makedirs(os.path.dirname(setlist_path), exist_ok=True)
+        with open(setlist_path, 'w') as f:
+            f.write('show_id,date,venue,city,state\n')  # Replace with actual headers as needed
+        logging.warning(f"{setlist_path} not found. Created an empty file with headers.")
     logging.info("Starting UM pipeline...")
     try:
         um_main()

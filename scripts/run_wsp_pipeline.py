@@ -22,19 +22,18 @@ def run_wsp_pipeline() -> None:
     logging.basicConfig(
         level=logging.INFO, format="[%(asctime)s] %(levelname)s: %(message)s"
     )
-    logging.info("Starting WSP pipeline...")
-    # Ensure setlistdata.csv exists
     setlist_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'wsp', 'collected', 'setlistdata.csv')
     if not os.path.exists(setlist_path):
         os.makedirs(os.path.dirname(setlist_path), exist_ok=True)
         with open(setlist_path, 'w') as f:
             f.write('show_id,date,venue,city,state\n')  # Replace with actual headers as needed
         logging.warning(f"{setlist_path} not found. Created an empty file with headers.")
+    logging.info("Starting WSP pipeline...")
     try:
         wsp_main()
         logging.info("WSP pipeline completed successfully.")
     except Exception as e:
-        logging.exception(f"WSP pipeline failed: {e}")
+        logging.exception("WSP pipeline failed: %s", e)
 
 
 if __name__ == "__main__":

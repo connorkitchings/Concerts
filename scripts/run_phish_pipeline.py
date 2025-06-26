@@ -24,18 +24,17 @@ def run_phish_pipeline():
         os.makedirs(os.path.dirname(setlist_path), exist_ok=True)
         with open(setlist_path, 'w') as f:
             f.write('show_id,date,venue,city,state\n')  # Replace with actual headers as needed
-        print(f"WARNING: {setlist_path} not found. Created an empty file with headers.")
-    print("Starting Phish pipeline...")
+        logging.warning(f"{setlist_path} not found. Created an empty file with headers.")
+    logging.info("Starting Phish pipeline...")
     try:
         success = phish_main()
         if success:
-            print("Phish pipeline completed successfully.")
+            logging.info("Phish pipeline completed successfully.")
         else:
-            print("Phish pipeline failed. See logs for details.")
+            logging.error("Phish pipeline failed. See logs for details.")
             sys.exit(1)
     except Exception as e:
-        # Broad exception catching is intentional for CLI robustness
-        print(f"Phish pipeline failed: {e}")
+        logging.exception("Phish pipeline failed: %s", e)
         sys.exit(1)
 
 
