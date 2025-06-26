@@ -3,8 +3,7 @@ name: Daily Setlist & Prediction Update
 on:
   schedule:
     # Runs at 19:00 UTC (3pm ET) every day
-    #- cron: '0 19 * * *'
-    - cron: '10 19 * * *'
+    - cron: '0 19 * * *'
   workflow_dispatch:
 
 jobs:
