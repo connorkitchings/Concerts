@@ -3,12 +3,15 @@ name: Daily Setlist & Prediction Update
 on:
   schedule:
     # Runs at 19:00 UTC (3pm ET) every day
-    - cron: '0 19 * * *'
+    #- cron: '0 19 * * *'
+    - cron: '15 19 * * *'
   workflow_dispatch:
 
 jobs:
   update-data-and-predictions:
     runs-on: ubuntu-latest
+    env:
+      PHISH_API_KEY: ${{ secrets.PHISH_API_KEY }}
     defaults:
       run:
         shell: bash
@@ -33,6 +36,9 @@ jobs:
 
       - name: Run All Data Pipelines
         run: python scripts/run_all_pipelines.py
+
+      - name: Run All Predictions
+        run: python scripts/make_all_predictions.py
 
       - name: Run All Predictions
         run: python scripts/make_all_predictions.py
