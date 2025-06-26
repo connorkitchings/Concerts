@@ -8,10 +8,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-try:
-    from jambandnerd.data_collection.wsp.utils import get_logger
-except ImportError:
-    from utils import get_logger
+from .utils import get_logger
 
 # Inlined constants
 SONG_CODES_TABLE_IDX = 1

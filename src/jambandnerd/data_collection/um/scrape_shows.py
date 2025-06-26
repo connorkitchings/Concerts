@@ -7,17 +7,13 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.jambandnerd.data_collection.um.utils import get_band_data_dir, get_logger
+from .utils import get_logger
 
 # --- Constants ---
 BAND_NAME = "UM"
-DATA_COLLECTED_DIR = get_band_data_dir(BAND_NAME, "collected")
-LOG_FILE_PATH = (
-    Path(__file__).resolve().parent.parent.parent.parent
-    / "logs"
-    / BAND_NAME
-    / "um_pipeline.log"
-)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+DATA_COLLECTED_DIR = PROJECT_ROOT / "data" / BAND_NAME / "collected"
+LOG_FILE_PATH = PROJECT_ROOT / "logs" / BAND_NAME / "um_pipeline.log"
 SHOW_DATA_FILENAME = "showdata.csv"
 
 logger = get_logger(__name__, log_file=LOG_FILE_PATH, add_console_handler=False)

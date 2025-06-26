@@ -6,24 +6,23 @@ import csv
 import json
 import os
 from datetime import date, datetime
+from pathlib import Path
 
 import pandas as pd
 
-try:
-    from jambandnerd.data_collection.wsp.utils import get_date_and_time, get_logger
-except ImportError:
-    from utils import get_date_and_time, get_logger
+from .utils import get_date_and_time, get_logger
 
-logger = get_logger(__name__, add_console_handler=True)
-
-# Inlined constants
-DATA_COLLECTED_DIR = "../../../../3_DataStorage/WSP/Collected/"
-LAST_UPDATED_FILENAME = "last_updated.json"
-NEXT_SHOW_FILENAME = "next_show.json"
+# --- Constants ---
+BAND_NAME = "WSP"
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+DATA_COLLECTED_DIR = PROJECT_ROOT / "data" / BAND_NAME / "collected"
+LOG_FILE_PATH = PROJECT_ROOT / "logs" / BAND_NAME / "wsp_pipeline.log"
+SONG_DATA_FILENAME = "songdata.csv"
+VENUE_DATA_FILENAME = "venuedata.csv"
 SETLIST_DATA_FILENAME = "setlistdata.csv"
 SHOW_DATA_FILENAME = "showdata.csv"
-SONG_DATA_FILENAME = "songdata.csv"
-
+LAST_UPDATED_FILENAME = "last_updated.json"
+NEXT_SHOW_FILENAME = "next_show.json"
 logger = get_logger(__name__, add_console_handler=True)
 
 
@@ -34,7 +33,7 @@ def save_wsp_data(
     data_dir: str = DATA_COLLECTED_DIR,
 ) -> None:
     """
-    Save WSP data (songs, shows, setlists) to CSV files 
+    Save WSP data (songs, shows, setlists) to CSV files
     and update JSON files for last updated and next show.
 
     Args:
@@ -45,6 +44,7 @@ def save_wsp_data(
     Returns:
         None
     """
+    print(data_dir)
     os.makedirs(data_dir, exist_ok=True)
     data_pairs = {
         SONG_DATA_FILENAME: song_data,
@@ -79,7 +79,10 @@ def save_wsp_data(
         next_show = future_shows.iloc[0]
         logger.info(
             "Found next show: %s at %s in %s, %s",
-            next_show['date'], next_show['venue'], next_show['city'], next_show['state']
+            next_show["date"],
+            next_show["venue"],
+            next_show["city"],
+            next_show["state"],
         )
     else:
         next_show = None

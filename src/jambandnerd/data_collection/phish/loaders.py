@@ -24,6 +24,38 @@ logger = get_logger(__name__, log_file=log_file, add_console_handler=True)
 DATA_COLLECTED_DIR = os.path.join(project_root, "data", "phish", "collected")
 
 
+def get_next_show_info(show_data: pd.DataFrame, api_key: str) -> dict:
+    """
+    Get next show info (show_date, venue_name, city, state) by calling the Goose API.
+    Returns dict with these keys (values can be None if not found).
+    """
+    today = datetime.today().strftime("%Y-%m-%d")
+    next_show_row = (
+        show_data[show_data["showdate"] >= today].sort_values("showdate").head(1)
+    )
+    show_id = next_show_row.iloc[0]["showid"]
+    result = {"show_date": None, "venue_name": None, "city": None, "state": None}
+    if show_id is not None:
+        try:
+            api_response = make_api_request(f"shows/showid/{show_id}", api_key)["data"]
+            if api_response:
+                api_show = api_response
+                if isinstance(api_show, list):
+                    api_show = api_show[0] if api_show else None
+                if isinstance(api_show, dict):
+                    result["show_date"] = api_show.get("showdate") or api_show.get(
+                        "show_date"
+                    )
+                    result["venue_name"] = api_show.get("venue")
+                    result["city"] = api_show.get("city")
+                    result["state"] = api_show.get("state")
+        except Exception as e:
+            logger.warning(
+                "Failed to fetch show info from API for show_id=%s: %s", show_id, e
+            )
+    return result
+
+
 def load_song_data(api_key: str) -> "pd.DataFrame":
     """
     Load song data from the Phish API.

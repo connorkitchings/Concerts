@@ -44,7 +44,7 @@ logging.basicConfig(
 BANDS = {
     "Goose": "run_goose_pipeline.py",
     "Phish": "run_phish_pipeline.py",
-    "UM": "run_um_pipeline.py",
+    # "UM": "run_um_pipeline.py",
     "WSP": "run_wsp_pipeline.py",
 }
 

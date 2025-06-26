@@ -4,18 +4,18 @@ Runs the scraping, processing, and saving of UM show, song, and setlist data.
 All configuration is managed via hardcoded paths and environment variables.
 """
 
-import json
 import os
 import time
 import traceback
 from datetime import datetime
+from pathlib import Path
 
-from src.jambandnerd.data_collection.um.export_data import save_query_data, save_um_data
-from src.jambandnerd.data_collection.um.scrape_setlists import fetch_um_setlist_data
-from src.jambandnerd.data_collection.um.scrape_shows import create_show_data
-from src.jambandnerd.data_collection.um.scrape_songs import scrape_um_songs
-from src.jambandnerd.data_collection.um.scrape_venues import scrape_um_venues
-from src.jambandnerd.data_collection.um.utils import get_last_update_time, get_logger
+from .export_data import save_query_data, save_um_data
+from .scrape_setlists import fetch_um_setlist_data
+from .scrape_shows import create_show_data
+from .scrape_songs import scrape_um_songs
+from .scrape_venues import scrape_um_venues
+from .utils import get_last_update_time, get_logger
 
 # Define constants locally
 DATETIME_FORMAT = "%m/%d/%Y %H:%M"
@@ -42,7 +42,7 @@ def main() -> None:
         log_file=log_file,
         add_console_handler=True,
     )
-    data_dir = "data/UM/collected"
+    data_dir = Path(project_root) / "data" / BAND_NAME / "collected"
     # Log previous last update (only once, using utility)
     last_update_str = get_last_update_time(data_dir)
     if last_update_str:
@@ -60,7 +60,6 @@ def main() -> None:
         logger.info("No previous update found.")
     start_time = time.time()
     try:
-
         # Scrape songs
         logger.info("Scraping latest song data...")
         song_data = scrape_um_songs()

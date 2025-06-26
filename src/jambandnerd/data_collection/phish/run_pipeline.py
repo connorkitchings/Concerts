@@ -11,7 +11,12 @@ from datetime import datetime
 
 from .call_api import get_api_key
 from .export_data import save_phish_data, save_query_data
-from .loaders import load_setlist_data, load_show_data, load_song_data
+from .loaders import (
+    get_next_show_info,
+    load_setlist_data,
+    load_show_data,
+    load_song_data,
+)
 from .utils import get_logger
 
 
@@ -22,13 +27,15 @@ def main() -> bool:
     Returns True if successful, False if any error occurs.
     """
     # Ensure logs/Phish/ is always relative to the project root, not src/
-    project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
+    project_root = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..", "..", "..", "..")
+    )
     logs_dir = os.path.join(project_root, "logs", "Phish")
     os.makedirs(logs_dir, exist_ok=True)
     log_file = os.path.join(logs_dir, "phish_pipeline.log")
     logger = get_logger(__name__, log_file=log_file, add_console_handler=True)
     api_key = get_api_key()  # Use utility to load from .env
-    data_dir = "data/phish/collected"
+    data_dir = os.path.join(project_root, "data", "phish", "collected")
     # Log previous last update
     last_updated_path = os.path.join(data_dir, "last_updated.json")
     prev_update = None
@@ -48,7 +55,8 @@ def main() -> bool:
         except ValueError:
             # If parsing fails, log the original string as a fallback
             logger.warning(
-                "Could not parse previous update timestamp: %s. Logging as is.", prev_update
+                "Could not parse previous update timestamp: %s. Logging as is.",
+                prev_update,
             )
             logger.info("Previous Last update: %s", prev_update)
     else:
@@ -64,10 +72,17 @@ def main() -> bool:
         logger.info(
             "load_setlist_data returned. Setlist data rows: %s, Transition data rows: %s",
             len(setlist_data),
-            len(transition_data)
+            len(transition_data),
         )
+        next_show_info = get_next_show_info(show_data, api_key)
         save_phish_data(
-            song_data, show_data, venue_data, setlist_data, transition_data, data_dir
+            song_data,
+            show_data,
+            venue_data,
+            setlist_data,
+            transition_data,
+            next_show_info,
+            data_dir,
         )
         save_query_data(data_dir)
         elapsed = time.time() - start_time
@@ -80,7 +95,9 @@ def main() -> bool:
         logger.exception("CRITICAL ERROR in main: %s", e)
         return False
 
+
 if __name__ == "__main__":
     import sys
+
     if not main():
         sys.exit(1)

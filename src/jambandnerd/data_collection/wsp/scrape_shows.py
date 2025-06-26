@@ -11,10 +11,7 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-try:
-    from jambandnerd.data_collection.wsp.utils import get_logger
-except ImportError:
-    from utils import get_logger
+from .utils import get_logger
 
 logger = get_logger(__name__, add_console_handler=True)
 

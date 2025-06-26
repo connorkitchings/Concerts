@@ -7,43 +7,41 @@ All configuration is managed via config.py and environment variables.
 
 import json  # Moved import json to top
 import os
-import sys
 import time
 from datetime import datetime
+from pathlib import Path
 
 import pandas as pd
 
-try:
-    from jambandnerd.data_collection.wsp.export_data import save_wsp_data
-    from jambandnerd.data_collection.wsp.scrape_setlists import load_setlist_data
-    from jambandnerd.data_collection.wsp.scrape_shows import scrape_wsp_shows
-    from jambandnerd.data_collection.wsp.scrape_songs import scrape_wsp_songs
-    from jambandnerd.data_collection.wsp.utils import get_logger
-except ImportError:
-    from export_data import save_wsp_data
-    from scrape_setlists import load_setlist_data
-    from scrape_shows import scrape_wsp_shows
-    from scrape_songs import scrape_wsp_songs
-    from utils import get_logger
+from .export_data import save_wsp_data
+from .scrape_setlists import load_setlist_data
+from .scrape_shows import scrape_wsp_shows
+from .scrape_songs import scrape_wsp_songs
+from .utils import get_logger
 
-# Inlined constants
-DATA_COLLECTED_DIR = "data/wsp/collected"
-LOG_FILE_PATH = "logs/wsp/wsp_pipeline.log"
-DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
+# --- Constants ---
 BAND_NAME = "WSP"
-
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-logger = get_logger(__name__, log_file=LOG_FILE_PATH, add_console_handler=True)
+DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S"
 
 
 def main():
     """Run the WSP data collection pipeline."""
+    # Ensure logs/WSP/ is always relative to the project root, not src/
+    project_root = os.path.abspath(
+        os.path.join(os.path.dirname(__file__), "..", "..", "..", "..")
+    )
+    logs_dir = os.path.join(project_root, "logs", "WSP")
+    os.makedirs(logs_dir, exist_ok=True)
+    log_file = os.path.join(logs_dir, "wsp_pipeline.log")
+    logger = get_logger(
+        __name__,
+        log_file=log_file,
+        add_console_handler=True,
+    )
+    data_dir = Path(project_root) / "data" / BAND_NAME / "collected"
 
     # Log previous last update
-    data_dir = DATA_COLLECTED_DIR
-    last_updated_path = os.path.join(data_dir, "last_updated.json")
+    last_updated_path = data_dir / "last_updated.json"
     prev_update_str = None
     if os.path.exists(last_updated_path):
         try:
@@ -69,7 +67,6 @@ def main():
         logger.info("No previous update found.")
     start_time = time.time()
     try:
-        data_dir = DATA_COLLECTED_DIR
         logger.info("Scraping WSP show data...")
         show_data = scrape_wsp_shows()
         logger.info("Scraped %d shows.", len(show_data))
@@ -98,7 +95,7 @@ def main():
                 len(setlist_data),
             )
 
-        logger.info("Saving WSP data...")
+        logger.info("Saving WSP data to %s...", data_dir)
         save_wsp_data(song_data, show_data, setlist_data, data_dir)
         elapsed = time.time() - start_time
         logger.info("WSP scraping pipeline completed in %.2f seconds.", elapsed)

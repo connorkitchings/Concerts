@@ -4,7 +4,6 @@ Goose Data Export Utilities
 
 import json
 import os
-from datetime import datetime
 
 import pandas as pd
 
@@ -18,6 +17,7 @@ logs_dir = os.path.join(project_root, "logs", "Goose")
 os.makedirs(logs_dir, exist_ok=True)
 log_file = os.path.join(logs_dir, "goose_pipeline.log")
 logger = get_logger(__name__, log_file=log_file, add_console_handler=True)
+data_dir = os.path.join(project_root, "data", "goose", "collected")
 
 
 def save_goose_data(
@@ -26,7 +26,8 @@ def save_goose_data(
     venue_data: "pd.DataFrame",
     setlist_data: "pd.DataFrame",
     transition_data: "pd.DataFrame",
-    data_dir: str = "data/goose/collected",
+    next_show_info: dict,
+    output_dir: str = data_dir,
 ) -> None:
     """
     Save Goose data (songs, shows, venues, setlists, transitions) to CSV files
@@ -38,20 +39,17 @@ def save_goose_data(
         venue_data (pd.DataFrame): DataFrame of venue data.
         setlist_data (pd.DataFrame): DataFrame of setlist data.
         transition_data (pd.DataFrame): DataFrame of transition data.
-        data_dir (str): Directory to save files. Defaults to DATA_DIR from config.
+        next_show_info (dict): Dict with next show info (show_date, venue_name, city, state).
+        output_dir (str): Directory to save files. Defaults to DATA_DIR from config.
     Returns:
         None
     """
-    os.makedirs(data_dir, exist_ok=True)
-    today = datetime.today().strftime("%Y-%m-%d")
-    next_show = (
-        show_data[show_data["show_date"] >= today].sort_values("show_date").head(1)
-    )
-    next_show_path = os.path.join(data_dir, "next_show.json")
-    if not next_show.empty:
-        next_show_record = next_show.iloc[0].to_dict()
+    os.makedirs(output_dir, exist_ok=True)
+    # Write next_show_info dict to next_show.json
+    next_show_path = os.path.join(output_dir, "next_show.json")
+    if next_show_info and any(next_show_info.values()):
         with open(next_show_path, "w", encoding="utf-8") as f:
-            json.dump({"next_show": next_show_record}, f, indent=2)
+            json.dump({"next_show": next_show_info}, f, indent=2)
     else:
         if os.path.exists(next_show_path):
             os.remove(next_show_path)
@@ -63,11 +61,11 @@ def save_goose_data(
         "transitiondata.csv": transition_data,
     }
     for filename, data in data_pairs.items():
-        filepath = os.path.join(data_dir, filename)
+        filepath = os.path.join(output_dir, filename)
         data.to_csv(filepath, index=False)
 
 
-def save_query_data(data_dir: str = "data/goose") -> None:
+def save_query_data(output_dir: str = "data/goose") -> None:
     """
     Save the last updated timestamp to a JSON file.
 
@@ -76,6 +74,6 @@ def save_query_data(data_dir: str = "data/goose") -> None:
     Returns:
         None
     """
-    last_updated_path = os.path.join(data_dir, "last_updated.json")
+    last_updated_path = os.path.join(output_dir, "last_updated.json")
     with open(last_updated_path, "w", encoding="utf-8") as f:
         json.dump({"last_updated": get_date_and_time()}, f, indent=2)

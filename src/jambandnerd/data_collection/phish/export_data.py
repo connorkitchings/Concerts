@@ -21,7 +21,8 @@ def save_phish_data(
     venue_data: "pd.DataFrame",
     setlist_data: "pd.DataFrame",
     transition_data: "pd.DataFrame",
-    data_dir: str = "data/phish/collected",
+    next_show_info: dict,
+    data_dir: str,
 ) -> None:
     """
     Save Phish data (songs, shows, venues, setlists, transitions) to CSV files
@@ -33,24 +34,19 @@ def save_phish_data(
         venue_data (pd.DataFrame): DataFrame of venue data.
         setlist_data (pd.DataFrame): DataFrame of setlist data.
         transition_data (pd.DataFrame): DataFrame of transition data.
-        data_dir (str): Directory to save files. Defaults to DATA_DIR from config.
+        data_dir (str): Directory to save files.
     Returns:
         None
     """
     os.makedirs(data_dir, exist_ok=True)
-    # Save next upcoming show to next_show.json
-    today = datetime.today().strftime("%Y-%m-%d")
-    next_show = (
-        show_data[show_data["showdate"] >= today].sort_values("showdate").head(1)
-    )
+    # Save next upcoming show to next_show.json using the provided next_show_info
     next_show_path = os.path.join(data_dir, "next_show.json")
-    if not next_show.empty:
-        next_show_record = next_show.iloc[0].to_dict()
-        # Convert Timestamp or datetime to string for JSON serialization
-        if isinstance(next_show_record.get("showdate"), (pd.Timestamp, datetime)):
-            next_show_record["showdate"] = str(next_show_record["showdate"].date())
+    if next_show_info:
+        record = dict(next_show_info)
+        if isinstance(record.get("showdate"), (pd.Timestamp, datetime)):
+            record["showdate"] = str(record["showdate"].date())
         with open(next_show_path, "w", encoding="utf-8") as f:
-            json.dump({"next_show": next_show_record}, f, indent=2)
+            json.dump({"next_show": record}, f, indent=2)
     else:
         if os.path.exists(next_show_path):
             os.remove(next_show_path)

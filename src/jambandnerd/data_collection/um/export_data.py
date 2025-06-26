@@ -8,21 +8,13 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.jambandnerd.data_collection.um.utils import (
-    get_band_data_dir,
-    get_date_and_time,
-    get_logger,
-)
+from .utils import get_date_and_time, get_logger
 
 # --- Constants ---
 BAND_NAME = "UM"
-DATA_COLLECTED_DIR = get_band_data_dir(BAND_NAME)
-LOG_FILE_PATH = (
-    Path(__file__).resolve().parent.parent.parent.parent
-    / "logs"
-    / BAND_NAME
-    / "um_pipeline.log"
-)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+DATA_COLLECTED_DIR = PROJECT_ROOT / "data" / BAND_NAME / "collected"
+LOG_FILE_PATH = PROJECT_ROOT / "logs" / BAND_NAME / "um_pipeline.log"
 SONG_DATA_FILENAME = "songdata.csv"
 VENUE_DATA_FILENAME = "venuedata.csv"
 SETLIST_DATA_FILENAME = "setlistdata.csv"

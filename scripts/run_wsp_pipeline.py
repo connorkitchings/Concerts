@@ -8,14 +8,13 @@ import sys
 
 # Ensure src/jambandnerd/data_collection/wsp is on the path
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
-WSP_PIPELINE_DIR = os.path.join(
-    ROOT_DIR, "src", "jambandnerd", "data_collection", "wsp"
-)
-sys.path.insert(0, WSP_PIPELINE_DIR)
-sys.path.insert(0, os.path.dirname(WSP_PIPELINE_DIR))  # For shared modules
+PROJECT_ROOT = os.path.abspath(os.path.join(SCRIPT_DIR, ".."))
+if PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, PROJECT_ROOT)
 
-from run_pipeline import main as wsp_main  # type: ignore
+from src.jambandnerd.data_collection.wsp.run_pipeline import (
+    main as wsp_main,  # type: ignore
+)
 
 
 def run_wsp_pipeline() -> None:

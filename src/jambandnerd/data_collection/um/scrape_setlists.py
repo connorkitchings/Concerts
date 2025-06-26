@@ -13,18 +13,14 @@ import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from src.jambandnerd.data_collection.um.utils import get_logger
+from .utils import get_logger
 
 # --- Constants ---
 BAND_NAME = "UM"
 BASE_URL = "https://allthings.umphreys.com"
-DATA_COLLECTED_DIR = "data/UM/collected"
-LOG_FILE_PATH = (
-    Path(__file__).resolve().parent.parent.parent.parent
-    / "logs"
-    / BAND_NAME
-    / "um_pipeline.log"
-)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+DATA_COLLECTED_DIR = PROJECT_ROOT / "data" / BAND_NAME / "collected"
+LOG_FILE_PATH = PROJECT_ROOT / "logs" / BAND_NAME / "um_pipeline.log"
 SCRAPE_YEARS = [datetime.now().year - 1, datetime.now().year]
 SETLIST_DATA_FILENAME = "setlistdata.csv"
 SETLISTS_URL_TEMPLATE = f"{BASE_URL}/setlists/{{year}}"

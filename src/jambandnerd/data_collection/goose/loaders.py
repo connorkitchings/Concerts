@@ -2,6 +2,7 @@
 Goose Data Loaders
 """
 
+import json
 import os
 from datetime import datetime
 from io import StringIO
@@ -13,8 +14,45 @@ from bs4 import BeautifulSoup
 from .call_api import make_api_request
 from .utils import get_logger
 
+
+def get_next_show_info(show_data: pd.DataFrame, logger=None) -> dict:
+    """
+    Get next show info (show_date, venue_name, city, state) by calling the Goose API.
+    Returns dict with these keys (values can be None if not found).
+    """
+    if logger is None:
+        logger = get_logger(__name__)
+    today = datetime.today().strftime("%Y-%m-%d")
+    next_show_row = (
+        show_data[show_data["show_date"] >= today].sort_values("show_date").head(1)
+    )
+    show_id = next_show_row.iloc[0]["show_id"]
+    result = {"show_date": None, "venue_name": None, "city": None, "state": None}
+    if show_id is not None:
+        try:
+            api_response = make_api_request(f"shows/show_id/{show_id}", version="v2")
+            if "data" in api_response and api_response["data"]:
+                api_show = api_response["data"]
+                if isinstance(api_show, list):
+                    api_show = api_show[0] if api_show else None
+                if isinstance(api_show, dict):
+                    result["show_date"] = api_show.get("showdate") or api_show.get(
+                        "show_date"
+                    )
+                    result["venue_name"] = api_show.get("venuename")
+                    result["city"] = api_show.get("city")
+                    result["state"] = api_show.get("state")
+        except Exception as e:
+            logger.warning(
+                "Failed to fetch show info from API for show_id=%s: %s", show_id, e
+            )
+    return result
+
+
 # Ensure logs/Goose/ is always relative to the project root, not src/
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..", ".."))
+project_root = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), "..", "..", "..", "..")
+)
 logs_dir = os.path.join(project_root, "logs", "Goose")
 os.makedirs(logs_dir, exist_ok=True)
 log_file = os.path.join(logs_dir, "goose_pipeline.log")
@@ -145,3 +183,14 @@ def load_setlist_data() -> tuple[pd.DataFrame, pd.DataFrame]:
         "isrecommended",
     ]
     return setlist_data[setlist_columns], transition_data
+
+
+def load_nextshow_data(show_id: int) -> json:
+    """_summary_
+
+    Returns:
+        json: _description_
+    """
+    return make_api_request(f"shows/{show_id}", "v2")["data"][
+        ["showdate", "venue_name", "city", "state", "country", ""]
+    ]

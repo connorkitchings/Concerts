@@ -10,7 +10,12 @@ import time
 import traceback
 
 from .export_data import save_goose_data, save_query_data
-from .loaders import load_setlist_data, load_show_data, load_song_data
+from .loaders import (
+    get_next_show_info,
+    load_setlist_data,
+    load_show_data,
+    load_song_data,
+)
 from .utils import get_logger
 
 
@@ -26,7 +31,7 @@ def main() -> None:
     os.makedirs(logs_dir, exist_ok=True)
     log_file = os.path.join(logs_dir, "goose_pipeline.log")
     logger = get_logger(__name__, log_file=log_file)
-    data_dir = "data/goose/collected"
+    data_dir = os.path.join(project_root, "data", "goose", "collected")
     # Log previous last update
     last_updated_path = os.path.join(data_dir, "last_updated.json")
     prev_update = None
@@ -50,8 +55,15 @@ def main() -> None:
         show_data, venue_data, _ = load_show_data()
         logger.info("Loading Setlist and Transition Data")
         setlist_data, transition_data = load_setlist_data()
+        next_show_info = get_next_show_info(show_data, logger=logger)
         save_goose_data(
-            song_data, show_data, venue_data, setlist_data, transition_data, data_dir
+            song_data,
+            show_data,
+            venue_data,
+            setlist_data,
+            transition_data,
+            next_show_info,
+            data_dir,
         )
         save_query_data(data_dir)
         elapsed = time.time() - start_time

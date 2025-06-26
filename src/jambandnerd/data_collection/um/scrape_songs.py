@@ -2,24 +2,21 @@
 Module for scraping UM song data from allthings.umphreys.com.
 """
 
-from pathlib import Path
 from io import StringIO
+from pathlib import Path
 
 import pandas as pd
 import requests
 from bs4 import BeautifulSoup
 
-from src.jambandnerd.data_collection.um.utils import get_logger
+from .utils import get_logger
 
 # --- Constants ---
 BAND_NAME = "UM"
 BASE_URL = "https://allthings.umphreys.com"
-LOG_FILE_PATH = (
-    Path(__file__).resolve().parent.parent.parent.parent
-    / "logs"
-    / BAND_NAME
-    / "um_pipeline.log"
-)
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent.parent
+DATA_COLLECTED_DIR = PROJECT_ROOT / "data" / BAND_NAME / "collected"
+LOG_FILE_PATH = PROJECT_ROOT / "logs" / BAND_NAME / "um_pipeline.log"
 SONG_TABLE_IDX = 1
 
 logger = get_logger(__name__, log_file=LOG_FILE_PATH, add_console_handler=True)
