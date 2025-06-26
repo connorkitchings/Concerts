@@ -20,14 +20,10 @@ def get_last_updated_path(band: str, band_dir: Path) -> Optional[Path]:
     Returns:
         Path: Path to the last_updated.json file or None if not available
     """
-    if band == "WSP":
-        return band_dir / "EverydayCompanion" / "last_updated.json"
-    elif band == "Phish":
-        return band_dir / "PhishNet" / "last_updated.json"
-    elif band == "Goose":
-        return band_dir / "ElGoose" / "last_updated.json"
-    elif band == "UM":
-        return band_dir / "AllThingsUM" / "last_updated.json"
+    # All bands now use the same structure: {band}/collected/last_updated.json
+    collected_path = band_dir / "collected" / "last_updated.json"
+    if collected_path.exists():
+        return collected_path
     return None
 
 
@@ -100,7 +96,7 @@ def get_prediction_timestamp(band_dir: Path, file_label: str) -> Tuple[str, str]
     Returns:
         tuple: (date_str, time_str) of when prediction was made
     """
-    date_updated_path = band_dir / "Meta" / "date_updated.json"
+    date_updated_path = band_dir / "generated" / "date_updated.json"
     if not os.path.exists(date_updated_path):
         return "Unknown", "Unknown"
 
@@ -108,18 +104,22 @@ def get_prediction_timestamp(band_dir: Path, file_label: str) -> Tuple[str, str]
         with open(date_updated_path, "r") as f:
             date_updates = json.load(f)
 
-        # Try to use the right key
+        # Try all common label variants for robustness
+        label_variants = [file_label, file_label.lower(), file_label.upper(), file_label.capitalize()]
+        if file_label.lower() == "notebook":
+            label_variants += ["Notebook", "notebook"]
+        if file_label.lower() == "ck+":
+            label_variants += ["CK+", "ck+"]
         pred_dt = None
-        if file_label in date_updates:
-            pred_dt = date_updates[file_label]
-        elif "CK+" in date_updates and file_label == "CK+":
-            pred_dt = date_updates["CK+"]
-        elif "Notebook" in date_updates and file_label == "Notebook":
-            pred_dt = date_updates["Notebook"]
-
+        for variant in label_variants:
+            for key in date_updates:
+                if key.lower() == variant.lower():
+                    pred_dt = date_updates[key].get("date_updated", None)
+                    break
+            if pred_dt:
+                break
         if not pred_dt:
             return "Unknown", "Unknown"
-
         # Try ISO format first, then other formats
         try:
             dt_obj = dt.fromisoformat(pred_dt)

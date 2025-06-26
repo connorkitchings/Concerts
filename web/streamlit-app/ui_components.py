@@ -56,9 +56,9 @@ def display_next_show(next_show_str: Optional[str]) -> None:
         next_show_str: Formatted next show string or None
     """
     if next_show_str:
-        # Capitalize 'Next Show' if present
+        # Capitalize only the first letter, do not add another colon
         if next_show_str.lower().startswith("next show:"):
-            next_show_str = "Next Show:" + next_show_str[9:]
+            next_show_str = "Next Show" + next_show_str[8:]
         st.markdown(
             f"<h4 style='text-align: center; color: #fff;'>{next_show_str}</h4>",
             unsafe_allow_html=True,

@@ -44,11 +44,13 @@ def main() -> None:
         return
     # Only allow Goose, Phish, and WSP (Widespread Panic) for selection
     allowed_bands = ["Goose", "Phish", "WSP"]
-    band = st.sidebar.selectbox(
-        "Select Band", allowed_bands, format_func=lambda x: BAND_DISPLAY_NAMES.get(x, x)
-    )
+    # Build a mapping of display name to canonical band key
+    band_display_map = {BAND_DISPLAY_NAMES.get(b, b): b for b in allowed_bands}
+    band_display_names = list(band_display_map.keys())
+    selected_display = st.sidebar.selectbox("Select Band", band_display_names)
+    band = band_display_map[selected_display]
 
-    band_dir = BANDS_DIR / band / "Generated"
+    band_dir = BANDS_DIR / band / "generated"
     prediction_file_map = get_prediction_file_map(band_dir)
 
     if not prediction_file_map:
