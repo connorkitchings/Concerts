@@ -43,8 +43,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.ACTIONS_PAT }}@github.com/connorkitchings/JamBandNerd.git
           git add data/goose/collected/* data/phish/collected/* data/wsp/collected/* || echo "Nothing to add"
           git commit -m "[CI] Update collected band data [skip ci]" || echo "No changes to commit"
           git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
