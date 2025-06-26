@@ -37,7 +37,7 @@ jobs:
         run: python scripts/run_all_pipelines.py
 
       - name: Run All Predictions
-        run: python scripts/run_all_predict_today.py
+        run: python scripts/run_all_predict_todays.py
 
       - name: Commit and push collected data
         run: |
