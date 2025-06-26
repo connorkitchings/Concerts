@@ -50,7 +50,7 @@ def main() -> None:
     selected_display = st.sidebar.selectbox("Select Band", band_display_names)
     band = band_display_map[selected_display]
 
-    band_dir = BANDS_DIR / band / "generated"
+    band_dir = BANDS_DIR / band.lower() / "generated"
     prediction_file_map = get_prediction_file_map(band_dir)
 
     if not prediction_file_map:
